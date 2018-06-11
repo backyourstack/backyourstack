@@ -1,0 +1,746 @@
+[
+  {
+    "name": "angular",
+    "packages": [
+      {
+        "name": "@angular/common"
+      },
+      {
+        "name": "@angular/core"
+      },
+      {
+        "name": "@angular/platform-browser-dynamic"
+      },
+      {
+        "name": "@angular/compiler"
+      },
+      {
+        "name": "@angular/platform-browser"
+      },
+      {
+        "name": "@angular/forms"
+      },
+      {
+        "name": "@angular/router"
+      },
+      {
+        "name": "@angular/animations"
+      }
+    ]
+  },
+  {
+    "name": "ava",
+    "packages": [
+      {
+        "name": "ava"
+      }
+    ],
+    "opencollective": {
+      "id": 180,
+      "name": "AVA",
+      "slug": "ava",
+      "description": null
+    }
+  },
+  {
+    "name": "babel",
+    "packages": [
+      {
+        "name": "babel-eslint"
+      },
+      {
+        "name": "babel-core"
+      },
+      {
+        "name": "babel-loader"
+      },
+      {
+        "name": "babel-preset-es2015"
+      },
+      {
+        "name": "babel-cli"
+      },
+      {
+        "name": "babel-preset-env"
+      },
+      {
+        "name": "babel-preset-react"
+      },
+      {
+        "name": "babel-register"
+      },
+      {
+        "name": "babel-plugin-transform-object-rest-spread"
+      },
+      {
+        "name": "babel-plugin-transform-runtime"
+      },
+      {
+        "name": "babel-plugin-transform-class-properties"
+      },
+      {
+        "name": "babel-preset-stage-0"
+      },
+      {
+        "name": "babel-polyfill"
+      },
+      {
+        "name": "babel-preset-stage-2"
+      },
+      {
+        "name": "babel-runtime"
+      },
+      {
+        "name": "babel-plugin-transform-flow-strip-types"
+      },
+      {
+        "name": "babel-plugin-external-helpers"
+      },
+      {
+        "name": "eslint-plugin-babel"
+      },
+      {
+        "name": "babel-plugin-transform-es2015-modules-commonjs"
+      },
+      {
+        "name": "gulp-babel"
+      },
+      {
+        "name": "@babel/core"
+      },
+      {
+        "name": "babel-preset-stage-1"
+      }
+    ],
+    "opencollective": {
+      "id": 580,
+      "name": "Babel",
+      "slug": "babel",
+      "description": "Babel is a compiler for writing next generation JavaScript"
+    }
+  },
+  {
+    "name": "bootstrap",
+    "packages": [
+      {
+        "name": "bootstrap"
+      },
+      {
+        "name": "bootstrap-sass"
+      }
+    ]
+  },
+  {
+    "name": "chai",
+    "packages": [
+      {
+        "name": "chai"
+      }
+    ],
+    "opencollective": {
+      "id": 125,
+      "name": "chaijs",
+      "slug": "chaijs",
+      "description": "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework."
+    }
+  },
+  {
+    "name": "cheerio",
+    "packages": [
+      {
+        "name": "cheerio"
+      }
+    ],
+    "opencollective": {
+      "id": 151,
+      "name": "cheerio",
+      "slug": "cheerio",
+      "description": "Fast, flexible, and lean implementation of core jQuery designed specifically for the server"
+    }
+  },
+  {
+    "name": "debug",
+    "packages": [
+      {
+        "name": "debug"
+      }
+    ],
+    "opencollective": {
+      "id": 498,
+      "name": "debug",
+      "slug": "debug",
+      "description": null
+    }
+  },
+  {
+    "name": "electron",
+    "packages": [
+      {
+        "name": "electron"
+      },
+      {
+        "name": "electron-builder"
+      }
+    ],
+    "opencollective": {
+      "id": 13486,
+      "name": "electron",
+      "slug": "electron",
+      "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS"
+    }
+  },
+  {
+    "name": "enzyme",
+    "packages": [
+      {
+        "name": "enzyme"
+      },
+      {
+        "name": "enzyme-adapter-react-16"
+      }
+    ]
+  },
+  {
+    "name": "eslint-config-airbnb",
+    "packages": [
+      {
+        "name": "eslint-config-airbnb"
+      },
+      {
+        "name": "eslint-config-airbnb-base"
+      }
+    ]
+  },
+  {
+    "name": "express",
+    "packages": [
+      {
+        "name": "express"
+      },
+      {
+        "name": "body-parser"
+      },
+      {
+        "name": "cookie-parser"
+      },
+      {
+        "name": "multer"
+      },
+      {
+        "name": "express-session"
+      },
+      {
+        "name": "morgan"
+      },
+      {
+        "name": "compression"
+      },
+      {
+        "name": "cors"
+      },
+      {
+        "name": "serve-favicon"
+      }
+    ]
+  },
+  {
+    "name": "grunt",
+    "packages": [
+      {
+        "name": "grunt"
+      },
+      {
+        "name": "grunt-contrib-uglify"
+      },
+      {
+        "name": "grunt-contrib-watch"
+      },
+      {
+        "name": "grunt-cli"
+      },
+      {
+        "name": "grunt-contrib-copy"
+      },
+      {
+        "name": "grunt-contrib-concat"
+      },
+      {
+        "name": "grunt-contrib-clean"
+      }
+    ]
+  },
+  {
+    "name": "gulp",
+    "packages": [
+      {
+        "name": "gulp"
+      },
+      {
+        "name": "gulp-util"
+      }
+    ],
+    "opencollective": {
+      "id": 85,
+      "name": "GulpJS",
+      "slug": "gulpjs",
+      "description": "The streaming build system."
+    }
+  },
+  {
+    "name": "html-webpack-plugin",
+    "packages": [
+      {
+        "name": "html-webpack-plugin"
+      }
+    ],
+    "opencollective": {
+      "id": 14082,
+      "name": "html-webpack-plugin",
+      "slug": "html-webpack-plugin",
+      "description": null
+    }
+  },
+  {
+    "name": "istanbul",
+    "packages": [
+      {
+        "name": "nyc"
+      },
+      {
+        "name": "istanbul"
+      },
+      {
+        "name": "babel-plugin-istanbul"
+      }
+    ]
+  },
+  {
+    "name": "jasmine",
+    "packages": [
+      {
+        "name": "jasmine-core"
+      },
+      {
+        "name": "jasmine"
+      }
+    ]
+  },
+  {
+    "name": "jest",
+    "packages": [
+      {
+        "name": "jest"
+      },
+      {
+        "name": "babel-jest"
+      }
+    ],
+    "opencollective": {
+      "id": 16401,
+      "name": "Jest",
+      "slug": "jest",
+      "description": "Delightful JavaScript Testing"
+    }
+  },
+  {
+    "name": "karma",
+    "packages": [
+      {
+        "name": "karma"
+      },
+      {
+        "name": "karma-chrome-launcher"
+      },
+      {
+        "name": "karma-jasmine"
+      },
+      {
+        "name": "karma-coverage"
+      },
+      {
+        "name": "karma-mocha"
+      },
+      {
+        "name": "karma-phantomjs-launcher"
+      },
+      {
+        "name": "karma-firefox-launcher"
+      },
+      {
+        "name": "karma-sauce-launcher"
+      }
+    ]
+  },
+  {
+    "name": "lodash",
+    "packages": [
+      {
+        "name": "lodash"
+      },
+      {
+        "name": "babel-plugin-lodash"
+      }
+    ]
+  },
+  {
+    "name": "mocha",
+    "packages": [
+      {
+        "name": "mocha"
+      }
+    ],
+    "opencollective": {
+      "id": 58,
+      "name": "MochaJS",
+      "slug": "mochajs",
+      "description": "simple, flexible, fun javascript test framework for node.js & the browser."
+    }
+  },
+  {
+    "name": "moment",
+    "packages": [
+      {
+        "name": "moment"
+      },
+      {
+        "name": "moment-timezone"
+      }
+    ]
+  },
+  {
+    "name": "mongoose",
+    "packages": [
+      {
+        "name": "mongoose"
+      }
+    ],
+    "opencollective": {
+      "id": 11885,
+      "name": "Mongoose.js",
+      "slug": "mongoose",
+      "description": "The leading ODM for Node.js and MongoDB"
+    }
+  },
+  {
+    "name": "nodemailer",
+    "packages": [
+      {
+        "name": "nodemailer"
+      }
+    ],
+    "opencollective": {
+      "id": 12010,
+      "name": "Nodemailer",
+      "slug": "nodemailer",
+      "description": "Module for Node.js applications to allow easy as cake email sending"
+    }
+  },
+  {
+    "name": "nodemon",
+    "packages": [
+      {
+        "name": "nodemon"
+      }
+    ],
+    "opencollective": {
+      "id": 10352,
+      "name": "nodemon",
+      "slug": "nodemon",
+      "description": "Nodemon is a utility that will monitor for any changes in your source and automatically restart your server. Perfect for rapid development. "
+    }
+  },
+  {
+    "name": "passport",
+    "packages": [
+      {
+        "name": "passport"
+      },
+      {
+        "name": "passport-local"
+      },
+      {
+        "name": "passport-github"
+      },
+      {
+        "name": "passport-facebook"
+      }
+    ]
+  },
+  {
+    "name": "postcss",
+    "packages": [
+      {
+        "name": "autoprefixer"
+      },
+      {
+        "name": "postcss-loader"
+      },
+      {
+        "name": "postcss"
+      }
+    ]
+  },
+  {
+    "name": "prettier",
+    "packages": [
+      {
+        "name": "prettier"
+      },
+      {
+        "name": "eslint-config-prettier"
+      },
+      {
+        "name": "eslint-plugin-prettier"
+      }
+    ]
+  },
+  {
+    "name": "pug",
+    "packages": [
+      {
+        "name": "pug"
+      }
+    ],
+    "opencollective": {
+      "id": 454,
+      "name": "pug",
+      "slug": "pug",
+      "description": "A powerful templating engine for node.js and the browser"
+    }
+  },
+  {
+    "name": "react-router",
+    "packages": [
+      {
+        "name": "react-router"
+      },
+      {
+        "name": "react-router-dom"
+      }
+    ]
+  },
+  {
+    "name": "react",
+    "packages": [
+      {
+        "name": "react"
+      },
+      {
+        "name": "react-dom"
+      },
+      {
+        "name": "prop-types"
+      },
+      {
+        "name": "react-test-renderer"
+      }
+    ]
+  },
+  {
+    "name": "redux",
+    "packages": [
+      {
+        "name": "redux"
+      },
+      {
+        "name": "react-redux"
+      },
+      {
+        "name": "redux-thunk"
+      }
+    ]
+  },
+  {
+    "name": "rollup",
+    "packages": [
+      {
+        "name": "rollup"
+      },
+      {
+        "name": "rollup-plugin-babel"
+      },
+      {
+        "name": "rollup-plugin-node-resolve"
+      },
+      {
+        "name": "rollup-plugin-commonjs"
+      },
+      {
+        "name": "rollup-plugin-replace"
+      },
+      {
+        "name": "rollup-plugin-uglify"
+      },
+      {
+        "name": "rollup-plugin-json"
+      }
+    ],
+    "opencollective": {
+      "id": 11743,
+      "name": "Rollup",
+      "slug": "rollup",
+      "description": "The JavaScript module bundler"
+    }
+  },
+  {
+    "name": "sinon",
+    "packages": [
+      {
+        "name": "sinon"
+      }
+    ],
+    "opencollective": {
+      "id": 470,
+      "name": "sinon",
+      "slug": "sinon",
+      "description": ""
+    }
+  },
+  {
+    "name": "socket.io",
+    "packages": [
+      {
+        "name": "socket.io"
+      }
+    ],
+    "opencollective": {
+      "id": 659,
+      "name": "socket.io",
+      "slug": "socketio",
+      "description": null
+    }
+  },
+  {
+    "name": "standard",
+    "packages": [
+      {
+        "name": "eslint-plugin-standard"
+      },
+      {
+        "name": "eslint-config-standard"
+      },
+      {
+        "name": "standard"
+      }
+    ]
+  },
+  {
+    "name": "styled-components",
+    "packages": [
+      {
+        "name": "styled-components"
+      }
+    ],
+    "opencollective": {
+      "id": 12353,
+      "name": "styled-components",
+      "slug": "styled-components",
+      "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅"
+    }
+  },
+  {
+    "name": "stylelint",
+    "packages": [
+      {
+        "name": "stylelint"
+      },
+      {
+        "name": "stylelint-config-standard"
+      }
+    ],
+    "opencollective": {
+      "id": 755,
+      "name": "stylelint",
+      "slug": "stylelint",
+      "description": "A mighty, modern CSS linter"
+    }
+  },
+  {
+    "name": "vuejs",
+    "packages": [
+      {
+        "name": "vue"
+      },
+      {
+        "name": "vue-template-compiler"
+      },
+      {
+        "name": "vue-loader"
+      },
+      {
+        "name": "vuex"
+      },
+      {
+        "name": "vue-router"
+      }
+    ],
+    "opencollective": {
+      "id": 903,
+      "name": "vue",
+      "slug": "vuejs",
+      "description": null
+    }
+  },
+  {
+    "name": "webpack",
+    "packages": [
+      {
+        "name": "webpack"
+      },
+      {
+        "name": "css-loader"
+      },
+      {
+        "name": "style-loader"
+      },
+      {
+        "name": "file-loader"
+      },
+      {
+        "name": "webpack-dev-server"
+      },
+      {
+        "name": "url-loader"
+      },
+      {
+        "name": "extract-text-webpack-plugin"
+      },
+      {
+        "name": "sass-loader"
+      },
+      {
+        "name": "json-loader"
+      },
+      {
+        "name": "copy-webpack-plugin"
+      },
+      {
+        "name": "eslint-loader"
+      },
+      {
+        "name": "karma-webpack"
+      },
+      {
+        "name": "webpack-cli"
+      },
+      {
+        "name": "webpack-hot-middleware"
+      },
+      {
+        "name": "webpack-bundle-analyzer"
+      },
+      {
+        "name": "webpack-dev-middleware"
+      },
+      {
+        "name": "uglifyjs-webpack-plugin"
+      }
+    ],
+    "opencollective": {
+      "id": 302,
+      "name": "webpack",
+      "slug": "webpack",
+      "description": "webpack is THE build solution for modern web applications."
+    }
+  }
+]

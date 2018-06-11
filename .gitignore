@@ -1,0 +1,4 @@
+.cache
+.next
+.env
+node_modules
