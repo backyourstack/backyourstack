@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Link } from '../routes';
+
 export default class Header extends React.Component {
 
   static propTypes = {
+    pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
-    reqUrl: PropTypes.string,
   }
 
   render () {
-    const { reqUrl, loggedInUser } = this.props;
+    const { pathname, loggedInUser } = this.props;
     return (
       <div>
         <style jsx>{`
@@ -24,25 +26,44 @@ export default class Header extends React.Component {
           text-align: right;
           margin-left: auto;
         }
+        header a {
+          color: inherit;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        header a:hover {
+          text-decoration: underline;
+        }
         `}
         </style>
         <header>
-          <div className="brand">Back Your Stack v0.0.1</div>
+          <div className="brand">
+            <Link route="index"><a>Back Your Stack</a></Link> v0.0.2
+          </div>
           {loggedInUser && (
             <div className="login">
-              Authenticated as <strong>{loggedInUser.username}</strong>
-              &nbsp;
-              <a href={`/logout?next=${reqUrl || '/'}`}>Sign Out</a>
+              Authenticated as&nbsp;
+              <strong>
+                <Link route="profile" params={{ id: loggedInUser.username }}>
+                  <a>{loggedInUser.username}</a>
+                </Link>
+              </strong>
+              &nbsp;/&nbsp;
+              <Link route="logout" params={{ next: pathname || '/' }}>
+                <a>Sign Out</a>
+              </Link>
             </div>
           )}
           {!loggedInUser && (
             <div className="login">
-              <a href={`/login?next=${reqUrl || '/'}`}>Sign In</a>
+              <Link route="login" params={{ next: pathname || '/' }}>
+                <a>Sign In with GitHub</a>
+              </Link>
             </div>
           )}
         </header>
       </div>
-    )
+    );
   }
 
 }

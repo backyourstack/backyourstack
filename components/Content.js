@@ -20,7 +20,7 @@ export default class Content extends React.Component {
           {this.props.children}
         </div>
       </div>
-    )
+    );
   }
 
 }

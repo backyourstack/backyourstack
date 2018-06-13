@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+
+import { Link } from '../routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
+import Footer from '../components/Footer';
 
 export default class Login extends React.Component {
 
   static async getInitialProps (ctx) {
-    return { next: ctx.query.next || '/' }
+    return { next: ctx.query.next || '/' };
   }
 
   static propTypes = {
@@ -33,12 +35,13 @@ export default class Login extends React.Component {
           <ul>
             <li>Make sure to Grant access in the GitHub permission page.</li>
           </ul>
-          <Link href={`/auth/github?next=${this.props.next}`}>
-            <a>Login with Github</a>
+          <Link route="/auth/github" params={{ next: this.props.next }}>
+            <a>Sign In with GitHub</a>
           </Link>
         </Content>
+        <Footer />
       </div>
-    )
+    );
   }
 
 }

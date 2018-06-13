@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node server/index.js",
     "lint": "eslint '**/*.js'",
     "lint:fix": "npm run lint -- --fix",
-    "pretest": "npm run lint -- --quiet"
+    "lint:quiet": "npm run lint -- --quiet",
+    "pretest": "npm run lint:quiet"
   },
   "author": {
     "name": "Open Collective, Inc.",
@@ -19,7 +20,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^15.8.1",
+    "@octokit/rest": "^15.8.2",
     "cross-fetch": "^2.2.1",
     "debug": "^3.1.0",
     "dotenv": "^6.0.0",
@@ -51,31 +52,43 @@
   "eslintConfig": {
     "extends": [
       "opencollective",
-      "plugin:node/recommended"
+      "plugin:node/recommended",
+      "plugin:import/recommended"
     ],
     "plugins": [
       "babel",
       "node"
     ],
     "rules": {
+      "semi": "warn",
+      "object-curly-spacing": [
+        "warn",
+        "always"
+      ],
+      "comma-dangle": [
+        "warn",
+        "always-multiline"
+      ],
       "babel/quotes": [
-        1,
+        "warn",
         "single"
       ],
-      "node/no-unsupported-features": 0,
+      "node/no-unsupported-features": "off",
       "no-constant-condition": [
-        1,
-        { "checkLoops": false }
+        "warn",
+        {
+          "checkLoops": false
+        }
       ],
-      "react/display-name": 0,
-      "react/react-in-jsx-scope": 0
+      "react/display-name": "off",
+      "react/react-in-jsx-scope": "off"
     }
   },
   "nodemonConfig": {
     "watch": [
-      "routes.js",
-      "server.js",
-      "lib/*.js"
+      "lib/*.js",
+      "server/*.js",
+      "routes.js"
     ]
   }
 }

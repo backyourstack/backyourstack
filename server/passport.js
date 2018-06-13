@@ -7,7 +7,7 @@ const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_CALLBACK_URL } = process.
 const githubParams = {
   clientID: GITHUB_CLIENT_ID,
   clientSecret: GITHUB_CLIENT_SECRET,
-  callbackURL: GITHUB_CALLBACK_URL
+  callbackURL: GITHUB_CALLBACK_URL,
 };
 
 const passportGithubStrategy = new passportGithub.Strategy(

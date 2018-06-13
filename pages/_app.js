@@ -1,29 +1,34 @@
-import App, { Container } from 'next/app'
-import React from 'react'
+import App, { Container } from 'next/app';
+import React from 'react';
 import { get } from 'lodash';
 
 export default class MyApp extends App {
 
   static async getInitialProps ({ Component, ctx }) {
-    let pageProps = {}
+    let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
+      pageProps = await Component.getInitialProps(ctx);
     }
 
-    pageProps.reqUrl = ctx.req.url;
-    pageProps.loggedInUser = get(ctx.req, 'session.passport.user');
+    pageProps.pathname = ctx.asPath;
 
-    return { pageProps }
+    if (ctx.req) {
+      pageProps.loggedInUser = get(ctx, 'req.session.passport.user');
+    } else if (typeof window !== 'undefined') {
+      pageProps.loggedInUser = get(window, '__NEXT_DATA__.props.pageProps.loggedInUser');
+    }
+
+    return { pageProps };
   }
 
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
     return (
       <Container>
         <Component {...pageProps} />
       </Container>
-    )
+    );
   }
 
 }

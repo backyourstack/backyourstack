@@ -1,8 +1,9 @@
-const routes = require('next-routes')()
+const routes = require('next-routes')();
 
 routes
-  .add('index', '/', 'index')
-  .add('login', '/login', 'login')
-  .add('profile', '/:id', 'profile');
+  .add('login')
+  .add('logout')
+  .add('index', '/')
+  .add('profile', '/:id');
 
 module.exports = routes;
