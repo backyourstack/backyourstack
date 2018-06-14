@@ -1,6 +1,6 @@
 {
   "name": "backyourstack",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Back Your Stack analyzes repositories to recommend Open Source projects to support.",
   "scripts": {
     "dev": "nodemon server/index.js",

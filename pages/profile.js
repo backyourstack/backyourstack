@@ -4,12 +4,22 @@ import { get } from 'lodash';
 
 import { Link } from '../routes';
 
-import { getProfile, getReposForProfile } from '../lib/github';
-import { getRawStatsWithProjectFromRepos, scoreAndSortRawStats } from '../lib/utils';
+import {
+  getProfile,
+  getReposForProfile,
+} from '../lib/github';
+
+import {
+  getAllDependenciesFromRepos,
+  addProjectToDependencies,
+  getRecommendedProjectFromDependencies,
+} from '../lib/utils';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
+
+import DependencyTable from '../components/DependencyTable';
 
 export default class Profile extends React.Component {
 
@@ -18,9 +28,9 @@ export default class Profile extends React.Component {
       const accessToken = get(req, 'session.passport.user.accessToken');
       const profile = await getProfile(query.id, accessToken);
       const repos = await getReposForProfile(profile, accessToken);
-      const rawStats = await getRawStatsWithProjectFromRepos(repos);
-      const recommendations = scoreAndSortRawStats(rawStats).filter(r => r.project.opencollective);
-      return { profile, repos, recommendations };
+      const dependencies = await getAllDependenciesFromRepos(repos).then(addProjectToDependencies);
+      const recommendations = await getRecommendedProjectFromDependencies(dependencies);
+      return { profile, repos, dependencies, recommendations };
     } catch (error) {
       return { error };
     }
@@ -31,12 +41,13 @@ export default class Profile extends React.Component {
     loggedInUser: PropTypes.object,
     profile: PropTypes.object,
     repos: PropTypes.array,
+    dependencies: PropTypes.array,
     recommendations: PropTypes.array,
     error: PropTypes.object,
   }
 
   render () {
-    const { error, profile, repos, recommendations, pathname, loggedInUser } = this.props;
+    const { error, profile, repos, dependencies, recommendations, pathname, loggedInUser } = this.props;
     return (
       <div>
         <style jsx>{`
@@ -115,12 +126,12 @@ export default class Profile extends React.Component {
               </div>
               <h2>Recommendations</h2>
               <div className="Recommendations">
-                {recommendations.map(recommendation => (
+                {recommendations.filter(r => r.opencollective).map(recommendation => (
                   <div key={recommendation.id} className="Recommendation">
-                    {recommendation.project.opencollective && (
+                    {recommendation.opencollective && (
                       <>
-                        <div className="name"><b>{recommendation.project.opencollective.name}</b></div>
-                        <div className="description">{recommendation.project.opencollective.description}</div>
+                        <div className="name"><b>{recommendation.opencollective.name}</b></div>
+                        <div className="description">{recommendation.opencollective.description}</div>
                         <div className="repos">
                           <strong>Used in</strong>:&nbsp;
                           {recommendation.repos.slice(0, 3).map(repo => (
@@ -131,7 +142,7 @@ export default class Profile extends React.Component {
                           {recommendation.repos.length > 3 && ` and ${recommendation.repos.length - 3 } others`}
                         </div>
                         <div className="back-button">
-                          <a href={`https://opencollective.com/${recommendation.project.opencollective.slug}`}>
+                          <a href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
                             Back this project
                           </a>
                         </div>
@@ -140,6 +151,10 @@ export default class Profile extends React.Component {
                   </div>
                 ))}
               </div>
+
+              <h2>Dependencies</h2>
+              <DependencyTable dependencies={dependencies} />
+
               <h2>Repositories</h2>
               <ul>
                 {repos.map(repo => (
