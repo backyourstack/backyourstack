@@ -38,7 +38,7 @@ export default class Header extends React.Component {
         </style>
         <header>
           <div className="brand">
-            <Link route="index"><a>Back Your Stack</a></Link> v0.0.2
+            <Link route="index"><a>Back Your Stack</a></Link> v0.0.3
           </div>
           {loggedInUser && (
             <div className="login">
