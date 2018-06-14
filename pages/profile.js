@@ -20,6 +20,7 @@ import Content from '../components/Content';
 import Footer from '../components/Footer';
 
 import DependencyTable from '../components/DependencyTable';
+import RepositoryTable from '../components/RepositoryTable';
 
 export default class Profile extends React.Component {
 
@@ -156,6 +157,7 @@ export default class Profile extends React.Component {
               <DependencyTable dependencies={dependencies} />
 
               <h2>Repositories</h2>
+              <RepositoryTable repositories={repos} />
               <ul>
                 {repos.map(repo => (
                   <li key={repo.id}>
