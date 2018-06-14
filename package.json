@@ -2,6 +2,10 @@
   "name": "backyourstack",
   "version": "0.0.3",
   "description": "Back Your Stack analyzes repositories to recommend Open Source projects to support.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opencollective/backyourstack.git"
+  },
   "scripts": {
     "dev": "nodemon server/index.js",
     "build": "next build",
