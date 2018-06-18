@@ -4,7 +4,7 @@ import { get } from 'lodash';
 
 import { getOrgsForUser } from '../lib/github';
 
-import { Link } from '../routes';
+import { Link, Router } from '../routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 
 export default class Index extends React.Component {
 
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps ({ req }) {
     const initialProps = {};
 
     let accessToken;
@@ -32,14 +32,56 @@ export default class Index extends React.Component {
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
+    loggedInUserOrgs: PropTypes.array,
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = { q: '' };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ q: event.target.value });
+  }
+
+  handleSubmit(event) {
+    Router.pushRoute('search', { q: this.state.q });
+    event.preventDefault();
   }
 
   render () {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
     return (
       <div>
+
         <Header pathname={pathname} loggedInUser={loggedInUser} />
+
         <Content>
+
+          <h1>Back Your Stack</h1>
+
+          <p>Discover the open source projects
+          that you are using and that need financial support.</p>
+
+          <div className="search">
+            <form method="GET" action="/search" onSubmit={this.handleSubmit}>
+              <span>https://github.com/</span>
+              <input type="text" name="q" value={this.state.value} onChange={this.handleChange} />
+              <input type="submit" value="Search"/>
+            </form>
+            <p>
+              E.g.
+              <Link route="profile" params={{ id: 'facebook' }}><a>Facebook</a></Link>
+              &nbsp;-&nbsp;
+              <Link route="profile" params={{ id: 'airbnb' }}><a>Airbnb</a></Link>
+              &nbsp;-&nbsp;
+              <Link route="profile" params={{ id: 'square' }}><a>Square</a></Link>
+            </p>
+          </div>
+
           {loggedInUser && (
             <>
               <h2>Welcome {loggedInUser.username}</h2>
@@ -59,14 +101,11 @@ export default class Index extends React.Component {
               }
             </>
           )}
-          <h2>Sample Organizations</h2>
-          <ul>
-            <li><Link route="profile" params={{ id: 'facebook' }}><a>Facebook</a></Link></li>
-            <li><Link route="profile" params={{ id: 'airbnb' }}><a>Airbnb</a></Link></li>
-            <li><Link route="profile" params={{ id: 'square' }}><a>Square</a></Link></li>
-          </ul>
+
         </Content>
+
         <Footer />
+
       </div>
     );
   }
