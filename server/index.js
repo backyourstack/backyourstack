@@ -10,6 +10,10 @@ const routes = require('../routes');
 const passport = require('./passport');
 const { fetchWithBasicAuthentication } = require('./utils');
 
+const multer = require('multer');
+var storage = multer.memoryStorage();
+var upload = multer({ storage: storage });
+
 const port = parseInt(process.env.PORT, 10) || 3000;
 
 const nextApp = next({
@@ -58,7 +62,36 @@ nextApp.prepare()
       }
     );
 
+
+    server.post('/files', upload.single('file'), function (req, res, next) {
+
+        if (req.file.mimetype == 'application/json')
+        {
+            // const put = knox.put(filename, {
+            //   'Content-Length': req.file.size,
+            //   'Content-Type': req.file.mimetype,
+            //   'x-amz-acl': 'public-read'
+            // });
+            //
+            // fs.createReadStream(req.path).pipe(put);
+            //
+            // put.on('response', (response) => {
+            //   res.send({
+            //     status: response.statusCode,
+            //     url: put.url
+            //   });
+            // });
+
+            res.send("Uploaded");
+          }
+
+          else {res.send("Unsupported");}
+
+
+      });
+
     server.get('*', handler);
+
 
     server.listen(port, err => {
       if (err) throw err;

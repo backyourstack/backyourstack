@@ -9,6 +9,7 @@ import { Link } from '../routes';
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
+import UploadPackage from '../components/UploadPackage';
 
 export default class Index extends React.Component {
 
@@ -65,6 +66,7 @@ export default class Index extends React.Component {
             <li><Link route="profile" params={{ id: 'airbnb' }}><a>Airbnb</a></Link></li>
             <li><Link route="profile" params={{ id: 'square' }}><a>Square</a></Link></li>
           </ul>
+          <UploadPackage />
         </Content>
         <Footer />
       </div>
