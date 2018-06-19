@@ -8,7 +8,7 @@ export default class Header extends React.Component {
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
-  }
+  };
 
   render () {
     const { pathname, loggedInUser } = this.props;
@@ -38,7 +38,7 @@ export default class Header extends React.Component {
         </style>
         <header>
           <div className="brand">
-            <Link route="index"><a>Back Your Stack</a></Link> v0.0.3
+            <Link route="index"><a>Back Your Stack</a></Link> v0.0.4
           </div>
           {loggedInUser && (
             <div className="login">
