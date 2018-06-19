@@ -1,16 +1,18 @@
 {
   "name": "backyourstack",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Back Your Stack analyzes repositories to recommend Open Source projects to support.",
   "repository": {
     "type": "git",
     "url": "https://github.com/opencollective/backyourstack.git"
   },
   "scripts": {
-    "dev": "nodemon server/index.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server/index.js",
-    "lint": "eslint '**/*.js'",
+    "dev": "nodemon --exec babel-node -- src/server/index.js",
+    "build": "npm run build:server && npm run build:next",
+    "build:server": "babel --copy-files ./src --out-dir ./build",
+    "build:next": "next build build",
+    "start": "NODE_ENV=production node build/server/index.js",
+    "lint": "eslint \"src/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "pretest": "npm run lint:quiet"
@@ -45,7 +47,13 @@
     "node": "9.x.x"
   },
   "devDependencies": {
+    "@babel/cli": "7.0.0-beta.42",
+    "@babel/core": "7.0.0-beta.42",
+    "@babel/node": "7.0.0-beta.42",
+    "@babel/preset-env": "7.0.0-beta.42",
+    "@babel/preset-stage-0": "7.0.0-beta.42",
     "babel-eslint": "^8.2.3",
+    "babel-plugin-lodash": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-opencollective": "^1.2.1",
     "eslint-plugin-babel": "^5.1.0",
@@ -55,29 +63,8 @@
     "nodemon": "^1.17.5"
   },
   "eslintConfig": {
-    "extends": [
-      "opencollective",
-      "plugin:node/recommended",
-      "plugin:import/recommended"
-    ],
-    "plugins": [
-      "babel",
-      "node"
-    ],
+    "extends": "opencollective",
     "rules": {
-      "semi": "warn",
-      "object-curly-spacing": [
-        "warn",
-        "always"
-      ],
-      "comma-dangle": [
-        "warn",
-        "always-multiline"
-      ],
-      "babel/quotes": [
-        "warn",
-        "single"
-      ],
       "node/no-unsupported-features": "off",
       "no-constant-condition": [
         "warn",
@@ -85,8 +72,7 @@
           "checkLoops": false
         }
       ],
-      "react/display-name": "off",
-      "react/react-in-jsx-scope": "off"
+      "react/display-name": "off"
     }
   },
   "nodemonConfig": {

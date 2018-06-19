@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { getOrgsForUser } from '../lib/github';
+import { getUserOrgs } from '../lib/data';
 
 import { Link, Router } from '../routes';
 
@@ -15,15 +15,9 @@ export default class Index extends React.Component {
   static async getInitialProps ({ req }) {
     const initialProps = {};
 
-    let accessToken;
-    if (req) {
-      accessToken = get(req, 'session.passport.user.accessToken');
-    } else if (typeof window !== 'undefined') {
-      accessToken = get(window, '__NEXT_DATA__.props.pageProps.loggedInUser.accessToken');
-    }
-
+    const accessToken = get(req, 'session.passport.user.accessToken');
     if (accessToken) {
-      initialProps.loggedInUserOrgs = await getOrgsForUser(accessToken);
+      initialProps.loggedInUserOrgs = await getUserOrgs(accessToken);
     }
 
     return initialProps;
@@ -63,14 +57,16 @@ export default class Index extends React.Component {
 
           <h1>Back Your Stack</h1>
 
-          <p>Discover the open source projects
-          that you are using and that need financial support.</p>
+          <p>
+            Discover the open source projects
+            that you are using and that need financial support.
+          </p>
 
           <div className="search">
             <form method="GET" action="/search" onSubmit={this.handleSubmit}>
               <span>https://github.com/</span>
               <input type="text" name="q" value={this.state.value} onChange={this.handleChange} />
-              <input type="submit" value="Search"/>
+              <input type="submit" value="Search" />
             </form>
             <p>
               E.g.

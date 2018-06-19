@@ -1,6 +1,6 @@
 import { pick } from 'lodash';
 
-const allProjects = require('../data/projects.json');
+import allProjects from '../data/projects.json';
 
 async function getProjectFromDependency(dependency) {
   return allProjects.find(project =>
@@ -10,7 +10,7 @@ async function getProjectFromDependency(dependency) {
 
 const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
 
-export async function getAllDependenciesFromRepos(repos) {
+async function getAllDependenciesFromRepos(repos) {
   const dependencies = [];
 
   for (const repo of repos) {
@@ -37,7 +37,7 @@ export async function getAllDependenciesFromRepos(repos) {
   });
 }
 
-export function addProjectToDependencies(deps) {
+function addProjectToDependencies(deps) {
   return Promise.all(
     deps.map(
       dep => addProjectToDependency(dep)
@@ -55,7 +55,7 @@ function addProjectToDependency(dep) {
     });
 }
 
-export function getRecommendedProjectFromDependencies(deps) {
+function getRecommendedProjectFromDependencies(deps) {
   return addProjectToDependencies(deps)
     .then(
       deps => {
@@ -91,3 +91,9 @@ export function getRecommendedProjectFromDependencies(deps) {
       }
     );
 }
+
+export {
+  getAllDependenciesFromRepos,
+  addProjectToDependencies,
+  getRecommendedProjectFromDependencies
+};

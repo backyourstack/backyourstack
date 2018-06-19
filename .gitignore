@@ -1,4 +1,5 @@
 .cache
 .next
 .env
+build
 node_modules
