@@ -1,16 +1,67 @@
-import { pick } from 'lodash';
+import _debug from 'debug';
+
+import { pick, uniq } from 'lodash';
 
 import allProjects from '../data/projects.json';
 
-async function getProjectFromDependency(dependency) {
+import {
+  fetchRepoFile,
+} from './github';
+
+import cache from './cache';
+
+const debug = _debug('utils');
+
+const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
+
+function addDependenciesToRepo (repo, accessToken) {
+  return new Promise(resolve => {
+    const cacheKey = `repo_dependencies_${repo.id}`;
+    if (cache.has(cacheKey)) {
+      repo.dependencies = cache.get(cacheKey);
+      resolve(repo);
+    } else {
+      fetchRepoDependencies(repo, accessToken)
+        .then(dependencies => {
+          cache.set(cacheKey, dependencies);
+          repo.rawDependencies = dependencies;
+          repo.dependencies = dependenciesStats(dependencies);
+          resolve(repo);
+        });
+    }
+  });
+}
+
+function fetchRepoDependencies (repo, accessToken) {
+  return fetchRepoFile(repo, 'package.json', accessToken)
+    .then(JSON.parse)
+    .catch((err) => {
+      debug(`Error: ${err.message}`);
+      return [];
+    });
+}
+
+function dependenciesStats (packageJson) {
+  const dependencies = {};
+  dependencyTypes.forEach(dependencyType => {
+    if (packageJson[dependencyType]) {
+      Object.keys(packageJson[dependencyType]).forEach(name => {
+        dependencies[name] = dependencies[name] || { type: 'npm', name };
+        dependencies[name][dependencyType] = dependencies[name][dependencyType] || 0;
+        dependencies[name][dependencyType] ++;
+      });
+    }
+  });
+  return Object.values(dependencies);
+}
+
+function getProjectFromDependency (dependency) {
   return allProjects.find(project =>
     project.packages.find(pkg => pkg.name === dependency)
   );
 }
 
-const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
-
-async function getAllDependenciesFromRepos(repos) {
+function getAllDependenciesFromRepos (repos) {
   const dependencies = [];
 
   for (const repo of repos) {
@@ -37,7 +88,7 @@ async function getAllDependenciesFromRepos(repos) {
   });
 }
 
-function addProjectToDependencies(deps) {
+function addProjectToDependencies (deps) {
   return Promise.all(
     deps.map(
       dep => addProjectToDependency(dep)
@@ -45,17 +96,15 @@ function addProjectToDependencies(deps) {
   );
 }
 
-function addProjectToDependency(dep) {
-  return getProjectFromDependency(dep.name)
-    .then(project => {
-      if (project) {
-        dep.project = project;
-      }
-      return dep;
-    });
+function addProjectToDependency (dep) {
+  const project = getProjectFromDependency(dep.name);
+  if (project) {
+    dep.project = project;
+  }
+  return dep;
 }
 
-function getRecommendedProjectFromDependencies(deps) {
+function getRecommendedProjectFromDependencies (deps) {
   return addProjectToDependencies(deps)
     .then(
       deps => {
@@ -68,7 +117,7 @@ function getRecommendedProjectFromDependencies(deps) {
             projects[id].score = 0;
             projects[id].repos = [];
           }
-          projects[id].repos = [... projects[id].repos, ... dep.repos];
+          projects[id].repos = uniq([... projects[id].repos, ... dep.repos]);
           for (const dependencyType of dependencyTypes) {
             projects[id][dependencyType] = projects[id][dependencyType] || 0;
             projects[id][dependencyType] += dep[dependencyType];
@@ -81,6 +130,7 @@ function getRecommendedProjectFromDependencies(deps) {
           }
         }
 
+        // Convert objects with ids as key to arrays
         return Object.values(projects);
       }
     ).then(
@@ -93,7 +143,9 @@ function getRecommendedProjectFromDependencies(deps) {
 }
 
 export {
-  getAllDependenciesFromRepos,
+  addDependenciesToRepo,
   addProjectToDependencies,
-  getRecommendedProjectFromDependencies
+  dependenciesStats,
+  getAllDependenciesFromRepos,
+  getRecommendedProjectFromDependencies,
 };

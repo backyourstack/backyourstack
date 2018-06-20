@@ -7,54 +7,93 @@ import {
 } from './github';
 
 import {
+  addDependenciesToRepo,
   addProjectToDependencies,
+  dependenciesStats,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
 } from './utils';
 
 const debug = _debug('data');
 
-const fetchDebug = (result) => {
+function fetchDebug (result) {
   debug(result);
   return result;
-};
+}
 
-const fetchJson = (url, params = {}) => {
+function fetchJson (url, params = {}) {
   params.credentials = 'same-origin';
   return fetch(url, params)
     .then(res => res.json())
     .then(fetchDebug);
 }
 
-async function getProfile(slug, accessToken) {
+function getProfile (slug, accessToken) {
   return process.browser ?
     fetchJson(`/data/getProfile?slug=${slug}`) :
     fetchProfile(slug, accessToken);
 }
 
-async function getUserOrgs(accessToken) {
+function getUserOrgs (accessToken) {
   return process.browser ?
-    fetchJson(`/data/getUserOrgs`) :
+    fetchJson('/data/getUserOrgs') :
     fetchWithOctokit('users.getOrgs', {}, accessToken);
 }
 
-async function searchUsers(q, accessToken) {
+function searchUsers (q, accessToken) {
   return process.browser ?
     fetchJson(`/data/searchUsers?q=${q}`) :
     fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-async function getProfileData(id, accessToken) {
+async function getProfileData (id, accessToken) {
   if (process.browser) {
     return fetchJson(`/data/getProfileData?id=${id}`);
   }
 
   const profile = await fetchProfile(id, accessToken);
-  const repos = await fetchReposForProfile(profile, accessToken);
-  const dependencies = await getAllDependenciesFromRepos(repos).then(addProjectToDependencies);
+
+  const repos = await fetchReposForProfile(profile, accessToken)
+    .then(repos =>
+      Promise.all(repos.map(repo =>
+        addDependenciesToRepo(repo, accessToken))
+      )
+    );
+
+  const dependencies = await addProjectToDependencies(getAllDependenciesFromRepos(repos));
+
   const recommendations = await getRecommendedProjectFromDependencies(dependencies);
 
   return { profile, repos, dependencies, recommendations };
+}
+
+async function getFilesData (sessionFiles) {
+  if (process.browser) {
+    return fetchJson('/data/getFilesData');
+  }
+
+  if (!sessionFiles) {
+    return { files: [], repos: [], dependencies: [], recommendations: [] };
+  }
+
+  const files = Object.values(sessionFiles);
+
+  const repos = Object.keys(sessionFiles).map(id => {
+    const file = sessionFiles[id];
+    return {
+      id,
+      name: file.parsed.name || 'Unnamed project',
+      dependencies: dependenciesStats(file.parsed),
+      ... file,
+    };
+  });
+
+  const dependencies = await addProjectToDependencies(getAllDependenciesFromRepos(repos));
+
+  const recommendations = await getRecommendedProjectFromDependencies(dependencies);
+
+  return { files, repos, dependencies, recommendations };
+
 }
 
 export {
@@ -62,4 +101,5 @@ export {
   searchUsers,
   getUserOrgs,
   getProfileData,
+  getFilesData,
 };
