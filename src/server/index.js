@@ -6,9 +6,8 @@ const express = require('express');
 const expressSession = require('express-session');
 const multer = require('multer');
 const next = require('next');
-const { get } = require('lodash');
-
 const md5 = require('md5');
+const { get } = require('lodash');
 
 const routes = require('../routes');
 const passport = require('./passport');
@@ -35,6 +34,8 @@ nextApp.prepare()
 
     server.use(passport.initialize());
     server.use(passport.session());
+
+    server.use(express.json());
 
     server.get('/logout',
       (req, res) => {
@@ -91,6 +92,12 @@ nextApp.prepare()
     server.get('/data/getFilesData', (req, res) => {
       const files = get(req, 'session.files');
       getFilesData(files).then(data => res.send(data));
+    });
+
+    server.post('/data/updateFilesData', (req, res) => {
+      const files = get(req, 'session.files');
+      delete files[req.body.name];
+      getFilesData(files).then(res.send('Ok'));
     });
 
     server.post('/files/upload', upload.array('files'), (req, res) => {
