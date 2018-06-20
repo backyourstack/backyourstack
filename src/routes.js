@@ -5,6 +5,7 @@ routes
   .add('logout')
   .add('index', '/')
   .add('search', '/search')
+  .add('files', '/files')
   .add('profile', '/:id');
 
 module.exports = routes;

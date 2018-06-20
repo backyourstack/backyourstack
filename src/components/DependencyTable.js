@@ -59,9 +59,14 @@ export default class DependencyTable extends React.Component {
                     dep.repos
                       .slice(0, 10)
                       .map(repo => (
-                        <a key={`${dep.name}_${repo.id}`} href={`https://github.com/${repo.full_name}`}>
-                          {repo.full_name}
-                        </a>
+                        <span key={`${dep.name}_${repo.id}`}>
+                          {repo.full_name &&
+                            <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                          }
+                          {!repo.full_name &&
+                            <span>{repo.name}</span>
+                          }
+                        </span>
                       ))
                       .reduce((prev, curr) => [ prev, ', ', curr ] )
                   }

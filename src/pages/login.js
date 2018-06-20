@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 export default class Login extends React.Component {
 
-  static async getInitialProps (ctx) {
+  static getInitialProps (ctx) {
     return { next: ctx.query.next || '/' };
   }
 
