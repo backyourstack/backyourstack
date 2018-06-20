@@ -10,6 +10,8 @@ const routes = require('../routes');
 const passport = require('./passport');
 const { fetchWithBasicAuthentication } = require('./utils');
 
+const { getProfile, getUserOrgs, searchUsers, getProfileData } = require('../lib/data');
+
 const port = parseInt(process.env.PORT, 10) || 3000;
 
 const nextApp = next({
@@ -57,6 +59,26 @@ nextApp.prepare()
         res.redirect(next);
       }
     );
+
+    server.get('/data/getProfile', async (req, res) => {
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      getProfile(req.query.slug, accessToken).then(data => res.send(data))
+    });
+
+    server.get('/data/getUserOrgs', async (req, res) => {
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      getUserOrgs(accessToken).then(data => res.send(data))
+    });
+
+    server.get('/data/searchUsers', async (req, res) => {
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      searchUsers(req.query.q, accessToken).then(data => res.send(data))
+    });
+
+    server.get('/data/getProfileData', async (req, res) => {
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      getProfileData(req.query.id, accessToken).then(data => res.send(data))
+    });
 
     server.get('*', handler);
 

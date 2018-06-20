@@ -5,7 +5,7 @@ export default class RepositoryTable extends React.Component {
 
   static propTypes = {
     repositories: PropTypes.array.isRequired,
-  }
+  };
 
   render () {
     const { repositories } = this.props;

@@ -1,14 +1,16 @@
-import debug from 'debug';
-import fetch from 'cross-fetch';
-import { pick } from 'lodash';
+import _debug from 'debug';
+import lruCache from 'lru-cache';
 
+import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
 
+import { get, pick } from 'lodash';
+
+const cache = lruCache();
+
+const debug = _debug('github');
+
 const baseRawUrl = 'https://raw.githubusercontent.com';
-
-const cache = require('lru-cache')();
-
-const _debug = debug('github');
 
 function getOctokit (accessToken) {
   const octokit = octokitRest();
@@ -19,7 +21,7 @@ function getOctokit (accessToken) {
 }
 
 function getData (res) {
-  _debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
+  debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
   return res.data;
 }
 
@@ -27,7 +29,13 @@ function getContent (data) {
   return Buffer.from(data.content, 'base64').toString('utf8');
 }
 
-export async function getProfile (slug, accessToken) {
+function fetchWithOctokit (path, params, accessToken) {
+  const octokit = getOctokit(accessToken);
+  const func = get(octokit, path);
+  return func(params).then(getData);
+}
+
+async function fetchProfile (slug, accessToken) {
   const cacheKey = `profile_${slug}`;
   const profile = cache.get(cacheKey);
   if (profile) {
@@ -48,19 +56,7 @@ export async function getProfile (slug, accessToken) {
   }
 }
 
-export function searchUsers(params, accessToken) {
-  return getOctokit(accessToken).search.users(params).then(getData);
-}
-
-export async function getOrgsForUser (accessToken) {
-  const octokit = getOctokit(accessToken);
-
-  const orgs = await octokit.users.getOrgs().then(getData);
-
-  return orgs;
-}
-
-export async function getReposForProfile(profile, accessToken) {
+async function fetchReposForProfile (profile, accessToken) {
 
   let repos = [];
 
@@ -83,7 +79,7 @@ export async function getReposForProfile(profile, accessToken) {
     getRepoParameters.page = 1;
     getRepoParameters.per_page = perPage;
     while (true) {
-      _debug('Fetching repos', getRepoParameters);
+      debug('Fetching repos', getRepoParameters);
       const fetchRepos = await getRepoFunction(getRepoParameters).then(getData);
       repos = [ ... repos, ... fetchRepos ];
       if (fetchRepos.length < perPage) {
@@ -104,7 +100,7 @@ export async function getReposForProfile(profile, accessToken) {
 }
 
 
-async function fetchRepoFile(repo, path, accessToken) {
+function fetchRepoFile (repo, path, accessToken) {
   if (repo.private === false) {
     const relativeUrl = `/${repo.full_name}/${repo.default_branch}/${path}`;
     debug(`Fetching from ${relativeUrl}`);
@@ -126,7 +122,7 @@ async function fetchRepoFile(repo, path, accessToken) {
   }
 }
 
-function fetchRepoDependencies(repo, accessToken) {
+function fetchRepoDependencies (repo, accessToken) {
   return fetchRepoFile(repo, 'package.json', accessToken)
       .then(JSON.parse)
       .then(packageJson => {
@@ -143,12 +139,12 @@ function fetchRepoDependencies(repo, accessToken) {
         return Object.values(dependencies);
       })
       .catch((err) => {
-        _debug(`Error: ${err.message}`);
+        debug(`Error: ${err.message}`);
         return [];
       });
 }
 
-function addDependenciesToRepo(repo, accessToken) {
+function addDependenciesToRepo (repo, accessToken) {
   return new Promise(resolve => {
     const cacheKey = `repo_dependencies_${repo.id}`;
     if (cache.has(cacheKey)) {
@@ -163,3 +159,9 @@ function addDependenciesToRepo(repo, accessToken) {
     }
   });
 }
+
+export {
+  fetchWithOctokit,
+  fetchProfile,
+  fetchReposForProfile,
+};

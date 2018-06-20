@@ -5,7 +5,7 @@ export default class RecommendationList extends React.Component {
 
   static propTypes = {
     recommendations: PropTypes.array.isRequired,
-  }
+  };
 
   render () {
     const { recommendations } = this.props;
@@ -68,7 +68,7 @@ export default class RecommendationList extends React.Component {
         </style>
         <div className="Recommendations">
           {recommendations.filter(r => r.opencollective).map(recommendation => (
-            <div key={recommendation.id} className="Recommendation">
+            <div key={recommendation.name} className="Recommendation">
               <div className="name"><b>{recommendation.opencollective.name}</b></div>
               <div className="description">{recommendation.opencollective.description}</div>
               <div className="repos">

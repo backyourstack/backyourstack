@@ -4,16 +4,7 @@ import { get } from 'lodash';
 
 import { Link } from '../routes';
 
-import {
-  getProfile,
-  getReposForProfile,
-} from '../lib/github';
-
-import {
-  getAllDependenciesFromRepos,
-  addProjectToDependencies,
-  getRecommendedProjectFromDependencies,
-} from '../lib/utils';
+import { getProfileData } from '../lib/data';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -27,12 +18,10 @@ export default class Profile extends React.Component {
 
   static async getInitialProps ({ req, query }) {
     try {
+      // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
-      const profile = await getProfile(query.id, accessToken);
-      const repos = await getReposForProfile(profile, accessToken);
-      const dependencies = await getAllDependenciesFromRepos(repos).then(addProjectToDependencies);
-      const recommendations = await getRecommendedProjectFromDependencies(dependencies);
-      return { profile, repos, dependencies, recommendations };
+      const data = await getProfileData(query.id, accessToken);
+      return { ... data };
     } catch (error) {
       return { error };
     }
@@ -46,7 +35,7 @@ export default class Profile extends React.Component {
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
     error: PropTypes.object,
-  }
+  };
 
   render () {
     const { error, profile, repos, dependencies, recommendations, pathname, loggedInUser } = this.props;

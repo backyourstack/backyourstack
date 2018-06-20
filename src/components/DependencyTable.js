@@ -5,7 +5,7 @@ export default class DependencyTable extends React.Component {
 
   static propTypes = {
     dependencies: PropTypes.array.isRequired,
-  }
+  };
 
   render () {
     const { dependencies } = this.props;
