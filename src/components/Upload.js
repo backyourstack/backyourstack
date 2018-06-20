@@ -10,10 +10,27 @@ export default class Upload extends React.Component {
   static propTypes = {
     files: PropTypes.array,
     onUpload: PropTypes.func,
+    onUpdate: PropTypes.func,
+  };
+
+  handleRemoveFile = (id) => {
+    const object = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name: id }),
+    };
+    fetch('/data/updateFilesData', object)
+      .then(() => {
+        if (this.props.onUpdate) {
+          this.props.onUpdate();
+        }
+      });
   };
 
   onDrop = (acceptedFiles) => {
-
     if (acceptedFiles.length > 0) {
       const formData = new FormData();
       acceptedFiles.forEach(file => {
@@ -82,6 +99,9 @@ export default class Upload extends React.Component {
                     </div>
                     <div className="dependencies">
                       <b>{dependenciesStats(file.parsed).length}</b> dependencies
+                    </div>
+                    <div className="removefile">
+                      <button onClick={(event) => this.handleRemoveFile(file.parsed.name,event)}>Remove</button>
                     </div>
                   </div>
                 ))}
