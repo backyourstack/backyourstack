@@ -51,6 +51,12 @@ export default class Files extends React.Component {
     this.setState(data);
   };
 
+  onUpdate = async () => {
+    const data = await getFilesData();
+
+    this.setState(data);
+  };
+
   render () {
     const { pathname, loggedInUser } = this.props;
     const { files, repos, dependencies, recommendations } = this.state;
@@ -59,7 +65,7 @@ export default class Files extends React.Component {
         <Header loggedInUser={loggedInUser} pathname={pathname} />
         <Content>
 
-          <Upload files={files} onUpload={this.onUpload} />
+          <Upload files={files} onUpload={this.onUpload} onUpdate={this.onUpdate} />
 
           {files.length === 0 &&
             <p>Upload files to get recommendations (only package.json).</p>
