@@ -8,12 +8,16 @@ import { Link, Router } from '../routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
+import Upload from '../components/Upload';
 import Footer from '../components/Footer';
 
 export default class Index extends React.Component {
 
   static async getInitialProps ({ req }) {
     const initialProps = {};
+
+    const files = get(req, 'session.files');
+    initialProps.files = files ? Object.values(files) : [];
 
     const accessToken = get(req, 'session.passport.user.accessToken');
     if (accessToken) {
@@ -27,27 +31,29 @@ export default class Index extends React.Component {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     loggedInUserOrgs: PropTypes.array,
+    files: PropTypes.array,
   };
 
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = { q: '' };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ q: event.target.value });
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     Router.pushRoute('search', { q: this.state.q });
     event.preventDefault();
-  }
+  };
+
+  onUpload = () => {
+    Router.pushRoute('files');
+  };
 
   render () {
-    const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
+    const { pathname, loggedInUser, loggedInUserOrgs, files } = this.props;
     return (
       <div>
 
@@ -97,6 +103,8 @@ export default class Index extends React.Component {
               }
             </>
           )}
+
+          <Upload files={files} onUpload={this.onUpload} />
 
         </Content>
 

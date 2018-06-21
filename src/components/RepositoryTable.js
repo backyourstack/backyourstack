@@ -45,9 +45,12 @@ export default class RepositoryTable extends React.Component {
             {repositories.map(repo => (
               <tr key={repo.id}>
                 <td>
-                  <a href={`https://github.com/${repo.full_name}`}>
-                    {repo.full_name}
-                  </a>
+                  {repo.full_name &&
+                    <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                  }
+                  {!repo.full_name &&
+                    <span>{repo.name}</span>
+                  }
                 </td>
                 <td>
                   {repo.dependencies.length}

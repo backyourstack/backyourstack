@@ -50,9 +50,6 @@ export default class RecommendationList extends React.Component {
           color: #333;
           text-decoration: none;
         }
-        .back-button {
-
-        }
         .back-button a {
           display: block;
           border-radius: 15px;
@@ -75,7 +72,12 @@ export default class RecommendationList extends React.Component {
                 <strong>Used in</strong>:&nbsp;
                 {recommendation.repos.slice(0, 3).map(repo => (
                   <span key={repo.id}>
-                    <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                    {repo.full_name &&
+                      <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                    }
+                    {!repo.full_name &&
+                      <span>{repo.name}</span>
+                    }
                   </span>
                 )).reduce( ( prev, curr ) => [ prev, ', ', curr ] )}
                 {recommendation.repos.length > 3 && ` and ${recommendation.repos.length - 3 } others`}

@@ -1,12 +1,11 @@
 import _debug from 'debug';
-import lruCache from 'lru-cache';
 
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
 
 import { get, pick } from 'lodash';
 
-const cache = lruCache();
+import cache from './cache';
 
 const debug = _debug('github');
 
@@ -30,24 +29,23 @@ function getContent (data) {
 }
 
 function fetchWithOctokit (path, params, accessToken) {
+  debug('Fetch with Octokit', { path, params, accessToken });
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
 }
 
 async function fetchProfile (slug, accessToken) {
+  debug('Fetch profile', { slug, accessToken });
   const cacheKey = `profile_${slug}`;
   const profile = cache.get(cacheKey);
   if (profile) {
     return profile;
   }
-  const octokit = getOctokit(accessToken);
-  const user = await octokit.users.getForUser({ username: slug })
-    .then(getData)
-    .catch(() => null);
+  const user = await fetchWithOctokit('users.getForUser', { username: slug }, accessToken).catch(() => null);
 
   if (!user || user.type === 'Organization') {
-    const org = await octokit.orgs.get({ org: slug }).then(getData);
+    const org = fetchWithOctokit('orgs.get', { org: slug }, accessToken);
     cache.set(cacheKey, org);
     return org;
   } else {
@@ -65,14 +63,13 @@ async function fetchReposForProfile (profile, accessToken) {
     repos = cache.get(publicCacheKey);
   } else {
     const perPage = 100;
-    const octokit = getOctokit(accessToken);
 
     let getRepoFunction, getRepoParameters;
     if (profile.type == 'Organization') {
-      getRepoFunction = octokit.repos.getForOrg;
+      getRepoFunction = 'repos.getForOrg';
       getRepoParameters = { org: profile.login };
     } else {
-      getRepoFunction = octokit.repos.getForUser;
+      getRepoFunction = 'repos.getForUser';
       getRepoParameters = { username: profile.login };
     }
 
@@ -80,7 +77,7 @@ async function fetchReposForProfile (profile, accessToken) {
     getRepoParameters.per_page = perPage;
     while (true) {
       debug('Fetching repos', getRepoParameters);
-      const fetchRepos = await getRepoFunction(getRepoParameters).then(getData);
+      const fetchRepos = await fetchWithOctokit(getRepoFunction, getRepoParameters, accessToken);
       repos = [ ... repos, ... fetchRepos ];
       if (fetchRepos.length < perPage) {
         break;
@@ -95,8 +92,7 @@ async function fetchReposForProfile (profile, accessToken) {
     cache.set(publicCacheKey, repos.filter(repo => repo.private === false));
   }
 
-  // Add dependencies
-  return Promise.all(repos.map(repo => addDependenciesToRepo(repo, accessToken)));
+  return repos;
 }
 
 
@@ -112,56 +108,14 @@ function fetchRepoFile (repo, path, accessToken) {
         throw new Error(`Can't fetch package.json from ${relativeUrl}.`);
       });
   } else if (repo.private === true) {
-    const octokit = getOctokit(accessToken);
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
-    debug('Fetching with Octokit', params);
-    return octokit.repos
-      .getContent(params)
-      .then(getData)
-      .then(getContent);
+    return fetchWithOctokit('repos.getContent', params, accessToken).then(getContent);
   }
-}
-
-function fetchRepoDependencies (repo, accessToken) {
-  return fetchRepoFile(repo, 'package.json', accessToken)
-      .then(JSON.parse)
-      .then(packageJson => {
-        const dependencies = {};
-        ['dependencies', 'devDependencies', 'peerDependencies'].forEach(dependencyType => {
-          if (packageJson[dependencyType]) {
-            Object.keys(packageJson[dependencyType]).forEach(name => {
-              dependencies[name] = dependencies[name] || { type: 'npm', name };
-              dependencies[name][dependencyType] = dependencies[name][dependencyType] || 0;
-              dependencies[name][dependencyType] ++;
-            });
-          }
-        });
-        return Object.values(dependencies);
-      })
-      .catch((err) => {
-        debug(`Error: ${err.message}`);
-        return [];
-      });
-}
-
-function addDependenciesToRepo (repo, accessToken) {
-  return new Promise(resolve => {
-    const cacheKey = `repo_dependencies_${repo.id}`;
-    if (cache.has(cacheKey)) {
-      repo.dependencies = cache.get(cacheKey);
-      resolve(repo);
-    } else {
-      fetchRepoDependencies(repo, accessToken).then(dependencies => {
-        cache.set(cacheKey, dependencies);
-        repo.dependencies = dependencies;
-        resolve(repo);
-      });
-    }
-  });
 }
 
 export {
   fetchWithOctokit,
+  fetchRepoFile,
   fetchProfile,
   fetchReposForProfile,
 };
