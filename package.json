@@ -74,8 +74,14 @@
       "no-extra-semi": "warn",
       "curly": "warn",
       "no-multi-spaces": "warn",
-      "indent": ["warn", 2],
-      "space-before-function-paren": ["warn", "always"],
+      "indent": [
+        "warn",
+        2
+      ],
+      "space-before-function-paren": [
+        "warn",
+        "always"
+      ],
       "no-constant-condition": [
         "warn",
         {
