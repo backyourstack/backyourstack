@@ -1,11 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 export default class DependencyTable extends React.Component {
 
   static propTypes = {
     dependencies: PropTypes.array.isRequired,
   };
+
+  sortDependencies (dependencies) {
+    return dependencies.sort((a, b) => {
+      const aName = get(a, 'name');
+      const bName = get(b, 'name');
+      const aCollectiveName = get(a, 'project.opencollective.name');
+      const bCollectiveName = get(b, 'project.opencollective.name');
+      if (aCollectiveName !== bCollectiveName) {
+        return aName.localeCompare(bName);
+      } else if (aCollectiveName && bCollectiveName) {
+        return aCollectiveName.localeCompare(bCollectiveName);
+      } else if (aCollectiveName) {
+        return -1;
+      } else if (bCollectiveName) {
+        return +1;
+      } else {
+        return aName.localeCompare(bName);
+      }
+    });
+  }
 
   render () {
     const { dependencies } = this.props;
@@ -47,7 +68,7 @@ export default class DependencyTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {dependencies.map(dep => (
+            {this.sortDependencies(dependencies).map(dep => (
               <tr key={dep.name}>
                 <td>{dep.type}</td>
                 <td>{dep.name}</td>
