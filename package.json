@@ -1,6 +1,6 @@
 {
   "name": "backyourstack",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Back Your Stack analyzes repositories to recommend Open Source projects to support.",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^15.9.0",
+    "@octokit/rest": "^15.9.1",
     "@zeit/next-css": "^0.2.0",
     "cross-fetch": "^2.2.1",
     "debug": "^3.1.0",

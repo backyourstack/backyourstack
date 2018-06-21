@@ -73,10 +73,10 @@ async function getFilesData (sessionFiles) {
   }
 
   if (!sessionFiles) {
-    return { files: [], repos: [], dependencies: [], recommendations: [] };
+    return { files: {}, repos: [], dependencies: [], recommendations: [] };
   }
 
-  const files = Object.values(sessionFiles);
+  const files = sessionFiles;
 
   const repos = Object.keys(sessionFiles).map(id => {
     const file = sessionFiles[id];

@@ -4,9 +4,7 @@ import { pick, uniq } from 'lodash';
 
 import allProjects from '../data/projects.json';
 
-import {
-  fetchRepoFile,
-} from './github';
+import { fetchFileFromRepo } from './github';
 
 import cache from './cache';
 
@@ -14,29 +12,28 @@ const debug = _debug('utils');
 
 const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
 
-function addDependenciesToRepo (repo, accessToken) {
-  return new Promise(resolve => {
-    const cacheKey = `repo_dependencies_${repo.id}`;
-    if (cache.has(cacheKey)) {
-      repo.dependencies = cache.get(cacheKey);
-      resolve(repo);
-    } else {
-      fetchRepoDependencies(repo, accessToken)
-        .then(dependencies => {
-          cache.set(cacheKey, dependencies);
-          repo.rawDependencies = dependencies;
-          repo.dependencies = dependenciesStats(dependencies);
-          resolve(repo);
-        });
-    }
-  });
+async function addDependenciesToRepo (repo, accessToken) {
+  const cacheKey = `repo_raw_dependencies_${repo.id}`;
+
+  let rawDependencies;
+  if (cache.has(cacheKey)) {
+    rawDependencies = cache.get(cacheKey);
+  } else {
+    rawDependencies = await fetchRepoDependencies(repo, accessToken);
+    cache.set(cacheKey, rawDependencies);
+  }
+
+  repo.rawDependencies = rawDependencies;
+  repo.dependencies = dependenciesStats(rawDependencies);
+
+  return repo;
 }
 
 function fetchRepoDependencies (repo, accessToken) {
-  return fetchRepoFile(repo, 'package.json', accessToken)
+  return fetchFileFromRepo(repo, 'package.json', accessToken)
     .then(JSON.parse)
-    .catch((err) => {
-      debug(`Error: ${err.message}`);
+    .catch(err => {
+      debug(`fetchRepoDependencies error: ${err.message}`);
       return [];
     });
 }
