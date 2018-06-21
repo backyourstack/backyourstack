@@ -13,7 +13,8 @@ export default class Upload extends React.Component {
     onUpdate: PropTypes.func,
   };
 
-  handleRemoveFile = (id) => {
+  handleRemoveFile = (id, event) => {
+    event.stopPropagation();
     const object = {
       method: 'POST',
       headers: {
@@ -101,7 +102,7 @@ export default class Upload extends React.Component {
                       <b>{dependenciesStats(file.parsed).length}</b> dependencies
                     </div>
                     <div className="removefile">
-                      <button onClick={(event) => this.handleRemoveFile(file.parsed.name,event)}>Remove</button>
+                      <button onClick={(event) => this.handleRemoveFile(file.parsed.name, event)}>Remove</button>
                     </div>
                   </div>
                 ))}
