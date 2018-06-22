@@ -93,6 +93,9 @@ async function fetchReposForProfile (profile, accessToken) {
     getReposParameters.page ++;
   }
 
+  // Filter forks
+  repos = repos.filter(repo => repo.fork === false);
+
   // Filter the keys we're interested in
   repos = repos.map(repo => pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private']));
 
