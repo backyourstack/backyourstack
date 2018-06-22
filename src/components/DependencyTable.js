@@ -80,7 +80,7 @@ export default class DependencyTable extends React.Component {
                       .map(repo => (
                         <span key={`${dep.name}_${repo.id}`}>
                           {repo.full_name &&
-                            <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                            <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
                           }
                           {!repo.full_name &&
                             <span>{repo.name}</span>
@@ -95,7 +95,7 @@ export default class DependencyTable extends React.Component {
                 </td>
                 <td className="opencollective">
                   {dep.project && dep.project.opencollective &&
-                    <a href={`https://opencollective/${dep.project.opencollective.slug}`}>
+                    <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
                       {dep.project.opencollective.name}
                     </a>
                   }

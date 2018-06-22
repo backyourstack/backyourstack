@@ -73,7 +73,7 @@ export default class RecommendationList extends React.Component {
                 {recommendation.repos.slice(0, 3).map(repo => (
                   <span key={repo.id}>
                     {repo.full_name &&
-                      <a href={`https://github.com/${repo.full_name}`}>{repo.full_name}</a>
+                      <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
                     }
                     {!repo.full_name &&
                       <span>{repo.name}</span>
