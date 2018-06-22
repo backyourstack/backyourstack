@@ -5,6 +5,9 @@ const options = {
   maxAge: 1000 * 60 * 60 * 24,
 };
 
-const cache = lruCache(options);
+let cache = global.cache;
+if (!cache) {
+  cache = global.cache = lruCache(options);
+}
 
 export default cache;

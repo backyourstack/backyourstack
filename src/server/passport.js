@@ -2,7 +2,11 @@ const passport = require('passport');
 const passportGithub = require('passport-github');
 const debug = require('debug')('auth');
 
-const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_CALLBACK_URL } = process.env;
+const { donateToken } = require('../lib/github');
+
+const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_CALLBACK_URL, GITHUB_TOKEN_DONATORS } = process.env;
+
+const githubTokenDonators = (GITHUB_TOKEN_DONATORS || '').split(',').map(str => str.trim());
 
 const githubParams = {
   clientID: GITHUB_CLIENT_ID,
@@ -15,6 +19,9 @@ const passportGithubStrategy = new passportGithub.Strategy(
   (accessToken, refreshToken, profile, cb) => {
     debug(accessToken, refreshToken, profile);
     const { id, username, displayName } = profile;
+    if (githubTokenDonators.indexOf(username) !== -1) {
+      donateToken(accessToken);
+    }
     cb(null, { id, username, displayName, accessToken, refreshToken });
   }
 );

@@ -13,6 +13,15 @@ const baseRawUrl = 'https://raw.githubusercontent.com';
 
 function getOctokit (accessToken) {
   const octokit = octokitRest();
+  if (!accessToken) {
+    const donatedTokens = cache.get('donatedTokens') || [];
+    if (donatedTokens.length > 0) {
+      accessToken = donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
+    }
+  }
+  if (!accessToken) {
+    accessToken = process.env.GITHUB_GUEST_TOKEN;
+  }
   if (accessToken) {
     octokit.authenticate({ type: 'oauth', token: accessToken });
   }
@@ -107,7 +116,6 @@ async function fetchReposForProfile (profile, accessToken) {
   return accessToken ? repos : publicRepos;
 }
 
-
 function fetchFileFromRepo (repo, path, accessToken) {
   debug('Fetch file from repo', repo.full_name, repo.default_branch, path, accessToken);
 
@@ -127,9 +135,18 @@ function fetchFileFromRepo (repo, path, accessToken) {
     });
 }
 
+function donateToken (accessToken) {
+  const donatedTokens = cache.get('donatedTokens') || [];
+  if (donatedTokens.indexOf(accessToken) === -1) {
+    donatedTokens.push(accessToken);
+    cache.set('donatedTokens', donatedTokens);
+  }
+}
+
 export {
   fetchWithOctokit,
   fetchFileFromRepo,
   fetchProfile,
   fetchReposForProfile,
+  donateToken,
 };
