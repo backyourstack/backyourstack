@@ -1,14 +1,12 @@
-import _debug from 'debug';
-
+import debug from 'debug';
 import { pick, uniq } from 'lodash';
+
+import cache from './cache';
+import { fetchFileFromRepo } from './github';
 
 import allProjects from '../data/projects.json';
 
-import { fetchFileFromRepo } from './github';
-
-import cache from './cache';
-
-const debug = _debug('utils');
+const _debug = debug('utils');
 
 const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
 
@@ -33,7 +31,7 @@ function fetchRepoDependencies (repo, accessToken) {
   return fetchFileFromRepo(repo, 'package.json', accessToken)
     .then(JSON.parse)
     .catch(err => {
-      debug(`fetchRepoDependencies error: ${err.message}`);
+      _debug(`fetchRepoDependencies error: ${err.message}`);
       return [];
     });
 }

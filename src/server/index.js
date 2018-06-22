@@ -1,19 +1,24 @@
-require('./env');
+import './env';
 
-const debug = require('debug')('server');
-const path = require('path');
-const express = require('express');
-const expressSession = require('express-session');
-const multer = require('multer');
-const next = require('next');
-const md5 = require('md5');
-const { get } = require('lodash');
+import path from 'path';
+import crypto from 'crypto';
 
-const routes = require('../routes');
-const passport = require('./passport');
-const { fetchWithBasicAuthentication } = require('./utils');
+import express from 'express';
+import expressSession from 'express-session';
+import multer from 'multer';
+import next from 'next';
+import md5 from 'md5';
+import debug from 'debug';
+import { get } from 'lodash';
 
-const { getProfile, getUserOrgs, searchUsers, getProfileData, getFilesData } = require('../lib/data');
+import passport from './passport';
+import routes from '../routes';
+import { fetchWithBasicAuthentication } from './utils';
+import { getProfile, getUserOrgs, searchUsers, getProfileData, getFilesData } from '../lib/data';
+
+const _debug = debug('server');
+
+const sessionSecret = process.env.SESSION_SECRET || crypto.randomBytes(64).toString('hex');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 
@@ -30,7 +35,7 @@ nextApp.prepare()
     const server = express();
     const upload = multer();
 
-    server.use(expressSession({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
+    server.use(expressSession({ secret: sessionSecret, resave: true, saveUninitialized: true }));
 
     server.use(passport.initialize());
     server.use(passport.session());
@@ -123,9 +128,9 @@ nextApp.prepare()
       if (err) {
         throw err;
       }
-      debug(`> Ready on http://localhost:${port}`);
+      _debug(`> Ready on http://localhost:${port}`);
     });
   })
   .catch(err => {
-    debug(`> Error while starting server: ${err.message}`);
+    _debug(`> Error while starting server: ${err.message}`);
   });

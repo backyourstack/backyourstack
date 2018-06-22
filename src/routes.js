@@ -1,4 +1,6 @@
-const routes = require('next-routes')();
+import nextRoutes from 'next-routes';
+
+const routes = nextRoutes();
 
 routes
   .add('login')
@@ -8,4 +10,6 @@ routes
   .add('files', '/files')
   .add('profile', '/:id');
 
-module.exports = routes;
+export default routes;
+
+export const { Link, Router } = routes;

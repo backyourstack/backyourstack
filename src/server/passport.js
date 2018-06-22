@@ -1,8 +1,10 @@
-const passport = require('passport');
-const passportGithub = require('passport-github');
-const debug = require('debug')('auth');
+import passport from 'passport';
+import passportGithub from 'passport-github';
+import debug from 'debug';
 
-const { donateToken } = require('../lib/github');
+import { donateToken } from '../lib/github';
+
+const _debug = debug('auth');
 
 const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_CALLBACK_URL, GITHUB_TOKEN_DONATORS } = process.env;
 
@@ -17,7 +19,7 @@ const githubParams = {
 const passportGithubStrategy = new passportGithub.Strategy(
   githubParams,
   (accessToken, refreshToken, profile, cb) => {
-    debug(accessToken, refreshToken, profile);
+    _debug(accessToken, refreshToken, profile);
     const { id, username, displayName } = profile;
     if (githubTokenDonators.indexOf(username) !== -1) {
       donateToken(accessToken);
@@ -32,4 +34,4 @@ passport.serializeUser((user, done) => done(null, user));
 
 passport.deserializeUser((user, done) => done(null, user));
 
-module.exports = passport;
+export default passport;

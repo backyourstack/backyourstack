@@ -1,4 +1,4 @@
-import _debug from 'debug';
+import debug from 'debug';
 
 import {
   fetchWithOctokit,
@@ -14,10 +14,10 @@ import {
   getRecommendedProjectFromDependencies,
 } from './utils';
 
-const debug = _debug('data');
+const _debug = debug('data');
 
 function fetchDebug (result) {
-  debug(result);
+  _debug(result);
   return result;
 }
 

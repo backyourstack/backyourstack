@@ -1,13 +1,11 @@
-import _debug from 'debug';
-
+import debug from 'debug';
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
-
 import { get, pick } from 'lodash';
 
 import cache from './cache';
 
-const debug = _debug('github');
+const _debug = debug('github');
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
 
@@ -29,7 +27,7 @@ function getOctokit (accessToken) {
 }
 
 function getData (res) {
-  debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
+  _debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
   return res.data;
 }
 
@@ -38,18 +36,18 @@ function getContent (data) {
 }
 
 function fetchWithOctokit (path, params, accessToken) {
-  debug('Fetch with octokit', { path, params, accessToken });
+  _debug('Fetch with octokit', { path, params, accessToken });
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
 }
 
 function silentError (err) {
-  debug('Silently catched error', err);
+  _debug('Silently catched error', err);
 }
 
 async function fetchProfile (slug, accessToken) {
-  debug('Fetch profile', slug, accessToken);
+  _debug('Fetch profile', slug, accessToken);
 
   const cacheKey = `profile_${slug}`;
 
@@ -72,7 +70,7 @@ async function fetchProfile (slug, accessToken) {
 }
 
 async function fetchReposForProfile (profile, accessToken) {
-  debug('Fetch repos for profile', profile, accessToken);
+  _debug('Fetch repos for profile', profile, accessToken);
 
   let repos = [];
 
@@ -117,7 +115,7 @@ async function fetchReposForProfile (profile, accessToken) {
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
-  debug('Fetch file from repo', repo.full_name, repo.default_branch, path, accessToken);
+  _debug('Fetch file from repo', repo.full_name, repo.default_branch, path, accessToken);
 
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
@@ -125,7 +123,7 @@ function fetchFileFromRepo (repo, path, accessToken) {
   }
 
   const relativeUrl = `/${repo.full_name}/${repo.default_branch}/${path}`;
-  debug(`Fetching from ${relativeUrl}`);
+  _debug(`Fetching from ${relativeUrl}`);
   return fetch(`${baseRawUrl}${relativeUrl}`)
     .then(response => {
       if (response.status === 200) {

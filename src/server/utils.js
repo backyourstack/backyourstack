@@ -1,6 +1,6 @@
-const fetch = require('cross-fetch');
+import fetch from 'cross-fetch';
 
-module.exports.fetchWithBasicAuthentication = (username, password) => (url, params) => {
+export const fetchWithBasicAuthentication = (username, password) => (url, params) => {
   const basicAuthenticationString = Buffer.from([username, password].join(':')).toString('base64');
   params.headers = params.headers || {};
   params.headers.Authorization = `Basic ${basicAuthenticationString}`;
