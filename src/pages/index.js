@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { getUserOrgs } from '../lib/data';
+import { getUserOrgs, getFilesData } from '../lib/data';
 
 import { Link, Router } from '../routes';
 
@@ -16,27 +16,37 @@ export default class Index extends React.Component {
   static async getInitialProps ({ req }) {
     const initialProps = {};
 
-    const files = get(req, 'session.files');
-    initialProps.files = files ? Object.values(files) : [];
-
-    const accessToken = get(req, 'session.passport.user.accessToken');
+    let accessToken;
+    if (req) {
+      accessToken = get(req, 'session.passport.user.accessToken');
+    } else if (typeof window !== 'undefined') {
+      accessToken = get(window, '__NEXT_DATA__.props.pageProps.loggedInUser.accessToken');
+    }
     if (accessToken) {
       initialProps.loggedInUserOrgs = await getUserOrgs(accessToken);
     }
 
-    return initialProps;
+    // sessionFiles is optional and can be null (always on the client)
+    const sessionFiles = get(req, 'session.files');
+    const { files } = await getFilesData(sessionFiles);
+
+    return { files, ... initialProps };
   }
 
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     loggedInUserOrgs: PropTypes.array,
-    files: PropTypes.array,
+    files: PropTypes.object,
+  };
+
+  static defaultProps = {
+    files: {},
   };
 
   constructor (props) {
     super(props);
-    this.state = { q: '' };
+    this.state = { q: '', files: props.files };
   }
 
   handleChange = (event) => {
@@ -52,8 +62,15 @@ export default class Index extends React.Component {
     Router.pushRoute('files');
   };
 
+  refresh = async () => {
+    const { files } = await getFilesData();
+
+    this.setState({ files });
+  };
+
   render () {
-    const { pathname, loggedInUser, loggedInUserOrgs, files } = this.props;
+    const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
+    const { files } = this.state;
     return (
       <div>
 
@@ -104,7 +121,13 @@ export default class Index extends React.Component {
             </>
           )}
 
-          <Upload files={files} onUpload={this.onUpload} />
+          <h2>Upload Dependency Files</h2>
+          {Object.keys(files).length > 0 &&
+            <p>
+              <Link route="files"><a>View recommendations</a></Link>
+            </p>
+          }
+          <Upload files={files} onUpload={this.onUpload} onUpdate={this.refresh} />
 
         </Content>
 

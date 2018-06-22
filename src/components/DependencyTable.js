@@ -8,25 +8,23 @@ export default class DependencyTable extends React.Component {
     dependencies: PropTypes.array.isRequired,
   };
 
-  sortDependencies (dependencies) {
-    return dependencies.sort((a, b) => {
-      const aName = get(a, 'name');
-      const bName = get(b, 'name');
-      const aCollectiveName = get(a, 'project.opencollective.name');
-      const bCollectiveName = get(b, 'project.opencollective.name');
-      if (aCollectiveName !== bCollectiveName) {
-        return aName.localeCompare(bName);
-      } else if (aCollectiveName && bCollectiveName) {
-        return aCollectiveName.localeCompare(bCollectiveName);
-      } else if (aCollectiveName) {
-        return -1;
-      } else if (bCollectiveName) {
-        return +1;
-      } else {
-        return aName.localeCompare(bName);
-      }
-    });
-  }
+  sortDependencies = (a, b) => {
+    const aName = get(a, 'name');
+    const bName = get(b, 'name');
+    const aCollectiveName = get(a, 'project.opencollective.name');
+    const bCollectiveName = get(b, 'project.opencollective.name');
+    if (aCollectiveName === bCollectiveName) {
+      return aName.localeCompare(bName);
+    } else if (aCollectiveName && bCollectiveName) {
+      return aCollectiveName.localeCompare(bCollectiveName);
+    } else if (aCollectiveName) {
+      return -1;
+    } else if (bCollectiveName) {
+      return +1;
+    } else {
+      return aName.localeCompare(bName);
+    }
+  };
 
   render () {
     const { dependencies } = this.props;
@@ -42,9 +40,9 @@ export default class DependencyTable extends React.Component {
           border: 1px solid #333;
           padding: 0.5em;
           white-space: nowrap;
+          font-size: 12px;
         }
         table td.repos {
-          font-size: 12px;
           white-space: normal;
         }
         table td a {
@@ -60,15 +58,15 @@ export default class DependencyTable extends React.Component {
             <tr>
               <th>Type</th>
               <th>Name</th>
-              <th>Core dep.</th>
-              <th>Peer dep.</th>
-              <th>Dev dep.</th>
+              <th><abbr title="Core dependency count">Core dep.</abbr></th>
+              <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
+              <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
               <th className="repos">Repos</th>
               <th className="opencollective">Open Collective</th>
             </tr>
           </thead>
           <tbody>
-            {this.sortDependencies(dependencies).map(dep => (
+            {dependencies.sort(this.sortDependencies).map(dep => (
               <tr key={dep.name}>
                 <td>{dep.type}</td>
                 <td>{dep.name}</td>

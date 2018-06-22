@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('./env');
 
 const debug = require('debug')('server');
 const path = require('path');
@@ -94,12 +94,6 @@ nextApp.prepare()
       getFilesData(files).then(data => res.send(data));
     });
 
-    server.post('/data/updateFilesData', (req, res) => {
-      const files = get(req, 'session.files');
-      delete files[req.body.name];
-      getFilesData(files).then(res.send('Ok'));
-    });
-
     server.post('/files/upload', upload.array('files'), (req, res) => {
       req.session.files = req.session.files || {};
       req.files.forEach(raw => {
@@ -111,6 +105,15 @@ nextApp.prepare()
           }
         }
       });
+      res.send('Ok');
+    });
+
+    server.post('/files/delete', (req, res) => {
+      const id = get(req, 'body.id');
+      const sessionFiles = get(req, 'session.files');
+      if (id && sessionFiles) {
+        delete sessionFiles[id];
+      }
       res.send('Ok');
     });
 

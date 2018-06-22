@@ -10,28 +10,32 @@ import Upload from '../components/Upload';
 import Footer from '../components/Footer';
 
 import DependencyTable from '../components/DependencyTable';
-import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
 
 export default class Files extends React.Component {
 
   static async getInitialProps ({ req }) {
 
-    // The files is only required server side (it's ok if it's undefined on client side)
-    const files = get(req, 'session.files');
+    // sessionFiles is optional and can be null (always on the client)
+    const sessionFiles = get(req, 'session.files');
 
-    const data = await getFilesData(files);
+    const { files, dependencies, recommendations } = await getFilesData(sessionFiles);
 
-    return { ... data };
+    return { files, dependencies, recommendations };
   }
 
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
-    files: PropTypes.array,
-    repos: PropTypes.array,
+    files: PropTypes.object,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
+  };
+
+  static defaultProps = {
+    files: {},
+    dependencies: [],
+    recommendations: [],
   };
 
   constructor (props) {
@@ -39,48 +43,35 @@ export default class Files extends React.Component {
 
     this.state = {
       files: props.files,
-      repos: props.repos,
       dependencies: props.dependencies,
       recommendations: props.recommendations,
     };
   }
 
-  onUpload = async () => {
-    const data = await getFilesData();
+  refresh = async () => {
+    const { files, dependencies, recommendations } = await getFilesData();
 
-    this.setState(data);
-  };
-
-  onUpdate = async () => {
-    const data = await getFilesData();
-
-    this.setState(data);
+    this.setState({ files, dependencies, recommendations });
   };
 
   render () {
     const { pathname, loggedInUser } = this.props;
-    const { files, repos, dependencies, recommendations } = this.state;
+    const { files, dependencies, recommendations } = this.state;
     return (
       <div>
         <Header loggedInUser={loggedInUser} pathname={pathname} />
         <Content>
 
-          <Upload files={files} onUpload={this.onUpload} onUpdate={this.onUpdate} />
+          <h2>Upload Dependency Files</h2>
+          <Upload files={files} onUpload={this.refresh} onUpdate={this.refresh} />
 
-          {files.length === 0 &&
-            <p>Upload files to get recommendations (only package.json).</p>
-          }
-
-          {files.length > 0 &&
+          {Object.keys(files).length > 0 &&
             <Fragment>
               <h2>Recommendations</h2>
               <RecommendationList recommendations={recommendations} />
 
               <h2>Dependencies</h2>
               <DependencyTable dependencies={dependencies} />
-
-              <h2>Files</h2>
-              <RepositoryTable repositories={repos} />
             </Fragment>
           }
 

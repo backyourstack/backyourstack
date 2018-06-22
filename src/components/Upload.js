@@ -8,27 +8,13 @@ import { dependenciesStats } from '../lib/utils';
 export default class Upload extends React.Component {
 
   static propTypes = {
-    files: PropTypes.array,
+    files: PropTypes.object,
     onUpload: PropTypes.func,
     onUpdate: PropTypes.func,
   };
 
-  handleRemoveFile = (id, event) => {
-    event.stopPropagation();
-    const object = {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name: id }),
-    };
-    fetch('/data/updateFilesData', object)
-      .then(() => {
-        if (this.props.onUpdate) {
-          this.props.onUpdate();
-        }
-      });
+  static defaultProps = {
+    files: {},
   };
 
   onDrop = (acceptedFiles) => {
@@ -46,8 +32,27 @@ export default class Upload extends React.Component {
     }
   };
 
+  handleRemoveFile = (id, event) => {
+    event.stopPropagation();
+    const params = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id }),
+    };
+    fetch('/files/delete', params)
+      .then(() => {
+        if (this.props.onUpdate) {
+          this.props.onUpdate();
+        }
+      });
+  };
+
   render () {
-    const { files } = this.props;
+    const fileEntries = Object.entries(this.props.files);
+
     return (
       <div>
         <style jsx global>{`
@@ -83,18 +88,17 @@ export default class Upload extends React.Component {
         }
         `}
         </style>
-        <h2>Upload Dependency Files</h2>
         <Dropzone onDrop={this.onDrop} className="dropZoneComponent">
           <div className="dropZoneArea">
-            {files.length === 0 &&
+            {fileEntries.length === 0 &&
               <p className="empty">
                 Try dropping some files here, or click to select files to upload.
               </p>
             }
-            {files.length > 0 &&
+            {fileEntries.length > 0 &&
               <div className="Files">
-                {files.map((file, index) => (
-                  <div key={file.parsed.name || index} className="File">
+                {fileEntries.map(([ id, file ]) => (
+                  <div key={id} className="File">
                     <div className="name">
                       <b>{file.parsed.name || 'Unnamed project'}</b>
                     </div>
@@ -102,7 +106,7 @@ export default class Upload extends React.Component {
                       <b>{dependenciesStats(file.parsed).length}</b> dependencies
                     </div>
                     <div className="removefile">
-                      <button onClick={(event) => this.handleRemoveFile(file.parsed.name, event)}>Remove</button>
+                      <button onClick={(event) => this.handleRemoveFile(id, event)}>Remove</button>
                     </div>
                   </div>
                 ))}
