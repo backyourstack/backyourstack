@@ -62,11 +62,13 @@ async function fetchProfile (slug, accessToken) {
     return user;
   }
 
-  const org = await fetchWithOctokit('orgs.get', { org: slug }, accessToken);
+  const org = await fetchWithOctokit('orgs.get', { org: slug }, accessToken).catch(silentError);
   if (org) {
     cache.set(cacheKey, org);
     return org;
   }
+
+  return null;
 }
 
 async function fetchReposForProfile (profile, accessToken) {

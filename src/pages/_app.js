@@ -2,6 +2,8 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { get } from 'lodash';
 
+import '../css/app.css';
+
 export default class MyApp extends App {
 
   static async getInitialProps ({ Component, ctx }) {

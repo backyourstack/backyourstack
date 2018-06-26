@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: black;
+  /*background: black;*/
   font-family: lato, montserratlight, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -14,8 +14,15 @@ h2 {
   font-size: 1.6em;
 }
 #__next {
-  background: #f1f1f1;
+  /*background: white;*/
   margin: 0 auto;
   width: 1024px;
   min-height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
 }

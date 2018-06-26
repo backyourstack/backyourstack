@@ -8,38 +8,63 @@ export default class Header extends React.Component {
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
+    brand: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    brand: true,
   };
 
   render () {
-    const { pathname, loggedInUser } = this.props;
+    const { pathname, loggedInUser, brand } = this.props;
     return (
       <div>
         <style jsx>{`
         header {
           display: flex;
           justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 80px;
         }
         header div {
-          padding: 0.5em 1em;
+        }
+        header .brand {
+          width: 200px;
+          height: 45px;
         }
         .login {
           text-align: right;
           margin-left: auto;
         }
-        header a {
+        a {
           color: inherit;
           text-decoration: none;
-          font-weight: bold;
         }
-        header a:hover {
+        a:hover {
           text-decoration: underline;
         }
+
+        a.btn {
+          color: #8800ff;
+          border: 1px solid #D5DAE0;
+          border-radius: 6px;
+          padding: 10px 20px;
+          font-size:12px;
+        }
+
         `}
         </style>
         <header>
-          <div className="brand">
-            <Link route="index"><a>Back Your Stack</a></Link> v0.0.7
-          </div>
+          {brand && (
+            <div className="brand">
+              <Link route="index">
+                <a>
+                  <img src="/static/img/logo-compact.png" alt="Back Your Stack" />
+                </a>
+              </Link>
+            </div>
+          )}
           {loggedInUser && (
             <div className="login">
               Authenticated as&nbsp;
@@ -57,7 +82,7 @@ export default class Header extends React.Component {
           {!loggedInUser && (
             <div className="login">
               <Link route="login" params={{ next: pathname || '/' }}>
-                <a>Sign In with GitHub</a>
+                <a className="btn">Sign In with GitHub</a>
               </Link>
             </div>
           )}
