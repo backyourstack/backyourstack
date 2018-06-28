@@ -54,7 +54,6 @@ export default class Header extends React.Component {
           border: 1px solid #D5DAE0;
           border-radius: 6px;
           padding: 10px 20px;
-          font-size:12px;
         }
 
         .profile {
@@ -72,6 +71,7 @@ export default class Header extends React.Component {
           border-radius: 36px;
           margin-left: 10px;
           margin-right: 20px;
+          border: 0;
         }
 
         `}
@@ -91,11 +91,15 @@ export default class Header extends React.Component {
                 Welcome&nbsp;
                 <strong>
                   <Link route="profile" params={{ id: loggedInUser.username }}>
-                    <a>{loggedInUser.username}</a>
+                    <a>{loggedInUser.displayName} ({loggedInUser.username})</a>
                   </Link>
                 </strong>
               </span>
-              <img className="avatar" src={loggedInUser.avatarUrl} />
+              <Link route="profile" params={{ id: loggedInUser.username }}>
+                <a>
+                  <img className="avatar" src={loggedInUser.avatarUrl} />
+                </a>
+              </Link>
               &nbsp;
               <Link route="logout" params={{ next: pathname || '/' }}>
                 <a className="btn">Sign Out</a>
