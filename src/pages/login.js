@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Link } from '../routes';
+import NextLink from 'next/link';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -44,9 +43,9 @@ export default class Login extends React.Component {
           <ul>
             <li>Make sure to Grant access in the GitHub permission page.</li>
           </ul>
-          <Link route="/auth/github" params={{ next: this.props.next }}>
+          <NextLink href={{ pathname: '/auth/github', query: { next: this.props.next } }}>
             <a>Sign In with GitHub now</a>
-          </Link>
+          </NextLink>
         </Content>
         <Footer />
       </div>
