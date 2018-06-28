@@ -130,9 +130,10 @@ export default class SearchForm extends React.Component {
             outline: none;
             color: #2E3033;
           }
+
           .searchButton {
             border-radius: 8px;
-            background-color: #3A2FAC;
+            background-color: #3f00a5;
             padding: 13px;
             font-size: 14px;
             font-weight: bold;
@@ -143,11 +144,15 @@ export default class SearchForm extends React.Component {
             border: 0;
           }
           .searchButton:hover {
-            background-color: black; // FIXME
+            background-color: #8b00ff;
+          }
+          .searchButton:active {
+            background-color: #6400ce;
           }
           .searchButton:disabled {
-            background-color: #d2cbed;
+            background-color: #d1c2ea;
           }
+
           .searchExamples {
             font-size: 12px;
             text-align: center;
@@ -160,6 +165,7 @@ export default class SearchForm extends React.Component {
           .searchExamples a:hover {
             text-decoration: none;
           }
+
           .searchFeedback {
             position: absolute;
             font-size: 12px;
