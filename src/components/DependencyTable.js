@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
+import List from '../components/List';
+
 export default class DependencyTable extends React.Component {
 
   static propTypes = {
@@ -25,6 +27,17 @@ export default class DependencyTable extends React.Component {
       return aName.localeCompare(bName);
     }
   };
+
+  githubRepoItem = (repo) => (
+    <span key={repo.id}>
+      {repo.full_name &&
+        <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
+      }
+      {!repo.full_name &&
+        <span>{repo.name}</span>
+      }
+    </span>
+  );
 
   render () {
     const { dependencies } = this.props;
@@ -75,24 +88,11 @@ export default class DependencyTable extends React.Component {
                 <td>{dep.peerDependencies}</td>
                 <td>{dep.devDependencies}</td>
                 <td className="repos">
-                  {
-                    dep.repos
-                      .slice(0, 20)
-                      .map(repo => (
-                        <span key={`${dep.name}_${repo.id}`}>
-                          {repo.full_name &&
-                            <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
-                          }
-                          {!repo.full_name &&
-                            <span>{repo.name}</span>
-                          }
-                        </span>
-                      ))
-                      .reduce((prev, curr) => [ prev, ', ', curr ] )
-                  }
-                  {
-                    dep.repos.length > 20 && ` and ${dep.repos.length - 20 } other(s)`
-                  }
+                  <List
+                    array={dep.repos}
+                    map={this.githubRepoItem}
+                    cut={20}
+                    />
                 </td>
                 <td className="opencollective">
                   {dep.project && dep.project.opencollective &&
