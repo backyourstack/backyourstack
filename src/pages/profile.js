@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import NextLink from 'next/link';
 import { get } from 'lodash';
 
 import { Link } from '../routes';
@@ -38,6 +39,10 @@ export default class Profile extends React.Component {
     recommendations: PropTypes.array,
     error: PropTypes.object,
   };
+
+  twitterText = () => 'I like Back Your Stack';
+
+  profileLink = () => `https://backyourstack.now.sh/${this.props.profile.login}`;
 
   render () {
     const { section, error, profile, repos, dependencies, recommendations, pathname, loggedInUser } = this.props;
@@ -94,11 +99,41 @@ export default class Profile extends React.Component {
           position: absolute;
         }
 
-        aside p {
-          margin-top: 0;
+        .shortStats {
           color: #121314;
           font-size: 16px;
           line-height: 24px;
+        }
+
+        .profileLink a {
+          color: #7448FF;
+          text-decoration: none;
+        }
+        .profileLink a:hover {
+          text-decoration: underline;
+        }
+
+        .profileLink, .socialLinks {
+           margin-top: 25px;
+        }
+
+        .btn {
+          display: inline-block;
+          color: #8800ff;
+          border: 1px solid #D5DAE0;
+          border-radius: 6px;
+          padding: 10px 20px;
+          margin-right: 15px;
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .btn:hover {
+          text-decoration: underline;
+        }
+
+        .btn:last-child {
+          margin-right: 0;
         }
 
         main {
@@ -158,10 +193,29 @@ export default class Profile extends React.Component {
 
             <aside>
 
-              <p>
-                <strong>{repos.length}</strong> of your projects
-                are dependending on <strong>{dependencies.length}</strong> Open Source projects.
-              </p>
+              <div className="shortStats">
+                <strong>{repos.length}</strong> repositories
+                depending on <strong>{dependencies.length}</strong>&nbsp;Open Source projects.
+              </div>
+
+              <div className="profileLink">
+                <a href={this.profileLink()}>
+                  &gt; {this.profileLink().replace('https://', '')}
+                </a>
+              </div>
+
+              <div className="socialLinks">
+                <NextLink href={{ pathname: 'http://twitter.com/share', query: { text: this.twitterText() } }}>
+                  <a className="btn">
+                    Tweet
+                  </a>
+                </NextLink>
+                <NextLink href={{ pathname: 'https://www.facebook.com/sharer/sharer.php', query: { u: this.profileLink() } }}>
+                  <a className="btn">
+                    Share
+                  </a>
+                </NextLink>
+              </div>
 
             </aside>
 
