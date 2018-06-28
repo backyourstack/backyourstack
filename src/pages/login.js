@@ -20,7 +20,15 @@ export default class Login extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="Page LoginPage">
+
+        <style jsx global>{`
+        .LoginPage {
+          width: 1152px;
+        }
+        `}
+        </style>
+
         <Header loggedInUser={this.props.loggedInUser} />
         <Content>
           <h2>Authenticate wit Github to give access to your private repositories.</h2>

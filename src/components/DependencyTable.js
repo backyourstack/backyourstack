@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
@@ -37,10 +37,11 @@ export default class DependencyTable extends React.Component {
           border-collapse: collapse;
         }
         table th, table td {
-          border: 1px solid #333;
+          border: 1px solid #3b0c9c;
           padding: 0.5em;
           white-space: nowrap;
           font-size: 12px;
+          color: #121314;
         }
         table td.repos {
           white-space: normal;
@@ -62,7 +63,7 @@ export default class DependencyTable extends React.Component {
               <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
               <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
               <th className="repos">Repos</th>
-              <th className="opencollective">Open Collective</th>
+              <th className="funding">Funding</th>
             </tr>
           </thead>
           <tbody>
@@ -76,7 +77,7 @@ export default class DependencyTable extends React.Component {
                 <td className="repos">
                   {
                     dep.repos
-                      .slice(0, 10)
+                      .slice(0, 20)
                       .map(repo => (
                         <span key={`${dep.name}_${repo.id}`}>
                           {repo.full_name &&
@@ -90,14 +91,17 @@ export default class DependencyTable extends React.Component {
                       .reduce((prev, curr) => [ prev, ', ', curr ] )
                   }
                   {
-                    dep.repos.length > 10 && ` and ${dep.repos.length - 10 } other(s)`
+                    dep.repos.length > 20 && ` and ${dep.repos.length - 20 } other(s)`
                   }
                 </td>
                 <td className="opencollective">
                   {dep.project && dep.project.opencollective &&
-                    <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
-                      {dep.project.opencollective.name}
-                    </a>
+                    <Fragment>
+                      <span>Open Collective</span>:&nbsp;
+                      <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
+                        {dep.project.opencollective.name}
+                      </a>
+                    </Fragment>
                   }
                 </td>
               </tr>

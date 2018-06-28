@@ -1,0 +1,27 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter UI', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.6em;
+}
+.Page {
+  margin: 0 auto;
+  min-height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}

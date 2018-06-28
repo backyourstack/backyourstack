@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { Link } from '../routes';
+import { Link, Router } from '../routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -12,19 +12,28 @@ import { getProfile, searchUsers } from '../lib/data';
 
 export default class Search extends React.Component {
 
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps ({ req, res, query }) {
     const q = query.q;
 
     // The accessToken is only required server side (it's ok if it's undefined on client side)
     const accessToken = get(req, 'session.passport.user.accessToken');
 
     const profile = await getProfile(q, accessToken);
-    const searchResults = await searchUsers(q, accessToken);
+
     if (profile) {
-      searchResults.items = searchResults.items.filter(i => i.id !== profile.id);
+      if (res) {
+        res.writeHead(302, { Location: `/${profile.login}` });
+        res.end();
+        res.finished = true;
+      } else {
+        Router.pushRoute('profile', { id: profile.login });
+      }
+      return {};
     }
 
-    return { q, profile, searchResults };
+    const searchResults = await searchUsers(q, accessToken);
+
+    return { q, searchResults };
   }
 
   static propTypes = {

@@ -5,6 +5,7 @@ import crypto from 'crypto';
 
 import express from 'express';
 import expressSession from 'express-session';
+import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
@@ -34,6 +35,8 @@ nextApp.prepare()
 
     const server = express();
     const upload = multer();
+
+    server.use(favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')));
 
     server.use(expressSession({ secret: sessionSecret, resave: true, saveUninitialized: true }));
 
@@ -76,27 +79,27 @@ nextApp.prepare()
 
     server.get('/data/getProfile', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
-      getProfile(req.query.slug, accessToken).then(data => res.send(data));
+      getProfile(req.query.slug, accessToken).then(data => res.json(data));
     });
 
     server.get('/data/getUserOrgs', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
-      getUserOrgs(accessToken).then(data => res.send(data));
+      getUserOrgs(accessToken).then(data => res.json(data));
     });
 
     server.get('/data/searchUsers', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
-      searchUsers(req.query.q, accessToken).then(data => res.send(data));
+      searchUsers(req.query.q, accessToken).then(data => res.json(data));
     });
 
     server.get('/data/getProfileData', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
-      getProfileData(req.query.id, accessToken).then(data => res.send(data));
+      getProfileData(req.query.id, accessToken).then(data => res.json(data));
     });
 
     server.get('/data/getFilesData', (req, res) => {
       const files = get(req, 'session.files');
-      getFilesData(files).then(data => res.send(data));
+      getFilesData(files).then(data => res.json(data));
     });
 
     server.post('/files/upload', upload.array('files'), (req, res) => {

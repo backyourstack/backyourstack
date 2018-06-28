@@ -9,8 +9,11 @@ export default class Footer extends React.Component {
       <div>
         <style jsx>{`
         footer {
-          padding: 0.5em 1em;
-          text-align: right;
+          text-align: center;
+          color: #6E747A;
+          font-size: 12px;
+          margin-top: 50px;
+          margin-bottom: 50px;
         }
         footer a {
           color: inherit;
@@ -23,7 +26,9 @@ export default class Footer extends React.Component {
         `}
         </style>
         <footer>
-          <Link route="index"><a>Back Your Stack</a></Link>: An Open Collective project.
+          <Link route="index"><a>Back Your Stack</a></Link> is
+          an <a href="https://opencollective.com/">Open Collective</a> project.&nbsp;
+          <a href="https://github.com/opencollective/backyourstack">Contribute</a>.
         </footer>
       </div>
     );

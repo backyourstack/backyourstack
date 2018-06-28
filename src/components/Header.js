@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from '../routes';
@@ -8,61 +8,111 @@ export default class Header extends React.Component {
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
+    brand: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    brand: true,
   };
 
   render () {
-    const { pathname, loggedInUser } = this.props;
+    const { pathname, loggedInUser, brand } = this.props;
     return (
-      <div>
+      <Fragment>
+
         <style jsx>{`
         header {
           display: flex;
           justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
-        header div {
-          padding: 0.5em 1em;
+
+        .brand {
+          width: 200px;
+          height: 45px;
+          margin-left: 60px;
         }
-        .login {
-          text-align: right;
+
+        .login, .loggedInUser {
           margin-left: auto;
+          margin-right: 60px;
         }
-        header a {
+
+        a {
           color: inherit;
           text-decoration: none;
-          font-weight: bold;
         }
-        header a:hover {
+        a:hover {
           text-decoration: underline;
         }
+
+        .btn {
+          color: #8800ff;
+          border: 1px solid #D5DAE0;
+          border-radius: 6px;
+          padding: 10px 20px;
+          font-size:12px;
+        }
+
+        .profile {
+          display: inline-block;
+          vertical-align: -2px;
+          height: 36px;
+          line-height: 36px;
+        }
+
+        .avatar {
+          display: inline-block;
+          vertical-align: middle;
+          width: 36px;
+          height: 36px;
+          border-radius: 36px;
+          margin-left: 10px;
+          margin-right: 20px;
+        }
+
         `}
         </style>
+
         <header>
-          <div className="brand">
-            <Link route="index"><a>Back Your Stack</a></Link> v0.0.7
+          <div className="brand" style={{ visibility: brand ? 'visible' : 'hidden' }}>
+            <Link route="index">
+              <a>
+                <img src="/static/img/logo-compact.png" alt="Back Your Stack" />
+              </a>
+            </Link>
           </div>
           {loggedInUser && (
-            <div className="login">
-              Authenticated as&nbsp;
-              <strong>
-                <Link route="profile" params={{ id: loggedInUser.username }}>
-                  <a>{loggedInUser.username}</a>
-                </Link>
-              </strong>
-              &nbsp;/&nbsp;
+            <div className="loggedInUser">
+              <span className="profile">
+                Welcome&nbsp;
+                <strong>
+                  <Link route="profile" params={{ id: loggedInUser.username }}>
+                    <a>{loggedInUser.username}</a>
+                  </Link>
+                </strong>
+              </span>
+              <img className="avatar" src={loggedInUser.avatarUrl} />
+              &nbsp;
               <Link route="logout" params={{ next: pathname || '/' }}>
-                <a>Sign Out</a>
+                <a className="btn">Sign Out</a>
               </Link>
+
             </div>
           )}
           {!loggedInUser && (
             <div className="login">
               <Link route="login" params={{ next: pathname || '/' }}>
-                <a>Sign In with GitHub</a>
+                <a className="btn">Sign In with GitHub</a>
               </Link>
             </div>
           )}
         </header>
-      </div>
+
+      </Fragment>
     );
   }
 

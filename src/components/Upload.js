@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import fetch from 'cross-fetch';
@@ -54,14 +54,17 @@ export default class Upload extends React.Component {
     const fileEntries = Object.entries(this.props.files);
 
     return (
-      <div>
+      <Fragment>
         <style jsx global>{`
         .dropZoneArea {
-          border-width: 2px;
-          border-color: rgb(102, 102, 102);
-          border-style: dashed; border-radius: 5px;
+          border-width: 1px;
+          border-color: #9399A3;
+          border-style: dashed;
+          border-radius: 4px;
           min-height: 125px;
           position: relative;
+          color: #9399A3;
+          font-size: 12px;
         }
         .dropZoneArea .empty {
           position: absolute;
@@ -92,7 +95,7 @@ export default class Upload extends React.Component {
           <div className="dropZoneArea">
             {fileEntries.length === 0 &&
               <p className="empty">
-                Try dropping some files here, or click to select files to upload.
+                Simply drag&#39;n&#39;drop files or click to select files to upload.
               </p>
             }
             {fileEntries.length > 0 &&
@@ -114,7 +117,7 @@ export default class Upload extends React.Component {
             }
           </div>
         </Dropzone>
-      </div>
+      </Fragment>
     );
   }
 

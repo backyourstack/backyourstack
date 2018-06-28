@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
@@ -8,10 +8,11 @@ import { Link, Router } from '../routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
+import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
 
-export default class Index extends React.Component {
+export default class Index extends Component {
 
   static async getInitialProps ({ req }) {
     const initialProps = {};
@@ -46,17 +47,8 @@ export default class Index extends React.Component {
 
   constructor (props) {
     super(props);
-    this.state = { q: '', files: props.files };
+    this.state = { files: props.files };
   }
-
-  handleChange = (event) => {
-    this.setState({ q: event.target.value });
-  };
-
-  handleSubmit = (event) => {
-    Router.pushRoute('search', { q: this.state.q });
-    event.preventDefault();
-  };
 
   onUpload = () => {
     Router.pushRoute('files');
@@ -70,64 +62,89 @@ export default class Index extends React.Component {
 
   render () {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
+
     const { files } = this.state;
     return (
-      <div>
+      <div className="Page IndexPage">
 
-        <Header pathname={pathname} loggedInUser={loggedInUser} />
+        <style jsx global>{`
+        .IndexPage {
+          width: 1152px;
+        }
+        `}
+        </style>
+
+        <style jsx>{`
+          h1 {
+            width: 244px;
+            margin: 0 auto 50px;
+            padding: 0;
+          }
+          h1 img {
+            width: 244px;
+            height: 155px;
+            display: block;
+          }
+          .homepage p, .homepage .search {
+            margin: auto;
+            width: 450px;
+          }
+          .homepage p {
+            text-align: center;
+            color: #9399A3;
+          }
+          .uploadDescription {
+            font-size: 12px;
+            line-height: 18px;
+          }
+          .uploadContainer {
+            margin: 50px auto;
+            width: 400px;
+          }
+        `}
+        </style>
+
+        <Header pathname={pathname} loggedInUser={loggedInUser} brand={false} />
 
         <Content>
 
-          <h1>Back Your Stack</h1>
+          <div className="homepage">
 
-          <p>
-            Discover the open source projects
-            that you are using and that need financial support.
-          </p>
+            <h1>
+              <Link route="index">
+                <a>
+                  <img src="/static/img/logo.jpg" alt="Back Your Stack" />
+                </a>
+              </Link>
+            </h1>
 
-          <div className="search">
-            <form method="GET" action="/search" onSubmit={this.handleSubmit}>
-              <span>https://github.com/</span>
-              <input type="text" name="q" value={this.state.value} onChange={this.handleChange} />
-              <input type="submit" value="Search" />
-            </form>
             <p>
-              E.g.
-              <Link route="profile" params={{ id: 'facebook' }}><a>Facebook</a></Link>
-              &nbsp;-&nbsp;
-              <Link route="profile" params={{ id: 'airbnb' }}><a>Airbnb</a></Link>
-              &nbsp;-&nbsp;
-              <Link route="profile" params={{ id: 'square' }}><a>Square</a></Link>
+              Discover the open source projects you are using<br />
+              and need financial support.
             </p>
+
+            <div className="search">
+              <SearchForm orgs={loggedInUserOrgs} />
+            </div>
+
+            <p className="uploadDescription">
+              If you want to analyze non-public repositories, connect your GitHub account
+              or simply upload package.json files.
+              The uploaded files will not be shared with anyone
+              and will be deleted when your session expire.
+            </p>
+
+            {false && Object.keys(files).length > 0 &&
+              <p>
+                <Link route="files"><a>View recommendations</a></Link>
+              </p>
+            }
+
+            <div className="uploadContainer">
+              <Upload files={files} onUpload={this.onUpload} onUpdate={this.refresh} />
+            </div>
+
           </div>
-
-          {loggedInUser && (
-            <>
-              <h2>Welcome {loggedInUser.username}</h2>
-              {loggedInUserOrgs &&
-                <>
-                  <p>Your organizations:</p>
-                  <ul>
-                    {loggedInUserOrgs.map(org => (
-                      <li key={org.id}>
-                        <Link route="profile" params={{ id: org.login }}>
-                          <a>{org.login}</a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              }
-            </>
-          )}
-
-          <h2>Upload Dependency Files</h2>
-          {Object.keys(files).length > 0 &&
-            <p>
-              <Link route="files"><a>View recommendations</a></Link>
-            </p>
-          }
-          <Upload files={files} onUpload={this.onUpload} onUpdate={this.refresh} />
 
         </Content>
 
