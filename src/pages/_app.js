@@ -1,8 +1,14 @@
 import App, { Container } from 'next/app';
 import React from 'react';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import { get } from 'lodash';
 
-import '../css/app.css';
+Router.onRouteChangeStart = () => NProgress.start();
+
+Router.onRouteChangeComplete = () => NProgress.done();
+
+Router.onRouteChangeError = () => NProgress.done();
 
 export default class MyApp extends App {
 

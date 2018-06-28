@@ -3,9 +3,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /*background: black;*/
-  font-family: lato, montserratlight, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Inter UI', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
 }
 h1 {
   font-size: 2em;
@@ -13,10 +14,8 @@ h1 {
 h2 {
   font-size: 1.6em;
 }
-#__next {
-  /*background: white;*/
+.Page {
   margin: 0 auto;
-  width: 1024px;
   min-height: 100%;
 }
 a {

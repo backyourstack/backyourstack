@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
@@ -12,7 +12,7 @@ import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
 
-export default class Index extends React.Component {
+export default class Index extends Component {
 
   static async getInitialProps ({ req }) {
     const initialProps = {};
@@ -62,19 +62,27 @@ export default class Index extends React.Component {
 
   render () {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
+
     const { files } = this.state;
     return (
-      <Fragment>
+      <div className="Page IndexPage">
+
+        <style jsx global>{`
+        .IndexPage {
+          width: 1152px;
+        }
+        `}
+        </style>
 
         <style jsx>{`
           h1 {
-            margin: 0;
+            width: 244px;
+            margin: 0 auto 50px;
             padding: 0;
           }
           h1 img {
             width: 244px;
             height: 155px;
-            margin: 0 auto 50px;
             display: block;
           }
           .homepage p, .homepage .search {
@@ -87,6 +95,7 @@ export default class Index extends React.Component {
           }
           .uploadDescription {
             font-size: 12px;
+            line-height: 18px;
           }
           .uploadContainer {
             margin: 50px auto;
@@ -115,28 +124,8 @@ export default class Index extends React.Component {
             </p>
 
             <div className="search">
-              <SearchForm />
+              <SearchForm orgs={loggedInUserOrgs} />
             </div>
-
-            {false && loggedInUser && (
-              <Fragment>
-                <h2>Welcome {loggedInUser.username}</h2>
-                {loggedInUserOrgs &&
-                  <>
-                    <p>Your organizations:</p>
-                    <ul>
-                      {loggedInUserOrgs.map(org => (
-                        <li key={org.id}>
-                          <Link route="profile" params={{ id: org.login }}>
-                            <a>{org.login}</a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                }
-              </Fragment>
-            )}
 
             <p className="uploadDescription">
               If you want to analyze non-public repositories, connect your GitHub account
@@ -161,7 +150,7 @@ export default class Index extends React.Component {
 
         <Footer />
 
-      </Fragment>
+      </div>
     );
   }
 

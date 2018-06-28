@@ -95,7 +95,7 @@ export default class Upload extends React.Component {
           <div className="dropZoneArea">
             {fileEntries.length === 0 &&
               <p className="empty">
-                Drag&#39;n&#39;drop files or click to select files to upload.
+                Simply drag&#39;n&#39;drop files or click to select files to upload.
               </p>
             }
             {fileEntries.length > 0 &&

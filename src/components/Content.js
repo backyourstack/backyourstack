@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Content extends React.Component {
@@ -9,17 +9,17 @@ export default class Content extends React.Component {
 
   render () {
     return (
-      <div>
+      <Fragment>
         <style jsx>{`
         .content {
-          padding: 1em;
+          padding: 1em 0;
         }
         `}
         </style>
         <div className="content">
           {this.props.children}
         </div>
-      </div>
+      </Fragment>
     );
   }
 

@@ -5,6 +5,7 @@ import crypto from 'crypto';
 
 import express from 'express';
 import expressSession from 'express-session';
+import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
@@ -34,6 +35,8 @@ nextApp.prepare()
 
     const server = express();
     const upload = multer();
+
+    server.use(favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')));
 
     server.use(expressSession({ secret: sessionSecret, resave: true, saveUninitialized: true }));
 

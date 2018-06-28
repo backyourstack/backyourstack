@@ -12,7 +12,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <title>Back Your Stack: Discover the Open Source projects you are using and need financial support.</title>
+          <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
+          <link rel="stylesheet" href="/static/css/main.css" />
+          <link rel="stylesheet" href="/static/css/nprogress.css" />
         </Head>
         <body>
           <Main />

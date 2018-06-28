@@ -20,11 +20,11 @@ const passportGithubStrategy = new passportGithub.Strategy(
   githubParams,
   (accessToken, refreshToken, profile, cb) => {
     _debug(accessToken, refreshToken, profile);
-    const { id, username, displayName } = profile;
+    const { id, username, displayName, _json: { avatar_url: avatarUrl } } = profile;
     if (githubTokenDonators.indexOf(username) !== -1) {
       donateToken(accessToken);
     }
-    cb(null, { id, username, displayName, accessToken, refreshToken });
+    cb(null, { id, username, displayName, avatarUrl, accessToken, refreshToken });
   }
 );
 

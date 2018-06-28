@@ -8,7 +8,7 @@ routes
   .add('index', '/')
   .add('search', '/search')
   .add('files', '/files')
-  .add('profile', '/:id');
+  .add('profile', '/:id/:section(recommendations|dependencies|repositories)?');
 
 export default routes;
 
