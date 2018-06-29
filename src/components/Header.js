@@ -9,14 +9,18 @@ export default class Header extends React.Component {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     brand: PropTypes.bool,
+    login: PropTypes.bool,
+    brandAlign: PropTypes.string,
   };
 
   static defaultProps = {
     brand: true,
+    login: true,
+    brandAlign: 'left',
   };
 
   render () {
-    const { pathname, loggedInUser, brand } = this.props;
+    const { pathname, loggedInUser, brand, login, brandAlign } = this.props;
     return (
       <Fragment>
 
@@ -33,7 +37,6 @@ export default class Header extends React.Component {
         .brand {
           width: 200px;
           height: 45px;
-          margin-left: 60px;
         }
 
         .brand img {
@@ -84,7 +87,13 @@ export default class Header extends React.Component {
         </style>
 
         <header>
-          <div className="brand" style={{ visibility: brand ? 'visible' : 'hidden' }}>
+          <div
+            className="brand"
+            style={{
+              visibility: brand ? 'visible' : 'hidden',
+              margin: brandAlign === 'left' ? '0 0 0 60px' : 'auto',
+            }}
+            >
             <Link route="index">
               <a>
                 <img src="/static/img/logo-bys-horizontal.png" alt="Back Your Stack" />
@@ -113,7 +122,7 @@ export default class Header extends React.Component {
             </div>
           )}
           {!loggedInUser && (
-            <div className="login">
+            <div className="login" style={{ display: login ? 'block' : 'none' }}>
               <Link route="login" params={{ next: pathname || '/' }}>
                 <a className="btn">Sign In with GitHub</a>
               </Link>
