@@ -17,7 +17,6 @@ export default class SearchForm extends React.Component {
 
   constructor (props) {
     super(props);
-    // this.form = React.createRef();
     this.searchInput = React.createRef();
     this.state = { ok: null, error: null, q: '', focused: false };
     this.stateFeedbackDebounced = debounce(this.stateFeedback.bind(this), 333);
@@ -132,25 +131,8 @@ export default class SearchForm extends React.Component {
           }
 
           .searchButton {
-            border-radius: 8px;
-            background-color: #3f00a5;
-            padding: 13px;
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            display: block;
             margin: 50px auto;
             width: 250px;
-            border: 0;
-          }
-          .searchButton:hover {
-            background-color: #8b00ff;
-          }
-          .searchButton:active {
-            background-color: #6400ce;
-          }
-          .searchButton:disabled {
-            background-color: #d1c2ea;
           }
 
           .searchExamples {
@@ -233,7 +215,7 @@ export default class SearchForm extends React.Component {
           <input
             type="submit"
             value="Analyze your stack"
-            className="searchButton"
+            className="bigButton searchButton"
             disabled={this.canSubmit() ? false : true}
             />
 

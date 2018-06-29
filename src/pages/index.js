@@ -134,14 +134,14 @@ export default class Index extends Component {
               and will be deleted when your session expire.
             </p>
 
-            {false && Object.keys(files).length > 0 &&
-              <p>
-                <Link route="files"><a>View recommendations</a></Link>
-              </p>
-            }
-
             <div className="uploadContainer">
-              <Upload files={files} onUpload={this.onUpload} onUpdate={this.refresh} />
+              <Upload
+                files={files}
+                onUpload={this.onUpload}
+                onUpdate={this.refresh}
+                feedbackPosition="float"
+                style={{ height: '125px' }}
+                />
             </div>
 
           </div>

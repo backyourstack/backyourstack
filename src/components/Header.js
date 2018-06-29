@@ -61,6 +61,7 @@ export default class Header extends React.Component {
           vertical-align: -2px;
           height: 36px;
           line-height: 36px;
+          color: #494D52;
         }
 
         .avatar {
@@ -104,7 +105,6 @@ export default class Header extends React.Component {
               <Link route="logout" params={{ next: pathname || '/' }}>
                 <a className="btn">Sign Out</a>
               </Link>
-
             </div>
           )}
           {!loggedInUser && (

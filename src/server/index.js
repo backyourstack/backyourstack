@@ -103,17 +103,23 @@ nextApp.prepare()
     });
 
     server.post('/files/upload', upload.array('files'), (req, res) => {
+      let uploadAccepted = false;
       req.session.files = req.session.files || {};
       req.files.forEach(raw => {
         const parsed = JSON.parse(raw.buffer.toString('utf8'));
-        if (parsed) {
+        if (parsed && !parsed.lockfileVersion) {
           if (parsed.dependencies || parsed.devDependencies || parsed.peerDependencies) {
             const id = parsed.name || md5(JSON.stringify(parsed));
-            req.session.files[id] = { raw, parsed };
+            req.session.files[id] = { parsed };
+            uploadAccepted = true;
           }
         }
       });
-      res.send('Ok');
+      if (uploadAccepted) {
+        res.status(200).send('Ok. At least one file accepted.');
+      } else {
+        res.status(400).send('Bad Request. No file accepted.');
+      }
     });
 
     server.post('/files/delete', (req, res) => {

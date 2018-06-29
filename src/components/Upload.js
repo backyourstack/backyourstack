@@ -2,121 +2,156 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import fetch from 'cross-fetch';
-
-import { dependenciesStats } from '../lib/utils';
+import classNames from 'classnames';
 
 export default class Upload extends React.Component {
 
   static propTypes = {
     files: PropTypes.object,
+    style: PropTypes.object,
     onUpload: PropTypes.func,
     onUpdate: PropTypes.func,
+    feedbackPosition: PropTypes.string,
   };
 
   static defaultProps = {
     files: {},
+    style: {},
+    feedbackPosition: 'float',
   };
 
-  onDrop = (acceptedFiles) => {
+  constructor (props) {
+    super(props);
+    this.state = { error: false };
+  }
+
+  onDrop = (acceptedFiles, rejectedFiles) => {
+    if (acceptedFiles.length === 0 && rejectedFiles.length > 0) {
+      this.setErrorState();
+    }
     if (acceptedFiles.length > 0) {
       const formData = new FormData();
       acceptedFiles.forEach(file => {
         formData.append('files', file);
       });
       fetch('/files/upload', { method: 'POST', body: formData })
-        .then(() => {
-          if (this.props.onUpload) {
+        .then(response => {
+          if (response.status !== 200) {
+            this.setErrorState();
+          } else if (this.props.onUpload) {
             this.props.onUpload();
+            this.setState({ error: false });
           }
         });
     }
   };
 
-  handleRemoveFile = (id, event) => {
-    event.stopPropagation();
-    const params = {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ id }),
-    };
-    fetch('/files/delete', params)
-      .then(() => {
-        if (this.props.onUpdate) {
-          this.props.onUpdate();
-        }
-      });
+  setErrorState = () => {
+    this.setState({ error: true });
+    setTimeout(() => {
+      this.setState({ error: false });
+    }, 5000);
   };
 
   render () {
-    const fileEntries = Object.entries(this.props.files);
-
     return (
       <Fragment>
+
         <style jsx global>{`
-        .dropZoneArea {
+        .dropZoneComponent {
           border-width: 1px;
           border-color: #9399A3;
           border-style: dashed;
           border-radius: 4px;
-          min-height: 125px;
           position: relative;
           color: #9399A3;
           font-size: 12px;
+          cursor: pointer;
+          transition-duration: 1s;
         }
-        .dropZoneArea .empty {
+        .dropZoneComponent .text {
           position: absolute;
           width: 100%;
-          top: 40%;
+          top: 25%;
           text-align: center;
         }
-        .Files {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+        .dropZoneComponent.active {
+          color: #7448FF;
+          border-color: #7448FF;
         }
-        .File {
-          width: 180px;
-          border-radius: 15px;
-          background-color: #ffffff;
-          box-shadow: 0 1px 3px 0 rgba(45, 77, 97, 0.2);
-          margin: 10px;
-          padding: 15px;
-          text-align: center;
+        .dropZoneComponent.error {
+          border-color: #F53152;
+          background-color: #FFF2F4;
         }
-        .File .name {
-          height: 50px;
+        .dropZoneComponent:hover {
+          color: #7448FF;
+          border-color: #7448FF;
+        }
+        .dropZoneComponent:active, .dropZoneComponent:focus {
+          color: #2E2E99;
+          border-color: #2E2E99;
         }
         `}
         </style>
-        <Dropzone onDrop={this.onDrop} className="dropZoneComponent">
-          <div className="dropZoneArea">
-            {fileEntries.length === 0 &&
-              <p className="empty">
-                Simply drag&#39;n&#39;drop files or click to select files to upload.
-              </p>
-            }
-            {fileEntries.length > 0 &&
-              <div className="Files">
-                {fileEntries.map(([ id, file ]) => (
-                  <div key={id} className="File">
-                    <div className="name">
-                      <b>{file.parsed.name || 'Unnamed project'}</b>
-                    </div>
-                    <div className="dependencies">
-                      <b>{dependenciesStats(file.parsed).length}</b> dependencies
-                    </div>
-                    <div className="removefile">
-                      <button onClick={(event) => this.handleRemoveFile(id, event)}>Remove</button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            }
+
+        <style jsx>{`
+        .uploadFeedback {
+          font-size: 12px;
+          transition-duration: 1s;
+          opacity: 0;
+          color: #F53152;
+        }
+        .uploadFeedback.float {
+          position: absolute;
+          width: 200px;
+          right: 0;
+          margin-right: -220px;
+        }
+        .uploadFeedback.inside {
+          text-align: center;
+          background-color: #FFF2F4;
+          position: relative;
+          background-color: lime;
+          padding: 20px;
+        }
+        .uploadFeedback.error {
+          opacity: 1;
+        }
+        `}
+        </style>
+
+        <Dropzone
+          onDrop={this.onDrop}
+          className={classNames('dropZoneComponent', { error: this.state.error })}
+          activeClassName="active"
+          accept={['application/json']}
+          maxSize={102400}
+          style={this.props.style}
+          >
+          <div className="text">
+            <p>
+              Simply drag&#39;n&#39;drop files<br />
+              or click to select files to upload.
+            </p>
+          </div>
+          <div
+            className={classNames(
+              'uploadFeedback', {
+                error: this.state.error,
+                float: this.props.feedbackPosition === 'float',
+                inside: this.props.feedbackPosition === 'inside',
+              }
+            )}
+            >
+            <p>
+              There was an error while uploading your files. Only <em>package.json</em> are accepted right now.
+            </p>
+            <p>
+              Please try again. If the problem persists, please contact us.
+            </p>
           </div>
         </Dropzone>
+
       </Fragment>
     );
   }

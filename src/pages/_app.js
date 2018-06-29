@@ -4,6 +4,9 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import { get } from 'lodash';
 
+import '../static/css/main.css';
+import '../static/css/nprogress.css';
+
 Router.onRouteChangeStart = () => NProgress.start();
 
 Router.onRouteChangeComplete = () => NProgress.done();

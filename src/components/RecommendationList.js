@@ -141,20 +141,10 @@ export default class RecommendationList extends React.Component {
           padding: 20px;
         }
 
-        .contribute a {
+        .contributeButton {
           box-sizing: border-box;
-          display: block;
           border-radius: 6px;
           padding: 10px;
-          text-decoration: none;
-          color: white;
-          font-weight: bold;
-          background: #4a00ae;
-          text-align: center;
-          font-size: 14px;
-        }
-        .contribute a:hover {
-          background: black; // FIXME
         }
 
         .andOthers .noWrap {
@@ -240,11 +230,9 @@ export default class RecommendationList extends React.Component {
               }
 
               <div className="secondPart">
-                <div className="contribute">
-                  <a href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
-                    Contribute
-                  </a>
-                </div>
+                <a className="bigButton contributeButton" href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
+                  Contribute
+                </a>
               </div>
             </div>
           ))}

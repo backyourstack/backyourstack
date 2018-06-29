@@ -30,7 +30,7 @@ export default class Profile extends React.Component {
 
   static propTypes = {
     id: PropTypes.string,
-    section: PropTypes.string,
+    section: PropTypes.PropTypes.oneOf(['dependencies', 'repositories']),
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     profile: PropTypes.object,
@@ -57,48 +57,6 @@ export default class Profile extends React.Component {
         </style>
 
         <style jsx>{`
-        .navigation {
-          background-color: #f7f8fa;
-          padding: 20px 56px;
-          position: relative;
-        }
-        .navigation h1 {
-          margin: 0;
-          padding: 0;
-          color: #2E3033;
-          font-size: 28px;
-          font-weight: bold;
-          letter-spacing: -0.4px;
-          line-height: 36px;
-        }
-        .navigation-items {
-          position: absolute;
-          left: 380px;
-          bottom: -1px;
-        }
-        .navigation-items a {
-          color: #2E2E99;
-          font-size: 10px;
-          font-weight: 500;
-          letter-spacing: 0.8px;
-          line-height: 16px;
-          text-decoration: none;
-          display: inline-block;
-          text-transform: uppercase;
-          border-bottom: 2px solid transparent;
-          margin-right: 40px;
-          padding-bottom: 20px;
-        }
-        .navigation-items a.active, .navigation-items a:hover {
-          border-color: #2E2E99;
-        }
-
-        aside {
-          width: 250px;
-          padding: 45px 60px;
-          position: absolute;
-        }
-
         .shortStats {
           color: #121314;
           font-size: 16px;
@@ -135,13 +93,6 @@ export default class Profile extends React.Component {
         .btn:last-child {
           margin-right: 0;
         }
-
-        main {
-          padding: 45px 0;
-          padding-right: 56px;
-          position: absolute;
-          left: 380px;
-        }
         `}
         </style>
 
@@ -172,7 +123,7 @@ export default class Profile extends React.Component {
                   </a>
                 </Link>
                 <Link route="profile" params={{ id: profile.login }}>
-                  <a className={classNames({ active: !section || section === 'recommendations' })}>
+                  <a className={classNames({ active: !section })}>
                     Projects requiring funding
                   </a>
                 </Link>

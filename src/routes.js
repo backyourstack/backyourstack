@@ -7,8 +7,8 @@ routes
   .add('logout')
   .add('index', '/')
   .add('search', '/search')
-  .add('files', '/files')
-  .add('profile', '/:id/:section(recommendations|dependencies|repositories)?');
+  .add('files', '/files/:section(dependencies|repositories)?')
+  .add('profile', '/:id/:section(dependencies|repositories)?');
 
 export default routes;
 

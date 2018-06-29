@@ -1,3 +1,3 @@
-const withCSS = require('@zeit/next-css');
+import nextCss from '@zeit/next-css';
 
-module.exports = withCSS();
+export default nextCss();

@@ -14,8 +14,7 @@ export default class MyDocument extends Document {
         <Head>
           <title>Back Your Stack: Discover the Open Source projects you are using and need financial support.</title>
           <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
-          <link rel="stylesheet" href="/static/css/main.css" />
-          <link rel="stylesheet" href="/static/css/nprogress.css" />
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <body>
           <Main />
