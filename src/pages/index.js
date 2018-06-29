@@ -81,8 +81,8 @@ export default class Index extends Component {
             padding: 0;
           }
           h1 img {
-            width: 244px;
-            height: 155px;
+            width: 220px;
+            height: 128px;
             display: block;
           }
           .homepage p, .homepage .search {
@@ -113,7 +113,7 @@ export default class Index extends Component {
             <h1>
               <Link route="index">
                 <a>
-                  <img src="/static/img/logo.jpg" alt="Back Your Stack" />
+                  <img src="/static/img/logo-bys-homepage.png" alt="Back Your Stack" />
                 </a>
               </Link>
             </h1>

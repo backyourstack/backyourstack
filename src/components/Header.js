@@ -36,6 +36,11 @@ export default class Header extends React.Component {
           margin-left: 60px;
         }
 
+        .brand img {
+          width: 200px;
+          height: 45px;
+        }
+
         .login, .loggedInUser {
           margin-left: auto;
           margin-right: 60px;
@@ -82,7 +87,7 @@ export default class Header extends React.Component {
           <div className="brand" style={{ visibility: brand ? 'visible' : 'hidden' }}>
             <Link route="index">
               <a>
-                <img src="/static/img/logo-compact.png" alt="Back Your Stack" />
+                <img src="/static/img/logo-bys-horizontal.png" alt="Back Your Stack" />
               </a>
             </Link>
           </div>
