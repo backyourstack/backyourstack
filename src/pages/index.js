@@ -93,6 +93,12 @@ export default class Index extends Component {
             text-align: center;
             color: #9399A3;
           }
+          .description {
+            color: #2E3033;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+          }
           .uploadDescription {
             font-size: 12px;
             line-height: 18px;
@@ -118,9 +124,9 @@ export default class Index extends Component {
               </Link>
             </h1>
 
-            <p>
-              Discover the open source projects you are using<br />
-              and need financial support.
+            <p className="description">
+              Discover the open source projects your organization<br />
+              is using that need financial support.
             </p>
 
             <div className="search">
