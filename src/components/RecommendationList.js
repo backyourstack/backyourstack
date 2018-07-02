@@ -94,6 +94,7 @@ export default class RecommendationList extends React.Component {
           margin-bottom: 30px;
           position: relative;
           color: #2E3033;
+          padding-bottom: 100px;
         }
 
         .Recommendation .logo {
@@ -171,8 +172,19 @@ export default class RecommendationList extends React.Component {
           background: #00B856;
           border-radius: 2px;
         }
+
+        @media screen and (max-width:500px) {
+          .Recommendation {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+            height: auto;
+            min-height: 0;
+          }
+        }
         `}
         </style>
+
         <div className="Recommendations">
           {recommendations.filter(r => r.opencollective).map(recommendation => (
             <div key={recommendation.name} className="Recommendation">
