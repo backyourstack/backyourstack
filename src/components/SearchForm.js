@@ -205,6 +205,7 @@ export default class SearchForm extends React.Component {
               onFocus={this.handleFocus}
               onBlur={this.handleFocus}
               autoComplete="off"
+              autoCapitalize="none"
               />
           </div>
 
