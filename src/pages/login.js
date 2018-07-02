@@ -20,13 +20,6 @@ export default class Login extends React.Component {
     return (
       <div className="Page LoginPage">
 
-        <style jsx global>{`
-        .LoginPage {
-          width: 1152px;
-        }
-        `}
-        </style>
-
         <style jsx>{`
         .content {
           width: 540px;
@@ -44,13 +37,30 @@ export default class Login extends React.Component {
           font-size: 16px;
           line-height: 24px;
         }
+        ul {
+          padding-left: 40px;
+        }
         .signInButton {
-          width: 50%;
+          width: 200px;
           margin: 50px auto 20px;
         }
         .githubLogo {
           vertical-align: -5px;
           padding-right: 10px;
+        }
+
+        @media screen and (max-width:500px) {
+          .content {
+            width:auto;
+            padding: 20px 15px;
+          }
+          h2 {
+            font-size: 18px;
+            line-height: 24px;
+          }
+          ul {
+            padding-left: 20px;
+          }
         }
         `}
         </style>

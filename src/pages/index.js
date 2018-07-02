@@ -7,7 +7,6 @@ import { getUserOrgs, getFilesData } from '../lib/data';
 import { Link, Router } from '../routes';
 
 import Header from '../components/Header';
-import Content from '../components/Content';
 import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
@@ -68,31 +67,37 @@ export default class Index extends Component {
       <div className="Page IndexPage">
 
         <style jsx global>{`
-        .IndexPage {
-          width: 1152px;
+        @media screen and (max-width:500px) {
+          .IndexPage {
+            padding: 20px;
+          }
+          .IndexPage header {
+            display: none !important;
+          }
         }
         `}
         </style>
 
         <style jsx>{`
           h1 {
-            width: 244px;
+            width: 220px;
             margin: 0 auto 50px;
             padding: 0;
           }
           h1 img {
             width: 220px;
             height: 128px;
-            display: block;
           }
-          .homepage p, .homepage .search {
+
+          .search, .description, .uploadDescription, .uploadContainer {
             margin: auto;
-            width: 450px;
           }
-          .homepage p {
+
+          p {
             text-align: center;
             color: #9399A3;
           }
+
           .description {
             color: #2E3033;
             font-size: 14px;
@@ -103,56 +108,109 @@ export default class Index extends Component {
             font-size: 12px;
             line-height: 18px;
           }
+
+          .search {
+            width: 450px;
+          }
+          .description {
+            width: 350px;
+          }
+          .uploadDescription {
+            width: 450px;
+          }
           .uploadContainer {
-            margin: 50px auto;
+            margin-top: 50px;
             width: 400px;
+            margin-bottom: 50px;
+          }
+
+          .uploadDescription.desktop {
+            display: block;
+          }
+          .uploadDescription.mobile {
+            display: none;
+          }
+
+          @media screen and (max-width:500px) {
+            h1 {
+              margin-bottom: 25px;
+            }
+            .search {
+              width: auto;
+            }
+            .description {
+              width: 250px;
+            }
+            .uploadDescription {
+              width: auto;
+            }
+            .uploadDescription.desktop {
+              display: none;
+            }
+            .uploadDescription.mobile {
+              display: block;
+            }
+            .uploadContainer {
+              display: none;
+            }
           }
         `}
         </style>
 
         <Header pathname={pathname} loggedInUser={loggedInUser} brand={false} />
 
-        <Content>
+        <div className="homepage">
 
-          <div className="homepage">
+          <h1>
+            <Link route="index">
+              <a>
+                <img src="/static/img/logo-bys-homepage.png" alt="Back Your Stack" />
+              </a>
+            </Link>
+          </h1>
 
-            <h1>
-              <Link route="index">
-                <a>
-                  <img src="/static/img/logo-bys-homepage.png" alt="Back Your Stack" />
-                </a>
-              </Link>
-            </h1>
+          <p className="description">
+            Discover the open source projects your organization
+            is using that need financial support.
+          </p>
 
-            <p className="description">
-              Discover the open source projects your organization<br />
-              is using that need financial support.
-            </p>
-
-            <div className="search">
-              <SearchForm orgs={loggedInUserOrgs} />
-            </div>
-
-            <p className="uploadDescription">
-              If you want to analyze non-public repositories, connect your GitHub account
-              or simply upload package.json files.
-              The uploaded files will not be shared with anyone
-              and will be deleted when your session expire.
-            </p>
-
-            <div className="uploadContainer">
-              <Upload
-                files={files}
-                onUpload={this.onUpload}
-                onUpdate={this.refresh}
-                feedbackPosition="float"
-                style={{ height: '125px' }}
-                />
-            </div>
-
+          <div className="search">
+            <SearchForm orgs={loggedInUserOrgs} />
           </div>
 
-        </Content>
+          <p className="uploadDescription desktop">
+            If you want to analyze non-public repositories,
+            {' '}
+            <Link route="login" params={{ next: pathname || '/' }}>
+              <a>sign in with your GitHub account</a>
+            </Link>
+            {' '}
+            or simply upload package.json files.
+            The uploaded files will not be shared with anyone
+            and will be deleted when your session expire.
+          </p>
+
+          <p className="uploadDescription mobile">
+            If you want to analyze non-public repositories,
+            {' '}
+            <Link route="login" params={{ next: pathname || '/' }}>
+              <a>sign in with your GitHub account</a>
+            </Link>
+            {' '}
+            You can also simply upload package.json files, use a desktop browser for that.
+          </p>
+
+          <div className="uploadContainer">
+            <Upload
+              files={files}
+              onUpload={this.onUpload}
+              onUpdate={this.refresh}
+              feedbackPosition="float"
+              style={{ height: '125px' }}
+              />
+          </div>
+
+        </div>
 
         <Footer />
 

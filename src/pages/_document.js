@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>Back Your Stack: Discover the Open Source projects you are using and need financial support.</title>
           <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
           <link rel="stylesheet" href="/_next/static/style.css" />

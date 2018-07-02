@@ -121,6 +121,7 @@ export default class SearchForm extends React.Component {
             border: 0;
             border-style: solid;
             background: transparent;
+            width: calc(100% - 160px);
           }
           .searchInput input, .searchInput input::placeholder {
             color: #9399A3;
@@ -160,6 +161,23 @@ export default class SearchForm extends React.Component {
           }
           .searchFeedback.error {
             color: #F53152;
+          }
+
+          @media screen and (max-width:500px) {
+            .searchInput {
+              margin-top: 25px;
+              padding: 10px 10px;
+            }
+            .searchInput span {
+              font-size: 14px;
+            }
+            .searchInput input {
+              font-size: 14px;
+              width: calc(100% - 140px);
+            }
+            .searchButton {
+              margin-top: 25px;
+            }
           }
         `}
         </style>

@@ -9,6 +9,7 @@ import { Link } from '../routes';
 import { getProfileData } from '../lib/data';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
@@ -52,6 +53,16 @@ export default class Profile extends React.Component {
         <style jsx global>{`
         .ProfilePage {
           position: relative;
+        }
+        @media screen and (max-width:500px) {
+          .ProfilePage header {
+            display: none !important;
+          }
+        }
+        @media screen and (min-width:500px) {
+          .ProfilePage footer {
+            display: none !important;
+          }
         }
         `}
         </style>
@@ -112,9 +123,9 @@ export default class Profile extends React.Component {
             <div className="navigation">
               <h1>{profile.name}</h1>
               <div className="navigation-items">
-                <Link route="profile" params={{ id: profile.login, section: 'repositories' }}>
-                  <a className={classNames({ active: section === 'repositories' })}>
-                    All Repositories
+                <Link route="profile" params={{ id: profile.login }}>
+                  <a className={classNames({ active: !section })}>
+                    Projects requiring funding
                   </a>
                 </Link>
                 <Link route="profile" params={{ id: profile.login, section: 'dependencies' }}>
@@ -122,9 +133,9 @@ export default class Profile extends React.Component {
                     All Dependencies
                   </a>
                 </Link>
-                <Link route="profile" params={{ id: profile.login }}>
-                  <a className={classNames({ active: !section })}>
-                    Projects requiring funding
+                <Link route="profile" params={{ id: profile.login, section: 'repositories' }}>
+                  <a className={classNames({ active: section === 'repositories' })}>
+                    All Repositories
                   </a>
                 </Link>
               </div>
@@ -194,6 +205,8 @@ export default class Profile extends React.Component {
 
           </Fragment>
         }
+
+        <Footer />
 
       </div>
     );
