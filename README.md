@@ -20,9 +20,7 @@ npm install
 
 ### Start
 
-```
-npm run dev
-```
+`npm run dev`
 
 ## Deployment
 
@@ -36,7 +34,4 @@ Make sure that the following environment keys are set (use `now secret`):
 
 Then:
 
-```
-now
-
-```
+`now`
