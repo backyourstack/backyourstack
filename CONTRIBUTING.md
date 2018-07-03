@@ -1,4 +1,4 @@
-Back Your Stack is an open source project and we love to receive contributions from our community — you!
+Back Your Stack is an open source project and we love receiving contributions from our community — you!
 
 ## Contributing ideas
 
@@ -15,5 +15,5 @@ There are already tickets existing for:
 
 ### Supporting more funding platforms
 
-Back Your Stack was initiated by people at Open Collective but doesn't intend to be limited to projects registered on the Open Collective platform. If you know any other platform and have an idea on how to integrate it, please contribute!
+Back Your Stack was initiated by people at Open Collective but doesn't intend to be limited to projects registered on the Open Collective platform. If you know any other platform or project currenlty receiving funding for Open Source projects and have an idea on how to integrate it, please contribute!
 
