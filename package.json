@@ -106,5 +106,16 @@
       "GITHUB_CALLBACK_URL": "https://backyourstack.now.sh/auth/github/callback",
       "GITHUB_TOKEN_DONATORS": "znarf,xdamman,piamancini,HipsterBrown"
     }
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@babel/cli",
+      "@babel/node",
+      "@babel/preset-env",
+      "@babel/preset-stage-0",
+      "@babel/runtime",
+      "styled-jsx",
+      "webpack"
+    ]
   }
 }
