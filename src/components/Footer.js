@@ -27,8 +27,12 @@ export default class Footer extends React.Component {
         </style>
         <footer>
           <Link route="index"><a>Back Your Stack</a></Link> is
-          an <a href="https://opencollective.com/">Open Collective</a> project.&nbsp;
-          <a href="https://github.com/opencollective/backyourstack">Contribute</a>.
+          an <a href="https://opencollective.com/">Open Collective</a> project.<br />
+          <Link route="faq">
+            <a>FAQ</a>
+          </Link>
+          &nbsp;.&nbsp;
+          <a href="https://github.com/opencollective/backyourstack">Contribute</a>
         </footer>
       </div>
     );

@@ -6,11 +6,11 @@
 
 Back Your Stack was initiated by the people at Open Collective.
 
-#### Is it limited to projects registered on Open Collective?
+### Is it limited to projects registered on Open Collective?
 
 No, our intent is to surface any Open Source looking for financing. However, we're technically currently only supporting Open Collective.
 
-#### Is it limited to Javascript projects published on npm?
+### Is it limited to Javascript projects published on npm?
 
 No, our intent is to support any dependency managers in any languages. However, we're only detecting npm dependencies for now.
 

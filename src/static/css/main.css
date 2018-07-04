@@ -12,12 +12,27 @@ button {
   font-size: 12px;
 }
 
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 20px 0;
 }
 h2 {
-  font-size: 1.6em;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 20px 0;
 }
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 10px 0;
+}
+
 .Page {
   margin: 0 auto;
   min-height: 100%;

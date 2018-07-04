@@ -5,6 +5,7 @@ const routes = nextRoutes();
 routes
   .add('login')
   .add('logout')
+  .add('faq')
   .add('index', '/')
   .add('search', '/search')
   .add('files', '/files/:section(dependencies|repositories)?')

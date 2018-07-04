@@ -7,7 +7,11 @@ module.exports = withCSS({
       {
         test: /\.svg$/,
         loader: 'svg-react-loader',
-      }
+      },
+      {
+        test: /\.md$/,
+        use: ['babel-loader', '@mdx-js/loader'],
+      },
     );
     return config;
   },
