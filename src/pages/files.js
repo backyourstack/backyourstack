@@ -124,14 +124,14 @@ export default class Files extends React.Component {
         <div className="navigation">
           <h1>{count} {count === 1 ? 'file' : 'files'}</h1>
           <div className="navigation-items">
-            <Link route="files" params={{ section: 'dependencies' }}>
-              <a className={classNames({ active: section === 'dependencies' })}>
-                All Dependencies
-              </a>
-            </Link>
             <Link route="files">
               <a className={classNames({ active: !section })}>
                 Projects requiring funding
+              </a>
+            </Link>
+            <Link route="files" params={{ section: 'dependencies' }}>
+              <a className={classNames({ active: section === 'dependencies' })}>
+                Detected Dependencies
               </a>
             </Link>
           </div>
