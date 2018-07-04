@@ -1,5 +1,5 @@
 import debug from 'debug';
-import { pick, uniq } from 'lodash';
+import { pick } from 'lodash';
 
 import cache from './cache';
 import { fetchFileFromRepo } from './github';
@@ -108,13 +108,16 @@ function getRecommendedProjectFromDependencies (deps) {
           const id = dep.project ? dep.project.name : dep.name;
           if (!projects[id]) {
             projects[id] = dep.project ? pick(dep.project, ['name', 'opencollective']) : pick(dep, ['name']);
-            projects[id].repos = [];
+            projects[id]['repos'] = [];
           }
-          projects[id].repos = uniq([... projects[id].repos, ... dep.repos]);
+          dep.repos.forEach(repo => projects[id]['repos'][repo.id] = repo);
         }
 
         // Convert objects with ids as key to arrays
-        return Object.values(projects);
+        return Object.values(projects).map(project => {
+          project.repos = Object.values(project.repos);
+          return project;
+        });
       }
     ).then(
       projects => {
