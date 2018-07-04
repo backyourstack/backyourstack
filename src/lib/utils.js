@@ -21,7 +21,6 @@ async function addDependenciesToRepo (repo, accessToken) {
     cache.set(cacheKey, rawDependencies);
   }
 
-  repo.rawDependencies = rawDependencies;
   repo.dependencies = dependenciesStats(rawDependencies);
 
   return repo;
@@ -72,7 +71,7 @@ function getAllDependenciesFromRepos (repos) {
       }
       // Keep track of repos
       dependencies[id]['repos'] = dependencies[id]['repos'] || {};
-      dependencies[id]['repos'][repo.id] = repo;
+      dependencies[id]['repos'][repo.id] = pick(repo, ['id', 'name', 'full_name']);
     }
   }
 
@@ -109,20 +108,9 @@ function getRecommendedProjectFromDependencies (deps) {
           const id = dep.project ? dep.project.name : dep.name;
           if (!projects[id]) {
             projects[id] = dep.project ? pick(dep.project, ['name', 'opencollective']) : pick(dep, ['name']);
-            projects[id].score = 0;
             projects[id].repos = [];
           }
           projects[id].repos = uniq([... projects[id].repos, ... dep.repos]);
-          for (const dependencyType of dependencyTypes) {
-            projects[id][dependencyType] = projects[id][dependencyType] || 0;
-            projects[id][dependencyType] += dep[dependencyType];
-            // Score
-            if (dependencyType === 'dependencies') {
-              projects[id].score += dep[dependencyType] * 3;
-            } else {
-              projects[id].score += dep[dependencyType];
-            }
-          }
         }
 
         // Convert objects with ids as key to arrays
@@ -131,9 +119,11 @@ function getRecommendedProjectFromDependencies (deps) {
     ).then(
       projects => {
         return projects.sort((a, b) =>
-          a.score != b.score ? b.score - a.score : a.name.localeCompare(b.name)
+          a.repos.length != b.repos.length ? b.repos.length - a.repos.length : a.name.localeCompare(b.name)
         );
       }
+    ).then(
+      recommendations => recommendations.filter(r => r.opencollective)
     );
 }
 

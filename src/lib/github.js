@@ -106,7 +106,10 @@ async function fetchReposForProfile (profile, accessToken) {
   repos = repos.filter(repo => repo.fork === false);
 
   // Filter the keys we're interested in
-  repos = repos.map(repo => pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private']));
+  repos = repos.map(repo => {
+    repo.owner = pick(repo.owner, ['login']);
+    return pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private']);
+  });
 
   const publicRepos = repos.filter(repo => repo.private === false);
 
