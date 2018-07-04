@@ -30,6 +30,55 @@ a:hover {
   text-decoration: none;
 }
 
+.button {
+  color: #8800ff;
+  border: 1px solid #D5DAE0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.button:hover {
+  border-color: #8800ff;
+}
+.button:active, .button:focus {
+  color: white;
+  border-color: #3c0d9b;
+  background-color: #3c0d9b
+}
+
+.shareButton {
+  display: inline-block;
+  color: #6E747A;
+  border: 1px solid #D5DAE0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.shareButton:hover {
+  color: #8b00ff;
+  border-color: #8b00ff;
+}
+.shareButton:active, .shareButton:focus {
+  color: white;
+  border-color: #8b00ff;
+  background-color: #8b00ff;
+}
+.shareButton .logo {
+  vertical-align: -3px;
+  width: 16px;
+  height: 16px;
+}
+.shareButton .logo #main {
+  fill: #c1c6cc;
+}
+.shareButton:hover .logo #main {
+  fill: #c89bff;
+}
+.shareButton:active .logo #main, .button:focus  .logo #main {
+  fill: white;
+}
+
 .actionButton {
   display: inline-block;
   padding: 4px 8px;
@@ -70,6 +119,16 @@ a:hover {
 }
 .bigButton:disabled {
   background-color: #d1c2ea;
+}
+
+.bigButton .logo {
+  vertical-align: -5px;
+  padding-right: 10px;
+  width: 22px;
+  height: 22px;
+}
+.bigButton .logo #main {
+  fill: white;
 }
 
 .navigation {

@@ -1,3 +1,14 @@
-import nextCss from '@zeit/next-css';
+// import webpack from 'webpack';
+import withCSS from '@zeit/next-css';
 
-export default nextCss();
+module.exports = withCSS({
+  webpack: (config) => {
+    config.module.rules.push(
+      {
+        test: /\.svg$/,
+        loader: 'svg-react-loader',
+      }
+    );
+    return config;
+  },
+});

@@ -49,19 +49,13 @@ export default class Header extends React.Component {
           margin-right: 60px;
         }
 
-        a {
+        a:not(.button) {
           color: inherit;
           text-decoration: none;
         }
-        a:hover {
-          text-decoration: underline;
-        }
 
-        .btn {
-          color: #8800ff;
-          border: 1px solid #D5DAE0;
-          border-radius: 6px;
-          padding: 10px 20px;
+        a:not(.button):hover {
+          text-decoration: underline;
         }
 
         .profile {
@@ -117,14 +111,14 @@ export default class Header extends React.Component {
               </Link>
               &nbsp;
               <Link route="logout" params={{ next: pathname || '/' }}>
-                <a className="btn">Sign Out</a>
+                <a className="button">Sign Out</a>
               </Link>
             </div>
           )}
           {!loggedInUser && (
             <div className="login" style={{ display: login ? 'block' : 'none' }}>
               <Link route="login" params={{ next: pathname || '/' }}>
-                <a className="btn">Sign In with GitHub</a>
+                <a className="button">Sign In with GitHub</a>
               </Link>
             </div>
           )}

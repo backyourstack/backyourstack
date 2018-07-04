@@ -65,7 +65,8 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-react": "^7.10.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "svg-react-loader": "^0.4.5"
   },
   "eslintConfig": {
     "extends": "opencollective",

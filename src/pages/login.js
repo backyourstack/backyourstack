@@ -5,6 +5,8 @@ import NextLink from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+import GithubLogo from '../static/img/github.svg';
+
 export default class Login extends React.Component {
 
   static getInitialProps (ctx) {
@@ -44,10 +46,6 @@ export default class Login extends React.Component {
           width: 200px;
           margin: 50px auto 20px;
         }
-        .githubLogo {
-          vertical-align: -5px;
-          padding-right: 10px;
-        }
 
         @media screen and (max-width:500px) {
           .content {
@@ -82,8 +80,8 @@ export default class Login extends React.Component {
             <li>Make sure to grant access to these in the GitHub permission page.</li>
           </ul>
           <NextLink href={{ pathname: '/auth/github', query: { next: this.props.next } }}>
-            <a className="bigButton signInButton">
-              <img className="githubLogo" src="/static/img/github.svg" width="22" height="22" alt="" />
+            <a className="button bigButton signInButton">
+              <GithubLogo className="logo" />
               Sign In with GitHub now
             </a>
           </NextLink>

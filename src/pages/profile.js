@@ -15,6 +15,9 @@ import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
 
+import TwitterLogo from '../static/img/twitter.svg';
+import FacebookLogo from '../static/img/facebook.svg';
+
 export default class Profile extends React.Component {
 
   static async getInitialProps ({ req, query }) {
@@ -86,22 +89,7 @@ export default class Profile extends React.Component {
            margin-top: 25px;
         }
 
-        .btn {
-          display: inline-block;
-          color: #8800ff;
-          border: 1px solid #D5DAE0;
-          border-radius: 6px;
-          padding: 10px 20px;
-          margin-right: 15px;
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .btn:hover {
-          text-decoration: underline;
-        }
-
-        .btn:last-child {
+        .button:last-child {
           margin-right: 0;
         }
         `}
@@ -168,12 +156,16 @@ export default class Profile extends React.Component {
 
               <div className="socialLinks">
                 <NextLink href={{ pathname: 'http://twitter.com/share', query: { text: this.twitterText() } }}>
-                  <a className="btn">
+                  <a className="button shareButton" title="Share on Twitter">
+                    <TwitterLogo className="logo" />
+                    &nbsp;
                     Tweet
                   </a>
                 </NextLink>
                 <NextLink href={{ pathname: 'https://www.facebook.com/sharer/sharer.php', query: { u: this.profileLink() } }}>
-                  <a className="btn">
+                  <a className="button shareButton" title="Share on Facebook">
+                    <FacebookLogo className="logo" />
+                    &nbsp;
                     Share
                   </a>
                 </NextLink>
