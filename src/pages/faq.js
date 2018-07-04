@@ -14,7 +14,6 @@ export default class Login extends React.Component {
 
   static propTypes = {
     loggedInUser: PropTypes.object,
-    next: PropTypes.string,
   };
 
   render () {
@@ -31,8 +30,9 @@ export default class Login extends React.Component {
         }
         @media screen and (max-width:500px) {
           .content {
-            width:auto;
+            width: auto;
             padding: 20px 15px;
+            margin: 50px 20px;
           }
         }
         `}

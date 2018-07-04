@@ -113,7 +113,7 @@ export default class Index extends Component {
             width: 450px;
           }
           .description {
-            width: 350px;
+            width: 340px;
           }
           .uploadDescription {
             width: 450px;

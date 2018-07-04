@@ -95,7 +95,7 @@ export default class Header extends React.Component {
             </Link>
           </div>
           {loggedInUser && (
-            <div className="loggedInUser">
+            <div className="loggedInUser" style={{ display: login ? 'block' : 'none' }}>
               <span className="profile">
                 Welcome&nbsp;
                 <strong>

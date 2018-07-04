@@ -51,6 +51,7 @@ export default class Login extends React.Component {
           .content {
             width:auto;
             padding: 20px 15px;
+            margin: 50px 20px;
           }
           h2 {
             font-size: 18px;
