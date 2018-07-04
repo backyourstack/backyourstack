@@ -26,7 +26,7 @@ export default class RecommendationCard extends React.Component {
 
   formatBackingAmount = (amount) => `${this.budgetFormatter.format(Math.round(amount))}`;
 
-  formatBackingDate = (date) => moment(date).format('MMM YYYY');
+  formatBackingDate = (date) => moment(new Date(date)).format('MMM YYYY');
 
   nextGoal = (recommendation) => {
     const goals = get(recommendation, 'opencollective.goals', []);
@@ -165,7 +165,6 @@ export default class RecommendationCard extends React.Component {
 
         .backingButton small {
           font-size: 12px;
-          color: #4f5a65;
         }
 
         .andOthers .noWrap {

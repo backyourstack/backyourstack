@@ -53,10 +53,8 @@ function searchUsers (q, accessToken) {
 }
 
 function getCollective (profile) {
-  const slug = githubToOpenCollectiveMapping[profile.login];
-  if (slug) {
-    return fetchCollective(slug);
-  }
+  const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
+  return fetchCollective(slug);
 }
 
 async function getProfileData (id, accessToken) {

@@ -31,15 +31,19 @@ const getCollectiveWithBackingQuery = `
 function fetchCollective (slug) {
   const cacheKey = `collective_${slug}`;
 
-  const collective = cache.get(cacheKey);
-  if (collective) {
-    return collective;
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
   }
 
   return request(baseUrl, getCollectiveWithBackingQuery, { slug })
     .then(data => {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
+    })
+    .catch(err => {
+      console.error(err);
+      cache.set(cacheKey, null);
+      return null;
     });
 }
 
