@@ -224,7 +224,7 @@ export default class SearchForm extends React.Component {
             <p className="searchExamples">
               e.g.: &nbsp;
               <List
-                array={[{ login: 'facebook' }, { login: 'airbnb' }, { login: 'square' }]}
+                array={[{ login: 'facebook' }, { login: 'airbnb' }, { login: 'algolia' }]}
                 map={this.searchLink}
                 others={false}
                 />

@@ -21,7 +21,7 @@ import FacebookLogo from '../static/img/facebook.svg';
 export default class Profile extends React.Component {
 
   static async getInitialProps ({ req, query }) {
-    const initialProps = { id: query.id, section: query.section };
+    const initialProps = { section: query.section };
     try {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
@@ -33,11 +33,11 @@ export default class Profile extends React.Component {
   }
 
   static propTypes = {
-    id: PropTypes.string,
     section: PropTypes.PropTypes.oneOf(['dependencies', 'repositories']),
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     profile: PropTypes.object,
+    opencollective: PropTypes.object,
     repos: PropTypes.array,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
@@ -48,8 +48,21 @@ export default class Profile extends React.Component {
 
   profileLink = () => `https://backyourstack.now.sh/${this.props.profile.login}`;
 
+  githubLink = () => `https://github.com/${this.props.profile.login}`;
+
+  opencollectiveLink = () => this.props.opencollective && `https://opencollective.com/${this.props.opencollective.slug}`;
+
+  profileName = () => {
+    if (this.props.opencollective) {
+      if (this.props.opencollective.name.length < this.props.profile.name.length) {
+        return this.props.opencollective.name;
+      }
+    }
+    return this.props.profile.name;
+  };
+
   render () {
-    const { section, error, profile, repos, dependencies, recommendations, pathname, loggedInUser } = this.props;
+    const { section, error, profile, opencollective, repos, dependencies, recommendations, pathname, loggedInUser } = this.props;
     return (
       <div className="Page ProfilePage">
 
@@ -80,9 +93,14 @@ export default class Profile extends React.Component {
         .profileLink a {
           color: #7448FF;
           text-decoration: none;
+          display: block;
         }
         .profileLink a:hover {
           text-decoration: underline;
+        }
+
+        .profileLink a.backyourstack {
+          margin-bottom: 10px;
         }
 
         .profileLink, .socialLinks {
@@ -109,7 +127,7 @@ export default class Profile extends React.Component {
         {!error &&
           <Fragment>
             <div className="navigation">
-              <h1>{profile.name}</h1>
+              <h1>{this.profileName()}</h1>
               <div className="navigation-items">
                 <Link route="profile" params={{ id: profile.login }}>
                   <a className={classNames({ active: !section })}>
@@ -118,28 +136,16 @@ export default class Profile extends React.Component {
                 </Link>
                 <Link route="profile" params={{ id: profile.login, section: 'dependencies' }}>
                   <a className={classNames({ active: section === 'dependencies' })}>
-                    All Dependencies
+                    Detected Dependencies
                   </a>
                 </Link>
                 <Link route="profile" params={{ id: profile.login, section: 'repositories' }}>
                   <a className={classNames({ active: section === 'repositories' })}>
-                    All Repositories
+                    Analyzed Repositories
                   </a>
                 </Link>
               </div>
             </div>
-
-            {false &&
-              <div>
-                <strong>Github Profile</strong>:&nbsp;
-                <a href={`https://github.com/${profile.login}`}>
-                  {`github.com/${profile.login}`}
-                </a>
-                &nbsp;-&nbsp;
-                <strong>OpenCollective Profile</strong>:&nbsp;
-                <em>unknown</em>
-              </div>
-            }
 
             <aside>
 
@@ -149,9 +155,17 @@ export default class Profile extends React.Component {
               </div>
 
               <div className="profileLink">
-                <a href={this.profileLink()}>
+                <a href={this.profileLink()} className="backyourstack">
                   &gt; {this.profileLink().replace('https://', '')}
                 </a>
+                <a href={this.githubLink()} className="github">
+                  &gt; {this.githubLink().replace('https://', '')}
+                </a>
+                {opencollective &&
+                  <a href={this.opencollectiveLink()} className="opencollective">
+                    &gt; {this.opencollectiveLink().replace('https://', '')}
+                  </a>
+                }
               </div>
 
               <div className="socialLinks">
@@ -182,7 +196,7 @@ export default class Profile extends React.Component {
               }
 
               {(!section || section === 'recommendations') &&
-                <RecommendationList recommendations={recommendations} />
+                <RecommendationList recommendations={recommendations} opencollective={opencollective} />
               }
 
               {section === 'dependencies' &&

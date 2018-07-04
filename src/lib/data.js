@@ -7,12 +7,18 @@ import {
 } from './github';
 
 import {
+  fetchCollective,
+} from './opencollective';
+
+import {
   addDependenciesToRepo,
   addProjectToDependencies,
   dependenciesStats,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
 } from './utils';
+
+import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
 const _debug = debug('data');
 
@@ -46,12 +52,21 @@ function searchUsers (q, accessToken) {
     fetchWithOctokit('search.users', { q }, accessToken);
 }
 
+function getCollective (profile) {
+  const slug = githubToOpenCollectiveMapping[profile.login];
+  if (slug) {
+    return fetchCollective(slug);
+  }
+}
+
 async function getProfileData (id, accessToken) {
   if (process.browser) {
     return fetchJson(`/data/getProfileData?id=${id}`);
   }
 
   const profile = await fetchProfile(id, accessToken);
+
+  const opencollective = await getCollective(profile);
 
   const repos = await fetchReposForProfile(profile, accessToken)
     .then(repos =>
@@ -64,7 +79,7 @@ async function getProfileData (id, accessToken) {
 
   const recommendations = await getRecommendedProjectFromDependencies(dependencies);
 
-  return { profile, repos, dependencies, recommendations };
+  return { profile, opencollective, repos, dependencies, recommendations };
 }
 
 async function getFilesData (sessionFiles) {
