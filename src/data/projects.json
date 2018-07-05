@@ -519,6 +519,7 @@
   },
   {
     "name": "babel",
+    "logo": "/static/img/profile/profile-pic-babel.jpg",
     "packages": [
       {
         "name": "babel-eslint"
@@ -5893,6 +5894,7 @@
   },
   {
     "name": "mocha",
+    "logo": "/static/img/profile/profile-pic-mocha.jpg",
     "packages": [
       {
         "name": "mocha"
@@ -11030,6 +11032,7 @@
   },
   {
     "name": "vuejs",
+    "logo": "/static/img/profile/profile-pic-vuejs.jpg",
     "packages": [
       {
         "name": "vue"
@@ -11262,6 +11265,7 @@
   },
   {
     "name": "webpack",
+    "logo": "/static/img/profile/profile-pic-webpack.jpg",
     "packages": [
       {
         "name": "webpack"

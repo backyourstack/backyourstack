@@ -84,6 +84,16 @@ export default class RecommendationCard extends React.Component {
     )
   );
 
+  logoSrc = () => {
+    const { recommendation } = this.props;
+
+    if (recommendation.logo) {
+      return recommendation.logo;
+    } else {
+      return `https://opencollective.com/${recommendation.opencollective.slug}/logo.png?height=55`;
+    }
+  };
+
   render () {
     const { recommendation, opencollective } = this.props;
 
@@ -110,7 +120,6 @@ export default class RecommendationCard extends React.Component {
           color: #2E3033;
           padding-bottom: 100px;
         }
-
         .Recommendation.backing {
           background: url("/static/img/sponsor-badge.png") no-repeat right top;
           background-size: 125px 125px;
@@ -121,13 +130,14 @@ export default class RecommendationCard extends React.Component {
         }
         .Recommendation .logo img {
           border-radius: 12px;
-          background: #cdcbca;
         }
+
         .Recommendation .name {
           font-size: 20px;
           font-weight: bold;
           margin-bottom: 10px;
         }
+
         .Recommendation .description {
           font-size: 13px;
           line-height: 19px;
@@ -211,10 +221,7 @@ export default class RecommendationCard extends React.Component {
         <div className={classNames('Recommendation', { 'backing': !!backing })}>
 
           <div className="logo">
-            <img
-              src={`https://opencollective.com/${recommendation.opencollective.slug}/logo.png?height=55`}
-              height="55"
-              />
+            <img src={this.logoSrc()} width="55" height="55" alt="" />
           </div>
 
           <div className="name"><b>{recommendation.opencollective.name}</b></div>

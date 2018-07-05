@@ -107,7 +107,7 @@ function getRecommendedProjectFromDependencies (deps) {
         for (const dep of deps) {
           const id = dep.project ? dep.project.name : dep.name;
           if (!projects[id]) {
-            projects[id] = dep.project ? pick(dep.project, ['name', 'opencollective']) : pick(dep, ['name']);
+            projects[id] = dep.project ? pick(dep.project, ['name', 'logo', 'opencollective']) : pick(dep, ['name']);
             projects[id]['repos'] = [];
           }
           dep.repos.forEach(repo => projects[id]['repos'][repo.id] = repo);
