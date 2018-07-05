@@ -122,6 +122,7 @@ export default class SearchForm extends React.Component {
             border-style: solid;
             background: transparent;
             width: calc(100% - 160px);
+            appearance: none;
           }
           .searchInput input, .searchInput input::placeholder {
             color: #9399A3;
