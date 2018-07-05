@@ -179,6 +179,12 @@ export default class SearchForm extends React.Component {
             .searchButton {
               margin-top: 25px;
             }
+            .searchFeedback {
+              position: static;
+              width: auto;
+              margin: 0;
+              text-align: center;
+            }
           }
         `}
         </style>
@@ -189,12 +195,6 @@ export default class SearchForm extends React.Component {
             className={classNames('searchInput', { error: !!error, ok: !!ok, focused: focused })}
             onClick={this.focus}
             >
-            {error &&
-              <div className="searchFeedback error">{error}</div>
-            }
-            {ok &&
-              <div className="searchFeedback ok">{ok}</div>
-            }
             <span>https://github.com/</span>
             <input
               ref={this.searchInput}
@@ -209,6 +209,16 @@ export default class SearchForm extends React.Component {
               autoCapitalize="none"
               />
           </div>
+
+          {error &&
+            <div className="searchFeedback error">{error}</div>
+          }
+          {ok &&
+            <div className="searchFeedback ok">{ok}</div>
+          }
+          {!error && !ok &&
+            <div className="searchFeedback placeholder">&nbsp;</div>
+          }
 
           {orgs && orgs.length > 0 &&
             <p className="searchExamples">
