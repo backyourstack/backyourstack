@@ -95,6 +95,9 @@ export default class Header extends React.Component {
           .brand img.small {
             display: block;
           }
+          .profile {
+            display: none;
+          }
         }
 
         `}
