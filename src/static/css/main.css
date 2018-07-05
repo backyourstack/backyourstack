@@ -48,6 +48,7 @@ a:hover {
 .button {
   color: #8800ff;
   border: 1px solid #D5DAE0;
+  background: white;
   border-radius: 6px;
   padding: 10px 20px;
   text-decoration: none;
@@ -125,6 +126,7 @@ a:hover {
   font-weight: bold;
   color: white;
   background-color: #3f00a5;
+  -webkit-appearance: none;
 }
 .bigButton:hover {
   background-color: #8b00ff;
@@ -164,6 +166,7 @@ a:hover {
   position: absolute;
   left: 380px;
   bottom: -1px;
+  white-space : nowrap;
 }
 .navigation-items a {
   color: #2E2E99;
@@ -204,17 +207,11 @@ main {
   }
   .navigation-items {
     position: static;
-    background: white;
-  }
-  .navigation-items a {
-    display: block;
+    box-sizing: border-box;
     width: 100%;
-    padding-top: 20px;
-    background: white;
-    border-bottom: 0;
-    border-left: 2px solid transparent;
-    margin-left: 5px;
     padding-left: 20px;
+    overflow: scroll;
+    display: none;
   }
 
   aside {
@@ -222,7 +219,6 @@ main {
     width: auto;
     margin: 0;
     padding: 20px;
-    background: #f1f1f1;
   }
   main {
     position: static;

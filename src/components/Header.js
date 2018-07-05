@@ -35,12 +35,17 @@ export default class Header extends React.Component {
         }
 
         .brand {
+          margin-left: 60px;
+        }
+
+        .brand img.default {
+          display: block;
           width: 200px;
           height: 45px;
         }
-
-        .brand img {
-          width: 200px;
+        .brand img.small {
+          display: none;
+          width: 45px;
           height: 45px;
         }
 
@@ -77,6 +82,21 @@ export default class Header extends React.Component {
           border: 0;
         }
 
+        @media screen and (max-width:500px) {
+          .brand {
+            margin-left: 20px;
+          }
+          .login, .loggedInUser {
+            margin-right: 20px;
+          }
+          .brand img.default {
+            display: none;
+          }
+          .brand img.small {
+            display: block;
+          }
+        }
+
         `}
         </style>
 
@@ -85,12 +105,13 @@ export default class Header extends React.Component {
             className="brand"
             style={{
               visibility: brand ? 'visible' : 'hidden',
-              margin: brandAlign === 'left' ? '0 0 0 60px' : 'auto',
+              margin: brandAlign === 'left' ? null : 'auto',
             }}
             >
             <Link route="index">
               <a>
-                <img src="/static/img/logo-bys-horizontal.png" alt="Back Your Stack" />
+                <img className="default" src="/static/img/logo-bys-horizontal.png" alt="Back Your Stack" />
+                <img className="small" src="/static/img/logo-small.png" alt="Back Your Stack" />
               </a>
             </Link>
           </div>

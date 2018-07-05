@@ -47,7 +47,7 @@ export default class Login extends React.Component {
           margin: 50px auto 20px;
         }
 
-        @media screen and (max-width:500px) {
+        @media screen and (max-width: 640px) {
           .content {
             width:auto;
             padding: 20px 15px;

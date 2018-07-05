@@ -70,11 +70,6 @@ export default class Profile extends React.Component {
         .ProfilePage {
           position: relative;
         }
-        @media screen and (max-width:500px) {
-          .ProfilePage header {
-            display: none !important;
-          }
-        }
         @media screen and (min-width:500px) {
           .ProfilePage footer {
             display: none !important;
