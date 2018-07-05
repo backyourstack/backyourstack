@@ -4,7 +4,7 @@ Discover the open source projects your organization is using that need financial
 
 ## Service
 
-The official Back Your Stack service is available from https://backyourstack.now.sh/
+The official Back Your Stack service is available from https://backyourstack.com/
 
 ## Development
 
