@@ -15,7 +15,14 @@ import { get } from 'lodash';
 import passport from './passport';
 import routes from '../routes';
 import { fetchWithBasicAuthentication } from './utils';
-import { getProfile, getUserOrgs, searchUsers, getProfileData, getFilesData } from '../lib/data';
+import {
+  getProfile,
+  getUserOrgs,
+  searchUsers,
+  getProfileData,
+  getFilesData,
+  emailSubscribe,
+} from '../lib/data';
 
 const _debug = debug('server');
 
@@ -100,6 +107,12 @@ nextApp.prepare()
     server.get('/data/getFilesData', (req, res) => {
       const files = get(req, 'session.files');
       getFilesData(files).then(data => res.json(data));
+    });
+
+    server.post('/data/emailSubscribe', (req, res) => {
+      const email = get(req, 'body.email');
+      const profile = get(req, 'body.profile');
+      emailSubscribe(email, profile).then(data => res.json(data));
     });
 
     server.post('/files/upload', upload.array('files'), (req, res) => {

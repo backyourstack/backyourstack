@@ -14,6 +14,7 @@ import Footer from '../components/Footer';
 import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
+import SubscribeForm from '../components/SubscribeForm';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -105,6 +106,10 @@ export default class Profile extends React.Component {
         .button:last-child {
           margin-right: 0;
         }
+
+        .subscribe {
+           margin-top: 50px;
+        }
         `}
         </style>
 
@@ -178,6 +183,14 @@ export default class Profile extends React.Component {
                     Share
                   </a>
                 </NextLink>
+              </div>
+
+              <div className="subscribe">
+                <h3>Stay up-to-date with your stack!</h3>
+                <p>
+                  Receive a notification when one of your dependencies is ready to receive funding and a monthly report on your stack’s progress, goals and updates.
+                </p>
+                <SubscribeForm profile={profile.login} />
               </div>
 
             </aside>

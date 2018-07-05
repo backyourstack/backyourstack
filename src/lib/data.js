@@ -1,5 +1,7 @@
 import debug from 'debug';
 
+import fetch from 'cross-fetch';
+
 import {
   fetchWithOctokit,
   fetchProfile,
@@ -106,7 +108,43 @@ async function getFilesData (sessionFiles) {
   const recommendations = await getRecommendedProjectFromDependencies(dependencies);
 
   return { files, repos, dependencies, recommendations };
+}
 
+function emailSubscribe (email, profile) {
+  if (process.browser) {
+    return fetchJson('/data/emailSubscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify({ email, profile }),
+    });
+  }
+
+  const username = 'anystring';
+  const password = process.env.MAILCHIMP_API_KEY;
+
+  const basicAuthenticationString = Buffer.from([username, password].join(':')).toString('base64');
+
+  return fetch(process.env.MAILCHIMP_API_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Basic ${basicAuthenticationString}`,
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    body: JSON.stringify({
+      members : [
+        {
+          email_address: email,
+          status: 'subscribed',
+          merge_fields: {
+            PROFILE: profile,
+          },
+        },
+      ],
+      update_existing: true,
+    }),
+  });
 }
 
 export {
@@ -115,4 +153,5 @@ export {
   getUserOrgs,
   getProfileData,
   getFilesData,
+  emailSubscribe,
 };
