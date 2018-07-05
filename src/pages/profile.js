@@ -186,7 +186,7 @@ export default class Profile extends React.Component {
               </div>
 
               <div className="subscribe">
-                <h3>Stay up-to-date with your stack!</h3>
+                <h3>Stay up to date!</h3>
                 <p>
                   Receive a notification when one of your dependencies is ready to receive funding and a monthly report on your stack’s progress, goals and updates.
                 </p>
