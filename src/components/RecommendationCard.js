@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import moment from 'moment';
 import { get } from 'lodash';
 
@@ -88,10 +89,13 @@ export default class RecommendationCard extends React.Component {
 
     const backing = this.getBackingData(recommendation, opencollective);
 
+    const backers = (recommendation.opencollective.sponsors || []).filter(backer =>
+      !opencollective || opencollective.slug !== backer.slug
+    );
+
     return (
       <Fragment>
         <style jsx>{`
-
         .Recommendation {
           box-sizing: border-box;
           width: 290px;
@@ -105,6 +109,11 @@ export default class RecommendationCard extends React.Component {
           position: relative;
           color: #2E3033;
           padding-bottom: 100px;
+        }
+
+        .Recommendation.backing {
+          background: url("/static/img/sponsor-badge.png") no-repeat right top;
+          background-size: 125px 125px;
         }
 
         .Recommendation .logo {
@@ -158,11 +167,6 @@ export default class RecommendationCard extends React.Component {
           padding: 10px;
         }
 
-        .backingButton {
-          color: #2b2b2b;
-          background-color: gold;
-        }
-
         .backingButton small {
           font-size: 12px;
         }
@@ -204,7 +208,7 @@ export default class RecommendationCard extends React.Component {
         `}
         </style>
 
-        <div className="Recommendation">
+        <div className={classNames('Recommendation', { 'backing': !!backing })}>
 
           <div className="logo">
             <img
@@ -228,14 +232,26 @@ export default class RecommendationCard extends React.Component {
             </div>
           }
 
-          {recommendation.opencollective.sponsors && recommendation.opencollective.sponsors.length > 0 &&
+          {(backing || backers.length > 0) &&
             <div className="backers">
               <strong>Backers</strong>:<br />
-              <List
-                array={recommendation.opencollective.sponsors}
-                map={this.backerItem}
-                cut={3}
-                />
+              {backing &&
+                <Fragment>
+                  <a href={`https://opencollective.com/${opencollective.slug}`}>
+                    {opencollective.name}
+                  </a> ({this.formatBackingAmount(backing.stats.totalDonations / 100)} since {this.formatBackingDate(backing.createdAt)}).
+                </Fragment>
+              }
+              {backing && backers.length > 0 &&
+                <Fragment>{' Also: '}</Fragment>
+              }
+              {backers.length > 0 &&
+                <List
+                  array={backers}
+                  map={this.backerItem}
+                  cut={3}
+                  />
+              }
             </div>
           }
 
@@ -259,21 +275,9 @@ export default class RecommendationCard extends React.Component {
           }
 
           <div className="secondPart">
-            {!backing &&
-              <a className="bigButton contributeButton" href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
-                Contribute
-              </a>
-            }
-            {backing &&
-              <Fragment>
-                <a className="bigButton backingButton" href={`https://opencollective.com/${opencollective.slug}`}>
-                  Backing!&nbsp;
-                  <small>
-                    {this.formatBackingAmount(backing.stats.totalDonations / 100)} since {this.formatBackingDate(backing.createdAt)}
-                  </small>
-                </a>
-              </Fragment>
-            }
+            <a className="bigButton contributeButton" href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
+              Contribute
+            </a>
           </div>
 
         </div>
