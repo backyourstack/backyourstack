@@ -65,7 +65,6 @@ export default class SearchForm extends React.Component {
   search = (event, q) => {
     event.preventDefault();
     event.stopPropagation();
-    this.focus();
     this.setState({ q });
     Router.pushRoute('search', { q });
   };
