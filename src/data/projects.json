@@ -519,6 +519,7 @@
   },
   {
     "name": "babel",
+    "edited": true,
     "logo": "/static/img/profile/profile-pic-babel.jpg",
     "packages": [
       {
@@ -5538,6 +5539,7 @@
   },
   {
     "name": "material-ui",
+    "edited": true,
     "packages": [
       {
         "name": "@material-ui/core"
@@ -5894,6 +5896,7 @@
   },
   {
     "name": "mocha",
+    "edited": true,
     "logo": "/static/img/profile/profile-pic-mocha.jpg",
     "packages": [
       {
@@ -11032,6 +11035,7 @@
   },
   {
     "name": "vuejs",
+    "edited": true,
     "logo": "/static/img/profile/profile-pic-vuejs.jpg",
     "packages": [
       {
@@ -11265,6 +11269,7 @@
   },
   {
     "name": "webpack",
+    "edited": true,
     "logo": "/static/img/profile/profile-pic-webpack.jpg",
     "packages": [
       {
