@@ -198,7 +198,7 @@
           "type": "ORGANIZATION",
           "slug": "rollbar",
           "name": "Rollbar",
-          "totalDonations": 45000
+          "totalDonations": 50000
         },
         {
           "id": 5686,
@@ -348,13 +348,20 @@
           "type": "ORGANIZATION",
           "slug": "hogiagroup",
           "name": "Hogia",
-          "totalDonations": 800000
+          "totalDonations": 1000000
         },
         {
           "id": 12461,
           "type": "ORGANIZATION",
           "slug": "effectory",
           "name": "Effectory",
+          "totalDonations": 70000
+        },
+        {
+          "id": 13388,
+          "type": "ORGANIZATION",
+          "slug": "ormasoft",
+          "name": "Ormasoft",
           "totalDonations": 60000
         },
         {
@@ -362,6 +369,27 @@
           "type": "ORGANIZATION",
           "slug": "merchise",
           "name": "Merchise",
+          "totalDonations": 60000
+        },
+        {
+          "id": 14196,
+          "type": "ORGANIZATION",
+          "slug": "diapason-treasury",
+          "name": "Diapason Treasury",
+          "totalDonations": 50000
+        },
+        {
+          "id": 13515,
+          "type": "ORGANIZATION",
+          "slug": "nordic-trustee-as",
+          "name": "Nordic Trustee AS",
+          "totalDonations": 50000
+        },
+        {
+          "id": 14009,
+          "type": "ORGANIZATION",
+          "slug": "teamextension",
+          "name": "Team Extension",
           "totalDonations": 50000
         },
         {
@@ -379,39 +407,11 @@
           "totalDonations": 50000
         },
         {
-          "id": 13388,
-          "type": "ORGANIZATION",
-          "slug": "ormasoft",
-          "name": "Ormasoft",
-          "totalDonations": 50000
-        },
-        {
-          "id": 13515,
-          "type": "ORGANIZATION",
-          "slug": "nordic-trustee-as",
-          "name": "Nordic Trustee AS",
-          "totalDonations": 40000
-        },
-        {
-          "id": 14009,
-          "type": "ORGANIZATION",
-          "slug": "teamextension",
-          "name": "Team Extension",
-          "totalDonations": 40000
-        },
-        {
-          "id": 14196,
-          "type": "ORGANIZATION",
-          "slug": "diapason-treasury",
-          "name": "Diapason Treasury",
-          "totalDonations": 40000
-        },
-        {
           "id": 14977,
           "type": "ORGANIZATION",
           "slug": "vevida1",
           "name": "Vevida BV",
-          "totalDonations": 30000
+          "totalDonations": 40000
         }
       ],
       "goals": [
@@ -503,7 +503,8 @@
         "balance": 0,
         "yearlyBudget": 0
       },
-      "goals": []
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -1247,20 +1248,34 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 900000
+          "totalDonations": 1000000
         },
         {
           "id": 2309,
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 860000
+          "totalDonations": 760000
+        },
+        {
+          "id": 2309,
+          "type": "ORGANIZATION",
+          "slug": "amp",
+          "name": "AMP Project",
+          "totalDonations": 760000
         },
         {
           "id": 12671,
           "type": "ORGANIZATION",
           "slug": "coinbase",
           "name": "Coinbase",
+          "totalDonations": 550000
+        },
+        {
+          "id": 5954,
+          "type": "ORGANIZATION",
+          "slug": "webflow",
+          "name": "Webflow",
           "totalDonations": 550000
         },
         {
@@ -1271,13 +1286,6 @@
           "totalDonations": 538200
         },
         {
-          "id": 5954,
-          "type": "ORGANIZATION",
-          "slug": "webflow",
-          "name": "Webflow",
-          "totalDonations": 500000
-        },
-        {
           "id": 2057,
           "type": "ORGANIZATION",
           "slug": "googleopensource",
@@ -1285,25 +1293,18 @@
           "totalDonations": 370000
         },
         {
-          "id": 4536,
-          "type": "ORGANIZATION",
-          "slug": "bitmex",
-          "name": "BitMEX",
-          "totalDonations": 250000
-        },
-        {
           "id": 16411,
           "type": "ORGANIZATION",
           "slug": "salesforce",
           "name": "Salesforce",
-          "totalDonations": 200000
+          "totalDonations": 300000
         },
         {
-          "id": 3033,
+          "id": 4536,
           "type": "ORGANIZATION",
-          "slug": "eggheadio",
-          "name": "egghead.io",
-          "totalDonations": 175000
+          "slug": "bitmex",
+          "name": "BitMEX",
+          "totalDonations": 275000
         }
       ],
       "goals": [
@@ -1568,21 +1569,28 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 150000
+          "totalDonations": 160000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 120000
+          "totalDonations": 130000
         },
         {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
-          "totalDonations": 50000
+          "totalDonations": 60000
+        },
+        {
+          "id": 15669,
+          "type": "ORGANIZATION",
+          "slug": "gadgetcouncil",
+          "name": "GadgetCouncil",
+          "totalDonations": 30300
         },
         {
           "id": 7807,
@@ -1590,13 +1598,6 @@
           "slug": "stream",
           "name": "Stream",
           "totalDonations": 30000
-        },
-        {
-          "id": 15669,
-          "type": "ORGANIZATION",
-          "slug": "gadgetcouncil",
-          "name": "GadgetCouncil",
-          "totalDonations": 20200
         },
         {
           "id": 13254,
@@ -1617,7 +1618,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 200
+          "totalDonations": 400
         }
       ],
       "stats": {
@@ -1871,7 +1872,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
+          "totalDonations": 15000
         },
         {
           "id": 4087,
@@ -1885,7 +1886,7 @@
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 16122,
@@ -1921,7 +1922,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
+          "totalDonations": 15000
         },
         {
           "id": 4087,
@@ -1935,7 +1936,7 @@
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 16122,
@@ -2008,7 +2009,7 @@
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 800
+          "totalDonations": 1000
         }
       ],
       "stats": {
@@ -2037,7 +2038,7 @@
           "type": "ORGANIZATION",
           "slug": "x-team",
           "name": "X-Team",
-          "totalDonations": 280000
+          "totalDonations": 170000
         },
         {
           "id": 11982,
@@ -2051,7 +2052,7 @@
           "type": "ORGANIZATION",
           "slug": "gurugate",
           "name": "GuruGate",
-          "totalDonations": 600
+          "totalDonations": 800
         }
       ],
       "stats": {
@@ -2143,7 +2144,7 @@
           "type": "ORGANIZATION",
           "slug": "template021",
           "name": "Template Studio",
-          "totalDonations": 2500
+          "totalDonations": 3000
         }
       ],
       "goals": [
@@ -2263,7 +2264,7 @@
           "type": "ORGANIZATION",
           "slug": "jsheroes1",
           "name": "JSHeroes ",
-          "totalDonations": 20000
+          "totalDonations": 40000
         }
       ],
       "goals": [
@@ -2508,7 +2509,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 7500
+          "totalDonations": 10000
         }
       ],
       "stats": {
@@ -2558,14 +2559,14 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 7500
+          "totalDonations": 10000
         },
         {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 800
+          "totalDonations": 1000
         }
       ],
       "stats": {
@@ -2761,7 +2762,7 @@
           "type": "ORGANIZATION",
           "slug": "fvcproductions",
           "name": "FVCproductions",
-          "totalDonations": 1000
+          "totalDonations": 1200
         }
       ],
       "stats": {
@@ -2790,7 +2791,7 @@
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 60000
+          "totalDonations": 70000
         }
       ],
       "stats": {
@@ -2866,7 +2867,8 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      }
+      },
+      "sponsors": []
     }
   },
   {
@@ -2928,7 +2930,8 @@
         "balance": 0,
         "yearlyBudget": 0
       },
-      "goals": []
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -2996,41 +2999,41 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 100000
+          "totalDonations": 200000
         },
         {
           "id": 16976,
           "type": "ORGANIZATION",
           "slug": "teamsqlio",
           "name": "TeamSQL",
-          "totalDonations": 10000
+          "totalDonations": 20000
         },
         {
           "id": 14497,
           "type": "ORGANIZATION",
           "slug": "mycard",
           "name": "MyCard",
-          "totalDonations": 4000
+          "totalDonations": 5000
         },
         {
           "id": 16100,
           "type": "ORGANIZATION",
           "slug": "jamovistats",
           "name": "jamovi",
-          "totalDonations": 2000
-        },
-        {
-          "id": 15099,
-          "type": "ORGANIZATION",
-          "slug": "lagamestudio",
-          "name": "Lost Astronaut Studios",
-          "totalDonations": 1000
+          "totalDonations": 3000
         },
         {
           "id": 17167,
           "type": "ORGANIZATION",
           "slug": "kid-talk2",
           "name": "Kid Talk",
+          "totalDonations": 1000
+        },
+        {
+          "id": 15099,
+          "type": "ORGANIZATION",
+          "slug": "lagamestudio",
+          "name": "Lost Astronaut Studios",
           "totalDonations": 1000
         }
       ],
@@ -3096,20 +3099,20 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 130000
-        },
-        {
-          "id": 11410,
-          "type": "ORGANIZATION",
-          "slug": "duohui",
-          "name": "多会",
-          "totalDonations": 20000
+          "totalDonations": 150000
         },
         {
           "id": 13420,
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
+          "totalDonations": 20000
+        },
+        {
+          "id": 11410,
+          "type": "ORGANIZATION",
+          "slug": "duohui",
+          "name": "多会",
           "totalDonations": 10000
         },
         {
@@ -3357,6 +3360,13 @@
           "totalDonations": 60000
         },
         {
+          "id": 13420,
+          "type": "ORGANIZATION",
+          "slug": "bmqb",
+          "name": "bmqb",
+          "totalDonations": 11000
+        },
+        {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
@@ -3364,18 +3374,11 @@
           "totalDonations": 10000
         },
         {
-          "id": 13420,
-          "type": "ORGANIZATION",
-          "slug": "bmqb",
-          "name": "bmqb",
-          "totalDonations": 5000
-        },
-        {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 3000
+          "totalDonations": 3200
         }
       ],
       "stats": {
@@ -3427,7 +3430,7 @@
           "type": "ORGANIZATION",
           "slug": "aquil_io",
           "name": "Aquil.io",
-          "totalDonations": 600000
+          "totalDonations": 700000
         },
         {
           "id": 9178,
@@ -3441,14 +3444,14 @@
           "type": "ORGANIZATION",
           "slug": "kalisio",
           "name": "Kalisio",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 15203,
           "type": "ORGANIZATION",
           "slug": "brandon-parise1",
           "name": "Brandon Parise",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 1247,
@@ -3670,14 +3673,14 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 10000
+          "totalDonations": 12500
         },
         {
           "id": 15017,
           "type": "ORGANIZATION",
           "slug": "rocket_garden",
           "name": "Rocket Garden Labs Limited",
-          "totalDonations": 7500
+          "totalDonations": 10000
         }
       ],
       "stats": {
@@ -4139,20 +4142,20 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 90000
-        },
-        {
-          "id": 1247,
-          "type": "ORGANIZATION",
-          "slug": "x-team",
-          "name": "X-Team",
-          "totalDonations": 70000
+          "totalDonations": 100000
         },
         {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
+          "totalDonations": 80000
+        },
+        {
+          "id": 1247,
+          "type": "ORGANIZATION",
+          "slug": "x-team",
+          "name": "X-Team",
           "totalDonations": 70000
         },
         {
@@ -4170,6 +4173,13 @@
           "totalDonations": 10000
         },
         {
+          "id": 9006,
+          "type": "ORGANIZATION",
+          "slug": "doopoll",
+          "name": "doopoll",
+          "totalDonations": 5000
+        },
+        {
           "id": 13254,
           "type": "ORGANIZATION",
           "slug": "dontpayfull",
@@ -4177,18 +4187,11 @@
           "totalDonations": 5000
         },
         {
-          "id": 9006,
-          "type": "ORGANIZATION",
-          "slug": "doopoll",
-          "name": "doopoll",
-          "totalDonations": 4500
-        },
-        {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 200
+          "totalDonations": 400
         }
       ],
       "stats": {
@@ -4217,14 +4220,14 @@
           "type": "ORGANIZATION",
           "slug": "okta",
           "name": "Okta",
-          "totalDonations": 600000
+          "totalDonations": 700000
         },
         {
           "id": 14656,
           "type": "ORGANIZATION",
           "slug": "forsyslabinc",
           "name": "ForsysLab",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 17423,
@@ -4234,53 +4237,53 @@
           "totalDonations": 10000
         },
         {
-          "id": 10872,
-          "type": "ORGANIZATION",
-          "slug": "code_match_gmbh1",
-          "name": "Code Match GmbH",
-          "totalDonations": 1400
-        },
-        {
           "id": 11119,
           "type": "ORGANIZATION",
           "slug": "mihaelsedmak1",
           "name": "Bytecraft d.o.o.",
-          "totalDonations": 1400
+          "totalDonations": 1600
         },
         {
           "id": 11498,
           "type": "ORGANIZATION",
           "slug": "neebal",
           "name": "Neebal Technologies Pvt Ltd",
-          "totalDonations": 1400
+          "totalDonations": 1600
+        },
+        {
+          "id": 10872,
+          "type": "ORGANIZATION",
+          "slug": "code_match_gmbh1",
+          "name": "Code Match GmbH",
+          "totalDonations": 1600
         },
         {
           "id": 11662,
           "type": "ORGANIZATION",
           "slug": "sumberly",
           "name": "Sumberly",
-          "totalDonations": 1200
+          "totalDonations": 1400
         },
         {
           "id": 11806,
           "type": "ORGANIZATION",
           "slug": "swevolutivo",
           "name": "Software Evolutivo",
-          "totalDonations": 1200
+          "totalDonations": 1400
         },
         {
           "id": 12443,
           "type": "ORGANIZATION",
           "slug": "elhouti-and-co",
           "name": "Elhouti & Co",
-          "totalDonations": 1200
+          "totalDonations": 1400
         },
         {
           "id": 12713,
           "type": "ORGANIZATION",
           "slug": "soagile-solutions-pty-ltd",
           "name": "Soagile Solutions Pty Ltd",
-          "totalDonations": 1000
+          "totalDonations": 1200
         }
       ],
       "stats": {
@@ -4374,7 +4377,7 @@
           "type": "ORGANIZATION",
           "slug": "invoiceninja1",
           "name": "Invoice Ninja",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 14173,
@@ -4391,18 +4394,18 @@
           "totalDonations": 5000
         },
         {
+          "id": 15383,
+          "type": "ORGANIZATION",
+          "slug": "pisignage1",
+          "name": "Colloqi Consulting (OPC) Private Limited",
+          "totalDonations": 1700
+        },
+        {
           "id": 9063,
           "type": "ORGANIZATION",
           "slug": "_edsonmartins1",
           "name": "Edson Martins",
           "totalDonations": 1500
-        },
-        {
-          "id": 15383,
-          "type": "ORGANIZATION",
-          "slug": "pisignage1",
-          "name": "Colloqi Consulting (OPC) Private Limited",
-          "totalDonations": 1200
         }
       ],
       "stats": {
@@ -4460,7 +4463,7 @@
           "type": "ORGANIZATION",
           "slug": "graphcms",
           "name": "GraphCMS",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ],
       "goals": [
@@ -4557,27 +4560,34 @@
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 170000
+          "totalDonations": 180000
         },
         {
           "id": 6965,
           "type": "ORGANIZATION",
           "slug": "craftcms",
           "name": "Craft CMS",
-          "totalDonations": 150000
+          "totalDonations": 160000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 11347,
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
+          "totalDonations": 70000
+        },
+        {
+          "id": 12819,
+          "type": "ORGANIZATION",
+          "slug": "codeinwp",
+          "name": "Vertigo Studio SRL",
           "totalDonations": 60000
         },
         {
@@ -4585,13 +4595,6 @@
           "type": "ORGANIZATION",
           "slug": "keycdn",
           "name": "KeyCDN",
-          "totalDonations": 50000
-        },
-        {
-          "id": 12819,
-          "type": "ORGANIZATION",
-          "slug": "codeinwp",
-          "name": "Vertigo Studio SRL",
           "totalDonations": 50000
         },
         {
@@ -4606,7 +4609,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 37300
+          "totalDonations": 40500
         },
         {
           "id": 15669,
@@ -4616,11 +4619,11 @@
           "totalDonations": 35000
         },
         {
-          "id": 1415,
+          "id": 15669,
           "type": "ORGANIZATION",
-          "slug": "unixstickers",
-          "name": "Unixstickers",
-          "totalDonations": 32100
+          "slug": "gadgetcouncil",
+          "name": "GadgetCouncil",
+          "totalDonations": 35000
         }
       ],
       "goals": [
@@ -4660,27 +4663,34 @@
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 170000
+          "totalDonations": 180000
         },
         {
           "id": 6965,
           "type": "ORGANIZATION",
           "slug": "craftcms",
           "name": "Craft CMS",
-          "totalDonations": 150000
+          "totalDonations": 160000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 11347,
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
+          "totalDonations": 70000
+        },
+        {
+          "id": 12819,
+          "type": "ORGANIZATION",
+          "slug": "codeinwp",
+          "name": "Vertigo Studio SRL",
           "totalDonations": 60000
         },
         {
@@ -4688,13 +4698,6 @@
           "type": "ORGANIZATION",
           "slug": "keycdn",
           "name": "KeyCDN",
-          "totalDonations": 50000
-        },
-        {
-          "id": 12819,
-          "type": "ORGANIZATION",
-          "slug": "codeinwp",
-          "name": "Vertigo Studio SRL",
           "totalDonations": 50000
         },
         {
@@ -4709,7 +4712,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 37300
+          "totalDonations": 40500
         },
         {
           "id": 15669,
@@ -4719,11 +4722,11 @@
           "totalDonations": 35000
         },
         {
-          "id": 1415,
+          "id": 15669,
           "type": "ORGANIZATION",
-          "slug": "unixstickers",
-          "name": "Unixstickers",
-          "totalDonations": 32100
+          "slug": "gadgetcouncil",
+          "name": "GadgetCouncil",
+          "totalDonations": 35000
         }
       ],
       "goals": [
@@ -4934,7 +4937,7 @@
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 112500
+          "totalDonations": 125000
         }
       ],
       "stats": {
@@ -4994,7 +4997,7 @@
           "type": "ORGANIZATION",
           "slug": "droneio",
           "name": "Brad Rydzewski",
-          "totalDonations": 20000
+          "totalDonations": 25000
         }
       ],
       "stats": {
@@ -5282,7 +5285,8 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      }
+      },
+      "sponsors": []
     }
   },
   {
@@ -5540,7 +5544,14 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 200000
+          "totalDonations": 300000
+        },
+        {
+          "id": 12801,
+          "type": "ORGANIZATION",
+          "slug": "codepilotai",
+          "name": "CodePilot.ai",
+          "totalDonations": 2500
         }
       ],
       "goals": [
@@ -5736,7 +5747,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 600
         }
       ],
       "stats": {
@@ -5890,14 +5901,14 @@
           "type": "ORGANIZATION",
           "slug": "apprentus",
           "name": "Apprentus",
-          "totalDonations": 23000
+          "totalDonations": 23500
         },
         {
           "id": 10690,
           "type": "ORGANIZATION",
           "slug": "gratify",
           "name": "Gratify",
-          "totalDonations": 4000
+          "totalDonations": 4500
         }
       ],
       "stats": {
@@ -5926,21 +5937,21 @@
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7000
         },
         {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 1500
+          "totalDonations": 2000
         }
       ],
       "stats": {
@@ -6197,7 +6208,7 @@
           "type": "ORGANIZATION",
           "slug": "readmeio",
           "name": "ReadMe",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ],
       "goals": [
@@ -6243,14 +6254,14 @@
           "type": "ORGANIZATION",
           "slug": "callemall",
           "name": "Call-Em-All",
-          "totalDonations": 350000
+          "totalDonations": 400000
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 7083,
@@ -6264,35 +6275,35 @@
           "type": "ORGANIZATION",
           "slug": "clearbit",
           "name": "Clearbit",
-          "totalDonations": 30000
+          "totalDonations": 35000
         },
         {
           "id": 12227,
           "type": "ORGANIZATION",
           "slug": "feeltraincoop1",
           "name": "Feel Train",
-          "totalDonations": 30000
+          "totalDonations": 35000
         },
         {
           "id": 12126,
           "type": "ORGANIZATION",
           "slug": "lyska",
           "name": "Lyska UG",
-          "totalDonations": 6000
+          "totalDonations": 7000
         },
         {
           "id": 13059,
           "type": "ORGANIZATION",
           "slug": "alwayssmpl",
           "name": "smpl",
-          "totalDonations": 2500
+          "totalDonations": 3000
         },
         {
           "id": 15188,
           "type": "ORGANIZATION",
           "slug": "beacon_crm",
           "name": "Beacon",
-          "totalDonations": 1500
+          "totalDonations": 2000
         }
       ],
       "goals": [
@@ -6388,21 +6399,7 @@
           "type": "ORGANIZATION",
           "slug": "hive1",
           "name": "Hive",
-          "totalDonations": 75000
-        },
-        {
-          "id": 9945,
-          "type": "ORGANIZATION",
-          "slug": "lesswrong-20",
-          "name": "LessWrong 2.0",
-          "totalDonations": 20000
-        },
-        {
-          "id": 10109,
-          "type": "ORGANIZATION",
-          "slug": "azumuta",
-          "name": "Azumuta",
-          "totalDonations": 20000
+          "totalDonations": 100000
         },
         {
           "id": 9890,
@@ -6412,10 +6409,24 @@
           "totalDonations": 10000
         },
         {
+          "id": 9945,
+          "type": "ORGANIZATION",
+          "slug": "lesswrong-20",
+          "name": "LessWrong 2.0",
+          "totalDonations": 10000
+        },
+        {
           "id": 9947,
           "type": "ORGANIZATION",
           "slug": "kiwi",
           "name": "kiwimydata",
+          "totalDonations": 10000
+        },
+        {
+          "id": 10109,
+          "type": "ORGANIZATION",
+          "slug": "azumuta",
+          "name": "Azumuta",
           "totalDonations": 10000
         },
         {
@@ -6451,7 +6462,7 @@
           "type": "ORGANIZATION",
           "slug": "stgshuttle",
           "name": "St George Shuttle",
-          "totalDonations": 4000
+          "totalDonations": 4500
         }
       ],
       "stats": {
@@ -6536,14 +6547,14 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 14879,
           "type": "ORGANIZATION",
           "slug": "teamguilded1",
           "name": "Guilded",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 5686,
@@ -6564,7 +6575,7 @@
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7000
         },
         {
           "id": 17081,
@@ -6616,7 +6627,21 @@
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 600000
+          "totalDonations": 650000
+        },
+        {
+          "id": 7410,
+          "type": "ORGANIZATION",
+          "slug": "icons8",
+          "name": "Icons8",
+          "totalDonations": 303200
+        },
+        {
+          "id": 7410,
+          "type": "ORGANIZATION",
+          "slug": "icons8",
+          "name": "Icons8",
+          "totalDonations": 303200
         },
         {
           "id": 2501,
@@ -6624,13 +6649,6 @@
           "slug": "segment",
           "name": "Segment",
           "totalDonations": 300000
-        },
-        {
-          "id": 7410,
-          "type": "ORGANIZATION",
-          "slug": "icons8",
-          "name": "Icons8",
-          "totalDonations": 253000
         },
         {
           "id": 1828,
@@ -6665,14 +6683,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
-        },
-        {
-          "id": 13254,
-          "type": "ORGANIZATION",
-          "slug": "dontpayfull",
-          "name": "DontPayFull",
-          "totalDonations": 5000
+          "totalDonations": 15000
         }
       ],
       "stats": {
@@ -6708,7 +6719,21 @@
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 600000
+          "totalDonations": 650000
+        },
+        {
+          "id": 7410,
+          "type": "ORGANIZATION",
+          "slug": "icons8",
+          "name": "Icons8",
+          "totalDonations": 303200
+        },
+        {
+          "id": 7410,
+          "type": "ORGANIZATION",
+          "slug": "icons8",
+          "name": "Icons8",
+          "totalDonations": 303200
         },
         {
           "id": 2501,
@@ -6716,13 +6741,6 @@
           "slug": "segment",
           "name": "Segment",
           "totalDonations": 300000
-        },
-        {
-          "id": 7410,
-          "type": "ORGANIZATION",
-          "slug": "icons8",
-          "name": "Icons8",
-          "totalDonations": 253000
         },
         {
           "id": 1828,
@@ -6757,14 +6775,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
-        },
-        {
-          "id": 13254,
-          "type": "ORGANIZATION",
-          "slug": "dontpayfull",
-          "name": "DontPayFull",
-          "totalDonations": 5000
+          "totalDonations": 15000
         }
       ],
       "stats": {
@@ -6859,27 +6870,27 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 13390,
           "type": "ORGANIZATION",
           "slug": "localize",
           "name": "Localize Corporation",
-          "totalDonations": 50000
-        },
-        {
-          "id": 10327,
-          "type": "ORGANIZATION",
-          "slug": "keycdn",
-          "name": "KeyCDN",
-          "totalDonations": 20000
+          "totalDonations": 60000
         },
         {
           "id": 14801,
           "type": "ORGANIZATION",
           "slug": "netgeekpro1",
           "name": "Net Geek Pro",
+          "totalDonations": 30000
+        },
+        {
+          "id": 10327,
+          "type": "ORGANIZATION",
+          "slug": "keycdn",
+          "name": "KeyCDN",
           "totalDonations": 20000
         },
         {
@@ -6890,6 +6901,13 @@
           "totalDonations": 5000
         },
         {
+          "id": 16122,
+          "type": "ORGANIZATION",
+          "slug": "otechie",
+          "name": "Otechie",
+          "totalDonations": 1200
+        },
+        {
           "id": 13284,
           "type": "ORGANIZATION",
           "slug": "usehenri1",
@@ -6897,18 +6915,11 @@
           "totalDonations": 800
         },
         {
-          "id": 16122,
-          "type": "ORGANIZATION",
-          "slug": "otechie",
-          "name": "Otechie",
-          "totalDonations": 700
-        },
-        {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 600
         }
       ],
       "stats": {
@@ -7000,42 +7011,56 @@
           "type": "ORGANIZATION",
           "slug": "valorkin",
           "name": "Valor Software",
-          "totalDonations": 1283184
-        },
-        {
-          "id": 14760,
-          "type": "ORGANIZATION",
-          "slug": "gojob_official",
-          "name": "Gojob",
-          "totalDonations": 45000
+          "totalDonations": 1443184
         },
         {
           "id": 13762,
           "type": "ORGANIZATION",
           "slug": "swingdevio",
           "name": "SwingDev",
-          "totalDonations": 43200
+          "totalDonations": 110000
         },
         {
-          "id": 15033,
+          "id": 14760,
           "type": "ORGANIZATION",
-          "slug": "danielwanja1",
-          "name": "Angularityio",
-          "totalDonations": 30000
+          "slug": "gojob_official",
+          "name": "Gojob",
+          "totalDonations": 60000
         },
         {
           "id": 17317,
           "type": "ORGANIZATION",
           "slug": "neotericeu",
           "name": "Neoteric",
-          "totalDonations": 25000
+          "totalDonations": 50000
+        },
+        {
+          "id": 15033,
+          "type": "ORGANIZATION",
+          "slug": "danielwanja1",
+          "name": "Angularityio",
+          "totalDonations": 40000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 20000
+          "totalDonations": 30000
+        },
+        {
+          "id": 9143,
+          "type": "ORGANIZATION",
+          "slug": "danitt-pty-ltd",
+          "name": "Danitt Pty Ltd",
+          "totalDonations": 10500
+        },
+        {
+          "id": 8894,
+          "type": "ORGANIZATION",
+          "slug": "porawit-poboonma1",
+          "name": "Porawit Poboonma",
+          "totalDonations": 10000
         },
         {
           "id": 10327,
@@ -7043,20 +7068,6 @@
           "slug": "keycdn",
           "name": "KeyCDN",
           "totalDonations": 10000
-        },
-        {
-          "id": 9143,
-          "type": "ORGANIZATION",
-          "slug": "danitt-pty-ltd",
-          "name": "Danitt Pty Ltd",
-          "totalDonations": 9500
-        },
-        {
-          "id": 8894,
-          "type": "ORGANIZATION",
-          "slug": "porawit-poboonma1",
-          "name": "Porawit Poboonma",
-          "totalDonations": 9000
         },
         {
           "id": 5102,
@@ -7165,24 +7176,24 @@
       "description": null,
       "sponsors": [
         {
-          "id": 8950,
-          "type": "ORGANIZATION",
-          "slug": "z-ware-development",
-          "name": "Z Ware Development",
-          "totalDonations": 50000
-        },
-        {
           "id": 12715,
           "type": "ORGANIZATION",
           "slug": "oasisdigitalstl",
           "name": "Oasis Digital Solutions Inc.",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 12890,
           "type": "ORGANIZATION",
           "slug": "briebugsoftware",
           "name": "BrieBug",
+          "totalDonations": 60000
+        },
+        {
+          "id": 8950,
+          "type": "ORGANIZATION",
+          "slug": "z-ware-development",
+          "name": "Z Ware Development",
           "totalDonations": 50000
         },
         {
@@ -7204,7 +7215,7 @@
           "type": "ORGANIZATION",
           "slug": "angularfirebase1",
           "name": "AngularFirebase",
-          "totalDonations": 4000
+          "totalDonations": 4500
         },
         {
           "id": 8778,
@@ -7218,7 +7229,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 200
+          "totalDonations": 400
         }
       ],
       "stats": {
@@ -7285,18 +7296,18 @@
       "description": "Cross-platform Node.js BLE",
       "sponsors": [
         {
-          "id": 4972,
-          "type": "ORGANIZATION",
-          "slug": "sensorpush",
-          "name": "SensorPush",
-          "totalDonations": 82500
-        },
-        {
           "id": 1538,
           "type": "ORGANIZATION",
           "slug": "eos-uptrade",
           "name": "eos.uptrade",
           "totalDonations": 80200
+        },
+        {
+          "id": 4972,
+          "type": "ORGANIZATION",
+          "slug": "sensorpush",
+          "name": "SensorPush",
+          "totalDonations": 80000
         }
       ],
       "stats": {
@@ -7451,7 +7462,7 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 13284,
@@ -7487,7 +7498,7 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 7083,
@@ -7501,7 +7512,7 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 5000
+          "totalDonations": 6000
         },
         {
           "id": 14885,
@@ -7515,7 +7526,7 @@
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 12026,
@@ -7529,14 +7540,14 @@
           "type": "ORGANIZATION",
           "slug": "thebearingedge",
           "name": "Tim Davis",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 15109,
           "type": "ORGANIZATION",
           "slug": "gurugate",
           "name": "GuruGate",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 13212,
@@ -7593,7 +7604,7 @@
           "type": "ORGANIZATION",
           "slug": "finpo",
           "name": "Ausir Lo",
-          "totalDonations": 350000
+          "totalDonations": 375000
         },
         {
           "id": 5156,
@@ -7607,14 +7618,14 @@
           "type": "ORGANIZATION",
           "slug": "vuetifyjs",
           "name": "Vuetify LLC ",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 9633,
           "type": "ORGANIZATION",
           "slug": "studiothomas",
           "name": "Studio Thomas",
-          "totalDonations": 22500
+          "totalDonations": 25000
         },
         {
           "id": 10327,
@@ -7628,7 +7639,7 @@
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7500
         },
         {
           "id": 10412,
@@ -7642,21 +7653,21 @@
           "type": "ORGANIZATION",
           "slug": "domainr",
           "name": "Domainr",
-          "totalDonations": 4500
+          "totalDonations": 5000
         },
         {
           "id": 10267,
           "type": "ORGANIZATION",
           "slug": "santihans4056",
           "name": "SANTiHANS LLC",
-          "totalDonations": 4000
+          "totalDonations": 4500
         },
         {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3000
+          "totalDonations": 3500
         }
       ],
       "goals": [
@@ -8043,7 +8054,7 @@
     }
   },
   {
-    "name": "ory-hydra",
+    "name": "ory",
     "packages": [
       {
         "type": "npm",
@@ -8121,7 +8132,7 @@
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 106000
+          "totalDonations": 107000
         },
         {
           "id": 11376,
@@ -8135,56 +8146,56 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 10000
+          "totalDonations": 12500
         },
         {
           "id": 11933,
           "type": "ORGANIZATION",
           "slug": "madoka",
           "name": "Madoka Lab",
-          "totalDonations": 6000
+          "totalDonations": 7000
         },
         {
           "id": 14428,
           "type": "ORGANIZATION",
           "slug": "stak-digital",
           "name": "Stak Digital",
-          "totalDonations": 2000
+          "totalDonations": 2500
         },
         {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 1800
-        },
-        {
-          "id": 11745,
-          "type": "ORGANIZATION",
-          "slug": "duotai",
-          "name": "多态",
-          "totalDonations": 1200
-        },
-        {
-          "id": 11890,
-          "type": "ORGANIZATION",
-          "slug": "jjb",
-          "name": "京价保",
-          "totalDonations": 1200
+          "totalDonations": 2100
         },
         {
           "id": 11927,
           "type": "ORGANIZATION",
           "slug": "oneapp",
           "name": "OneApp",
-          "totalDonations": 1200
+          "totalDonations": 1400
+        },
+        {
+          "id": 11745,
+          "type": "ORGANIZATION",
+          "slug": "duotai",
+          "name": "多态",
+          "totalDonations": 1400
         },
         {
           "id": 12008,
           "type": "ORGANIZATION",
           "slug": "as57695",
           "name": "Misaka Network, Inc.",
-          "totalDonations": 1200
+          "totalDonations": 1400
+        },
+        {
+          "id": 11890,
+          "type": "ORGANIZATION",
+          "slug": "jjb",
+          "name": "京价保",
+          "totalDonations": 1400
         }
       ],
       "stats": {
@@ -8234,42 +8245,42 @@
           "type": "ORGANIZATION",
           "slug": "back4app1",
           "name": "Back4app",
-          "totalDonations": 240000
+          "totalDonations": 270000
         },
         {
           "id": 6382,
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 112500
+          "totalDonations": 125000
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 10324,
           "type": "ORGANIZATION",
           "slug": "sashidoio1",
           "name": "SashiDo",
-          "totalDonations": 80000
+          "totalDonations": 90000
         },
         {
           "id": 11024,
           "type": "ORGANIZATION",
           "slug": "axolsoft1",
           "name": "Axolsoft",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 10514,
           "type": "ORGANIZATION",
           "slug": "davi-macedo-back4app",
           "name": "Davi Macedo",
-          "totalDonations": 12000
+          "totalDonations": 13500
         },
         {
           "id": 12917,
@@ -8430,7 +8441,8 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      }
+      },
+      "sponsors": []
     }
   },
   {
@@ -8535,25 +8547,32 @@
           "totalDonations": 700000
         },
         {
+          "id": 2309,
+          "type": "ORGANIZATION",
+          "slug": "amp",
+          "name": "AMP Project",
+          "totalDonations": 700000
+        },
+        {
           "id": 5954,
           "type": "ORGANIZATION",
           "slug": "webflow",
           "name": "Webflow",
-          "totalDonations": 450000
+          "totalDonations": 500000
         },
         {
           "id": 7971,
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 170000
+          "totalDonations": 180000
         },
         {
           "id": 3960,
           "type": "ORGANIZATION",
           "slug": "gufsky",
           "name": "Gufsky",
-          "totalDonations": 160000
+          "totalDonations": 170000
         },
         {
           "id": 3277,
@@ -8570,6 +8589,13 @@
           "totalDonations": 120000
         },
         {
+          "id": 3400,
+          "type": "ORGANIZATION",
+          "slug": "sebastiansoft",
+          "name": "Sebastian Software GmbH",
+          "totalDonations": 25000
+        },
+        {
           "id": 11108,
           "type": "ORGANIZATION",
           "slug": "bakkenbaeck1",
@@ -8577,25 +8603,11 @@
           "totalDonations": 25000
         },
         {
-          "id": 3400,
+          "id": 17590,
           "type": "ORGANIZATION",
-          "slug": "sebastiansoft",
-          "name": "Sebastian Software GmbH",
-          "totalDonations": 22500
-        },
-        {
-          "id": 5686,
-          "type": "ORGANIZATION",
-          "slug": "idonethis",
-          "name": "I Done This",
-          "totalDonations": 10000
-        },
-        {
-          "id": 1301,
-          "type": "ORGANIZATION",
-          "slug": "housingdotcom",
-          "name": "Housing.com",
-          "totalDonations": 10000
+          "slug": "zoic",
+          "name": "Zoic Hosting",
+          "totalDonations": 20000
         }
       ],
       "goals": [
@@ -8725,18 +8737,18 @@
           "totalDonations": 28000
         },
         {
+          "id": 13420,
+          "type": "ORGANIZATION",
+          "slug": "bmqb",
+          "name": "bmqb",
+          "totalDonations": 10000
+        },
+        {
           "id": 10327,
           "type": "ORGANIZATION",
           "slug": "keycdn",
           "name": "KeyCDN",
           "totalDonations": 10000
-        },
-        {
-          "id": 13420,
-          "type": "ORGANIZATION",
-          "slug": "bmqb",
-          "name": "bmqb",
-          "totalDonations": 8000
         },
         {
           "id": 13254,
@@ -8746,32 +8758,32 @@
           "totalDonations": 5000
         },
         {
-          "id": 7410,
-          "type": "ORGANIZATION",
-          "slug": "icons8",
-          "name": "Icons8",
-          "totalDonations": 3000
-        },
-        {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3000
+          "totalDonations": 3500
+        },
+        {
+          "id": 7410,
+          "type": "ORGANIZATION",
+          "slug": "icons8",
+          "name": "Icons8",
+          "totalDonations": 3200
         },
         {
           "id": 11890,
           "type": "ORGANIZATION",
           "slug": "jjb",
           "name": "京价保",
-          "totalDonations": 2500
+          "totalDonations": 3000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 1500
+          "totalDonations": 2000
         }
       ],
       "stats": {
@@ -8932,7 +8944,7 @@
           "type": "ORGANIZATION",
           "slug": "rollbar",
           "name": "Rollbar",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 5156,
@@ -8946,7 +8958,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 600
         }
       ],
       "goals": [
@@ -9097,17 +9109,17 @@
           "totalDonations": 20000
         },
         {
-          "id": 10593,
-          "type": "ORGANIZATION",
-          "slug": "compojoom1",
-          "name": "compojoom",
-          "totalDonations": 10000
-        },
-        {
           "id": 15804,
           "type": "ORGANIZATION",
           "slug": "aeyriuminc1",
           "name": "Aeyrium Inc.",
+          "totalDonations": 10000
+        },
+        {
+          "id": 10593,
+          "type": "ORGANIZATION",
+          "slug": "compojoom1",
+          "name": "compojoom",
           "totalDonations": 10000
         },
         {
@@ -9122,7 +9134,7 @@
           "type": "ORGANIZATION",
           "slug": "vaduinccom",
           "name": "vaduinc.com",
-          "totalDonations": 1500
+          "totalDonations": 2000
         }
       ],
       "goals": [
@@ -9301,14 +9313,14 @@
           "type": "ORGANIZATION",
           "slug": "project_r",
           "name": "Project R",
-          "totalDonations": 140000
+          "totalDonations": 160000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 7500
+          "totalDonations": 10000
         }
       ],
       "goals": [
@@ -9341,7 +9353,7 @@
           "type": "ORGANIZATION",
           "slug": "sagar-shah2",
           "name": "Sagar Shah",
-          "totalDonations": 1800
+          "totalDonations": 2000
         },
         {
           "id": 9250,
@@ -9447,7 +9459,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 22500
+          "totalDonations": 25000
         },
         {
           "id": 5686,
@@ -9461,7 +9473,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 3000
+          "totalDonations": 3200
         }
       ],
       "stats": {
@@ -9590,7 +9602,7 @@
           "type": "ORGANIZATION",
           "slug": "accelebrate",
           "name": "Accelebrate",
-          "totalDonations": 150000
+          "totalDonations": 160000
         },
         {
           "id": 4087,
@@ -9672,14 +9684,14 @@
           "type": "ORGANIZATION",
           "slug": "datadog",
           "name": "DataDog",
-          "totalDonations": 160000
+          "totalDonations": 170000
         },
         {
           "id": 4743,
           "type": "ORGANIZATION",
           "slug": "rollbar",
           "name": "Rollbar",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 7807,
@@ -9700,14 +9712,14 @@
           "type": "ORGANIZATION",
           "slug": "uptrend-tech",
           "name": "Uptrend Technology, Inc.",
-          "totalDonations": 8500
+          "totalDonations": 9000
         },
         {
           "id": 12993,
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 5000
+          "totalDonations": 6000
         }
       ],
       "stats": {
@@ -9888,18 +9900,18 @@
       "description": "Simple and elegant component-based UI library #javascript",
       "sponsors": [
         {
-          "id": 9311,
-          "type": "ORGANIZATION",
-          "slug": "district51",
-          "name": "District 51",
-          "totalDonations": 4500
-        },
-        {
           "id": 9319,
           "type": "ORGANIZATION",
           "slug": "addli",
           "name": "+Li, Inc.",
-          "totalDonations": 4500
+          "totalDonations": 5000
+        },
+        {
+          "id": 9311,
+          "type": "ORGANIZATION",
+          "slug": "district51",
+          "name": "District 51",
+          "totalDonations": 5000
         }
       ],
       "goals": [
@@ -9959,7 +9971,7 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 125000
+          "totalDonations": 150000
         },
         {
           "id": 7083,
@@ -9973,6 +9985,13 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
+          "totalDonations": 70000
+        },
+        {
+          "id": 12715,
+          "type": "ORGANIZATION",
+          "slug": "oasisdigitalstl",
+          "name": "Oasis Digital Solutions Inc.",
           "totalDonations": 60000
         },
         {
@@ -9980,14 +9999,7 @@
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 50000
-        },
-        {
-          "id": 12715,
-          "type": "ORGANIZATION",
-          "slug": "oasisdigitalstl",
-          "name": "Oasis Digital Solutions Inc.",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 13180,
@@ -10001,7 +10013,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 8000
+          "totalDonations": 10000
         },
         {
           "id": 13420,
@@ -10037,7 +10049,7 @@
           "type": "ORGANIZATION",
           "slug": "rixcloud1",
           "name": "rixCloud, Inc.",
-          "totalDonations": 20000
+          "totalDonations": 30000
         },
         {
           "id": 16510,
@@ -10206,6 +10218,13 @@
           "type": "ORGANIZATION",
           "slug": "lgtmhq",
           "name": "LGTM",
+          "totalDonations": 10500
+        },
+        {
+          "id": 17497,
+          "type": "ORGANIZATION",
+          "slug": "sourcerer_io",
+          "name": "Sourcerer",
           "totalDonations": 7000
         },
         {
@@ -10213,13 +10232,6 @@
           "type": "ORGANIZATION",
           "slug": "otechie",
           "name": "Otechie",
-          "totalDonations": 3500
-        },
-        {
-          "id": 17497,
-          "type": "ORGANIZATION",
-          "slug": "sourcerer_io",
-          "name": "Sourcerer",
           "totalDonations": 3500
         },
         {
@@ -10277,7 +10289,7 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 4087,
@@ -10291,14 +10303,14 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 7500
+          "totalDonations": 10000
         },
         {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 16122,
@@ -10376,14 +10388,14 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 7807,
@@ -10397,28 +10409,28 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
+          "totalDonations": 15000
         },
         {
           "id": 13420,
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7500
         },
         {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 200
+          "totalDonations": 400
         }
       ],
       "stats": {
@@ -10447,14 +10459,14 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Icons8",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 7807,
@@ -10468,28 +10480,28 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 12500
+          "totalDonations": 15000
         },
         {
           "id": 13420,
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7500
         },
         {
           "id": 11410,
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 200
+          "totalDonations": 400
         }
       ],
       "stats": {
@@ -10613,7 +10625,7 @@
           "type": "ORGANIZATION",
           "slug": "xebia",
           "name": "Xebia",
-          "totalDonations": 120000
+          "totalDonations": 130000
         },
         {
           "id": 7083,
@@ -10623,6 +10635,27 @@
           "totalDonations": 120000
         },
         {
+          "id": 12306,
+          "type": "ORGANIZATION",
+          "slug": "percy_io",
+          "name": "Percy",
+          "totalDonations": 105000
+        },
+        {
+          "id": 9337,
+          "type": "ORGANIZATION",
+          "slug": "fbopensource",
+          "name": "Facebook Open Source",
+          "totalDonations": 100000
+        },
+        {
+          "id": 9826,
+          "type": "ORGANIZATION",
+          "slug": "chromatic",
+          "name": "Chromatic",
+          "totalDonations": 100000
+        },
+        {
           "id": 4087,
           "type": "ORGANIZATION",
           "slug": "airbnb",
@@ -10630,53 +10663,32 @@
           "totalDonations": 91800
         },
         {
-          "id": 9337,
+          "id": 16341,
           "type": "ORGANIZATION",
-          "slug": "fbopensource",
-          "name": "Facebook Open Source",
-          "totalDonations": 90000
-        },
-        {
-          "id": 9826,
-          "type": "ORGANIZATION",
-          "slug": "chromatic",
-          "name": "Chromatic",
-          "totalDonations": 90000
-        },
-        {
-          "id": 12306,
-          "type": "ORGANIZATION",
-          "slug": "percy_io",
-          "name": "Percy",
-          "totalDonations": 90000
+          "slug": "applitoolseyes2",
+          "name": "Applitools: AI-powered Visual Testing and Monitoring ",
+          "totalDonations": 45000
         },
         {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 30000
-        },
-        {
-          "id": 16341,
-          "type": "ORGANIZATION",
-          "slug": "applitoolseyes2",
-          "name": "Applitools: AI-powered Visual Testing and Monitoring ",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 3400,
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 22500
+          "totalDonations": 25000
         },
         {
           "id": 13420,
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 6000
+          "totalDonations": 7500
         }
       ],
       "stats": {
@@ -10975,7 +10987,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 10000
+          "totalDonations": 12500
         }
       ],
       "stats": {
@@ -11008,7 +11020,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 7500
+          "totalDonations": 10000
         }
       ],
       "stats": {
@@ -11165,14 +11177,14 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 5000
+          "totalDonations": 6000
         },
         {
           "id": 13054,
           "type": "ORGANIZATION",
           "slug": "qnyp",
           "name": "qnyp",
-          "totalDonations": 2000
+          "totalDonations": 2500
         }
       ],
       "stats": {
@@ -11330,7 +11342,7 @@
           "type": "ORGANIZATION",
           "slug": "medayo",
           "name": "Medayo LTD",
-          "totalDonations": 2000
+          "totalDonations": 2500
         }
       ],
       "stats": {
@@ -12045,14 +12057,14 @@
           "type": "ORGANIZATION",
           "slug": "digirati",
           "name": "Digirati",
-          "totalDonations": 780000
+          "totalDonations": 840000
         },
         {
           "id": 8990,
           "type": "ORGANIZATION",
           "slug": "nlwales",
           "name": "Llyfrgell Genedlaethol Cymru The National Library of Wales",
-          "totalDonations": 180000
+          "totalDonations": 200000
         }
       ],
       "stats": {
@@ -12112,7 +12124,7 @@
       }
     ],
     "opencollective": {
-      "id": 17365,
+      "id": 17366,
       "name": "v-charts",
       "slug": "v-charts",
       "description": null,
@@ -12120,8 +12132,7 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      },
-      "goals": []
+      }
     }
   },
   {
@@ -12337,13 +12348,6 @@
           "totalDonations": 400000
         },
         {
-          "id": 7439,
-          "type": "ORGANIZATION",
-          "slug": "strikingly",
-          "name": "上线了",
-          "totalDonations": 350000
-        },
-        {
           "id": 9152,
           "type": "ORGANIZATION",
           "slug": "shanghai-daocloud-network-technology-co-ltd",
@@ -12351,17 +12355,24 @@
           "totalDonations": 350000
         },
         {
-          "id": 7954,
+          "id": 7439,
           "type": "ORGANIZATION",
-          "slug": "creative-tim",
-          "name": "Creative Tim",
-          "totalDonations": 150000
+          "slug": "strikingly",
+          "name": "上线了",
+          "totalDonations": 350000
         },
         {
           "id": 10327,
           "type": "ORGANIZATION",
           "slug": "keycdn",
           "name": "KeyCDN",
+          "totalDonations": 150000
+        },
+        {
+          "id": 7954,
+          "type": "ORGANIZATION",
+          "slug": "creative-tim",
+          "name": "Creative Tim",
           "totalDonations": 150000
         },
         {
@@ -12376,27 +12387,27 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 12342,
           "type": "ORGANIZATION",
           "slug": "bgasoft",
           "name": "BGASoft",
-          "totalDonations": 60000
-        },
-        {
-          "id": 12647,
-          "type": "ORGANIZATION",
-          "slug": "xfiveco1",
-          "name": "Xfive",
-          "totalDonations": 50000
+          "totalDonations": 70000
         },
         {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
+          "totalDonations": 50000
+        },
+        {
+          "id": 12647,
+          "type": "ORGANIZATION",
+          "slug": "xfiveco1",
+          "name": "Xfive",
           "totalDonations": 50000
         }
       ],
@@ -12447,7 +12458,7 @@
           "type": "ORGANIZATION",
           "slug": "bmqb",
           "name": "bmqb",
-          "totalDonations": 20000
+          "totalDonations": 40000
         }
       ],
       "goals": [
@@ -12644,20 +12655,20 @@
           "type": "ORGANIZATION",
           "slug": "ag-grid",
           "name": "ag-Grid",
-          "totalDonations": 4000000
-        },
-        {
-          "id": 5023,
-          "type": "ORGANIZATION",
-          "slug": "capitalone",
-          "name": "Capital One",
-          "totalDonations": 1200000
+          "totalDonations": 4250000
         },
         {
           "id": 5610,
           "type": "ORGANIZATION",
           "slug": "adobe",
           "name": "Adobe",
+          "totalDonations": 1200000
+        },
+        {
+          "id": 5023,
+          "type": "ORGANIZATION",
+          "slug": "capitalone",
+          "name": "Capital One",
           "totalDonations": 1200000
         },
         {
@@ -12672,7 +12683,7 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 900000
+          "totalDonations": 1000000
         },
         {
           "id": 4087,
@@ -12689,18 +12700,18 @@
           "totalDonations": 800000
         },
         {
-          "id": 4409,
-          "type": "ORGANIZATION",
-          "slug": "frontendmasters",
-          "name": "Frontend Masters",
-          "totalDonations": 560000
-        },
-        {
           "id": 5954,
           "type": "ORGANIZATION",
           "slug": "webflow",
           "name": "Webflow",
-          "totalDonations": 560000
+          "totalDonations": 610000
+        },
+        {
+          "id": 4409,
+          "type": "ORGANIZATION",
+          "slug": "frontendmasters",
+          "name": "Frontend Masters",
+          "totalDonations": 580000
         }
       ],
       "goals": [
@@ -12945,21 +12956,21 @@
           "type": "ORGANIZATION",
           "slug": "medschooltutors1",
           "name": "Med School Tutors",
-          "totalDonations": 2000
+          "totalDonations": 3000
         },
         {
           "id": 8826,
           "type": "ORGANIZATION",
           "slug": "viciousflora",
           "name": "ViciousFlora",
-          "totalDonations": 1800
+          "totalDonations": 2000
         },
         {
           "id": 10794,
           "type": "ORGANIZATION",
           "slug": "systems-by-design",
           "name": "Systems By Design",
-          "totalDonations": 1400
+          "totalDonations": 1600
         }
       ],
       "goals": [
