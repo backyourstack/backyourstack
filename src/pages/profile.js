@@ -54,12 +54,14 @@ export default class Profile extends React.Component {
   opencollectiveLink = () => this.props.opencollective && `https://opencollective.com/${this.props.opencollective.slug}`;
 
   profileName = () => {
-    if (this.props.opencollective) {
-      if (this.props.opencollective.name.length < this.props.profile.name.length) {
-        return this.props.opencollective.name;
+    const githubProfileName = this.props.profile.name || this.props.profile.login;
+    const opencollectiveProfileName = this.props.opencollective && this.props.opencollective.name;
+    if (opencollectiveProfileName) {
+      if (opencollectiveProfileName.length < githubProfileName.length) {
+        return opencollectiveProfileName;
       }
     }
-    return this.props.profile.name;
+    return githubProfileName;
   };
 
   render () {
