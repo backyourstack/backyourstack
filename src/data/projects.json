@@ -12096,26 +12096,6 @@
     }
   },
   {
-    "name": "v-charts-104",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "v-charts"
-      }
-    ],
-    "opencollective": {
-      "id": 17366,
-      "name": "v-charts",
-      "slug": "v-charts-104",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      }
-    }
-  },
-  {
     "name": "v-charts",
     "packages": [
       {
