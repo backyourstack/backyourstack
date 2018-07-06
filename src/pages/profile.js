@@ -109,8 +109,13 @@ export default class Profile extends React.Component {
           margin-right: 0;
         }
 
-        .subscribe {
-           margin-top: 50px;
+        .subscribe, .bulk {
+          margin-top: 50px;
+        }
+
+        .bulk .button {
+          display: inline-block;
+          margin-top: 20px;
         }
         `}
         </style>
@@ -193,6 +198,14 @@ export default class Profile extends React.Component {
                   Receive a notification when one of your dependencies is ready to receive funding and a monthly report on your stack’s progress, goals and updates.
                 </p>
                 <SubscribeForm profile={profile.login} />
+              </div>
+
+              <div className="bulk">
+                <h3>Bulk Support</h3>
+                <p>
+                  Instead of supporting each project individually, you can also support all your dependencies in bulk and give a lump sum of money. The Open Source Collective 501c6 can work with you to get registered as a prefered vendor in your system.
+                </p>
+                <a className="button" href="mailto:hello@opencollective.com">Contact Us</a>
               </div>
 
             </aside>
