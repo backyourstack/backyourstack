@@ -18,6 +18,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Chalarangelo/30-seconds-of-code"
     }
   },
   {
@@ -99,6 +102,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "accounts-js/accounts"
     }
   },
   {
@@ -135,6 +141,9 @@
         "balance": 5091,
         "yearlyBudget": 5091
       }
+    },
+    "github": {
+      "repo": "imolorhe/altair"
     }
   },
   {
@@ -156,6 +165,9 @@
         "yearlyBudget": 400
       },
       "goals": []
+    },
+    "github": {
+      "repo": "anchorcms/anchor-cms"
     }
   },
   {
@@ -177,6 +189,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "vlio20/angular-datepicker"
     }
   },
   {
@@ -227,6 +242,9 @@
         "yearlyBudget": 68226
       },
       "goals": []
+    },
+    "github": {
+      "org": "angular-fullstack"
     }
   },
   {
@@ -248,6 +266,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "720kb/angular-socialshare"
     }
   },
   {
@@ -306,6 +327,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ant-design/ant-design"
     }
   },
   {
@@ -327,6 +351,9 @@
         "yearlyBudget": 1704
       },
       "goals": []
+    },
+    "github": {
+      "repo": "MoePlayer/APlayer"
     }
   },
   {
@@ -421,6 +448,9 @@
         "balance": 1342952,
         "yearlyBudget": 3498527
       }
+    },
+    "github": {
+      "repo": "aurelia/framework"
     }
   },
   {
@@ -442,6 +472,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ava-ia/core"
     }
   },
   {
@@ -463,6 +496,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "avajs/ava"
     }
   },
   {
@@ -484,6 +520,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jaywcjlove/awesome-mac"
     }
   },
   {
@@ -505,6 +544,9 @@
       },
       "goals": [],
       "sponsors": []
+    },
+    "github": {
+      "repo": "prscX/awesome-react-native-native-modules"
     }
   },
   {
@@ -534,6 +576,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "axboot/ax-boot-framework"
     }
   },
   {
@@ -570,6 +615,9 @@
         "yearlyBudget": 32693
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ax5ui/ax5ui-kernel"
     }
   },
   {
@@ -1325,6 +1373,9 @@
         "balance": 3566712,
         "yearlyBudget": 11360331
       }
+    },
+    "github": {
+      "repo": "babel/babel"
     }
   },
   {
@@ -1370,6 +1421,9 @@
         "balance": 200369,
         "yearlyBudget": 3180032
       }
+    },
+    "github": {
+      "repo": "beakerbrowser/beaker"
     }
   },
   {
@@ -1391,6 +1445,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "d-band/better-xlsx"
     }
   },
   {
@@ -1412,6 +1469,9 @@
         "yearlyBudget": 450000
       },
       "goals": []
+    },
+    "github": {
+      "repo": "MikeMcl/big.js"
     }
   },
   {
@@ -1435,6 +1495,9 @@
         "balance": 576382,
         "yearlyBudget": 611407
       }
+    },
+    "github": {
+      "repo": "BoostIO/Boostnote"
     }
   },
   {
@@ -1456,6 +1519,9 @@
         "yearlyBudget": 4325
       },
       "goals": []
+    },
+    "github": {
+      "repo": "wenzhixin/bootstrap-table"
     }
   },
   {
@@ -1506,6 +1572,9 @@
         "yearlyBudget": 44742
       },
       "goals": []
+    },
+    "github": {
+      "repo": "bootstrap-vue/bootstrap-vue"
     }
   },
   {
@@ -1548,6 +1617,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "howdyai/botkit"
     }
   },
   {
@@ -1626,6 +1698,9 @@
         "yearlyBudget": 381689
       },
       "goals": []
+    },
+    "github": {
+      "repo": "bower/bower"
     }
   },
   {
@@ -1649,6 +1724,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "bpkg/bpkg"
     }
   },
   {
@@ -1670,6 +1748,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "siddharthkp/bundlesize"
     }
   },
   {
@@ -1691,6 +1772,9 @@
         "yearlyBudget": 19429
       },
       "goals": []
+    },
+    "github": {
+      "repo": "buttercup/buttercup-desktop"
     }
   },
   {
@@ -1712,6 +1796,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "gielcobben/caption"
     }
   },
   {
@@ -1733,6 +1820,9 @@
         "yearlyBudget": 45623
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cboard-org/cboard"
     }
   },
   {
@@ -1754,6 +1844,9 @@
         "yearlyBudget": 102516
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ccxt/ccxt"
     }
   },
   {
@@ -1775,6 +1868,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cdnjs/cdnjs"
     }
   },
   {
@@ -1796,6 +1892,9 @@
         "yearlyBudget": 1728
       },
       "goals": []
+    },
+    "github": {
+      "repo": "KELiON/cerebro"
     }
   },
   {
@@ -1817,6 +1916,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cezerin/cezerin"
     }
   },
   {
@@ -1851,6 +1953,9 @@
         "balance": 1200,
         "yearlyBudget": 4800
       }
+    },
+    "github": {
+      "repo": "cezerin/cezerin"
     }
   },
   {
@@ -1901,6 +2006,9 @@
         "yearlyBudget": 51344
       },
       "goals": []
+    },
+    "github": {
+      "org": "chaijs"
     }
   },
   {
@@ -1951,6 +2059,9 @@
         "yearlyBudget": 51344
       },
       "goals": []
+    },
+    "github": {
+      "org": "chaijs"
     }
   },
   {
@@ -1974,6 +2085,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "chamilo/chamilo-lms"
     }
   },
   {
@@ -2017,6 +2131,9 @@
         "yearlyBudget": 149103
       },
       "goals": []
+    },
+    "github": {
+      "org": "cheeriojs"
     }
   },
   {
@@ -2060,6 +2177,9 @@
         "yearlyBudget": 207656
       },
       "goals": []
+    },
+    "github": {
+      "repo": "yoshuawuyts/choo"
     }
   },
   {
@@ -2081,6 +2201,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "CloudBoost/cloudboost"
     }
   },
   {
@@ -2102,6 +2225,9 @@
         "yearlyBudget": 810
       },
       "goals": []
+    },
+    "github": {
+      "repo": "coderaiser/cloudcmd"
     }
   },
   {
@@ -2123,6 +2249,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cmv/cmv-app"
     }
   },
   {
@@ -2154,6 +2283,9 @@
         "balance": 10342,
         "yearlyBudget": 18382
       }
+    },
+    "github": {
+      "repo": "agentejo/cockpit"
     }
   },
   {
@@ -2197,6 +2329,9 @@
         "balance": 28593,
         "yearlyBudget": 36903
       }
+    },
+    "github": {
+      "repo": "shanalikhan/code-settings-sync"
     }
   },
   {
@@ -2228,6 +2363,9 @@
         "balance": 110079,
         "yearlyBudget": 107783
       }
+    },
+    "github": {
+      "repo": "codebuddiesdotorg/cb-v2-scratch"
     }
   },
   {
@@ -2274,6 +2412,9 @@
         "balance": 197211,
         "yearlyBudget": 369111
       }
+    },
+    "github": {
+      "repo": "CompuIves/codesandbox-client"
     }
   },
   {
@@ -2315,6 +2456,9 @@
         "yearlyBudget": 1728
       },
       "goals": []
+    },
+    "github": {
+      "repo": "colmena/colmena-cms"
     }
   },
   {
@@ -2336,6 +2480,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "colorjs/color-space"
     }
   },
   {
@@ -2365,6 +2512,9 @@
         "yearlyBudget": 1215
       },
       "goals": []
+    },
+    "github": {
+      "repo": "gamestdio/colyseus"
     }
   },
   {
@@ -2390,6 +2540,9 @@
         "yearlyBudget": 1662
       },
       "goals": []
+    },
+    "github": {
+      "repo": "commitizen/cz-cli"
     }
   },
   {
@@ -2421,6 +2574,9 @@
         "balance": 11386,
         "yearlyBudget": 13800
       }
+    },
+    "github": {
+      "repo": "compodoc/compodoc"
     }
   },
   {
@@ -2444,6 +2600,9 @@
         "balance": 831,
         "yearlyBudget": 831
       }
+    },
+    "github": {
+      "repo": "ausi/cq-prolyfill"
     }
   },
   {
@@ -2467,6 +2626,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "Keyang/node-csvtojson"
     }
   },
   {
@@ -2488,6 +2650,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "datproject/dat"
     }
   },
   {
@@ -2517,6 +2682,9 @@
         "yearlyBudget": 26605
       },
       "goals": []
+    },
+    "github": {
+      "repo": "date-fns/date-fns"
     }
   },
   {
@@ -2538,6 +2706,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "xx45/dayjs"
     }
   },
   {
@@ -2574,6 +2745,9 @@
         "yearlyBudget": 35212
       },
       "goals": []
+    },
+    "github": {
+      "repo": "visionmedia/debug"
     }
   },
   {
@@ -2595,6 +2769,9 @@
         "yearlyBudget": 311885
       },
       "goals": []
+    },
+    "github": {
+      "org": "democracyearth"
     }
   },
   {
@@ -2616,6 +2793,9 @@
         "yearlyBudget": 10092
       },
       "goals": []
+    },
+    "github": {
+      "repo": "depjs/dep"
     }
   },
   {
@@ -2680,6 +2860,9 @@
         "yearlyBudget": 999367
       },
       "goals": []
+    },
+    "github": {
+      "repo": "DestinyItemManager/DIM"
     }
   },
   {
@@ -2701,6 +2884,9 @@
         "yearlyBudget": 8477
       },
       "goals": []
+    },
+    "github": {
+      "repo": "funretro/distributed"
     }
   },
   {
@@ -2730,6 +2916,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "appersonlabs/docker.io"
     }
   },
   {
@@ -2770,6 +2959,9 @@
         "yearlyBudget": 11149
       },
       "goals": []
+    },
+    "github": {
+      "repo": "QingWei-Li/docsify"
     }
   },
   {
@@ -2799,6 +2991,9 @@
         "yearlyBudget": 105822
       },
       "goals": []
+    },
+    "github": {
+      "repo": "WebReflection/document-register-element"
     }
   },
   {
@@ -2820,6 +3015,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "egoist/docute"
     }
   },
   {
@@ -2869,6 +3067,9 @@
         "yearlyBudget": 0
       },
       "sponsors": []
+    },
+    "github": {
+      "repo": "pedronauck/docz"
     }
   },
   {
@@ -2890,6 +3091,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "justdotJS/SimplePresence"
     }
   },
   {
@@ -2911,6 +3115,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "MoePlayer/DPlayer"
     }
   },
   {
@@ -2932,6 +3139,9 @@
       },
       "goals": [],
       "sponsors": []
+    },
+    "github": {
+      "repo": "ngs/draft-js-markdown-shortcuts-plugin"
     }
   },
   {
@@ -2953,6 +3163,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "org": "easystatic"
     }
   },
   {
@@ -2974,6 +3187,9 @@
         "yearlyBudget": 10728
       },
       "goals": []
+    },
+    "github": {
+      "repo": "chentsulin/electron-react-boilerplate"
     }
   },
   {
@@ -3042,6 +3258,9 @@
         "yearlyBudget": 1292582
       },
       "goals": []
+    },
+    "github": {
+      "repo": "electron/electron"
     }
   },
   {
@@ -3135,6 +3354,9 @@
         "yearlyBudget": 362001
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ElemeFE/element"
     }
   },
   {
@@ -3156,6 +3378,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "egoist/eme"
     }
   },
   {
@@ -3179,6 +3404,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "maticzav/emma-cli"
     }
   },
   {
@@ -3213,6 +3441,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "esdiscuss/esdiscuss.org"
     }
   },
   {
@@ -3247,6 +3478,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "voronianski/esnextbin"
     }
   },
   {
@@ -3274,6 +3508,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "express-validator/express-validator"
     }
   },
   {
@@ -3336,6 +3573,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sarriaroman/FabricPlugin"
     }
   },
   {
@@ -3386,6 +3626,9 @@
         "yearlyBudget": 82389
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Marak/faker.js"
     }
   },
   {
@@ -3409,6 +3652,9 @@
         "balance": 2400,
         "yearlyBudget": 4800
       }
+    },
+    "github": {
+      "repo": "NaturalIntelligence/fast-xml-parser"
     }
   },
   {
@@ -3475,6 +3721,9 @@
         "balance": 929005,
         "yearlyBudget": 1516409
       }
+    },
+    "github": {
+      "repo": "feathersjs/feathers"
     }
   },
   {
@@ -3652,6 +3901,9 @@
         "yearlyBudget": 14983
       },
       "goals": []
+    },
+    "github": {
+      "repo": "rofrischmann/fela"
     }
   },
   {
@@ -3688,6 +3940,9 @@
         "yearlyBudget": 50928
       },
       "goals": []
+    },
+    "github": {
+      "repo": "final-form/react-final-form"
     }
   },
   {
@@ -3709,6 +3964,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "75team/firekylin"
     }
   },
   {
@@ -3738,6 +3996,9 @@
         "yearlyBudget": 2533
       },
       "goals": []
+    },
+    "github": {
+      "repo": "matthewgonzalez/fontplop"
     }
   },
   {
@@ -3759,6 +4020,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "framework7io/framework7"
     }
   },
   {
@@ -3780,6 +4044,9 @@
         "yearlyBudget": 5571
       },
       "goals": []
+    },
+    "github": {
+      "repo": "thedaviddias/Front-End-Checklist"
     }
   },
   {
@@ -3801,6 +4068,9 @@
         "yearlyBudget": 33978
       },
       "goals": []
+    },
+    "github": {
+      "repo": "fuse-box/fuse-box"
     }
   },
   {
@@ -4199,6 +4469,9 @@
         "yearlyBudget": 842934
       },
       "goals": []
+    },
+    "github": {
+      "repo": "gatsbyjs/gatsby"
     }
   },
   {
@@ -4293,6 +4566,9 @@
       "goals": [
         {}
       ]
+    },
+    "github": {
+      "repo": "jhipster/generator-jhipster"
     }
   },
   {
@@ -4314,6 +4590,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "TryGhost/Ghost"
     }
   },
   {
@@ -4335,6 +4614,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "joefitzgerald/go-plus"
     }
   },
   {
@@ -4356,6 +4638,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-"
     }
   },
   {
@@ -4413,6 +4698,9 @@
         "yearlyBudget": 255796
       },
       "goals": []
+    },
+    "github": {
+      "repo": "artf/grapesjs"
     }
   },
   {
@@ -4442,6 +4730,9 @@
         "balance": 800,
         "yearlyBudget": 4800
       }
+    },
+    "github": {
+      "repo": "graphql-compose/graphql-compose"
     }
   },
   {
@@ -4473,6 +4764,9 @@
         "balance": 28233,
         "yearlyBudget": 112009
       }
+    },
+    "github": {
+      "repo": "maticzav/graphql-shield"
     }
   },
   {
@@ -4502,6 +4796,9 @@
         "yearlyBudget": 49774
       },
       "goals": []
+    },
+    "github": {
+      "repo": "CommonGarden/Grow-IoT"
     }
   },
   {
@@ -4642,6 +4939,9 @@
         "balance": 622720,
         "yearlyBudget": 1916282
       }
+    },
+    "github": {
+      "org": "gulpjs"
     }
   },
   {
@@ -4745,6 +5045,9 @@
         "balance": 622720,
         "yearlyBudget": 1916282
       }
+    },
+    "github": {
+      "org": "gulpjs"
     }
   },
   {
@@ -4766,6 +5069,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "amark/gun"
     }
   },
   {
@@ -4787,6 +5093,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sahat/hackathon-starter"
     }
   },
   {
@@ -4808,6 +5117,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "austinksmith/Hamsters.js"
     }
   },
   {
@@ -4829,6 +5141,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "JSBros/hedron"
     }
   },
   {
@@ -4850,6 +5165,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "hexojs/hexo"
     }
   },
   {
@@ -4871,6 +5189,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "holyjs/holyjs"
     }
   },
   {
@@ -4916,6 +5237,9 @@
         "balance": 380541,
         "yearlyBudget": 97505
       }
+    },
+    "github": {
+      "org": "hoodiehq"
     }
   },
   {
@@ -4945,6 +5269,9 @@
         "yearlyBudget": 141141
       },
       "goals": []
+    },
+    "github": {
+      "org": "hospitalrun"
     }
   },
   {
@@ -4976,6 +5303,9 @@
       "goals": [
         {}
       ]
+    },
+    "github": {
+      "repo": "jantimon/html-webpack-plugin"
     }
   },
   {
@@ -5005,6 +5335,9 @@
         "yearlyBudget": 110026
       },
       "goals": []
+    },
+    "github": {
+      "repo": "WebReflection/hyperHTML"
     }
   },
   {
@@ -5026,6 +5359,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Hyperline/hyperline"
     }
   },
   {
@@ -5047,6 +5383,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "FPGAwars/icestudio"
     }
   },
   {
@@ -5098,6 +5437,9 @@
         "balance": 25642,
         "yearlyBudget": 27789
       }
+    },
+    "github": {
+      "repo": "idyll-lang/idyll"
     }
   },
   {
@@ -5190,6 +5532,9 @@
         "yearlyBudget": 50811
       },
       "goals": []
+    },
+    "github": {
+      "repo": "infernojs/inferno"
     }
   },
   {
@@ -5211,6 +5556,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "InvoicePlane/InvoicePlane"
     }
   },
   {
@@ -5232,6 +5580,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "IonDen/ion.rangeSlider"
     }
   },
   {
@@ -5253,6 +5604,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "IonDen/ion.sound"
     }
   },
   {
@@ -5287,6 +5641,9 @@
         "yearlyBudget": 0
       },
       "sponsors": []
+    },
+    "github": {
+      "repo": "luin/ioredis"
     }
   },
   {
@@ -5310,6 +5667,9 @@
         "balance": 8059,
         "yearlyBudget": 24979
       }
+    },
+    "github": {
+      "repo": "isomorphic-git/isomorphic-git"
     }
   },
   {
@@ -5375,6 +5735,9 @@
         "balance": 2489,
         "yearlyBudget": 5396
       }
+    },
+    "github": {
+      "repo": "javascript-obfuscator/javascript-obfuscator"
     }
   },
   {
@@ -5561,6 +5924,9 @@
         "balance": 283254,
         "yearlyBudget": 2274457
       }
+    },
+    "github": {
+      "repo": "facebook/jest"
     }
   },
   {
@@ -5582,6 +5948,9 @@
         "yearlyBudget": 9660
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jingweno/jqplay"
     }
   },
   {
@@ -5603,6 +5972,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "briangonzalez/jquery.adaptive-backgrounds.js"
     }
   },
   {
@@ -5624,6 +5996,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "yesmeck/jquery-jsonview"
     }
   },
   {
@@ -5645,6 +6020,9 @@
         "yearlyBudget": 55586
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jsbin/jsbin"
     }
   },
   {
@@ -5726,6 +6104,9 @@
         "yearlyBudget": 25464
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jsonmvc/jsonmvc"
     }
   },
   {
@@ -5757,6 +6138,9 @@
       "goals": [
         {}
       ]
+    },
+    "github": {
+      "repo": "cssinjs/jss"
     }
   },
   {
@@ -5780,6 +6164,9 @@
         "balance": 3492,
         "yearlyBudget": 7492
       }
+    },
+    "github": {
+      "repo": "kitze/JSUI"
     }
   },
   {
@@ -5801,6 +6188,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jojoldu/junior-recruit-scheduler"
     }
   },
   {
@@ -5822,6 +6212,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "EragonJ/Kaku"
     }
   },
   {
@@ -5843,6 +6236,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "monounity/karma-typescript"
     }
   },
   {
@@ -5916,6 +6312,9 @@
         "yearlyBudget": 33706
       },
       "goals": []
+    },
+    "github": {
+      "repo": "keajs/kea"
     }
   },
   {
@@ -5959,6 +6358,9 @@
         "yearlyBudget": 61037
       },
       "goals": []
+    },
+    "github": {
+      "org": "koajs"
     }
   },
   {
@@ -5980,6 +6382,9 @@
         "yearlyBudget": 864
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ladjs/lad"
     }
   },
   {
@@ -6001,6 +6406,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cagataycali/lazy"
     }
   },
   {
@@ -6022,6 +6430,9 @@
         "yearlyBudget": 288
       },
       "goals": []
+    },
+    "github": {
+      "repo": "lc-soft/LCUI"
     }
   },
   {
@@ -6051,6 +6462,9 @@
         "yearlyBudget": 259629
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cxxxr/lem"
     }
   },
   {
@@ -6072,6 +6486,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "d4nyll/lethargy"
     }
   },
   {
@@ -6103,6 +6520,9 @@
         "balance": 19549,
         "yearlyBudget": 21574
       }
+    },
+    "github": {
+      "repo": "Level/levelup"
     }
   },
   {
@@ -6132,6 +6552,9 @@
         "balance": 4778,
         "yearlyBudget": 8828
       }
+    },
+    "github": {
+      "repo": "lidarr/Lidarr"
     }
   },
   {
@@ -6166,6 +6589,9 @@
         "yearlyBudget": 23660
       },
       "goals": []
+    },
+    "github": {
+      "repo": "LolaShare/LolaShare"
     }
   },
   {
@@ -6187,6 +6613,9 @@
         "yearlyBudget": 231257
       },
       "goals": []
+    },
+    "github": {
+      "repo": "anmonteiro/lumo"
     }
   },
   {
@@ -6224,6 +6653,9 @@
         "balance": 27255,
         "yearlyBudget": 109020
       }
+    },
+    "github": {
+      "repo": "marktext/marktext"
     }
   },
   {
@@ -6313,6 +6745,9 @@
         "balance": 947356,
         "yearlyBudget": 2785474
       }
+    },
+    "github": {
+      "repo": "callemall/material-ui"
     }
   },
   {
@@ -6336,6 +6771,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "Daemonite/material"
     }
   },
   {
@@ -6357,6 +6795,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Matterwiki/Matterwiki"
     }
   },
   {
@@ -6378,6 +6819,9 @@
         "yearlyBudget": 4800
       },
       "goals": []
+    },
+    "github": {
+      "org": "metamask"
     }
   },
   {
@@ -6470,6 +6914,9 @@
         "yearlyBudget": 436964
       },
       "goals": []
+    },
+    "github": {
+      "repo": "zodern/meteor-up"
     }
   },
   {
@@ -6491,6 +6938,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "500tech/mimic"
     }
   },
   {
@@ -6512,6 +6962,9 @@
         "yearlyBudget": 450000
       },
       "goals": []
+    },
+    "github": {
+      "repo": "foxhound87/mobx-react-form"
     }
   },
   {
@@ -6597,6 +7050,9 @@
         "yearlyBudget": 885519
       },
       "goals": []
+    },
+    "github": {
+      "repo": "mobxjs/mobx"
     }
   },
   {
@@ -6691,6 +7147,9 @@
         "yearlyBudget": 1396049
       },
       "goals": []
+    },
+    "github": {
+      "org": "mochajs"
     }
   },
   {
@@ -6783,6 +7242,9 @@
         "yearlyBudget": 1396049
       },
       "goals": []
+    },
+    "github": {
+      "org": "mochajs"
     }
   },
   {
@@ -6806,6 +7268,9 @@
         "balance": 2787,
         "yearlyBudget": 4207
       }
+    },
+    "github": {
+      "repo": "modularcode/modular-admin-html"
     }
   },
   {
@@ -6829,6 +7294,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "moleculerjs/moleculer"
     }
   },
   {
@@ -6927,6 +7395,9 @@
         "yearlyBudget": 527733
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Automattic/mongoose"
     }
   },
   {
@@ -6948,6 +7419,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "omidfi/moro"
     }
   },
   {
@@ -6969,6 +7443,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "musicplayer-io/redditmusicplayer"
     }
   },
   {
@@ -6990,6 +7467,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "720kb/ndm"
     }
   },
   {
@@ -7093,6 +7573,9 @@
         "balance": 512160,
         "yearlyBudget": 2885396
       }
+    },
+    "github": {
+      "repo": "kamilmysliwiec/nest"
     }
   },
   {
@@ -7114,6 +7597,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Binaryify/NeteaseCloudMusicApi"
     }
   },
   {
@@ -7135,6 +7621,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jaredallard/nexe"
     }
   },
   {
@@ -7237,6 +7726,9 @@
         "yearlyBudget": 831146
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ngrx/platform"
     }
   },
   {
@@ -7258,6 +7750,9 @@
         "yearlyBudget": 5691
       },
       "goals": []
+    },
+    "github": {
+      "repo": "orizens/ngx-infinite-scroll"
     }
   },
   {
@@ -7279,6 +7774,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "beatfactor/nightwatch"
     }
   },
   {
@@ -7315,6 +7813,9 @@
         "yearlyBudget": 45972
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sandeepmistry/noble"
     }
   },
   {
@@ -7351,6 +7852,9 @@
         "balance": 452461,
         "yearlyBudget": 455701
       }
+    },
+    "github": {
+      "repo": "node-nock/nock"
     }
   },
   {
@@ -7372,6 +7876,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ratneshsinghparihar/Node-Data"
     }
   },
   {
@@ -7393,6 +7900,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "vinitkumar/node-twitter"
     }
   },
   {
@@ -7441,6 +7951,9 @@
           "description": "Vient qui veut : personnes qui cherchent à se reconvertir, cherchent un travail, veulent en savoir plus — les expert·e·s sont les bienvenu·e·s en observateur."
         }
       ]
+    },
+    "github": {
+      "repo": "oncletom/nodebook"
     }
   },
   {
@@ -7477,6 +7990,9 @@
         "yearlyBudget": 110035
       },
       "goals": []
+    },
+    "github": {
+      "repo": "nodemailer/nodemailer"
     }
   },
   {
@@ -7562,6 +8078,9 @@
         "yearlyBudget": 270508
       },
       "goals": []
+    },
+    "github": {
+      "repo": "remy/nodemon"
     }
   },
   {
@@ -7583,6 +8102,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "npms-io/npms-www"
     }
   },
   {
@@ -7677,6 +8199,9 @@
         "balance": 357331,
         "yearlyBudget": 1685372
       }
+    },
+    "github": {
+      "repo": "nuxt/nuxt.js"
     }
   },
   {
@@ -7854,6 +8379,9 @@
         "yearlyBudget": 14057
       },
       "goals": []
+    },
+    "github": {
+      "repo": "OctoLinker/browser-extension"
     }
   },
   {
@@ -7883,6 +8411,9 @@
         "yearlyBudget": 30918
       },
       "goals": []
+    },
+    "github": {
+      "repo": "buunguyen/octotree"
     }
   },
   {
@@ -7926,6 +8457,9 @@
         "yearlyBudget": 133200
       },
       "goals": []
+    },
+    "github": {
+      "repo": "NekR/offline-plugin"
     }
   },
   {
@@ -7947,6 +8481,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Binaryify/OneDark-Pro"
     }
   },
   {
@@ -7968,6 +8505,9 @@
         "yearlyBudget": 105011
       },
       "goals": []
+    },
+    "github": {
+      "repo": "bryphe/oni"
     }
   },
   {
@@ -7989,6 +8529,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "openfl/openfl"
     }
   },
   {
@@ -8030,6 +8573,9 @@
         "yearlyBudget": 18845
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jscad/OpenJSCAD.org"
     }
   },
   {
@@ -8051,6 +8597,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "openlayers/openlayers"
     }
   },
   {
@@ -8072,16 +8621,19 @@
           "type": "ORGANIZATION",
           "slug": "tulip-inc",
           "name": "Tulip Inc.",
-          "totalDonations": 30000
+          "totalDonations": 40000
         }
       ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 26140,
+        "balance": 34720,
         "yearlyBudget": 103360
       }
+    },
+    "github": {
+      "org": "ory"
     }
   },
   {
@@ -8111,6 +8663,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "patrikx3/onenote"
     }
   },
   {
@@ -8203,6 +8758,9 @@
         "yearlyBudget": 533394
       },
       "goals": []
+    },
+    "github": {
+      "repo": "parcel-bundler/parcel"
     }
   },
   {
@@ -8224,6 +8782,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "parle-io/parle"
     }
   },
   {
@@ -8295,6 +8856,9 @@
         "yearlyBudget": 1265912
       },
       "goals": []
+    },
+    "github": {
+      "repo": "parse-community/parse-server"
     }
   },
   {
@@ -8393,6 +8957,9 @@
         "balance": 92621,
         "yearlyBudget": 49518
       }
+    },
+    "github": {
+      "repo": "MoOx/phenomic"
     }
   },
   {
@@ -8414,6 +8981,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "amsul/pickadate.js"
     }
   },
   {
@@ -8443,6 +9013,9 @@
         "yearlyBudget": 0
       },
       "sponsors": []
+    },
+    "github": {
+      "repo": "pods-framework/pods"
     }
   },
   {
@@ -8464,6 +9037,9 @@
         "yearlyBudget": 56988
       },
       "goals": []
+    },
+    "github": {
+      "repo": "poooi/poi"
     }
   },
   {
@@ -8485,6 +9061,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "PokeAPI/pokeapi"
     }
   },
   {
@@ -8506,6 +9085,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "styled-components/polished"
     }
   },
   {
@@ -8617,6 +9199,9 @@
         "balance": 1855019,
         "yearlyBudget": 3715966
       }
+    },
+    "github": {
+      "repo": "developit/preact"
     }
   },
   {
@@ -8638,6 +9223,9 @@
         "yearlyBudget": 58404
       },
       "goals": []
+    },
+    "github": {
+      "repo": "pressbooks/pressbooks"
     }
   },
   {
@@ -8791,6 +9379,9 @@
         "yearlyBudget": 213323
       },
       "goals": []
+    },
+    "github": {
+      "repo": "pugjs/pug"
     }
   },
   {
@@ -8812,6 +9403,9 @@
         "yearlyBudget": 144881
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Radarr/Radarr"
     }
   },
   {
@@ -8833,6 +9427,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "char0n/ramda-adjunct"
     }
   },
   {
@@ -8854,6 +9451,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Sly777/ran"
     }
   },
   {
@@ -8877,6 +9477,9 @@
         "balance": 6320,
         "yearlyBudget": 5915
       }
+    },
+    "github": {
+      "repo": "securingsincity/react-ace"
     }
   },
   {
@@ -8902,6 +9505,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "kriasoft/react-app"
     }
   },
   {
@@ -8968,6 +9574,9 @@
         "balance": 456617,
         "yearlyBudget": 348367
       }
+    },
+    "github": {
+      "repo": "mxstbr/react-boilerplate"
     }
   },
   {
@@ -8991,6 +9600,9 @@
         "balance": 5817,
         "yearlyBudget": 10803
       }
+    },
+    "github": {
+      "repo": "okonet/react-dropzone"
     }
   },
   {
@@ -9012,6 +9624,9 @@
         "yearlyBudget": 40596
       },
       "goals": []
+    },
+    "github": {
+      "repo": "gaearon/react-hot-loader"
     }
   },
   {
@@ -9033,6 +9648,9 @@
         "yearlyBudget": 43201
       },
       "goals": []
+    },
+    "github": {
+      "repo": "lwansbrough/react-native-camera"
     }
   },
   {
@@ -9054,6 +9672,9 @@
         "yearlyBudget": 4247
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jhen0409/react-native-debugger"
     }
   },
   {
@@ -9085,6 +9706,9 @@
         "balance": 35319,
         "yearlyBudget": 266046
       }
+    },
+    "github": {
+      "repo": "react-native-training/react-native-elements"
     }
   },
   {
@@ -9171,6 +9795,9 @@
         "balance": 85131,
         "yearlyBudget": 147013
       }
+    },
+    "github": {
+      "repo": "invertase/react-native-firebase"
     }
   },
   {
@@ -9192,6 +9819,9 @@
         "yearlyBudget": 43199
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ivpusic/react-native-image-crop-picker"
     }
   },
   {
@@ -9213,6 +9843,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "brh55/react-native-masonry"
     }
   },
   {
@@ -9234,6 +9867,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "idibidiart/react-native-responsive-grid"
     }
   },
   {
@@ -9263,6 +9899,9 @@
         "yearlyBudget": 46036
       },
       "goals": []
+    },
+    "github": {
+      "repo": "aksonov/react-native-router-flux"
     }
   },
   {
@@ -9284,6 +9923,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "shakacode/react_on_rails"
     }
   },
   {
@@ -9332,6 +9974,9 @@
         "balance": 80762,
         "yearlyBudget": 592329
       }
+    },
+    "github": {
+      "repo": "diegomura/react-pdf"
     }
   },
   {
@@ -9368,6 +10013,9 @@
         "yearlyBudget": 23148
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Atyantik/react-pwa"
     }
   },
   {
@@ -9389,6 +10037,9 @@
         "yearlyBudget": 14297
       },
       "goals": []
+    },
+    "github": {
+      "repo": "prescottprue/react-redux-firebase"
     }
   },
   {
@@ -9431,6 +10082,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "akiran/react-slick"
     }
   },
   {
@@ -9481,6 +10135,9 @@
         "yearlyBudget": 117681
       },
       "goals": []
+    },
+    "github": {
+      "repo": "react-toolbox/react-toolbox"
     }
   },
   {
@@ -9539,6 +10196,9 @@
         "yearlyBudget": 5508
       },
       "goals": []
+    },
+    "github": {
+      "repo": "reactabular/reactabular"
     }
   },
   {
@@ -9560,6 +10220,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "egoist/ream"
     }
   },
   {
@@ -9581,6 +10244,9 @@
         "yearlyBudget": 5200
       },
       "goals": []
+    },
+    "github": {
+      "repo": "redom/redom"
     }
   },
   {
@@ -9638,6 +10304,9 @@
         "yearlyBudget": 186835
       },
       "goals": []
+    },
+    "github": {
+      "repo": "zalmoxisus/redux-devtools-extension"
     }
   },
   {
@@ -9659,6 +10328,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "camsong/redux-in-chinese"
     }
   },
   {
@@ -9727,6 +10399,9 @@
         "yearlyBudget": 484547
       },
       "goals": []
+    },
+    "github": {
+      "repo": "redux-saga/redux-saga"
     }
   },
   {
@@ -9765,6 +10440,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "relax/relax"
     }
   },
   {
@@ -9786,6 +10464,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "icetee/remote-ftp"
     }
   },
   {
@@ -9807,6 +10488,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "WorldBrain/Research-Engine"
     }
   },
   {
@@ -9841,6 +10525,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "JKHeadley/rest-hapi"
     }
   },
   {
@@ -9862,6 +10549,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "saadq/resumake"
     }
   },
   {
@@ -9883,6 +10573,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "DIYgod/Resume"
     }
   },
   {
@@ -9926,6 +10619,9 @@
         "balance": 60058,
         "yearlyBudget": 82351
       }
+    },
+    "github": {
+      "repo": "riot/riot"
     }
   },
   {
@@ -10028,6 +10724,9 @@
         "yearlyBudget": 968700
       },
       "goals": []
+    },
+    "github": {
+      "repo": "rollup/rollup"
     }
   },
   {
@@ -10071,6 +10770,9 @@
         "balance": 34320,
         "yearlyBudget": 111540
       }
+    },
+    "github": {
+      "repo": "DIYgod/RSSHub"
     }
   },
   {
@@ -10098,6 +10800,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "rsuite/rsuite"
     }
   },
   {
@@ -10127,6 +10832,9 @@
         "yearlyBudget": 72804
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sahat/satellizer"
     }
   },
   {
@@ -10148,6 +10856,9 @@
         "yearlyBudget": 94650
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jbeard4/SCION"
     }
   },
   {
@@ -10169,6 +10880,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "searchkit/searchkit"
     }
   },
   {
@@ -10190,6 +10904,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "xdamman/selection-sharer"
     }
   },
   {
@@ -10247,6 +10964,9 @@
         "yearlyBudget": 139303
       },
       "goals": []
+    },
+    "github": {
+      "repo": "badges/shields"
     }
   },
   {
@@ -10268,6 +10988,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sierra-library/sierra"
     }
   },
   {
@@ -10325,6 +11048,9 @@
         "yearlyBudget": 218796
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sinonjs/sinon"
     }
   },
   {
@@ -10346,6 +11072,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "yiom/sketchpad"
     }
   },
   {
@@ -10367,6 +11096,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "eavichay/slim.js"
     }
   },
   {
@@ -10438,6 +11170,9 @@
         "yearlyBudget": 366163
       },
       "goals": []
+    },
+    "github": {
+      "repo": "socketio/socket.io"
     }
   },
   {
@@ -10509,6 +11244,9 @@
         "yearlyBudget": 366163
       },
       "goals": []
+    },
+    "github": {
+      "repo": "socketio/socket.io"
     }
   },
   {
@@ -10530,6 +11268,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "speedtracker/speedtracker"
     }
   },
   {
@@ -10559,6 +11300,9 @@
         "yearlyBudget": 8680
       },
       "goals": []
+    },
+    "github": {
+      "repo": "nathancahill/Split.js"
     }
   },
   {
@@ -10696,6 +11440,9 @@
         "yearlyBudget": 1131372
       },
       "goals": []
+    },
+    "github": {
+      "repo": "storybooks/storybook"
     }
   },
   {
@@ -10857,6 +11604,9 @@
         "yearlyBudget": 138339
       },
       "goals": []
+    },
+    "github": {
+      "repo": "strapi/strapi"
     }
   },
   {
@@ -10902,6 +11652,9 @@
         "balance": 180199,
         "yearlyBudget": 225434
       }
+    },
+    "github": {
+      "repo": "streetmix/streetmix"
     }
   },
   {
@@ -10923,6 +11676,9 @@
         "yearlyBudget": 2554
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Strider-CD/strider"
     }
   },
   {
@@ -10966,6 +11722,9 @@
         "yearlyBudget": 409328
       },
       "goals": []
+    },
+    "github": {
+      "repo": "styled-components/styled-components"
     }
   },
   {
@@ -10995,6 +11754,9 @@
         "yearlyBudget": 38944
       },
       "goals": []
+    },
+    "github": {
+      "repo": "styleguidist/react-styleguidist"
     }
   },
   {
@@ -11028,6 +11790,9 @@
         "yearlyBudget": 32352
       },
       "goals": []
+    },
+    "github": {
+      "repo": "stylelint/stylelint"
     }
   },
   {
@@ -11049,6 +11814,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "surfbirdapp/surfbird"
     }
   },
   {
@@ -11070,6 +11838,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "t4t5/sweetalert"
     }
   },
   {
@@ -11091,6 +11862,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "sweetalert2/sweetalert2"
     }
   },
   {
@@ -11112,6 +11886,9 @@
         "yearlyBudget": 432
       },
       "goals": []
+    },
+    "github": {
+      "repo": "crazychicken/t-scroll"
     }
   },
   {
@@ -11135,6 +11912,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "tabler/tabler"
     }
   },
   {
@@ -11192,6 +11972,9 @@
         "yearlyBudget": 240317
       },
       "goals": []
+    },
+    "github": {
+      "repo": "tachyons-css/tachyons"
     }
   },
   {
@@ -11213,6 +11996,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "telegraf/telegraf"
     }
   },
   {
@@ -11234,6 +12020,9 @@
         "yearlyBudget": 37572
       },
       "goals": []
+    },
+    "github": {
+      "repo": "thelounge/thelounge"
     }
   },
   {
@@ -11263,6 +12052,9 @@
         "yearlyBudget": 1712
       },
       "goals": []
+    },
+    "github": {
+      "repo": "xdamman/tipbox"
     }
   },
   {
@@ -11292,6 +12084,9 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    },
+    "github": {
+      "repo": "oncletom/tld.js"
     }
   },
   {
@@ -11321,6 +12116,9 @@
         "yearlyBudget": 53808
       },
       "goals": []
+    },
+    "github": {
+      "repo": "trailsjs/trails"
     }
   },
   {
@@ -11350,6 +12148,9 @@
         "yearlyBudget": 9600
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Romakita/ts-express-decorators"
     }
   },
   {
@@ -11834,6 +12635,9 @@
         "yearlyBudget": 254016
       },
       "goals": []
+    },
+    "github": {
+      "repo": "Turfjs/turf"
     }
   },
   {
@@ -12015,6 +12819,9 @@
         "yearlyBudget": 1740
       },
       "goals": []
+    },
+    "github": {
+      "repo": "KyleAMathews/typography.js"
     }
   },
   {
@@ -12036,6 +12843,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "angular-ui/ui-grid"
     }
   },
   {
@@ -12072,6 +12882,9 @@
         "yearlyBudget": 1718370
       },
       "goals": []
+    },
+    "github": {
+      "repo": "UniversalViewer/universalviewer"
     }
   },
   {
@@ -12093,6 +12906,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cagataycali/url-shortener"
     }
   },
   {
@@ -12112,7 +12928,11 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      }
+      },
+      "goals": []
+    },
+    "github": {
+      "repo": "ElemeFE/v-charts"
     }
   },
   {
@@ -12152,6 +12972,9 @@
         "balance": 9692,
         "yearlyBudget": 11534
       }
+    },
+    "github": {
+      "repo": "verdaccio/verdaccio"
     }
   },
   {
@@ -12173,6 +12996,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "rtorr/vim-cheat-sheet"
     }
   },
   {
@@ -12194,6 +13020,9 @@
         "yearlyBudget": 831
       },
       "goals": []
+    },
+    "github": {
+      "repo": "almende/vis"
     }
   },
   {
@@ -12215,6 +13044,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "panzerdp/voca"
     }
   },
   {
@@ -12244,6 +13076,9 @@
         "balance": 2431,
         "yearlyBudget": 6031
       }
+    },
+    "github": {
+      "repo": "equinusocio/vsc-material-theme"
     }
   },
   {
@@ -12265,6 +13100,9 @@
         "yearlyBudget": 7633
       },
       "goals": []
+    },
+    "github": {
+      "repo": "vue-bulma/vue-admin"
     }
   },
   {
@@ -12286,6 +13124,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "euvl/vue-js-modal"
     }
   },
   {
@@ -12396,6 +13237,9 @@
         "yearlyBudget": 2419316
       },
       "goals": []
+    },
+    "github": {
+      "repo": "vuejs/vue"
     }
   },
   {
@@ -12417,6 +13261,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "lusaxweb/vuesax"
     }
   },
   {
@@ -12448,6 +13295,9 @@
         "balance": 36000,
         "yearlyBudget": 34380
       }
+    },
+    "github": {
+      "repo": "airyland/vux"
     }
   },
   {
@@ -12499,6 +13349,9 @@
         "balance": 12306,
         "yearlyBudget": 23574
       }
+    },
+    "github": {
+      "repo": "olistic/warriorjs"
     }
   },
   {
@@ -12520,6 +13373,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "tianyong90/we-vue"
     }
   },
   {
@@ -12541,6 +13397,9 @@
         "yearlyBudget": 1700
       },
       "goals": []
+    },
+    "github": {
+      "repo": "JulianNorton/weather-10kb"
     }
   },
   {
@@ -12721,6 +13580,9 @@
         "balance": 2896978,
         "yearlyBudget": 30671452
       }
+    },
+    "github": {
+      "org": "webpack"
     }
   },
   {
@@ -12742,6 +13604,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "jlantunez/webslides"
     }
   },
   {
@@ -12887,6 +13752,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "alibaba/weex-ui"
     }
   },
   {
@@ -12908,6 +13776,9 @@
         "yearlyBudget": 15740
       },
       "goals": []
+    },
+    "github": {
+      "repo": "WhitestormJS/whitestorm.js"
     }
   },
   {
@@ -12965,6 +13836,9 @@
         "balance": 6394,
         "yearlyBudget": 57661
       }
+    },
+    "github": {
+      "repo": "Requarks/wiki"
     }
   },
   {
@@ -12986,6 +13860,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "cheng-kang/wildfire"
     }
   },
   {
@@ -13007,6 +13884,9 @@
         "yearlyBudget": 405
       },
       "goals": []
+    },
+    "github": {
+      "repo": "vanila-io/wireflow"
     }
   },
   {
@@ -13028,6 +13908,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "ahmadawais/WPGulp"
     }
   },
   {
@@ -13049,6 +13932,9 @@
         "yearlyBudget": 0
       },
       "goals": []
+    },
+    "github": {
+      "repo": "yakkeejs/yakkee-core"
     }
   }
 ]
