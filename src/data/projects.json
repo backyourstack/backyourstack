@@ -8063,9 +8063,9 @@
     ],
     "opencollective": {
       "id": 13662,
-      "name": "ORY Hydra",
-      "slug": "ory-hydra",
-      "description": "Hardened OAuth2 and OpenID Connect Server",
+      "name": "ORY",
+      "slug": "ory",
+      "description": "ORY is a software company building specialised, developer-friendly, security-focused open source software.",
       "sponsors": [
         {
           "id": 15215,
