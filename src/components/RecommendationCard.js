@@ -79,7 +79,7 @@ export default class RecommendationCard extends React.Component {
   );
 
   getBackingData = (recommendation, opencollective) => (
-    opencollective && opencollective.memberOf.find(membership =>
+    opencollective && opencollective.backing.find(membership =>
       recommendation.opencollective.id === membership.collective.id
     )
   );

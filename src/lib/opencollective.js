@@ -4,32 +4,60 @@ import cache from './cache';
 
 const baseUrl = 'https://opencollective.com/api/graphql';
 
-const getCollectiveWithBackingQuery = `
-  query Collective($slug: String!) {
-    Collective(slug: $slug) {
+const getCollectiveWithBackingQuery = `query Collective($slug: String!) {
+  Collective(slug: $slug) {
+    id
+    type
+    slug
+    name
+    backing: memberOf(role: "BACKER", limit: 100) {
       id
-      type
-      slug
-      name
-      memberOf(role: "BACKER", limit: 100) {
+      role
+      createdAt
+      stats {
+        totalDonations
+      }
+      collective {
         id
-        role
-        createdAt
-        stats {
-          totalDonations
-        }
-        collective {
-          id
-          name
-          slug
-          type
-        }
+        name
+        slug
+        type
       }
     }
-  }`;
+  }
+}`;
 
-function fetchCollective (slug) {
-  const cacheKey = `collective_${slug}`;
+const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
+  Collective(slug: $slug) {
+    id
+    type
+    slug
+    name
+    description
+    stats {
+      balance
+      yearlyBudget
+    }
+    settings
+    members {
+      role
+      createdAt
+      stats {
+        totalDonations
+      }
+      member {
+        id
+        type
+        name
+        slug
+      }
+    }
+  }
+}
+`;
+
+function fetchCollectiveWithBacking (slug) {
+  const cacheKey = `collective_with_backing_${slug}`;
 
   if (cache.has(cacheKey)) {
     return cache.get(cacheKey);
@@ -40,13 +68,32 @@ function fetchCollective (slug) {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
     })
-    .catch(err => {
-      console.error(err);
+    .catch(() => {
       cache.set(cacheKey, null);
       return null;
     });
 }
 
+function fetchCollectiveWithMembers (slug) {
+  const cacheKey = `collective_with_members_${slug}`;
+
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
+  }
+
+  return request(baseUrl, getCollectiveWithMembersQuery, { slug })
+    .then(data => {
+      cache.set(cacheKey, data.Collective);
+      return data.Collective;
+    })
+    .catch(() => {
+      cache.set(cacheKey, null);
+      return null;
+    });
+}
+
+
 export {
-  fetchCollective,
+  fetchCollectiveWithBacking,
+  fetchCollectiveWithMembers,
 };

@@ -9,7 +9,7 @@ import {
 } from './github';
 
 import {
-  fetchCollective,
+  fetchCollectiveWithBacking,
 } from './opencollective';
 
 import {
@@ -54,9 +54,9 @@ function searchUsers (q, accessToken) {
     fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-function getCollective (profile) {
+function getCollectiveWithBacking (profile) {
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
-  return fetchCollective(slug);
+  return fetchCollectiveWithBacking(slug);
 }
 
 async function getProfileData (id, accessToken) {
@@ -66,7 +66,7 @@ async function getProfileData (id, accessToken) {
 
   const profile = await fetchProfile(id, accessToken);
 
-  const opencollective = await getCollective(profile);
+  const opencollective = await getCollectiveWithBacking(profile);
 
   const repos = await fetchReposForProfile(profile, accessToken)
     .then(repos =>
