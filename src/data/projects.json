@@ -3,6 +3,7 @@
     "name": "30-seconds-of-code",
     "packages": [
       {
+        "type": "npm",
         "name": "30-seconds-of-code"
       }
     ],
@@ -22,51 +23,67 @@
     "name": "accounts-js",
     "packages": [
       {
+        "type": "npm",
         "name": "@accounts/client-password"
       },
       {
+        "type": "npm",
         "name": "@accounts/client"
       },
       {
+        "type": "npm",
         "name": "@accounts/database-manager"
       },
       {
+        "type": "npm",
         "name": "@accounts/mongo"
       },
       {
+        "type": "npm",
         "name": "@accounts/redis"
       },
       {
+        "type": "npm",
         "name": "@accounts/error"
       },
       {
+        "type": "npm",
         "name": "@accounts/express-session"
       },
       {
+        "type": "npm",
         "name": "@accounts/oauth-instagram"
       },
       {
+        "type": "npm",
         "name": "@accounts/oauth-twitter"
       },
       {
+        "type": "npm",
         "name": "@accounts/oauth"
       },
       {
+        "type": "npm",
         "name": "@accounts/password"
       },
       {
+        "type": "npm",
         "name": "@accounts/rest-client"
       },
       {
+        "type": "npm",
         "name": "@accounts/rest-express"
       },
       {
+        "type": "npm",
         "name": "@accounts/server"
       },
       {
+        "type": "npm",
         "name": "@accounts/two-factor"
       },
       {
+        "type": "npm",
         "name": "@accounts/types"
       }
     ],
@@ -86,9 +103,11 @@
     "name": "altair",
     "packages": [
       {
+        "type": "npm",
         "name": "altair-express-middleware"
       },
       {
+        "type": "npm",
         "name": "altair-static"
       }
     ],
@@ -120,6 +139,7 @@
     "name": "anchor-cms",
     "packages": [
       {
+        "type": "npm",
         "name": "anchor-cms"
       }
     ],
@@ -139,6 +159,7 @@
     "name": "angular-datepicker",
     "packages": [
       {
+        "type": "npm",
         "name": "ng2-date-picker"
       }
     ],
@@ -158,6 +179,7 @@
     "name": "angular-fullstack",
     "packages": [
       {
+        "type": "npm",
         "name": "generator-angular-fullstack"
       }
     ],
@@ -206,6 +228,7 @@
     "name": "angular-socialshare",
     "packages": [
       {
+        "type": "npm",
         "name": "angular-socialshare"
       }
     ],
@@ -225,27 +248,35 @@
     "name": "angular",
     "packages": [
       {
+        "type": "npm",
         "name": "@angular/common"
       },
       {
+        "type": "npm",
         "name": "@angular/core"
       },
       {
+        "type": "npm",
         "name": "@angular/platform-browser-dynamic"
       },
       {
+        "type": "npm",
         "name": "@angular/compiler"
       },
       {
+        "type": "npm",
         "name": "@angular/platform-browser"
       },
       {
+        "type": "npm",
         "name": "@angular/forms"
       },
       {
+        "type": "npm",
         "name": "@angular/router"
       },
       {
+        "type": "npm",
         "name": "@angular/animations"
       }
     ]
@@ -254,6 +285,7 @@
     "name": "ant-design",
     "packages": [
       {
+        "type": "npm",
         "name": "antd"
       }
     ],
@@ -273,6 +305,7 @@
     "name": "aplayer",
     "packages": [
       {
+        "type": "npm",
         "name": "aplayer"
       }
     ],
@@ -292,6 +325,7 @@
     "name": "aurelia",
     "packages": [
       {
+        "type": "npm",
         "name": "aurelia-framework"
       }
     ],
@@ -385,6 +419,7 @@
     "name": "ava-ia",
     "packages": [
       {
+        "type": "npm",
         "name": "ava-ia"
       }
     ],
@@ -404,6 +439,7 @@
     "name": "ava",
     "packages": [
       {
+        "type": "npm",
         "name": "ava"
       }
     ],
@@ -423,6 +459,7 @@
     "name": "awesome-mac",
     "packages": [
       {
+        "type": "npm",
         "name": "awesome-mac"
       }
     ],
@@ -442,6 +479,7 @@
     "name": "awesome-react-native-native-modules",
     "packages": [
       {
+        "type": "npm",
         "name": "awesome-react-native-native-modules"
       }
     ],
@@ -460,6 +498,7 @@
     "name": "ax-boot-framework",
     "packages": [
       {
+        "type": "npm",
         "name": "axboot"
       }
     ],
@@ -487,6 +526,7 @@
     "name": "ax5ui-kernel",
     "packages": [
       {
+        "type": "npm",
         "name": "ax5ui-kernel"
       }
     ],
@@ -523,492 +563,655 @@
     "logo": "/static/img/profile/profile-pic-babel.jpg",
     "packages": [
       {
+        "type": "npm",
         "name": "babel-eslint"
       },
       {
+        "type": "npm",
         "name": "babel-core"
       },
       {
+        "type": "npm",
         "name": "babel-loader"
       },
       {
+        "type": "npm",
         "name": "babel-preset-es2015"
       },
       {
+        "type": "npm",
         "name": "babel-cli"
       },
       {
+        "type": "npm",
         "name": "babel-preset-env"
       },
       {
+        "type": "npm",
         "name": "babel-preset-react"
       },
       {
+        "type": "npm",
         "name": "babel-register"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-transform-object-rest-spread"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-transform-runtime"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-transform-class-properties"
       },
       {
+        "type": "npm",
         "name": "babel-preset-stage-0"
       },
       {
+        "type": "npm",
         "name": "babel-polyfill"
       },
       {
+        "type": "npm",
         "name": "babel-preset-stage-2"
       },
       {
+        "type": "npm",
         "name": "babel-runtime"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-transform-flow-strip-types"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-external-helpers"
       },
       {
+        "type": "npm",
         "name": "eslint-plugin-babel"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-transform-es2015-modules-commonjs"
       },
       {
+        "type": "npm",
         "name": "gulp-babel"
       },
       {
+        "type": "npm",
         "name": "@babel/core"
       },
       {
+        "type": "npm",
         "name": "babel-preset-stage-1"
       },
       {
+        "type": "npm",
         "name": "@babel/cli"
       },
       {
+        "type": "npm",
         "name": "@babel/code-frame"
       },
       {
+        "type": "npm",
         "name": "@babel/generator"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-annotate-as-pure"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-bindify-decorators"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-builder-binary-assignment-operator-visitor"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-builder-react-jsx"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-call-delegate"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-define-map"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-explode-assignable-expression"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-explode-class"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-fixtures"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-function-name"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-get-function-arity"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-hoist-variables"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-member-expression-to-functions"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-module-imports"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-module-transforms"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-optimise-call-expression"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-plugin-test-runner"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-plugin-utils"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-regex"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-remap-async-to-generator"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-replace-supers"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-simple-access"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-split-export-declaration"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-transform-fixture-test-runner"
       },
       {
+        "type": "npm",
         "name": "@babel/helper-wrap-function"
       },
       {
+        "type": "npm",
         "name": "@babel/helpers"
       },
       {
+        "type": "npm",
         "name": "@babel/highlight"
       },
       {
+        "type": "npm",
         "name": "@babel/node"
       },
       {
+        "type": "npm",
         "name": "@babel/parser"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-external-helpers"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-async-generator-functions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-class-properties"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-decorators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-do-expressions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-export-default-from"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-export-namespace-from"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-function-bind"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-function-sent"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-json-strings"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-logical-assignment-operators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-nullish-coalescing-operator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-numeric-separator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-object-rest-spread"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-optional-catch-binding"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-optional-chaining"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-pipeline-operator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-throw-expressions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-proposal-unicode-property-regex"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-async-generators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-bigint"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-class-properties"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-decorators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-do-expressions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-dynamic-import"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-export-default-from"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-export-namespace-from"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-flow"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-function-bind"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-function-sent"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-import-meta"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-json-strings"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-jsx"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-logical-assignment-operators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-nullish-coalescing-operator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-numeric-separator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-object-rest-spread"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-optional-catch-binding"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-optional-chaining"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-pipeline-operator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-throw-expressions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-syntax-typescript"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-arrow-functions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-async-to-generator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-block-scoped-functions"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-block-scoping"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-classes"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-computed-properties"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-destructuring"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-dotall-regex"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-duplicate-keys"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-exponentiation-operator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-flow-comments"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-flow-strip-types"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-for-of"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-function-name"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-instanceof"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-jscript"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-literals"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-member-expression-literals"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-modules-amd"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-modules-commonjs"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-modules-systemjs"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-modules-umd"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-new-target"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-object-assign"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-object-set-prototype-of-to-assign"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-object-super"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-parameters"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-property-literals"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-property-mutators"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-proto-to-assign"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-constant-elements"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-display-name"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-inline-elements"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-jsx-compat"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-jsx-self"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-jsx-source"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-jsx"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-regenerator"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-reserved-words"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-runtime"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-shorthand-properties"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-spread"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-sticky-regex"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-strict-mode"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-template-literals"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-typeof-symbol"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-typescript"
       },
       {
+        "type": "npm",
         "name": "@babel/plugin-transform-unicode-regex"
       },
       {
+        "type": "npm",
         "name": "@babel/polyfill"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-env-standalone"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-env"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-es2015"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-es2016"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-es2017"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-flow"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-react"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-stage-0"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-stage-1"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-stage-2"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-stage-3"
       },
       {
+        "type": "npm",
         "name": "@babel/preset-typescript"
       },
       {
+        "type": "npm",
         "name": "@babel/register"
       },
       {
+        "type": "npm",
         "name": "@babel/runtime"
       },
       {
+        "type": "npm",
         "name": "@babel/standalone"
       },
       {
+        "type": "npm",
         "name": "@babel/template"
       },
       {
+        "type": "npm",
         "name": "@babel/traverse"
       },
       {
+        "type": "npm",
         "name": "@babel/types"
       }
     ],
@@ -1111,6 +1314,7 @@
     "name": "beaker",
     "packages": [
       {
+        "type": "npm",
         "name": "beakerbrowser"
       }
     ],
@@ -1155,6 +1359,7 @@
     "name": "better-xlsx",
     "packages": [
       {
+        "type": "npm",
         "name": "better-xlsx"
       }
     ],
@@ -1174,6 +1379,7 @@
     "name": "bigjs",
     "packages": [
       {
+        "type": "npm",
         "name": "big.js"
       }
     ],
@@ -1193,6 +1399,7 @@
     "name": "boostnoteio",
     "packages": [
       {
+        "type": "npm",
         "name": "boost"
       }
     ],
@@ -1215,6 +1422,7 @@
     "name": "bootstrap-table",
     "packages": [
       {
+        "type": "npm",
         "name": "bootstrap-table"
       }
     ],
@@ -1234,6 +1442,7 @@
     "name": "bootstrap-vue",
     "packages": [
       {
+        "type": "npm",
         "name": "bootstrap-vue"
       }
     ],
@@ -1282,9 +1491,11 @@
     "name": "bootstrap",
     "packages": [
       {
+        "type": "npm",
         "name": "bootstrap"
       },
       {
+        "type": "npm",
         "name": "bootstrap-sass"
       }
     ]
@@ -1293,6 +1504,7 @@
     "name": "botkit",
     "packages": [
       {
+        "type": "npm",
         "name": "botkit"
       }
     ],
@@ -1321,6 +1533,7 @@
     "name": "bower",
     "packages": [
       {
+        "type": "npm",
         "name": "bower"
       }
     ],
@@ -1397,6 +1610,7 @@
     "name": "bpkg",
     "packages": [
       {
+        "type": "npm",
         "name": "bpkg"
       }
     ],
@@ -1419,6 +1633,7 @@
     "name": "bundlesize",
     "packages": [
       {
+        "type": "npm",
         "name": "bundlesize"
       }
     ],
@@ -1438,6 +1653,7 @@
     "name": "buttercup",
     "packages": [
       {
+        "type": "npm",
         "name": "buttercup-desktop"
       }
     ],
@@ -1457,6 +1673,7 @@
     "name": "caption",
     "packages": [
       {
+        "type": "npm",
         "name": "caption"
       }
     ],
@@ -1476,6 +1693,7 @@
     "name": "cboard",
     "packages": [
       {
+        "type": "npm",
         "name": "cboard"
       }
     ],
@@ -1495,6 +1713,7 @@
     "name": "ccxt",
     "packages": [
       {
+        "type": "npm",
         "name": "ccxt"
       }
     ],
@@ -1514,6 +1733,7 @@
     "name": "cdnjs",
     "packages": [
       {
+        "type": "npm",
         "name": "cdnjs"
       }
     ],
@@ -1533,6 +1753,7 @@
     "name": "cerebro",
     "packages": [
       {
+        "type": "npm",
         "name": "cerebro"
       }
     ],
@@ -1552,6 +1773,7 @@
     "name": "cezerin-693",
     "packages": [
       {
+        "type": "npm",
         "name": "cezerin"
       }
     ],
@@ -1571,6 +1793,7 @@
     "name": "cezerin",
     "packages": [
       {
+        "type": "npm",
         "name": "cezerin"
       }
     ],
@@ -1604,6 +1827,7 @@
     "name": "chai",
     "packages": [
       {
+        "type": "npm",
         "name": "chai"
       }
     ],
@@ -1652,6 +1876,7 @@
     "name": "chaijs",
     "packages": [
       {
+        "type": "npm",
         "name": "chai"
       }
     ],
@@ -1700,6 +1925,7 @@
     "name": "chamilo",
     "packages": [
       {
+        "type": "npm",
         "name": "chamilo"
       }
     ],
@@ -1722,6 +1948,7 @@
     "name": "cheerio",
     "packages": [
       {
+        "type": "npm",
         "name": "cheerio"
       }
     ],
@@ -1763,6 +1990,7 @@
     "name": "choo",
     "packages": [
       {
+        "type": "npm",
         "name": "choo"
       }
     ],
@@ -1804,6 +2032,7 @@
     "name": "cloudboost",
     "packages": [
       {
+        "type": "npm",
         "name": "cloudboost-server"
       }
     ],
@@ -1823,6 +2052,7 @@
     "name": "cloudcmd",
     "packages": [
       {
+        "type": "npm",
         "name": "cloudcmd"
       }
     ],
@@ -1842,6 +2072,7 @@
     "name": "cmv-app",
     "packages": [
       {
+        "type": "npm",
         "name": "ConfigurableMapViewerCMV"
       }
     ],
@@ -1861,6 +2092,7 @@
     "name": "cockpit",
     "packages": [
       {
+        "type": "npm",
         "name": "cockpit-next"
       }
     ],
@@ -1891,6 +2123,7 @@
     "name": "code-settings-sync",
     "packages": [
       {
+        "type": "npm",
         "name": "code-settings-sync"
       }
     ],
@@ -1933,6 +2166,7 @@
     "name": "codebuddies",
     "packages": [
       {
+        "type": "npm",
         "name": "codebuddies-v2"
       }
     ],
@@ -1963,12 +2197,15 @@
     "name": "codesandbox",
     "packages": [
       {
+        "type": "npm",
         "name": "codesandbox-api"
       },
       {
+        "type": "npm",
         "name": "react-smooshpack"
       },
       {
+        "type": "npm",
         "name": "smooshpack"
       }
     ],
@@ -2006,21 +2243,27 @@
     "name": "colmena",
     "packages": [
       {
+        "type": "npm",
         "name": "@colmena/colmena"
       },
       {
+        "type": "npm",
         "name": "@colmena/admin-layout"
       },
       {
+        "type": "npm",
         "name": "@colmena/admin-lb-sdk"
       },
       {
+        "type": "npm",
         "name": "@colmena/admin-ui"
       },
       {
+        "type": "npm",
         "name": "@colmena/api-helpers"
       },
       {
+        "type": "npm",
         "name": "@colmena/logger"
       }
     ],
@@ -2040,6 +2283,7 @@
     "name": "color-space",
     "packages": [
       {
+        "type": "npm",
         "name": "color-space"
       }
     ],
@@ -2059,6 +2303,7 @@
     "name": "colyseus",
     "packages": [
       {
+        "type": "npm",
         "name": "colyseus"
       }
     ],
@@ -2086,9 +2331,11 @@
     "name": "commitizen",
     "packages": [
       {
+        "type": "npm",
         "name": "cz-conventional-changelog"
       },
       {
+        "type": "npm",
         "name": "commitizen"
       }
     ],
@@ -2108,6 +2355,7 @@
     "name": "compodoc",
     "packages": [
       {
+        "type": "npm",
         "name": "@compodoc/compodoc"
       }
     ],
@@ -2138,6 +2386,7 @@
     "name": "cq-prolyfill",
     "packages": [
       {
+        "type": "npm",
         "name": "cq-prolyfill"
       }
     ],
@@ -2160,6 +2409,7 @@
     "name": "csvtojson",
     "packages": [
       {
+        "type": "npm",
         "name": "csvtojson"
       }
     ],
@@ -2182,6 +2432,7 @@
     "name": "d3-node-editor",
     "packages": [
       {
+        "type": "npm",
         "name": "d3-node-editor"
       }
     ],
@@ -2203,6 +2454,7 @@
     "name": "dat",
     "packages": [
       {
+        "type": "npm",
         "name": "dat"
       }
     ],
@@ -2223,6 +2475,7 @@
     "name": "date-fns",
     "packages": [
       {
+        "type": "npm",
         "name": "date-fns"
       }
     ],
@@ -2250,6 +2503,7 @@
     "name": "dayjs",
     "packages": [
       {
+        "type": "npm",
         "name": "dayjs"
       }
     ],
@@ -2270,6 +2524,7 @@
     "name": "debug",
     "packages": [
       {
+        "type": "npm",
         "name": "debug"
       }
     ],
@@ -2304,6 +2559,7 @@
     "name": "democracyearth",
     "packages": [
       {
+        "type": "npm",
         "name": "Sovereign.app"
       }
     ],
@@ -2323,6 +2579,7 @@
     "name": "dep",
     "packages": [
       {
+        "type": "npm",
         "name": "dep"
       }
     ],
@@ -2342,6 +2599,7 @@
     "name": "dim",
     "packages": [
       {
+        "type": "npm",
         "name": "dim"
       }
     ],
@@ -2404,6 +2662,7 @@
     "name": "distributed",
     "packages": [
       {
+        "type": "npm",
         "name": "Fireideaz"
       }
     ],
@@ -2423,6 +2682,7 @@
     "name": "dockerio",
     "packages": [
       {
+        "type": "npm",
         "name": "docker.io"
       }
     ],
@@ -2450,9 +2710,11 @@
     "name": "docsify",
     "packages": [
       {
+        "type": "npm",
         "name": "docsify"
       },
       {
+        "type": "npm",
         "name": "docsify-server-renderer"
       }
     ],
@@ -2487,6 +2749,7 @@
     "name": "document-register-element",
     "packages": [
       {
+        "type": "npm",
         "name": "document-register-element"
       }
     ],
@@ -2514,6 +2777,7 @@
     "name": "docute",
     "packages": [
       {
+        "type": "npm",
         "name": "docute"
       }
     ],
@@ -2533,21 +2797,27 @@
     "name": "docz",
     "packages": [
       {
+        "type": "npm",
         "name": "docz-core"
       },
       {
+        "type": "npm",
         "name": "docz-plugin-babel6"
       },
       {
+        "type": "npm",
         "name": "docz-plugin-css"
       },
       {
+        "type": "npm",
         "name": "docz-theme-default"
       },
       {
+        "type": "npm",
         "name": "docz"
       },
       {
+        "type": "npm",
         "name": "load-cfg"
       }
     ],
@@ -2575,6 +2845,7 @@
     "name": "dot",
     "packages": [
       {
+        "type": "npm",
         "name": "SimplePresence"
       }
     ],
@@ -2594,6 +2865,7 @@
     "name": "dplayer",
     "packages": [
       {
+        "type": "npm",
         "name": "dplayer"
       }
     ],
@@ -2613,6 +2885,7 @@
     "name": "draft-js-markdown-shortcuts-plugin",
     "packages": [
       {
+        "type": "npm",
         "name": "draft-js-markdown-shortcuts-plugin"
       }
     ],
@@ -2631,6 +2904,7 @@
     "name": "easystatic",
     "packages": [
       {
+        "type": "npm",
         "name": "easystatic"
       }
     ],
@@ -2650,6 +2924,7 @@
     "name": "electron-react-boilerplate",
     "packages": [
       {
+        "type": "npm",
         "name": "electron-react-boilerplate"
       }
     ],
@@ -2669,9 +2944,11 @@
     "name": "electron",
     "packages": [
       {
+        "type": "npm",
         "name": "electron"
       },
       {
+        "type": "npm",
         "name": "electron-builder"
       }
     ],
@@ -2734,33 +3011,43 @@
     "name": "element",
     "packages": [
       {
+        "type": "npm",
         "name": "element-ui"
       },
       {
+        "type": "npm",
         "name": "element-carousel"
       },
       {
+        "type": "npm",
         "name": "element-cascader"
       },
       {
+        "type": "npm",
         "name": "element-color-picker"
       },
       {
+        "type": "npm",
         "name": "element-datepicker"
       },
       {
+        "type": "npm",
         "name": "element-loading"
       },
       {
+        "type": "npm",
         "name": "element-pagination"
       },
       {
+        "type": "npm",
         "name": "element-table"
       },
       {
+        "type": "npm",
         "name": "element-theme-chalk"
       },
       {
+        "type": "npm",
         "name": "element-upload"
       }
     ],
@@ -2816,6 +3103,7 @@
     "name": "eme",
     "packages": [
       {
+        "type": "npm",
         "name": "eme"
       }
     ],
@@ -2835,6 +3123,7 @@
     "name": "emma-cli",
     "packages": [
       {
+        "type": "npm",
         "name": "emma-cli"
       }
     ],
@@ -2857,9 +3146,11 @@
     "name": "enzyme",
     "packages": [
       {
+        "type": "npm",
         "name": "enzyme"
       },
       {
+        "type": "npm",
         "name": "enzyme-adapter-react-16"
       }
     ]
@@ -2868,6 +3159,7 @@
     "name": "esdiscuss",
     "packages": [
       {
+        "type": "npm",
         "name": "esdiscuss.org"
       }
     ],
@@ -2887,9 +3179,11 @@
     "name": "eslint-config-airbnb",
     "packages": [
       {
+        "type": "npm",
         "name": "eslint-config-airbnb"
       },
       {
+        "type": "npm",
         "name": "eslint-config-airbnb-base"
       }
     ]
@@ -2898,6 +3192,7 @@
     "name": "esnextbin",
     "packages": [
       {
+        "type": "npm",
         "name": "esnextbin"
       }
     ],
@@ -2917,6 +3212,7 @@
     "name": "express-validator",
     "packages": [
       {
+        "type": "npm",
         "name": "express-validator"
       }
     ],
@@ -2943,30 +3239,39 @@
     "name": "express",
     "packages": [
       {
+        "type": "npm",
         "name": "express"
       },
       {
+        "type": "npm",
         "name": "body-parser"
       },
       {
+        "type": "npm",
         "name": "cookie-parser"
       },
       {
+        "type": "npm",
         "name": "multer"
       },
       {
+        "type": "npm",
         "name": "express-session"
       },
       {
+        "type": "npm",
         "name": "morgan"
       },
       {
+        "type": "npm",
         "name": "compression"
       },
       {
+        "type": "npm",
         "name": "cors"
       },
       {
+        "type": "npm",
         "name": "serve-favicon"
       }
     ]
@@ -2975,6 +3280,7 @@
     "name": "fabricplugin",
     "packages": [
       {
+        "type": "npm",
         "name": "cordova-fabric-plugin"
       }
     ],
@@ -2994,6 +3300,7 @@
     "name": "fakerjs",
     "packages": [
       {
+        "type": "npm",
         "name": "faker"
       }
     ],
@@ -3042,6 +3349,7 @@
     "name": "fast-xml-parser",
     "packages": [
       {
+        "type": "npm",
         "name": "fast-xml-parser"
       }
     ],
@@ -3064,6 +3372,7 @@
     "name": "feathers",
     "packages": [
       {
+        "type": "npm",
         "name": "@feathersjs/feathers"
       }
     ],
@@ -3129,123 +3438,163 @@
     "name": "fela",
     "packages": [
       {
+        "type": "npm",
         "name": "babel-plugin-fela"
       },
       {
+        "type": "npm",
         "name": "fela-beautifier"
       },
       {
+        "type": "npm",
         "name": "fela-bindings"
       },
       {
+        "type": "npm",
         "name": "fela-combine-arrays"
       },
       {
+        "type": "npm",
         "name": "fela-dom"
       },
       {
+        "type": "npm",
         "name": "fela-identifier"
       },
       {
+        "type": "npm",
         "name": "fela-layout-debugger"
       },
       {
+        "type": "npm",
         "name": "fela-logger"
       },
       {
+        "type": "npm",
         "name": "fela-monolithic"
       },
       {
+        "type": "npm",
         "name": "fela-native"
       },
       {
+        "type": "npm",
         "name": "fela-perf"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-bidi"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-custom-property"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-dynamic-prefixer"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-embedded"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-extend"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-fallback-value"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-friendly-pseudo-class"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-important"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-isolation"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-logger"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-lvha"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-named-keys"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-native-media-query"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-placeholder-prefixer"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-prefixer"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-remove-undefined"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-rtl"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-simulate"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-unit"
       },
       {
+        "type": "npm",
         "name": "fela-plugin-validator"
       },
       {
+        "type": "npm",
         "name": "fela-preset-dev"
       },
       {
+        "type": "npm",
         "name": "fela-preset-web"
       },
       {
+        "type": "npm",
         "name": "fela-statistics"
       },
       {
+        "type": "npm",
         "name": "fela-tools"
       },
       {
+        "type": "npm",
         "name": "fela-utils"
       },
       {
+        "type": "npm",
         "name": "fela"
       },
       {
+        "type": "npm",
         "name": "inferno-fela"
       },
       {
+        "type": "npm",
         "name": "preact-fela"
       },
       {
+        "type": "npm",
         "name": "react-fela"
       }
     ],
@@ -3265,6 +3614,7 @@
     "name": "final-form",
     "packages": [
       {
+        "type": "npm",
         "name": "react-final-form"
       }
     ],
@@ -3299,6 +3649,7 @@
     "name": "firekylin",
     "packages": [
       {
+        "type": "npm",
         "name": "firekylin"
       }
     ],
@@ -3318,6 +3669,7 @@
     "name": "fontplop",
     "packages": [
       {
+        "type": "npm",
         "name": "fontplop"
       }
     ],
@@ -3345,6 +3697,7 @@
     "name": "framework7",
     "packages": [
       {
+        "type": "npm",
         "name": "framework7"
       }
     ],
@@ -3364,6 +3717,7 @@
     "name": "front-end-checklist",
     "packages": [
       {
+        "type": "npm",
         "name": "front-end-checklist"
       }
     ],
@@ -3383,6 +3737,7 @@
     "name": "fuse-box",
     "packages": [
       {
+        "type": "npm",
         "name": "fuse-box"
       }
     ],
@@ -3402,246 +3757,327 @@
     "name": "gatsby",
     "packages": [
       {
+        "type": "npm",
         "name": "babel-plugin-remove-graphql-queries"
       },
       {
+        "type": "npm",
         "name": "gatsby-cli"
       },
       {
+        "type": "npm",
         "name": "gatsby-dev-cli"
       },
       {
+        "type": "npm",
         "name": "gatsby-image"
       },
       {
+        "type": "npm",
         "name": "gatsby-link"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-canonical-urls"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-catch-links"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-coffeescript"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-create-client-paths"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-emotion"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-facebook-analytics"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-feed"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-fullstory"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-glamor"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-google-analytics"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-google-tagmanager"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-guess-js"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-jss"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-less"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-lodash"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-manifest"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-netlify-cms"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-netlify"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-no-sourcemaps"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-nprogress"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-offline"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-page-creator"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-preact"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-react-css-modules"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-react-helmet"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-remove-trailing-slashes"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-sass"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-sharp"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-sitemap"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-styled-components"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-styled-jsx"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-styletron"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-stylus"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-twitter"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-typescript"
       },
       {
+        "type": "npm",
         "name": "gatsby-plugin-typography"
       },
       {
+        "type": "npm",
         "name": "gatsby-react-router-scroll"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-autolink-headers"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-code-repls"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-copy-linked-files"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-custom-blocks"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-embed-snippet"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-images-contentful"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-images"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-katex"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-prismjs"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-responsive-iframe"
       },
       {
+        "type": "npm",
         "name": "gatsby-remark-smartypants"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-contentful"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-drupal"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-faker"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-filesystem"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-hacker-news"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-lever"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-medium"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-mongodb"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-npm-package-search"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-wikipedia"
       },
       {
+        "type": "npm",
         "name": "gatsby-source-wordpress"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-csv"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-documentationjs"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-excel"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-hjson"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-javascript-frontmatter"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-javascript-static-exports"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-json"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-react-docgen"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-remark"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-screenshot"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-sharp"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-sqip"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-toml"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-xml"
       },
       {
+        "type": "npm",
         "name": "gatsby-transformer-yaml"
       },
       {
+        "type": "npm",
         "name": "gatsby"
       },
       {
+        "type": "npm",
         "name": "graphql-skip-limit"
       }
     ],
@@ -3718,6 +4154,7 @@
     "name": "generator-jhipster",
     "packages": [
       {
+        "type": "npm",
         "name": "generator-jhipster"
       }
     ],
@@ -3808,6 +4245,7 @@
     "name": "ghost",
     "packages": [
       {
+        "type": "npm",
         "name": "ghost"
       }
     ],
@@ -3827,6 +4265,7 @@
     "name": "go-plus",
     "packages": [
       {
+        "type": "npm",
         "name": "go-plus"
       }
     ],
@@ -3846,6 +4285,7 @@
     "name": "google-play-music-desktop-player-unofficial-",
     "packages": [
       {
+        "type": "npm",
         "name": "google-play-music-desktop-player"
       }
     ],
@@ -3865,6 +4305,7 @@
     "name": "grapesjs",
     "packages": [
       {
+        "type": "npm",
         "name": "grapesjs"
       }
     ],
@@ -3920,6 +4361,7 @@
     "name": "graphql-compose",
     "packages": [
       {
+        "type": "npm",
         "name": "graphql-compose"
       }
     ],
@@ -3948,6 +4390,7 @@
     "name": "graphql-shield",
     "packages": [
       {
+        "type": "npm",
         "name": "graphql-shield"
       }
     ],
@@ -3978,6 +4421,7 @@
     "name": "grow-iot",
     "packages": [
       {
+        "type": "npm",
         "name": "Grow-IoT"
       }
     ],
@@ -4005,24 +4449,31 @@
     "name": "grunt",
     "packages": [
       {
+        "type": "npm",
         "name": "grunt"
       },
       {
+        "type": "npm",
         "name": "grunt-contrib-uglify"
       },
       {
+        "type": "npm",
         "name": "grunt-contrib-watch"
       },
       {
+        "type": "npm",
         "name": "grunt-cli"
       },
       {
+        "type": "npm",
         "name": "grunt-contrib-copy"
       },
       {
+        "type": "npm",
         "name": "grunt-contrib-concat"
       },
       {
+        "type": "npm",
         "name": "grunt-contrib-clean"
       }
     ]
@@ -4031,9 +4482,11 @@
     "name": "gulp",
     "packages": [
       {
+        "type": "npm",
         "name": "gulp"
       },
       {
+        "type": "npm",
         "name": "gulp-util"
       }
     ],
@@ -4136,6 +4589,7 @@
     "name": "gulpjs",
     "packages": [
       {
+        "type": "npm",
         "name": "gulp"
       }
     ],
@@ -4238,6 +4692,7 @@
     "name": "gun",
     "packages": [
       {
+        "type": "npm",
         "name": "gun"
       }
     ],
@@ -4257,6 +4712,7 @@
     "name": "hackathon-starter",
     "packages": [
       {
+        "type": "npm",
         "name": "hackathon-starter"
       }
     ],
@@ -4276,6 +4732,7 @@
     "name": "hamstersjs",
     "packages": [
       {
+        "type": "npm",
         "name": "hamsters.js"
       }
     ],
@@ -4295,6 +4752,7 @@
     "name": "hedron",
     "packages": [
       {
+        "type": "npm",
         "name": "hedron"
       }
     ],
@@ -4314,6 +4772,7 @@
     "name": "hexo",
     "packages": [
       {
+        "type": "npm",
         "name": "hexo"
       }
     ],
@@ -4333,6 +4792,7 @@
     "name": "holyjs",
     "packages": [
       {
+        "type": "npm",
         "name": "holyjs"
       }
     ],
@@ -4352,6 +4812,7 @@
     "name": "hoodie",
     "packages": [
       {
+        "type": "npm",
         "name": "hoodie"
       }
     ],
@@ -4396,6 +4857,7 @@
     "name": "hospitalrun",
     "packages": [
       {
+        "type": "npm",
         "name": "hospitalrun"
       }
     ],
@@ -4423,6 +4885,7 @@
     "name": "html-webpack-plugin",
     "packages": [
       {
+        "type": "npm",
         "name": "html-webpack-plugin"
       }
     ],
@@ -4450,6 +4913,7 @@
     "name": "hyperhtml",
     "packages": [
       {
+        "type": "npm",
         "name": "hyperhtml"
       }
     ],
@@ -4477,6 +4941,7 @@
     "name": "hyperline",
     "packages": [
       {
+        "type": "npm",
         "name": "hyperline"
       }
     ],
@@ -4496,6 +4961,7 @@
     "name": "icestudio",
     "packages": [
       {
+        "type": "npm",
         "name": "icestudio"
       }
     ],
@@ -4515,27 +4981,35 @@
     "name": "idyll",
     "packages": [
       {
+        "type": "npm",
         "name": "idyll-ast"
       },
       {
+        "type": "npm",
         "name": "idyll"
       },
       {
+        "type": "npm",
         "name": "idyll-compiler"
       },
       {
+        "type": "npm",
         "name": "idyll-components"
       },
       {
+        "type": "npm",
         "name": "idyll-document"
       },
       {
+        "type": "npm",
         "name": "idyll-layouts"
       },
       {
+        "type": "npm",
         "name": "idyll-themes"
       },
       {
+        "type": "npm",
         "name": "idyll-template-projects"
       }
     ],
@@ -4558,48 +5032,63 @@
     "name": "inferno",
     "packages": [
       {
+        "type": "npm",
         "name": "inferno-clone-vnode"
       },
       {
+        "type": "npm",
         "name": "inferno-compat"
       },
       {
+        "type": "npm",
         "name": "inferno-component"
       },
       {
+        "type": "npm",
         "name": "inferno-create-class"
       },
       {
+        "type": "npm",
         "name": "inferno-create-element"
       },
       {
+        "type": "npm",
         "name": "inferno-devtools"
       },
       {
+        "type": "npm",
         "name": "inferno-hyperscript"
       },
       {
+        "type": "npm",
         "name": "inferno-mobx"
       },
       {
+        "type": "npm",
         "name": "inferno-redux"
       },
       {
+        "type": "npm",
         "name": "inferno-router"
       },
       {
+        "type": "npm",
         "name": "inferno-server"
       },
       {
+        "type": "npm",
         "name": "inferno-shared"
       },
       {
+        "type": "npm",
         "name": "inferno-test-utils"
       },
       {
+        "type": "npm",
         "name": "inferno-vnode-flags"
       },
       {
+        "type": "npm",
         "name": "inferno"
       }
     ],
@@ -4634,6 +5123,7 @@
     "name": "invoiceplane",
     "packages": [
       {
+        "type": "npm",
         "name": "invoiceplane"
       }
     ],
@@ -4653,6 +5143,7 @@
     "name": "ionrangeslider",
     "packages": [
       {
+        "type": "npm",
         "name": "ion-rangeslider"
       }
     ],
@@ -4672,6 +5163,7 @@
     "name": "ionsound",
     "packages": [
       {
+        "type": "npm",
         "name": "ion-sound"
       }
     ],
@@ -4691,6 +5183,7 @@
     "name": "ioredis",
     "packages": [
       {
+        "type": "npm",
         "name": "ioredis"
       }
     ],
@@ -4723,6 +5216,7 @@
     "name": "isomorphic-git",
     "packages": [
       {
+        "type": "npm",
         "name": "isomorphic-git"
       }
     ],
@@ -4745,12 +5239,15 @@
     "name": "istanbul",
     "packages": [
       {
+        "type": "npm",
         "name": "nyc"
       },
       {
+        "type": "npm",
         "name": "istanbul"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-istanbul"
       }
     ]
@@ -4759,9 +5256,11 @@
     "name": "jasmine",
     "packages": [
       {
+        "type": "npm",
         "name": "jasmine-core"
       },
       {
+        "type": "npm",
         "name": "jasmine"
       }
     ]
@@ -4770,6 +5269,7 @@
     "name": "javascript-obfuscator",
     "packages": [
       {
+        "type": "npm",
         "name": "javascript-obfuscator"
       }
     ],
@@ -4804,117 +5304,155 @@
     "name": "jest",
     "packages": [
       {
+        "type": "npm",
         "name": "jest"
       },
       {
+        "type": "npm",
         "name": "babel-jest"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-jest-hoist"
       },
       {
+        "type": "npm",
         "name": "babel-preset-jest"
       },
       {
+        "type": "npm",
         "name": "diff-sequences"
       },
       {
+        "type": "npm",
         "name": "eslint-config-fb-strict"
       },
       {
+        "type": "npm",
         "name": "expect"
       },
       {
+        "type": "npm",
         "name": "jest-changed-files"
       },
       {
+        "type": "npm",
         "name": "jest-circus"
       },
       {
+        "type": "npm",
         "name": "jest-cli"
       },
       {
+        "type": "npm",
         "name": "jest-config"
       },
       {
+        "type": "npm",
         "name": "jest-diff"
       },
       {
+        "type": "npm",
         "name": "jest-docblock"
       },
       {
+        "type": "npm",
         "name": "jest-each"
       },
       {
+        "type": "npm",
         "name": "jest-editor-support"
       },
       {
+        "type": "npm",
         "name": "jest-environment-jsdom"
       },
       {
+        "type": "npm",
         "name": "jest-environment-node"
       },
       {
+        "type": "npm",
         "name": "jest-get-type"
       },
       {
+        "type": "npm",
         "name": "jest-haste-map"
       },
       {
+        "type": "npm",
         "name": "jest-jasmine2"
       },
       {
+        "type": "npm",
         "name": "jest-leak-detector"
       },
       {
+        "type": "npm",
         "name": "jest-matcher-utils"
       },
       {
+        "type": "npm",
         "name": "jest-message-util"
       },
       {
+        "type": "npm",
         "name": "jest-mock"
       },
       {
+        "type": "npm",
         "name": "jest-phabricator"
       },
       {
+        "type": "npm",
         "name": "jest-regex-util"
       },
       {
+        "type": "npm",
         "name": "jest-repl"
       },
       {
+        "type": "npm",
         "name": "jest-resolve-dependencies"
       },
       {
+        "type": "npm",
         "name": "jest-resolve"
       },
       {
+        "type": "npm",
         "name": "jest-runner"
       },
       {
+        "type": "npm",
         "name": "jest-runtime"
       },
       {
+        "type": "npm",
         "name": "jest-serializer"
       },
       {
+        "type": "npm",
         "name": "jest-snapshot"
       },
       {
+        "type": "npm",
         "name": "jest-test-typescript-parser"
       },
       {
+        "type": "npm",
         "name": "jest-util"
       },
       {
+        "type": "npm",
         "name": "jest-validate"
       },
       {
+        "type": "npm",
         "name": "jest-worker"
       },
       {
+        "type": "npm",
         "name": "pretty-format"
       }
     ],
@@ -4945,6 +5483,7 @@
     "name": "jqplay",
     "packages": [
       {
+        "type": "npm",
         "name": "jqplay"
       }
     ],
@@ -4964,6 +5503,7 @@
     "name": "jquery-adaptive-background",
     "packages": [
       {
+        "type": "npm",
         "name": "jquery.adaptive-backgrounds"
       }
     ],
@@ -4983,6 +5523,7 @@
     "name": "jquery-jsonview",
     "packages": [
       {
+        "type": "npm",
         "name": "jquery-jsonview"
       }
     ],
@@ -5002,6 +5543,7 @@
     "name": "jsbin",
     "packages": [
       {
+        "type": "npm",
         "name": "jsbin"
       }
     ],
@@ -5021,51 +5563,67 @@
     "name": "jsonmvc",
     "packages": [
       {
+        "type": "npm",
         "name": "jsonmvc-datastore"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-helper-ajax"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-helper-guid"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-helper-observer"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-helper-stream"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-ajax"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-fields"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-firebase"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-forms"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-framework7"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-time"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-module-ui"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-schema"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-util-changes"
       },
       {
+        "type": "npm",
         "name": "jsonmvc-util-load"
       },
       {
+        "type": "npm",
         "name": "jsonmvc"
       }
     ],
@@ -5085,6 +5643,7 @@
     "name": "jss",
     "packages": [
       {
+        "type": "npm",
         "name": "jss"
       }
     ],
@@ -5112,6 +5671,7 @@
     "name": "jsui",
     "packages": [
       {
+        "type": "npm",
         "name": "jsui"
       }
     ],
@@ -5134,6 +5694,7 @@
     "name": "junior-recruit-scheduler",
     "packages": [
       {
+        "type": "npm",
         "name": "junior-recruit-scheduler"
       }
     ],
@@ -5153,6 +5714,7 @@
     "name": "kaku",
     "packages": [
       {
+        "type": "npm",
         "name": "Kaku"
       }
     ],
@@ -5172,6 +5734,7 @@
     "name": "karma-typescript",
     "packages": [
       {
+        "type": "npm",
         "name": "karma-typescript"
       }
     ],
@@ -5191,27 +5754,35 @@
     "name": "karma",
     "packages": [
       {
+        "type": "npm",
         "name": "karma"
       },
       {
+        "type": "npm",
         "name": "karma-chrome-launcher"
       },
       {
+        "type": "npm",
         "name": "karma-jasmine"
       },
       {
+        "type": "npm",
         "name": "karma-coverage"
       },
       {
+        "type": "npm",
         "name": "karma-mocha"
       },
       {
+        "type": "npm",
         "name": "karma-phantomjs-launcher"
       },
       {
+        "type": "npm",
         "name": "karma-firefox-launcher"
       },
       {
+        "type": "npm",
         "name": "karma-sauce-launcher"
       }
     ]
@@ -5220,6 +5791,7 @@
     "name": "kea",
     "packages": [
       {
+        "type": "npm",
         "name": "kea"
       }
     ],
@@ -5254,6 +5826,7 @@
     "name": "koajs",
     "packages": [
       {
+        "type": "npm",
         "name": "koa"
       }
     ],
@@ -5295,6 +5868,7 @@
     "name": "lad",
     "packages": [
       {
+        "type": "npm",
         "name": "lad"
       }
     ],
@@ -5314,6 +5888,7 @@
     "name": "lazy-bot",
     "packages": [
       {
+        "type": "npm",
         "name": "lazy.ai"
       }
     ],
@@ -5333,6 +5908,7 @@
     "name": "lcui",
     "packages": [
       {
+        "type": "npm",
         "name": "lcui"
       }
     ],
@@ -5352,6 +5928,7 @@
     "name": "lem",
     "packages": [
       {
+        "type": "npm",
         "name": "lem"
       }
     ],
@@ -5379,6 +5956,7 @@
     "name": "lethargy",
     "packages": [
       {
+        "type": "npm",
         "name": "lethargy"
       }
     ],
@@ -5398,6 +5976,7 @@
     "name": "level",
     "packages": [
       {
+        "type": "npm",
         "name": "levelup"
       }
     ],
@@ -5428,6 +6007,7 @@
     "name": "lidarr",
     "packages": [
       {
+        "type": "npm",
         "name": "Sonarr"
       }
     ],
@@ -5456,9 +6036,11 @@
     "name": "lodash",
     "packages": [
       {
+        "type": "npm",
         "name": "lodash"
       },
       {
+        "type": "npm",
         "name": "babel-plugin-lodash"
       }
     ]
@@ -5467,6 +6049,7 @@
     "name": "lolashare",
     "packages": [
       {
+        "type": "npm",
         "name": "ferment"
       }
     ],
@@ -5486,6 +6069,7 @@
     "name": "lumo",
     "packages": [
       {
+        "type": "npm",
         "name": "lumo"
       }
     ],
@@ -5505,6 +6089,7 @@
     "name": "marktext",
     "packages": [
       {
+        "type": "npm",
         "name": "marktext"
       }
     ],
@@ -5542,12 +6127,15 @@
     "edited": true,
     "packages": [
       {
+        "type": "npm",
         "name": "@material-ui/core"
       },
       {
+        "type": "npm",
         "name": "@material-ui/icons"
       },
       {
+        "type": "npm",
         "name": "material-ui"
       }
     ],
@@ -5627,6 +6215,7 @@
     "name": "material",
     "packages": [
       {
+        "type": "npm",
         "name": "daemonite-material"
       }
     ],
@@ -5649,6 +6238,7 @@
     "name": "matterwiki",
     "packages": [
       {
+        "type": "npm",
         "name": "Matterwiki"
       }
     ],
@@ -5668,6 +6258,7 @@
     "name": "metamask",
     "packages": [
       {
+        "type": "npm",
         "name": "metamask_io"
       }
     ],
@@ -5687,6 +6278,7 @@
     "name": "meteor-up",
     "packages": [
       {
+        "type": "npm",
         "name": "mup"
       }
     ],
@@ -5777,6 +6369,7 @@
     "name": "mimic",
     "packages": [
       {
+        "type": "npm",
         "name": "mimic"
       }
     ],
@@ -5796,6 +6389,7 @@
     "name": "mobx-react-form",
     "packages": [
       {
+        "type": "npm",
         "name": "mobx-react-form"
       }
     ],
@@ -5815,6 +6409,7 @@
     "name": "mobx",
     "packages": [
       {
+        "type": "npm",
         "name": "mobx"
       }
     ],
@@ -5900,6 +6495,7 @@
     "logo": "/static/img/profile/profile-pic-mocha.jpg",
     "packages": [
       {
+        "type": "npm",
         "name": "mocha"
       }
     ],
@@ -5990,6 +6586,7 @@
     "name": "mochajs",
     "packages": [
       {
+        "type": "npm",
         "name": "mocha"
       }
     ],
@@ -6080,6 +6677,7 @@
     "name": "modular-admin",
     "packages": [
       {
+        "type": "npm",
         "name": "modular-admin-html"
       }
     ],
@@ -6102,6 +6700,7 @@
     "name": "moleculer",
     "packages": [
       {
+        "type": "npm",
         "name": "moleculer"
       }
     ],
@@ -6124,9 +6723,11 @@
     "name": "moment",
     "packages": [
       {
+        "type": "npm",
         "name": "moment"
       },
       {
+        "type": "npm",
         "name": "moment-timezone"
       }
     ]
@@ -6135,6 +6736,7 @@
     "name": "mongoose",
     "packages": [
       {
+        "type": "npm",
         "name": "mongoose"
       }
     ],
@@ -6218,6 +6820,7 @@
     "name": "moro",
     "packages": [
       {
+        "type": "npm",
         "name": "moro"
       }
     ],
@@ -6237,6 +6840,7 @@
     "name": "musicplayer",
     "packages": [
       {
+        "type": "npm",
         "name": "redditmusicplayer"
       }
     ],
@@ -6256,6 +6860,7 @@
     "name": "ndm",
     "packages": [
       {
+        "type": "npm",
         "name": "ndm"
       }
     ],
@@ -6275,6 +6880,7 @@
     "name": "nest",
     "packages": [
       {
+        "type": "npm",
         "name": "nestjs"
       }
     ],
@@ -6377,6 +6983,7 @@
     "name": "neteasecloudmusicapi",
     "packages": [
       {
+        "type": "npm",
         "name": "NeteaseCloudMusicApi"
       }
     ],
@@ -6396,6 +7003,7 @@
     "name": "nexe",
     "packages": [
       {
+        "type": "npm",
         "name": "nexe"
       }
     ],
@@ -6415,24 +7023,31 @@
     "name": "ngrx",
     "packages": [
       {
+        "type": "npm",
         "name": "@ngrx/platform"
       },
       {
+        "type": "npm",
         "name": "@ngrx/effects"
       },
       {
+        "type": "npm",
         "name": "@ngrx/entity"
       },
       {
+        "type": "npm",
         "name": "@ngrx/router-store"
       },
       {
+        "type": "npm",
         "name": "@ngrx/schematics"
       },
       {
+        "type": "npm",
         "name": "@ngrx/store-devtools"
       },
       {
+        "type": "npm",
         "name": "@ngrx/store"
       }
     ],
@@ -6509,6 +7124,7 @@
     "name": "ngx-infinite-scroll",
     "packages": [
       {
+        "type": "npm",
         "name": "ngx-infinite-scroll"
       }
     ],
@@ -6528,6 +7144,7 @@
     "name": "nightwatch",
     "packages": [
       {
+        "type": "npm",
         "name": "nightwatch"
       }
     ],
@@ -6547,6 +7164,7 @@
     "name": "noble",
     "packages": [
       {
+        "type": "npm",
         "name": "noble"
       }
     ],
@@ -6581,6 +7199,7 @@
     "name": "nock",
     "packages": [
       {
+        "type": "npm",
         "name": "nock"
       }
     ],
@@ -6616,6 +7235,7 @@
     "name": "node-data",
     "packages": [
       {
+        "type": "npm",
         "name": "nodedata"
       }
     ],
@@ -6635,6 +7255,7 @@
     "name": "node-twitter",
     "packages": [
       {
+        "type": "npm",
         "name": "nwitter"
       }
     ],
@@ -6654,6 +7275,7 @@
     "name": "nodebook",
     "packages": [
       {
+        "type": "npm",
         "name": "nodebook"
       }
     ],
@@ -6673,6 +7295,7 @@
     "name": "nodemailer",
     "packages": [
       {
+        "type": "npm",
         "name": "nodemailer"
       }
     ],
@@ -6707,6 +7330,7 @@
     "name": "nodemon",
     "packages": [
       {
+        "type": "npm",
         "name": "nodemon"
       }
     ],
@@ -6790,6 +7414,7 @@
     "name": "npms-www",
     "packages": [
       {
+        "type": "npm",
         "name": "npms-www"
       }
     ],
@@ -6809,6 +7434,7 @@
     "name": "nuxtjs",
     "packages": [
       {
+        "type": "npm",
         "name": "nuxt"
       }
     ],
@@ -6902,123 +7528,163 @@
     "name": "octolinker",
     "packages": [
       {
+        "type": "npm",
         "name": "@octolinker/blob-reader"
       },
       {
+        "type": "npm",
         "name": "@octolinker/core"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-grammar-regex-collection"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-insert-link"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-parser-byline"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-process-json"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-regex-builder"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-settings"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-sort-urls"
       },
       {
+        "type": "npm",
         "name": "@octolinker/helper-version"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-bower-manifest"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-composer-manifest"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-css"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-docker"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-dot-net-core"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-dot-net"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-gemfile-manifest"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-go"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-haskell"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-homebrew-manifest"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-html"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-java"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-javascript"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-less"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-nodejs-relative-path"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-npm-manifest"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-python"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-requirements-txt"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-ruby"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-rust"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-sass"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-typescript"
       },
       {
+        "type": "npm",
         "name": "@octolinker/plugin-vim"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-git-url"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-github-search"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-github-shorthand"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-hoogle-search"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-live-query"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-nuget"
       },
       {
+        "type": "npm",
         "name": "@octolinker/resolver-relative-file"
       }
     ],
@@ -7038,6 +7704,7 @@
     "name": "octotree",
     "packages": [
       {
+        "type": "npm",
         "name": "octotree"
       }
     ],
@@ -7065,6 +7732,7 @@
     "name": "offline-plugin",
     "packages": [
       {
+        "type": "npm",
         "name": "offline-plugin"
       }
     ],
@@ -7106,6 +7774,7 @@
     "name": "onedark-pro",
     "packages": [
       {
+        "type": "npm",
         "name": "Material-theme"
       }
     ],
@@ -7125,6 +7794,7 @@
     "name": "oni",
     "packages": [
       {
+        "type": "npm",
         "name": "oni"
       }
     ],
@@ -7144,6 +7814,7 @@
     "name": "openfl",
     "packages": [
       {
+        "type": "npm",
         "name": "openfl"
       }
     ],
@@ -7163,21 +7834,27 @@
     "name": "openjscad",
     "packages": [
       {
+        "type": "npm",
         "name": "@jscad/openjscad"
       },
       {
+        "type": "npm",
         "name": "@jscad/cli"
       },
       {
+        "type": "npm",
         "name": "@jscad/core"
       },
       {
+        "type": "npm",
         "name": "@jscad/desktop"
       },
       {
+        "type": "npm",
         "name": "@jscad/examples"
       },
       {
+        "type": "npm",
         "name": "@jscad/web"
       }
     ],
@@ -7197,6 +7874,7 @@
     "name": "openlayers",
     "packages": [
       {
+        "type": "npm",
         "name": "openlayers"
       }
     ],
@@ -7216,6 +7894,7 @@
     "name": "ory-hydra",
     "packages": [
       {
+        "type": "npm",
         "name": "ory-hydra-sdk"
       }
     ],
@@ -7246,6 +7925,7 @@
     "name": "p3x-onenote",
     "packages": [
       {
+        "type": "npm",
         "name": "p3x-onenote"
       }
     ],
@@ -7274,6 +7954,7 @@
     "name": "parcel",
     "packages": [
       {
+        "type": "npm",
         "name": "parcel-bundler"
       }
     ],
@@ -7364,6 +8045,7 @@
     "name": "parle",
     "packages": [
       {
+        "type": "npm",
         "name": "parle"
       }
     ],
@@ -7383,6 +8065,7 @@
     "name": "parse-server",
     "packages": [
       {
+        "type": "npm",
         "name": "parse-server"
       }
     ],
@@ -7452,15 +8135,19 @@
     "name": "passport",
     "packages": [
       {
+        "type": "npm",
         "name": "passport"
       },
       {
+        "type": "npm",
         "name": "passport-local"
       },
       {
+        "type": "npm",
         "name": "passport-github"
       },
       {
+        "type": "npm",
         "name": "passport-facebook"
       }
     ]
@@ -7469,48 +8156,63 @@
     "name": "phenomic",
     "packages": [
       {
+        "type": "npm",
         "name": "@phenomic/api-client"
       },
       {
+        "type": "npm",
         "name": "@phenomic/babel-preset"
       },
       {
+        "type": "npm",
         "name": "@phenomic/cli"
       },
       {
+        "type": "npm",
         "name": "@phenomic/core"
       },
       {
+        "type": "npm",
         "name": "@phenomic/helpers-transform"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-api-related-content"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-bundler-webpack"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-collector-files"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-public-assets"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-renderer-react"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-rss-feed"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-transform-asciidoc"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-transform-json"
       },
       {
+        "type": "npm",
         "name": "@phenomic/plugin-transform-markdown"
       },
       {
+        "type": "npm",
         "name": "@phenomic/preset-react-app"
       }
     ],
@@ -7531,6 +8233,7 @@
     "name": "pickadatejs",
     "packages": [
       {
+        "type": "npm",
         "name": "pickadate"
       }
     ],
@@ -7550,6 +8253,7 @@
     "name": "podsframework",
     "packages": [
       {
+        "type": "npm",
         "name": "pods"
       }
     ],
@@ -7577,6 +8281,7 @@
     "name": "poi",
     "packages": [
       {
+        "type": "npm",
         "name": "poi"
       }
     ],
@@ -7596,6 +8301,7 @@
     "name": "pokeapi",
     "packages": [
       {
+        "type": "npm",
         "name": "pokeapi"
       }
     ],
@@ -7615,6 +8321,7 @@
     "name": "polished",
     "packages": [
       {
+        "type": "npm",
         "name": "polished"
       }
     ],
@@ -7634,12 +8341,15 @@
     "name": "postcss",
     "packages": [
       {
+        "type": "npm",
         "name": "autoprefixer"
       },
       {
+        "type": "npm",
         "name": "postcss-loader"
       },
       {
+        "type": "npm",
         "name": "postcss"
       }
     ]
@@ -7648,6 +8358,7 @@
     "name": "preact",
     "packages": [
       {
+        "type": "npm",
         "name": "preact"
       }
     ],
@@ -7741,6 +8452,7 @@
     "name": "pressbooks",
     "packages": [
       {
+        "type": "npm",
         "name": "@pressbooks/pressbooks"
       }
     ],
@@ -7760,12 +8472,15 @@
     "name": "prettier",
     "packages": [
       {
+        "type": "npm",
         "name": "prettier"
       },
       {
+        "type": "npm",
         "name": "eslint-config-prettier"
       },
       {
+        "type": "npm",
         "name": "eslint-plugin-prettier"
       }
     ]
@@ -7774,39 +8489,51 @@
     "name": "pug",
     "packages": [
       {
+        "type": "npm",
         "name": "pug"
       },
       {
+        "type": "npm",
         "name": "pug-attrs"
       },
       {
+        "type": "npm",
         "name": "pug-code-gen"
       },
       {
+        "type": "npm",
         "name": "pug-error"
       },
       {
+        "type": "npm",
         "name": "pug-filters"
       },
       {
+        "type": "npm",
         "name": "pug-lexer"
       },
       {
+        "type": "npm",
         "name": "pug-linker"
       },
       {
+        "type": "npm",
         "name": "pug-load"
       },
       {
+        "type": "npm",
         "name": "pug-parser"
       },
       {
+        "type": "npm",
         "name": "pug-runtime"
       },
       {
+        "type": "npm",
         "name": "pug-strip-comments"
       },
       {
+        "type": "npm",
         "name": "pug-walk"
       }
     ],
@@ -7897,6 +8624,7 @@
     "name": "radarr",
     "packages": [
       {
+        "type": "npm",
         "name": "Sonarr"
       }
     ],
@@ -7916,6 +8644,7 @@
     "name": "ramda-adjunct",
     "packages": [
       {
+        "type": "npm",
         "name": "ramda-adjunct"
       }
     ],
@@ -7935,6 +8664,7 @@
     "name": "ran",
     "packages": [
       {
+        "type": "npm",
         "name": "ran-boilerplate"
       }
     ],
@@ -7954,6 +8684,7 @@
     "name": "react-ace",
     "packages": [
       {
+        "type": "npm",
         "name": "react-ace"
       }
     ],
@@ -7976,9 +8707,11 @@
     "name": "react-app",
     "packages": [
       {
+        "type": "npm",
         "name": "react-app-tools"
       },
       {
+        "type": "npm",
         "name": "react-app"
       }
     ],
@@ -7998,6 +8731,7 @@
     "name": "react-boilerplate",
     "packages": [
       {
+        "type": "npm",
         "name": "react-boilerplate"
       }
     ],
@@ -8063,6 +8797,7 @@
     "name": "react-dropzone",
     "packages": [
       {
+        "type": "npm",
         "name": "react-dropzone"
       }
     ],
@@ -8085,6 +8820,7 @@
     "name": "react-hot-loader",
     "packages": [
       {
+        "type": "npm",
         "name": "react-hot-loader"
       }
     ],
@@ -8104,6 +8840,7 @@
     "name": "react-native-camera",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-camera"
       }
     ],
@@ -8123,6 +8860,7 @@
     "name": "react-native-debugger",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-debugger"
       }
     ],
@@ -8142,6 +8880,7 @@
     "name": "react-native-elements",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-elements"
       }
     ],
@@ -8172,6 +8911,7 @@
     "name": "react-native-firebase",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-firebase"
       }
     ],
@@ -8257,6 +8997,7 @@
     "name": "react-native-image-crop-picker",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-image-crop-picker"
       }
     ],
@@ -8276,6 +9017,7 @@
     "name": "react-native-masonry",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-masonry"
       }
     ],
@@ -8295,6 +9037,7 @@
     "name": "react-native-responsive-grid",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-responsive-grid"
       }
     ],
@@ -8314,6 +9057,7 @@
     "name": "react-native-router-flux",
     "packages": [
       {
+        "type": "npm",
         "name": "react-native-router-flux"
       }
     ],
@@ -8341,6 +9085,7 @@
     "name": "react-on-rails",
     "packages": [
       {
+        "type": "npm",
         "name": "react-on-rails"
       }
     ],
@@ -8360,12 +9105,15 @@
     "name": "react-pdf",
     "packages": [
       {
+        "type": "npm",
         "name": "@react-pdf/dom"
       },
       {
+        "type": "npm",
         "name": "@react-pdf/node"
       },
       {
+        "type": "npm",
         "name": "@react-pdf/core"
       }
     ],
@@ -8405,6 +9153,7 @@
     "name": "react-pwa",
     "packages": [
       {
+        "type": "npm",
         "name": "ReactPWA"
       }
     ],
@@ -8439,6 +9188,7 @@
     "name": "react-redux-firebase",
     "packages": [
       {
+        "type": "npm",
         "name": "react-redux-firebase"
       }
     ],
@@ -8458,9 +9208,11 @@
     "name": "react-router",
     "packages": [
       {
+        "type": "npm",
         "name": "react-router"
       },
       {
+        "type": "npm",
         "name": "react-router-dom"
       }
     ]
@@ -8469,6 +9221,7 @@
     "name": "react-slick",
     "packages": [
       {
+        "type": "npm",
         "name": "react-slick"
       }
     ],
@@ -8491,6 +9244,7 @@
     "name": "react-toolbox",
     "packages": [
       {
+        "type": "npm",
         "name": "react-toolbox"
       }
     ],
@@ -8539,15 +9293,19 @@
     "name": "react",
     "packages": [
       {
+        "type": "npm",
         "name": "react"
       },
       {
+        "type": "npm",
         "name": "react-dom"
       },
       {
+        "type": "npm",
         "name": "prop-types"
       },
       {
+        "type": "npm",
         "name": "react-test-renderer"
       }
     ]
@@ -8556,18 +9314,23 @@
     "name": "reactabular",
     "packages": [
       {
+        "type": "npm",
         "name": "reactabular-dnd"
       },
       {
+        "type": "npm",
         "name": "reactabular-resizable"
       },
       {
+        "type": "npm",
         "name": "reactabular-sticky"
       },
       {
+        "type": "npm",
         "name": "reactabular-table"
       },
       {
+        "type": "npm",
         "name": "reactabular-virtualized"
       }
     ],
@@ -8587,6 +9350,7 @@
     "name": "ream",
     "packages": [
       {
+        "type": "npm",
         "name": "ream"
       }
     ],
@@ -8606,6 +9370,7 @@
     "name": "redom",
     "packages": [
       {
+        "type": "npm",
         "name": "redom"
       }
     ],
@@ -8625,6 +9390,7 @@
     "name": "redux-devtools-extension",
     "packages": [
       {
+        "type": "npm",
         "name": "remotedev-redux-devtools-extension"
       }
     ],
@@ -8680,6 +9446,7 @@
     "name": "redux-in-chinese",
     "packages": [
       {
+        "type": "npm",
         "name": "redux-in-chinese"
       }
     ],
@@ -8699,9 +9466,11 @@
     "name": "redux-saga",
     "packages": [
       {
+        "type": "npm",
         "name": "babel-plugin-redux-saga"
       },
       {
+        "type": "npm",
         "name": "redux-saga"
       }
     ],
@@ -8764,12 +9533,15 @@
     "name": "redux",
     "packages": [
       {
+        "type": "npm",
         "name": "redux"
       },
       {
+        "type": "npm",
         "name": "react-redux"
       },
       {
+        "type": "npm",
         "name": "redux-thunk"
       }
     ]
@@ -8778,6 +9550,7 @@
     "name": "relax",
     "packages": [
       {
+        "type": "npm",
         "name": "relax"
       }
     ],
@@ -8797,6 +9570,7 @@
     "name": "remote-ftp",
     "packages": [
       {
+        "type": "npm",
         "name": "remote-ftp"
       }
     ],
@@ -8816,6 +9590,7 @@
     "name": "research-engine",
     "packages": [
       {
+        "type": "npm",
         "name": "research-engine"
       }
     ],
@@ -8835,6 +9610,7 @@
     "name": "rest-hapi",
     "packages": [
       {
+        "type": "npm",
         "name": "rest-hapi"
       }
     ],
@@ -8868,6 +9644,7 @@
     "name": "resumake",
     "packages": [
       {
+        "type": "npm",
         "name": "resumake.io"
       }
     ],
@@ -8887,6 +9664,7 @@
     "name": "resume",
     "packages": [
       {
+        "type": "npm",
         "name": "aresume"
       }
     ],
@@ -8906,6 +9684,7 @@
     "name": "riot",
     "packages": [
       {
+        "type": "npm",
         "name": "riot"
       }
     ],
@@ -8948,24 +9727,31 @@
     "name": "rollup",
     "packages": [
       {
+        "type": "npm",
         "name": "rollup"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-babel"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-node-resolve"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-commonjs"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-replace"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-uglify"
       },
       {
+        "type": "npm",
         "name": "rollup-plugin-json"
       }
     ],
@@ -9042,6 +9828,7 @@
     "name": "rsshub",
     "packages": [
       {
+        "type": "npm",
         "name": "rsshub"
       }
     ],
@@ -9084,6 +9871,7 @@
     "name": "rsuite",
     "packages": [
       {
+        "type": "npm",
         "name": "rsuite"
       }
     ],
@@ -9110,6 +9898,7 @@
     "name": "satellizer",
     "packages": [
       {
+        "type": "npm",
         "name": "satellizer"
       }
     ],
@@ -9137,6 +9926,7 @@
     "name": "scion",
     "packages": [
       {
+        "type": "npm",
         "name": "scxml"
       }
     ],
@@ -9156,6 +9946,7 @@
     "name": "searchkit",
     "packages": [
       {
+        "type": "npm",
         "name": "searchkit"
       }
     ],
@@ -9175,6 +9966,7 @@
     "name": "selection-sharer",
     "packages": [
       {
+        "type": "npm",
         "name": "selection-sharer"
       }
     ],
@@ -9194,6 +9986,7 @@
     "name": "shields",
     "packages": [
       {
+        "type": "npm",
         "name": "gh-badges"
       }
     ],
@@ -9249,6 +10042,7 @@
     "name": "sierra",
     "packages": [
       {
+        "type": "npm",
         "name": "sierra-library"
       }
     ],
@@ -9268,6 +10062,7 @@
     "name": "sinon",
     "packages": [
       {
+        "type": "npm",
         "name": "sinon"
       }
     ],
@@ -9323,6 +10118,7 @@
     "name": "sketchpad",
     "packages": [
       {
+        "type": "npm",
         "name": "sketchpad"
       }
     ],
@@ -9342,6 +10138,7 @@
     "name": "slimjs",
     "packages": [
       {
+        "type": "npm",
         "name": "slim-js"
       }
     ],
@@ -9361,6 +10158,7 @@
     "name": "socket.io",
     "packages": [
       {
+        "type": "npm",
         "name": "socket.io"
       }
     ],
@@ -9430,6 +10228,7 @@
     "name": "socketio",
     "packages": [
       {
+        "type": "npm",
         "name": "socket.io"
       }
     ],
@@ -9499,6 +10298,7 @@
     "name": "speedtracker",
     "packages": [
       {
+        "type": "npm",
         "name": "speedtracker"
       }
     ],
@@ -9518,6 +10318,7 @@
     "name": "splitjs",
     "packages": [
       {
+        "type": "npm",
         "name": "split.js"
       }
     ],
@@ -9545,12 +10346,15 @@
     "name": "standard",
     "packages": [
       {
+        "type": "npm",
         "name": "eslint-plugin-standard"
       },
       {
+        "type": "npm",
         "name": "eslint-config-standard"
       },
       {
+        "type": "npm",
         "name": "standard"
       }
     ]
@@ -9559,27 +10363,35 @@
     "name": "storybook",
     "packages": [
       {
+        "type": "npm",
         "name": "@storybook/angular"
       },
       {
+        "type": "npm",
         "name": "@storybook/html"
       },
       {
+        "type": "npm",
         "name": "@storybook/marko"
       },
       {
+        "type": "npm",
         "name": "@storybook/mithril"
       },
       {
+        "type": "npm",
         "name": "@storybook/polymer"
       },
       {
+        "type": "npm",
         "name": "@storybook/react-native"
       },
       {
+        "type": "npm",
         "name": "@storybook/react"
       },
       {
+        "type": "npm",
         "name": "@storybook/vue"
       }
     ],
@@ -9670,105 +10482,139 @@
     "name": "strapi",
     "packages": [
       {
+        "type": "npm",
         "name": "strapi-admin"
       },
       {
+        "type": "npm",
         "name": "strapi-bookshelf"
       },
       {
+        "type": "npm",
         "name": "strapi-ejs"
       },
       {
+        "type": "npm",
         "name": "strapi-email-mailgun"
       },
       {
+        "type": "npm",
         "name": "strapi-email-sendgrid"
       },
       {
+        "type": "npm",
         "name": "strapi-email-sendmail"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-admin"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-api"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-controller"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-model"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-new"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-plugin"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-policy"
       },
       {
+        "type": "npm",
         "name": "strapi-generate-service"
       },
       {
+        "type": "npm",
         "name": "strapi-generate"
       },
       {
+        "type": "npm",
         "name": "strapi-helper-plugin"
       },
       {
+        "type": "npm",
         "name": "strapi-knex"
       },
       {
+        "type": "npm",
         "name": "strapi-lint"
       },
       {
+        "type": "npm",
         "name": "strapi-middleware-views"
       },
       {
+        "type": "npm",
         "name": "strapi-mongoose"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-content-manager"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-content-type-builder"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-email"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-graphql"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-settings-manager"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-upload"
       },
       {
+        "type": "npm",
         "name": "strapi-plugin-users-permissions"
       },
       {
+        "type": "npm",
         "name": "strapi-redis"
       },
       {
+        "type": "npm",
         "name": "strapi-upload-aws-s3"
       },
       {
+        "type": "npm",
         "name": "strapi-upload-cloudinary"
       },
       {
+        "type": "npm",
         "name": "strapi-upload-local"
       },
       {
+        "type": "npm",
         "name": "strapi-upload-rackspace"
       },
       {
+        "type": "npm",
         "name": "strapi-utils"
       },
       {
+        "type": "npm",
         "name": "strapi"
       }
     ],
@@ -9796,6 +10642,7 @@
     "name": "streetmix",
     "packages": [
       {
+        "type": "npm",
         "name": "streetmix"
       }
     ],
@@ -9840,6 +10687,7 @@
     "name": "strider",
     "packages": [
       {
+        "type": "npm",
         "name": "strider"
       }
     ],
@@ -9859,6 +10707,7 @@
     "name": "styled-components",
     "packages": [
       {
+        "type": "npm",
         "name": "styled-components"
       }
     ],
@@ -9900,6 +10749,7 @@
     "name": "styleguidist",
     "packages": [
       {
+        "type": "npm",
         "name": "react-styleguidist"
       }
     ],
@@ -9927,9 +10777,11 @@
     "name": "stylelint",
     "packages": [
       {
+        "type": "npm",
         "name": "stylelint"
       },
       {
+        "type": "npm",
         "name": "stylelint-config-standard"
       }
     ],
@@ -9957,6 +10809,7 @@
     "name": "surfbird",
     "packages": [
       {
+        "type": "npm",
         "name": "surfbird"
       }
     ],
@@ -9976,6 +10829,7 @@
     "name": "sweetalert",
     "packages": [
       {
+        "type": "npm",
         "name": "sweetalert"
       }
     ],
@@ -9995,6 +10849,7 @@
     "name": "sweetalert2",
     "packages": [
       {
+        "type": "npm",
         "name": "sweetalert2"
       }
     ],
@@ -10014,6 +10869,7 @@
     "name": "t-scroll",
     "packages": [
       {
+        "type": "npm",
         "name": "t-scroll"
       }
     ],
@@ -10033,6 +10889,7 @@
     "name": "tabler",
     "packages": [
       {
+        "type": "npm",
         "name": "tabler-ui"
       }
     ],
@@ -10055,6 +10912,7 @@
     "name": "tachyons",
     "packages": [
       {
+        "type": "npm",
         "name": "tachyons"
       }
     ],
@@ -10110,6 +10968,7 @@
     "name": "telegraf",
     "packages": [
       {
+        "type": "npm",
         "name": "telegraf"
       }
     ],
@@ -10129,6 +10988,7 @@
     "name": "thelounge",
     "packages": [
       {
+        "type": "npm",
         "name": "thelounge"
       }
     ],
@@ -10148,6 +11008,7 @@
     "name": "tipbox",
     "packages": [
       {
+        "type": "npm",
         "name": "tipbox"
       }
     ],
@@ -10175,6 +11036,7 @@
     "name": "tldjs",
     "packages": [
       {
+        "type": "npm",
         "name": "tldjs"
       }
     ],
@@ -10203,6 +11065,7 @@
     "name": "trails",
     "packages": [
       {
+        "type": "npm",
         "name": "trails"
       }
     ],
@@ -10230,6 +11093,7 @@
     "name": "tsed",
     "packages": [
       {
+        "type": "npm",
         "name": "ts-express-decorators"
       }
     ],
@@ -10257,342 +11121,455 @@
     "name": "turf",
     "packages": [
       {
+        "type": "npm",
         "name": "@turf/along"
       },
       {
+        "type": "npm",
         "name": "@turf/angle"
       },
       {
+        "type": "npm",
         "name": "@turf/area"
       },
       {
+        "type": "npm",
         "name": "@turf/bbox-clip"
       },
       {
+        "type": "npm",
         "name": "@turf/bbox-polygon"
       },
       {
+        "type": "npm",
         "name": "@turf/bbox"
       },
       {
+        "type": "npm",
         "name": "@turf/bearing"
       },
       {
+        "type": "npm",
         "name": "@turf/bezier-spline"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-clockwise"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-concave"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-contains"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-crosses"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-disjoint"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-equal"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-intersects"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-overlap"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-parallel"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-point-in-polygon"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-point-on-line"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-touches"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-valid"
       },
       {
+        "type": "npm",
         "name": "@turf/boolean-within"
       },
       {
+        "type": "npm",
         "name": "@turf/buffer"
       },
       {
+        "type": "npm",
         "name": "@turf/center-mean"
       },
       {
+        "type": "npm",
         "name": "@turf/center-median"
       },
       {
+        "type": "npm",
         "name": "@turf/center-of-mass"
       },
       {
+        "type": "npm",
         "name": "@turf/center"
       },
       {
+        "type": "npm",
         "name": "@turf/centroid"
       },
       {
+        "type": "npm",
         "name": "@turf/circle"
       },
       {
+        "type": "npm",
         "name": "@turf/clean-coords"
       },
       {
+        "type": "npm",
         "name": "@turf/clone"
       },
       {
+        "type": "npm",
         "name": "@turf/clusters-dbscan"
       },
       {
+        "type": "npm",
         "name": "@turf/clusters-kmeans"
       },
       {
+        "type": "npm",
         "name": "@turf/clusters"
       },
       {
+        "type": "npm",
         "name": "@turf/collect"
       },
       {
+        "type": "npm",
         "name": "@turf/combine"
       },
       {
+        "type": "npm",
         "name": "@turf/concave"
       },
       {
+        "type": "npm",
         "name": "@turf/convex"
       },
       {
+        "type": "npm",
         "name": "@turf/destination"
       },
       {
+        "type": "npm",
         "name": "@turf/difference"
       },
       {
+        "type": "npm",
         "name": "@turf/directional-mean"
       },
       {
+        "type": "npm",
         "name": "@turf/dissolve"
       },
       {
+        "type": "npm",
         "name": "@turf/distance-weight"
       },
       {
+        "type": "npm",
         "name": "@turf/distance"
       },
       {
+        "type": "npm",
         "name": "@turf/ellipse"
       },
       {
+        "type": "npm",
         "name": "@turf/envelope"
       },
       {
+        "type": "npm",
         "name": "@turf/explode"
       },
       {
+        "type": "npm",
         "name": "@turf/flatten"
       },
       {
+        "type": "npm",
         "name": "@turf/flip"
       },
       {
+        "type": "npm",
         "name": "@turf/great-circle"
       },
       {
+        "type": "npm",
         "name": "@turf/helpers"
       },
       {
+        "type": "npm",
         "name": "@turf/hex-grid"
       },
       {
+        "type": "npm",
         "name": "@turf/interpolate"
       },
       {
+        "type": "npm",
         "name": "@turf/intersect"
       },
       {
+        "type": "npm",
         "name": "@turf/invariant"
       },
       {
+        "type": "npm",
         "name": "@turf/isobands"
       },
       {
+        "type": "npm",
         "name": "@turf/isolines"
       },
       {
+        "type": "npm",
         "name": "@turf/kinks"
       },
       {
+        "type": "npm",
         "name": "@turf/length"
       },
       {
+        "type": "npm",
         "name": "@turf/line-arc"
       },
       {
+        "type": "npm",
         "name": "@turf/line-chunk"
       },
       {
+        "type": "npm",
         "name": "@turf/line-intersect"
       },
       {
+        "type": "npm",
         "name": "@turf/line-offset"
       },
       {
+        "type": "npm",
         "name": "@turf/line-overlap"
       },
       {
+        "type": "npm",
         "name": "@turf/line-segment"
       },
       {
+        "type": "npm",
         "name": "@turf/line-slice-along"
       },
       {
+        "type": "npm",
         "name": "@turf/line-slice"
       },
       {
+        "type": "npm",
         "name": "@turf/line-split"
       },
       {
+        "type": "npm",
         "name": "@turf/line-to-polygon"
       },
       {
+        "type": "npm",
         "name": "@turf/mask"
       },
       {
+        "type": "npm",
         "name": "@turf/meta"
       },
       {
+        "type": "npm",
         "name": "@turf/midpoint"
       },
       {
+        "type": "npm",
         "name": "@turf/moran-index"
       },
       {
+        "type": "npm",
         "name": "@turf/nearest-neighbor-analysis"
       },
       {
+        "type": "npm",
         "name": "@turf/nearest-point-on-line"
       },
       {
+        "type": "npm",
         "name": "@turf/nearest-point-to-line"
       },
       {
+        "type": "npm",
         "name": "@turf/nearest-point"
       },
       {
+        "type": "npm",
         "name": "@turf/planepoint"
       },
       {
+        "type": "npm",
         "name": "@turf/point-grid"
       },
       {
+        "type": "npm",
         "name": "@turf/point-on-feature"
       },
       {
+        "type": "npm",
         "name": "@turf/point-to-line-distance"
       },
       {
+        "type": "npm",
         "name": "@turf/points-within-polygon"
       },
       {
+        "type": "npm",
         "name": "@turf/polygon-smooth"
       },
       {
+        "type": "npm",
         "name": "@turf/polygon-tangents"
       },
       {
+        "type": "npm",
         "name": "@turf/polygon-to-line"
       },
       {
+        "type": "npm",
         "name": "@turf/polygonize"
       },
       {
+        "type": "npm",
         "name": "@turf/projection"
       },
       {
+        "type": "npm",
         "name": "@turf/quadrat-analysis"
       },
       {
+        "type": "npm",
         "name": "@turf/random"
       },
       {
+        "type": "npm",
         "name": "@turf/rewind"
       },
       {
+        "type": "npm",
         "name": "@turf/rhumb-bearing"
       },
       {
+        "type": "npm",
         "name": "@turf/rhumb-destination"
       },
       {
+        "type": "npm",
         "name": "@turf/rhumb-distance"
       },
       {
+        "type": "npm",
         "name": "@turf/sample"
       },
       {
+        "type": "npm",
         "name": "@turf/sector"
       },
       {
+        "type": "npm",
         "name": "@turf/shortest-path"
       },
       {
+        "type": "npm",
         "name": "@turf/simplify"
       },
       {
+        "type": "npm",
         "name": "@turf/square-grid"
       },
       {
+        "type": "npm",
         "name": "@turf/square"
       },
       {
+        "type": "npm",
         "name": "@turf/standard-deviational-ellipse"
       },
       {
+        "type": "npm",
         "name": "@turf/tag"
       },
       {
+        "type": "npm",
         "name": "@turf/tesselate"
       },
       {
+        "type": "npm",
         "name": "@turf/tin"
       },
       {
+        "type": "npm",
         "name": "@turf/transform-rotate"
       },
       {
+        "type": "npm",
         "name": "@turf/transform-scale"
       },
       {
+        "type": "npm",
         "name": "@turf/transform-translate"
       },
       {
+        "type": "npm",
         "name": "@turf/triangle-grid"
       },
       {
+        "type": "npm",
         "name": "@turf/truncate"
       },
       {
+        "type": "npm",
         "name": "@turf/union"
       },
       {
+        "type": "npm",
         "name": "@turf/unkink-polygon"
       },
       {
+        "type": "npm",
         "name": "@turf/voronoi"
       },
       {
+        "type": "npm",
         "name": "@turf/turf"
       },
       {
+        "type": "npm",
         "name": "@turf/rectangle-grid"
       }
     ],
@@ -10627,126 +11604,167 @@
     "name": "typographyjs",
     "packages": [
       {
+        "type": "npm",
         "name": "react-typography"
       },
       {
+        "type": "npm",
         "name": "typography-breakpoint-constants"
       },
       {
+        "type": "npm",
         "name": "typography-design-tools"
       },
       {
+        "type": "npm",
         "name": "typography-normalize"
       },
       {
+        "type": "npm",
         "name": "typography-plugin-code"
       },
       {
+        "type": "npm",
         "name": "typography-theme-alton"
       },
       {
+        "type": "npm",
         "name": "typography-theme-bootstrap"
       },
       {
+        "type": "npm",
         "name": "typography-theme-de-young"
       },
       {
+        "type": "npm",
         "name": "typography-theme-doelger"
       },
       {
+        "type": "npm",
         "name": "typography-theme-elk-glen"
       },
       {
+        "type": "npm",
         "name": "typography-theme-fairy-gates"
       },
       {
+        "type": "npm",
         "name": "typography-theme-funston"
       },
       {
+        "type": "npm",
         "name": "typography-theme-github"
       },
       {
+        "type": "npm",
         "name": "typography-theme-grand-view"
       },
       {
+        "type": "npm",
         "name": "typography-theme-irving"
       },
       {
+        "type": "npm",
         "name": "typography-theme-judah"
       },
       {
+        "type": "npm",
         "name": "typography-theme-kirkham"
       },
       {
+        "type": "npm",
         "name": "typography-theme-lawton"
       },
       {
+        "type": "npm",
         "name": "typography-theme-legible"
       },
       {
+        "type": "npm",
         "name": "typography-theme-lincoln"
       },
       {
+        "type": "npm",
         "name": "typography-theme-moraga"
       },
       {
+        "type": "npm",
         "name": "typography-theme-noriega"
       },
       {
+        "type": "npm",
         "name": "typography-theme-ocean-beach"
       },
       {
+        "type": "npm",
         "name": "typography-theme-parnassus"
       },
       {
+        "type": "npm",
         "name": "typography-theme-st-annes"
       },
       {
+        "type": "npm",
         "name": "typography-theme-stardust"
       },
       {
+        "type": "npm",
         "name": "typography-theme-stern-grove"
       },
       {
+        "type": "npm",
         "name": "typography-theme-stow-lake"
       },
       {
+        "type": "npm",
         "name": "typography-theme-sutro"
       },
       {
+        "type": "npm",
         "name": "typography-theme-twin-peaks"
       },
       {
+        "type": "npm",
         "name": "typography-theme-us-web-design-standards"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wikipedia"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2010"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2011"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2012"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2013"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2014"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2015"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-2016"
       },
       {
+        "type": "npm",
         "name": "typography-theme-wordpress-kubrick"
       },
       {
+        "type": "npm",
         "name": "typography"
       }
     ],
@@ -10766,6 +11784,7 @@
     "name": "ui-grid",
     "packages": [
       {
+        "type": "npm",
         "name": "ui-grid"
       }
     ],
@@ -10785,6 +11804,7 @@
     "name": "universalviewer",
     "packages": [
       {
+        "type": "npm",
         "name": "universalviewer"
       }
     ],
@@ -10819,6 +11839,7 @@
     "name": "url-shortener",
     "packages": [
       {
+        "type": "npm",
         "name": "emoji-url-shortener"
       }
     ],
@@ -10838,6 +11859,7 @@
     "name": "v-charts-104",
     "packages": [
       {
+        "type": "npm",
         "name": "v-charts"
       }
     ],
@@ -10857,6 +11879,7 @@
     "name": "v-charts",
     "packages": [
       {
+        "type": "npm",
         "name": "v-charts"
       }
     ],
@@ -10876,6 +11899,7 @@
     "name": "verdaccio",
     "packages": [
       {
+        "type": "npm",
         "name": "verdaccio"
       }
     ],
@@ -10914,6 +11938,7 @@
     "name": "vim-cheat-sheet",
     "packages": [
       {
+        "type": "npm",
         "name": "vim-cheat-sheet"
       }
     ],
@@ -10933,6 +11958,7 @@
     "name": "vis",
     "packages": [
       {
+        "type": "npm",
         "name": "vis"
       }
     ],
@@ -10952,6 +11978,7 @@
     "name": "voca",
     "packages": [
       {
+        "type": "npm",
         "name": "voca"
       }
     ],
@@ -10971,6 +11998,7 @@
     "name": "vsc-material-theme",
     "packages": [
       {
+        "type": "npm",
         "name": "vsc-material-theme"
       }
     ],
@@ -10999,6 +12027,7 @@
     "name": "vue-admin",
     "packages": [
       {
+        "type": "npm",
         "name": "vue-admin"
       }
     ],
@@ -11018,6 +12047,7 @@
     "name": "vue-js-modal",
     "packages": [
       {
+        "type": "npm",
         "name": "vue-js-modal"
       }
     ],
@@ -11039,18 +12069,23 @@
     "logo": "/static/img/profile/profile-pic-vuejs.jpg",
     "packages": [
       {
+        "type": "npm",
         "name": "vue"
       },
       {
+        "type": "npm",
         "name": "vue-template-compiler"
       },
       {
+        "type": "npm",
         "name": "vue-loader"
       },
       {
+        "type": "npm",
         "name": "vuex"
       },
       {
+        "type": "npm",
         "name": "vue-router"
       }
     ],
@@ -11141,6 +12176,7 @@
     "name": "vuesax",
     "packages": [
       {
+        "type": "npm",
         "name": "vuesax"
       }
     ],
@@ -11160,6 +12196,7 @@
     "name": "vux",
     "packages": [
       {
+        "type": "npm",
         "name": "vux"
       }
     ],
@@ -11190,27 +12227,35 @@
     "name": "warriorjs",
     "packages": [
       {
+        "type": "npm",
         "name": "@warriorjs/abilities"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/cli"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/core"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/effects"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/geography"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/tower-beginner"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/tower-intermediate"
       },
       {
+        "type": "npm",
         "name": "@warriorjs/units"
       }
     ],
@@ -11233,6 +12278,7 @@
     "name": "we-vue",
     "packages": [
       {
+        "type": "npm",
         "name": "we-vue"
       }
     ],
@@ -11252,6 +12298,7 @@
     "name": "weather-10kb",
     "packages": [
       {
+        "type": "npm",
         "name": "weather-10kb"
       }
     ],
@@ -11273,54 +12320,71 @@
     "logo": "/static/img/profile/profile-pic-webpack.jpg",
     "packages": [
       {
+        "type": "npm",
         "name": "webpack"
       },
       {
+        "type": "npm",
         "name": "css-loader"
       },
       {
+        "type": "npm",
         "name": "style-loader"
       },
       {
+        "type": "npm",
         "name": "file-loader"
       },
       {
+        "type": "npm",
         "name": "webpack-dev-server"
       },
       {
+        "type": "npm",
         "name": "url-loader"
       },
       {
+        "type": "npm",
         "name": "extract-text-webpack-plugin"
       },
       {
+        "type": "npm",
         "name": "sass-loader"
       },
       {
+        "type": "npm",
         "name": "json-loader"
       },
       {
+        "type": "npm",
         "name": "copy-webpack-plugin"
       },
       {
+        "type": "npm",
         "name": "eslint-loader"
       },
       {
+        "type": "npm",
         "name": "karma-webpack"
       },
       {
+        "type": "npm",
         "name": "webpack-cli"
       },
       {
+        "type": "npm",
         "name": "webpack-hot-middleware"
       },
       {
+        "type": "npm",
         "name": "webpack-bundle-analyzer"
       },
       {
+        "type": "npm",
         "name": "webpack-dev-middleware"
       },
       {
+        "type": "npm",
         "name": "uglifyjs-webpack-plugin"
       }
     ],
@@ -11425,6 +12489,7 @@
     "name": "webslides",
     "packages": [
       {
+        "type": "npm",
         "name": "webslides"
       }
     ],
@@ -11444,99 +12509,131 @@
     "name": "weex-ui",
     "packages": [
       {
+        "type": "npm",
         "name": "weex-ui"
       },
       {
+        "type": "npm",
         "name": "wxc-button"
       },
       {
+        "type": "npm",
         "name": "wxc-cell"
       },
       {
+        "type": "npm",
         "name": "wxc-checkbox"
       },
       {
+        "type": "npm",
         "name": "wxc-countdown"
       },
       {
+        "type": "npm",
         "name": "wxc-dialog"
       },
       {
+        "type": "npm",
         "name": "wxc-ep-slider"
       },
       {
+        "type": "npm",
         "name": "wxc-grid-select"
       },
       {
+        "type": "npm",
         "name": "wxc-icon"
       },
       {
+        "type": "npm",
         "name": "wxc-indexlist"
       },
       {
+        "type": "npm",
         "name": "wxc-lightbox"
       },
       {
+        "type": "npm",
         "name": "wxc-loading"
       },
       {
+        "type": "npm",
         "name": "wxc-lottery-rain"
       },
       {
+        "type": "npm",
         "name": "wxc-mask"
       },
       {
+        "type": "npm",
         "name": "wxc-minibar"
       },
       {
+        "type": "npm",
         "name": "wxc-noticebar"
       },
       {
+        "type": "npm",
         "name": "wxc-overlay"
       },
       {
+        "type": "npm",
         "name": "wxc-page-calendar"
       },
       {
+        "type": "npm",
         "name": "wxc-popover"
       },
       {
+        "type": "npm",
         "name": "wxc-popup"
       },
       {
+        "type": "npm",
         "name": "wxc-progress"
       },
       {
+        "type": "npm",
         "name": "wxc-radio"
       },
       {
+        "type": "npm",
         "name": "wxc-refresher"
       },
       {
+        "type": "npm",
         "name": "wxc-result"
       },
       {
+        "type": "npm",
         "name": "wxc-rich-text"
       },
       {
+        "type": "npm",
         "name": "wxc-searchbar"
       },
       {
+        "type": "npm",
         "name": "wxc-simple-flow"
       },
       {
+        "type": "npm",
         "name": "wxc-slide-nav"
       },
       {
+        "type": "npm",
         "name": "wxc-slider-bar"
       },
       {
+        "type": "npm",
         "name": "wxc-stepper"
       },
       {
+        "type": "npm",
         "name": "wxc-tab-page"
       },
       {
+        "type": "npm",
         "name": "wxc-tag"
       }
     ],
@@ -11556,6 +12653,7 @@
     "name": "whitestormjs",
     "packages": [
       {
+        "type": "npm",
         "name": "whs"
       }
     ],
@@ -11575,6 +12673,7 @@
     "name": "wikijs",
     "packages": [
       {
+        "type": "npm",
         "name": "wiki"
       }
     ],
@@ -11631,6 +12730,7 @@
     "name": "wildfire-473",
     "packages": [
       {
+        "type": "npm",
         "name": "wildfire"
       }
     ],
@@ -11650,6 +12750,7 @@
     "name": "wireflow",
     "packages": [
       {
+        "type": "npm",
         "name": "WireFlow"
       }
     ],
@@ -11669,6 +12770,7 @@
     "name": "wpgulp",
     "packages": [
       {
+        "type": "npm",
         "name": "WPGulp"
       }
     ],
@@ -11688,6 +12790,7 @@
     "name": "yakkee",
     "packages": [
       {
+        "type": "npm",
         "name": "meanjs"
       }
     ],
