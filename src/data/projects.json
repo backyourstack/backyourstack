@@ -5540,10 +5540,7 @@
     "name": "material-ui",
     "packages": [
       {
-        "name": "@material-ui/codemod"
-      },
-      {
-        "name": "@material-ui/docs"
+        "name": "@material-ui/core"
       },
       {
         "name": "@material-ui/icons"
