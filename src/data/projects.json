@@ -5544,6 +5544,9 @@
       },
       {
         "name": "@material-ui/icons"
+      },
+      {
+        "name": "material-ui"
       }
     ],
     "opencollective": {
