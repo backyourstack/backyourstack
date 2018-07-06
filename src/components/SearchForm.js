@@ -94,6 +94,9 @@ export default class SearchForm extends React.Component {
       <Fragment>
 
         <style jsx>{`
+          form {
+            position: relative;
+          }
           .searchInput {
             margin: 50px auto 10px;
             padding: 12px 17px;
@@ -154,7 +157,9 @@ export default class SearchForm extends React.Component {
             font-size: 12px;
             width: 200px;
             right: 0;
+            top: 0;
             margin-right: -220px;
+            margin-top: 5px;
           }
           .searchFeedback.ok {
             color: #3A2FAC;
