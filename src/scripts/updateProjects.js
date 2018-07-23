@@ -36,17 +36,19 @@ fs.readJson(filename)
           project.github = { repo: githubRepo };
         }
         // Sponsors
-        project.opencollective.sponsors = data.members
+        let members = data.members
           .filter(m => m.role === 'BACKER' && m.member.type === 'ORGANIZATION')
-          .sort((a, b) => b.stats.totalDonations - a.stats.totalDonations)
+          .sort((a, b) => b.stats.totalDonations - a.stats.totalDonations);
+        members = uniqBy(members, member => member.member.id);
+        project.opencollective.sponsors = members
+          .slice(0, 10)
           .map(m => ({
             id: m.member.id,
             type: m.member.type,
             slug: m.member.slug,
             name: m.member.name,
             totalDonations: m.stats.totalDonations,
-          }))
-          .slice(0, 10);
+          }));
       }
     }
     return projects;
