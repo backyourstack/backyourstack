@@ -42,7 +42,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  text-decoration: none;
+  color: #3c0d9b;
 }
 
 .button {
