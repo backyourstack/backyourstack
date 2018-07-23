@@ -31,8 +31,8 @@ export default class Footer extends React.Component {
           <Link route="faq">
             <a>FAQ</a>
           </Link>
-          &nbsp;.&nbsp;
-          <a href="https://github.com/opencollective/backyourstack">Contribute</a>
+          &nbsp;-&nbsp;
+          <Link route="contributing"><a>Contribute</a></Link>
         </footer>
       </div>
     );
