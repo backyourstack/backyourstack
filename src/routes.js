@@ -6,6 +6,7 @@ routes
   .add('login')
   .add('logout')
   .add('faq')
+  .add('contributing')
   .add('index', '/')
   .add('search', '/search')
   .add('files', '/files/:section(dependencies|repositories)?')
