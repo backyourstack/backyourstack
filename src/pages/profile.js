@@ -176,7 +176,7 @@ export default class Profile extends React.Component {
               </div>
 
               <div className="socialLinks">
-                <NextLink href={{ pathname: 'http://twitter.com/share', query: { text: this.twitterText() } }}>
+                <NextLink href={{ pathname: 'https://twitter.com/intent/tweet', query: { text: this.twitterText() } }}>
                   <a className="button shareButton" title="Share on Twitter">
                     <TwitterLogo className="logo" />
                     &nbsp;
