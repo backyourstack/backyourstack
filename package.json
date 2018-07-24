@@ -110,10 +110,9 @@
       "www.backyourstack.com"
     ],
     "env": {
-      "GITHUB_GUEST_TOKEN": "@github_guest_token",
       "GITHUB_CLIENT_ID": "@github_client_id",
       "GITHUB_CLIENT_SECRET": "@github_client_secret",
-      "GITHUB_CALLBACK_URL": "@github_callback_url",
+      "GITHUB_GUEST_TOKEN": "@github_guest_token",
       "GITHUB_TOKEN_DONATORS": "@github_token_donators",
       "MAILCHIMP_API_KEY": "@mailchimp_api_key",
       "MAILCHIMP_API_URL": "@mailchimp_api_url"

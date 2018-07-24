@@ -6,14 +6,13 @@ import { donateToken } from '../lib/github';
 
 const _debug = debug('auth');
 
-const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_CALLBACK_URL, GITHUB_TOKEN_DONATORS } = process.env;
+const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_TOKEN_DONATORS } = process.env;
 
 const githubTokenDonators = (GITHUB_TOKEN_DONATORS || '').split(',').map(str => str.trim());
 
 const githubParams = {
   clientID: GITHUB_CLIENT_ID,
   clientSecret: GITHUB_CLIENT_SECRET,
-  callbackURL: GITHUB_CALLBACK_URL,
 };
 
 const passportGithubStrategy = new passportGithub.Strategy(
