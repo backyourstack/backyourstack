@@ -22,18 +22,40 @@ npm install
 
 `npm run dev`
 
-## Deployment
+## Production
 
-Back Your Stack is currently deployed with [Now](https://zeit.co/now).
+### Prerequisite
 
-Make sure that the following environment keys are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
+#### Now
 
-```
-GITHUB_CLIENT_ID=@github_client_id
-GITHUB_CLIENT_SECRET=@github_client_secret
-GITHUB_GUEST_TOKEN=@github_guest_token
-```
+Back Your Stack is currently deployed with [Now](https://zeit.co/now). You will need to install [Now Desktop](https://github.com/zeit/now-desktop) or [Now CLI](https://github.com/zeit/now-cli).
 
-Then:
+Authenticate with:
+
+`now login`
+
+Switch to the Open Collective team account:
+
+`now switch opencollective`
+
+#### Secrets
+
+Make sure that the following secrets are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
+
+| name                   | description |
+| ---------------------- | ----------- |
+| `github_client_id`     | Client id for the GitHub oAuth app |
+| `github_client_secret` | Client secret for the GitHub oAuth app |
+| `github_guest_token`   | GitHub access token used to process unauthenticated requests |
+
+Eg: `now secret add github_client_id {value}`
+
+### Deployment
+
+First:
 
 `now`
+
+If everything is ok, finalize with:
+
+`now alias`
