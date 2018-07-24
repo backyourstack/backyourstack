@@ -6,7 +6,7 @@ import { get } from 'lodash';
 import { Link, Router } from '../routes';
 
 import { getFilesData } from '../lib/data';
-import { dependenciesStats } from '../lib/utils';
+import { dependenciesStats } from '../lib/dependencies';
 
 import Header from '../components/Header';
 import Upload from '../components/Upload';

@@ -15,10 +15,13 @@ import {
 import {
   addDependenciesToRepo,
   addProjectToDependencies,
-  dependenciesStats,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
 } from './utils';
+
+import {
+  dependenciesStats,
+} from './dependencies';
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
