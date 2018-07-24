@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
           <title>Back Your Stack: Discover the Open Source projects you are using and need financial support.</title>
           <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
           <link rel="stylesheet" href="/_next/static/style.css" />
+          <meta property="og:image" content="/static/img/logo-og-1.png" />
         </Head>
         <body>
           <Main />
