@@ -26,11 +26,13 @@ npm install
 
 Back Your Stack is currently deployed with [Now](https://zeit.co/now).
 
-Make sure that the following environment keys are set (use `now secret`):
+Make sure that the following environment keys are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
 
- - `@github_client_id`
- - `@github_client_secret`
- - `@github_guest_token`
+```
+GITHUB_CLIENT_ID=@github_client_id
+GITHUB_CLIENT_SECRET=@github_client_secret
+GITHUB_GUEST_TOKEN=@github_guest_token
+```
 
 Then:
 
