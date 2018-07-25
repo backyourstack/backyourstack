@@ -121,7 +121,10 @@ nextApp.prepare()
       req.files.forEach(raw => {
         const parsed = JSON.parse(raw.buffer.toString('utf8'));
         if (parsed && !parsed.lockfileVersion) {
-          if (parsed.dependencies || parsed.devDependencies || parsed.peerDependencies) {
+          if (
+            parsed.dependencies || parsed.devDependencies || parsed.peerDependencies
+            || parsed.require || parsed['require-dev']
+          ) {
             const id = parsed.name || md5(JSON.stringify(parsed));
             req.session.files[id] = { parsed };
             uploadAccepted = true;

@@ -134,7 +134,7 @@ function fetchFileFromRepo (repo, path, accessToken) {
       if (response.status === 200) {
         return response.text();
       }
-      throw new Error(`Can't fetch package.json from ${relativeUrl}.`);
+      throw new Error(`Can't fetch ${path} from ${relativeUrl}.`);
     });
 }
 

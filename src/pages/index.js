@@ -185,7 +185,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            or simply upload package.json files.
+            or simply upload <em>package.json</em> and <em>composer.json</em> files.
             The uploaded files will not be shared with anyone
             and will be deleted when your session expire.
           </p>
@@ -197,7 +197,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            You can also simply upload package.json files, use a desktop browser for that.
+            You can also simply upload <em>package.json</em> and <em>composer.json</em> files, use a desktop browser for that.
           </p>
 
           <div className="uploadContainer">

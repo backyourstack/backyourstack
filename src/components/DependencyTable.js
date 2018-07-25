@@ -84,9 +84,9 @@ export default class DependencyTable extends React.Component {
               <tr key={dep.name}>
                 <td>{dep.type}</td>
                 <td>{dep.name}</td>
-                <td>{dep.dependencies}</td>
-                <td>{dep.peerDependencies}</td>
-                <td>{dep.devDependencies}</td>
+                <td>{dep.core}</td>
+                <td>{dep.peer}</td>
+                <td>{dep.dev}</td>
                 <td className="repos">
                   <List
                     array={dep.repos}

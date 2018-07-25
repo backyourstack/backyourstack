@@ -1,52 +1,14 @@
-import debug from 'debug';
 import { pick } from 'lodash';
 
-import cache from './cache';
-import { fetchFileFromRepo } from './github';
+import { getDependenciesFromGithubRepo } from './dependencies';
 
 import allProjects from '../data/projects.json';
 
-const _debug = debug('utils');
-
-const dependencyTypes = ['dependencies', 'peerDependencies', 'devDependencies'];
+const dependencyTypes = ['core', 'peer', 'dev'];
 
 async function addDependenciesToRepo (repo, accessToken) {
-  const cacheKey = `repo_raw_dependencies_${repo.id}`;
-
-  let rawDependencies;
-  if (cache.has(cacheKey)) {
-    rawDependencies = cache.get(cacheKey);
-  } else {
-    rawDependencies = await fetchRepoDependencies(repo, accessToken);
-    cache.set(cacheKey, rawDependencies);
-  }
-
-  repo.dependencies = dependenciesStats(rawDependencies);
-
+  repo.dependencies = await getDependenciesFromGithubRepo(repo, accessToken);
   return repo;
-}
-
-function fetchRepoDependencies (repo, accessToken) {
-  return fetchFileFromRepo(repo, 'package.json', accessToken)
-    .then(JSON.parse)
-    .catch(err => {
-      _debug(`fetchRepoDependencies error: ${err.message}`);
-      return [];
-    });
-}
-
-function dependenciesStats (packageJson) {
-  const dependencies = {};
-  dependencyTypes.forEach(dependencyType => {
-    if (packageJson[dependencyType]) {
-      Object.keys(packageJson[dependencyType]).forEach(name => {
-        dependencies[name] = dependencies[name] || { type: 'npm', name };
-        dependencies[name][dependencyType] = dependencies[name][dependencyType] || 0;
-        dependencies[name][dependencyType] ++;
-      });
-    }
-  });
-  return Object.values(dependencies);
 }
 
 function getProjectFromDependency (dependency) {
@@ -133,7 +95,6 @@ function getRecommendedProjectFromDependencies (deps) {
 export {
   addDependenciesToRepo,
   addProjectToDependencies,
-  dependenciesStats,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
 };
