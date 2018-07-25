@@ -10,14 +10,12 @@ If you want to help and are not sure where to start, we have some ideas!
 
 ### Supporting more dependency managers
 
-BackYourStack is currenly only detecting and supporting `npm` packages. For sure, we are aware Javascript is not the only progamming language in the world and we would love to support more platforms like RubyGems and PHP/Composer.
+BackYourStack is currenly only detecting and supporting `npm` and `composer` packages. For sure, we are aware Javascript and PHP are not the only progamming languages in the world and we would love to support more platforms like Ruby and Python.
 
 There are already tickets existing for:
 
-- [PHP / Composer](https://github.com/opencollective/backyourstack/issues/28)
 - [Python](https://github.com/opencollective/backyourstack/issues/34)
 
 ### Supporting more funding platforms
 
 BackYourStack was initiated by people at [Open Collective](https://opencollective.com) but doesn't intend to be limited to projects registered on the Open Collective platform. If you know any other platforms or projects currently receiving funding for Open Source projects and have an idea on how to integrate it, please contribute!
-
