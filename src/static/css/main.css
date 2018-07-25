@@ -161,6 +161,7 @@ a:hover {
   font-weight: bold;
   letter-spacing: -0.4px;
   line-height: 36px;
+  width: 250px;
 }
 .navigation-items {
   position: absolute;
@@ -204,6 +205,7 @@ main {
   .navigation h1 {
     text-align: center;
     padding: 20px;
+    width: auto;
   }
   .navigation-items {
     position: static;
