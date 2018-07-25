@@ -28,7 +28,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "@accounts/client-password"
+        "name": "@accounts/apollo-link"
       },
       {
         "type": "npm",
@@ -36,15 +36,11 @@
       },
       {
         "type": "npm",
+        "name": "@accounts/client-password"
+      },
+      {
+        "type": "npm",
         "name": "@accounts/database-manager"
-      },
-      {
-        "type": "npm",
-        "name": "@accounts/mongo"
-      },
-      {
-        "type": "npm",
-        "name": "@accounts/redis"
       },
       {
         "type": "npm",
@@ -56,6 +52,22 @@
       },
       {
         "type": "npm",
+        "name": "@accounts/graphql-api"
+      },
+      {
+        "type": "npm",
+        "name": "@accounts/graphql-client"
+      },
+      {
+        "type": "npm",
+        "name": "@accounts/mongo"
+      },
+      {
+        "type": "npm",
+        "name": "@accounts/oauth"
+      },
+      {
+        "type": "npm",
         "name": "@accounts/oauth-instagram"
       },
       {
@@ -64,11 +76,11 @@
       },
       {
         "type": "npm",
-        "name": "@accounts/oauth"
+        "name": "@accounts/password"
       },
       {
         "type": "npm",
-        "name": "@accounts/password"
+        "name": "@accounts/redis"
       },
       {
         "type": "npm",
@@ -135,6 +147,10 @@
       },
       {
         "type": "npm",
+        "name": "allure-js-commons"
+      },
+      {
+        "type": "npm",
         "name": "cucumberjs-allure-reporter"
       },
       {
@@ -143,15 +159,11 @@
       },
       {
         "type": "npm",
-        "name": "mocha-allure-reporter"
-      },
-      {
-        "type": "npm",
-        "name": "allure-js-commons"
-      },
-      {
-        "type": "npm",
         "name": "karma-allure-reporter"
+      },
+      {
+        "type": "npm",
+        "name": "mocha-allure-reporter"
       }
     ],
     "github": {
@@ -282,15 +294,11 @@
     "packages": [
       {
         "type": "npm",
+        "name": "@angular/animations"
+      },
+      {
+        "type": "npm",
         "name": "@angular/common"
-      },
-      {
-        "type": "npm",
-        "name": "@angular/core"
-      },
-      {
-        "type": "npm",
-        "name": "@angular/platform-browser-dynamic"
       },
       {
         "type": "npm",
@@ -298,7 +306,7 @@
       },
       {
         "type": "npm",
-        "name": "@angular/platform-browser"
+        "name": "@angular/core"
       },
       {
         "type": "npm",
@@ -306,11 +314,15 @@
       },
       {
         "type": "npm",
-        "name": "@angular/router"
+        "name": "@angular/platform-browser"
       },
       {
         "type": "npm",
-        "name": "@angular/animations"
+        "name": "@angular/platform-browser-dynamic"
+      },
+      {
+        "type": "npm",
+        "name": "@angular/router"
       }
     ]
   },
@@ -343,11 +355,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "generator-angular-fullstack"
-      },
-      {
-        "type": "npm",
-        "name": "generator-angular-fullstack-component"
+        "name": "angular-fullstack-deps"
       },
       {
         "type": "npm",
@@ -355,7 +363,11 @@
       },
       {
         "type": "npm",
-        "name": "angular-fullstack-deps"
+        "name": "generator-angular-fullstack"
+      },
+      {
+        "type": "npm",
+        "name": "generator-angular-fullstack-component"
       }
     ],
     "github": {
@@ -398,7 +410,7 @@
       ],
       "stats": {
         "balance": 131582,
-        "yearlyBudget": 68082
+        "yearlyBudget": 67677
       },
       "goals": []
     }
@@ -505,14 +517,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "up"
-      },
-      {
-        "type": "npm",
-        "name": "apex-ui-slim"
-      },
-      {
-        "type": "npm",
         "name": "apex-syntax"
       },
       {
@@ -521,7 +525,15 @@
       },
       {
         "type": "npm",
+        "name": "apex-ui-slim"
+      },
+      {
+        "type": "npm",
         "name": "apex.js"
+      },
+      {
+        "type": "npm",
+        "name": "up"
       }
     ],
     "github": {
@@ -915,99 +927,15 @@
     "packages": [
       {
         "type": "npm",
-        "name": "babel-eslint"
-      },
-      {
-        "type": "npm",
-        "name": "babel-core"
-      },
-      {
-        "type": "npm",
-        "name": "babel-loader"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-es2015"
-      },
-      {
-        "type": "npm",
-        "name": "babel-cli"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-env"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-react"
-      },
-      {
-        "type": "npm",
-        "name": "babel-register"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-transform-object-rest-spread"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-transform-runtime"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-transform-class-properties"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-stage-0"
-      },
-      {
-        "type": "npm",
-        "name": "babel-polyfill"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-stage-2"
-      },
-      {
-        "type": "npm",
-        "name": "babel-runtime"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-transform-flow-strip-types"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-external-helpers"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-plugin-babel"
-      },
-      {
-        "type": "npm",
-        "name": "babel-plugin-transform-es2015-modules-commonjs"
-      },
-      {
-        "type": "npm",
-        "name": "gulp-babel"
-      },
-      {
-        "type": "npm",
-        "name": "@babel/core"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-stage-1"
-      },
-      {
-        "type": "npm",
         "name": "@babel/cli"
       },
       {
         "type": "npm",
         "name": "@babel/code-frame"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/core"
       },
       {
         "type": "npm",
@@ -1431,6 +1359,10 @@
       },
       {
         "type": "npm",
+        "name": "@babel/plugin-transform-react-jsx"
+      },
+      {
+        "type": "npm",
         "name": "@babel/plugin-transform-react-jsx-compat"
       },
       {
@@ -1440,10 +1372,6 @@
       {
         "type": "npm",
         "name": "@babel/plugin-transform-react-jsx-source"
-      },
-      {
-        "type": "npm",
-        "name": "@babel/plugin-transform-react-jsx"
       },
       {
         "type": "npm",
@@ -1495,11 +1423,11 @@
       },
       {
         "type": "npm",
-        "name": "@babel/preset-env-standalone"
+        "name": "@babel/preset-env"
       },
       {
         "type": "npm",
-        "name": "@babel/preset-env"
+        "name": "@babel/preset-env-standalone"
       },
       {
         "type": "npm",
@@ -1564,6 +1492,90 @@
       {
         "type": "npm",
         "name": "@babel/types"
+      },
+      {
+        "type": "npm",
+        "name": "babel-cli"
+      },
+      {
+        "type": "npm",
+        "name": "babel-core"
+      },
+      {
+        "type": "npm",
+        "name": "babel-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "babel-loader"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-external-helpers"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-class-properties"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-es2015-modules-commonjs"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-flow-strip-types"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-object-rest-spread"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-runtime"
+      },
+      {
+        "type": "npm",
+        "name": "babel-polyfill"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-env"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-es2015"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-react"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-stage-0"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-stage-1"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-stage-2"
+      },
+      {
+        "type": "npm",
+        "name": "babel-register"
+      },
+      {
+        "type": "npm",
+        "name": "babel-runtime"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-babel"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-babel"
       }
     ],
     "opencollective": {
@@ -2485,11 +2497,55 @@
     "packages": [
       {
         "type": "npm",
+        "name": "assertion-error"
+      },
+      {
+        "type": "npm",
         "name": "chai"
       },
       {
         "type": "npm",
-        "name": "get-func-name"
+        "name": "chai-change"
+      },
+      {
+        "type": "npm",
+        "name": "chai-factories"
+      },
+      {
+        "type": "npm",
+        "name": "chai-fs"
+      },
+      {
+        "type": "npm",
+        "name": "chai-http"
+      },
+      {
+        "type": "npm",
+        "name": "chai-jquery"
+      },
+      {
+        "type": "npm",
+        "name": "chai-json-schema"
+      },
+      {
+        "type": "npm",
+        "name": "chai-null"
+      },
+      {
+        "type": "npm",
+        "name": "chai-spies"
+      },
+      {
+        "type": "npm",
+        "name": "chai-stats"
+      },
+      {
+        "type": "npm",
+        "name": "chai-things"
+      },
+      {
+        "type": "npm",
+        "name": "chai-timers"
       },
       {
         "type": "npm",
@@ -2497,7 +2553,11 @@
       },
       {
         "type": "npm",
-        "name": "chai-change"
+        "name": "deep-eql"
+      },
+      {
+        "type": "npm",
+        "name": "get-func-name"
       },
       {
         "type": "npm",
@@ -2509,59 +2569,11 @@
       },
       {
         "type": "npm",
-        "name": "deep-eql"
-      },
-      {
-        "type": "npm",
-        "name": "type-detect"
-      },
-      {
-        "type": "npm",
-        "name": "chai-fs"
-      },
-      {
-        "type": "npm",
         "name": "simple-assert"
       },
       {
         "type": "npm",
-        "name": "chai-json-schema"
-      },
-      {
-        "type": "npm",
-        "name": "assertion-error"
-      },
-      {
-        "type": "npm",
-        "name": "chai-things"
-      },
-      {
-        "type": "npm",
-        "name": "chai-factories"
-      },
-      {
-        "type": "npm",
-        "name": "chai-null"
-      },
-      {
-        "type": "npm",
-        "name": "chai-stats"
-      },
-      {
-        "type": "npm",
-        "name": "chai-timers"
-      },
-      {
-        "type": "npm",
-        "name": "chai-http"
-      },
-      {
-        "type": "npm",
-        "name": "chai-spies"
-      },
-      {
-        "type": "npm",
-        "name": "chai-jquery"
+        "name": "type-detect"
       }
     ],
     "github": {
@@ -2701,6 +2713,32 @@
         "yearlyBudget": 162887
       },
       "goals": []
+    }
+  },
+  {
+    "name": "cheeselab",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "continuity"
+      }
+    ],
+    "github": {
+      "org": "Cheeselab"
+    },
+    "opencollective": {
+      "id": 526,
+      "name": "Cheese.lab Industries",
+      "slug": "cheeselab",
+      "description": "Building decentralized communities for gamers, programmers & designers.",
+      "sponsors": [],
+      "goals": [
+        {}
+      ],
+      "stats": {
+        "balance": 1528,
+        "yearlyBudget": 18210
+      }
     }
   },
   {
@@ -2985,23 +3023,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "cornerwise-scrapers"
-      },
-      {
-        "type": "npm",
-        "name": "Snope"
-      },
-      {
-        "type": "npm",
-        "name": "property-dash"
-      },
-      {
-        "type": "npm",
-        "name": "ungentry"
-      },
-      {
-        "type": "npm",
-        "name": "cases"
+        "name": "bostongreenmap"
       },
       {
         "type": "npm",
@@ -3013,11 +3035,19 @@
       },
       {
         "type": "npm",
-        "name": "kublai"
+        "name": "cases"
       },
       {
         "type": "npm",
-        "name": "rta"
+        "name": "cornerwise-scrapers"
+      },
+      {
+        "type": "npm",
+        "name": "Internet_EBS"
+      },
+      {
+        "type": "npm",
+        "name": "kublai"
       },
       {
         "type": "npm",
@@ -3029,11 +3059,19 @@
       },
       {
         "type": "npm",
-        "name": "Internet_EBS"
+        "name": "property-dash"
       },
       {
         "type": "npm",
-        "name": "bostongreenmap"
+        "name": "rta"
+      },
+      {
+        "type": "npm",
+        "name": "Snope"
+      },
+      {
+        "type": "npm",
+        "name": "ungentry"
       }
     ],
     "github": {
@@ -3124,10 +3162,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "@colmena/colmena"
-      },
-      {
-        "type": "npm",
         "name": "@colmena/admin-layout"
       },
       {
@@ -3141,6 +3175,10 @@
       {
         "type": "npm",
         "name": "@colmena/api-helpers"
+      },
+      {
+        "type": "npm",
+        "name": "@colmena/colmena"
       },
       {
         "type": "npm",
@@ -3233,11 +3271,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "cz-conventional-changelog"
+        "name": "commitizen"
       },
       {
         "type": "npm",
-        "name": "commitizen"
+        "name": "cz-conventional-changelog"
       }
     ],
     "opencollective": {
@@ -3253,7 +3291,7 @@
       "goals": []
     },
     "github": {
-      "repo": "commitizen/cz-cli"
+      "org": "commitizen"
     }
   },
   {
@@ -3474,15 +3512,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "cucumber-messages"
-      },
-      {
-        "type": "npm",
-        "name": "cucumber-json-formatter"
-      },
-      {
-        "type": "npm",
         "name": "commitbit"
+      },
+      {
+        "type": "npm",
+        "name": "cucumber"
       },
       {
         "type": "npm",
@@ -3490,15 +3524,23 @@
       },
       {
         "type": "npm",
-        "name": "cucumber-react"
-      },
-      {
-        "type": "npm",
-        "name": "gherkin-lint"
-      },
-      {
-        "type": "npm",
         "name": "cucumber-expressions"
+      },
+      {
+        "type": "npm",
+        "name": "cucumber-html"
+      },
+      {
+        "type": "npm",
+        "name": "cucumber-json-formatter"
+      },
+      {
+        "type": "npm",
+        "name": "cucumber-messages"
+      },
+      {
+        "type": "npm",
+        "name": "cucumber-react"
       },
       {
         "type": "npm",
@@ -3510,11 +3552,7 @@
       },
       {
         "type": "npm",
-        "name": "cucumber-html"
-      },
-      {
-        "type": "npm",
-        "name": "cucumber"
+        "name": "gherkin-lint"
       }
     ],
     "github": {
@@ -3688,11 +3726,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "Sovereign.app"
-      },
-      {
-        "type": "npm",
-        "name": "tutorialtoken"
+        "name": "balance-keeper"
       },
       {
         "type": "npm",
@@ -3704,7 +3738,11 @@
       },
       {
         "type": "npm",
-        "name": "balance-keeper"
+        "name": "Sovereign.app"
+      },
+      {
+        "type": "npm",
+        "name": "tutorialtoken"
       }
     ],
     "github": {
@@ -3974,6 +4012,10 @@
     "packages": [
       {
         "type": "npm",
+        "name": "docz"
+      },
+      {
+        "type": "npm",
         "name": "docz-core"
       },
       {
@@ -3990,11 +4032,15 @@
       },
       {
         "type": "npm",
-        "name": "docz"
+        "name": "load-cfg"
       },
       {
         "type": "npm",
-        "name": "load-cfg"
+        "name": "rehype-docz"
+      },
+      {
+        "type": "npm",
+        "name": "remark-docz"
       }
     ],
     "opencollective": {
@@ -4097,7 +4143,7 @@
       ],
       "stats": {
         "balance": 642931,
-        "yearlyBudget": 1503775
+        "yearlyBudget": 1503631
       },
       "goals": []
     }
@@ -4342,10 +4388,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "element-ui"
-      },
-      {
-        "type": "npm",
         "name": "element-carousel"
       },
       {
@@ -4375,6 +4417,10 @@
       {
         "type": "npm",
         "name": "element-theme-chalk"
+      },
+      {
+        "type": "npm",
+        "name": "element-ui"
       },
       {
         "type": "npm",
@@ -4651,11 +4697,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "express"
+        "name": "body-parser"
       },
       {
         "type": "npm",
-        "name": "body-parser"
+        "name": "compression"
       },
       {
         "type": "npm",
@@ -4663,7 +4709,11 @@
       },
       {
         "type": "npm",
-        "name": "multer"
+        "name": "cors"
+      },
+      {
+        "type": "npm",
+        "name": "express"
       },
       {
         "type": "npm",
@@ -4675,11 +4725,7 @@
       },
       {
         "type": "npm",
-        "name": "compression"
-      },
-      {
-        "type": "npm",
-        "name": "cors"
+        "name": "multer"
       },
       {
         "type": "npm",
@@ -4912,6 +4958,10 @@
       },
       {
         "type": "npm",
+        "name": "fela"
+      },
+      {
+        "type": "npm",
         "name": "fela-beautifier"
       },
       {
@@ -5049,10 +5099,6 @@
       {
         "type": "npm",
         "name": "fela-utils"
-      },
-      {
-        "type": "npm",
-        "name": "fela"
       },
       {
         "type": "npm",
@@ -5347,6 +5393,10 @@
       },
       {
         "type": "npm",
+        "name": "gatsby"
+      },
+      {
+        "type": "npm",
         "name": "gatsby-cli"
       },
       {
@@ -5427,11 +5477,11 @@
       },
       {
         "type": "npm",
-        "name": "gatsby-plugin-netlify-cms"
+        "name": "gatsby-plugin-netlify"
       },
       {
         "type": "npm",
-        "name": "gatsby-plugin-netlify"
+        "name": "gatsby-plugin-netlify-cms"
       },
       {
         "type": "npm",
@@ -5448,6 +5498,10 @@
       {
         "type": "npm",
         "name": "gatsby-plugin-page-creator"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-postcss"
       },
       {
         "type": "npm",
@@ -5531,11 +5585,11 @@
       },
       {
         "type": "npm",
-        "name": "gatsby-remark-images-contentful"
+        "name": "gatsby-remark-images"
       },
       {
         "type": "npm",
-        "name": "gatsby-remark-images"
+        "name": "gatsby-remark-images-contentful"
       },
       {
         "type": "npm",
@@ -5656,10 +5710,6 @@
       {
         "type": "npm",
         "name": "gatsby-transformer-yaml"
-      },
-      {
-        "type": "npm",
-        "name": "gatsby"
       },
       {
         "type": "npm",
@@ -6179,19 +6229,11 @@
       },
       {
         "type": "npm",
-        "name": "grunt-contrib-uglify"
-      },
-      {
-        "type": "npm",
-        "name": "grunt-contrib-watch"
-      },
-      {
-        "type": "npm",
         "name": "grunt-cli"
       },
       {
         "type": "npm",
-        "name": "grunt-contrib-copy"
+        "name": "grunt-contrib-clean"
       },
       {
         "type": "npm",
@@ -6199,7 +6241,15 @@
       },
       {
         "type": "npm",
-        "name": "grunt-contrib-clean"
+        "name": "grunt-contrib-copy"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-contrib-uglify"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-contrib-watch"
       }
     ]
   },
@@ -6306,7 +6356,7 @@
       ],
       "stats": {
         "balance": 624222,
-        "yearlyBudget": 1906360
+        "yearlyBudget": 1906216
       }
     },
     "github": {
@@ -6363,91 +6413,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "gulp"
-      },
-      {
-        "type": "npm",
-        "name": "replace-homedir"
-      },
-      {
-        "type": "npm",
-        "name": "symlink-type"
-      },
-      {
-        "type": "npm",
-        "name": "remove-bom-stream"
-      },
-      {
-        "type": "npm",
-        "name": "resolve-options"
-      },
-      {
-        "type": "npm",
-        "name": "fs-mkdirp-stream"
-      },
-      {
-        "type": "npm",
-        "name": "to-through"
-      },
-      {
-        "type": "npm",
-        "name": "lead"
-      },
-      {
-        "type": "npm",
-        "name": "clone-buffer"
-      },
-      {
-        "type": "npm",
-        "name": "vinyl-sourcemap"
-      },
-      {
-        "type": "npm",
-        "name": "vinyl-prepare"
-      },
-      {
-        "type": "npm",
-        "name": "conventional-changelog-gulp"
-      },
-      {
-        "type": "npm",
-        "name": "value-or-function"
-      },
-      {
-        "type": "npm",
-        "name": "better-stats"
-      },
-      {
-        "type": "npm",
-        "name": "jscs-preset-gulp"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-config-gulp"
-      },
-      {
-        "type": "npm",
-        "name": "has-gulplog"
-      },
-      {
-        "type": "npm",
-        "name": "gulplog"
-      },
-      {
-        "type": "npm",
-        "name": "undertaker-forward-reference"
-      },
-      {
-        "type": "npm",
-        "name": "plugin-error"
-      },
-      {
-        "type": "npm",
-        "name": "last-run"
-      },
-      {
-        "type": "npm",
-        "name": "default-resolution"
+        "name": "async-done"
       },
       {
         "type": "npm",
@@ -6455,39 +6421,7 @@
       },
       {
         "type": "npm",
-        "name": "undertaker-task-metadata"
-      },
-      {
-        "type": "npm",
-        "name": "semver-greatest-satisfied-range"
-      },
-      {
-        "type": "npm",
-        "name": "gulp-cli"
-      },
-      {
-        "type": "npm",
-        "name": "sparkles"
-      },
-      {
-        "type": "npm",
-        "name": "undertaker-common-tasks"
-      },
-      {
-        "type": "npm",
-        "name": "undertaker-registry"
-      },
-      {
-        "type": "npm",
-        "name": "undertaker"
-      },
-      {
-        "type": "npm",
-        "name": "now-and-later"
-      },
-      {
-        "type": "npm",
-        "name": "registry"
+        "name": "async-settle"
       },
       {
         "type": "npm",
@@ -6495,31 +6429,27 @@
       },
       {
         "type": "npm",
-        "name": "async-settle"
+        "name": "better-stats"
       },
       {
         "type": "npm",
-        "name": "replace-ext"
+        "name": "clone-buffer"
       },
       {
         "type": "npm",
-        "name": "async-done"
+        "name": "conventional-changelog-gulp"
       },
       {
         "type": "npm",
-        "name": "vinyl-fs"
+        "name": "default-resolution"
       },
       {
         "type": "npm",
-        "name": "vinyl"
+        "name": "eslint-config-gulp"
       },
       {
         "type": "npm",
-        "name": "glob-watcher"
-      },
-      {
-        "type": "npm",
-        "name": "gulp-util"
+        "name": "fs-mkdirp-stream"
       },
       {
         "type": "npm",
@@ -6527,7 +6457,127 @@
       },
       {
         "type": "npm",
+        "name": "glob-watcher"
+      },
+      {
+        "type": "npm",
+        "name": "gulp"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-cli"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-util"
+      },
+      {
+        "type": "npm",
+        "name": "gulplog"
+      },
+      {
+        "type": "npm",
+        "name": "has-gulplog"
+      },
+      {
+        "type": "npm",
         "name": "interpret"
+      },
+      {
+        "type": "npm",
+        "name": "jscs-preset-gulp"
+      },
+      {
+        "type": "npm",
+        "name": "last-run"
+      },
+      {
+        "type": "npm",
+        "name": "lead"
+      },
+      {
+        "type": "npm",
+        "name": "now-and-later"
+      },
+      {
+        "type": "npm",
+        "name": "plugin-error"
+      },
+      {
+        "type": "npm",
+        "name": "registry"
+      },
+      {
+        "type": "npm",
+        "name": "remove-bom-stream"
+      },
+      {
+        "type": "npm",
+        "name": "replace-ext"
+      },
+      {
+        "type": "npm",
+        "name": "replace-homedir"
+      },
+      {
+        "type": "npm",
+        "name": "resolve-options"
+      },
+      {
+        "type": "npm",
+        "name": "semver-greatest-satisfied-range"
+      },
+      {
+        "type": "npm",
+        "name": "sparkles"
+      },
+      {
+        "type": "npm",
+        "name": "symlink-type"
+      },
+      {
+        "type": "npm",
+        "name": "to-through"
+      },
+      {
+        "type": "npm",
+        "name": "undertaker"
+      },
+      {
+        "type": "npm",
+        "name": "undertaker-common-tasks"
+      },
+      {
+        "type": "npm",
+        "name": "undertaker-forward-reference"
+      },
+      {
+        "type": "npm",
+        "name": "undertaker-registry"
+      },
+      {
+        "type": "npm",
+        "name": "undertaker-task-metadata"
+      },
+      {
+        "type": "npm",
+        "name": "value-or-function"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-fs"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-prepare"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-sourcemap"
       }
     ],
     "github": {
@@ -6624,7 +6674,7 @@
       ],
       "stats": {
         "balance": 624222,
-        "yearlyBudget": 1906360
+        "yearlyBudget": 1906216
       }
     }
   },
@@ -6779,12 +6829,248 @@
     "name": "hoaproject",
     "packages": [
       {
+        "type": "composer",
+        "name": "atoum/praspel-extension"
+      },
+      {
         "type": "npm",
         "name": "hoa-compiler-plugin"
       },
       {
         "type": "composer",
         "name": "hoa/acl"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/atoum-option-extension"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/bench"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/cache"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/central"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/cli"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/compiler"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/consistency"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/console"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/core"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/database"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/devtools"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/dispatcher"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/dns"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/event"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/eventsource"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/exception"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/fastcgi"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/file"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/graph"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/heap"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/http"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/irc"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/iterator"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/json"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/kitab"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/locale"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/mail"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/math"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/mime"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/option"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/praspel"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/promise"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/protocol"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/realdom"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/regex"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/registry"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/router"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/ruler"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/serialize"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/session"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/socket"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/stream"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/string"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/stringbuffer"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/test"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/translate"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/tree"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/ustring"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/view"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/visitor"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/websocket"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/worker"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/xml"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/xmlrpc"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/xyl"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/zformat"
+      },
+      {
+        "type": "composer",
+        "name": "hoa/zombie"
+      },
+      {
+        "type": "composer",
+        "name": "hoathis/symfony-console-bridge"
       }
     ],
     "github": {
@@ -6840,67 +7126,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "hoodie"
-      },
-      {
-        "type": "npm",
-        "name": "first-timers-bot"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/store-server-api"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/plugin-hello-world"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/account-server-api"
-      },
-      {
-        "type": "npm",
-        "name": "ember-hoodie"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/admin-client"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/admin"
-      },
-      {
-        "type": "npm",
-        "name": "hoodie-camp-tutorial"
-      },
-      {
-        "type": "npm",
-        "name": "hoodie-app-tracker"
-      },
-      {
-        "type": "npm",
-        "name": "pouchdb-admins"
-      },
-      {
-        "type": "npm",
-        "name": "pouchdb-users"
-      },
-      {
-        "type": "npm",
-        "name": "couchdb-calculate-session-id"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/task-server"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/store-server"
-      },
-      {
-        "type": "npm",
-        "name": "hoodie-zuul-config"
+        "name": "@hoodie/account-client"
       },
       {
         "type": "npm",
@@ -6908,7 +7134,19 @@
       },
       {
         "type": "npm",
-        "name": "@hoodie/task-client"
+        "name": "@hoodie/account-server-api"
+      },
+      {
+        "type": "npm",
+        "name": "@hoodie/admin"
+      },
+      {
+        "type": "npm",
+        "name": "@hoodie/admin-client"
+      },
+      {
+        "type": "npm",
+        "name": "@hoodie/client"
       },
       {
         "type": "npm",
@@ -6920,19 +7158,11 @@
       },
       {
         "type": "npm",
-        "name": "@hoodie/client"
+        "name": "@hoodie/plugin-hello-world"
       },
       {
         "type": "npm",
-        "name": "@hoodie/account-client"
-      },
-      {
-        "type": "npm",
-        "name": "@hoodie/task"
-      },
-      {
-        "type": "npm",
-        "name": "account-json-api"
+        "name": "@hoodie/server"
       },
       {
         "type": "npm",
@@ -6940,19 +7170,35 @@
       },
       {
         "type": "npm",
-        "name": "pouchdb-hoodie-sync"
+        "name": "@hoodie/store-server"
       },
       {
         "type": "npm",
-        "name": "pouchdb-hoodie-api"
+        "name": "@hoodie/store-server-api"
       },
       {
         "type": "npm",
-        "name": "slackin"
+        "name": "@hoodie/task"
       },
       {
         "type": "npm",
-        "name": "hoodie-website"
+        "name": "@hoodie/task-client"
+      },
+      {
+        "type": "npm",
+        "name": "@hoodie/task-server"
+      },
+      {
+        "type": "npm",
+        "name": "account-json-api"
+      },
+      {
+        "type": "npm",
+        "name": "couchdb-calculate-session-id"
+      },
+      {
+        "type": "npm",
+        "name": "ember-hoodie"
       },
       {
         "type": "npm",
@@ -6960,7 +7206,11 @@
       },
       {
         "type": "npm",
-        "name": "hoodie-app-skeleton"
+        "name": "first-timers-bot"
+      },
+      {
+        "type": "npm",
+        "name": "hoodie"
       },
       {
         "type": "npm",
@@ -6968,7 +7218,43 @@
       },
       {
         "type": "npm",
-        "name": "@hoodie/server"
+        "name": "hoodie-app-skeleton"
+      },
+      {
+        "type": "npm",
+        "name": "hoodie-app-tracker"
+      },
+      {
+        "type": "npm",
+        "name": "hoodie-camp-tutorial"
+      },
+      {
+        "type": "npm",
+        "name": "hoodie-website"
+      },
+      {
+        "type": "npm",
+        "name": "hoodie-zuul-config"
+      },
+      {
+        "type": "npm",
+        "name": "pouchdb-admins"
+      },
+      {
+        "type": "npm",
+        "name": "pouchdb-hoodie-api"
+      },
+      {
+        "type": "npm",
+        "name": "pouchdb-hoodie-sync"
+      },
+      {
+        "type": "npm",
+        "name": "pouchdb-users"
+      },
+      {
+        "type": "npm",
+        "name": "slackin"
       }
     ],
     "github": {
@@ -7016,11 +7302,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "hospitalrun-dblisteners"
+        "name": "hospitalrun"
       },
       {
         "type": "npm",
-        "name": "hospitalrun-server-routes"
+        "name": "hospitalrun-dblisteners"
       },
       {
         "type": "npm",
@@ -7028,7 +7314,7 @@
       },
       {
         "type": "npm",
-        "name": "hospitalrun"
+        "name": "hospitalrun-server-routes"
       }
     ],
     "github": {
@@ -7183,11 +7469,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "idyll-ast"
+        "name": "idyll"
       },
       {
         "type": "npm",
-        "name": "idyll"
+        "name": "idyll-ast"
       },
       {
         "type": "npm",
@@ -7207,11 +7493,11 @@
       },
       {
         "type": "npm",
-        "name": "idyll-themes"
+        "name": "idyll-template-projects"
       },
       {
         "type": "npm",
-        "name": "idyll-template-projects"
+        "name": "idyll-themes"
       }
     ],
     "opencollective": {
@@ -7267,6 +7553,10 @@
     "packages": [
       {
         "type": "npm",
+        "name": "inferno"
+      },
+      {
+        "type": "npm",
         "name": "inferno-clone-vnode"
       },
       {
@@ -7320,10 +7610,6 @@
       {
         "type": "npm",
         "name": "inferno-vnode-flags"
-      },
-      {
-        "type": "npm",
-        "name": "inferno"
       }
     ],
     "opencollective": {
@@ -7530,7 +7816,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "nyc"
+        "name": "babel-plugin-istanbul"
       },
       {
         "type": "npm",
@@ -7538,7 +7824,7 @@
       },
       {
         "type": "npm",
-        "name": "babel-plugin-istanbul"
+        "name": "nyc"
       }
     ]
   },
@@ -7581,11 +7867,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "jasmine-core"
+        "name": "jasmine"
       },
       {
         "type": "npm",
-        "name": "jasmine"
+        "name": "jasmine-core"
       }
     ]
   },
@@ -7658,10 +7944,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "jest"
-      },
-      {
-        "type": "npm",
         "name": "babel-jest"
       },
       {
@@ -7683,6 +7965,10 @@
       {
         "type": "npm",
         "name": "expect"
+      },
+      {
+        "type": "npm",
+        "name": "jest"
       },
       {
         "type": "npm",
@@ -7766,11 +8052,11 @@
       },
       {
         "type": "npm",
-        "name": "jest-resolve-dependencies"
+        "name": "jest-resolve"
       },
       {
         "type": "npm",
-        "name": "jest-resolve"
+        "name": "jest-resolve-dependencies"
       },
       {
         "type": "npm",
@@ -7799,6 +8085,10 @@
       {
         "type": "npm",
         "name": "jest-validate"
+      },
+      {
+        "type": "npm",
+        "name": "jest-watcher"
       },
       {
         "type": "npm",
@@ -7984,6 +8274,10 @@
     "packages": [
       {
         "type": "npm",
+        "name": "jsonmvc"
+      },
+      {
+        "type": "npm",
         "name": "jsonmvc-datastore"
       },
       {
@@ -8041,10 +8335,6 @@
       {
         "type": "npm",
         "name": "jsonmvc-util-load"
-      },
-      {
-        "type": "npm",
-        "name": "jsonmvc"
       }
     ],
     "opencollective": {
@@ -8255,11 +8545,15 @@
       },
       {
         "type": "npm",
-        "name": "karma-jasmine"
+        "name": "karma-coverage"
       },
       {
         "type": "npm",
-        "name": "karma-coverage"
+        "name": "karma-firefox-launcher"
+      },
+      {
+        "type": "npm",
+        "name": "karma-jasmine"
       },
       {
         "type": "npm",
@@ -8268,10 +8562,6 @@
       {
         "type": "npm",
         "name": "karma-phantomjs-launcher"
-      },
-      {
-        "type": "npm",
-        "name": "karma-firefox-launcher"
       },
       {
         "type": "npm",
@@ -8347,251 +8637,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "koa"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-config-koa"
-      },
-      {
-        "type": "npm",
-        "name": "koa-ctx-cache-control"
-      },
-      {
-        "type": "npm",
-        "name": "koa-ctx-basic-auth"
-      },
-      {
-        "type": "npm",
-        "name": "koa-maxrequests"
-      },
-      {
-        "type": "npm",
-        "name": "koa-redis-session-sets"
-      },
-      {
-        "type": "npm",
-        "name": "koa-timer"
-      },
-      {
-        "type": "npm",
-        "name": "koa-middleware-hook"
-      },
-      {
-        "type": "npm",
-        "name": "koa-convert"
-      },
-      {
-        "type": "npm",
-        "name": "stateless-csrf"
-      },
-      {
-        "type": "npm",
-        "name": "cross-cookies"
-      },
-      {
-        "type": "npm",
-        "name": "koa-react-view"
-      },
-      {
-        "type": "npm",
-        "name": "koa-locales"
-      },
-      {
-        "type": "npm",
-        "name": "koa-s3-cache"
-      },
-      {
-        "type": "npm",
-        "name": "koa-observable-redis-session"
-      },
-      {
-        "type": "npm",
-        "name": "koa-bundle"
-      },
-      {
-        "type": "npm",
-        "name": "koa-querystring-strict"
-      },
-      {
-        "type": "npm",
         "name": "@koa/cors"
-      },
-      {
-        "type": "npm",
-        "name": "koa-trace-influxdb"
-      },
-      {
-        "type": "npm",
-        "name": "koa-atomic-session"
-      },
-      {
-        "type": "npm",
-        "name": "koa-mock"
-      },
-      {
-        "type": "npm",
-        "name": "koa-accesslog"
-      },
-      {
-        "type": "npm",
-        "name": "koa-bunyan-logger"
-      },
-      {
-        "type": "npm",
-        "name": "koa.io"
-      },
-      {
-        "type": "npm",
-        "name": "koa-parameter"
-      },
-      {
-        "type": "npm",
-        "name": "koa-resourcer-docs"
-      },
-      {
-        "type": "npm",
-        "name": "koa-resourcer"
-      },
-      {
-        "type": "npm",
-        "name": "koa-joi-router"
-      },
-      {
-        "type": "npm",
-        "name": "koa-path-match"
-      },
-      {
-        "type": "npm",
-        "name": "kick-off-koa"
-      },
-      {
-        "type": "npm",
-        "name": "koa-safe-jsonp"
-      },
-      {
-        "type": "npm",
-        "name": "koa-charset"
-      },
-      {
-        "type": "npm",
-        "name": "koa-workshop"
-      },
-      {
-        "type": "npm",
-        "name": "koa-snapshot"
-      },
-      {
-        "type": "npm",
-        "name": "koa-trace"
-      },
-      {
-        "type": "npm",
-        "name": "koa-html-minifier"
-      },
-      {
-        "type": "npm",
-        "name": "koa-body-parsers"
-      },
-      {
-        "type": "npm",
-        "name": "koala"
-      },
-      {
-        "type": "npm",
-        "name": "koa-range"
-      },
-      {
-        "type": "npm",
-        "name": "koa-cash"
-      },
-      {
-        "type": "npm",
-        "name": "koa-lusca"
-      },
-      {
-        "type": "npm",
-        "name": "koa-json-error"
-      },
-      {
-        "type": "npm",
-        "name": "koa-compressor"
-      },
-      {
-        "type": "npm",
-        "name": "koa-is-json"
-      },
-      {
-        "type": "npm",
-        "name": "koa-onerror"
-      },
-      {
-        "type": "npm",
-        "name": "koa-statsd"
-      },
-      {
-        "type": "npm",
-        "name": "koa-userauth"
-      },
-      {
-        "type": "npm",
-        "name": "koa-cluster"
-      },
-      {
-        "type": "npm",
-        "name": "koa-cdn"
-      },
-      {
-        "type": "npm",
-        "name": "koa-path"
-      },
-      {
-        "type": "npm",
-        "name": "koa-roles"
-      },
-      {
-        "type": "npm",
-        "name": "koa-override-method"
-      },
-      {
-        "type": "npm",
-        "name": "koa-file-server"
-      },
-      {
-        "type": "npm",
-        "name": "koa-sendfile"
-      },
-      {
-        "type": "npm",
-        "name": "koa-todo"
-      },
-      {
-        "type": "npm",
-        "name": "koa-gzip"
-      },
-      {
-        "type": "npm",
-        "name": "koa-fresh"
-      },
-      {
-        "type": "npm",
-        "name": "koa-ejs"
-      },
-      {
-        "type": "npm",
-        "name": "koa-markdown"
-      },
-      {
-        "type": "npm",
-        "name": "koa-bodyparser"
-      },
-      {
-        "type": "npm",
-        "name": "koa-json"
-      },
-      {
-        "type": "npm",
-        "name": "koa-jwt"
       },
       {
         "type": "npm",
@@ -8599,31 +8645,27 @@
       },
       {
         "type": "npm",
-        "name": "koa-github"
+        "name": "bigpipe-example"
       },
       {
         "type": "npm",
-        "name": "koa-generic-session"
+        "name": "cross-cookies"
       },
       {
         "type": "npm",
-        "name": "koa-redis"
+        "name": "eslint-config-koa"
       },
       {
         "type": "npm",
-        "name": "koa-rt"
+        "name": "kick-off-koa"
       },
       {
         "type": "npm",
-        "name": "koa-hbs"
+        "name": "koa"
       },
       {
         "type": "npm",
-        "name": "koa-error"
-      },
-      {
-        "type": "npm",
-        "name": "koa-qs"
+        "name": "koa-accesslog"
       },
       {
         "type": "npm",
@@ -8631,63 +8673,7 @@
       },
       {
         "type": "npm",
-        "name": "koa-send"
-      },
-      {
-        "type": "npm",
-        "name": "koa-examples"
-      },
-      {
-        "type": "npm",
-        "name": "koa-trie-router"
-      },
-      {
-        "type": "npm",
-        "name": "koa-ratelimit"
-      },
-      {
-        "type": "npm",
-        "name": "bigpipe-example"
-      },
-      {
-        "type": "npm",
-        "name": "koa-csrf"
-      },
-      {
-        "type": "npm",
-        "name": "koa-session"
-      },
-      {
-        "type": "npm",
-        "name": "koa-route"
-      },
-      {
-        "type": "npm",
-        "name": "webcam-mjpeg-stream"
-      },
-      {
-        "type": "npm",
-        "name": "koa-conditional-get"
-      },
-      {
-        "type": "npm",
-        "name": "koa-favicon"
-      },
-      {
-        "type": "npm",
-        "name": "koa-etag"
-      },
-      {
-        "type": "npm",
-        "name": "koa-rewrite"
-      },
-      {
-        "type": "npm",
-        "name": "koa-static-cache"
-      },
-      {
-        "type": "npm",
-        "name": "koa-compress"
+        "name": "koa-atomic-session"
       },
       {
         "type": "npm",
@@ -8695,7 +8681,35 @@
       },
       {
         "type": "npm",
-        "name": "koa-static"
+        "name": "koa-body-parsers"
+      },
+      {
+        "type": "npm",
+        "name": "koa-bodyparser"
+      },
+      {
+        "type": "npm",
+        "name": "koa-bundle"
+      },
+      {
+        "type": "npm",
+        "name": "koa-bunyan-logger"
+      },
+      {
+        "type": "npm",
+        "name": "koa-cash"
+      },
+      {
+        "type": "npm",
+        "name": "koa-cdn"
+      },
+      {
+        "type": "npm",
+        "name": "koa-charset"
+      },
+      {
+        "type": "npm",
+        "name": "koa-cluster"
       },
       {
         "type": "npm",
@@ -8703,7 +8717,107 @@
       },
       {
         "type": "npm",
-        "name": "koa-mount"
+        "name": "koa-compose"
+      },
+      {
+        "type": "npm",
+        "name": "koa-compress"
+      },
+      {
+        "type": "npm",
+        "name": "koa-compressor"
+      },
+      {
+        "type": "npm",
+        "name": "koa-conditional-get"
+      },
+      {
+        "type": "npm",
+        "name": "koa-convert"
+      },
+      {
+        "type": "npm",
+        "name": "koa-csrf"
+      },
+      {
+        "type": "npm",
+        "name": "koa-ctx-basic-auth"
+      },
+      {
+        "type": "npm",
+        "name": "koa-ctx-cache-control"
+      },
+      {
+        "type": "npm",
+        "name": "koa-ejs"
+      },
+      {
+        "type": "npm",
+        "name": "koa-error"
+      },
+      {
+        "type": "npm",
+        "name": "koa-etag"
+      },
+      {
+        "type": "npm",
+        "name": "koa-examples"
+      },
+      {
+        "type": "npm",
+        "name": "koa-favicon"
+      },
+      {
+        "type": "npm",
+        "name": "koa-file-server"
+      },
+      {
+        "type": "npm",
+        "name": "koa-fresh"
+      },
+      {
+        "type": "npm",
+        "name": "koa-generic-session"
+      },
+      {
+        "type": "npm",
+        "name": "koa-github"
+      },
+      {
+        "type": "npm",
+        "name": "koa-gzip"
+      },
+      {
+        "type": "npm",
+        "name": "koa-hbs"
+      },
+      {
+        "type": "npm",
+        "name": "koa-html-minifier"
+      },
+      {
+        "type": "npm",
+        "name": "koa-is-json"
+      },
+      {
+        "type": "npm",
+        "name": "koa-joi-router"
+      },
+      {
+        "type": "npm",
+        "name": "koa-json"
+      },
+      {
+        "type": "npm",
+        "name": "koa-json-error"
+      },
+      {
+        "type": "npm",
+        "name": "koa-jwt"
+      },
+      {
+        "type": "npm",
+        "name": "koa-locales"
       },
       {
         "type": "npm",
@@ -8711,11 +8825,187 @@
       },
       {
         "type": "npm",
+        "name": "koa-lusca"
+      },
+      {
+        "type": "npm",
+        "name": "koa-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "koa-maxrequests"
+      },
+      {
+        "type": "npm",
+        "name": "koa-middleware-hook"
+      },
+      {
+        "type": "npm",
+        "name": "koa-mock"
+      },
+      {
+        "type": "npm",
+        "name": "koa-mount"
+      },
+      {
+        "type": "npm",
+        "name": "koa-observable-redis-session"
+      },
+      {
+        "type": "npm",
+        "name": "koa-onerror"
+      },
+      {
+        "type": "npm",
+        "name": "koa-override-method"
+      },
+      {
+        "type": "npm",
+        "name": "koa-parameter"
+      },
+      {
+        "type": "npm",
+        "name": "koa-path"
+      },
+      {
+        "type": "npm",
+        "name": "koa-path-match"
+      },
+      {
+        "type": "npm",
+        "name": "koa-qs"
+      },
+      {
+        "type": "npm",
+        "name": "koa-querystring-strict"
+      },
+      {
+        "type": "npm",
+        "name": "koa-range"
+      },
+      {
+        "type": "npm",
+        "name": "koa-ratelimit"
+      },
+      {
+        "type": "npm",
+        "name": "koa-react-view"
+      },
+      {
+        "type": "npm",
+        "name": "koa-redis"
+      },
+      {
+        "type": "npm",
+        "name": "koa-redis-session-sets"
+      },
+      {
+        "type": "npm",
+        "name": "koa-resourcer"
+      },
+      {
+        "type": "npm",
+        "name": "koa-resourcer-docs"
+      },
+      {
+        "type": "npm",
         "name": "koa-response-time"
       },
       {
         "type": "npm",
-        "name": "koa-compose"
+        "name": "koa-rewrite"
+      },
+      {
+        "type": "npm",
+        "name": "koa-roles"
+      },
+      {
+        "type": "npm",
+        "name": "koa-route"
+      },
+      {
+        "type": "npm",
+        "name": "koa-rt"
+      },
+      {
+        "type": "npm",
+        "name": "koa-s3-cache"
+      },
+      {
+        "type": "npm",
+        "name": "koa-safe-jsonp"
+      },
+      {
+        "type": "npm",
+        "name": "koa-send"
+      },
+      {
+        "type": "npm",
+        "name": "koa-sendfile"
+      },
+      {
+        "type": "npm",
+        "name": "koa-session"
+      },
+      {
+        "type": "npm",
+        "name": "koa-snapshot"
+      },
+      {
+        "type": "npm",
+        "name": "koa-static"
+      },
+      {
+        "type": "npm",
+        "name": "koa-static-cache"
+      },
+      {
+        "type": "npm",
+        "name": "koa-statsd"
+      },
+      {
+        "type": "npm",
+        "name": "koa-timer"
+      },
+      {
+        "type": "npm",
+        "name": "koa-todo"
+      },
+      {
+        "type": "npm",
+        "name": "koa-trace"
+      },
+      {
+        "type": "npm",
+        "name": "koa-trace-influxdb"
+      },
+      {
+        "type": "npm",
+        "name": "koa-trie-router"
+      },
+      {
+        "type": "npm",
+        "name": "koa-userauth"
+      },
+      {
+        "type": "npm",
+        "name": "koa-workshop"
+      },
+      {
+        "type": "npm",
+        "name": "koa.io"
+      },
+      {
+        "type": "npm",
+        "name": "koala"
+      },
+      {
+        "type": "npm",
+        "name": "stateless-csrf"
+      },
+      {
+        "type": "npm",
+        "name": "webcam-mjpeg-stream"
       }
     ],
     "github": {
@@ -9142,11 +9432,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "lodash"
+        "name": "babel-plugin-lodash"
       },
       {
         "type": "npm",
-        "name": "babel-plugin-lodash"
+        "name": "lodash"
       }
     ]
   },
@@ -9497,59 +9787,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "metamask_io"
-      },
-      {
-        "type": "npm",
-        "name": "ipfs-rendezvous-experiment"
-      },
-      {
-        "type": "npm",
-        "name": "gaba"
-      },
-      {
-        "type": "npm",
-        "name": "metamask-mesh-testing"
-      },
-      {
-        "type": "npm",
-        "name": "sw-controller"
-      },
-      {
-        "type": "npm",
-        "name": "reveal.js"
-      },
-      {
-        "type": "npm",
-        "name": "metamask-state-log-explorer"
-      },
-      {
-        "type": "npm",
-        "name": "etherscan-link"
-      },
-      {
-        "type": "npm",
-        "name": "eth-rpc-client"
-      },
-      {
-        "type": "npm",
-        "name": "eth-keyring-controller"
-      },
-      {
-        "type": "npm",
-        "name": "metamascara"
-      },
-      {
-        "type": "npm",
-        "name": "eth-phishing-detect"
-      },
-      {
-        "type": "npm",
-        "name": "metamask-stack"
-      },
-      {
-        "type": "npm",
-        "name": "eth-gas-price-suggestor"
+        "name": "eth-block-tracker"
       },
       {
         "type": "npm",
@@ -9557,15 +9795,31 @@
       },
       {
         "type": "npm",
-        "name": "eth-json-rpc-middleware"
+        "name": "eth-gas-price-suggestor"
       },
       {
         "type": "npm",
-        "name": "eth-token-tracker"
+        "name": "eth-gnosis-safe-keyring"
       },
       {
         "type": "npm",
         "name": "eth-hd-keyring"
+      },
+      {
+        "type": "npm",
+        "name": "eth-json-rpc-middleware"
+      },
+      {
+        "type": "npm",
+        "name": "eth-keyring-controller"
+      },
+      {
+        "type": "npm",
+        "name": "eth-phishing-detect"
+      },
+      {
+        "type": "npm",
+        "name": "eth-rpc-client"
       },
       {
         "type": "npm",
@@ -9577,7 +9831,11 @@
       },
       {
         "type": "npm",
-        "name": "eth-block-tracker"
+        "name": "eth-token-tracker"
+      },
+      {
+        "type": "npm",
+        "name": "eth-trezor-keyring"
       },
       {
         "type": "npm",
@@ -9585,7 +9843,43 @@
       },
       {
         "type": "npm",
+        "name": "etherscan-link"
+      },
+      {
+        "type": "npm",
+        "name": "gaba"
+      },
+      {
+        "type": "npm",
+        "name": "ipfs-rendezvous-experiment"
+      },
+      {
+        "type": "npm",
+        "name": "libp2p-multicast-experiment"
+      },
+      {
+        "type": "npm",
+        "name": "metamascara"
+      },
+      {
+        "type": "npm",
+        "name": "metamask_io"
+      },
+      {
+        "type": "npm",
         "name": "metamask-landing"
+      },
+      {
+        "type": "npm",
+        "name": "metamask-mesh-testing"
+      },
+      {
+        "type": "npm",
+        "name": "metamask-stack"
+      },
+      {
+        "type": "npm",
+        "name": "metamask-state-log-explorer"
       },
       {
         "type": "npm",
@@ -9597,19 +9891,15 @@
       },
       {
         "type": "npm",
+        "name": "reveal.js"
+      },
+      {
+        "type": "npm",
+        "name": "sw-controller"
+      },
+      {
+        "type": "npm",
         "name": "web3-provider-engine"
-      },
-      {
-        "type": "npm",
-        "name": "eth-gnosis-safe-keyring"
-      },
-      {
-        "type": "npm",
-        "name": "eth-trezor-keyring"
-      },
-      {
-        "type": "npm",
-        "name": "libp2p-multicast-experiment"
       }
     ],
     "github": {
@@ -9910,19 +10200,19 @@
     "packages": [
       {
         "type": "npm",
-        "name": "mocha"
-      },
-      {
-        "type": "npm",
         "name": "@mocha/eslint-config-mocha"
       },
       {
         "type": "npm",
-        "name": "mocha-ui-bdd"
+        "name": "mocha"
       },
       {
         "type": "npm",
         "name": "mocha-core"
+      },
+      {
+        "type": "npm",
+        "name": "mocha-ui-bdd"
       },
       {
         "type": "npm",
@@ -10409,15 +10699,15 @@
     "packages": [
       {
         "type": "npm",
-        "name": "@ngrx/platform"
-      },
-      {
-        "type": "npm",
         "name": "@ngrx/effects"
       },
       {
         "type": "npm",
         "name": "@ngrx/entity"
+      },
+      {
+        "type": "npm",
+        "name": "@ngrx/platform"
       },
       {
         "type": "npm",
@@ -10429,11 +10719,11 @@
       },
       {
         "type": "npm",
-        "name": "@ngrx/store-devtools"
+        "name": "@ngrx/store"
       },
       {
         "type": "npm",
-        "name": "@ngrx/store"
+        "name": "@ngrx/store-devtools"
       }
     ],
     "opencollective": {
@@ -10500,8 +10790,8 @@
         }
       ],
       "stats": {
-        "balance": 267697,
-        "yearlyBudget": 810635
+        "balance": 268528,
+        "yearlyBudget": 820607
       },
       "goals": []
     },
@@ -11130,11 +11420,11 @@
       },
       {
         "type": "npm",
-        "name": "@octolinker/plugin-dot-net-core"
+        "name": "@octolinker/plugin-dot-net"
       },
       {
         "type": "npm",
-        "name": "@octolinker/plugin-dot-net"
+        "name": "@octolinker/plugin-dot-net-core"
       },
       {
         "type": "npm",
@@ -11399,6 +11689,26 @@
     "packages": [
       {
         "type": "npm",
+        "name": "babel-preset-opencollective"
+      },
+      {
+        "type": "npm",
+        "name": "backyourstack"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-config-opencollective"
+      },
+      {
+        "type": "npm",
+        "name": "express-server-status"
+      },
+      {
+        "type": "npm",
+        "name": "intelligence"
+      },
+      {
+        "type": "npm",
         "name": "opencollective"
       },
       {
@@ -11407,15 +11717,15 @@
       },
       {
         "type": "npm",
-        "name": "backyourstack"
-      },
-      {
-        "type": "npm",
-        "name": "intelligence"
+        "name": "opencollective-app"
       },
       {
         "type": "npm",
         "name": "opencollective-cloudflare-workers"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-jobs"
       },
       {
         "type": "npm",
@@ -11427,27 +11737,7 @@
       },
       {
         "type": "npm",
-        "name": "babel-preset-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-jobs"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-config-opencollective"
-      },
-      {
-        "type": "npm",
         "name": "opencollective-website"
-      },
-      {
-        "type": "npm",
-        "name": "express-server-status"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-app"
       }
     ],
     "github": {
@@ -11481,7 +11771,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "opencollective-api"
+        "name": "babel-preset-opencollective"
       },
       {
         "type": "npm",
@@ -11489,39 +11779,7 @@
       },
       {
         "type": "npm",
-        "name": "intelligence"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-cloudflare-workers"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-postinstall"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-site"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-jobs"
-      },
-      {
-        "type": "npm",
         "name": "eslint-config-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-website"
       },
       {
         "type": "npm",
@@ -11529,7 +11787,39 @@
       },
       {
         "type": "npm",
+        "name": "intelligence"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-api"
+      },
+      {
+        "type": "npm",
         "name": "opencollective-app"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-cloudflare-workers"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-jobs"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-postinstall"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-site"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-website"
       }
     ],
     "github": {
@@ -11577,7 +11867,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "opencollective-api"
+        "name": "babel-preset-opencollective"
       },
       {
         "type": "npm",
@@ -11585,39 +11875,7 @@
       },
       {
         "type": "npm",
-        "name": "intelligence"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-cloudflare-workers"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-postinstall"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-site"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-jobs"
-      },
-      {
-        "type": "npm",
         "name": "eslint-config-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-website"
       },
       {
         "type": "npm",
@@ -11625,7 +11883,39 @@
       },
       {
         "type": "npm",
+        "name": "intelligence"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-api"
+      },
+      {
+        "type": "npm",
         "name": "opencollective-app"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-cloudflare-workers"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-jobs"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-postinstall"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-site"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-website"
       }
     ],
     "github": {
@@ -11659,7 +11949,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "opencollective-api"
+        "name": "babel-preset-opencollective"
       },
       {
         "type": "npm",
@@ -11667,39 +11957,7 @@
       },
       {
         "type": "npm",
-        "name": "intelligence"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-cloudflare-workers"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-postinstall"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-site"
-      },
-      {
-        "type": "npm",
-        "name": "babel-preset-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-jobs"
-      },
-      {
-        "type": "npm",
         "name": "eslint-config-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-website"
       },
       {
         "type": "npm",
@@ -11707,7 +11965,39 @@
       },
       {
         "type": "npm",
+        "name": "intelligence"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-api"
+      },
+      {
+        "type": "npm",
         "name": "opencollective-app"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-cloudflare-workers"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-jobs"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-postinstall"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-site"
+      },
+      {
+        "type": "npm",
+        "name": "opencollective-website"
       }
     ],
     "github": {
@@ -11820,10 +12110,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "@jscad/openjscad"
-      },
-      {
-        "type": "npm",
         "name": "@jscad/cli"
       },
       {
@@ -11837,6 +12123,10 @@
       {
         "type": "npm",
         "name": "@jscad/examples"
+      },
+      {
+        "type": "npm",
+        "name": "@jscad/openjscad"
       },
       {
         "type": "npm",
@@ -11984,15 +12274,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "ory-keto-sdk"
+        "name": "eslint-config-ory-am"
       },
       {
         "type": "npm",
-        "name": "ory"
-      },
-      {
-        "type": "npm",
-        "name": "ory-redux-saga-fetch"
+        "name": "eslint-config-ory-am-react"
       },
       {
         "type": "npm",
@@ -12004,27 +12290,15 @@
       },
       {
         "type": "npm",
-        "name": "eslint-config-ory-am-react"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-config-ory-am"
-      },
-      {
-        "type": "npm",
-        "name": "ory-hydra-sdk"
-      },
-      {
-        "type": "npm",
-        "name": "ory-hydra-auth0-consent-sdk"
-      },
-      {
-        "type": "npm",
-        "name": "ory-editor-core"
+        "name": "ory"
       },
       {
         "type": "npm",
         "name": "ory-editor"
+      },
+      {
+        "type": "npm",
+        "name": "ory-editor-core"
       },
       {
         "type": "npm",
@@ -12033,6 +12307,22 @@
       {
         "type": "npm",
         "name": "ory-editor-ui"
+      },
+      {
+        "type": "npm",
+        "name": "ory-hydra-auth0-consent-sdk"
+      },
+      {
+        "type": "npm",
+        "name": "ory-hydra-sdk"
+      },
+      {
+        "type": "npm",
+        "name": "ory-keto-sdk"
+      },
+      {
+        "type": "npm",
+        "name": "ory-redux-saga-fetch"
       }
     ],
     "github": {
@@ -12153,24 +12443,10 @@
           "totalDonations": 2100
         },
         {
-          "id": 11927,
-          "type": "ORGANIZATION",
-          "slug": "oneapp",
-          "name": "OneApp",
-          "totalDonations": 1400
-        },
-        {
           "id": 11745,
           "type": "ORGANIZATION",
           "slug": "duotai",
           "name": "多态",
-          "totalDonations": 1400
-        },
-        {
-          "id": 12008,
-          "type": "ORGANIZATION",
-          "slug": "as57695",
-          "name": "Misaka Network, Inc.",
           "totalDonations": 1400
         },
         {
@@ -12179,11 +12455,25 @@
           "slug": "jjb",
           "name": "京价保",
           "totalDonations": 1400
+        },
+        {
+          "id": 11927,
+          "type": "ORGANIZATION",
+          "slug": "oneapp",
+          "name": "OneApp",
+          "totalDonations": 1400
+        },
+        {
+          "id": 12008,
+          "type": "ORGANIZATION",
+          "slug": "as57695",
+          "name": "Misaka Network, Inc.",
+          "totalDonations": 1400
         }
       ],
       "stats": {
-        "balance": 297772,
-        "yearlyBudget": 544869
+        "balance": 297914,
+        "yearlyBudget": 546573
       },
       "goals": []
     }
@@ -12316,7 +12606,7 @@
       },
       {
         "type": "npm",
-        "name": "passport-local"
+        "name": "passport-facebook"
       },
       {
         "type": "npm",
@@ -12324,7 +12614,7 @@
       },
       {
         "type": "npm",
-        "name": "passport-facebook"
+        "name": "passport-local"
       }
     ]
   },
@@ -12681,11 +12971,11 @@
       },
       {
         "type": "npm",
-        "name": "postcss-loader"
+        "name": "postcss"
       },
       {
         "type": "npm",
-        "name": "postcss"
+        "name": "postcss-loader"
       }
     ]
   },
@@ -12815,17 +13105,41 @@
     "packages": [
       {
         "type": "npm",
-        "name": "prettier"
-      },
-      {
-        "type": "npm",
         "name": "eslint-config-prettier"
       },
       {
         "type": "npm",
         "name": "eslint-plugin-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "prettier"
       }
     ]
+  },
+  {
+    "name": "prisma",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "webroot"
+      }
+    ],
+    "github": {
+      "org": "Prisma"
+    },
+    "opencollective": {
+      "id": 10692,
+      "name": "prisma",
+      "slug": "prisma",
+      "description": "Add color to caregiving",
+      "sponsors": [],
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": []
+    }
   },
   {
     "name": "publii",
@@ -12847,10 +13161,18 @@
         {}
       ],
       "stats": {
-        "balance": 1996,
-        "yearlyBudget": 4504
+        "balance": 2052,
+        "yearlyBudget": 5176
       },
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 15126,
+          "type": "ORGANIZATION",
+          "slug": "hostpresto1",
+          "name": "HostPresto",
+          "totalDonations": 100
+        }
+      ]
     }
   },
   {
@@ -13084,15 +13406,15 @@
     "packages": [
       {
         "type": "npm",
+        "name": "prop-types"
+      },
+      {
+        "type": "npm",
         "name": "react"
       },
       {
         "type": "npm",
         "name": "react-dom"
-      },
-      {
-        "type": "npm",
-        "name": "prop-types"
       },
       {
         "type": "npm",
@@ -13131,11 +13453,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "react-app-tools"
+        "name": "react-app"
       },
       {
         "type": "npm",
-        "name": "react-app"
+        "name": "react-app-tools"
       }
     ],
     "opencollective": {
@@ -13351,7 +13673,7 @@
       ],
       "stats": {
         "balance": 35319,
-        "yearlyBudget": 244301
+        "yearlyBudget": 242589
       }
     }
   },
@@ -13577,6 +13899,10 @@
     "packages": [
       {
         "type": "npm",
+        "name": "@react-pdf/core"
+      },
+      {
+        "type": "npm",
         "name": "@react-pdf/dom"
       },
       {
@@ -13585,7 +13911,7 @@
       },
       {
         "type": "npm",
-        "name": "@react-pdf/core"
+        "name": "@react-pdf/react-pdf"
       }
     ],
     "opencollective": {
@@ -13770,11 +14096,11 @@
       },
       {
         "type": "npm",
-        "name": "react-svg-loader-cli"
+        "name": "react-svg-loader"
       },
       {
         "type": "npm",
-        "name": "react-svg-loader"
+        "name": "react-svg-loader-cli"
       },
       {
         "type": "npm",
@@ -13971,11 +14297,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "redux"
+        "name": "react-redux"
       },
       {
         "type": "npm",
-        "name": "react-redux"
+        "name": "redux"
       },
       {
         "type": "npm",
@@ -14156,7 +14482,7 @@
       ],
       "stats": {
         "balance": 153799,
-        "yearlyBudget": 484403
+        "yearlyBudget": 483998
       },
       "goals": []
     },
@@ -14450,11 +14776,15 @@
       },
       {
         "type": "npm",
-        "name": "rollup-plugin-node-resolve"
+        "name": "rollup-plugin-commonjs"
       },
       {
         "type": "npm",
-        "name": "rollup-plugin-commonjs"
+        "name": "rollup-plugin-json"
+      },
+      {
+        "type": "npm",
+        "name": "rollup-plugin-node-resolve"
       },
       {
         "type": "npm",
@@ -14463,10 +14793,6 @@
       {
         "type": "npm",
         "name": "rollup-plugin-uglify"
-      },
-      {
-        "type": "npm",
-        "name": "rollup-plugin-json"
       }
     ],
     "opencollective": {
@@ -15085,7 +15411,7 @@
       ],
       "stats": {
         "balance": 192543,
-        "yearlyBudget": 361185
+        "yearlyBudget": 360780
       },
       "goals": []
     },
@@ -15169,7 +15495,7 @@
       ],
       "stats": {
         "balance": 192543,
-        "yearlyBudget": 361185
+        "yearlyBudget": 360780
       },
       "goals": []
     }
@@ -15235,11 +15561,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "eslint-plugin-standard"
+        "name": "eslint-config-standard"
       },
       {
         "type": "npm",
-        "name": "eslint-config-standard"
+        "name": "eslint-plugin-standard"
       },
       {
         "type": "npm",
@@ -15272,11 +15598,11 @@
       },
       {
         "type": "npm",
-        "name": "@storybook/react-native"
+        "name": "@storybook/react"
       },
       {
         "type": "npm",
-        "name": "@storybook/react"
+        "name": "@storybook/react-native"
       },
       {
         "type": "npm",
@@ -15375,6 +15701,10 @@
     "packages": [
       {
         "type": "npm",
+        "name": "strapi"
+      },
+      {
+        "type": "npm",
         "name": "strapi-admin"
       },
       {
@@ -15396,6 +15726,10 @@
       {
         "type": "npm",
         "name": "strapi-email-sendmail"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-generate"
       },
       {
         "type": "npm",
@@ -15431,11 +15765,27 @@
       },
       {
         "type": "npm",
-        "name": "strapi-generate"
+        "name": "strapi-helper-plugin"
       },
       {
         "type": "npm",
-        "name": "strapi-helper-plugin"
+        "name": "strapi-hook-bookshelf"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-hook-ejs"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-hook-knex"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-hook-mongoose"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-hook-redis"
       },
       {
         "type": "npm",
@@ -15504,10 +15854,6 @@
       {
         "type": "npm",
         "name": "strapi-utils"
-      },
-      {
-        "type": "npm",
-        "name": "strapi"
       }
     ],
     "opencollective": {
@@ -15708,11 +16054,18 @@
           "slug": "codepilotai",
           "name": "CodePilot.ai",
           "totalDonations": 10000
+        },
+        {
+          "id": 15126,
+          "type": "ORGANIZATION",
+          "slug": "hostpresto1",
+          "name": "HostPresto",
+          "totalDonations": 200
         }
       ],
       "stats": {
-        "balance": 10640,
-        "yearlyBudget": 31056
+        "balance": 10782,
+        "yearlyBudget": 32760
       },
       "goals": []
     },
@@ -15824,12 +16177,248 @@
     "name": "symfony",
     "packages": [
       {
+        "type": "npm",
+        "name": "@symfony/webpack-encore"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/asset"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/browser-kit"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/cache"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/class-loader"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/config"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/console"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/css-selector"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/debug"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dependency-injection"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dom-crawler"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dotenv"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/event-dispatcher"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/expression-language"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/filesystem"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/finder"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/form"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-foundation"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-kernel"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/inflector"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/intl"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/intl-data"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/ldap"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/lock"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/options-resolver"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-apcu"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-iconv"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-grapheme"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-icu"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-normalizer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-mbstring"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php54"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php55"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php56"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php70"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php71"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php72"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-util"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/process"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/property-access"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/property-info"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/requirements-checker"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/routing"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-acl"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-core"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-csrf"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-guard"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-http"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/serializer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/stopwatch"
+      },
+      {
         "type": "composer",
         "name": "symfony/symfony"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/templating"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/translation"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/validator"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/var-dumper"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/web-link"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/workflow"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/yaml"
       }
     ],
     "github": {
-      "repo": "symfony/symfony"
+      "org": "symfony"
     },
     "opencollective": {
       "id": 13409,
@@ -15888,10 +16477,18 @@
       "name": "t-scroll",
       "slug": "t-scroll",
       "description": null,
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 15126,
+          "type": "ORGANIZATION",
+          "slug": "hostpresto1",
+          "name": "HostPresto",
+          "totalDonations": 200
+        }
+      ],
       "stats": {
-        "balance": 720,
-        "yearlyBudget": 144
+        "balance": 862,
+        "yearlyBudget": 1848
       },
       "goals": []
     }
@@ -16280,15 +16877,15 @@
       },
       {
         "type": "npm",
+        "name": "@turf/bbox"
+      },
+      {
+        "type": "npm",
         "name": "@turf/bbox-clip"
       },
       {
         "type": "npm",
         "name": "@turf/bbox-polygon"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/bbox"
       },
       {
         "type": "npm",
@@ -16360,6 +16957,10 @@
       },
       {
         "type": "npm",
+        "name": "@turf/center"
+      },
+      {
+        "type": "npm",
         "name": "@turf/center-mean"
       },
       {
@@ -16369,10 +16970,6 @@
       {
         "type": "npm",
         "name": "@turf/center-of-mass"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/center"
       },
       {
         "type": "npm",
@@ -16392,15 +16989,15 @@
       },
       {
         "type": "npm",
+        "name": "@turf/clusters"
+      },
+      {
+        "type": "npm",
         "name": "@turf/clusters-dbscan"
       },
       {
         "type": "npm",
         "name": "@turf/clusters-kmeans"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/clusters"
       },
       {
         "type": "npm",
@@ -16436,11 +17033,11 @@
       },
       {
         "type": "npm",
-        "name": "@turf/distance-weight"
+        "name": "@turf/distance"
       },
       {
         "type": "npm",
-        "name": "@turf/distance"
+        "name": "@turf/distance-weight"
       },
       {
         "type": "npm",
@@ -16528,11 +17125,11 @@
       },
       {
         "type": "npm",
-        "name": "@turf/line-slice-along"
+        "name": "@turf/line-slice"
       },
       {
         "type": "npm",
-        "name": "@turf/line-slice"
+        "name": "@turf/line-slice-along"
       },
       {
         "type": "npm",
@@ -16564,15 +17161,15 @@
       },
       {
         "type": "npm",
+        "name": "@turf/nearest-point"
+      },
+      {
+        "type": "npm",
         "name": "@turf/nearest-point-on-line"
       },
       {
         "type": "npm",
         "name": "@turf/nearest-point-to-line"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/nearest-point"
       },
       {
         "type": "npm",
@@ -16624,6 +17221,10 @@
       },
       {
         "type": "npm",
+        "name": "@turf/rectangle-grid"
+      },
+      {
+        "type": "npm",
         "name": "@turf/rewind"
       },
       {
@@ -16656,11 +17257,11 @@
       },
       {
         "type": "npm",
-        "name": "@turf/square-grid"
+        "name": "@turf/square"
       },
       {
         "type": "npm",
-        "name": "@turf/square"
+        "name": "@turf/square-grid"
       },
       {
         "type": "npm",
@@ -16700,6 +17301,10 @@
       },
       {
         "type": "npm",
+        "name": "@turf/turf"
+      },
+      {
+        "type": "npm",
         "name": "@turf/union"
       },
       {
@@ -16709,14 +17314,6 @@
       {
         "type": "npm",
         "name": "@turf/voronoi"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/turf"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/rectangle-grid"
       }
     ],
     "opencollective": {
@@ -16765,6 +17362,10 @@
       {
         "type": "npm",
         "name": "react-typography"
+      },
+      {
+        "type": "npm",
+        "name": "typography"
       },
       {
         "type": "npm",
@@ -16921,10 +17522,6 @@
       {
         "type": "npm",
         "name": "typography-theme-wordpress-kubrick"
-      },
-      {
-        "type": "npm",
-        "name": "typography"
       }
     ],
     "opencollective": {
@@ -17340,19 +17937,19 @@
       },
       {
         "type": "npm",
-        "name": "vue-template-compiler"
-      },
-      {
-        "type": "npm",
         "name": "vue-loader"
       },
       {
         "type": "npm",
-        "name": "vuex"
+        "name": "vue-router"
       },
       {
         "type": "npm",
-        "name": "vue-router"
+        "name": "vue-template-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "vuex"
       }
     ],
     "opencollective": {
@@ -17544,6 +18141,18 @@
       },
       {
         "type": "npm",
+        "name": "@warriorjs/helper-get-grade-letter"
+      },
+      {
+        "type": "npm",
+        "name": "@warriorjs/helper-get-level-config"
+      },
+      {
+        "type": "npm",
+        "name": "@warriorjs/helper-get-play-score"
+      },
+      {
+        "type": "npm",
         "name": "@warriorjs/tower-beginner"
       },
       {
@@ -17560,13 +18169,21 @@
       "name": "WarriorJS",
       "slug": "warriorjs",
       "description": "An exciting game of programming and Artificial Intelligence",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 15126,
+          "type": "ORGANIZATION",
+          "slug": "hostpresto1",
+          "name": "HostPresto",
+          "totalDonations": 200
+        }
+      ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 12306,
-        "yearlyBudget": 23574
+        "balance": 12448,
+        "yearlyBudget": 25278
       }
     },
     "github": {
@@ -17628,39 +18245,55 @@
     "packages": [
       {
         "type": "npm",
-        "name": "webpack"
+        "name": "@webpack-cli/add"
       },
       {
         "type": "npm",
-        "name": "css-loader"
+        "name": "@webpack-cli/generate-loader"
       },
       {
         "type": "npm",
-        "name": "style-loader"
+        "name": "@webpack-cli/generate-plugin"
       },
       {
         "type": "npm",
-        "name": "file-loader"
+        "name": "@webpack-cli/generators"
       },
       {
         "type": "npm",
-        "name": "webpack-dev-server"
+        "name": "@webpack-cli/info"
       },
       {
         "type": "npm",
-        "name": "url-loader"
+        "name": "@webpack-cli/init"
       },
       {
         "type": "npm",
-        "name": "extract-text-webpack-plugin"
+        "name": "@webpack-cli/make"
       },
       {
         "type": "npm",
-        "name": "sass-loader"
+        "name": "@webpack-cli/migrate"
       },
       {
         "type": "npm",
-        "name": "json-loader"
+        "name": "@webpack-cli/remove"
+      },
+      {
+        "type": "npm",
+        "name": "@webpack-cli/serve"
+      },
+      {
+        "type": "npm",
+        "name": "@webpack-cli/update"
+      },
+      {
+        "type": "npm",
+        "name": "@webpack-cli/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@webpack-cli/webpack-scaffold"
       },
       {
         "type": "npm",
@@ -17668,7 +18301,51 @@
       },
       {
         "type": "npm",
+        "name": "css-loader"
+      },
+      {
+        "type": "npm",
+        "name": "enhanced-require"
+      },
+      {
+        "type": "npm",
+        "name": "enhanced-resolve"
+      },
+      {
+        "type": "npm",
+        "name": "enhanced-resolve-completion-demo"
+      },
+      {
+        "type": "npm",
         "name": "eslint-loader"
+      },
+      {
+        "type": "npm",
+        "name": "example-app"
+      },
+      {
+        "type": "npm",
+        "name": "extract-text-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "fastparse"
+      },
+      {
+        "type": "npm",
+        "name": "file-loader"
+      },
+      {
+        "type": "npm",
+        "name": "github-org-overview"
+      },
+      {
+        "type": "npm",
+        "name": "hot-node-example"
+      },
+      {
+        "type": "npm",
+        "name": "json-loader"
       },
       {
         "type": "npm",
@@ -17676,11 +18353,63 @@
       },
       {
         "type": "npm",
-        "name": "webpack-cli"
+        "name": "loader-runner"
       },
       {
         "type": "npm",
-        "name": "webpack-hot-middleware"
+        "name": "loader-utils"
+      },
+      {
+        "type": "npm",
+        "name": "memory-fs"
+      },
+      {
+        "type": "npm",
+        "name": "node-libs-browser"
+      },
+      {
+        "type": "npm",
+        "name": "react-starter"
+      },
+      {
+        "type": "npm",
+        "name": "react-webpack-server-side-example"
+      },
+      {
+        "type": "npm",
+        "name": "sass-loader"
+      },
+      {
+        "type": "npm",
+        "name": "source-list-map"
+      },
+      {
+        "type": "npm",
+        "name": "style-loader"
+      },
+      {
+        "type": "npm",
+        "name": "tapable"
+      },
+      {
+        "type": "npm",
+        "name": "uglifyjs-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "url-loader"
+      },
+      {
+        "type": "npm",
+        "name": "watchpack"
+      },
+      {
+        "type": "npm",
+        "name": "webpack"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-analyse"
       },
       {
         "type": "npm",
@@ -17688,11 +18417,39 @@
       },
       {
         "type": "npm",
+        "name": "webpack-cli"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-core"
+      },
+      {
+        "type": "npm",
         "name": "webpack-dev-middleware"
       },
       {
         "type": "npm",
-        "name": "uglifyjs-webpack-plugin"
+        "name": "webpack-dev-server"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-graph"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-hot-middleware"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-playground"
+      },
+      {
+        "type": "npm",
+        "name": "webpack-sources"
+      },
+      {
+        "type": "npm",
+        "name": "wpt"
       }
     ],
     "opencollective": {
@@ -17796,8 +18553,8 @@
         }
       ],
       "stats": {
-        "balance": 1867794,
-        "yearlyBudget": 33163721
+        "balance": 1871091,
+        "yearlyBudget": 33152345
       }
     },
     "github": {
@@ -18209,143 +18966,11 @@
     "packages": [
       {
         "type": "npm",
-        "name": "yeoman-remote"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-test"
-      },
-      {
-        "type": "npm",
-        "name": "html-wiring"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-welcome"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-assert"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-doctor"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-environment"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-character"
-      },
-      {
-        "type": "npm",
-        "name": "generator-dummytest"
-      },
-      {
-        "type": "npm",
-        "name": "yosay"
-      },
-      {
-        "type": "npm",
-        "name": "yeoman-app"
-      },
-      {
-        "type": "npm",
-        "name": "generator-webapp"
-      },
-      {
-        "type": "npm",
-        "name": "grunt-bower-requirejs"
-      },
-      {
-        "type": "npm",
-        "name": "generator-dummy"
-      },
-      {
-        "type": "npm",
-        "name": "generator-polymer"
-      },
-      {
-        "type": "npm",
-        "name": "grunt-filerev"
-      },
-      {
-        "type": "npm",
-        "name": "generator-mobile"
-      },
-      {
-        "type": "npm",
-        "name": "generator-node"
-      },
-      {
-        "type": "npm",
-        "name": "generator-gruntplugin"
-      },
-      {
-        "type": "npm",
-        "name": "generator-gruntfile"
-      },
-      {
-        "type": "npm",
-        "name": "generator-commonjs"
-      },
-      {
-        "type": "npm",
-        "name": "generator-jquery"
-      },
-      {
-        "type": "npm",
-        "name": "generator-generator"
-      },
-      {
-        "type": "npm",
-        "name": "yo"
-      },
-      {
-        "type": "npm",
-        "name": "insight-dashboard"
-      },
-      {
-        "type": "npm",
-        "name": "generator-chrome-extension"
-      },
-      {
-        "type": "npm",
-        "name": "generator-bootstrap"
-      },
-      {
-        "type": "npm",
         "name": "bower-requirejs"
       },
       {
         "type": "npm",
-        "name": "insight"
-      },
-      {
-        "type": "npm",
-        "name": "stringify-object"
-      },
-      {
-        "type": "npm",
-        "name": "update-notifier"
-      },
-      {
-        "type": "npm",
-        "name": "grunt-usemin"
-      },
-      {
-        "type": "npm",
-        "name": "generator-jasmine"
-      },
-      {
-        "type": "npm",
-        "name": "generator-mocha"
-      },
-      {
-        "type": "npm",
-        "name": "generator-karma"
+        "name": "configstore"
       },
       {
         "type": "npm",
@@ -18357,15 +18982,147 @@
       },
       {
         "type": "npm",
+        "name": "generator-bootstrap"
+      },
+      {
+        "type": "npm",
+        "name": "generator-chrome-extension"
+      },
+      {
+        "type": "npm",
         "name": "generator-chromeapp"
       },
       {
         "type": "npm",
-        "name": "configstore"
+        "name": "generator-commonjs"
+      },
+      {
+        "type": "npm",
+        "name": "generator-dummy"
+      },
+      {
+        "type": "npm",
+        "name": "generator-dummytest"
+      },
+      {
+        "type": "npm",
+        "name": "generator-generator"
+      },
+      {
+        "type": "npm",
+        "name": "generator-gruntfile"
+      },
+      {
+        "type": "npm",
+        "name": "generator-gruntplugin"
+      },
+      {
+        "type": "npm",
+        "name": "generator-jasmine"
+      },
+      {
+        "type": "npm",
+        "name": "generator-jquery"
+      },
+      {
+        "type": "npm",
+        "name": "generator-karma"
+      },
+      {
+        "type": "npm",
+        "name": "generator-mobile"
+      },
+      {
+        "type": "npm",
+        "name": "generator-mocha"
+      },
+      {
+        "type": "npm",
+        "name": "generator-node"
+      },
+      {
+        "type": "npm",
+        "name": "generator-polymer"
+      },
+      {
+        "type": "npm",
+        "name": "generator-webapp"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-bower-requirejs"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-filerev"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-usemin"
+      },
+      {
+        "type": "npm",
+        "name": "html-wiring"
+      },
+      {
+        "type": "npm",
+        "name": "insight"
+      },
+      {
+        "type": "npm",
+        "name": "insight-dashboard"
+      },
+      {
+        "type": "npm",
+        "name": "stringify-object"
+      },
+      {
+        "type": "npm",
+        "name": "update-notifier"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-app"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-assert"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-character"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-doctor"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-environment"
       },
       {
         "type": "npm",
         "name": "yeoman-generator"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-remote"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-test"
+      },
+      {
+        "type": "npm",
+        "name": "yeoman-welcome"
+      },
+      {
+        "type": "npm",
+        "name": "yo"
+      },
+      {
+        "type": "npm",
+        "name": "yosay"
       }
     ],
     "github": {
@@ -18394,7 +19151,7 @@
       ],
       "stats": {
         "balance": 133954,
-        "yearlyBudget": 129498
+        "yearlyBudget": 129441
       },
       "goals": []
     }
