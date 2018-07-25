@@ -8074,6 +8074,8 @@
   },
   {
     "name": "jss",
+    "edited": true,
+    "logo": "/static/img/profile/profile-pic-jss.png",
     "packages": [
       {
         "type": "npm",
