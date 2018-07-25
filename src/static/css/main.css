@@ -8,6 +8,13 @@ html, body {
   letter-spacing: -0.2px;
 }
 
+a {
+  color: inherit;
+}
+a:hover {
+  color: #3c0d9b;
+}
+
 button {
   font-size: 12px;
 }
@@ -37,13 +44,6 @@ h3 {
   margin: 0 auto;
   min-height: 100%;
 }
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-a:hover {
-  color: #3c0d9b;
-}
 
 .button {
   color: #8800ff;
@@ -54,6 +54,7 @@ a:hover {
   text-decoration: none;
 }
 .button:hover {
+  color: #8800ff;
   border-color: #8800ff;
 }
 .button:active, .button:focus {
@@ -91,7 +92,7 @@ a:hover {
 .shareButton:hover .logo #main {
   fill: #c89bff;
 }
-.shareButton:active .logo #main, .button:focus  .logo #main {
+.shareButton:active .logo #main, .button:focus .logo #main {
   fill: white;
 }
 
@@ -107,6 +108,7 @@ a:hover {
   border-radius: 6px;
 }
 .actionButton:hover {
+  color: #8800ff;
   border-color: #8800ff;
 }
 .actionButton:active, .actionButton:focus {
@@ -129,6 +131,7 @@ a:hover {
   -webkit-appearance: none;
 }
 .bigButton:hover {
+  color: white;
   background-color: #8b00ff;
 }
 .bigButton:active {
@@ -183,6 +186,7 @@ a:hover {
   padding-bottom: 20px;
 }
 .navigation-items a.active, .navigation-items a:hover {
+  color: #2E2E99;
   border-color: #2E2E99;
 }
 

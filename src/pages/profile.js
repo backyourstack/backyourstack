@@ -94,6 +94,7 @@ export default class Profile extends React.Component {
           display: block;
         }
         .profileLink a:hover {
+          color: #7448FF;
           text-decoration: underline;
         }
 
