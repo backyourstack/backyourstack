@@ -2440,59 +2440,6 @@
     }
   },
   {
-    "name": "chai",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "chai"
-      }
-    ],
-    "opencollective": {
-      "id": 125,
-      "name": "chaijs",
-      "slug": "chaijs",
-      "description": "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.",
-      "sponsors": [
-        {
-          "id": 12801,
-          "type": "ORGANIZATION",
-          "slug": "codepilotai",
-          "name": "CodePilot.ai",
-          "totalDonations": 15000
-        },
-        {
-          "id": 4087,
-          "type": "ORGANIZATION",
-          "slug": "airbnb",
-          "name": "Airbnb",
-          "totalDonations": 13200
-        },
-        {
-          "id": 13569,
-          "type": "ORGANIZATION",
-          "slug": "metabolize",
-          "name": "Metabolize",
-          "totalDonations": 1000
-        },
-        {
-          "id": 16122,
-          "type": "ORGANIZATION",
-          "slug": "otechie",
-          "name": "Otechie",
-          "totalDonations": 500
-        }
-      ],
-      "stats": {
-        "balance": 31004,
-        "yearlyBudget": 98054
-      },
-      "goals": []
-    },
-    "github": {
-      "org": "chaijs"
-    }
-  },
-  {
     "name": "chaijs",
     "packages": [
       {
