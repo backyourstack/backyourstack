@@ -213,12 +213,6 @@ export default class Profile extends React.Component {
 
             <main>
 
-              {false &&
-                <div>
-                  ⟶  5 of them need financial support to sustain their community:
-                </div>
-              }
-
               {(!section || section === 'recommendations') &&
                 <RecommendationList recommendations={recommendations} opencollective={opencollective} />
               }
