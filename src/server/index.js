@@ -102,6 +102,9 @@ nextApp.prepare()
 
     server.get('/data/getProfile', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
+      if (!accessToken) {
+        res.setHeader('Cache-Control', 'public, max-age=3600');
+      }
       getProfile(req.query.slug, accessToken).then(data => res.json(data));
     });
 
@@ -117,6 +120,9 @@ nextApp.prepare()
 
     server.get('/data/getProfileData', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
+      if (!accessToken) {
+        res.setHeader('Cache-Control', 'public, max-age=3600');
+      }
       getProfileData(req.query.id, accessToken).then(data => res.json(data));
     });
 
