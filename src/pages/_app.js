@@ -16,18 +16,27 @@ Router.onRouteChangeError = () => NProgress.done();
 export default class MyApp extends App {
 
   static async getInitialProps ({ Component, ctx }) {
+    const { asPath, req, res } = ctx;
+
     let pageProps = {};
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    pageProps.pathname = ctx.asPath;
+    pageProps.pathname = asPath;
 
-    if (ctx.req) {
-      pageProps.loggedInUser = get(ctx, 'req.session.passport.user');
+    if (req) {
+      pageProps.loggedInUser = get(req, 'session.passport.user');
     } else if (typeof window !== 'undefined') {
       pageProps.loggedInUser = get(window, '__NEXT_DATA__.props.pageProps.loggedInUser');
+    }
+
+    // Caching anonymous users
+    if (req && res) {
+      if (!get(req, 'session.passport') && !get(req, 'session.files')) {
+        res.setHeader('Cache-Control', 'public, max-age=3600');
+      }
     }
 
     return { pageProps };
