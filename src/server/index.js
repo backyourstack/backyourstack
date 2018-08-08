@@ -163,6 +163,16 @@ nextApp.prepare()
       res.send('Ok');
     });
 
+    server.use('/static', (req, res, next) => {
+      res.setHeader('Cache-Control', 'public, max-age=3600');
+      next();
+    });
+
+    server.use('/_next/static', (req, res, next) => {
+      res.setHeader('Cache-Control', 'public, max-age=3600');
+      next();
+    });
+
     server.get('*', handler);
 
     server.listen(port, err => {
