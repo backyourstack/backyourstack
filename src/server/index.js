@@ -45,7 +45,17 @@ nextApp.prepare()
 
     server.use(favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')));
 
-    server.use(expressSession({ secret: sessionSecret, resave: true, saveUninitialized: true }));
+    server.use(expressSession({
+      name: 'sessionId',
+      secret: sessionSecret,
+      resave: false,
+      saveUninitialized: false,
+      cookie: {
+        path: '/',
+        httpOnly: true,
+        secure: false,
+      },
+    }));
 
     server.use(passport.initialize());
     server.use(passport.session());
@@ -65,7 +75,13 @@ nextApp.prepare()
               throw err;
             }
             const next = req.query.next || '/';
-            res.redirect(next);
+            res
+              .clearCookie('sessionId', {
+                path: '/',
+                httpOnly: true,
+                secure: false,
+              })
+              .redirect(next);
           });
         });
       });
