@@ -5,12 +5,13 @@ import crypto from 'crypto';
 
 import express from 'express';
 import expressSession from 'express-session';
+import cookieParser from 'cookie-parser';
 import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
 import debug from 'debug';
-import { get } from 'lodash';
+import { get, has } from 'lodash';
 
 import passport from './passport';
 import routes from '../routes';
@@ -35,6 +36,12 @@ const nextApp = next({
   dev: process.env.NODE_ENV !== 'production',
 });
 
+const cookieOptions = {
+  path: '/',
+  httpOnly: true,
+  secure: false,
+};
+
 const handler = routes.getRequestHandler(nextApp);
 
 nextApp.prepare()
@@ -45,16 +52,14 @@ nextApp.prepare()
 
     server.use(favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')));
 
+    server.use(cookieParser())
+
     server.use(expressSession({
       name: 'sessionId',
       secret: sessionSecret,
       resave: false,
       saveUninitialized: false,
-      cookie: {
-        path: '/',
-        httpOnly: true,
-        secure: false,
-      },
+      cookie: cookieOptions,
     }));
 
     server.use(passport.initialize());
@@ -76,11 +81,7 @@ nextApp.prepare()
             }
             const next = req.query.next || '/';
             res
-              .clearCookie('sessionId', {
-                path: '/',
-                httpOnly: true,
-                secure: false,
-              })
+              .clearCookie('sessionId', cookieOptions)
               .redirect(next);
           });
         });
@@ -176,6 +177,17 @@ nextApp.prepare()
 
     server.use('/_next/static', (req, res, next) => {
       res.setHeader('Cache-Control', 'public, max-age=3600');
+      next();
+    });
+
+    server.use((req, res, next) => {
+      const sessionSet = has(req, 'session.passport') || has(req, 'session.files');
+      const noCacheSet = has(req, 'cookies._now_no_cache');
+      if (sessionSet && !noCacheSet) {
+        res.cookie('_now_no_cache', '1', cookieOptions);
+      } else if (!sessionSet && noCacheSet) {
+        res.clearCookie('_now_no_cache', cookieOptions);
+      }
       next();
     });
 
