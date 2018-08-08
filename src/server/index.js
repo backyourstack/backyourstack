@@ -52,7 +52,7 @@ nextApp.prepare()
 
     server.use(favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')));
 
-    server.use(cookieParser())
+    server.use(cookieParser());
 
     server.use(expressSession({
       name: 'sessionId',
@@ -97,6 +97,7 @@ nextApp.prepare()
       (req, res) => {
         const next = req.session.next || '/';
         delete req.session.next;
+        res.cookie('_now_no_cache', '1', cookieOptions);
         res.redirect(next);
       }
     );
@@ -104,7 +105,7 @@ nextApp.prepare()
     server.get('/data/getProfile', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
       if (!accessToken) {
-        res.setHeader('Cache-Control', 'public, max-age=3600');
+        res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
       }
       getProfile(req.query.slug, accessToken).then(data => res.json(data));
     });
@@ -122,7 +123,7 @@ nextApp.prepare()
     server.get('/data/getProfileData', (req, res) => {
       const accessToken = get(req, 'session.passport.user.accessToken');
       if (!accessToken) {
-        res.setHeader('Cache-Control', 'public, max-age=3600');
+        res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
       }
       getProfileData(req.query.id, accessToken).then(data => res.json(data));
     });
@@ -155,6 +156,7 @@ nextApp.prepare()
         }
       });
       if (uploadAccepted) {
+        res.cookie('_now_no_cache', '1', cookieOptions);
         res.status(200).send('Ok. At least one file accepted.');
       } else {
         res.status(400).send('Bad Request. No file accepted.');

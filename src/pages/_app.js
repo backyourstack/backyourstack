@@ -35,7 +35,7 @@ export default class MyApp extends App {
     // Caching anonymous users
     if (req && res) {
       if (!get(req, 'session.passport') && !get(req, 'session.files')) {
-        res.setHeader('Cache-Control', 'public, max-age=3600');
+        res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
       }
     }
 
