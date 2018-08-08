@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { getUserOrgs, getFilesData } from '../lib/data';
+import { getUserOrgs } from '../lib/data';
 
 import { Link, Router } from '../routes';
 
@@ -26,43 +26,22 @@ export default class Index extends Component {
       initialProps.loggedInUserOrgs = await getUserOrgs(accessToken);
     }
 
-    // sessionFiles is optional and can be null (always on the client)
-    const sessionFiles = get(req, 'session.files');
-    const { files } = await getFilesData(sessionFiles);
-
-    return { files, ... initialProps };
+    return initialProps;
   }
 
   static propTypes = {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     loggedInUserOrgs: PropTypes.array,
-    files: PropTypes.object,
   };
-
-  static defaultProps = {
-    files: {},
-  };
-
-  constructor (props) {
-    super(props);
-    this.state = { files: props.files };
-  }
 
   onUpload = () => {
     Router.pushRoute('files');
   };
 
-  refresh = async () => {
-    const { files } = await getFilesData();
-
-    this.setState({ files });
-  };
-
   render () {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
 
-    const { files } = this.state;
     return (
       <div className="Page IndexPage">
 
@@ -202,9 +181,7 @@ export default class Index extends Component {
 
           <div className="uploadContainer">
             <Upload
-              files={files}
               onUpload={this.onUpload}
-              onUpdate={this.refresh}
               feedbackPosition="float"
               style={{ height: '125px' }}
               />

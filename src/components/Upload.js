@@ -7,15 +7,12 @@ import classNames from 'classnames';
 export default class Upload extends React.Component {
 
   static propTypes = {
-    files: PropTypes.object,
     style: PropTypes.object,
     onUpload: PropTypes.func,
-    onUpdate: PropTypes.func,
     feedbackPosition: PropTypes.string,
   };
 
   static defaultProps = {
-    files: {},
     style: {},
     feedbackPosition: 'float',
   };
