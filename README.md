@@ -1,10 +1,10 @@
-# Back Your Stack
+# BackYourStack
 
 Discover the open source projects your organization is using that need financial support.
 
 ## Service
 
-The official Back Your Stack service is available from https://backyourstack.com/
+The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
@@ -28,7 +28,7 @@ npm install
 
 #### Now
 
-Back Your Stack is currently deployed with [Now](https://zeit.co/now). You will need to install [Now Desktop](https://github.com/zeit/now-desktop) or [Now CLI](https://github.com/zeit/now-cli).
+BackYourStack is currently deployed with [Now](https://zeit.co/now). You will need to install [Now Desktop](https://github.com/zeit/now-desktop) or [Now CLI](https://github.com/zeit/now-cli).
 
 Authenticate with:
 

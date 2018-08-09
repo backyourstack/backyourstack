@@ -113,8 +113,8 @@ export default class Header extends React.Component {
             >
             <Link route="index">
               <a>
-                <img className="default" src="/static/img/logo-bys-horizontal.png" alt="Back Your Stack" />
-                <img className="small" src="/static/img/logo-small.png" alt="Back Your Stack" />
+                <img className="default" src="/static/img/logo-bys-horizontal.png" alt="BackYourStack" />
+                <img className="small" src="/static/img/logo-small.png" alt="BackYourStack" />
               </a>
             </Link>
           </div>

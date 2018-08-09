@@ -1,7 +1,7 @@
 {
   "name": "backyourstack",
   "version": "0.2.0",
-  "description": "Back Your Stack analyzes repositories to recommend Open Source projects to support.",
+  "description": "BackYourStack analyzes repositories to recommend Open Source projects to support.",
   "repository": {
     "type": "git",
     "url": "https://github.com/opencollective/backyourstack.git"

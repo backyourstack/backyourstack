@@ -45,7 +45,7 @@ export default class Profile extends React.Component {
     error: PropTypes.object,
   };
 
-  twitterText = () => 'Back Your Stack! https://backyourstack.com/';
+  twitterText = () => 'BackYourStack! https://backyourstack.com/';
 
   profileLink = () => `https://backyourstack.com/${this.props.profile.login}`;
 

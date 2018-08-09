@@ -143,7 +143,7 @@ export default class Index extends Component {
           <h1>
             <Link route="index">
               <a>
-                <img src="/static/img/logo-bys-homepage.png" alt="Back Your Stack" />
+                <img src="/static/img/logo-bys-homepage.png" alt="BackYourStack" />
               </a>
             </Link>
           </h1>
