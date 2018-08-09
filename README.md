@@ -3,12 +3,12 @@
 Discover the open source projects your organization is using that need financial support.
 
 ## Service
-
+ 
 The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
-Make sure you have Node.js version >= 9. We recommend using [nvm](https://github.com/creationix/nvm).
+Make sure you have Node.js version >= 9. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`. 
 
 ### Install
 
