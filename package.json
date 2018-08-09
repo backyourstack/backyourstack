@@ -54,7 +54,7 @@
     "serve-favicon": "^2.5.0"
   },
   "engines": {
-    "node": "9.x.x"
+    "node": "10.x.x"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.42",
