@@ -67,7 +67,7 @@ export default class Login extends React.Component {
         <Header loggedInUser={this.props.loggedInUser} login={false} brandAlign="auto" />
 
         <div className="content">
-          <h2>Sign In wit GitHub to give access to your private repositories.</h2>
+          <h2>Sign In with GitHub to give access to your private repositories.</h2>
           <h3>What are going to do with it?</h3>
           <ul>
             <li>We&#8217;ll only look for dependency files such as package.json.</li>
