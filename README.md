@@ -3,7 +3,7 @@
 Discover the open source projects your organization is using that need financial support.
 
 ## Service
- 
+
 The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
