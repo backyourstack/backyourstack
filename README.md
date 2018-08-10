@@ -2,6 +2,12 @@
 
 Discover the open source projects your organization is using that need financial support.
 
+Our goal with BackYourStack is to make it easier for companies to identify the open source projects that they depend on that also need funding.
+
+While we started with just node modules (as defined in package.json files) and with open source projects that are on Open Collective, we know that the open source community is much larger than that. That's why we would love to support more languages and platforms but for that, we need you!
+
+Take a look at our public repository & [Contributing Guidelines](https://github.com/opencollective/backyourstack/blob/master/CONTRIBUTING.md) create or pick up issues and help us make open source more sustainable for everyone! 🙌
+
 ## Service
 
 The official BackYourStack service is available from https://backyourstack.com/
