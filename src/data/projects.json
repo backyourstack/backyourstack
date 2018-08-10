@@ -243,7 +243,15 @@
       "name": "Altair GraphQL Client",
       "slug": "altair",
       "description": "A beautiful feature-rich GraphQL Client for all platforms",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ],
       "goals": [
         {
           "key": 85100,
@@ -257,8 +265,8 @@
         }
       ],
       "stats": {
-        "balance": 8455,
-        "yearlyBudget": 8455
+        "balance": 8860,
+        "yearlyBudget": 13315
       }
     },
     "github": {
@@ -556,7 +564,7 @@
         }
       ],
       "stats": {
-        "balance": 12246,
+        "balance": 12651,
         "yearlyBudget": 122932
       },
       "goals": []
@@ -1591,6 +1599,13 @@
       "description": "Babel is a compiler for writing next generation JavaScript",
       "sponsors": [
         {
+          "id": 6060,
+          "type": "ORGANIZATION",
+          "slug": "trivago",
+          "name": "trivago",
+          "totalDonations": 2400000
+        },
+        {
           "id": 5610,
           "type": "ORGANIZATION",
           "slug": "adobe",
@@ -1652,13 +1667,6 @@
           "slug": "bit_src1",
           "name": "Bit",
           "totalDonations": 300000
-        },
-        {
-          "id": 4536,
-          "type": "ORGANIZATION",
-          "slug": "bitmex",
-          "name": "BitMEX",
-          "totalDonations": 275000
         }
       ],
       "goals": [
@@ -1676,8 +1684,8 @@
         }
       ],
       "stats": {
-        "balance": 3981091,
-        "yearlyBudget": 13369681
+        "balance": 6142773,
+        "yearlyBudget": 15540614
       }
     },
     "github": {
@@ -1806,6 +1814,344 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "bevry",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@bevry/testen"
+      },
+      {
+        "type": "npm",
+        "name": "ambi"
+      },
+      {
+        "type": "npm",
+        "name": "argsbytype"
+      },
+      {
+        "type": "npm",
+        "name": "arrangekeys"
+      },
+      {
+        "type": "npm",
+        "name": "assert-helpers"
+      },
+      {
+        "type": "npm",
+        "name": "backbone-nesty"
+      },
+      {
+        "type": "npm",
+        "name": "badges"
+      },
+      {
+        "type": "npm",
+        "name": "binaryextensions"
+      },
+      {
+        "type": "npm",
+        "name": "boundation"
+      },
+      {
+        "type": "npm",
+        "name": "cachely"
+      },
+      {
+        "type": "npm",
+        "name": "caterpillar"
+      },
+      {
+        "type": "npm",
+        "name": "caterpillar-browser"
+      },
+      {
+        "type": "npm",
+        "name": "caterpillar-examples"
+      },
+      {
+        "type": "npm",
+        "name": "caterpillar-filter"
+      },
+      {
+        "type": "npm",
+        "name": "caterpillar-human"
+      },
+      {
+        "type": "npm",
+        "name": "csextends"
+      },
+      {
+        "type": "npm",
+        "name": "cson"
+      },
+      {
+        "type": "npm",
+        "name": "detect-indentation"
+      },
+      {
+        "type": "npm",
+        "name": "docmatter"
+      },
+      {
+        "type": "npm",
+        "name": "domain-browser"
+      },
+      {
+        "type": "npm",
+        "name": "dominject"
+      },
+      {
+        "type": "npm",
+        "name": "eachr"
+      },
+      {
+        "type": "npm",
+        "name": "editions"
+      },
+      {
+        "type": "npm",
+        "name": "emailtowallet"
+      },
+      {
+        "type": "npm",
+        "name": "envfile"
+      },
+      {
+        "type": "npm",
+        "name": "errlop"
+      },
+      {
+        "type": "npm",
+        "name": "esnextguardian"
+      },
+      {
+        "type": "npm",
+        "name": "event-emitter-grouped"
+      },
+      {
+        "type": "npm",
+        "name": "extendr"
+      },
+      {
+        "type": "npm",
+        "name": "extract-opts"
+      },
+      {
+        "type": "npm",
+        "name": "feedr"
+      },
+      {
+        "type": "npm",
+        "name": "fellow"
+      },
+      {
+        "type": "npm",
+        "name": "getcontributors"
+      },
+      {
+        "type": "npm",
+        "name": "getmac"
+      },
+      {
+        "type": "npm",
+        "name": "getmembers"
+      },
+      {
+        "type": "npm",
+        "name": "getpackages"
+      },
+      {
+        "type": "npm",
+        "name": "getrepos"
+      },
+      {
+        "type": "npm",
+        "name": "getsetdeep"
+      },
+      {
+        "type": "npm",
+        "name": "hostenv"
+      },
+      {
+        "type": "npm",
+        "name": "ignorefs"
+      },
+      {
+        "type": "npm",
+        "name": "ignorepatterns"
+      },
+      {
+        "type": "npm",
+        "name": "istextorbinary"
+      },
+      {
+        "type": "npm",
+        "name": "joe"
+      },
+      {
+        "type": "npm",
+        "name": "joe-examples"
+      },
+      {
+        "type": "npm",
+        "name": "joe-reporter-console"
+      },
+      {
+        "type": "npm",
+        "name": "joe-reporter-list"
+      },
+      {
+        "type": "npm",
+        "name": "jquery-slidescrollpanel"
+      },
+      {
+        "type": "npm",
+        "name": "lazy-require"
+      },
+      {
+        "type": "npm",
+        "name": "miniview"
+      },
+      {
+        "type": "npm",
+        "name": "normalify"
+      },
+      {
+        "type": "npm",
+        "name": "oneday"
+      },
+      {
+        "type": "npm",
+        "name": "outpatient"
+      },
+      {
+        "type": "npm",
+        "name": "pluginclerk"
+      },
+      {
+        "type": "npm",
+        "name": "pointers"
+      },
+      {
+        "type": "npm",
+        "name": "progress-title"
+      },
+      {
+        "type": "npm",
+        "name": "progressbar"
+      },
+      {
+        "type": "npm",
+        "name": "projectName"
+      },
+      {
+        "type": "npm",
+        "name": "projectz"
+      },
+      {
+        "type": "npm",
+        "name": "query-engine"
+      },
+      {
+        "type": "npm",
+        "name": "readdir-cluster"
+      },
+      {
+        "type": "npm",
+        "name": "remove-indentation"
+      },
+      {
+        "type": "npm",
+        "name": "requirefresh"
+      },
+      {
+        "type": "npm",
+        "name": "ropo"
+      },
+      {
+        "type": "npm",
+        "name": "safecallback"
+      },
+      {
+        "type": "npm",
+        "name": "safefs"
+      },
+      {
+        "type": "npm",
+        "name": "safeps"
+      },
+      {
+        "type": "npm",
+        "name": "scandirectory"
+      },
+      {
+        "type": "npm",
+        "name": "sortobject"
+      },
+      {
+        "type": "npm",
+        "name": "spine-route"
+      },
+      {
+        "type": "npm",
+        "name": "sponsored"
+      },
+      {
+        "type": "npm",
+        "name": "staticsitegenerators"
+      },
+      {
+        "type": "npm",
+        "name": "taskgroup"
+      },
+      {
+        "type": "npm",
+        "name": "templatebinding"
+      },
+      {
+        "type": "npm",
+        "name": "textextensions"
+      },
+      {
+        "type": "npm",
+        "name": "tiered-map"
+      },
+      {
+        "type": "npm",
+        "name": "trim-indentation"
+      },
+      {
+        "type": "npm",
+        "name": "typechecker"
+      },
+      {
+        "type": "npm",
+        "name": "unbounded"
+      },
+      {
+        "type": "npm",
+        "name": "watchr"
+      }
+    ],
+    "github": {
+      "org": "bevry"
+    },
+    "opencollective": {
+      "id": 172,
+      "name": "Bevry",
+      "slug": "bevry",
+      "description": "Bevry is an open-company and community dedicated to empowering developers everywhere.",
+      "sponsors": [],
+      "stats": {
+        "balance": 7690,
+        "yearlyBudget": 8095
+      },
+      "goals": [
+        {}
+      ]
     }
   },
   {
@@ -1995,6 +2341,13 @@
           "slug": "top-mortgage-training",
           "name": "TOP mortgage training",
           "totalDonations": 30014
+        },
+        {
+          "id": 19181,
+          "type": "ORGANIZATION",
+          "slug": "igotcha-media",
+          "name": "iGotcha Media",
+          "totalDonations": 10000
         }
       ],
       "goals": [
@@ -2007,8 +2360,8 @@
         }
       ],
       "stats": {
-        "balance": 213315,
-        "yearlyBudget": 1219525
+        "balance": 221895,
+        "yearlyBudget": 1322485
       }
     }
   },
@@ -2269,10 +2622,18 @@
       "name": "Buttercup",
       "slug": "buttercup",
       "description": "Free and Open Source Javascript Password Vault",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ],
       "stats": {
-        "balance": 14179,
-        "yearlyBudget": 19429
+        "balance": 14584,
+        "yearlyBudget": 24289
       },
       "goals": []
     }
@@ -2347,8 +2708,8 @@
       "description": "A JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.",
       "sponsors": [],
       "stats": {
-        "balance": 1063,
-        "yearlyBudget": 102921
+        "balance": 1904,
+        "yearlyBudget": 103762
       },
       "goals": []
     }
@@ -2551,7 +2912,7 @@
     },
     "opencollective": {
       "id": 125,
-      "name": "chaijs",
+      "name": "Chai",
       "slug": "chaijs",
       "description": "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.",
       "sponsors": [
@@ -2588,7 +2949,9 @@
         "balance": 37539,
         "yearlyBudget": 97910
       },
-      "goals": []
+      "goals": [
+        {}
+      ]
     }
   },
   {
@@ -2678,6 +3041,13 @@
           "totalDonations": 1200
         },
         {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
+        },
+        {
           "id": 18796,
           "type": "ORGANIZATION",
           "slug": "scraperapi1",
@@ -2686,8 +3056,8 @@
         }
       ],
       "stats": {
-        "balance": 153112,
-        "yearlyBudget": 159810
+        "balance": 153256,
+        "yearlyBudget": 161538
       },
       "goals": []
     }
@@ -3332,14 +3702,21 @@
           "slug": "epicor-software-corporation",
           "name": "Epicor Software Corporation",
           "totalDonations": 10000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 11670,
-        "yearlyBudget": 13800
+        "balance": 11814,
+        "yearlyBudget": 15528
       }
     }
   },
@@ -3604,7 +3981,7 @@
       ],
       "stats": {
         "balance": 50669,
-        "yearlyBudget": 39018
+        "yearlyBudget": 38613
       },
       "goals": []
     }
@@ -3869,8 +4246,8 @@
         }
       ],
       "stats": {
-        "balance": 341688,
-        "yearlyBudget": 987672
+        "balance": 342929,
+        "yearlyBudget": 993169
       },
       "goals": []
     }
@@ -4119,8 +4496,8 @@
         }
       ],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 400,
+        "yearlyBudget": 4800
       },
       "sponsors": []
     },
@@ -4204,7 +4581,7 @@
       ],
       "stats": {
         "balance": 747842,
-        "yearlyBudget": 1502533
+        "yearlyBudget": 1501548
       },
       "goals": []
     }
@@ -4307,6 +4684,30 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "easy-vue",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "easy-vue"
+      }
+    ],
+    "github": {
+      "repo": "TIGERB/easy-vue"
+    },
+    "opencollective": {
+      "id": 19166,
+      "name": "easy-vue",
+      "slug": "easy-vue",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -4595,7 +4996,23 @@
     "packages": [
       {
         "type": "npm",
+        "name": "@emotion/native"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/primitives"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/primitives-core"
+      },
+      {
+        "type": "npm",
         "name": "babel-plugin-emotion"
+      },
+      {
+        "type": "npm",
+        "name": "create-emotion"
       },
       {
         "type": "npm",
@@ -4607,7 +5024,7 @@
       },
       {
         "type": "npm",
-        "name": "create-emotion"
+        "name": "emotion"
       },
       {
         "type": "npm",
@@ -4619,10 +5036,6 @@
       },
       {
         "type": "npm",
-        "name": "emotion"
-      },
-      {
-        "type": "npm",
         "name": "eslint-plugin-emotion"
       },
       {
@@ -4631,19 +5044,7 @@
       },
       {
         "type": "npm",
-        "name": "@emotion/native"
-      },
-      {
-        "type": "npm",
         "name": "preact-emotion"
-      },
-      {
-        "type": "npm",
-        "name": "@emotion/primitives-core"
-      },
-      {
-        "type": "npm",
-        "name": "@emotion/primitives"
       },
       {
         "type": "npm",
@@ -5952,7 +6353,7 @@
       ],
       "stats": {
         "balance": 620168,
-        "yearlyBudget": 723650
+        "yearlyBudget": 722809
       },
       "goals": []
     },
@@ -6078,8 +6479,8 @@
         {}
       ],
       "stats": {
-        "balance": 549797,
-        "yearlyBudget": 1354887
+        "balance": 549941,
+        "yearlyBudget": 1355905
       }
     }
   },
@@ -6376,6 +6777,13 @@
           "totalDonations": 700
         },
         {
+          "id": 19116,
+          "type": "ORGANIZATION",
+          "slug": "philippe-levy",
+          "name": "Philippe Levy",
+          "totalDonations": 500
+        },
+        {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
@@ -6384,8 +6792,8 @@
         }
       ],
       "stats": {
-        "balance": 369683,
-        "yearlyBudget": 266940
+        "balance": 370088,
+        "yearlyBudget": 271800
       },
       "goals": []
     }
@@ -6557,7 +6965,7 @@
         }
       ],
       "stats": {
-        "balance": 550999,
+        "balance": 551404,
         "yearlyBudget": 1900416
       }
     },
@@ -6875,7 +7283,7 @@
         }
       ],
       "stats": {
-        "balance": 550999,
+        "balance": 551404,
         "yearlyBudget": 1900416
       }
     }
@@ -7494,8 +7902,8 @@
         {}
       ],
       "stats": {
-        "balance": 383503,
-        "yearlyBudget": 92941
+        "balance": 384334,
+        "yearlyBudget": 90794
       }
     }
   },
@@ -7566,14 +7974,21 @@
           "slug": "tipe",
           "name": "Tipe",
           "totalDonations": 50000
+        },
+        {
+          "id": 19133,
+          "type": "ORGANIZATION",
+          "slug": "forcrowd",
+          "name": "forCrowd",
+          "totalDonations": 1000
         }
       ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 44200,
-        "yearlyBudget": 104960
+        "balance": 45026,
+        "yearlyBudget": 105786
       }
     }
   },
@@ -7718,6 +8133,30 @@
     },
     "github": {
       "repo": "idyll-lang/idyll"
+    }
+  },
+  {
+    "name": "imglab",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "imglab"
+      }
+    ],
+    "github": {
+      "repo": "NaturalIntelligence/imglab"
+    },
+    "opencollective": {
+      "id": 19064,
+      "name": "imglab",
+      "slug": "imglab",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -8687,13 +9126,21 @@
       "name": "JSUI",
       "slug": "jsui",
       "description": "A powerful UI toolkit for managing JavaScript apps",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 3892,
-        "yearlyBudget": 7492
+        "balance": 4297,
+        "yearlyBudget": 12352
       }
     }
   },
@@ -9612,7 +10059,15 @@
       "name": "Lidarr",
       "slug": "lidarr",
       "description": "Music Organizer",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19175,
+          "type": "ORGANIZATION",
+          "slug": "resizt0r",
+          "name": "resizt0r",
+          "totalDonations": 2000
+        }
+      ],
       "goals": [
         {
           "type": "yearlyBudget",
@@ -9626,8 +10081,8 @@
         }
       ],
       "stats": {
-        "balance": 11719,
-        "yearlyBudget": 15364
+        "balance": 13431,
+        "yearlyBudget": 17076
       }
     }
   },
@@ -9926,8 +10381,8 @@
         {}
       ],
       "stats": {
-        "balance": 2746565,
-        "yearlyBudget": 4482763
+        "balance": 2985003,
+        "yearlyBudget": 4721201
       }
     },
     "github": {
@@ -10525,7 +10980,7 @@
       ],
       "stats": {
         "balance": 2101025,
-        "yearlyBudget": 1134221
+        "yearlyBudget": 1133933
       },
       "goals": []
     }
@@ -10866,7 +11321,7 @@
       ],
       "stats": {
         "balance": 137316,
-        "yearlyBudget": 3545178
+        "yearlyBudget": 3544337
       }
     }
   },
@@ -11011,11 +11466,18 @@
           "slug": "hostpresto1",
           "name": "HostPresto",
           "totalDonations": 600
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "stats": {
-        "balance": 301927,
-        "yearlyBudget": 807770
+        "balance": 302071,
+        "yearlyBudget": 808688
       },
       "goals": []
     },
@@ -11570,17 +12032,17 @@
           "totalDonations": 5500
         },
         {
-          "id": 10412,
-          "type": "ORGANIZATION",
-          "slug": "toxinlabs",
-          "name": "toxinlabs",
-          "totalDonations": 5000
-        },
-        {
           "id": 10267,
           "type": "ORGANIZATION",
           "slug": "santihans4056",
           "name": "SANTiHANS LLC",
+          "totalDonations": 5000
+        },
+        {
+          "id": 10412,
+          "type": "ORGANIZATION",
+          "slug": "toxinlabs",
+          "name": "toxinlabs",
           "totalDonations": 5000
         }
       ],
@@ -11588,8 +12050,8 @@
         {}
       ],
       "stats": {
-        "balance": 481289,
-        "yearlyBudget": 2478885
+        "balance": 482094,
+        "yearlyBudget": 2488545
       }
     }
   },
@@ -11803,30 +12265,6 @@
         "yearlyBudget": 30774
       },
       "goals": []
-    }
-  },
-  {
-    "name": "od-virtualscroll",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "od-virtualscroll"
-      }
-    ],
-    "github": {
-      "repo": "dinony/od-virtualscroll"
-    },
-    "opencollective": {
-      "id": 18939,
-      "name": "od-virtualscroll",
-      "slug": "od-virtualscroll",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
     }
   },
   {
@@ -12627,8 +13065,8 @@
       "slug": "peer",
       "description": "WebRTC implementation",
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 841,
+        "yearlyBudget": 10092
       },
       "goals": [
         {
@@ -13105,7 +13543,7 @@
       ],
       "stats": {
         "balance": 2055505,
-        "yearlyBudget": 3015143
+        "yearlyBudget": 3009093
       }
     }
   },
@@ -13383,7 +13821,18 @@
         "balance": 108962,
         "yearlyBudget": 143772
       },
-      "goals": []
+      "goals": [
+        {
+          "key": 31035,
+          "type": "yearlyBudget",
+          "amount": 30000,
+          "title": "Costs of running the Radarr API server.",
+          "description": "The server running the Radarr API costs 25$ a month, thus 300$ dollars a year."
+        },
+        {
+          "key": 9499
+        }
+      ]
     }
   },
   {
@@ -13574,8 +14023,60 @@
       ],
       "stats": {
         "balance": 483488,
-        "yearlyBudget": 326525
+        "yearlyBudget": 325571
       }
+    }
+  },
+  {
+    "name": "react-calendar",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-calendar"
+      }
+    ],
+    "github": {
+      "repo": "wojtekmaj/react-calendar"
+    },
+    "opencollective": {
+      "id": 19130,
+      "name": "react-calendar",
+      "slug": "react-calendar",
+      "description": "Ultimate calendar for your React app.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": []
+    }
+  },
+  {
+    "name": "react-date-picker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-date-picker"
+      }
+    ],
+    "github": {
+      "repo": "wojtekmaj/react-date-picker"
+    },
+    "opencollective": {
+      "id": 19138,
+      "name": "react-date-picker",
+      "slug": "react-date-picker",
+      "description": "A date picker for your React app.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": []
     }
   },
   {
@@ -13768,6 +14269,13 @@
           "slug": "vaduinccom",
           "name": "vaduinc.com",
           "totalDonations": 2500
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "goals": [
@@ -13801,8 +14309,8 @@
         }
       ],
       "stats": {
-        "balance": 93623,
-        "yearlyBudget": 145532
+        "balance": 93787,
+        "yearlyBudget": 147500
       }
     }
   },
@@ -13822,10 +14330,18 @@
       "name": "react-native-image-crop-picker",
       "slug": "react-native-image-crop-picker",
       "description": null,
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
+        }
+      ],
       "stats": {
-        "balance": 4750,
-        "yearlyBudget": 43199
+        "balance": 4894,
+        "yearlyBudget": 44927
       },
       "goals": []
     }
@@ -13977,7 +14493,9 @@
       ],
       "goals": [
         {
-          "type": "balance"
+          "key": 35668,
+          "type": "yearlyBudget",
+          "amount": 300000
         }
       ],
       "stats": {
@@ -13987,6 +14505,32 @@
     },
     "github": {
       "repo": "diegomura/react-pdf"
+    }
+  },
+  {
+    "name": "react-pdf-950",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-pdf"
+      }
+    ],
+    "github": {
+      "repo": "wojtekmaj/react-pdf"
+    },
+    "opencollective": {
+      "id": 19131,
+      "name": "react-pdf",
+      "slug": "react-pdf-950",
+      "description": "Display PDFs in your React app as easily as if they were images.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": []
     }
   },
   {
@@ -14403,7 +14947,7 @@
         }
       ],
       "stats": {
-        "balance": 264288,
+        "balance": 264693,
         "yearlyBudget": 217422
       },
       "goals": []
@@ -15672,6 +16216,10 @@
       },
       {
         "type": "npm",
+        "name": "@storybook/svelte"
+      },
+      {
+        "type": "npm",
         "name": "@storybook/vue"
       }
     ],
@@ -16538,8 +17086,8 @@
       "description": "The Symfony PHP framework",
       "sponsors": [],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 831,
+        "yearlyBudget": 831
       },
       "goals": []
     }
@@ -16598,8 +17146,8 @@
         }
       ],
       "stats": {
-        "balance": 1004,
-        "yearlyBudget": 1848
+        "balance": 1146,
+        "yearlyBudget": 1990
       },
       "goals": []
     }
@@ -18200,8 +18748,8 @@
         }
       ],
       "stats": {
-        "balance": 944806,
-        "yearlyBudget": 2459576
+        "balance": 945211,
+        "yearlyBudget": 2464436
       },
       "goals": []
     },
@@ -18712,13 +19260,13 @@
           "key": 5895,
           "type": "yearlyBudget",
           "amount": 51000000,
-          "title": "Payout for contributors on github with $50/hour",
+          "title": "1 FT Maintainer + 50% Payouts",
           "description": "This yearly budget is needed to pay the current amount of github contributions with a rate of $50/hour. Contributors will start receiving payouts when crossing the threshold of $300. This goal assumes that the contribution amount doesn't increase."
         },
         {
           "key": 86273,
           "type": "yearlyBudget",
-          "title": "50% Payout for contributors on github",
+          "title": "50% Payouts",
           "amount": 25500000,
           "description": "This yearly budget is needed to pay the current amount of github contributions with 50% of a rate of $50/hour. Contributors will start receiving payouts when crossing the threshold of $300. This goal assumes that the contribution amount doesn't increase."
         },
@@ -18726,13 +19274,20 @@
           "key": 80067,
           "type": "yearlyBudget",
           "amount": 76500000,
-          "title": "Buffer to grow contributors +50%",
+          "title": "1 FT + 100% Payouts",
+          "description": "This yearly budget is needed to pay the current amount of github contributions with a rate of $50/hour. Contributors will start receiving payouts when crossing the threshold of $300. This goal assumes that the contribution amount will grow by 50%."
+        },
+        {
+          "key": 64155,
+          "type": "yearlyBudget",
+          "amount": 100000000,
+          "title": "2FT + 100% Payouts",
           "description": "This yearly budget is needed to pay the current amount of github contributions with a rate of $50/hour. Contributors will start receiving payouts when crossing the threshold of $300. This goal assumes that the contribution amount will grow by 50%."
         }
       ],
       "stats": {
-        "balance": 2457117,
-        "yearlyBudget": 32959257
+        "balance": 2459264,
+        "yearlyBudget": 32958852
       }
     },
     "github": {
