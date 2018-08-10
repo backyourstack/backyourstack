@@ -8,6 +8,7 @@ import cache from './cache';
 const _debug = debug('github');
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
+const apiRawUrl = 'https://api.github.com';
 
 function getOctokit (accessToken) {
   const octokit = octokitRest();
@@ -133,6 +134,31 @@ async function fetchReposForProfile (profile, accessToken) {
   return accessToken ? repos : publicRepos;
 }
 
+function searchFilesFromRepo (repo, searchPattern, accessToken) {
+  _debug('Search files from repo', repo.full_name, repo.default_branch, searchPattern, accessToken);
+
+  if (repo.private === true) {
+    // TODO
+    throw new Error(`Private repo search not implemented`);
+  }
+
+  //search/code?q=filename:*.csproj+repo:joncloud/amp-net
+  const relativeUrl = `/search/code?q=filename:${searchPattern}+repo:${repo.full_name}`;
+  _debug(`Fetching from ${relativeUrl}`);
+  return fetch(`${apiRawUrl}${relativeUrl}`)
+    .then(response => {
+      if (response.status === 200) {
+        return response.json()
+      }
+      _debug(`Fetched ${relativeUrl}`, response.status, response.text());
+      throw new Error(`Can't fetch ${searchPattern} from ${relativeUrl}.`);
+    })
+    .then(result => result.items)
+    .then(items => Promise.all(
+      items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
+    ));
+}
+
 function fetchFileFromRepo (repo, path, accessToken) {
   _debug('Fetch file from repo',
     { repo: repo.full_name, branch: repo.default_branch, path, withAccessToken: !!accessToken });
@@ -168,4 +194,5 @@ export {
   fetchProfile,
   fetchReposForProfile,
   donateToken,
+  searchFilesFromRepo,
 };
