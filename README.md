@@ -8,7 +8,7 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
-Make sure you have Node.js version >= 9. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`. 
+Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`. 
 
 ### Install
 
