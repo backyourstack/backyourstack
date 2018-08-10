@@ -142,7 +142,6 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
     throw new Error(`Private repo search not implemented`);
   }
 
-  //search/code?q=filename:*.csproj+repo:joncloud/amp-net
   const relativeUrl = `/search/code?q=filename:${searchPattern}+repo:${repo.full_name}`;
   _debug(`Fetching from ${relativeUrl}`);
   return fetch(`${apiRawUrl}${relativeUrl}`)
@@ -150,7 +149,6 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
       if (response.status === 200) {
         return response.json()
       }
-      _debug(`Fetched ${relativeUrl}`, response.status, response.text());
       throw new Error(`Can't fetch ${searchPattern} from ${relativeUrl}.`);
     })
     .then(result => result.items)
