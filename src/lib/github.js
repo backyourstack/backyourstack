@@ -137,19 +137,17 @@ async function fetchReposForProfile (profile, accessToken) {
 function searchFilesFromRepo (repo, searchPattern, accessToken) {
   _debug('Search files from repo', repo.full_name, repo.default_branch, searchPattern, accessToken);
 
-  if (repo.private === true) {
-    // TODO
-    throw new Error(`Private repo search not implemented`);
-  }
+  accessToken = accessToken || process.env.GITHUB_GUEST_TOKEN;
+  const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
-  const relativeUrl = `/search/code?q=filename:${searchPattern}+repo:${repo.full_name}`;
+  const relativeUrl = `/search/code?q=filename:${searchPattern}+repo:${repo.full_name}&access_token=${accessToken}&client_id=${GITHUB_CLIENT_ID}&client_secret=${GITHUB_CLIENT_SECRET}`;
   _debug(`Fetching from ${relativeUrl}`);
   return fetch(`${apiRawUrl}${relativeUrl}`)
     .then(response => {
       if (response.status === 200) {
         return response.json()
       }
-      throw new Error(`Can't fetch ${searchPattern} from ${relativeUrl}.`);
+      throw new Error(`Can't search ${searchPattern} received ${response.status} from ${relativeUrl}.`);
     })
     .then(result => result.items)
     .then(items => Promise.all(
