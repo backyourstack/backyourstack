@@ -21,7 +21,7 @@ function csprojDependenciesStats (csproj) {
 
 function packagesConfigDependenciesStats (packagesConfig) {
   const dependencies = {};
-  const packageReferences = packagesConfig.childrenNamed('package').map(element => element.attr.id).filter(name => !!name).forEach(name => {
+  packagesConfig.childrenNamed('package').map(element => element.attr.id).filter(name => !!name).forEach(name => {
       dependencies[name] = dependencies[name] || { type: 'nuget', name, core: 1 }
   });
   return Object.values(dependencies);
