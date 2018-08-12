@@ -10,6 +10,7 @@ const dependencyTypes = {
   core: 'dependencies',
   peer: 'peerDependencies',
   dev: 'devDependencies',
+  engines: 'engines',
 };
 
 function dependenciesStats (packageJson) {

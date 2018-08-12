@@ -4,7 +4,7 @@ import { getDependenciesFromGithubRepo } from './dependencies';
 
 import allProjects from '../data/projects.json';
 
-const dependencyTypes = ['core', 'peer', 'dev'];
+const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
 
 async function addDependenciesToRepo (repo, accessToken) {
   repo.dependencies = await getDependenciesFromGithubRepo(repo, accessToken);

@@ -75,6 +75,7 @@ export default class DependencyTable extends React.Component {
               <th><abbr title="Core dependency count">Core dep.</abbr></th>
               <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
               <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
+              <th><abbr title="Engines dependency count">Engines dep.</abbr></th>
               <th className="repos">Repos</th>
               <th className="funding">Funding</th>
             </tr>
@@ -87,6 +88,7 @@ export default class DependencyTable extends React.Component {
                 <td>{dep.core}</td>
                 <td>{dep.peer}</td>
                 <td>{dep.dev}</td>
+                <td>{dep.engines}</td>
                 <td className="repos">
                   <List
                     array={dep.repos}
