@@ -4,10 +4,14 @@ import * as composer from './composer';
 import * as npm from './npm';
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  return Promise.all([
-    npm.getDependenciesFromGithubRepo(githubRepo, githubAccessToken),
-    composer.getDependenciesFromGithubRepo(githubRepo, githubAccessToken),
-  ]).then(results => {
+  const strategies = [];
+  if (githubRepo.language === 'JavaScript' || githubRepo.language === 'TypeScript') {
+    strategies.push(npm.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
+  }
+  if (githubRepo.language === 'PHP') {
+    strategies.push(composer.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
+  }
+  return Promise.all(strategies).then(results => {
     return flatten(results, true);
   });
 }
