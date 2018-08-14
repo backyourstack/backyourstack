@@ -200,6 +200,7 @@ main {
   padding: 45px 0;
   position: absolute;
   left: 380px;
+  padding-right: 60px;
 }
 
 @media screen and (max-width:500px) {
