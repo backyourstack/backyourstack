@@ -85,7 +85,11 @@ async function fetchReposForProfile (profile, accessToken) {
   let repos = [];
 
   const publicCacheKey = `profile_repos_${profile.login}`;
-  if (!accessToken && cache.has(publicCacheKey)) {
+  const privateCacheKey = `profile_repos_${profile.login}_${accessToken}`;
+
+  if (accessToken && cache.has(privateCacheKey)) {
+    return cache.get(privateCacheKey);
+  } else if (!accessToken && cache.has(publicCacheKey)) {
     return cache.get(publicCacheKey);
   }
 
@@ -117,6 +121,9 @@ async function fetchReposForProfile (profile, accessToken) {
 
   // Filter the keys we're interested in
   repos = repos.map(compactRepo);
+
+  // Save in Private Cache
+  cache.set(privateCacheKey, repos);
 
   const publicRepos = repos.filter(repo => repo.private === false);
 
