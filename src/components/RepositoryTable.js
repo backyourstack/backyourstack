@@ -38,6 +38,7 @@ export default class RepositoryTable extends React.Component {
           <thead>
             <tr>
               <th>Name</th>
+              <th>Language</th>
               <th>Dependencies</th>
             </tr>
           </thead>
@@ -51,6 +52,9 @@ export default class RepositoryTable extends React.Component {
                   {!repo.full_name &&
                     <span>{repo.name}</span>
                   }
+                </td>
+                <td>
+                  {repo.language ? repo.language : <em>Unknown</em>}
                 </td>
                 <td>
                   {repo.dependencies.length}
