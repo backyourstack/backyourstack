@@ -1,15 +1,8 @@
 import { pick } from 'lodash';
 
-import { getDependenciesFromGithubRepo } from './dependencies';
-
 import allProjects from '../data/projects.json';
 
 const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
-
-async function addDependenciesToRepo (repo, accessToken) {
-  repo.dependencies = await getDependenciesFromGithubRepo(repo, accessToken);
-  return repo;
-}
 
 function getProjectFromDependency (dependency) {
   return allProjects.find(project =>
@@ -93,7 +86,6 @@ function getRecommendedProjectFromDependencies (deps) {
 }
 
 export {
-  addDependenciesToRepo,
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,

@@ -13,13 +13,13 @@ import {
 } from './opencollective';
 
 import {
-  addDependenciesToRepo,
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
 } from './utils';
 
 import {
+  getDependenciesFromGithubRepo,
   dependenciesStats,
 } from './dependencies';
 
@@ -73,9 +73,10 @@ async function getProfileData (id, accessToken) {
 
   const repos = await fetchReposForProfile(profile, accessToken)
     .then(repos =>
-      Promise.all(repos.map(repo =>
-        addDependenciesToRepo(repo, accessToken))
-      )
+      Promise.all(repos.map(async repo => {
+        repo.dependencies = await getDependenciesFromGithubRepo(repo, accessToken);
+        return repo;
+      }))
     );
 
   const dependencies = await addProjectToDependencies(getAllDependenciesFromRepos(repos));
