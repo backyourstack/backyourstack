@@ -36,7 +36,7 @@ function getContent (data) {
 }
 
 function fetchWithOctokit (path, params, accessToken) {
-  _debug('Fetch with octokit', { path, params, accessToken });
+  _debug('Fetch with octokit', { path, params, withAccessToken: !!accessToken });
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
@@ -46,23 +46,25 @@ function silentError (err) {
   _debug('Silently catched error', err);
 }
 
-async function fetchProfile (slug, accessToken) {
-  _debug('Fetch profile', slug, accessToken);
+async function fetchProfile (login, accessToken) {
+  _debug('Fetch profile', { login: login, withAccessToken: !!accessToken } );
 
-  const cacheKey = `profile_${slug}`;
+  const cacheKey = `profile_${login}`;
 
   const profile = cache.get(cacheKey);
   if (profile) {
     return profile;
   }
 
-  const user = await fetchWithOctokit('users.getForUser', { username: slug }, accessToken).catch(silentError);
+  // https://octokit.github.io/rest.js/#api-Users-getForUser
+  const user = await fetchWithOctokit('users.getForUser', { username: login }, accessToken).catch(silentError);
   if (user && user.type !== 'Organization') {
     cache.set(cacheKey, user);
     return user;
   }
 
-  const org = await fetchWithOctokit('orgs.get', { org: slug }, accessToken).catch(silentError);
+  // https://octokit.github.io/rest.js/#api-Orgs-get
+  const org = await fetchWithOctokit('orgs.get', { org: login }, accessToken).catch(silentError);
   if (org) {
     cache.set(cacheKey, org);
     return org;
@@ -72,7 +74,7 @@ async function fetchProfile (slug, accessToken) {
 }
 
 async function fetchReposForProfile (profile, accessToken) {
-  _debug('Fetch repos for profile', profile, accessToken);
+  _debug('Fetch repos for profile', { login: profile.login, withAccessToken: !!accessToken });
 
   let repos = [];
 
@@ -83,9 +85,11 @@ async function fetchReposForProfile (profile, accessToken) {
 
   let getReposPath, getReposParameters;
   if (profile.type == 'Organization') {
+    // https://octokit.github.io/rest.js/#api-Repos-getForOrg
     getReposPath = 'repos.getForOrg';
     getReposParameters = { org: profile.login };
   } else {
+    // https://octokit.github.io/rest.js/#api-Repos-getForUser
     getReposPath = 'repos.getForUser';
     getReposParameters = { username: profile.login };
   }
@@ -120,15 +124,17 @@ async function fetchReposForProfile (profile, accessToken) {
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
-  _debug('Fetch file from repo', repo.full_name, repo.default_branch, path, accessToken);
+  _debug('Fetch file from repo',
+    { repo: repo.full_name, branch: repo.default_branch, path, withAccessToken: !!accessToken });
 
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
+    // https://octokit.github.io/rest.js/#api-Repos-getContent
     return fetchWithOctokit('repos.getContent', params, accessToken).then(getContent);
   }
 
   const relativeUrl = `/${repo.full_name}/${repo.default_branch}/${path}`;
-  _debug(`Fetching from ${relativeUrl}`);
+  _debug(`Fetching file from public repo ${relativeUrl}`);
   return fetch(`${baseRawUrl}${relativeUrl}`)
     .then(response => {
       if (response.status === 200) {
