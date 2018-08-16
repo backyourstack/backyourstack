@@ -46,6 +46,12 @@ function silentError (err) {
   _debug('Silently catched error', err);
 }
 
+function compactRepo (repo) {
+  repo = pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private', 'language']);
+  repo.owner = pick(repo.owner, ['login']);
+  return repo;
+}
+
 async function fetchProfile (login, accessToken) {
   _debug('Fetch profile', { login: login, withAccessToken: !!accessToken } );
 
@@ -110,10 +116,7 @@ async function fetchReposForProfile (profile, accessToken) {
   repos = repos.filter(repo => repo.fork === false);
 
   // Filter the keys we're interested in
-  repos = repos.map(repo => {
-    repo.owner = pick(repo.owner, ['login']);
-    return pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private', 'language']);
-  });
+  repos = repos.map(compactRepo);
 
   const publicRepos = repos.filter(repo => repo.private === false);
 
