@@ -1,5 +1,7 @@
 # BackYourStack
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/backyourstack.svg)](https://greenkeeper.io/)
+
 Discover the open source projects your organization is using that need financial support.
 
 Our goal with BackYourStack is to make it easier for companies to identify the open source projects that they depend on that also need funding.
