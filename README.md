@@ -1,4 +1,6 @@
-# BackYourStack
+<p align="center">
+  <img width="308" height="308" src="src/static/img/logo-og-1.png" alt="BackYourStack">
+</p>
 
 [![Build Status](https://travis-ci.org/opencollective/backyourstack.svg?branch=master)](https://travis-ci.org/opencollective/backyourstack)
 [![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
