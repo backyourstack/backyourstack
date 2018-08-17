@@ -1,8 +1,8 @@
 language: node_js
-script: npm test
-before_install: npm install -g greenkeeper-lockfile
+before_install: npm install -g greenkeeper-lockfile@2
 install: npm install
 before_script: greenkeeper-lockfile-update
+script: npm test
 after_script: greenkeeper-lockfile-upload
 env:
   global:
