@@ -1,5 +1,8 @@
 # BackYourStack
 
+[![Build Status](https://travis-ci.org/opencollective/backyourstack.svg?branch=master)](https://travis-ci.org/opencollective/backyourstack)
+[![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
+[![Dependency Status](https://david-dm.org/opencollective/backyourstack/status.svg)](https://david-dm.org/opencollective/backyourstack)
 [![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/backyourstack.svg)](https://greenkeeper.io/)
 
 Discover the open source projects your organization is using that need financial support.
@@ -16,7 +19,7 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
-Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`. 
+Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`.
 
 ### Install
 
