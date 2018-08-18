@@ -8,7 +8,6 @@ import cache from './cache';
 const _debug = debug('github');
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
-const apiRawUrl = 'https://api.github.com';
 
 function getOctokit (accessToken) {
   const octokit = octokitRest();

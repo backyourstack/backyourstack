@@ -53,12 +53,9 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     // relatively new starting when .NET Core was released. Fall back to the legacy
     // packages.config if no dependencies were found in *.csproj.
     function evalForFallbackToPackagesConfig(result) {
-        if (result && result.length) {
-          return result;
-        }
-        else {
-          return mapPackages('packages.config', packagesConfigDependenciesStats);
-        }
+        return result && result.length 
+            ? result 
+            : mapPackages('packages.config', packagesConfigDependenciesStats);
     }
 
     return mapPackages('*.csproj', csprojDependenciesStats)
