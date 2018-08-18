@@ -41,19 +41,28 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
       return searchFilesFromRepo(githubRepo, searchPattern, githubAccessToken)
         .then(files => files.map(xml => new xmldoc.XmlDocument(xml))
           .map(transform)
-          .reduce(aggregateDependencies)
         )
+        .then(deps => deps && deps.length ? deps.reduce(aggregateDependencies) : [])
         .catch(err => {
           _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
           return [];
         });
     }
 
-    return Promise.all(
-        mapPackages('*.csproj', csprojDependenciesStats),
-        mapPackages('packages.config', packagesConfigDependenciesStats)
-      )
-      .then(result => flatten(result))
+    // Modern C# projects define dependencies in the *.csproj files, however this is
+    // relatively new starting when .NET Core was released. Fall back to the legacy
+    // packages.config if no dependencies were found in *.csproj.
+    function evalForFallbackToPackagesConfig(result) {
+        if (result && result.length) {
+          return result;
+        }
+        else {
+          return mapPackages('packages.config', packagesConfigDependenciesStats);
+        }
+    }
+
+    return mapPackages('*.csproj', csprojDependenciesStats)
+      .then(evalForFallbackToPackagesConfig)
       .then(result => {
         cache.set(cacheKey, result);
         return result;
