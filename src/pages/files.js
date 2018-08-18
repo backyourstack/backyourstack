@@ -142,10 +142,10 @@ export default class Files extends React.Component {
           {Object.entries(files).map(([ id, file ]) => (
             <div key={id} className="File">
               <div className="name">
-                <strong>{file.parsed.name || 'Unnamed project'}</strong>
+                <strong>{(file.json && file.json.name) || 'Unnamed project'}</strong>
               </div>
               <div className="dependencies">
-                {dependenciesStats(file.parsed).length} dependencies
+                {dependenciesStats(file).length} dependencies
               </div>
               <button className="actionButton" onClick={(e) => this.handleRemoveFile(id, e)}>
                 ✘ Remove file

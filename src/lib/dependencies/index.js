@@ -20,17 +20,28 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   });
 }
 
-function dependenciesStats (parsedJson) {
-  if (parsedJson.dependencies || parsedJson.devDependencies || parsedJson.peerDependencies) {
-    return npm.dependenciesStats(parsedJson);
+function dependenciesStats (file) {
+  const type = detectDependencyFileType(file);
+  if (type === 'npm') {
+    return npm.dependenciesStats(file.json);
   }
-  if (parsedJson.require || parsedJson['require-dev']) {
-    return composer.dependenciesStats(parsedJson);
+  if (type === 'composer') {
+    return composer.dependenciesStats(file.json);
   }
   return [];
+}
+
+function detectDependencyFileType (file) {
+  if (npm.isDependencyFile(file)) {
+    return 'npm';
+  }
+  if (composer.isDependencyFile(file)) {
+    return 'composer';
+  }
 }
 
 export {
   getDependenciesFromGithubRepo,
   dependenciesStats,
+  detectDependencyFileType,
 };

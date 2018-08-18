@@ -44,7 +44,16 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     });
 }
 
+function isDependencyFile (file) {
+  if (file.json) {
+    if (file.json.dependencies || file.json.devDependencies || file.json.peerDependencies) {
+      return true;
+    }
+  }
+}
+
 export {
   getDependenciesFromGithubRepo,
   dependenciesStats,
+  isDependencyFile,
 };

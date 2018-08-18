@@ -121,7 +121,6 @@ export default class Upload extends React.Component {
           onDrop={this.onDrop}
           className={classNames('dropZoneComponent', { error: this.state.error })}
           activeClassName="active"
-          accept={['application/json']}
           maxSize={102400}
           style={this.props.style}
           >

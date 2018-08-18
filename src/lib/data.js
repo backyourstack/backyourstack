@@ -101,8 +101,8 @@ async function getFilesData (sessionFiles) {
     const file = sessionFiles[id];
     return {
       id,
-      name: file.parsed.name || 'Unnamed project',
-      dependencies: dependenciesStats(file.parsed),
+      name: (file.json && file.json.name) || 'Unnamed project',
+      dependencies: dependenciesStats(file),
       ... file,
     };
   });
