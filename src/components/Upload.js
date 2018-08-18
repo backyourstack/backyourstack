@@ -141,7 +141,7 @@ export default class Upload extends React.Component {
             )}
             >
             <p>
-              There was an error while uploading your files. Only <em>package.json</em>, <em>packages.config</em> <em>*.csproj</em> and <em>composer.json</em> are accepted right now.
+              There was an error while uploading your files. Only <em>package.json</em> and <em>composer.json</em> are accepted right now.
             </p>
             <p>
               Please try again. If the problem persists, please contact us.
