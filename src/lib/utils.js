@@ -4,9 +4,9 @@ import allProjects from '../data/projects.json';
 
 const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
 
-function getProjectFromDependency (dependency) {
+function getProjectFromDependency (name, type) {
   return allProjects.find(project =>
-    project.packages.find(pkg => pkg.name === dependency)
+    project.packages.find(pkg => pkg.name === name && pkg.type === type)
   );
 }
 
@@ -46,7 +46,7 @@ function addProjectToDependencies (deps) {
 }
 
 function addProjectToDependency (dep) {
-  const project = getProjectFromDependency(dep.name);
+  const project = getProjectFromDependency(dep.name, dep.type);
   if (project) {
     dep.project = project;
   }
