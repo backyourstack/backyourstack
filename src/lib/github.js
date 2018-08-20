@@ -136,14 +136,14 @@ async function fetchReposForProfile (profile, accessToken) {
 function searchFilesFromRepo (repo, searchPattern, accessToken) {
   _debug('Search files from repo', repo.full_name, repo.default_branch, searchPattern, accessToken);
 
-  const params = { 
-    q: `filename:${searchPattern}+repo:${repo.full_name}`
+  const params = {
+    q: `filename:${searchPattern}+repo:${repo.full_name}`,
   };
   return fetchWithOctokit('search.code', params, accessToken)
-  .then(result => result.items)
-  .then(items => Promise.all(
-    items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
-  ));
+    .then(result => result.items)
+    .then(items => Promise.all(
+      items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
+    ));
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
