@@ -108,7 +108,6 @@ export default class Upload extends React.Component {
           text-align: center;
           background-color: #FFF2F4;
           position: relative;
-          background-color: lime;
           padding: 20px;
         }
         .uploadFeedback.error {
