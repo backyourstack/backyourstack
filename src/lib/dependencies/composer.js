@@ -1,7 +1,5 @@
 import debug from 'debug';
 
-import cache from '../cache';
-
 import { fetchFileFromRepo } from '../github';
 
 const _debug = debug('dependencies:composer');
@@ -25,20 +23,12 @@ function dependenciesStats (composerJson) {
 }
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  const cacheKey = `repo_composer_dependencies_${githubRepo.id}`;
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey);
-  }
   return fetchFileFromRepo(githubRepo, 'composer.json', githubAccessToken)
     .then(JSON.parse)
     .then(dependenciesStats)
     .catch(err => {
       _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
       return [];
-    })
-    .then(result => {
-      cache.set(cacheKey, result);
-      return result;
     });
 }
 

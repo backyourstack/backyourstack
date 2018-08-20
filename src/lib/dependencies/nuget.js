@@ -1,7 +1,5 @@
 import debug from 'debug';
 
-import cache from '../cache';
-
 import xmldoc from 'xmldoc';
 
 import { searchFilesFromRepo } from '../github';
@@ -32,11 +30,6 @@ function aggregateDependencies (a, b) {
 }
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  const cacheKey = `repo_nuget_dependencies_${githubRepo.id}`;
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey);
-  }
-
   function mapPackages (searchPattern, transform) {
     return searchFilesFromRepo(githubRepo, searchPattern, githubAccessToken)
       .then(files => files.map(xml => new xmldoc.XmlDocument(xml))
@@ -59,11 +52,7 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   }
 
   return mapPackages('*.csproj', csprojDependenciesStats)
-    .then(evalForFallbackToPackagesConfig)
-    .then(result => {
-      cache.set(cacheKey, result);
-      return result;
-    });
+    .then(evalForFallbackToPackagesConfig);
 }
 
 function dependenciesStats (file) {

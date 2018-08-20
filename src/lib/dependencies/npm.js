@@ -1,7 +1,5 @@
 import debug from 'debug';
 
-import cache from '../cache';
-
 import { fetchFileFromRepo } from '../github';
 
 const _debug = debug('dependencies:npm');
@@ -27,20 +25,12 @@ function dependenciesStats (packageJson) {
 }
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  const cacheKey = `repo_npm_dependencies_${githubRepo.id}`;
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey);
-  }
   return fetchFileFromRepo(githubRepo, 'package.json', githubAccessToken)
     .then(JSON.parse)
     .then(dependenciesStats)
     .catch(err => {
       _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
       return [];
-    })
-    .then(result => {
-      cache.set(cacheKey, result);
-      return result;
     });
 }
 

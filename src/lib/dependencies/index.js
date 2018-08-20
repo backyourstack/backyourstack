@@ -1,3 +1,4 @@
+import cache from '../cache';
 import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';
@@ -23,7 +24,15 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   if (!fileType) {
     return Promise.resolve([]);
   }
-  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken);
+  const cacheKey = `repo_${fileType}_dependencies_${githubRepo.id}`;
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
+  }
+  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken)
+    .then(result => {
+      cache.set(cacheKey, result);
+      return result;
+    });
 }
 
 function dependenciesStats (file) {
