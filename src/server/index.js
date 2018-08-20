@@ -16,6 +16,7 @@ import { get, has } from 'lodash';
 import passport from './passport';
 import routes from '../routes';
 import { fetchWithBasicAuthentication } from './utils';
+import { detectDependencyFileType, detectProjectName } from '../lib/dependencies';
 import {
   getProfile,
   getUserOrgs,
@@ -143,16 +144,22 @@ nextApp.prepare()
       let uploadAccepted = false;
       req.session.files = req.session.files || {};
       req.files.forEach(raw => {
-        const parsed = JSON.parse(raw.buffer.toString('utf8'));
-        if (parsed && !parsed.lockfileVersion) {
-          if (
-            parsed.dependencies || parsed.devDependencies || parsed.peerDependencies
-            || parsed.require || parsed['require-dev']
-          ) {
-            const id = parsed.name || md5(JSON.stringify(parsed));
-            req.session.files[id] = { parsed };
-            uploadAccepted = true;
-          }
+        const file = {
+          mime: raw.mimetype,
+          name: raw.originalname,
+          text: raw.buffer.toString('utf8'),
+        };
+        try {
+          file.json = JSON.parse(file.text);
+        } catch (e) {
+          // Invalid JSON
+        }
+        file.type = detectDependencyFileType(file);
+        if (file.type) {
+          file.projectName = detectProjectName(file);
+          const id = file.projectName || md5(file.text);
+          req.session.files[id] = file;
+          uploadAccepted = true;
         }
       });
       if (uploadAccepted) {

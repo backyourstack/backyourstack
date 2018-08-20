@@ -42,7 +42,21 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     });
 }
 
+function isDependencyFile (file) {
+  if (file.json) {
+    if (file.json['require'] || file.json['require-dev']) {
+      return true;
+    }
+  }
+}
+
+function detectProjectName (file) {
+  return file.json && file.json.name;
+}
+
 export {
   getDependenciesFromGithubRepo,
   dependenciesStats,
+  isDependencyFile,
+  detectProjectName,
 };
