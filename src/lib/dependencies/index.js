@@ -1,27 +1,29 @@
-import { flatten } from 'lodash';
-
 import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';
 import * as dep from './dep';
 
+const dependencyManagers = {
+  npm,
+  composer,
+  nuget,
+  dep,
+};
+
+const languageToFileType = {
+  JavaScript: 'npm',
+  TypeScript: 'npm',
+  PHP: 'composer',
+  'C#': 'nuget',
+  'Go': 'dep',
+};
+
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  const strategies = [];
-  if (githubRepo.language === 'JavaScript' || githubRepo.language === 'TypeScript') {
-    strategies.push(npm.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
+  const fileType = languageToFileType[githubRepo.language];
+  if (!fileType) {
+    return Promise.resolve([]);
   }
-  if (githubRepo.language === 'PHP') {
-    strategies.push(composer.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
-  }
-  if (githubRepo.language === 'C#') {
-    strategies.push(nuget.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
-  }
-  if (githubRepo.language === 'Go') {
-    strategies.push(dep.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
-  }
-  return Promise.all(strategies).then(results => {
-    return flatten(results, true);
-  });
+  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken);
 }
 
 function dependenciesStats (file) {
