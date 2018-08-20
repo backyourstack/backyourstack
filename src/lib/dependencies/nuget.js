@@ -6,7 +6,7 @@ import xmldoc from 'xmldoc';
 
 import { searchFilesFromRepo } from '../github';
 
-import { flatten } from 'lodash';
+import { flatten, head } from 'lodash';
 
 const _debug = debug('dependencies:nuget');
 
@@ -66,7 +66,38 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     });
 }
 
+function dependenciesStats (file) {
+  if (file.name === 'packages.config') {
+    const xml = new xmldoc.XmlDocument(file.text);
+    return packagesConfigDependenciesStats(xml);
+  }
+  if (file.name.indexOf('.csproj') !== -1) {
+    const xml = new xmldoc.XmlDocument(file.text);
+    return csprojDependenciesStats(xml);
+  }
+  return [];
+}
+
+function isDependencyFile (file) {
+  if (file.name === 'packages.config' || file.name.indexOf('.csproj') !== -1) {
+    return true;
+  }
+}
+
+function detectProjectName (file) {
+  if (file.name.indexOf('.csproj') !== -1) {
+    const xml = new xmldoc.XmlDocument(file.text);
+    const searchPackageId = xml.childrenNamed('PropertyGroup').map(itemGroup => itemGroup.childrenNamed('PackageId'));
+    const packageId = head(flatten(searchPackageId));
+    if (packageId) {
+      return packageId.val;
+    }
+  }
+}
+
 export {
   getDependenciesFromGithubRepo,
-  csprojDependenciesStats,
+  dependenciesStats,
+  isDependencyFile,
+  detectProjectName,
 };
