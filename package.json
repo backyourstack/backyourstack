@@ -73,7 +73,9 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-react": "^7.10.0",
     "nodemon": "^1.18.3",
-    "svg-react-loader": "^0.4.5"
+    "svg-react-loader": "^0.4.5",
+    "webpack": "3.10.0",
+    "webpack-bundle-analyzer": "^2.13.1"
   },
   "nodemonConfig": {
     "watch": [
