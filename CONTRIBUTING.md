@@ -10,7 +10,7 @@ If you want to help and are not sure where to start, we have some ideas!
 
 ### Supporting more dependency managers
 
-BackYourStack is currenly only detecting and supporting `npm` and `composer` packages. For sure, we are aware Javascript and PHP are not the only progamming languages in the world and we would love to support more platforms like Ruby and Python.
+BackYourStack is currenly only detecting and supporting `npm`, `nuget` and `composer` packages. For sure, we are aware Javascript and PHP are not the only progamming languages in the world and we would love to support more platforms like Ruby and Python.
 
 There are already tickets existing for:
 

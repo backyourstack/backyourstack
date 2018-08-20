@@ -52,7 +52,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-dropzone": "^5.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "xmldoc": "^1.1.2"
   },
   "engines": {
     "node": "10.x.x"

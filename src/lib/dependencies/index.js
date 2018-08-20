@@ -2,6 +2,7 @@ import { flatten } from 'lodash';
 
 import * as composer from './composer';
 import * as npm from './npm';
+import * as nuget from './nuget';
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   const strategies = [];
@@ -10,6 +11,9 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   }
   if (githubRepo.language === 'PHP') {
     strategies.push(composer.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
+  }
+  if (githubRepo.language === 'C#') {
+    strategies.push(nuget.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
   }
   return Promise.all(strategies).then(results => {
     return flatten(results, true);
