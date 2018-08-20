@@ -80,9 +80,9 @@
   },
   "nodemonConfig": {
     "watch": [
-      "lib/*.js",
-      "server/*.js",
-      "routes.js"
+      "src/lib",
+      "src/server",
+      "src/routes.js"
     ]
   },
   "now": {
