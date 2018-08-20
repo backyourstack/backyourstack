@@ -101,7 +101,7 @@ async function getFilesData (sessionFiles) {
     const file = sessionFiles[id];
     return {
       id,
-      name: (file.json && file.json.name) || 'Unnamed project',
+      name: file.projectName || 'Unnamed project',
       dependencies: dependenciesStats(file),
       ... file,
     };

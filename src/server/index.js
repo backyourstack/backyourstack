@@ -16,7 +16,7 @@ import { get, has } from 'lodash';
 import passport from './passport';
 import routes from '../routes';
 import { fetchWithBasicAuthentication } from './utils';
-import { detectDependencyFileType } from '../lib/dependencies';
+import { detectDependencyFileType, detectProjectName } from '../lib/dependencies';
 import {
   getProfile,
   getUserOrgs,
@@ -154,9 +154,10 @@ nextApp.prepare()
         } catch (e) {
           // Invalid JSON
         }
-        const type = detectDependencyFileType(file);
-        if (type) {
-          const id = file.json && file.json.name || md5(file.text);
+        file.type = detectDependencyFileType(file);
+        if (file.type) {
+          file.projectName = detectProjectName(file);
+          const id = file.projectName || md5(file.text);
           req.session.files[id] = file;
           uploadAccepted = true;
         }

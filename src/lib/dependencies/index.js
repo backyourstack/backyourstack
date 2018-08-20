@@ -21,11 +21,10 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
 }
 
 function dependenciesStats (file) {
-  const type = detectDependencyFileType(file);
-  if (type === 'npm') {
+  if (file.type === 'npm') {
     return npm.dependenciesStats(file.json);
   }
-  if (type === 'composer') {
+  if (file.type === 'composer') {
     return composer.dependenciesStats(file.json);
   }
   return [];
@@ -40,8 +39,18 @@ function detectDependencyFileType (file) {
   }
 }
 
+function detectProjectName (file) {
+  if (file.type === 'npm') {
+    return npm.detectProjectName(file);
+  }
+  if (file.type === 'composer') {
+    return composer.detectProjectName(file);
+  }
+}
+
 export {
   getDependenciesFromGithubRepo,
   dependenciesStats,
   detectDependencyFileType,
+  detectProjectName,
 };

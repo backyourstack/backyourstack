@@ -52,8 +52,13 @@ function isDependencyFile (file) {
   }
 }
 
+function detectProjectName (file) {
+  return file.json && file.json.name;
+}
+
 export {
   getDependenciesFromGithubRepo,
   dependenciesStats,
   isDependencyFile,
+  detectProjectName,
 };

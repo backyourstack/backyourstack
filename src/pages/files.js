@@ -142,7 +142,7 @@ export default class Files extends React.Component {
           {Object.entries(files).map(([ id, file ]) => (
             <div key={id} className="File">
               <div className="name">
-                <strong>{(file.json && file.json.name) || 'Unnamed project'}</strong>
+                <strong>{file.projectName || 'Unnamed project'}</strong>
               </div>
               <div className="dependencies">
                 {dependenciesStats(file).length} dependencies
