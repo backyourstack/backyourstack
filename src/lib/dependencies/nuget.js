@@ -6,7 +6,7 @@ import xmldoc from 'xmldoc';
 
 import { searchFilesFromRepo } from '../github';
 
-import { flatten, head } from 'lodash';
+import { flatten } from 'lodash';
 
 const _debug = debug('dependencies:nuget');
 
@@ -86,12 +86,7 @@ function isDependencyFile (file) {
 
 function detectProjectName (file) {
   if (file.name.indexOf('.csproj') !== -1) {
-    const xml = new xmldoc.XmlDocument(file.text);
-    const searchPackageId = xml.childrenNamed('PropertyGroup').map(itemGroup => itemGroup.childrenNamed('PackageId'));
-    const packageId = head(flatten(searchPackageId));
-    if (packageId) {
-      return packageId.val;
-    }
+    return file.name.replace('.csproj', '');
   }
 }
 
