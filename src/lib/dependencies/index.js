@@ -43,32 +43,15 @@ function dependenciesStats (file) {
 }
 
 function detectDependencyFileType (file) {
-  if (npm.isDependencyFile(file)) {
-    return 'npm';
-  }
-  if (composer.isDependencyFile(file)) {
-    return 'composer';
-  }
-  if (nuget.isDependencyFile(file)) {
-    return 'nuget';
-  }
-  if (dep.isDependencyFile(file)) {
-    return 'dep';
-  }
+  return Object.keys(dependencyManagers).find(
+    type => dependencyManagers[type].isDependencyFile(file)
+  );
 }
 
 function detectProjectName (file) {
-  if (file.type === 'npm') {
-    return npm.detectProjectName(file);
-  }
-  if (file.type === 'composer') {
-    return composer.detectProjectName(file);
-  }
-  if (file.type === 'nuget') {
-    return nuget.detectProjectName(file);
-  }
-  if (file.type === 'dep') {
-    return dep.detectProjectName(file);
+  const manager = dependencyManagers[file.type];
+  if (manager) {
+    return manager.detectProjectName(file);
   }
 }
 
