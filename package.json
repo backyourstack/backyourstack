@@ -12,7 +12,7 @@
     "build:server": "babel --copy-files ./src --out-dir ./build",
     "build:next": "next build build",
     "start": "NODE_ENV=production node build/server/index.js",
-    "lint": "eslint \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "update-projects": "babel-node src/scripts/update-projects",
