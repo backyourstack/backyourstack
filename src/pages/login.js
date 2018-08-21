@@ -68,9 +68,9 @@ export default class Login extends React.Component {
 
         <div className="content">
           <h2>Sign In with GitHub to give access to your private repositories.</h2>
-          <h3>What are going to do with it?</h3>
+          <h3>What are we going to do with it?</h3>
           <ul>
-            <li>We&#8217;ll only look for dependency files such as package.json.</li>
+            <li>We&#8217;ll only look for dependency files such as `package.json` and `composer.json`.</li>
             <li>The data will be cached up to 24 hours, not stored longer than that.</li>
             <li>The data processed from your private repositories will only be accessible by you.</li>
             <li>On Sign Out, we will revoke all permissions.</li>
