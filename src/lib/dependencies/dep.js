@@ -42,7 +42,7 @@ function isDependencyFile (file) {
   return file.name === 'Gopkg.lock'
 }
 
-function detectProjectName (file) {
+function detectProjectName () {
   return "not defined"
 }
 
