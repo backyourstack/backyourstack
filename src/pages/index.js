@@ -176,7 +176,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            You can also simply upload <em>package.json</em> and <em>composer.json</em> files, use a desktop browser for that.
+            You can also simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em> or <em>packages.config</em> files, use a desktop browser for that.
           </p>
 
           <div className="uploadContainer">

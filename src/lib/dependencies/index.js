@@ -27,6 +27,9 @@ function dependenciesStats (file) {
   if (file.type === 'composer') {
     return composer.dependenciesStats(file.json);
   }
+  if (file.type === 'nuget') {
+    return nuget.dependenciesStats(file);
+  }
   return [];
 }
 
@@ -37,6 +40,9 @@ function detectDependencyFileType (file) {
   if (composer.isDependencyFile(file)) {
     return 'composer';
   }
+  if (nuget.isDependencyFile(file)) {
+    return 'nuget';
+  }
 }
 
 function detectProjectName (file) {
@@ -45,6 +51,9 @@ function detectProjectName (file) {
   }
   if (file.type === 'composer') {
     return composer.detectProjectName(file);
+  }
+  if (file.type === 'nuget') {
+    return nuget.detectProjectName(file);
   }
 }
 

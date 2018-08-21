@@ -66,7 +66,33 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     });
 }
 
+function dependenciesStats (file) {
+  if (file.name === 'packages.config') {
+    const xml = new xmldoc.XmlDocument(file.text);
+    return packagesConfigDependenciesStats(xml);
+  }
+  if (file.name.indexOf('.csproj') !== -1) {
+    const xml = new xmldoc.XmlDocument(file.text);
+    return csprojDependenciesStats(xml);
+  }
+  return [];
+}
+
+function isDependencyFile (file) {
+  if (file.name === 'packages.config' || file.name.indexOf('.csproj') !== -1) {
+    return true;
+  }
+}
+
+function detectProjectName (file) {
+  if (file.name.indexOf('.csproj') !== -1) {
+    return file.name.replace('.csproj', '');
+  }
+}
+
 export {
   getDependenciesFromGithubRepo,
-  csprojDependenciesStats,
+  dependenciesStats,
+  isDependencyFile,
+  detectProjectName,
 };
