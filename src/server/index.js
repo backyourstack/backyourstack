@@ -28,9 +28,11 @@ import {
 
 const _debug = debug('server');
 
-const sessionSecret = process.env.SESSION_SECRET || crypto.randomBytes(64).toString('hex');
+const { PORT, SESSION_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
-const port = parseInt(process.env.PORT, 10) || 3000;
+const sessionSecret = SESSION_SECRET || crypto.randomBytes(64).toString('hex');
+
+const port = parseInt(PORT, 10) || 3000;
 
 const nextApp = next({
   dir: path.dirname(__dirname),
@@ -70,7 +72,6 @@ nextApp.prepare()
 
     server.get('/logout',
       (req, res) => {
-        const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
         const accessToken = get(req, 'session.passport.user.accessToken');
         fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
           `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
@@ -89,6 +90,11 @@ nextApp.prepare()
       });
 
     server.get('/auth/github', (req, res, next) => {
+      if (!GITHUB_CLIENT_ID || !GITHUB_CLIENT_SECRET) {
+        throw new Error(
+          'No GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET, set these environment keys to allow authentication with GitHub.'
+        );
+      }
       req.session.next = req.query.next || '/';
       passport.authenticate('github', { scope: 'repo' })(req, res, next);
     });
