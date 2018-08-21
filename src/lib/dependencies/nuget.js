@@ -21,17 +21,13 @@ function packagesConfigDependenciesStats (packagesConfig) {
   return Object.values(dependencies);
 }
 
-function aggregateDependencies (a, b) {
-  return a.concat(b.filter(x => a.indexOf(x) == -1));
-}
-
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   function mapPackages (searchPattern, transform) {
     return searchFilesFromRepo(githubRepo, searchPattern, githubAccessToken)
       .then(files => files.map(xml => new xmldoc.XmlDocument(xml))
         .map(transform)
       )
-      .then(deps => deps && deps.length ? deps.reduce(aggregateDependencies) : []);
+      .then(deps => flatten(deps));
   }
 
   // Modern C# projects define dependencies in the *.csproj files, however this is
