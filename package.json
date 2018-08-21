@@ -12,11 +12,11 @@
     "build:server": "babel --copy-files ./src --out-dir ./build",
     "build:next": "next build build",
     "start": "NODE_ENV=production node build/server/index.js",
-    "lint": "eslint \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "update-projects": "babel-node src/scripts/update-projects",
-    "test": "npm run lint:quiet"
+    "test": "jest"
   },
   "author": {
     "name": "Open Collective, Inc.",
@@ -73,6 +73,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.5.0",
     "nodemon": "^1.18.3",
     "svg-react-loader": "^0.4.5",
     "webpack": "3.10.0",

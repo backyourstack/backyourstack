@@ -1,5 +1,8 @@
 {
   "extends": "opencollective",
+  "env": {
+    "jest": true,
+  },
   "rules": {
     "react/display-name": "off",
     "no-console": "warn",
