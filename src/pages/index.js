@@ -164,7 +164,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            or simply upload <em>package.json</em> and <em>composer.json</em> files.
+            or simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em> or <em>packages.config</em> files.
             The uploaded files will not be shared with anyone
             and will be deleted when your session expire.
           </p>
