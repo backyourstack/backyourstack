@@ -27,3 +27,7 @@ export const composerFile = getFile(composerFilename);
 const nugetCsprojFilename = path.join(path.dirname(__dirname), 'files', 'Apogee.csproj');
 
 export const nugetCsprojFile = getFile(nugetCsprojFilename);
+
+const depFilename = path.join(path.dirname(__dirname), 'files', 'Gopkg.lock');
+
+export const depFile = getFile(depFilename);

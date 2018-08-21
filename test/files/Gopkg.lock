@@ -1,0 +1,22 @@
+[[projects]]
+  digest = "1:15d017551627c8bb091bde628215b2861bed128855343fdd570c62d08871f6e1"
+  name = "github.com/goreleaser/nfpm"
+  packages = ["."]
+  pruneopts = ""
+  revision = "947dcec5ba9c011838740e680966fd7087a71d0d"
+  version = "v2.2.6"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/alecthomas/kingpin"
+  packages = ["."]
+  revision = "a39589180ebd6bbf43076e514b55f20a95d43086"
+
+[solve-meta]
+  analyzer-name = "dep"
+  analyzer-version = 1
+  input-imports = [
+    "github.com/goreleaser/nfpm",
+  ]
+  solver-name = "gps-cdcl"
+  solver-version = 1

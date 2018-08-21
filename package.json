@@ -53,6 +53,7 @@
     "react-dom": "^16.4.2",
     "react-dropzone": "^5.0.0",
     "serve-favicon": "^2.5.0",
+    "toml": "^2.3.3",
     "xmldoc": "^1.1.2"
   },
   "engines": {
