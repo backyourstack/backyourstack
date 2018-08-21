@@ -24,7 +24,7 @@ const composerFilename = path.join(path.dirname(__dirname), 'files', 'composer.j
 
 export const composerFile = getFile(composerFilename);
 
-const nugetCsprojFilename = path.join(path.dirname(__dirname), 'files', 'Apogee.csproj');
+const nugetCsprojFilename = path.join(path.dirname(__dirname), 'files', 'sample-nuget-project.csproj');
 
 export const nugetCsprojFile = getFile(nugetCsprojFilename);
 

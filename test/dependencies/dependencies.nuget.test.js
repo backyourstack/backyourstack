@@ -16,7 +16,7 @@ describe('nuget dependencies', () => {
 
   test('should detect project name', () => {
     const projectName = nuget.detectProjectName(nugetCsprojFile);
-    expect(projectName).toBe('Apogee');
+    expect(projectName).toBe('sample-nuget-project');
   });
 
   test('should detect dependencies', () => {

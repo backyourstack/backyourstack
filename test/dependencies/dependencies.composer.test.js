@@ -16,7 +16,7 @@ describe('composer dependencies', () => {
 
   test('should detect project name', () => {
     const projectName = composer.detectProjectName(composerFile);
-    expect(projectName).toBe('test/sample-composer-project');
+    expect(projectName).toBe('sample-composer-project');
   });
 
   test('should detect dependencies', () => {
