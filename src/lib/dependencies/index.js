@@ -28,11 +28,15 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   if (cache.has(cacheKey)) {
     return cache.get(cacheKey);
   }
-  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken)
+  return loadDependenciesFromGithubRepo (fileType, githubRepo, githubAccessToken)
     .then(result => {
       cache.set(cacheKey, result);
       return result;
     });
+}
+
+function loadDependenciesFromGithubRepo (fileType, githubRepo, githubAccessToken) {
+  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken);
 }
 
 function dependenciesStats (file) {
