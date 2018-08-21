@@ -1,8 +1,4 @@
-import debug from 'debug';
-
 import { fetchFileFromRepo } from '../github';
-
-const _debug = debug('dependencies:npm');
 
 const dependencyTypes = {
   core: 'dependencies',
@@ -27,11 +23,7 @@ function dependenciesStats (packageJson) {
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   return fetchFileFromRepo(githubRepo, 'package.json', githubAccessToken)
     .then(JSON.parse)
-    .then(dependenciesStats)
-    .catch(err => {
-      _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
-      return [];
-    });
+    .then(dependenciesStats);
 }
 
 function isDependencyFile (file) {

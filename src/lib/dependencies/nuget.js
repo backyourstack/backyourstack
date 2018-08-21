@@ -1,12 +1,8 @@
-import debug from 'debug';
-
 import xmldoc from 'xmldoc';
 
 import { searchFilesFromRepo } from '../github';
 
 import { flatten } from 'lodash';
-
-const _debug = debug('dependencies:nuget');
 
 function csprojDependenciesStats (csproj) {
   const dependencies = {};
@@ -35,11 +31,7 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
       .then(files => files.map(xml => new xmldoc.XmlDocument(xml))
         .map(transform)
       )
-      .then(deps => deps && deps.length ? deps.reduce(aggregateDependencies) : [])
-      .catch(err => {
-        _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
-        return [];
-      });
+      .then(deps => deps && deps.length ? deps.reduce(aggregateDependencies) : []);
   }
 
   // Modern C# projects define dependencies in the *.csproj files, however this is

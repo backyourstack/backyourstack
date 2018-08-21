@@ -1,8 +1,4 @@
-import debug from 'debug';
-
 import { fetchFileFromRepo } from '../github';
-
-const _debug = debug('dependencies:composer');
 
 const dependencyTypes = {
   core: 'require',
@@ -25,11 +21,7 @@ function dependenciesStats (composerJson) {
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   return fetchFileFromRepo(githubRepo, 'composer.json', githubAccessToken)
     .then(JSON.parse)
-    .then(dependenciesStats)
-    .catch(err => {
-      _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
-      return [];
-    });
+    .then(dependenciesStats);
 }
 
 function isDependencyFile (file) {

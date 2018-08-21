@@ -1,8 +1,12 @@
 import cache from '../cache';
+import debug from 'debug';
+
 import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';
 import * as dep from './dep';
+
+const _debug = debug('dependencies');
 
 const dependencyManagers = {
   npm,
@@ -36,7 +40,11 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
 }
 
 function loadDependenciesFromGithubRepo (fileType, githubRepo, githubAccessToken) {
-  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken);
+  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken)
+    .catch(err => {
+      _debug(`${fileType}.getDependenciesFromGithubRepo error: ${err.message}`);
+      return [];
+    });
 }
 
 function dependenciesStats (file) {
