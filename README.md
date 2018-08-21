@@ -35,6 +35,16 @@ npm install
 
 `npm run dev`
 
+### Environment Keys
+
+In development environment, we use [dotenv](https://github.com/motdotla/dotenv) to set environment keys. To use it, create an `.env` file at the root of the repository and add environment keys in there.
+
+#### GitHub API Keys
+
+To allow authentication with GitHub, you'll need to set GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.
+
+You can get these keys by [registering a new oAuth application at GitHub](https://github.com/settings/applications/new). By default, the callback URL should be `http://localhost:3000/auth/github/callback`.
+
 ## Production
 
 ### Prerequisite

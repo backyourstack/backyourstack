@@ -10,24 +10,23 @@ const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_TOKEN_DONATORS } = proces
 
 const githubTokenDonators = (GITHUB_TOKEN_DONATORS || '').split(',').map(str => str.trim());
 
-const githubParams = {
-  clientID: GITHUB_CLIENT_ID,
-  clientSecret: GITHUB_CLIENT_SECRET,
-};
-
-const passportGithubStrategy = new passportGithub.Strategy(
-  githubParams,
-  (accessToken, refreshToken, profile, cb) => {
-    _debug(accessToken, refreshToken, profile);
-    const { id, username, displayName, _json: { avatar_url: avatarUrl } } = profile;
-    if (githubTokenDonators.indexOf(username) !== -1) {
-      donateToken(accessToken);
+if (GITHUB_CLIENT_ID && GITHUB_CLIENT_SECRET) {
+  const passportGithubStrategy = new passportGithub.Strategy(
+    { clientID: GITHUB_CLIENT_ID, clientSecret: GITHUB_CLIENT_SECRET },
+    (accessToken, refreshToken, profile, cb) => {
+      _debug(accessToken, refreshToken, profile);
+      const { id, username, displayName, _json: { avatar_url: avatarUrl } } = profile;
+      if (githubTokenDonators.indexOf(username) !== -1) {
+        donateToken(accessToken);
+      }
+      cb(null, { id, username, displayName, avatarUrl, accessToken, refreshToken });
     }
-    cb(null, { id, username, displayName, avatarUrl, accessToken, refreshToken });
-  }
-);
+  );
 
-passport.use(passportGithubStrategy);
+  passport.use(passportGithubStrategy);
+} else {
+  console.log('No GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET, set these environment keys to allow authentication with GitHub.');
+}
 
 passport.serializeUser((user, done) => done(null, user));
 
