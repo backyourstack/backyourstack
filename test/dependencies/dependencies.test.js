@@ -1,4 +1,5 @@
 import * as dependencies from '../../src/lib/dependencies';
+import * as github from '../../src/lib/github';
 
 import { composerFile, depFile, nugetCsprojFile, npmFile } from '../files';
 
@@ -30,11 +31,11 @@ const expectedDependencies = {
 
 describe('dependencies', () => {
   describe.each([
-    ['composer', composerFile],
-    ['dep', depFile],
-    ['npm', npmFile],
-    ['nuget', nugetCsprojFile],
-  ])('for %s file', (type, file) => {
+    ['composer', composerFile, 'PHP'],
+    ['dep', depFile, 'Go'],
+    ['npm', npmFile, 'JavaScript'],
+    ['nuget', nugetCsprojFile, 'C#'],
+  ])('for %s file', (type, file, language) => {
     test('should detect file type', () => {
       expect(dependencies.detectDependencyFileType(file)).toBe(type);
     });
@@ -51,6 +52,29 @@ describe('dependencies', () => {
       const expected = expectedDependencies[type];
       expect(result).toHaveLength(expected.length);
       expected.forEach(expectedDependency => expect(result).toContainEqual(expectedDependency));
+    });
+
+    describe('using github', () => {
+      let spyFetch, spySearch;
+      beforeEach( () => {
+        spyFetch = jest.spyOn(github, 'fetchFileFromRepo')
+          .mockImplementation( () => Promise.resolve(file.text) );
+        spySearch = jest.spyOn(github, 'searchFilesFromRepo')
+          .mockImplementation( () => Promise.resolve([file.text]) );
+      });
+      afterEach( () => {
+        spyFetch.mockRestore();
+        spySearch.mockRestore();
+      });
+
+      test('should get the stats from a Github repo', () => {
+        const repo = { language };
+        const expected = expectedDependencies[type];
+        return dependencies.getDependenciesFromGithubRepo(repo, 'token').then( result => {
+          expected.forEach(expectedDependency => expect(result).toContainEqual(expectedDependency));
+          expect(result).toHaveLength(expected.length);
+        });
+      });
     });
   });
 });
