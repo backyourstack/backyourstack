@@ -164,6 +164,14 @@
       {
         "type": "npm",
         "name": "mocha-allure-reporter"
+      },
+      {
+        "type": "nuget",
+        "name": "Allure.Commons"
+      },
+      {
+        "type": "nuget",
+        "name": "SpecFlow.Alure"
       }
     ],
     "github": {
@@ -624,6 +632,24 @@
     }
   },
   {
+    "name": "auditnet",
+    "opencollective": {
+      "id": 11998,
+      "name": "Audit.NET",
+      "slug": "auditnet",
+      "description": "Auditing library for .NET"
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Audit.NET"
+      }
+    ],
+    "github": {
+      "repo": "thepirat000/Audit.NET"
+    }
+  },
+  {
     "name": "aurelia",
     "packages": [
       {
@@ -766,6 +792,28 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "avalonia",
+    "opencollective": {
+      "id": 10845,
+      "name": "Avalonia",
+      "slug": "avalonia",
+      "description": null
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Avalonia"
+      },
+      {
+        "type": "nuget",
+        "name": "Avalonia.Desktop"
+      }
+    ],
+    "github": {
+      "repo": "AvaloniaUI/Avalonia"
     }
   },
   {
@@ -2679,6 +2727,40 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "catel",
+    "opencollective": {
+      "id": 16163,
+      "name": "Catel",
+      "slug": "catel",
+      "description": "This is the official twitter account for the Catel project, which can be found at http://t.co/tMmUb5FnFl."
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Catel.Core"
+      },
+      {
+        "type": "nuget",
+        "name": "Catel.Serialization.Json"
+      },
+      {
+        "type": "nuget",
+        "name": "Catel.MVVM"
+      },
+      {
+        "type": "nuget",
+        "name": "Catel.MVVM.Xamarin.Forms"
+      },
+      {
+        "type": "nuget",
+        "name": "Catel.Fody"
+      }
+    ],
+    "github": {
+      "repo": "Catel/Catel"
     }
   },
   {
@@ -10419,6 +10501,28 @@
     }
   },
   {
+    "name": "mahappsmetro",
+    "opencollective": {
+      "id": 15992,
+      "name": "MahApps.Metro",
+      "slug": "mahappsmetro",
+      "description": "MahApps.Metro is a framework that allows developers to cobble together a Metro or Modern UI for their own WPF applications with minimal effort."
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MahApps.Metro"
+      },
+      {
+        "type": "nuget",
+        "name": "MahApps.Metro.IconPacks"
+      }
+    ],
+    "github": {
+      "repo": "MahApps/MahApps.Metro"
+    }
+  },
+  {
     "name": "markdown-it",
     "packages": [
       {
@@ -11464,6 +11568,36 @@
     }
   },
   {
+    "name": "mqttnet",
+    "opencollective": {
+      "id": 17433,
+      "name": "MQTTnet",
+      "slug": "mqttnet",
+      "description": null
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MQTTnet"
+      },
+      {
+        "type": "nuget",
+        "name": "MQTTnet.AspNetCore"
+      },
+      {
+        "type": "nuget",
+        "name": "MQTTnet.Extensions.ManagedClient"
+      },
+      {
+        "type": "nuget",
+        "name": "MQTTnet.Extensions.Rpc"
+      }
+    ],
+    "github": {
+      "repo": "chkr1011/MQTTnet"
+    }
+  },
+  {
     "name": "musicplayer",
     "packages": [
       {
@@ -11485,6 +11619,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "mvvmcross",
+    "opencollective": {
+      "id": 629,
+      "name": "MvvmCross",
+      "slug": "mvvmcross",
+      "description": "The .NET MVVM framework for cross-platform solutions, including Xamarin.iOS, Xamarin.Android, Windows and Mac."
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MvvmCross"
+      }
+    ],
+    "github": {
+      "repo": "MvvmCross/MvvmCross"
     }
   },
   {
@@ -14568,6 +14720,24 @@
     }
   },
   {
+    "name": "qtsharp",
+    "opencollective": {
+      "id": 377,
+      "name": "QtSharp",
+      "slug": "qtsharp",
+      "description": null
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "QtSharp"
+      }
+    ],
+    "github": {
+      "repo": "ddobrev/QtSharp"
+    }
+  },
+  {
     "name": "query-string",
     "packages": [
       {
@@ -15637,6 +15807,24 @@
     }
   },
   {
+    "name": "reactiveui",
+    "opencollective": {
+      "id": 561,
+      "name": "ReactiveUI",
+      "slug": "reactiveui",
+      "description": null
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "ReactiveUI"
+      }
+    ],
+    "github": {
+      "repo": "reactiveui/ReactiveUI"
+    }
+  },
+  {
     "name": "reakit",
     "packages": [
       {
@@ -16182,6 +16370,24 @@
     }
   },
   {
+    "name": "rocketmod",
+    "opencollective": {
+      "id": 19331,
+      "name": "RocketMod",
+      "slug": "rocketmod",
+      "description": ".NET Game Server Plugin Framework"
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Rocket.Core"
+      }
+    ],
+    "github": {
+      "repo": "RocketMod/Rocket"
+    }
+  },
+  {
     "name": "rollup",
     "packages": [
       {
@@ -16367,6 +16573,24 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "ruijinet",
+    "opencollective": {
+      "id": 18017,
+      "name": "RuiJi.Net",
+      "slug": "ruijinet",
+      "description": "Dotnet distributed crawler framework"
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "RuiJi.Net.Core"
+      }
+    ],
+    "github": {
+      "repo": "zhupingqi/RuiJi.Net"
     }
   },
   {
@@ -16563,6 +16787,24 @@
     ]
   },
   {
+    "name": "sharpneat",
+    "opencollective": {
+      "id": 13527,
+      "name": "sharpneat",
+      "slug": "sharpneat",
+      "description": "SharpNEAT: Evolution of Neural Networks. A C# .NET Framework. "
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "SharpNeatLib"
+      }
+    ],
+    "github": {
+      "repo": "colgreen/sharpneat"
+    }
+  },
+  {
     "name": "shelljs",
     "packages": [
       {
@@ -16629,6 +16871,28 @@
         "yearlyBudget": 143696
       },
       "goals": []
+    }
+  },
+  {
+    "name": "sianet",
+    "opencollective": {
+      "id": 10385,
+      "name": "SiaNet",
+      "slug": "sianet",
+      "description": "A C# deep learning wrapper with CNTK backend"
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "SiaNet"
+      },
+      {
+        "type": "nuget",
+        "name": "SiaNet.CPUOnly"
+      }
+    ],
+    "github": {
+      "repo": "deepakkumar1984/SiaNet"
     }
   },
   {
@@ -19173,6 +19437,28 @@
         "name": "underscore"
       }
     ]
+  },
+  {
+    "name": "unirx",
+    "opencollective": {
+      "id": 17999,
+      "name": "UniRx",
+      "slug": "unirx",
+      "description": null
+    },
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "UniRx"
+      },
+      {
+        "type": "nuget",
+        "name": "UniRxAnalyzer"
+      }
+    ],
+    "github": {
+      "repo": "neuecc/UniRx"
+    }
   },
   {
     "name": "universalviewer",
