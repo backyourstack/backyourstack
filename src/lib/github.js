@@ -140,10 +140,7 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
     q: `filename:${searchPattern}+repo:${repo.full_name}`,
   };
   return fetchWithOctokit('search.code', params, accessToken)
-    .then(result => result.items)
-    .then(items => Promise.all(
-      items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
-    ));
+    .then(result => result.items);
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {

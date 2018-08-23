@@ -4,9 +4,9 @@ import cache from '../cache';
 
 import xmldoc from 'xmldoc';
 
-import { searchFilesFromRepo } from '../github';
+import { searchFilesFromRepo, fetchFileFromRepo } from '../github';
 
-import { flatten } from 'lodash';
+import { flatten, pick } from 'lodash';
 
 const _debug = debug('dependencies:nuget');
 
@@ -39,6 +39,17 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
 
   function mapPackages (searchPattern, transform) {
     return searchFilesFromRepo(githubRepo, searchPattern, githubAccessToken)
+     .then(
+        files => files.map(file => pick(file, ['name', 'path']))
+      )
+     .then(
+        files => files.filter(file => file.name === 'packages.config' || file.name.endsWith('.csproj'))
+      )
+      .then(
+        files => Promise.all(
+          files.map(file => fetchFileFromRepo(githubRepo, file.path, githubAccessToken))
+        )
+      )
       .then(files => files.map(xml => new xmldoc.XmlDocument(xml))
         .map(transform)
       )
