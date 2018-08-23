@@ -1,3 +1,5 @@
+import '../env';
+
 import fs from 'fs-extra';
 import path from 'path';
 import { get, pick, uniqBy } from 'lodash';

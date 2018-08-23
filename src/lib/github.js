@@ -162,8 +162,10 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
+  const branch = repo.default_branch || repo.defaultBranch;
+
   _debug('Fetch file from repo',
-    { repo: repo.full_name, branch: repo.default_branch, path, withAccessToken: !!accessToken });
+    { owner: repo.owner.login, name: repo.name, branch: branch, path, withAccessToken: !!accessToken });
 
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
@@ -171,7 +173,7 @@ function fetchFileFromRepo (repo, path, accessToken) {
     return fetchWithOctokit('repos.getContent', params, accessToken).then(getContent);
   }
 
-  const relativeUrl = `/${repo.full_name}/${repo.default_branch}/${path}`;
+  const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
   _debug(`Fetching file from public repo ${relativeUrl}`);
   return fetch(`${baseRawUrl}${relativeUrl}`)
     .then(response => {
@@ -194,8 +196,10 @@ export {
   fetchWithOctokit,
   fetchWithGraphql,
   fetchFileFromRepo,
+  getContent,
   fetchProfile,
   fetchReposForProfile,
   donateToken,
   searchFilesFromRepo,
+  silentError,
 };
