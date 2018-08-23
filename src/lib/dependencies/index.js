@@ -35,7 +35,7 @@ function dependenciesStats (file) {
     return nuget.dependenciesStats(file);
   }
   if (file.type === 'dep') {
-    return dep.dependenciesStats(file);
+    return dep.dependenciesStats(file.text);
   }
   return [];
 }
