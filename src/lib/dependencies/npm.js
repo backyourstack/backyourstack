@@ -1,32 +1,17 @@
-import { fetchFileFromRepo } from '../github';
 const patterns = ['package.json'];
 
-const dependencyTypes = {
-  core: 'dependencies',
-  peer: 'peerDependencies',
-  dev: 'devDependencies',
-  engines: 'engines',
-};
-
-function dependenciesStats (packageJson) {
-  const dependencies = {};
-  Object.entries(dependencyTypes).forEach(([ dependencyType, dependencyKey ]) => {
-    if (packageJson[dependencyKey]) {
-      Object.keys(packageJson[dependencyKey]).forEach(name => {
-        dependencies[name] = dependencies[name] || { type: 'npm', name };
-        dependencies[name][dependencyType] = 1;
-      });
-    }
-  });
-  return Object.values(dependencies);
+function dependencyObject (packageJson) {
+  return {
+    core: packageJson.dependencies,
+    peer: packageJson.peerDependencies,
+    dev: packageJson.devDependencies,
+    engines: packageJson.engines,
+  };
 }
 
-function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  return fetchFileFromRepo(githubRepo, 'package.json', githubAccessToken)
-    .then(JSON.parse)
-    .then(dependenciesStats);
+function dependencies (file) {
+  return dependencyObject(JSON.parse(file.text));
 }
-
 
 function detectProjectName (file) {
   return file.json && file.json.name;
@@ -34,7 +19,6 @@ function detectProjectName (file) {
 
 export {
   patterns,
-  getDependenciesFromGithubRepo,
-  dependenciesStats,
+  dependencies,
   detectProjectName,
 };

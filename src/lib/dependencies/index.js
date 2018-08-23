@@ -1,5 +1,6 @@
 import cache from '../cache';
 import debug from 'debug';
+import { fetchFileFromRepo, searchFilesFromRepo } from '../github';
 import minimatch from 'minimatch';
 
 import * as composer from './composer';
@@ -24,6 +25,27 @@ const languageToFileType = {
   'Go': 'dep',
 };
 
+// Assumes dependencyObject is {core: ['dependency', ...], ...}
+// or {core: {dependency: ...}, ...}
+// Returns [{type: 'npm', name: 'dependency', core: 1}, ...]
+function transformToStats (manager, ...dependencyObjects) {
+  const index = {};
+  dependencyObjects.forEach( dependencies => {
+    Object.entries(dependencies).forEach(([ dependencyType, dependencyNames ]) => {
+      if (dependencyNames) {
+        if (!Array.isArray(dependencyNames)) { // Transform {dependency: ...} into ['dependency', ...]
+          dependencyNames = Object.keys(dependencyNames);
+        }
+        dependencyNames.forEach(name => {
+          index[name] = index[name] || { type: manager, name };
+          index[name][dependencyType] = 1;
+        });
+      }
+    });
+  });
+  return Object.values(index);
+}
+
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   const fileType = languageToFileType[githubRepo.language];
   if (!fileType) {
@@ -41,25 +63,39 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
 }
 
 function loadDependenciesFromGithubRepo (fileType, githubRepo, githubAccessToken) {
-  return dependencyManagers[fileType].getDependenciesFromGithubRepo(githubRepo, githubAccessToken)
-    .catch(err => {
-      _debug(`${fileType}.getDependenciesFromGithubRepo error: ${err.message}`);
-      return [];
-    });
+  const manager = dependencyManagers[fileType];
+  const query = manager.searchAllRepo ? searchFilesFromRepo :
+    (repo, path, accessToken) => fetchFileFromRepo (repo, path, accessToken).then( content => [content] );
+
+  // lookup returns a promise returning [{matchedPattern, content}]
+  function lookup (pattern) {
+    return query(githubRepo, pattern, githubAccessToken).then (
+      contents => contents.map(text => ({
+              matchedPattern: pattern,
+              text,
+            }))
+    );
+  }
+
+  const firstSetOfMatchingFiles = manager.patterns.reduce(
+    (promise, pattern) => promise.then (
+      results => results.length ? results : lookup(pattern)
+    ), Promise.resolve([])
+  );
+
+  return firstSetOfMatchingFiles
+  .then( files => files.map(manager.dependencies) )
+  .then( dependencyObjects => transformToStats(fileType, ...dependencyObjects) )
+  .catch(err => {
+    _debug(`${fileType}.getDependenciesFromGithubRepo error: ${err.message}`);
+    return [];
+  });
 }
 
 function dependenciesStats (file) {
-  if (file.type === 'npm') {
-    return npm.dependenciesStats(file.json);
-  }
-  if (file.type === 'composer') {
-    return composer.dependenciesStats(file.json);
-  }
-  if (file.type === 'nuget') {
-    return nuget.dependenciesStats(file);
-  }
-  if (file.type === 'dep') {
-    return dep.dependenciesStats(file.text);
+  const manager = findManager(file);
+  if (manager) {
+    return transformToStats(file.type, manager.dependencies(file));
   }
   return [];
 }
@@ -76,13 +112,17 @@ function detectDependencyFileType (file) {
 }
 
 function detectProjectName (file) {
-  if (!file.type) {
-    detectDependencyFileType(file);
-  }
-  const manager = dependencyManagers[file.type];
+  const manager = findManager(file);
   if (manager) {
     return manager.detectProjectName(file);
   }
+}
+
+function findManager (file) {
+  if (!file.type) {
+    detectDependencyFileType(file);
+  }
+  return dependencyManagers[file.type];
 }
 
 export {

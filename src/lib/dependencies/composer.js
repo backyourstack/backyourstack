@@ -1,28 +1,14 @@
-import { fetchFileFromRepo } from '../github';
 const patterns = ['composer.json'];
 
-const dependencyTypes = {
-  core: 'require',
-  dev: 'require-dev',
-};
-
-function dependenciesStats (composerJson) {
-  const dependencies = {};
-  Object.entries(dependencyTypes).forEach(([ dependencyType, dependencyKey ]) => {
-    if (composerJson[dependencyKey]) {
-      Object.keys(composerJson[dependencyKey]).forEach(name => {
-        dependencies[name] = dependencies[name] || { type: 'composer', name };
-        dependencies[name][dependencyType] = 1;
-      });
-    }
-  });
-  return Object.values(dependencies);
+function dependencyObject (composerJson) {
+  return {
+    core: composerJson.require,
+    dev: composerJson['require-dev'],
+  };
 }
 
-function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  return fetchFileFromRepo(githubRepo, 'composer.json', githubAccessToken)
-    .then(JSON.parse)
-    .then(dependenciesStats);
+function dependencies (file) {
+  return dependencyObject(JSON.parse(file.text));
 }
 
 function detectProjectName (file) {
@@ -31,7 +17,6 @@ function detectProjectName (file) {
 
 export {
   patterns,
-  getDependenciesFromGithubRepo,
-  dependenciesStats,
+  dependencies,
   detectProjectName,
 };
