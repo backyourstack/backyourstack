@@ -1,6 +1,7 @@
 import debug from 'debug';
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
+import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
 
 import cache from './cache';
@@ -9,16 +10,21 @@ const _debug = debug('github');
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
 
+const baseGraphqlUrl = 'https://api.github.com/graphql';
+
+function getSharedAccessToken () {
+  const donatedTokens = cache.get('donatedTokens') || [];
+  if (donatedTokens.length > 0) {
+    return donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
+  } else {
+    return process.env.GITHUB_GUEST_TOKEN;
+  }
+}
+
 function getOctokit (accessToken) {
   const octokit = octokitRest();
   if (!accessToken) {
-    const donatedTokens = cache.get('donatedTokens') || [];
-    if (donatedTokens.length > 0) {
-      accessToken = donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
-    }
-  }
-  if (!accessToken) {
-    accessToken = process.env.GITHUB_GUEST_TOKEN;
+    accessToken = getSharedAccessToken();
   }
   if (accessToken) {
     octokit.authenticate({ type: 'oauth', token: accessToken });
@@ -40,6 +46,18 @@ function fetchWithOctokit (path, params, accessToken) {
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
+}
+
+function fetchWithGraphql (query, params, accessToken) {
+  if (!accessToken) {
+    accessToken = getSharedAccessToken();
+  }
+  const client = new GraphQLClient(baseGraphqlUrl, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+  return client.request(query, params);
 }
 
 function silentError (err) {
@@ -174,6 +192,7 @@ function donateToken (accessToken) {
 
 export {
   fetchWithOctokit,
+  fetchWithGraphql,
   fetchFileFromRepo,
   fetchProfile,
   fetchReposForProfile,
