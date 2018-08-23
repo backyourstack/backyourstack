@@ -16,7 +16,7 @@ describe('dep dependencies', () => {
 
   test('should detect project name', () => {
     const projectName = dep.detectProjectName(depFile);
-    expect(projectName).toBe('not defined');
+    expect(projectName).toBe(null);
   });
 
   test('should detect dependencies', () => {
