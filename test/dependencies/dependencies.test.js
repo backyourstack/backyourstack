@@ -77,4 +77,25 @@ describe('dependencies', () => {
       });
     });
   });
+
+  describe('for an unrelated file', () => {
+    const file = {
+      name: 'dummy.txt',
+      text: 'Hello, world',
+    };
+
+    test('should not detect file type', () => {
+      expect(dependencies.detectDependencyFileType(file)).toBeFalsy();
+    });
+
+    test('should not detect project name', () => {
+      expect(dependencies.detectProjectName(file)).toBe(undefined);
+    });
+
+    test('should return empty dependency stats', () => {
+      expect(dependencies.dependenciesStats(file)).toEqual([]);
+    });
+  })
+
+
 });
