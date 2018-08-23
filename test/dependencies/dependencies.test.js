@@ -1,7 +1,7 @@
 import * as dependencies from '../../src/lib/dependencies';
 import * as github from '../../src/lib/github';
 
-import { composerFile, depFile, nugetCsprojFile, npmFile } from '../files';
+import { bundlerFile, composerFile, depFile, nugetCsprojFile, npmFile } from '../files';
 
 const expectedDependencies = {
   composer: [
@@ -27,10 +27,18 @@ const expectedDependencies = {
     { core: 1, name: 'Microsoft.Extensions.Logging.Abstractions', type: 'nuget' },
     { core: 1, name: 'Microsoft.Extensions.Options', type: 'nuget' },
   ],
+  bundler: [
+    { core: 1, name: 'minitest', type: 'bundler' },
+    { core: 1, name: 'simplecov', type: 'bundler' },
+    { peer: 1, name: 'json', type: 'bundler' },
+    { peer: 1, name: 'docile', type: 'bundler' },
+    { peer: 1, name: 'simplecov-html', type: 'bundler' },
+  ],
 };
 
 describe('dependencies', () => {
   describe.each([
+    ['bundler', bundlerFile, 'Ruby', 'Gemfile.lock', null],
     ['composer', composerFile, 'PHP', 'composer.json', 'test/sample-composer-project'],
     ['dep', depFile, 'Go', 'Gopkg.lock', null],
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
