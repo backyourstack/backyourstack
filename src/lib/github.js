@@ -1,6 +1,7 @@
 import debug from 'debug';
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
+import minimatch from 'minimatch';
 import { get, pick } from 'lodash';
 
 import cache from './cache';
@@ -140,7 +141,14 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
     q: `filename:${searchPattern}+repo:${repo.full_name}`,
   };
   return fetchWithOctokit('search.code', params, accessToken)
-    .then(result => result.items);
+    .then(result => result.items)
+    .then( // Github returns partial matches (e.g. 'package.json.old'),
+           // so double check hits are actual matches
+      items => items.filter(file => minimatch(file.name, searchPattern))
+    )
+    .then(items => Promise.all(
+      items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
+    ));
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
