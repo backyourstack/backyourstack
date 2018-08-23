@@ -103,6 +103,8 @@ export default class RecommendationCard extends React.Component {
       !opencollective || opencollective.slug !== backer.slug
     );
 
+    const yearlyBudget = get(recommendation, 'opencollective.stats.yearlyBudget', 0);
+
     return (
       <Fragment>
         <style jsx>{`
@@ -262,10 +264,10 @@ export default class RecommendationCard extends React.Component {
             </div>
           }
 
-          {recommendation.opencollective.stats.yearlyBudget > 0 &&
+          {yearlyBudget > 0 &&
             <Fragment>
               <div className="budget">
-                Yearly budget: {this.formatBudget(recommendation.opencollective.stats.yearlyBudget / 100)}
+                Yearly budget: {this.formatBudget(yearlyBudget / 100)}
               </div>
               {this.nextGoal(recommendation) &&
                 <Fragment>
