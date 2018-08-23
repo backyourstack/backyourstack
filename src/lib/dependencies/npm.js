@@ -1,4 +1,5 @@
 import { fetchFileFromRepo } from '../github';
+const patterns = ['package.json'];
 
 const dependencyTypes = {
   core: 'dependencies',
@@ -26,21 +27,14 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     .then(dependenciesStats);
 }
 
-function isDependencyFile (file) {
-  if (file.json) {
-    if (file.json.dependencies || file.json.devDependencies || file.json.peerDependencies) {
-      return true;
-    }
-  }
-}
 
 function detectProjectName (file) {
   return file.json && file.json.name;
 }
 
 export {
+  patterns,
   getDependenciesFromGithubRepo,
   dependenciesStats,
-  isDependencyFile,
   detectProjectName,
 };

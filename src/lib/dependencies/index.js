@@ -1,5 +1,6 @@
 import cache from '../cache';
 import debug from 'debug';
+import minimatch from 'minimatch';
 
 import * as composer from './composer';
 import * as npm from './npm';
@@ -63,13 +64,21 @@ function dependenciesStats (file) {
   return [];
 }
 
+// Returns `file` or undefined if file is not a recognized dependency file.
 function detectDependencyFileType (file) {
-  return Object.keys(dependencyManagers).find(
-    type => dependencyManagers[type].isDependencyFile(file)
-  );
+  for (const type in dependencyManagers) {
+    for (const matchedPattern of dependencyManagers[type].patterns) {
+      if (minimatch(file.name, matchedPattern)) {
+        return Object.assign(file, { type, matchedPattern });
+      }
+    }
+  }
 }
 
 function detectProjectName (file) {
+  if (!file.type) {
+    detectDependencyFileType(file);
+  }
   const manager = dependencyManagers[file.type];
   if (manager) {
     return manager.detectProjectName(file);

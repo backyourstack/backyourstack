@@ -20,6 +20,7 @@ function packagesConfigDependenciesStats (packagesConfig) {
   });
   return Object.values(dependencies);
 }
+const patterns = ['*.csproj', 'packages.config'];
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   function mapPackages (searchPattern, transform) {
@@ -55,11 +56,6 @@ function dependenciesStats (file) {
   return [];
 }
 
-function isDependencyFile (file) {
-  if (file.name === 'packages.config' || file.name.indexOf('.csproj') !== -1) {
-    return true;
-  }
-}
 
 function detectProjectName (file) {
   if (file.name.indexOf('.csproj') !== -1) {
@@ -68,8 +64,8 @@ function detectProjectName (file) {
 }
 
 export {
+  patterns,
   getDependenciesFromGithubRepo,
   dependenciesStats,
-  isDependencyFile,
   detectProjectName,
 };

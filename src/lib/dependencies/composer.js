@@ -1,4 +1,5 @@
 import { fetchFileFromRepo } from '../github';
+const patterns = ['composer.json'];
 
 const dependencyTypes = {
   core: 'require',
@@ -24,21 +25,13 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
     .then(dependenciesStats);
 }
 
-function isDependencyFile (file) {
-  if (file.json) {
-    if (file.json['require'] || file.json['require-dev']) {
-      return true;
-    }
-  }
-}
-
 function detectProjectName (file) {
   return file.json && file.json.name;
 }
 
 export {
+  patterns,
   getDependenciesFromGithubRepo,
   dependenciesStats,
-  isDependencyFile,
   detectProjectName,
 };

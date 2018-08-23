@@ -37,18 +37,15 @@ function dependenciesStats (file) {
   });
   return Object.values(dependencies);
 }
-
-function isDependencyFile (file) {
-  return file.name === 'Gopkg.lock';
-}
+const patterns = ['Gopkg.lock'];
 
 function detectProjectName () {
   return null;
 }
 
 export {
+  patterns,
   getDependenciesFromGithubRepo,
   dependenciesStats,
-  isDependencyFile,
   detectProjectName,
 };

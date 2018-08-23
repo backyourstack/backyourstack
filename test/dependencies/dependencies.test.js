@@ -31,23 +31,23 @@ const expectedDependencies = {
 
 describe('dependencies', () => {
   describe.each([
-    ['composer', composerFile, 'PHP'],
-    ['dep', depFile, 'Go'],
-    ['npm', npmFile, 'JavaScript'],
-    ['nuget', nugetCsprojFile, 'C#'],
-  ])('for %s file', (type, file, language) => {
+    ['composer', composerFile, 'PHP', 'composer.json'],
+    ['dep', depFile, 'Go', 'Gopkg.lock'],
+    ['npm', npmFile, 'JavaScript', 'package.json'],
+    ['nuget', nugetCsprojFile, 'C#', '*.csproj'],
+  ])('for %s file', (type, file, language, pattern) => {
     test('should detect file type', () => {
-      expect(dependencies.detectDependencyFileType(file)).toBe(type);
+      expect(dependencies.detectDependencyFileType(file)).toBe(file);
+      expect(file.type).toBe(type);
+      expect(file.matchedPattern).toBe(pattern);
     });
 
     test('should detect project name', () => {
-      file.type = type;
       const expected = type === 'dep' ? null : `sample-${type}-project`;
       expect(dependencies.detectProjectName(file)).toBe(expected);
     });
 
     test('should return dependency stats', () => {
-      file.type = type;
       const result = dependencies.dependenciesStats(file);
       const expected = expectedDependencies[type];
       expect(result).toHaveLength(expected.length);
