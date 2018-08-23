@@ -1,6 +1,6 @@
 import * as dep from '../../src/lib/dependencies/dep';
 
-import {depFile, npmFile} from '../files';
+import { depFile, npmFile } from '../files';
 
 describe('dep dependencies', () => {
 

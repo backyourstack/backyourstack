@@ -26,24 +26,24 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
 }
 
 function dependenciesStats (file) {
-  const data = toml.parse(file)
+  const data = toml.parse(file);
   const dependencies = {};
   data.projects.map(proj => proj.name).forEach(name => {
     dependencies[name] = dependencies[name] || {
       type: 'dep',
       name: name,
-      core: 1
+      core: 1,
     };
   });
   return Object.values(dependencies);
 }
 
 function isDependencyFile (file) {
-  return file.name === 'Gopkg.lock'
+  return file.name === 'Gopkg.lock';
 }
 
 function detectProjectName () {
-  return "not defined"
+  return null;
 }
 
 export {
