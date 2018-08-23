@@ -637,7 +637,13 @@
       "id": 11998,
       "name": "Audit.NET",
       "slug": "auditnet",
-      "description": "Auditing library for .NET"
+      "description": "Auditing library for .NET",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -800,7 +806,13 @@
       "id": 10845,
       "name": "Avalonia",
       "slug": "avalonia",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 15027,
+        "yearlyBudget": 19427
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -2735,7 +2747,13 @@
       "id": 16163,
       "name": "Catel",
       "slug": "catel",
-      "description": "This is the official twitter account for the Catel project, which can be found at http://t.co/tMmUb5FnFl."
+      "description": "This is the official twitter account for the Catel project, which can be found at http://t.co/tMmUb5FnFl.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -3048,7 +3066,7 @@
       ],
       "stats": {
         "balance": 37539,
-        "yearlyBudget": 97910
+        "yearlyBudget": 97100
       },
       "goals": [
         {}
@@ -4362,7 +4380,7 @@
       ],
       "stats": {
         "balance": 287039,
-        "yearlyBudget": 998400
+        "yearlyBudget": 997104
       },
       "goals": []
     }
@@ -4759,8 +4777,8 @@
       "description": "Wow, such a lovely HTML5 danmaku video player",
       "sponsors": [],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 142,
+        "yearlyBudget": 1704
       },
       "goals": []
     }
@@ -5879,8 +5897,8 @@
         }
       ],
       "stats": {
-        "balance": 23342,
-        "yearlyBudget": 50928
+        "balance": 23747,
+        "yearlyBudget": 55788
       },
       "goals": []
     }
@@ -6952,7 +6970,7 @@
       "id": 455,
       "name": "Grav",
       "slug": "grav",
-      "description": null,
+      "description": "The modern and fast open source flat-file CMS",
       "sponsors": [
         {
           "id": 8185,
@@ -7015,7 +7033,9 @@
         "balance": 374622,
         "yearlyBudget": 279458
       },
-      "goals": []
+      "goals": [
+        {}
+      ]
     }
   },
   {
@@ -8122,6 +8142,13 @@
           "totalDonations": 600
         },
         {
+          "id": 19826,
+          "type": "ORGANIZATION",
+          "slug": "domecloud",
+          "name": "DomeCloud Co.,Ltd.",
+          "totalDonations": 500
+        },
+        {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
@@ -8133,8 +8160,8 @@
         {}
       ],
       "stats": {
-        "balance": 384883,
-        "yearlyBudget": 91886
+        "balance": 385283,
+        "yearlyBudget": 96686
       }
     }
   },
@@ -10506,7 +10533,30 @@
       "id": 15992,
       "name": "MahApps.Metro",
       "slug": "mahappsmetro",
-      "description": "MahApps.Metro is a framework that allows developers to cobble together a Metro or Modern UI for their own WPF applications with minimal effort."
+      "description": "MahApps.Metro is a framework that allows developers to cobble together a Metro or Modern UI for their own WPF applications with minimal effort.",
+      "stats": {
+        "balance": 52256,
+        "yearlyBudget": 126032
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": [
+        {
+          "id": 16240,
+          "type": "ORGANIZATION",
+          "slug": "chocolatey",
+          "name": "Chocolatey Software",
+          "totalDonations": 40000
+        },
+        {
+          "id": 17383,
+          "type": "ORGANIZATION",
+          "slug": "gallifreyapp",
+          "name": "Gallifrey App",
+          "totalDonations": 500
+        }
+      ]
     },
     "packages": [
       {
@@ -11233,7 +11283,7 @@
       ],
       "stats": {
         "balance": 393466,
-        "yearlyBudget": 969480
+        "yearlyBudget": 969336
       },
       "goals": []
     }
@@ -11376,7 +11426,7 @@
       ],
       "stats": {
         "balance": 2102197,
-        "yearlyBudget": 1130095
+        "yearlyBudget": 1129285
       },
       "goals": []
     }
@@ -11573,7 +11623,13 @@
       "id": 17433,
       "name": "MQTTnet",
       "slug": "mqttnet",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -11627,7 +11683,23 @@
       "id": 629,
       "name": "MvvmCross",
       "slug": "mvvmcross",
-      "description": "The .NET MVVM framework for cross-platform solutions, including Xamarin.iOS, Xamarin.Android, Windows and Mac."
+      "description": "The .NET MVVM framework for cross-platform solutions, including Xamarin.iOS, Xamarin.Android, Windows and Mac.",
+      "stats": {
+        "balance": 307423,
+        "yearlyBudget": 321423
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": [
+        {
+          "id": 4412,
+          "type": "ORGANIZATION",
+          "slug": "pronama",
+          "name": "Pronama LLC",
+          "totalDonations": 19000
+        }
+      ]
     },
     "packages": [
       {
@@ -12012,7 +12084,7 @@
           "type": "ORGANIZATION",
           "slug": "sensorpush",
           "name": "SensorPush",
-          "totalDonations": 82500
+          "totalDonations": 85000
         },
         {
           "id": 1538,
@@ -12023,7 +12095,7 @@
         }
       ],
       "stats": {
-        "balance": 160336,
+        "balance": 162483,
         "yearlyBudget": 45972
       },
       "goals": []
@@ -13148,7 +13220,7 @@
       ],
       "stats": {
         "balance": 109396,
-        "yearlyBudget": 155320
+        "yearlyBudget": 155176
       }
     }
   },
@@ -14214,7 +14286,7 @@
       ],
       "stats": {
         "balance": 2004711,
-        "yearlyBudget": 3010135
+        "yearlyBudget": 3008423
       }
     }
   },
@@ -14725,7 +14797,13 @@
       "id": 377,
       "name": "QtSharp",
       "slug": "qtsharp",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -15812,7 +15890,55 @@
       "id": 561,
       "name": "ReactiveUI",
       "slug": "reactiveui",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 491293,
+        "yearlyBudget": 825496
+      },
+      "goals": [
+        {
+          "type": "yearlyBudget",
+          "amount": 4800000,
+          "title": "One maintainer - part-time",
+          "description": "Our initial goal is $4,000/month. That money will be enough to [restore the imbalance of open-source](http://nadiaeghbal.com/oss/) ,  those who support you will now be supported. If ReactiveUI has no maintainers it will quickly become useless to all users and the project will die... _again_\n\n* ***Hire a technical writer*** to improve the project documentation, focusing on making reactive programming more accessible.\n* ***StackOverflow questions answered within 72 hours*** with best practices and authoritative solutions.\n*  ***One maintainer - part-time.***  Open-source succeeds in every aspect except sustaining those who sustain open-source. Transitioning to semi-employed allows more time to be spent improving ReactiveUI and more time with family.  As open-source software scales, projects need someone to handle things like community interaction, backlog triage, defect investigation and doing servant leadership activities to increase the productivity of maintainers, contributors and consumers.  Currently, these tasks take a few hours every day which means there are minimal blocks of focused time available to work on framework features, do ambitious things or support the community at a higher level and is a source of friction for any maintainer that has family commitments.\n* ***Tooling*** that automates maintainer activities, essentially exchanging money to buy time.  We currently use services to automate marketing, interactions between services and provide community analytics. This fee grows as the community grows."
+        },
+        {
+          "type": "yearlyBudget",
+          "amount": 9600000,
+          "description": "The stretch goal ($xx,000/month) is a total game changer and enough to keep ReactiveUI going, indefinitely and take reactive programming to the next level, enabling us to do things like: \n\n* ***Two maintainers - part-time*** or ***One maintainer - full time*** to work on new framework features, do A+ level community management, mentor newbies, ship solutions to defects in < 72 hours and maintain upstream dependencies such as System.Reactive.\n* ***Internship - paid*** for a student (ala google summer of code) to hack on research and shipping advancements to tooling/the reactive programming ecosystem.\n* ***Create tooling that visualizes observables*** to provide developers with a live birds-eye view of their application, all observables within it and the signals they and where they were created from.\n* ***Make reactive programming more accessible*** by taking documentation/learning experience to 11. Imagine, ReactiveUI running in your browser via webassembly so that developers have a REPL like an experience to learn the concepts of reactive programming in .NET without having to download or install anything.\n\nThe stretch goal would be amazing to hit, but simply being totally supported by the generosity of others makes us endlessly grateful, no matter what else happens. \n\nAnyway, thanks for any support you can offer if you decide to - _Geoffrey Huntley_\n",
+          "title": "Two maintainers - part-time"
+        }
+      ],
+      "sponsors": [
+        {
+          "id": 9539,
+          "type": "ORGANIZATION",
+          "slug": "freshheads",
+          "name": "Freshheads",
+          "totalDonations": 165000
+        },
+        {
+          "id": 8968,
+          "type": "ORGANIZATION",
+          "slug": "softwireuk",
+          "name": "",
+          "totalDonations": 16500
+        },
+        {
+          "id": 4412,
+          "type": "ORGANIZATION",
+          "slug": "pronama",
+          "name": "Pronama LLC",
+          "totalDonations": 7000
+        },
+        {
+          "id": 8969,
+          "type": "ORGANIZATION",
+          "slug": "softwireuk1",
+          "name": "Softwire",
+          "totalDonations": 1500
+        }
+      ]
     },
     "packages": [
       {
@@ -16375,7 +16501,26 @@
       "id": 19331,
       "name": "RocketMod",
       "slug": "rocketmod",
-      "description": ".NET Game Server Plugin Framework"
+      "description": ".NET Game Server Plugin Framework",
+      "stats": {
+        "balance": 1982,
+        "yearlyBudget": 35431
+      },
+      "goals": [
+        {
+          "key": 69058,
+          "type": "yearlyBudget",
+          "amount": 85000,
+          "title": "Hosting Fees"
+        },
+        {
+          "key": 12774,
+          "type": "yearlyBudget",
+          "amount": 360000,
+          "title": "Development Costs"
+        }
+      ],
+      "sponsors": []
     },
     "packages": [
       {
@@ -16581,7 +16726,35 @@
       "id": 18017,
       "name": "RuiJi.Net",
       "slug": "ruijinet",
-      "description": "Dotnet distributed crawler framework"
+      "description": "Dotnet distributed crawler framework",
+      "stats": {
+        "balance": 144,
+        "yearlyBudget": 1728
+      },
+      "goals": [
+        {
+          "key": 16423,
+          "type": "yearlyBudget",
+          "amount": 5000000,
+          "title": "Payout for contributors on github"
+        },
+        {
+          "key": 74294,
+          "type": "yearlyBudget",
+          "amount": 100000,
+          "title": "Payout for documentation and demo server",
+          "description": ""
+        }
+      ],
+      "sponsors": [
+        {
+          "id": 18796,
+          "type": "ORGANIZATION",
+          "slug": "scraperapi1",
+          "name": "Scraper API",
+          "totalDonations": 200
+        }
+      ]
     },
     "packages": [
       {
@@ -16792,7 +16965,13 @@
       "id": 13527,
       "name": "sharpneat",
       "slug": "sharpneat",
-      "description": "SharpNEAT: Evolution of Neural Networks. A C# .NET Framework. "
+      "description": "SharpNEAT: Evolution of Neural Networks. A C# .NET Framework. ",
+      "stats": {
+        "balance": 8580,
+        "yearlyBudget": 8580
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -16852,6 +17031,13 @@
           "totalDonations": 10500
         },
         {
+          "id": 19810,
+          "type": "ORGANIZATION",
+          "slug": "northwoodsgo1",
+          "name": "Northwoods Software",
+          "totalDonations": 3500
+        },
+        {
           "id": 16122,
           "type": "ORGANIZATION",
           "slug": "otechie",
@@ -16867,8 +17053,8 @@
         }
       ],
       "stats": {
-        "balance": 59905,
-        "yearlyBudget": 143696
+        "balance": 62923,
+        "yearlyBudget": 179912
       },
       "goals": []
     }
@@ -16879,7 +17065,13 @@
       "id": 10385,
       "name": "SiaNet",
       "slug": "sianet",
-      "description": "A C# deep learning wrapper with CNTK backend"
+      "description": "A C# deep learning wrapper with CNTK backend",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     },
     "packages": [
       {
@@ -19444,7 +19636,23 @@
       "id": 17999,
       "name": "UniRx",
       "slug": "unirx",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 141364,
+        "yearlyBudget": 249980
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ]
     },
     "packages": [
       {
@@ -19896,17 +20104,17 @@
           "totalDonations": 400000
         },
         {
-          "id": 7439,
-          "type": "ORGANIZATION",
-          "slug": "strikingly",
-          "name": "上线了",
-          "totalDonations": 350000
-        },
-        {
           "id": 9152,
           "type": "ORGANIZATION",
           "slug": "shanghai-daocloud-network-technology-co-ltd",
           "name": "Shanghai DaoCloud Network Technology Co,. Ltd.",
+          "totalDonations": 350000
+        },
+        {
+          "id": 7439,
+          "type": "ORGANIZATION",
+          "slug": "strikingly",
+          "name": "上线了",
           "totalDonations": 350000
         },
         {
@@ -19952,16 +20160,16 @@
           "totalDonations": 50000
         },
         {
-          "id": 5156,
+          "id": 18487,
           "type": "ORGANIZATION",
-          "slug": "tipe",
-          "name": "Tipe",
+          "slug": "syncfusion",
+          "name": "Syncfusion,Inc",
           "totalDonations": 50000
         }
       ],
       "stats": {
-        "balance": 947841,
-        "yearlyBudget": 2483542
+        "balance": 969586,
+        "yearlyBudget": 2744482
       },
       "goals": []
     },
@@ -20505,8 +20713,8 @@
         }
       ],
       "stats": {
-        "balance": 436709,
-        "yearlyBudget": 32908231
+        "balance": 269063,
+        "yearlyBudget": 33098858
       }
     },
     "github": {
