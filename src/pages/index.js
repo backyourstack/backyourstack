@@ -164,7 +164,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            or simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em> or <em>packages.config</em> files.
+            or simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> or <em>Gopkg.lock</em> files.
             The uploaded files will not be shared with anyone
             and will be deleted when your session expire.
           </p>
@@ -176,7 +176,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            You can also simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em> or <em>packages.config</em> files, use a desktop browser for that.
+            You can also simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> or <em>Gopkg.lock</em> files, use a desktop browser for that.
           </p>
 
           <div className="uploadContainer">

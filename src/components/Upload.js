@@ -139,7 +139,8 @@ export default class Upload extends React.Component {
             )}
             >
             <p>
-              There was an error while uploading your files. Only <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em> and <em>packages.config</em> are accepted right now. Please try again. If the problem persists, please contact us.
+              There was an error while uploading your files.
+              Only <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> and <em>Gopkg.lock</em> are accepted right now. Please try again. If the problem persists, please contact us.
             </p>
           </div>
         </Dropzone>
