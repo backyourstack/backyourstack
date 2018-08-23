@@ -3,6 +3,7 @@ import { flatten } from 'lodash';
 import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';
+import * as dep from './dep';
 
 function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   const strategies = [];
@@ -14,6 +15,9 @@ function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
   }
   if (githubRepo.language === 'C#') {
     strategies.push(nuget.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
+  }
+  if (githubRepo.language === 'Go') {
+    strategies.push(dep.getDependenciesFromGithubRepo(githubRepo, githubAccessToken));
   }
   return Promise.all(strategies).then(results => {
     return flatten(results, true);
@@ -30,6 +34,9 @@ function dependenciesStats (file) {
   if (file.type === 'nuget') {
     return nuget.dependenciesStats(file);
   }
+  if (file.type === 'dep') {
+    return dep.dependenciesStats(file.text);
+  }
   return [];
 }
 
@@ -43,6 +50,9 @@ function detectDependencyFileType (file) {
   if (nuget.isDependencyFile(file)) {
     return 'nuget';
   }
+  if (dep.isDependencyFile(file)) {
+    return 'dep';
+  }
 }
 
 function detectProjectName (file) {
@@ -54,6 +64,9 @@ function detectProjectName (file) {
   }
   if (file.type === 'nuget') {
     return nuget.detectProjectName(file);
+  }
+  if (file.type === 'dep') {
+    return dep.detectProjectName(file);
   }
 }
 
