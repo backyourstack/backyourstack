@@ -67,23 +67,20 @@ function loadDependenciesFromGithubRepo (fileType, githubRepo, githubAccessToken
   const query = manager.searchAllRepo ? searchFilesFromRepo :
     (repo, path, accessToken) => fetchFileFromRepo (repo, path, accessToken).then( content => [content] );
 
-  // lookup returns a promise returning [{matchedPattern, content}]
-  function lookup (pattern) {
-    return query(githubRepo, pattern, githubAccessToken).then (
-      contents => contents.map(text => ({
+  async function firstSetOfMatchingFiles () {
+    for (const pattern of manager.patterns) {
+      const contents = await query(githubRepo, pattern, githubAccessToken);
+      if (contents.length) {
+        return contents.map(text => ({
               matchedPattern: pattern,
               text,
-            }))
-    );
+            }));
+      }
+    }
+    return [];
   }
 
-  const firstSetOfMatchingFiles = manager.patterns.reduce(
-    (promise, pattern) => promise.then (
-      results => results.length ? results : lookup(pattern)
-    ), Promise.resolve([])
-  );
-
-  return firstSetOfMatchingFiles
+  return firstSetOfMatchingFiles()
   .then( files => files.map(manager.dependencies) )
   .then( dependencyObjects => transformToStats(fileType, ...dependencyObjects) )
   .catch(err => {
