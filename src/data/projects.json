@@ -565,7 +565,13 @@
       "id": 10885,
       "name": "Обход блокировок Рунета",
       "slug": "anticensority",
-      "description": "Обход блокировок Рунета"
+      "description": "Обход блокировок Рунета",
+      "stats": {
+        "balance": 1200,
+        "yearlyBudget": 1200
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -898,7 +904,7 @@
         {}
       ],
       "stats": {
-        "balance": 1564734,
+        "balance": 1544094,
         "yearlyBudget": 3502139
       }
     }
@@ -1101,7 +1107,7 @@
     "name": "azuracast",
     "packages": [],
     "github": {
-      "repo": "SlvrEagle23/AzuraCast"
+      "repo": "AzuraCast/AzuraCast"
     },
     "opencollective": {
       "id": 11912,
@@ -1885,8 +1891,8 @@
         }
       ],
       "stats": {
-        "balance": 7088221,
-        "yearlyBudget": 26048017
+        "balance": 6379033,
+        "yearlyBudget": 26047729
       }
     },
     "github": {
@@ -1988,7 +1994,7 @@
       ],
       "stats": {
         "balance": 21807,
-        "yearlyBudget": 35571
+        "yearlyBudget": 31989
       },
       "goals": []
     }
@@ -2583,7 +2589,7 @@
       }
     ],
     "github": {
-      "repo": "mpociot/botman"
+      "repo": "botman/botman"
     },
     "opencollective": {
       "id": 654,
@@ -3385,7 +3391,7 @@
       }
     ],
     "github": {
-      "repo": "yoshuawuyts/choo"
+      "repo": "choojs/choo"
     },
     "opencollective": {
       "id": 182,
@@ -3597,7 +3603,7 @@
     "name": "codebuddies",
     "packages": [],
     "github": {
-      "repo": "codebuddiesdotorg/cb-v2-scratch"
+      "repo": "codebuddies/codebuddies"
     },
     "opencollective": {
       "id": 305,
@@ -3822,7 +3828,7 @@
       "goals": []
     },
     "github": {
-      "repo": "colmena/colmena-cms"
+      "repo": "colmena/colmena"
     }
   },
   {
@@ -3921,8 +3927,8 @@
       "description": "Simple commit conventions for internet citizens.",
       "sponsors": [],
       "stats": {
-        "balance": 1662,
-        "yearlyBudget": 1662
+        "balance": 3354,
+        "yearlyBudget": 3354
       },
       "goals": []
     },
@@ -4257,7 +4263,7 @@
       "id": 11532,
       "name": "dat",
       "slug": "dat",
-      "description": "Dat is a nonprofit-backed data sharing protocol for applications of the future. ",
+      "description": "Dat is a nonprofit-backed data sharing protocol for building peer-to-peer applications.",
       "sponsors": [],
       "goals": [],
       "stats": {
@@ -4307,7 +4313,7 @@
       }
     ],
     "github": {
-      "repo": "xx45/dayjs"
+      "repo": "iamkun/dayjs"
     },
     "opencollective": {
       "id": 16195,
@@ -4439,7 +4445,13 @@
       "id": 383,
       "name": "devfreebooks",
       "slug": "devfreebooks",
-      "description": "A collection of free books for developers and founders"
+      "description": "A collection of free books for developers and founders",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -4503,8 +4515,8 @@
         }
       ],
       "stats": {
-        "balance": 287039,
-        "yearlyBudget": 997104
+        "balance": 287870,
+        "yearlyBudget": 997935
       },
       "goals": []
     }
@@ -4537,7 +4549,7 @@
       }
     ],
     "github": {
-      "repo": "appersonlabs/docker.io"
+      "repo": "mattapperson/docker.io"
     },
     "opencollective": {
       "id": 539,
@@ -4600,7 +4612,7 @@
       "goals": []
     },
     "github": {
-      "repo": "QingWei-Li/docsify"
+      "org": "docsifyjs"
     }
   },
   {
@@ -4834,8 +4846,8 @@
         }
       ],
       "stats": {
-        "balance": 748535,
-        "yearlyBudget": 1502030
+        "balance": 749366,
+        "yearlyBudget": 1512002
       },
       "goals": []
     }
@@ -4855,14 +4867,28 @@
       "id": 14473,
       "name": "dolibarr",
       "slug": "dolibarr",
-      "description": "Open Source ERP and CRM suite for business"
+      "description": "Open Source ERP and CRM suite for business",
+      "stats": {
+        "balance": 1600,
+        "yearlyBudget": 4800
+      },
+      "goals": [],
+      "sponsors": [
+        {
+          "id": 16759,
+          "type": "ORGANIZATION",
+          "slug": "oscss",
+          "name": "OSCSS SHOP",
+          "totalDonations": 2000
+        }
+      ]
     }
   },
   {
     "name": "dot",
     "packages": [],
     "github": {
-      "repo": "justdotJS/SimplePresence"
+      "repo": "justJS/SimplePresence"
     },
     "opencollective": {
       "id": 13013,
@@ -4968,7 +4994,13 @@
       "id": 18707,
       "name": "easy-php",
       "slug": "easy-php",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -5532,7 +5564,13 @@
       "id": 9215,
       "name": "excelize",
       "slug": "excelize",
-      "description": "Golang library for reading and writing Microsoft Excel™ (XLSX) files."
+      "description": "Golang library for reading and writing Microsoft Excel™ (XLSX) files.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -5845,7 +5883,7 @@
         {}
       ],
       "stats": {
-        "balance": 1059803,
+        "balance": 1037063,
         "yearlyBudget": 1773980
       }
     }
@@ -6077,7 +6115,7 @@
     "name": "firekylin",
     "packages": [],
     "github": {
-      "repo": "75team/firekylin"
+      "repo": "firekylin/firekylin"
     },
     "opencollective": {
       "id": 529,
@@ -6851,7 +6889,7 @@
         {}
       ],
       "stats": {
-        "balance": 529342,
+        "balance": 498232,
         "yearlyBudget": 1361017
       }
     }
@@ -6914,7 +6952,37 @@
       "id": 14790,
       "name": "gitea",
       "slug": "gitea",
-      "description": "Lightweight code hosting solution written in Go"
+      "description": "Lightweight code hosting solution written in Go",
+      "stats": {
+        "balance": 35419,
+        "yearlyBudget": 99278
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": [
+        {
+          "id": 18190,
+          "type": "ORGANIZATION",
+          "slug": "manitz-it",
+          "name": "MANITZ IT",
+          "totalDonations": 12000
+        },
+        {
+          "id": 16891,
+          "type": "ORGANIZATION",
+          "slug": "pplfamily",
+          "name": "ppl",
+          "totalDonations": 1500
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ]
     }
   },
   {
@@ -6986,7 +7054,13 @@
       "id": 692,
       "name": "goby",
       "slug": "goby",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 17273,
+        "yearlyBudget": 34527
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -8157,7 +8231,13 @@
       "id": 16499,
       "name": "heyui",
       "slug": "heyui",
-      "description": "A Vue.js 2.0 UI Toolkit for Web."
+      "description": "A Vue.js 2.0 UI Toolkit for Web.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -8931,7 +9011,28 @@
       "id": 581,
       "name": "ImageSharp",
       "slug": "imagesharp",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 310481,
+        "yearlyBudget": 278764
+      },
+      "goals": [],
+      "sponsors": [
+        {
+          "id": 14680,
+          "type": "ORGANIZATION",
+          "slug": "cofoundry",
+          "name": "Cofoundry",
+          "totalDonations": 10000
+        },
+        {
+          "id": 17043,
+          "type": "ORGANIZATION",
+          "slug": "crrio",
+          "name": "Crrio",
+          "totalDonations": 1500
+        }
+      ]
     }
   },
   {
@@ -9620,7 +9721,7 @@
         {}
       ],
       "stats": {
-        "balance": 387711,
+        "balance": 369098,
         "yearlyBudget": 2346673
       }
     },
@@ -9890,6 +9991,13 @@
       "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. ",
       "sponsors": [
         {
+          "id": 19871,
+          "type": "ORGANIZATION",
+          "slug": "pervtech1",
+          "name": "Pervasive Technologies",
+          "totalDonations": 1000
+        },
+        {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
@@ -9908,8 +10016,8 @@
         {}
       ],
       "stats": {
-        "balance": 48632,
-        "yearlyBudget": 97460
+        "balance": 49463,
+        "yearlyBudget": 98291
       }
     }
   },
@@ -10624,7 +10732,7 @@
       }
     ],
     "github": {
-      "repo": "renatomarinho/laravel-gitscrum"
+      "repo": "gitscrum-community/laravel-gitscrum"
     },
     "opencollective": {
       "id": 576,
@@ -10868,8 +10976,8 @@
         }
       ],
       "stats": {
-        "balance": 131058,
-        "yearlyBudget": 198679
+        "balance": 131463,
+        "yearlyBudget": 203539
       },
       "goals": []
     }
@@ -11155,8 +11263,8 @@
         }
       ],
       "stats": {
-        "balance": 9421,
-        "yearlyBudget": 103801
+        "balance": 11103,
+        "yearlyBudget": 105483
       }
     }
   },
@@ -11271,7 +11379,7 @@
       }
     },
     "github": {
-      "repo": "callemall/material-ui"
+      "repo": "mui-org/material-ui"
     }
   },
   {
@@ -11712,7 +11820,7 @@
         }
       ],
       "stats": {
-        "balance": 393466,
+        "balance": 282098,
         "yearlyBudget": 969336
       },
       "goals": []
@@ -12028,7 +12136,7 @@
       }
     ],
     "github": {
-      "repo": "omidfi/moro"
+      "repo": "albacoretuna/moro"
     },
     "opencollective": {
       "id": 866,
@@ -12165,7 +12273,7 @@
       }
     ],
     "github": {
-      "repo": "kamilmysliwiec/nest"
+      "repo": "nestjs/nest"
     },
     "opencollective": {
       "id": 683,
@@ -12257,8 +12365,8 @@
         }
       ],
       "stats": {
-        "balance": 137602,
-        "yearlyBudget": 3546928
+        "balance": 137746,
+        "yearlyBudget": 3548656
       }
     }
   },
@@ -12295,7 +12403,7 @@
       }
     ],
     "github": {
-      "repo": "jaredallard/nexe"
+      "repo": "nexe/nexe"
     },
     "opencollective": {
       "id": 331,
@@ -12464,7 +12572,7 @@
       }
     ],
     "github": {
-      "repo": "beatfactor/nightwatch"
+      "repo": "nightwatchjs/nightwatch"
     },
     "opencollective": {
       "id": 205,
@@ -12488,7 +12596,7 @@
       }
     ],
     "github": {
-      "repo": "sandeepmistry/noble"
+      "repo": "noble/noble"
     },
     "opencollective": {
       "id": 243,
@@ -12527,7 +12635,7 @@
       }
     ],
     "github": {
-      "repo": "node-nock/nock"
+      "repo": "nock/nock"
     },
     "opencollective": {
       "id": 15501,
@@ -13044,7 +13152,7 @@
       ],
       "stats": {
         "balance": 435949,
-        "yearlyBudget": 2527071
+        "yearlyBudget": 2527014
       }
     }
   },
@@ -13147,7 +13255,7 @@
       ]
     },
     "github": {
-      "repo": "OctoLinker/browser-extension"
+      "repo": "OctoLinker/OctoLinker"
     }
   },
   {
@@ -13285,7 +13393,13 @@
       "id": 693,
       "name": "onepager",
       "slug": "onepager",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -13297,7 +13411,7 @@
       }
     ],
     "github": {
-      "repo": "bryphe/oni"
+      "repo": "onivim/oni"
     },
     "opencollective": {
       "id": 9866,
@@ -13556,7 +13670,7 @@
       }
     ],
     "github": {
-      "repo": "TheOrchid/Platform"
+      "repo": "orchidsoftware/Platform"
     },
     "opencollective": {
       "id": 894,
@@ -14282,7 +14396,7 @@
       }
     },
     "github": {
-      "repo": "MoOx/phenomic"
+      "repo": "phenomic/phenomic"
     }
   },
   {
@@ -14366,7 +14480,7 @@
       }
     ],
     "github": {
-      "repo": "slimkit/thinksns-plus"
+      "repo": "slimkit/plus"
     },
     "opencollective": {
       "id": 11860,
@@ -14960,7 +15074,13 @@
       "id": 10006,
       "name": "Pterodactyl Software",
       "slug": "pterodactyl",
-      "description": "We are on a mission to rid the world of expensive, bloated, and inflexible software."
+      "description": "We are on a mission to rid the world of expensive, bloated, and inflexible software.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -15365,7 +15485,7 @@
       }
     ],
     "github": {
-      "repo": "mxstbr/react-boilerplate"
+      "repo": "react-boilerplate/react-boilerplate"
     },
     "opencollective": {
       "id": 116,
@@ -15486,7 +15606,7 @@
       }
     ],
     "github": {
-      "repo": "okonet/react-dropzone"
+      "repo": "react-dropzone/react-dropzone"
     },
     "opencollective": {
       "id": 460,
@@ -15560,7 +15680,7 @@
       }
     ],
     "github": {
-      "repo": "lwansbrough/react-native-camera"
+      "repo": "react-native-community/react-native-camera"
     },
     "opencollective": {
       "id": 686,
@@ -16104,8 +16224,8 @@
         {}
       ],
       "stats": {
-        "balance": 10295,
-        "yearlyBudget": 23200
+        "balance": 10695,
+        "yearlyBudget": 28000
       },
       "sponsors": [
         {
@@ -16332,7 +16452,7 @@
       }
     ],
     "github": {
-      "repo": "diegohaz/reakit"
+      "repo": "reakit/reakit"
     },
     "opencollective": {
       "id": 17914,
@@ -16358,7 +16478,7 @@
       }
     ],
     "github": {
-      "repo": "egoist/ream"
+      "repo": "ream/ream"
     },
     "opencollective": {
       "id": 569,
@@ -16577,7 +16697,7 @@
       ],
       "stats": {
         "balance": 179369,
-        "yearlyBudget": 464586
+        "yearlyBudget": 464181
       },
       "goals": []
     },
@@ -16697,7 +16817,7 @@
     "name": "resumake",
     "packages": [],
     "github": {
-      "repo": "saadq/resumake"
+      "repo": "saadq/resumake.io"
     },
     "opencollective": {
       "id": 13247,
@@ -16740,7 +16860,7 @@
       }
     ],
     "github": {
-      "repo": "Ni55aN/d3-node-editor"
+      "repo": "retejs/rete"
     },
     "opencollective": {
       "id": 11368,
@@ -16772,7 +16892,15 @@
       "id": 17972,
       "name": "reviewdog",
       "slug": "reviewdog",
-      "description": "Automated code review tool integrated with any code analysis tools regardless of programming language"
+      "description": "Automated code review tool integrated with any code analysis tools regardless of programming language",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": []
     }
   },
   {
@@ -16838,8 +16966,8 @@
       "slug": "rocketmod",
       "description": ".NET Game Server Plugin Framework",
       "stats": {
-        "balance": 1982,
-        "yearlyBudget": 35431
+        "balance": 3309,
+        "yearlyBudget": 95912
       },
       "goals": [
         {
@@ -17172,7 +17300,7 @@
       ],
       "stats": {
         "balance": 175724,
-        "yearlyBudget": 719360
+        "yearlyBudget": 706868
       },
       "goals": []
     }
@@ -17551,7 +17679,7 @@
       }
     ],
     "github": {
-      "repo": "eavichay/slim.js"
+      "repo": "slimjs/slim.js"
     },
     "opencollective": {
       "id": 10257,
@@ -19066,7 +19194,23 @@
       "id": 14483,
       "name": "Task",
       "slug": "task",
-      "description": "A task runner / simpler Make alternative written in Go"
+      "description": "A task runner / simpler Make alternative written in Go",
+      "stats": {
+        "balance": 2000,
+        "yearlyBudget": 4800
+      },
+      "goals": [
+        {}
+      ],
+      "sponsors": [
+        {
+          "id": 15152,
+          "type": "ORGANIZATION",
+          "slug": "restpack",
+          "name": "Restpack",
+          "totalDonations": 2500
+        }
+      ]
     }
   },
   {
@@ -20644,8 +20788,8 @@
         }
       ],
       "stats": {
-        "balance": 969586,
-        "yearlyBudget": 2744482
+        "balance": 966430,
+        "yearlyBudget": 2743630
       },
       "goals": []
     },
@@ -20840,7 +20984,7 @@
     "name": "weather-10kb",
     "packages": [],
     "github": {
-      "repo": "JulianNorton/weather-10kb"
+      "repo": "JulianNorton/weather-10kb-wxkb"
     },
     "opencollective": {
       "id": 552,
@@ -21158,7 +21302,7 @@
       ],
       "stats": {
         "balance": 269063,
-        "yearlyBudget": 33098858
+        "yearlyBudget": 33097873
       }
     },
     "github": {
@@ -21174,7 +21318,7 @@
       }
     ],
     "github": {
-      "repo": "jlantunez/webslides"
+      "repo": "webslides/WebSlides"
     },
     "opencollective": {
       "id": 444,
@@ -21340,7 +21484,7 @@
       }
     ],
     "github": {
-      "repo": "WhitestormJS/whitestorm.js"
+      "repo": "WhitestormJS/whs.js"
     },
     "opencollective": {
       "id": 473,
