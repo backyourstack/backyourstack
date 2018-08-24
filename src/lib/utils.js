@@ -6,7 +6,7 @@ const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
 
 function getProjectFromDependency (name, type) {
   return allProjects.find(project =>
-    project.packages.find(pkg => pkg.name === name && pkg.type === type)
+    project.packages.find(pkg => pkg.name.toLowerCase() === name.toLowerCase() && pkg.type === type)
   );
 }
 
