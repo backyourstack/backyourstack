@@ -31,11 +31,11 @@ const expectedDependencies = {
 
 describe('dependencies', () => {
   describe.each([
-    ['composer', composerFile, 'PHP', 'composer.json'],
-    ['dep', depFile, 'Go', 'Gopkg.lock'],
-    ['npm', npmFile, 'JavaScript', 'package.json'],
-    ['nuget', nugetCsprojFile, 'C#', '*.csproj'],
-  ])('for %s file', (type, file, language, pattern) => {
+    ['composer', composerFile, 'PHP', 'composer.json', 'test/sample-composer-project'],
+    ['dep', depFile, 'Go', 'Gopkg.lock', null],
+    ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
+    ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
+  ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
       expect(dependencies.detectDependencyFileType(file)).toBe(file);
       expect(file.type).toBe(type);
@@ -43,8 +43,7 @@ describe('dependencies', () => {
     });
 
     test('should detect project name', () => {
-      const expected = type === 'dep' ? null : `sample-${type}-project`;
-      expect(dependencies.detectProjectName(file)).toBe(expected);
+      expect(dependencies.detectProjectName(file)).toBe(projectName);
     });
 
     test('should return dependency stats', () => {
@@ -95,7 +94,7 @@ describe('dependencies', () => {
     test('should return empty dependency stats', () => {
       expect(dependencies.dependenciesStats(file)).toEqual([]);
     });
-  })
+  });
 
 
 });
