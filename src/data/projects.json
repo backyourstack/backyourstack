@@ -171,7 +171,7 @@
       },
       {
         "type": "nuget",
-        "name": "SpecFlow.Alure"
+        "name": "SpecFlow.Allure"
       },
       {
         "type": "composer",
@@ -190,8 +190,16 @@
         "name": "allure-framework/allure-phpunit"
       },
       {
-        "type": "nuget",
-        "name": "SpecFlow.Allure"
+        "type": "gem",
+        "name": "allure-cucumber"
+      },
+      {
+        "type": "gem",
+        "name": "allure-rspec"
+      },
+      {
+        "type": "gem",
+        "name": "allure-ruby-adaptor-api"
       }
     ],
     "github": {
@@ -579,10 +587,6 @@
     "packages": [
       {
         "type": "npm",
-        "name": "apex-ui"
-      },
-      {
-        "type": "npm",
         "name": "apex.js"
       },
       {
@@ -786,6 +790,24 @@
         "yearlyBudget": 1704
       },
       "goals": []
+    }
+  },
+  {
+    "name": "asciidoctor",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "asciidoctor"
+      }
+    ],
+    "github": {
+      "repo": "asciidoctor/asciidoctor"
+    },
+    "opencollective": {
+      "id": 15040,
+      "name": "Asciidoctor",
+      "slug": "asciidoctor",
+      "description": "Asciidoctor is a comprehensive, user-friendly publishing toolchain for converting AsciiDoc content to HTML5, DocBook, PDF, and other formats."
     }
   },
   {
@@ -2349,6 +2371,10 @@
       {
         "type": "npm",
         "name": "watchr"
+      },
+      {
+        "type": "npm",
+        "name": "spdx"
       }
     ],
     "github": {
@@ -2779,7 +2805,12 @@
   },
   {
     "name": "bundlephobia",
-    "packages": [],
+    "packages": [
+      {
+        "type": "npm",
+        "name": "package-build-stats"
+      }
+    ],
     "github": {
       "repo": "pastelsky/bundlephobia"
     },
@@ -2913,6 +2944,10 @@
       {
         "type": "nuget",
         "name": "Catel.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "catel.core"
       }
     ],
     "github": {
@@ -3642,15 +3677,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "brigade-frontend"
-      },
-      {
-        "type": "npm",
         "name": "cases"
-      },
-      {
-        "type": "npm",
-        "name": "Internet_EBS"
       },
       {
         "type": "npm",
@@ -3662,15 +3689,7 @@
       },
       {
         "type": "npm",
-        "name": "property-dash"
-      },
-      {
-        "type": "npm",
         "name": "rta"
-      },
-      {
-        "type": "npm",
-        "name": "ungentry"
       }
     ],
     "github": {
@@ -3813,6 +3832,14 @@
       {
         "type": "npm",
         "name": "@colmena/logger"
+      },
+      {
+        "type": "npm",
+        "name": "@colmena/admin-lb-sdk"
+      },
+      {
+        "type": "npm",
+        "name": "@colmena/api-explorer-style"
       }
     ],
     "opencollective": {
@@ -3837,6 +3864,10 @@
       {
         "type": "npm",
         "name": "color-space"
+      },
+      {
+        "type": "npm",
+        "name": "color-space/"
       }
     ],
     "github": {
@@ -4190,10 +4221,6 @@
       },
       {
         "type": "npm",
-        "name": "cucumber-messages"
-      },
-      {
-        "type": "npm",
         "name": "cucumber-tag-expressions"
       },
       {
@@ -4215,6 +4242,50 @@
       {
         "type": "dep",
         "name": "github.com/cucumber/gherkin-go"
+      },
+      {
+        "type": "gem",
+        "name": "aruba"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-expressions"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-jvm"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-rails"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-core"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-tcl"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-wire"
+      },
+      {
+        "type": "gem",
+        "name": "gherkin"
+      },
+      {
+        "type": "gem",
+        "name": "multi_test"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-tag_expressions"
       }
     ],
     "github": {
@@ -4246,6 +4317,32 @@
         "yearlyBudget": 38613
       },
       "goals": []
+    }
+  },
+  {
+    "name": "cyclejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "most"
+      },
+      {
+        "type": "npm",
+        "name": "rxjs"
+      },
+      {
+        "type": "npm",
+        "name": "xstream"
+      }
+    ],
+    "github": {
+      "repo": "cyclejs/cyclejs"
+    },
+    "opencollective": {
+      "id": 242,
+      "name": "Cycle.js",
+      "slug": "cyclejs",
+      "description": "A functional and reactive JavaScript framework."
     }
   },
   {
@@ -4389,10 +4486,6 @@
       {
         "type": "npm",
         "name": "delegation"
-      },
-      {
-        "type": "npm",
-        "name": "Sovereign.app"
       }
     ],
     "github": {
@@ -4452,6 +4545,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "devise_token_auth",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "devise_token_auth"
+      }
+    ],
+    "github": {
+      "repo": "lynndylanhurley/devise_token_auth"
+    },
+    "opencollective": {
+      "id": 10638,
+      "name": "devise_token_auth",
+      "slug": "devise_token_auth",
+      "description": null
     }
   },
   {
@@ -4885,6 +4996,24 @@
     }
   },
   {
+    "name": "doorkeeper",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "doorkeeper"
+      }
+    ],
+    "github": {
+      "repo": "doorkeeper-gem/doorkeeper"
+    },
+    "opencollective": {
+      "id": 18277,
+      "name": "doorkeeper",
+      "slug": "doorkeeper",
+      "description": null
+    }
+  },
+  {
     "name": "dot",
     "packages": [],
     "github": {
@@ -5168,10 +5297,6 @@
       {
         "type": "npm",
         "name": "element-carousel"
-      },
-      {
-        "type": "npm",
-        "name": "element-color-picker"
       },
       {
         "type": "npm",
@@ -5797,6 +5922,14 @@
       {
         "type": "npm",
         "name": "@feathersjs/primus-client"
+      },
+      {
+        "type": "npm",
+        "name": "generator-feathers-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "generator-feathers"
       }
     ],
     "github": {
@@ -6268,6 +6401,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "friends",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "friends"
+      }
+    ],
+    "github": {
+      "repo": "JacobEvelyn/friends"
+    },
+    "opencollective": {
+      "id": 11576,
+      "name": "friends",
+      "slug": "friends",
+      "description": null
     }
   },
   {
@@ -8222,6 +8373,18 @@
       {
         "type": "npm",
         "name": "heyui"
+      },
+      {
+        "type": "npm",
+        "name": "hey-cli"
+      },
+      {
+        "type": "npm",
+        "name": "hey-validator"
+      },
+      {
+        "type": "npm",
+        "name": "hey-utils"
       }
     ],
     "github": {
@@ -8262,19 +8425,11 @@
       },
       {
         "type": "composer",
-        "name": "hoa/atoum-option-extension"
-      },
-      {
-        "type": "composer",
         "name": "hoa/bench"
       },
       {
         "type": "composer",
         "name": "hoa/cache"
-      },
-      {
-        "type": "composer",
-        "name": "hoa/central"
       },
       {
         "type": "composer",
@@ -8634,15 +8789,7 @@
       },
       {
         "type": "npm",
-        "name": "hoodie-app-skeleton"
-      },
-      {
-        "type": "npm",
         "name": "hoodie-app-tracker"
-      },
-      {
-        "type": "npm",
-        "name": "hoodie-website"
       },
       {
         "type": "npm",
@@ -9509,6 +9656,42 @@
     }
   },
   {
+    "name": "jekyll",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll"
+      }
+    ],
+    "github": {
+      "repo": "jekyll/jekyll"
+    },
+    "opencollective": {
+      "id": 17510,
+      "name": "Jekyll",
+      "slug": "jekyll",
+      "description": "A simple, blog-aware static site generator."
+    }
+  },
+  {
+    "name": "jekyll-assets",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll-assets"
+      }
+    ],
+    "github": {
+      "repo": "envygeeks/jekyll-assets"
+    },
+    "opencollective": {
+      "id": 10305,
+      "name": "jekyll-assets",
+      "slug": "jekyll-assets",
+      "description": null
+    }
+  },
+  {
     "name": "jest",
     "packages": [
       {
@@ -9946,15 +10129,7 @@
       },
       {
         "type": "npm",
-        "name": "jss-plugin-isolate"
-      },
-      {
-        "type": "npm",
         "name": "jss-plugin-syntax-camel-case"
-      },
-      {
-        "type": "npm",
-        "name": "jss-plugin-syntax-default-unit"
       },
       {
         "type": "npm",
@@ -9962,15 +10137,7 @@
       },
       {
         "type": "npm",
-        "name": "jss-plugin-syntax-nested"
-      },
-      {
-        "type": "npm",
         "name": "jss-plugin-syntax-rule-value-observable"
-      },
-      {
-        "type": "npm",
-        "name": "jss-plugin-vendor-prefixer"
       },
       {
         "type": "npm",
@@ -10117,6 +10284,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "karafka",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "karafka"
+      }
+    ],
+    "github": {
+      "repo": "karafka/karafka"
+    },
+    "opencollective": {
+      "id": 757,
+      "name": "Karafka",
+      "slug": "karafka",
+      "description": null
     }
   },
   {
@@ -11529,10 +11714,6 @@
       },
       {
         "type": "npm",
-        "name": "ipfs-rendezvous-experiment"
-      },
-      {
-        "type": "npm",
         "name": "metamascara"
       },
       {
@@ -11542,10 +11723,6 @@
       {
         "type": "npm",
         "name": "metamask-inpage-provider"
-      },
-      {
-        "type": "npm",
-        "name": "metamask-mesh-testing"
       },
       {
         "type": "npm",
@@ -11685,6 +11862,36 @@
         "yearlyBudget": 426978
       },
       "goals": []
+    }
+  },
+  {
+    "name": "midorirb",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "midori.rb"
+      },
+      {
+        "type": "gem",
+        "name": "midori-contrib"
+      },
+      {
+        "type": "gem",
+        "name": "murasaki"
+      },
+      {
+        "type": "gem",
+        "name": "midori_http_parser"
+      }
+    ],
+    "github": {
+      "repo": "midori-rb/midori.rb"
+    },
+    "opencollective": {
+      "id": 11374,
+      "name": "midori.rb",
+      "slug": "midorirb",
+      "description": "Midori is a Ruby Web Framework, providing high performance and proper abstraction."
     }
   },
   {
@@ -11868,10 +12075,6 @@
       {
         "type": "npm",
         "name": "mocha"
-      },
-      {
-        "type": "npm",
-        "name": "mocha-ui-bdd"
       },
       {
         "type": "npm",
@@ -12368,6 +12571,24 @@
         "balance": 137746,
         "yearlyBudget": 3548656
       }
+    }
+  },
+  {
+    "name": "net-ssh",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "net-ssh"
+      }
+    ],
+    "github": {
+      "repo": "net-ssh/net-ssh"
+    },
+    "opencollective": {
+      "id": 19100,
+      "name": "net-ssh",
+      "slug": "net-ssh",
+      "description": null
     }
   },
   {
@@ -13161,15 +13382,7 @@
     "packages": [
       {
         "type": "npm",
-        "name": "@octolinker/core"
-      },
-      {
-        "type": "npm",
         "name": "@octolinker/helper-insert-link"
-      },
-      {
-        "type": "npm",
-        "name": "@octolinker/helper-process-json"
       },
       {
         "type": "npm",
@@ -13177,15 +13390,7 @@
       },
       {
         "type": "npm",
-        "name": "@octolinker/helper-version"
-      },
-      {
-        "type": "npm",
         "name": "@octolinker/plugin-composer-manifest"
-      },
-      {
-        "type": "npm",
-        "name": "@octolinker/plugin-docker"
       },
       {
         "type": "npm",
@@ -13193,15 +13398,7 @@
       },
       {
         "type": "npm",
-        "name": "@octolinker/plugin-go"
-      },
-      {
-        "type": "npm",
         "name": "@octolinker/plugin-homebrew-manifest"
-      },
-      {
-        "type": "npm",
-        "name": "@octolinker/plugin-java"
       },
       {
         "type": "npm",
@@ -13209,15 +13406,7 @@
       },
       {
         "type": "npm",
-        "name": "@octolinker/plugin-npm-manifest"
-      },
-      {
-        "type": "npm",
         "name": "@octolinker/plugin-requirements-txt"
-      },
-      {
-        "type": "npm",
-        "name": "@octolinker/plugin-rust"
       },
       {
         "type": "npm",
@@ -13225,15 +13414,7 @@
       },
       {
         "type": "npm",
-        "name": "@octolinker/resolver-git-url"
-      },
-      {
-        "type": "npm",
         "name": "@octolinker/resolver-github-shorthand"
-      },
-      {
-        "type": "npm",
-        "name": "@octolinker/resolver-live-query"
       },
       {
         "type": "npm",
@@ -13463,19 +13644,11 @@
       },
       {
         "type": "npm",
-        "name": "opencollective-app"
-      },
-      {
-        "type": "npm",
         "name": "opencollective-jobs"
       },
       {
         "type": "npm",
         "name": "opencollective-postinstall"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-website"
       }
     ],
     "github": {
@@ -13928,6 +14101,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "pact-foundation",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "pact"
+      }
+    ],
+    "github": {
+      "repo": "pact-foundation/pact-ruby"
+    },
+    "opencollective": {
+      "id": 14391,
+      "name": "Pact Foundation",
+      "slug": "pact-foundation",
+      "description": "Pact is the industry standard, cross-language collaboration framework that enforces contracts between a consumer and a provider of data."
     }
   },
   {
@@ -15065,6 +15256,24 @@
     }
   },
   {
+    "name": "property_web_builder",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "pwb"
+      }
+    ],
+    "github": {
+      "repo": "etewiah/property_web_builder"
+    },
+    "opencollective": {
+      "id": 809,
+      "name": "Property Web Builder",
+      "slug": "property_web_builder",
+      "description": "The leading open source real estate website builder"
+    }
+  },
+  {
     "name": "pterodactyl",
     "packages": [],
     "github": {
@@ -15351,6 +15560,24 @@
           "key": 9499
         }
       ]
+    }
+  },
+  {
+    "name": "rails_admin",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "rails_admin"
+      }
+    ],
+    "github": {
+      "repo": "sferik/rails_admin"
+    },
+    "opencollective": {
+      "id": 397,
+      "name": "rails_admin",
+      "slug": "rails_admin",
+      "description": null
     }
   },
   {
@@ -16000,6 +16227,10 @@
       {
         "type": "npm",
         "name": "react-on-rails"
+      },
+      {
+        "type": "gem",
+        "name": "react_on_rails"
       }
     ],
     "github": {
@@ -17108,6 +17339,42 @@
     }
   },
   {
+    "name": "rom",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "rom"
+      }
+    ],
+    "github": {
+      "repo": "rom-rb/rom"
+    },
+    "opencollective": {
+      "id": 669,
+      "name": "rom",
+      "slug": "rom",
+      "description": "Persistence and mapping toolkit for Ruby"
+    }
+  },
+  {
+    "name": "rspec",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "rspec"
+      }
+    ],
+    "github": {
+      "repo": "rspec/rspec"
+    },
+    "opencollective": {
+      "id": 13633,
+      "name": "rspec",
+      "slug": "rspec",
+      "description": null
+    }
+  },
+  {
     "name": "rsshub",
     "packages": [
       {
@@ -17181,6 +17448,24 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "rubocop",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "rubocop"
+      }
+    ],
+    "github": {
+      "repo": "rubocop-hq/rubocop"
+    },
+    "opencollective": {
+      "id": 427,
+      "name": "RuboCop",
+      "slug": "rubocop",
+      "description": null
     }
   },
   {
@@ -17647,6 +17932,24 @@
     }
   },
   {
+    "name": "skatejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "skatejs"
+      }
+    ],
+    "github": {
+      "repo": "skatejs/skatejs"
+    },
+    "opencollective": {
+      "id": 463,
+      "name": "skatejs",
+      "slug": "skatejs",
+      "description": "Effortless custom elements for modern view libraries."
+    }
+  },
+  {
     "name": "sketchpad",
     "packages": [
       {
@@ -17692,6 +17995,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "sniffer",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "sniffer"
+      }
+    ],
+    "github": {
+      "repo": "aderyabin/sniffer"
+    },
+    "opencollective": {
+      "id": 18919,
+      "name": "sniffer",
+      "slug": "sniffer",
+      "description": null
     }
   },
   {
@@ -17871,6 +18192,24 @@
     }
   },
   {
+    "name": "softcraft",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "rank_results"
+      }
+    ],
+    "github": {
+      "org": "softcraft"
+    },
+    "opencollective": {
+      "id": 36,
+      "name": "Softcraft - Open Apprenticeship",
+      "slug": "softcraft",
+      "description": "Learn software development collaboratively."
+    }
+  },
+  {
     "name": "speedtracker",
     "packages": [
       {
@@ -17892,6 +18231,42 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "spina",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "spina"
+      }
+    ],
+    "github": {
+      "repo": "SpinaCMS/Spina"
+    },
+    "opencollective": {
+      "id": 909,
+      "name": "Spina",
+      "slug": "spina",
+      "description": null
+    }
+  },
+  {
+    "name": "split",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "split"
+      }
+    ],
+    "github": {
+      "repo": "splitrb/split"
+    },
+    "opencollective": {
+      "id": 190,
+      "name": "Split",
+      "slug": "split",
+      "description": null
     }
   },
   {
@@ -18027,6 +18402,10 @@
       {
         "type": "npm",
         "name": "@storybook/vue"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/svelte"
       }
     ],
     "opencollective": {
@@ -18727,10 +19106,6 @@
       },
       {
         "type": "composer",
-        "name": "symfony/intl-data"
-      },
-      {
-        "type": "composer",
         "name": "symfony/ldap"
       },
       {
@@ -19120,6 +19495,24 @@
     }
   },
   {
+    "name": "tabulapdf",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "tabula-extractor"
+      }
+    ],
+    "github": {
+      "org": "tabulapdf"
+    },
+    "opencollective": {
+      "id": 80,
+      "name": "Tabula",
+      "slug": "tabulapdf",
+      "description": "We are the maintainers of Tabula, the only free, open-source tool for liberating data trapped inside PDF files."
+    }
+  },
+  {
     "name": "tachyons",
     "packages": [
       {
@@ -19259,10 +19652,6 @@
       {
         "type": "composer",
         "name": "tenancy/identification-driver-http"
-      },
-      {
-        "type": "composer",
-        "name": "laravel/laravel"
       }
     ],
     "github": {
@@ -19595,10 +19984,6 @@
       {
         "type": "npm",
         "name": "@turf/boolean-point-on-line"
-      },
-      {
-        "type": "npm",
-        "name": "@turf/boolean-valid"
       },
       {
         "type": "npm",
@@ -19991,6 +20376,24 @@
     }
   },
   {
+    "name": "twitter-bootstrap-rails",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "twitter-bootstrap-rails"
+      }
+    ],
+    "github": {
+      "repo": "seyhunak/twitter-bootstrap-rails"
+    },
+    "opencollective": {
+      "id": 495,
+      "name": "twitter-bootstrap-rails",
+      "slug": "twitter-bootstrap-rails",
+      "description": null
+    }
+  },
+  {
     "name": "typescript",
     "packages": [
       {
@@ -20335,6 +20738,24 @@
     }
   },
   {
+    "name": "unnamed",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "unnamed"
+      }
+    ],
+    "github": {
+      "repo": "smakosh/unnamed-css-framework"
+    },
+    "opencollective": {
+      "id": 14189,
+      "name": "Unnamed",
+      "slug": "unnamed",
+      "description": "A colorful css framework"
+    }
+  },
+  {
     "name": "update-notifier",
     "packages": [
       {
@@ -20447,6 +20868,24 @@
         "name": "validator"
       }
     ]
+  },
+  {
+    "name": "vcr",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "vcr"
+      }
+    ],
+    "github": {
+      "org": "vcr"
+    },
+    "opencollective": {
+      "id": 50,
+      "name": "VCR",
+      "slug": "vcr",
+      "description": "Record your test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurate tests."
+    }
   },
   {
     "name": "vectorious",
@@ -20708,6 +21147,22 @@
       {
         "type": "npm",
         "name": "vuex"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli"
+      },
+      {
+        "type": "npm",
+        "name": "vue-server-renderer"
+      },
+      {
+        "type": "npm",
+        "name": "vue-class-component"
+      },
+      {
+        "type": "npm",
+        "name": "vue-rx"
       }
     ],
     "opencollective": {
@@ -20900,10 +21355,6 @@
       },
       {
         "type": "npm",
-        "name": "@warriorjs/helper-get-level-config"
-      },
-      {
-        "type": "npm",
         "name": "@warriorjs/tower-baby-steps"
       },
       {
@@ -20954,6 +21405,24 @@
     },
     "github": {
       "repo": "olistic/warriorjs"
+    }
+  },
+  {
+    "name": "wayback-machine-downloader",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "wayback_machine_downloader"
+      }
+    ],
+    "github": {
+      "repo": "hartator/wayback-machine-downloader"
+    },
+    "opencollective": {
+      "id": 11291,
+      "name": "wayback-machine-downloader",
+      "slug": "wayback-machine-downloader",
+      "description": null
     }
   },
   {
@@ -21191,6 +21660,130 @@
       {
         "type": "npm",
         "name": "wpt"
+      },
+      {
+        "type": "npm",
+        "name": "mini-css-extract-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "component-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "compression-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "i18n-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "html-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "raw-loader"
+      },
+      {
+        "type": "npm",
+        "name": "val-loader"
+      },
+      {
+        "type": "npm",
+        "name": "json5-loader"
+      },
+      {
+        "type": "npm",
+        "name": "cson-loader"
+      },
+      {
+        "type": "npm",
+        "name": "script-loader"
+      },
+      {
+        "type": "npm",
+        "name": "babel-loader"
+      },
+      {
+        "type": "npm",
+        "name": "traceur-loader"
+      },
+      {
+        "type": "npm",
+        "name": "coffee-loader"
+      },
+      {
+        "type": "npm",
+        "name": "ts-loader"
+      },
+      {
+        "type": "npm",
+        "name": "awesome-typescript-loader"
+      },
+      {
+        "type": "npm",
+        "name": "html-loader"
+      },
+      {
+        "type": "npm",
+        "name": "pug-loader"
+      },
+      {
+        "type": "npm",
+        "name": "jade-loader"
+      },
+      {
+        "type": "npm",
+        "name": "markdown-loader"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-loader"
+      },
+      {
+        "type": "npm",
+        "name": "handlebars-loader"
+      },
+      {
+        "type": "npm",
+        "name": "less-loader"
+      },
+      {
+        "type": "npm",
+        "name": "stylus-loader"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-loader"
+      },
+      {
+        "type": "npm",
+        "name": "mocha-loader"
+      },
+      {
+        "type": "npm",
+        "name": "jshint-loader"
+      },
+      {
+        "type": "npm",
+        "name": "jscs-loader"
+      },
+      {
+        "type": "npm",
+        "name": "vue-loader"
+      },
+      {
+        "type": "npm",
+        "name": "polymer-webpack-loader"
+      },
+      {
+        "type": "npm",
+        "name": "angular2-template-loader"
+      },
+      {
+        "type": "npm",
+        "name": "riot-tag-loader"
       }
     ],
     "opencollective": {
@@ -21396,15 +21989,7 @@
       },
       {
         "type": "npm",
-        "name": "wxc-cell"
-      },
-      {
-        "type": "npm",
         "name": "wxc-countdown"
-      },
-      {
-        "type": "npm",
-        "name": "wxc-ep-slider"
       },
       {
         "type": "npm",
@@ -21412,15 +21997,7 @@
       },
       {
         "type": "npm",
-        "name": "wxc-lightbox"
-      },
-      {
-        "type": "npm",
         "name": "wxc-lottery-rain"
-      },
-      {
-        "type": "npm",
-        "name": "wxc-minibar"
       },
       {
         "type": "npm",
@@ -21428,15 +22005,7 @@
       },
       {
         "type": "npm",
-        "name": "wxc-popover"
-      },
-      {
-        "type": "npm",
         "name": "wxc-popup"
-      },
-      {
-        "type": "npm",
-        "name": "wxc-radio"
       },
       {
         "type": "npm",
@@ -21444,15 +22013,7 @@
       },
       {
         "type": "npm",
-        "name": "wxc-searchbar"
-      },
-      {
-        "type": "npm",
         "name": "wxc-slide-nav"
-      },
-      {
-        "type": "npm",
-        "name": "wxc-stepper"
       },
       {
         "type": "npm",
@@ -21481,6 +22042,10 @@
       {
         "type": "npm",
         "name": "whs"
+      },
+      {
+        "type": "npm",
+        "name": "physics-module-ammonext"
       }
     ],
     "github": {
