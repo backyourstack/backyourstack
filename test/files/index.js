@@ -7,12 +7,6 @@ function getFile (filename) {
     text: fs.readFileSync(filename, 'utf8'),
   };
 
-  try {
-    file.json = JSON.parse(file.text);
-  } catch (e) {
-    // Invalid JSON
-  }
-
   return file;
 }
 

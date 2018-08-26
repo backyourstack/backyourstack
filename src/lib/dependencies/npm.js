@@ -9,12 +9,16 @@ function dependencyObject (packageJson) {
   };
 }
 
+function json (file) {
+  return file.json = file.json || JSON.parse(file.text);
+}
+
 function dependencies (file) {
-  return dependencyObject(JSON.parse(file.text));
+  return dependencyObject(json(file));
 }
 
 function detectProjectName (file) {
-  return file.json && file.json.name;
+  return json(file).name;
 }
 
 export {
