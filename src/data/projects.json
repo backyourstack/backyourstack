@@ -4324,15 +4324,35 @@
     "packages": [
       {
         "type": "npm",
-        "name": "most"
+        "name": "@cycle/dom"
       },
       {
         "type": "npm",
-        "name": "rxjs"
+        "name": "@cycle/history"
       },
       {
         "type": "npm",
-        "name": "xstream"
+        "name": "@cycle/html"
+      },
+      {
+        "type": "npm",
+        "name": "@cycle/http"
+      },
+      {
+        "type": "npm",
+        "name": "@cycle/isolate"
+      },
+      {
+        "type": "npm",
+        "name": "@cycle/most-run"
+      },
+      {
+        "type": "npm",
+        "name": "@cycle/run"
+      },
+      {
+        "type": "npm",
+        "name": "@cycle/rxjs-run"
       }
     ],
     "github": {
@@ -4693,6 +4713,10 @@
       {
         "type": "npm",
         "name": "docsify-server-renderer"
+      },
+      {
+        "type": "npm",
+        "name": "docsify-cli"
       }
     ],
     "opencollective": {
@@ -5508,6 +5532,19 @@
         {}
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "enso",
+    "packages": [],
+    "github": {
+      "repo": "laravel-enso/Enso"
+    },
+    "opencollective": {
+      "id": 19982,
+      "name": "Enso",
+      "slug": "enso",
+      "description": null
     }
   },
   {
@@ -12473,6 +12510,10 @@
       {
         "type": "npm",
         "name": "nestjs"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/core"
       }
     ],
     "github": {
@@ -16875,6 +16916,22 @@
       {
         "type": "npm",
         "name": "redux-saga"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/deferred"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/delay-p"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/is"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/symbols"
       }
     ],
     "opencollective": {
@@ -20647,6 +20704,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "uiv",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "uiv"
+      }
+    ],
+    "github": {
+      "repo": "wxsms/uiv"
+    },
+    "opencollective": {
+      "id": 19978,
+      "name": "uiv",
+      "slug": "uiv",
+      "description": null
     }
   },
   {
