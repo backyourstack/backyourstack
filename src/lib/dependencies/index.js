@@ -26,21 +26,15 @@ const languageToFileType = {
 };
 
 // Assumes dependencyObject is {core: ['dependency', ...], ...}
-// or {core: {dependency: ...}, ...}
 // Returns [{type: 'npm', name: 'dependency', core: 1}, ...]
 function transformToStats (manager, ...dependencyObjects) {
   const index = {};
   dependencyObjects.forEach( dependencies => {
     Object.entries(dependencies).forEach(([ dependencyType, dependencyNames ]) => {
-      if (dependencyNames) {
-        if (!Array.isArray(dependencyNames)) { // Transform {dependency: ...} into ['dependency', ...]
-          dependencyNames = Object.keys(dependencyNames);
-        }
-        dependencyNames.forEach(name => {
-          index[name] = index[name] || { type: manager, name };
-          index[name][dependencyType] = 1;
-        });
-      }
+      dependencyNames.forEach(name => {
+        index[name] = index[name] || { type: manager, name };
+        index[name][dependencyType] = 1;
+      });
     });
   });
   return Object.values(index);

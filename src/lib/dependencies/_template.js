@@ -10,7 +10,7 @@ const searchAllRepo = false; // Flag for package managers with files not typical
  * @param {object} file - Keys: text, matchedPattern, ...
  * @returns {object} list of dependencies, grouped by type,
  *   where keys are any of {core|dev|peer|engines} and
- *   values are [dependencyName, ...] or {dependencyName: , ...}
+ *   values are [dependencyName, ...]
  */
 function dependencies (/* file */) {
   return { core: [] };

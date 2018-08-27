@@ -2,8 +2,8 @@ const patterns = ['composer.json'];
 
 function dependencyObject (composerJson) {
   return {
-    core: composerJson.require,
-    dev: composerJson['require-dev'],
+    core: Object.keys(composerJson.require || {}),
+    dev: Object.keys(composerJson['require-dev'] || {}),
   };
 }
 

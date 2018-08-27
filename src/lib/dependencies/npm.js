@@ -2,10 +2,10 @@ const patterns = ['package.json'];
 
 function dependencyObject (packageJson) {
   return {
-    core: packageJson.dependencies,
-    peer: packageJson.peerDependencies,
-    dev: packageJson.devDependencies,
-    engines: packageJson.engines,
+    core:    Object.keys(packageJson.dependencies || {}),
+    peer:    Object.keys(packageJson.peerDependencies || {}),
+    dev:     Object.keys(packageJson.devDependencies || {}),
+    engines: Object.keys(packageJson.engines || {}),
   };
 }
 
