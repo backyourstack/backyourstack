@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="308" height="308" src="src/static/img/logo-og-1.png" alt="BackYourStack">
+  <a href="https://backyourstack.com/"><img width="308" height="308" src="src/static/img/logo-og-1.png" alt="BackYourStack"></a>
 </p>
 
 [![Build Status](https://travis-ci.org/opencollective/backyourstack.svg?branch=master)](https://travis-ci.org/opencollective/backyourstack)

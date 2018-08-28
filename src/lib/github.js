@@ -2,6 +2,7 @@ import debug from 'debug';
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
 import minimatch from 'minimatch';
+import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
 
 import cache from './cache';
@@ -10,16 +11,21 @@ const _debug = debug('github');
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
 
+const baseGraphqlUrl = 'https://api.github.com/graphql';
+
+function getSharedAccessToken () {
+  const donatedTokens = cache.get('donatedTokens') || [];
+  if (donatedTokens.length > 0) {
+    return donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
+  } else {
+    return process.env.GITHUB_GUEST_TOKEN;
+  }
+}
+
 function getOctokit (accessToken) {
   const octokit = octokitRest();
   if (!accessToken) {
-    const donatedTokens = cache.get('donatedTokens') || [];
-    if (donatedTokens.length > 0) {
-      accessToken = donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
-    }
-  }
-  if (!accessToken) {
-    accessToken = process.env.GITHUB_GUEST_TOKEN;
+    accessToken = getSharedAccessToken();
   }
   if (accessToken) {
     octokit.authenticate({ type: 'oauth', token: accessToken });
@@ -41,6 +47,18 @@ function fetchWithOctokit (path, params, accessToken) {
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
+}
+
+function fetchWithGraphql (query, params, accessToken) {
+  if (!accessToken) {
+    accessToken = getSharedAccessToken();
+  }
+  const client = new GraphQLClient(baseGraphqlUrl, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+  return client.request(query, params);
 }
 
 function silentError (err) {
@@ -152,8 +170,10 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
 }
 
 function fetchFileFromRepo (repo, path, accessToken) {
+  const branch = repo.default_branch || repo.defaultBranch;
+
   _debug('Fetch file from repo',
-    { repo: repo.full_name, branch: repo.default_branch, path, withAccessToken: !!accessToken });
+    { owner: repo.owner.login, name: repo.name, branch: branch, path, withAccessToken: !!accessToken });
 
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
@@ -161,7 +181,7 @@ function fetchFileFromRepo (repo, path, accessToken) {
     return fetchWithOctokit('repos.getContent', params, accessToken).then(getContent);
   }
 
-  const relativeUrl = `/${repo.full_name}/${repo.default_branch}/${path}`;
+  const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
   _debug(`Fetching file from public repo ${relativeUrl}`);
   return fetch(`${baseRawUrl}${relativeUrl}`)
     .then(response => {
@@ -182,9 +202,12 @@ function donateToken (accessToken) {
 
 export {
   fetchWithOctokit,
+  fetchWithGraphql,
   fetchFileFromRepo,
+  getContent,
   fetchProfile,
   fetchReposForProfile,
   donateToken,
   searchFilesFromRepo,
+  silentError,
 };

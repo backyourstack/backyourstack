@@ -15,8 +15,9 @@
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
+    "test": "jest",
     "update-projects": "babel-node src/scripts/update-projects",
-    "test": "jest"
+    "update-collectives": "babel-node src/scripts/update-collectives"
   },
   "author": {
     "name": "Open Collective, Inc.",
