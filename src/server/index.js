@@ -1,4 +1,4 @@
-import './env';
+import '../env';
 
 import path from 'path';
 import crypto from 'crypto';

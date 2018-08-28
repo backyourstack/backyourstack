@@ -56,6 +56,29 @@ const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
 }
 `;
 
+const getAllCollectivesQuery = `query allCollectives($HostCollectiveId: Int, $isActive: Boolean, $limit: Int, $type: TypeOfCollective) {
+  allCollectives(HostCollectiveId: $HostCollectiveId, isActive: $isActive, limit: $limit, type: $type) {
+    total
+    limit
+    offset
+    collectives {
+      id
+      type
+      slug
+      name
+      description
+      stats {
+        balance
+        yearlyBudget
+      }
+      settings
+      data
+    }
+  }
+}
+
+`;
+
 function fetchCollectiveWithBacking (slug) {
   const cacheKey = `collective_with_backing_${slug}`;
 
@@ -92,8 +115,13 @@ function fetchCollectiveWithMembers (slug) {
     });
 }
 
+function fetchAllCollectives (HostCollectiveId, type, isActive = true, limit = 100) {
+  return request(baseUrl, getAllCollectivesQuery, { HostCollectiveId, type, isActive , limit })
+    .then(data => data.allCollectives.collectives);
+}
 
 export {
   fetchCollectiveWithBacking,
   fetchCollectiveWithMembers,
+  fetchAllCollectives,
 };
