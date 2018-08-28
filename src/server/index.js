@@ -155,13 +155,7 @@ nextApp.prepare()
           name: raw.originalname,
           text: raw.buffer.toString('utf8'),
         };
-        try {
-          file.json = JSON.parse(file.text);
-        } catch (e) {
-          // Invalid JSON
-        }
-        file.type = detectDependencyFileType(file);
-        if (file.type) {
+        if (detectDependencyFileType(file)) {
           file.projectName = detectProjectName(file);
           const id = file.projectName || md5(file.text);
           req.session.files[id] = file;

@@ -1,62 +1,26 @@
-import debug from 'debug';
+const patterns = ['composer.json'];
 
-import cache from '../cache';
-
-import { fetchFileFromRepo } from '../github';
-
-const _debug = debug('dependencies:composer');
-
-const dependencyTypes = {
-  core: 'require',
-  dev: 'require-dev',
-};
-
-function dependenciesStats (composerJson) {
-  const dependencies = {};
-  Object.entries(dependencyTypes).forEach(([ dependencyType, dependencyKey ]) => {
-    if (composerJson[dependencyKey]) {
-      Object.keys(composerJson[dependencyKey]).forEach(name => {
-        dependencies[name] = dependencies[name] || { type: 'composer', name };
-        dependencies[name][dependencyType] = 1;
-      });
-    }
-  });
-  return Object.values(dependencies);
+function dependencyObject (composerJson) {
+  return {
+    core: Object.keys(composerJson.require || {}),
+    dev: Object.keys(composerJson['require-dev'] || {}),
+  };
 }
 
-function getDependenciesFromGithubRepo (githubRepo, githubAccessToken) {
-  const cacheKey = `repo_composer_dependencies_${githubRepo.id}`;
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey);
-  }
-  return fetchFileFromRepo(githubRepo, 'composer.json', githubAccessToken)
-    .then(JSON.parse)
-    .then(dependenciesStats)
-    .catch(err => {
-      _debug(`getDependenciesFromGithubRepo error: ${err.message}`);
-      return [];
-    })
-    .then(result => {
-      cache.set(cacheKey, result);
-      return result;
-    });
+function json (file) {
+  return file.json = file.json || JSON.parse(file.text);
 }
 
-function isDependencyFile (file) {
-  if (file.json) {
-    if (file.json['require'] || file.json['require-dev']) {
-      return true;
-    }
-  }
+function dependencies (file) {
+  return dependencyObject(json(file));
 }
 
 function detectProjectName (file) {
-  return file.json && file.json.name;
+  return json(file).name;
 }
 
 export {
-  getDependenciesFromGithubRepo,
-  dependenciesStats,
-  isDependencyFile,
+  patterns,
+  dependencies,
   detectProjectName,
 };
