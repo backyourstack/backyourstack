@@ -10,11 +10,12 @@ import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
-import debug from 'debug';
 import { get, has } from 'lodash';
 
-import passport from './passport';
 import routes from '../routes';
+import logger from '../logger';
+
+import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
 import { detectDependencyFileType, detectProjectName } from '../lib/dependencies';
 import {
@@ -25,8 +26,6 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
-
-const _debug = debug('server');
 
 const { PORT, SESSION_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
@@ -206,9 +205,6 @@ nextApp.prepare()
       if (err) {
         throw err;
       }
-      _debug(`> Ready on http://localhost:${port}`);
+      logger.info(`> Ready on http://localhost:${port}`);
     });
-  })
-  .catch(err => {
-    _debug(`> Error while starting server: ${err.message}`);
   });

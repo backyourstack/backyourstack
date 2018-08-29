@@ -1,6 +1,6 @@
-import debug from 'debug';
-
 import fetch from 'cross-fetch';
+
+import logger from '../logger';
 
 import {
   fetchWithOctokit,
@@ -25,10 +25,8 @@ import {
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
-const _debug = debug('data');
-
 function fetchDebug (result) {
-  _debug(result);
+  logger.debug(result);
   return result;
 }
 

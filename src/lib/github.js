@@ -1,13 +1,12 @@
-import debug from 'debug';
 import fetch from 'cross-fetch';
 import octokitRest from '@octokit/rest';
 import minimatch from 'minimatch';
 import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
 
-import cache from './cache';
+import logger from '../logger';
 
-const _debug = debug('github');
+import cache from './cache';
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
 
@@ -34,7 +33,7 @@ function getOctokit (accessToken) {
 }
 
 function getData (res) {
-  _debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
+  logger.debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
   return res.data;
 }
 
@@ -43,7 +42,7 @@ function getContent (data) {
 }
 
 function fetchWithOctokit (path, params, accessToken) {
-  _debug('Fetch with octokit', { path, params, withAccessToken: !!accessToken });
+  logger.verbose('Fetch with octokit', { path, params, withAccessToken: !!accessToken });
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
@@ -62,7 +61,7 @@ function fetchWithGraphql (query, params, accessToken) {
 }
 
 function silentError (err) {
-  _debug('Silently catched error', err);
+  logger.debug('Silently catched error', err);
 }
 
 function compactRepo (repo) {
@@ -72,7 +71,7 @@ function compactRepo (repo) {
 }
 
 async function fetchProfile (login, accessToken) {
-  _debug('Fetch profile', { login: login, withAccessToken: !!accessToken } );
+  logger.verbose('Fetch profile', { login: login, withAccessToken: !!accessToken } );
 
   const cacheKey = `profile_${login}`;
 
@@ -99,7 +98,7 @@ async function fetchProfile (login, accessToken) {
 }
 
 async function fetchReposForProfile (profile, accessToken) {
-  _debug('Fetch repos for profile', { login: profile.login, withAccessToken: !!accessToken });
+  logger.verbose('Fetch repos for profile', { login: profile.login, withAccessToken: !!accessToken });
 
   let repos = [];
 
@@ -153,7 +152,7 @@ async function fetchReposForProfile (profile, accessToken) {
 }
 
 function searchFilesFromRepo (repo, searchPattern, accessToken) {
-  _debug('Search files from repo', repo.full_name, repo.default_branch, searchPattern, accessToken);
+  logger.verbose('Search files from repo', { owner: repo.owner.login, name: repo.name, searchPattern, withAccessToken: !!accessToken });
 
   const params = {
     q: `filename:${searchPattern}+repo:${repo.full_name}`,
@@ -172,7 +171,7 @@ function searchFilesFromRepo (repo, searchPattern, accessToken) {
 function fetchFileFromRepo (repo, path, accessToken) {
   const branch = repo.default_branch || repo.defaultBranch;
 
-  _debug('Fetch file from repo',
+  logger.verbose('Fetch file from repo',
     { owner: repo.owner.login, name: repo.name, branch: branch, path, withAccessToken: !!accessToken });
 
   if (repo.private === true) {
@@ -182,7 +181,7 @@ function fetchFileFromRepo (repo, path, accessToken) {
   }
 
   const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
-  _debug(`Fetching file from public repo ${relativeUrl}`);
+  logger.verbose(`Fetching file from public repo ${relativeUrl}`);
   return fetch(`${baseRawUrl}${relativeUrl}`)
     .then(response => {
       if (response.status === 200) {
