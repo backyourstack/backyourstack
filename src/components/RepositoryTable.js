@@ -34,6 +34,19 @@ export default class RepositoryTable extends React.Component {
         }
         `}
         </style>
+        {repositories.length === 0 &&
+          <div className="error">
+            <p>Sorry, we could not detect any repositories. You can:</p>
+            <ul>
+              <li>check that the GitHub identifier is correct</li>
+              <li>sign in with your GitHub account to detect private repositories</li>
+              <li>upload configuration files from your dependency manager</li>
+            </ul>
+            <p>
+              Something not working as expected? <a href="https://github.com/opencollective/backyourstack/issues">Report an issue</a>.
+            </p>
+          </div>
+        }
         <table>
           <thead>
             <tr>

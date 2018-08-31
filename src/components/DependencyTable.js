@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
+import { Link } from '../routes';
+
 import List from '../components/List';
 
 export default class DependencyTable extends React.Component {
@@ -67,49 +69,61 @@ export default class DependencyTable extends React.Component {
         }
         `}
         </style>
-        <table>
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th>Name</th>
-              <th><abbr title="Core dependency count">Core dep.</abbr></th>
-              <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
-              <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
-              <th><abbr title="Engines dependency count">Engines dep.</abbr></th>
-              <th className="repos">Repos</th>
-              <th className="funding">Funding</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dependencies.sort(this.sortDependencies).map(dep => (
-              <tr key={dep.name}>
-                <td>{dep.type}</td>
-                <td>{dep.name}</td>
-                <td>{dep.core}</td>
-                <td>{dep.peer}</td>
-                <td>{dep.dev}</td>
-                <td>{dep.engines}</td>
-                <td className="repos">
-                  <List
-                    array={dep.repos}
-                    map={this.githubRepoItem}
-                    cut={20}
-                    />
-                </td>
-                <td className="opencollective">
-                  {dep.project && dep.project.opencollective &&
-                    <Fragment>
-                      <span>Open Collective</span>:&nbsp;
-                      <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
-                        {dep.project.opencollective.name}
-                      </a>
-                    </Fragment>
-                  }
-                </td>
+        {dependencies.length === 0 &&
+          <div className="error">
+            <p>Sorry, we could not detect any dependencies. </p>
+            <p>We currently support JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).</p>
+            <p>
+              Want so see something else? <Link route="contributing"><a>Contribute</a></Link>.
+              Something not working as expected? <a href="https://github.com/opencollective/backyourstack/issues">Report an issue</a>.
+            </p>
+          </div>
+        }
+        {dependencies.length > 0 &&
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th><abbr title="Core dependency count">Core dep.</abbr></th>
+                <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
+                <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
+                <th><abbr title="Engines dependency count">Engines dep.</abbr></th>
+                <th className="repos">Repos</th>
+                <th className="funding">Funding</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {dependencies.sort(this.sortDependencies).map(dep => (
+                <tr key={dep.name}>
+                  <td>{dep.type}</td>
+                  <td>{dep.name}</td>
+                  <td>{dep.core}</td>
+                  <td>{dep.peer}</td>
+                  <td>{dep.dev}</td>
+                  <td>{dep.engines}</td>
+                  <td className="repos">
+                    <List
+                      array={dep.repos}
+                      map={this.githubRepoItem}
+                      cut={20}
+                      />
+                  </td>
+                  <td className="opencollective">
+                    {dep.project && dep.project.opencollective &&
+                      <Fragment>
+                        <span>Open Collective</span>:&nbsp;
+                        <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
+                          {dep.project.opencollective.name}
+                        </a>
+                      </Fragment>
+                    }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        }
       </div>
     );
   }

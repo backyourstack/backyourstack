@@ -97,7 +97,6 @@ export default class SearchForm extends React.Component {
             position: relative;
           }
           .searchInput {
-            margin: 50px auto 10px;
             padding: 12px 17px;
             position: relative;
             border: 1px solid rgba(18,19,20,0.16);
