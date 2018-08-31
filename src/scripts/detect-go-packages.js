@@ -1,4 +1,5 @@
 import '../env';
+import logger from '../logger';
 
 import fetch from 'cross-fetch';
 import { uniq, pick, get } from 'lodash';
@@ -48,8 +49,7 @@ const regexp = /https:\/\/godoc\.org\/([a-z0-9-./]*)/gi;
     packageIds = uniq(packageIds).filter(packageId => !!packageId);
 
     if (packageIds.length) {
-      console.log(`Collective: ${collective.slug} ${collective.name}`);
-      console.log(packageIds);
+      logger.info(`Collective: ${collective.slug} ${collective.name}`, { packageIds });
       let project = projects.find(p => get(p, 'opencollective.id') === collective.id);
       if (!project) {
         project = {

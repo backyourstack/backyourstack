@@ -1,4 +1,5 @@
 import '../env';
+import logger from '../logger';
 
 import { get, has, pick, merge } from 'lodash';
 
@@ -50,7 +51,7 @@ async function getCollectiveRepos (collective) {
           allRepos = reposForOrg.map(repo => ({ owner: repo.owner.login, name: repo.name }));
         }
       } catch (e) {
-        console.warn(`Could not fetch repos for org ${githubOrg}`);
+        logger.warn(`Could not fetch repos for org ${githubOrg}`);
       }
     }
   } else if (githubRepo) {
@@ -73,7 +74,7 @@ async function getCollectiveRepos (collective) {
       continue;
     }
 
-    console.log(`Collective: ${collective.slug} ${collective.name}`);
+    logger.info(`Collective: ${collective.slug} ${collective.name}`);
 
     let github;
     if (has(collective, 'settings.githubOrg')) {
@@ -107,7 +108,7 @@ async function getCollectiveRepos (collective) {
           continue;
         }
       } catch (e) {
-        console.warn(`Could not fetch repo ${repo.owner} ${repo.name}`);
+        logger.warn(`Could not fetch repo ${repo.owner} ${repo.name}`);
         continue;
       }
       let storedRepo = storedCollective.repos.find(r => r.name === githubRepo.name && r.owner.login === githubRepo.owner.login);

@@ -1,4 +1,5 @@
 import '../env';
+import logger from '../logger';
 
 import fs from 'fs-extra';
 import path from 'path';
@@ -22,7 +23,7 @@ fs.readJson(filename)
       if (project.opencollective) {
         const data = await fetchCollectiveWithMembers(project.opencollective.slug);
         if (!data) {
-          console.error(project.opencollective, data);
+          logger.error(`Can't fetch data for ${project.opencollective.slug}`);
           continue;
         }
         project.opencollective.name = data.name;

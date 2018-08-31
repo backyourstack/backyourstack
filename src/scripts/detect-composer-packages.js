@@ -1,4 +1,5 @@
 import '../env';
+import logger from '../logger';
 
 import { uniq, pick, get } from 'lodash';
 
@@ -53,8 +54,7 @@ const regexps = [
     packageIds = uniq(packageIds).filter(packageId => !!packageId);
 
     if (packageIds.length) {
-      console.log(`Collective: ${collective.slug} ${collective.name}`);
-      console.log(packageIds);
+      logger.info(`Collective: ${collective.slug} ${collective.name}`, { packageIds });
       let project = projects.find(p => get(p, 'opencollective.id') === collective.id);
       if (!project) {
         project = {
@@ -76,7 +76,7 @@ const regexps = [
             .then(res => res.status === 200 ? true : false)
             .catch(() => false);
           if (!packagistExists) {
-            console.log(`- ${packageId} is not registered on packagist. Ignoring.`);
+            logger.info(`- ${packageId} is not registered on packagist. Ignoring.`);
             continue;
           }
           project.packages.push(pkg);
