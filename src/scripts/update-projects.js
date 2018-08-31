@@ -3,7 +3,7 @@ import logger from '../logger';
 
 import fs from 'fs-extra';
 import path from 'path';
-import { get, pick, uniqBy } from 'lodash';
+import { get, uniqBy } from 'lodash';
 
 import { fetchCollectiveWithMembers } from '../lib/opencollective';
 
