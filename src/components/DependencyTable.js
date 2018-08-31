@@ -74,7 +74,7 @@ export default class DependencyTable extends React.Component {
             <p>Sorry, we could not detect any dependencies. </p>
             <p>We currently support JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).</p>
             <p>
-              Want so see something else? <Link route="contributing"><a>Contribute</a></Link>.
+              Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
               Something not working as expected? <a href="https://github.com/opencollective/backyourstack/issues">Report an issue</a>.
             </p>
           </div>

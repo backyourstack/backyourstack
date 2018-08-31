@@ -162,7 +162,7 @@ export default class Index extends Component {
 
           <p className="description secondaryDescription">
             * We currently detect dependencies from JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).<br />
-            Want so see something else? <Link route="contributing"><a>Contribute</a></Link>.
+            Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
           </p>
 
           <div className="search">

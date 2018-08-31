@@ -36,7 +36,7 @@ export default class RecommendationList extends React.Component {
                 <li>match them with projects registered on <a href="https://opencollective.com/">Open Collective</a></li>
               </ul>
               <p>
-                Want so see something else? <Link route="contributing"><a>Contribute</a></Link>.
+                Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
                 Something not working as expected? <a href="https://github.com/opencollective/backyourstack/issues">Report an issue</a>.
               </p>
             </div>
