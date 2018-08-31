@@ -17,7 +17,8 @@
     "lint:quiet": "npm run lint -- --quiet",
     "test": "jest",
     "update-projects": "babel-node src/scripts/update-projects",
-    "update-collectives": "babel-node src/scripts/update-collectives"
+    "update-collectives": "babel-node src/scripts/update-collectives",
+    "detect-packages": "./src/scripts/detect-all-packages.sh"
   },
   "author": {
     "name": "Open Collective, Inc.",
