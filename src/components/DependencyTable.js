@@ -52,7 +52,7 @@ export default class DependencyTable extends React.Component {
           border-collapse: collapse;
         }
         table th, table td {
-          border: 1px solid #3b0c9c;
+          border: 1px solid #c1c6cc;
           padding: 0.5em;
           white-space: nowrap;
           font-size: 12px;
