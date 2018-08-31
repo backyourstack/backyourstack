@@ -122,7 +122,12 @@ export default class Files extends React.Component {
         <Header loggedInUser={loggedInUser} pathname={pathname} />
 
         <div className="navigation">
-          <h1>{count} {count === 1 ? 'file' : 'files'}</h1>
+          <h1>
+            {count === 0 && 'No uploaded file'}
+            {count === 1 && '1 file analyzed'}
+            {count > 1 && `${count} files analyzed`}
+          </h1>
+
           <div className="navigation-items">
             <Link route="files">
               <a className={classNames({ active: !section })}>
@@ -162,6 +167,11 @@ export default class Files extends React.Component {
         </aside>
 
         <main>
+          {count === 0 &&
+            <div className="error">
+              <p>Please upload at least one file to detect dependencies and projects.</p>
+            </div>
+          }
           {count > 0 &&
             <Fragment>
               {!section &&

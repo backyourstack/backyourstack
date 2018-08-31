@@ -60,7 +60,7 @@ export default class Index extends Component {
         <style jsx>{`
           h1 {
             width: 220px;
-            margin: 0 auto 50px;
+            margin: 0 auto 25px;
             padding: 0;
           }
           h1 img {
@@ -82,6 +82,12 @@ export default class Index extends Component {
             font-size: 14px;
             font-weight: 500;
             line-height: 22px;
+            margin-top: 25px;
+          }
+          .secondaryDescription {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 300;
           }
           .uploadDescription {
             font-size: 12px;
@@ -90,6 +96,7 @@ export default class Index extends Component {
 
           .search {
             width: 450px;
+            margin-top: 50px
           }
           .description {
             width: 340px;
@@ -149,8 +156,13 @@ export default class Index extends Component {
           </h1>
 
           <p className="description">
-            Discover the open source projects your organization
-            is using that need financial support.
+              Discover the Open Source projects<small><sup>*</sup></small> your organization
+              is using that need financial support.
+          </p>
+
+          <p className="description secondaryDescription">
+            * We currently detect dependencies from JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).<br />
+            Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
           </p>
 
           <div className="search">
