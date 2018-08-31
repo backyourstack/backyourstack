@@ -1,12 +1,10 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-      "targets": {
-        "node": "current"
+    ["next/babel", {
+      "preset-env": {
+        "modules": "auto"
       }
-    }],
-    "@babel/preset-stage-0",
-    "next/babel"
+    }]
   ],
   "plugins": [
     "lodash"
