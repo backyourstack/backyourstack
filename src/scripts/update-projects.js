@@ -10,14 +10,6 @@ import { fetchCollectiveWithMembers } from '../lib/opencollective';
 const filename = path.join(__dirname, '..', 'data', 'projects.json');
 
 fs.readJson(filename)
-  .then(projects => {
-    projects.forEach(project => {
-      project.packages = uniqBy(project.packages, pkg => pkg.name);
-      project.packages.forEach(pkg => pkg.type = pkg.type || 'npm');
-      project.packages = project.packages.map(pkg => pick(pkg, ['type', 'name']));
-    });
-    return projects;
-  })
   .then(async projects => {
     for (const project of projects) {
       if (project.opencollective) {
