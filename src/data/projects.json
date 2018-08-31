@@ -684,7 +684,7 @@
       ],
       "stats": {
         "balance": 14292,
-        "yearlyBudget": 112979
+        "yearlyBudget": 110832
       },
       "goals": []
     }
@@ -1940,7 +1940,7 @@
       "goals": [],
       "stats": {
         "balance": 6385378,
-        "yearlyBudget": 26016676
+        "yearlyBudget": 26015866
       }
     },
     "github": {
@@ -4493,7 +4493,7 @@
       "description": "A functional and reactive JavaScript framework.",
       "stats": {
         "balance": 138524,
-        "yearlyBudget": 437578
+        "yearlyBudget": 436016
       },
       "goals": [
         {}
@@ -4893,8 +4893,8 @@
         }
       ],
       "stats": {
-        "balance": 287870,
-        "yearlyBudget": 995674
+        "balance": 289116,
+        "yearlyBudget": 1001375
       },
       "goals": []
     }
@@ -7419,8 +7419,8 @@
         }
       ],
       "stats": {
-        "balance": 620312,
-        "yearlyBudget": 721738
+        "balance": 620454,
+        "yearlyBudget": 723442
       },
       "goals": []
     },
@@ -7606,8 +7606,8 @@
       "slug": "gitea",
       "description": "Lightweight code hosting solution written in Go",
       "stats": {
-        "balance": 36224,
-        "yearlyBudget": 104483
+        "balance": 44804,
+        "yearlyBudget": 207443
       },
       "goals": [
         {}
@@ -7619,6 +7619,13 @@
           "slug": "manitz-it",
           "name": "MANITZ IT",
           "totalDonations": 12000
+        },
+        {
+          "id": 20139,
+          "type": "ORGANIZATION",
+          "slug": "linder-hard-und-software",
+          "name": "Linder Hard- und Software",
+          "totalDonations": 10000
         },
         {
           "id": 16891,
@@ -7946,8 +7953,8 @@
       "slug": "graphql-php",
       "description": "",
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 405,
+        "yearlyBudget": 4860
       },
       "goals": [
         {}
@@ -7991,8 +7998,8 @@
         {}
       ],
       "stats": {
-        "balance": 1071,
-        "yearlyBudget": 112601
+        "balance": 1476,
+        "yearlyBudget": 117461
       }
     }
   },
@@ -8071,8 +8078,8 @@
         }
       ],
       "stats": {
-        "balance": 374622,
-        "yearlyBudget": 279458
+        "balance": 375463,
+        "yearlyBudget": 280299
       },
       "goals": [
         {}
@@ -10063,6 +10070,13 @@
           "totalDonations": 10000
         },
         {
+          "id": 19953,
+          "type": "ORGANIZATION",
+          "slug": "unhype",
+          "name": "Unhype",
+          "totalDonations": 500
+        },
+        {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
@@ -10074,8 +10088,8 @@
         {}
       ],
       "stats": {
-        "balance": 8985,
-        "yearlyBudget": 13440
+        "balance": 9385,
+        "yearlyBudget": 18240
       }
     }
   },
@@ -10777,7 +10791,7 @@
       ],
       "stats": {
         "balance": 49747,
-        "yearlyBudget": 100115
+        "yearlyBudget": 98553
       }
     }
   },
@@ -11400,7 +11414,7 @@
       ],
       "stats": {
         "balance": 93549,
-        "yearlyBudget": 60378
+        "yearlyBudget": 59922
       },
       "goals": []
     }
@@ -12223,6 +12237,13 @@
           "totalDonations": 40000
         },
         {
+          "id": 20189,
+          "type": "ORGANIZATION",
+          "slug": "kisi",
+          "name": "Kisi",
+          "totalDonations": 10000
+        },
+        {
           "id": 12126,
           "type": "ORGANIZATION",
           "slug": "lyska",
@@ -12242,21 +12263,14 @@
           "slug": "beacon_crm",
           "name": "Beacon",
           "totalDonations": 2000
-        },
-        {
-          "id": 15126,
-          "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 400
         }
       ],
       "goals": [
         {}
       ],
       "stats": {
-        "balance": 1041215,
-        "yearlyBudget": 5396663
+        "balance": 1050295,
+        "yearlyBudget": 5505623
       }
     },
     "github": {
@@ -12693,17 +12707,17 @@
           "totalDonations": 50000
         },
         {
-          "id": 5156,
-          "type": "ORGANIZATION",
-          "slug": "tipe",
-          "name": "Tipe",
-          "totalDonations": 10000
-        },
-        {
           "id": 5686,
           "type": "ORGANIZATION",
           "slug": "idonethis",
           "name": "I Done This",
+          "totalDonations": 10000
+        },
+        {
+          "id": 5156,
+          "type": "ORGANIZATION",
+          "slug": "tipe",
+          "name": "Tipe",
           "totalDonations": 10000
         },
         {
@@ -12736,8 +12750,8 @@
         }
       ],
       "stats": {
-        "balance": 284096,
-        "yearlyBudget": 970920
+        "balance": 284238,
+        "yearlyBudget": 971783
       },
       "goals": []
     }
@@ -12872,7 +12886,7 @@
       ],
       "stats": {
         "balance": 2102765,
-        "yearlyBudget": 1107522
+        "yearlyBudget": 1107378
       },
       "goals": []
     }
@@ -13212,17 +13226,17 @@
           "totalDonations": 148800
         },
         {
-          "id": 17317,
-          "type": "ORGANIZATION",
-          "slug": "neotericeu",
-          "name": "Neoteric",
-          "totalDonations": 75000
-        },
-        {
           "id": 14760,
           "type": "ORGANIZATION",
           "slug": "gojob_official",
           "name": "Gojob",
+          "totalDonations": 75000
+        },
+        {
+          "id": 17317,
+          "type": "ORGANIZATION",
+          "slug": "neotericeu",
+          "name": "Neoteric",
           "totalDonations": 75000
         },
         {
@@ -13281,8 +13295,8 @@
         }
       ],
       "stats": {
-        "balance": 137746,
-        "yearlyBudget": 3544104
+        "balance": 146326,
+        "yearlyBudget": 3371580
       }
     }
   },
@@ -13460,20 +13474,7 @@
         "balance": 295867,
         "yearlyBudget": 780496
       },
-      "goals": [
-        {
-          "key": 96335,
-          "type": "yearlyBudget",
-          "amount": 15000000,
-          "title": "1 full-time maintainer"
-        },
-        {
-          "key": 675,
-          "type": "yearlyBudget",
-          "title": "1 part-time maintainer",
-          "amount": 7500000
-        }
-      ]
+      "goals": []
     },
     "github": {
       "repo": "ngrx/platform"
@@ -14092,7 +14093,7 @@
       ],
       "stats": {
         "balance": 437076,
-        "yearlyBudget": 2529703
+        "yearlyBudget": 2525378
       }
     }
   },
@@ -14870,7 +14871,7 @@
       ],
       "stats": {
         "balance": 44505,
-        "yearlyBudget": 113365
+        "yearlyBudget": 108965
       }
     }
   },
@@ -15819,7 +15820,7 @@
       ],
       "stats": {
         "balance": 2023423,
-        "yearlyBudget": 3006018
+        "yearlyBudget": 3002397
       }
     }
   },
@@ -16388,8 +16389,8 @@
       "description": "Radarr provides an excellent automated movie experience.",
       "sponsors": [],
       "stats": {
-        "balance": 117271,
-        "yearlyBudget": 155205
+        "balance": 119418,
+        "yearlyBudget": 157352
       },
       "goals": [
         {
@@ -16688,7 +16689,13 @@
       "id": 20149,
       "name": "react-day-picker",
       "slug": "react-day-picker",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -18245,7 +18252,7 @@
       ],
       "stats": {
         "balance": 259678,
-        "yearlyBudget": 992124
+        "yearlyBudget": 989694
       },
       "goals": []
     },
@@ -18850,8 +18857,8 @@
         }
       ],
       "stats": {
-        "balance": 62923,
-        "yearlyBudget": 179912
+        "balance": 63749,
+        "yearlyBudget": 180738
       },
       "goals": []
     }
@@ -20820,8 +20827,8 @@
       "slug": "tabulapdf",
       "description": "We are the maintainers of Tabula, the only free, open-source tool for liberating data trapped inside PDF files.",
       "stats": {
-        "balance": 243202,
-        "yearlyBudget": 163803
+        "balance": 244043,
+        "yearlyBudget": 164644
       },
       "goals": [],
       "sponsors": [
@@ -20890,7 +20897,7 @@
       ],
       "stats": {
         "balance": 143637,
-        "yearlyBudget": 205021
+        "yearlyBudget": 202591
       },
       "goals": []
     }
@@ -22173,8 +22180,8 @@
       "description": "Modern PHP user login and management framework++. ",
       "sponsors": [],
       "stats": {
-        "balance": 12422,
-        "yearlyBudget": 17622
+        "balance": 21002,
+        "yearlyBudget": 26202
       },
       "goals": []
     }
@@ -23294,8 +23301,8 @@
         }
       ],
       "stats": {
-        "balance": 1174447,
-        "yearlyBudget": 43129357
+        "balance": 1175430,
+        "yearlyBudget": 43138709
       }
     },
     "github": {
@@ -23927,7 +23934,13 @@
       "id": 20128,
       "name": "Yoshino",
       "slug": "yoshino",
-      "description": "Flexible Lightweight PC UI Components built on React! Anyone can generate easily all kinds of themes by it!"
+      "description": "Flexible Lightweight PC UI Components built on React! Anyone can generate easily all kinds of themes by it!",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
