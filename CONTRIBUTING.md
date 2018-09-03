@@ -10,13 +10,13 @@ If you want to help and are not sure where to start, we have some ideas!
 
 ### Supporting more dependency managers
 
-BackYourStack is currenly detecting and supporting `npm` (JavaScript), `nuget` (C#), `composer` (PHP) and `dep` (Go) packages. For sure, we are aware Javascript, C#, Go and PHP are not the only progamming languages in the world and we would love to support more platforms like Java, Ruby, Erlang and Python.
+BackYourStack is currenly detecting and supporting `npm` (JavaScript), `nuget` (C#), `composer` (PHP), `dep` (Go) and Gem (Ruby) packages. For sure, we are aware Javascript, PHPm C#, Go and Ruby are not the only progamming languages in the world and we would love to support more platforms like Java, Erlang and Python.
 
 We need your help and input! There are already issues existing for:
 
 - [Python](https://github.com/opencollective/backyourstack/issues/34)
 - <del>[NuGet / C#](https://github.com/opencollective/backyourstack/issues/56)</del> Implemented!
-- [Ruby](https://github.com/opencollective/backyourstack/issues/60)
+- <del>[Ruby](https://github.com/opencollective/backyourstack/issues/60)</del> Implemented!
 - [Erlang / Elixir](https://github.com/opencollective/backyourstack/issues/68)
 - <del>[Go](https://github.com/opencollective/backyourstack/issues/75)</del> Implemented!
 

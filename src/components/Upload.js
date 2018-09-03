@@ -4,6 +4,8 @@ import Dropzone from 'react-dropzone';
 import fetch from 'cross-fetch';
 import classNames from 'classnames';
 
+import { supportedFiles } from '../lib/dependencies';
+
 export default class Upload extends React.Component {
 
   static propTypes = {
@@ -51,6 +53,19 @@ export default class Upload extends React.Component {
   };
 
   render () {
+
+    const supportedFilesAsComponent = supportedFiles
+      .map((file, i) => <em key={i}>{file}</em>)
+      .reduce((acc, curr, idx, src) => {
+        if (idx === 1) {
+          return [ curr ];
+        } else if (src.length - 1 === idx) {
+          return [ ...acc, ' and ', curr ];
+        } else {
+          return [ ...acc, ', ', curr ];
+        }
+      });
+
     return (
       <Fragment>
 
@@ -140,7 +155,7 @@ export default class Upload extends React.Component {
             >
             <p>
               There was an error while uploading your files.
-              Only <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> and <em>Gopkg.lock</em> are accepted right now. Please try again. If the problem persists, please contact us.
+              At the moment, we do support {supportedFilesAsComponent}. Please try again. If the problem persists, please contact us.
             </p>
           </div>
         </Dropzone>

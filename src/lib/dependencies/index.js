@@ -28,6 +28,15 @@ const languageToFileType = {
   Ruby: 'bundler',
 };
 
+const supportedFiles = [
+  'package.json',
+  'composer.json',
+  '*.csproj',
+  'packages.config',
+  'Gopkg.lock',
+  'Gemfile.lock',
+];
+
 // Assumes dependencyObject is {core: ['dependency', ...], ...}
 // Returns [{type: 'npm', name: 'dependency', core: 1}, ...]
 function transformToStats (manager, ...dependencyObjects) {
@@ -124,4 +133,5 @@ export {
   dependenciesStats,
   detectDependencyFileType,
   detectProjectName,
+  supportedFiles
 };

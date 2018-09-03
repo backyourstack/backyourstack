@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
 import { getUserOrgs } from '../lib/data';
+import { supportedFiles } from '../lib/dependencies';
 
 import { Link, Router } from '../routes';
 
@@ -41,6 +42,18 @@ export default class Index extends Component {
 
   render () {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
+
+    const supportedFilesAsComponent = supportedFiles
+      .map((file, i) => <em key={i}>{file}</em>)
+      .reduce((acc, curr, idx, src) => {
+        if (idx === 1) {
+          return [ curr ];
+        } else if (src.length - 1 === idx) {
+          return [ ...acc, ' and ', curr ];
+        } else {
+          return [ ...acc, ', ', curr ];
+        }
+      });
 
     return (
       <div className="Page IndexPage">
@@ -161,8 +174,8 @@ export default class Index extends Component {
           </p>
 
           <p className="description secondaryDescription">
-            * We currently detect dependencies from JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).<br />
-            Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
+            * We currently detect dependencies from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep) and  and Ruby (Gem).<br />
+            Want to see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
           </p>
 
           <div className="search">
@@ -176,7 +189,8 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            or simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> or <em>Gopkg.lock</em> files.
+            or simply upload dependency files.
+            At the moment, we do support {supportedFilesAsComponent}.
             The uploaded files will not be shared with anyone
             and will be deleted when your session expire.
           </p>
@@ -188,7 +202,7 @@ export default class Index extends Component {
               <a>sign in with your GitHub account</a>
             </Link>
             {' '}
-            You can also simply upload <em>package.json</em>, <em>composer.json</em>, <em>*.csproj</em>, <em>packages.config</em> or <em>Gopkg.lock</em> files, use a desktop browser for that.
+            You can also simply upload dependency files, use a desktop browser for that.
           </p>
 
           <div className="uploadContainer">
