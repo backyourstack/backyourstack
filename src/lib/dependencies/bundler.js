@@ -10,7 +10,7 @@ function dependencies (file) {
   return { core, peer };
 }
 
-function detectProjectName (file) {
+function detectProjectName () {
   return null;
 }
 
