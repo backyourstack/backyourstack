@@ -25,3 +25,7 @@ export const nugetCsprojFile = getFile(nugetCsprojFilename);
 const depFilename = path.join(path.dirname(__dirname), 'files', 'Gopkg.lock');
 
 export const depFile = getFile(depFilename);
+
+const bundlerFilename = path.join(path.dirname(__dirname), 'files', 'Gemfile.lock');
+
+export const bundlerFile = getFile(bundlerFilename);

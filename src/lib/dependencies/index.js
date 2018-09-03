@@ -7,6 +7,7 @@ import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';
 import * as dep from './dep';
+import * as bundler from './bundler';
 
 const _debug = debug('dependencies');
 
@@ -15,6 +16,7 @@ const dependencyManagers = {
   composer,
   nuget,
   dep,
+  bundler,
 };
 
 const languageToFileType = {
@@ -23,6 +25,7 @@ const languageToFileType = {
   PHP: 'composer',
   'C#': 'nuget',
   'Go': 'dep',
+  Ruby: 'bundler',
 };
 
 // Assumes dependencyObject is {core: ['dependency', ...], ...}
