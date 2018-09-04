@@ -38,7 +38,7 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "fs-extra": "^7.0.0",
-    "gemfile": "github:marcandre/gemfile",
+    "gemfile": "^1.1.0",
     "graphql-request": "^1.8.2",
     "lodash": "^4.17.10",
     "lru-cache": "^4.1.3",
