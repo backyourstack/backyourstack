@@ -94,6 +94,17 @@ export default class RecommendationCard extends React.Component {
     }
   };
 
+  contributeUrl = () => {
+    const { recommendation } = this.props;
+
+    let url = `https://opencollective.com/${recommendation.opencollective.slug}`;
+    if (process.env.OPENCOLLECTIVE_REFERRAL) {
+      url += `?referral=${process.env.OPENCOLLECTIVE_REFERRAL}`;
+    }
+
+    return url;
+  };
+
   render () {
     const { recommendation, opencollective } = this.props;
 
@@ -284,7 +295,7 @@ export default class RecommendationCard extends React.Component {
           }
 
           <div className="secondPart">
-            <a className="bigButton contributeButton" href={`https://opencollective.com/${recommendation.opencollective.slug}`}>
+            <a className="bigButton contributeButton" href={this.contributeUrl()}>
               Contribute
             </a>
           </div>

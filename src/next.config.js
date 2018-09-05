@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import withCSS from '@zeit/next-css';
 
 module.exports = withCSS({
-  webpack: (config) => {
+  webpack: config => {
     // For Winston
     // https://github.com/winstonjs/winston/issues/287
     config.node = { fs: 'empty' };
@@ -10,6 +10,8 @@ module.exports = withCSS({
     config.plugins.push(
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      // Make some environment variables accessible from the client
+      new webpack.EnvironmentPlugin(['OPENCOLLECTIVE_REFERRAL']),
     );
 
     if (process.env.WEBPACK_BUNDLE_ANALYZER) {
@@ -34,7 +36,6 @@ module.exports = withCSS({
         use: ['babel-loader', '@mdx-js/loader'],
       },
     );
-
 
     return config;
   },
