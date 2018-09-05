@@ -103,7 +103,8 @@
       "GITHUB_GUEST_TOKEN": "@github_guest_token",
       "GITHUB_TOKEN_DONATORS": "@github_token_donators",
       "MAILCHIMP_API_KEY": "@mailchimp_api_key",
-      "MAILCHIMP_API_URL": "@mailchimp_api_url"
+      "MAILCHIMP_API_URL": "@mailchimp_api_url",
+      "OPENCOLLECTIVE_REFERRAL": "20206"
     },
     "scale": {
       "sfo1": {
