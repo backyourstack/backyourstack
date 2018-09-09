@@ -170,7 +170,7 @@ export default class Index extends Component {
 
           <p className="description">
               Discover the Open Source projects<small><sup>*</sup></small> your organization
-              is using that need financial support. Hello.
+              is using that need financial support. Hello again.
           </p>
 
           <p className="description secondaryDescription">
