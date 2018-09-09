@@ -11,7 +11,9 @@ module.exports = withCSS({
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       // Make some environment variables accessible from the client
-      new webpack.EnvironmentPlugin(['OPENCOLLECTIVE_REFERRAL']),
+      new webpack.EnvironmentPlugin({
+        OPENCOLLECTIVE_REFERRAL: null,
+      }),
     );
 
     if (process.env.WEBPACK_BUNDLE_ANALYZER) {
