@@ -1,7 +1,13 @@
 import * as dependencies from '../../src/lib/dependencies';
 import * as github from '../../src/lib/github';
 
-import { bundlerFile, composerFile, depFile, nugetCsprojFile, npmFile } from '../files';
+import {
+  bundlerFile,
+  composerFile,
+  depFile,
+  nugetCsprojFile,
+  npmFile,
+} from '../files';
 
 const expectedDependencies = {
   composer: [
@@ -23,8 +29,16 @@ const expectedDependencies = {
   ],
   nuget: [
     { core: 1, name: 'Microsoft.AspNetCore.Http.Abstractions', type: 'nuget' },
-    { core: 1, name: 'Microsoft.AspNetCore.Hosting.Abstractions', type: 'nuget' },
-    { core: 1, name: 'Microsoft.Extensions.Logging.Abstractions', type: 'nuget' },
+    {
+      core: 1,
+      name: 'Microsoft.AspNetCore.Hosting.Abstractions',
+      type: 'nuget',
+    },
+    {
+      core: 1,
+      name: 'Microsoft.Extensions.Logging.Abstractions',
+      type: 'nuget',
+    },
     { core: 1, name: 'Microsoft.Extensions.Options', type: 'nuget' },
   ],
   bundler: [
@@ -39,7 +53,13 @@ const expectedDependencies = {
 describe('dependencies', () => {
   describe.each([
     ['bundler', bundlerFile, 'Ruby', 'Gemfile.lock', null],
-    ['composer', composerFile, 'PHP', 'composer.json', 'test/sample-composer-project'],
+    [
+      'composer',
+      composerFile,
+      'PHP',
+      'composer.json',
+      'test/sample-composer-project',
+    ],
     ['dep', depFile, 'Go', 'Gopkg.lock', null],
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
@@ -58,18 +78,22 @@ describe('dependencies', () => {
       const result = dependencies.dependenciesStats(file);
       const expected = expectedDependencies[type];
       expect(result).toHaveLength(expected.length);
-      expected.forEach(expectedDependency => expect(result).toContainEqual(expectedDependency));
+      expected.forEach(expectedDependency =>
+        expect(result).toContainEqual(expectedDependency),
+      );
     });
 
     describe('using github', () => {
       let spyFetch, spySearch;
-      beforeEach( () => {
-        spyFetch = jest.spyOn(github, 'fetchFileFromRepo')
-          .mockImplementation( () => Promise.resolve(file.text) );
-        spySearch = jest.spyOn(github, 'searchFilesFromRepo')
-          .mockImplementation( () => Promise.resolve([file.text]) );
+      beforeEach(() => {
+        spyFetch = jest
+          .spyOn(github, 'fetchFileFromRepo')
+          .mockImplementation(() => Promise.resolve(file.text));
+        spySearch = jest
+          .spyOn(github, 'searchFilesFromRepo')
+          .mockImplementation(() => Promise.resolve([file.text]));
       });
-      afterEach( () => {
+      afterEach(() => {
         spyFetch.mockRestore();
         spySearch.mockRestore();
       });
@@ -77,10 +101,14 @@ describe('dependencies', () => {
       test('should get the stats from a Github repo', () => {
         const repo = { language };
         const expected = expectedDependencies[type];
-        return dependencies.getDependenciesFromGithubRepo(repo, 'token').then( result => {
-          expected.forEach(expectedDependency => expect(result).toContainEqual(expectedDependency));
-          expect(result).toHaveLength(expected.length);
-        });
+        return dependencies
+          .getDependenciesFromGithubRepo(repo, 'token')
+          .then(result => {
+            expected.forEach(expectedDependency =>
+              expect(result).toContainEqual(expectedDependency),
+            );
+            expect(result).toHaveLength(expected.length);
+          });
       });
     });
   });
@@ -103,6 +131,4 @@ describe('dependencies', () => {
       expect(dependencies.dependenciesStats(file)).toEqual([]);
     });
   });
-
-
 });

@@ -34,7 +34,7 @@ const repositoryQuery = `query repository($owner: String!, $name: String!) {
   }
 }`;
 
-async function getCollectiveRepos (collective) {
+async function getCollectiveRepos(collective) {
   const repos = get(collective, 'data.repos');
   const githubOrg = get(collective, 'settings.githubOrg');
   const githubRepo = get(collective, 'settings.githubRepo');
@@ -46,30 +46,39 @@ async function getCollectiveRepos (collective) {
       allRepos = Object.keys(repos).map(name => ({ owner: githubOrg, name }));
     } else {
       try {
-        const reposForOrg = await fetchWithOctokit('repos.getForOrg', { org: githubOrg, per_page: 100 });
+        const reposForOrg = await fetchWithOctokit('repos.getForOrg', {
+          org: githubOrg,
+          per_page: 100,
+        });
         if (repos) {
-          allRepos = reposForOrg.map(repo => ({ owner: repo.owner.login, name: repo.name }));
+          allRepos = reposForOrg.map(repo => ({
+            owner: repo.owner.login,
+            name: repo.name,
+          }));
         }
       } catch (e) {
         logger.warn(`Could not fetch repos for org ${githubOrg}`);
       }
     }
   } else if (githubRepo) {
-    const [ owner, name ] = githubRepo.split('/');
-    allRepos = [ { owner, name } ];
+    const [owner, name] = githubRepo.split('/');
+    allRepos = [{ owner, name }];
   }
 
   return allRepos;
 }
 
 (async () => {
-
   const storedCollectives = await getCollectives();
 
-  const allCollectives = await fetchAllCollectives(11004, 'COLLECTIVE', true, 1000);
+  const allCollectives = await fetchAllCollectives(
+    11004,
+    'COLLECTIVE',
+    true,
+    1000,
+  );
 
   for (const collective of allCollectives) {
-
     if (collective.id === 1) {
       continue;
     }
@@ -87,10 +96,18 @@ async function getCollectiveRepos (collective) {
 
     let storedCollective = storedCollectives.find(c => c.id === collective.id);
     if (!storedCollective) {
-      storedCollective = pick(collective, ['id', 'name', 'slug', 'description']);
+      storedCollective = pick(collective, [
+        'id',
+        'name',
+        'slug',
+        'description',
+      ]);
       storedCollectives.push(storedCollective);
     } else {
-      storedCollective = merge(storedCollective, pick(collective, ['id', 'name', 'slug', 'description']));
+      storedCollective = merge(
+        storedCollective,
+        pick(collective, ['id', 'name', 'slug', 'description']),
+      );
     }
     storedCollective.github = github;
     storedCollective.repos = [];
@@ -103,7 +120,9 @@ async function getCollectiveRepos (collective) {
     for (const repo of repos) {
       let githubRepo;
       try {
-        githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(data => data.repository);
+        githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
+          data => data.repository,
+        );
         if (githubRepo.isFork) {
           continue;
         }
@@ -111,19 +130,34 @@ async function getCollectiveRepos (collective) {
         logger.warn(`Could not fetch repo ${repo.owner} ${repo.name}`);
         continue;
       }
-      let storedRepo = storedCollective.repos.find(r => r.name === githubRepo.name && r.owner.login === githubRepo.owner.login);
+      let storedRepo = storedCollective.repos.find(
+        r =>
+          r.name === githubRepo.name &&
+          r.owner.login === githubRepo.owner.login,
+      );
       if (!storedRepo) {
         storedRepo = pick(githubRepo, ['name', 'owner']);
         storedCollective.repos.push(storedRepo);
       }
-      storedRepo.defaultBranch = get(githubRepo, 'defaultBranchRef.name', 'master');
-      storedRepo.languages = get(githubRepo, 'languages.nodes', []).map(node => node.name);
-      storedRepo.files = get(githubRepo, 'files.entries', []).filter(e => e.type === 'blob').map(e => e.name);
+      storedRepo.defaultBranch = get(
+        githubRepo,
+        'defaultBranchRef.name',
+        'master',
+      );
+      storedRepo.languages = get(githubRepo, 'languages.nodes', []).map(
+        node => node.name,
+      );
+      storedRepo.files = get(githubRepo, 'files.entries', [])
+        .filter(e => e.type === 'blob')
+        .map(e => e.name);
     }
 
-    storedCollective.repos.sort((a, b) => a.name.localeCompare(b.name) || a.owner.login.localeCompare(b.owner.login));
+    storedCollective.repos.sort(
+      (a, b) =>
+        a.name.localeCompare(b.name) ||
+        a.owner.login.localeCompare(b.owner.login),
+    );
 
     await saveCollectives(storedCollectives);
   }
-
 })();

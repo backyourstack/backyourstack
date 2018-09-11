@@ -15,13 +15,14 @@ import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
 
 export default class Files extends React.Component {
-
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps({ req, query }) {
     const initialProps = { section: query.section };
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
-    const { files, dependencies, recommendations } = await getFilesData(sessionFiles);
+    const { files, dependencies, recommendations } = await getFilesData(
+      sessionFiles,
+    );
 
     return { ...initialProps, files, dependencies, recommendations };
   }
@@ -41,7 +42,7 @@ export default class Files extends React.Component {
     recommendations: [],
   };
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -51,7 +52,7 @@ export default class Files extends React.Component {
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     window.scrollTo(0, 0);
   }
 
@@ -63,7 +64,6 @@ export default class Files extends React.Component {
     } else {
       this.setState({ files, dependencies, recommendations });
     }
-
   };
 
   handleRemoveFile = (id, event) => {
@@ -71,53 +71,52 @@ export default class Files extends React.Component {
     const params = {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ id }),
       credentials: 'same-origin',
     };
-    fetch('/files/delete', params)
-      .then(() => {
-        this.refresh();
-      });
+    fetch('/files/delete', params).then(() => {
+      this.refresh();
+    });
   };
 
-  render () {
+  render() {
     const { section, pathname, loggedInUser } = this.props;
     const { files, dependencies, recommendations } = this.state;
     const count = Object.keys(files).length;
     return (
       <div className="Page FilesPage">
-
-        <style jsx global>{`
-        .FilesPage {
-          position: relative;
-        }
-        `}
+        <style jsx global>
+          {`
+            .FilesPage {
+              position: relative;
+            }
+          `}
         </style>
 
-        <style jsx>{`
-        .File {
-          margin-bottom: 40px;
-        }
-        .File .name {
-          font-size: 20px;
-          line-height: 26px;
-          color: #2E3033;
-        }
-        .File .dependencies {
-          font-size: 16px;
-          line-height: 24px;
-          color: #6E747A;
-          margin-top: 5px;
-        }
-        .File .actionButton {
-          margin-top: 10px;
-        }
-        `}
+        <style jsx>
+          {`
+            .File {
+              margin-bottom: 40px;
+            }
+            .File .name {
+              font-size: 20px;
+              line-height: 26px;
+              color: #2e3033;
+            }
+            .File .dependencies {
+              font-size: 16px;
+              line-height: 24px;
+              color: #6e747a;
+              margin-top: 5px;
+            }
+            .File .actionButton {
+              margin-top: 10px;
+            }
+          `}
         </style>
-
 
         <Header loggedInUser={loggedInUser} pathname={pathname} />
 
@@ -143,8 +142,7 @@ export default class Files extends React.Component {
         </div>
 
         <aside>
-
-          {Object.entries(files).map(([ id, file ]) => (
+          {Object.entries(files).map(([id, file]) => (
             <div key={id} className="File">
               <div className="name">
                 <strong>{file.projectName || 'Unnamed project'}</strong>
@@ -152,7 +150,10 @@ export default class Files extends React.Component {
               <div className="dependencies">
                 {dependenciesStats(file).length} dependencies
               </div>
-              <button className="actionButton" onClick={(e) => this.handleRemoveFile(id, e)}>
+              <button
+                className="actionButton"
+                onClick={e => this.handleRemoveFile(id, e)}
+              >
                 ✘ Remove file
               </button>
             </div>
@@ -162,31 +163,31 @@ export default class Files extends React.Component {
             onUpload={this.refresh}
             onUpdate={this.refresh}
             feedbackPosition="inside"
-            />
-
+          />
         </aside>
 
         <main>
-          {count === 0 &&
+          {count === 0 && (
             <div className="error">
-              <p>Please upload at least one file to detect dependencies and projects.</p>
+              <p>
+                Please upload at least one file to detect dependencies and
+                projects.
+              </p>
             </div>
-          }
-          {count > 0 &&
+          )}
+          {count > 0 && (
             <Fragment>
-              {!section &&
+              {!section && (
                 <RecommendationList recommendations={recommendations} />
-              }
+              )}
 
-              {section === 'dependencies' &&
+              {section === 'dependencies' && (
                 <DependencyTable dependencies={dependencies} />
-              }
+              )}
             </Fragment>
-          }
+          )}
         </main>
-
       </div>
     );
   }
-
 }

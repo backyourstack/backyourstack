@@ -11,8 +11,7 @@ import Footer from '../components/Footer';
 import { getProfile, searchUsers } from '../lib/data';
 
 export default class Search extends React.Component {
-
-  static async getInitialProps ({ req, res, query }) {
+  static async getInitialProps({ req, res, query }) {
     const q = query.q;
 
     // The accessToken is only required server side (it's ok if it's undefined on client side)
@@ -44,7 +43,7 @@ export default class Search extends React.Component {
     searchResults: PropTypes.object,
   };
 
-  render () {
+  render() {
     const { loggedInUser, pathname, q, profile, searchResults } = this.props;
     return (
       <div>
@@ -54,13 +53,12 @@ export default class Search extends React.Component {
           <ul>
             {profile && (
               <Fragment>
-                <li><strong>Perfect Match</strong>:
-                  &nbsp;
+                <li>
+                  <strong>Perfect Match</strong>: &nbsp;
                   <Link route="profile" params={{ id: profile.login }}>
                     <a>{profile.login}</a>
                   </Link>
-                  &nbsp;
-                  ({profile.type})
+                  &nbsp; ({profile.type})
                 </li>
               </Fragment>
             )}
@@ -69,8 +67,7 @@ export default class Search extends React.Component {
                 <Link route="profile" params={{ id: item.login }}>
                   <a>{item.login}</a>
                 </Link>
-                &nbsp;
-                ({item.type})
+                &nbsp; ({item.type})
               </li>
             ))}
           </ul>
@@ -79,5 +76,4 @@ export default class Search extends React.Component {
       </div>
     );
   }
-
 }

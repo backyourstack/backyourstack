@@ -13,7 +13,9 @@ fs.readJson(filename)
   .then(async projects => {
     for (const project of projects) {
       if (project.opencollective) {
-        const data = await fetchCollectiveWithMembers(project.opencollective.slug);
+        const data = await fetchCollectiveWithMembers(
+          project.opencollective.slug,
+        );
         if (!data) {
           logger.error(`Can't fetch data for ${project.opencollective.slug}`);
           continue;
@@ -35,15 +37,13 @@ fs.readJson(filename)
           .filter(m => m.role === 'BACKER' && m.member.type === 'ORGANIZATION')
           .sort((a, b) => b.stats.totalDonations - a.stats.totalDonations);
         members = uniqBy(members, member => member.member.id);
-        project.opencollective.sponsors = members
-          .slice(0, 10)
-          .map(m => ({
-            id: m.member.id,
-            type: m.member.type,
-            slug: m.member.slug,
-            name: m.member.name,
-            totalDonations: m.stats.totalDonations,
-          }));
+        project.opencollective.sponsors = members.slice(0, 10).map(m => ({
+          id: m.member.id,
+          type: m.member.type,
+          slug: m.member.slug,
+          name: m.member.name,
+          totalDonations: m.stats.totalDonations,
+        }));
       }
     }
     return projects;

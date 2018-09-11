@@ -12,7 +12,7 @@ const baseRawUrl = 'https://raw.githubusercontent.com';
 
 const baseGraphqlUrl = 'https://api.github.com/graphql';
 
-function getSharedAccessToken () {
+function getSharedAccessToken() {
   const donatedTokens = cache.get('donatedTokens') || [];
   if (donatedTokens.length > 0) {
     return donatedTokens[Math.floor(Math.random() * donatedTokens.length)];
@@ -21,7 +21,7 @@ function getSharedAccessToken () {
   }
 }
 
-function getOctokit (accessToken) {
+function getOctokit(accessToken) {
   const octokit = octokitRest();
   if (!accessToken) {
     accessToken = getSharedAccessToken();
@@ -32,23 +32,27 @@ function getOctokit (accessToken) {
   return octokit;
 }
 
-function getData (res) {
+function getData(res) {
   logger.debug(`RateLimit Remaining: ${res.headers['x-ratelimit-remaining']}`);
   return res.data;
 }
 
-function getContent (data) {
+function getContent(data) {
   return Buffer.from(data.content, 'base64').toString('utf8');
 }
 
-function fetchWithOctokit (path, params, accessToken) {
-  logger.verbose('Fetch with octokit', { path, params, withAccessToken: !!accessToken });
+function fetchWithOctokit(path, params, accessToken) {
+  logger.verbose('Fetch with octokit', {
+    path,
+    params,
+    withAccessToken: !!accessToken,
+  });
   const octokit = getOctokit(accessToken);
   const func = get(octokit, path);
   return func(params).then(getData);
 }
 
-function fetchWithGraphql (query, params, accessToken) {
+function fetchWithGraphql(query, params, accessToken) {
   if (!accessToken) {
     accessToken = getSharedAccessToken();
   }
@@ -60,18 +64,29 @@ function fetchWithGraphql (query, params, accessToken) {
   return client.request(query, params);
 }
 
-function silentError (err) {
+function silentError(err) {
   logger.debug('Silently catched error', err);
 }
 
-function compactRepo (repo) {
-  repo = pick(repo, ['id', 'name', 'owner', 'full_name', 'default_branch', 'private', 'language']);
+function compactRepo(repo) {
+  repo = pick(repo, [
+    'id',
+    'name',
+    'owner',
+    'full_name',
+    'default_branch',
+    'private',
+    'language',
+  ]);
   repo.owner = pick(repo.owner, ['login']);
   return repo;
 }
 
-async function fetchProfile (login, accessToken) {
-  logger.verbose('Fetch profile', { login: login, withAccessToken: !!accessToken } );
+async function fetchProfile(login, accessToken) {
+  logger.verbose('Fetch profile', {
+    login: login,
+    withAccessToken: !!accessToken,
+  });
 
   const cacheKey = `profile_${login}`;
 
@@ -81,14 +96,22 @@ async function fetchProfile (login, accessToken) {
   }
 
   // https://octokit.github.io/rest.js/#api-Users-getForUser
-  const user = await fetchWithOctokit('users.getForUser', { username: login }, accessToken).catch(silentError);
+  const user = await fetchWithOctokit(
+    'users.getForUser',
+    { username: login },
+    accessToken,
+  ).catch(silentError);
   if (user && user.type !== 'Organization') {
     cache.set(cacheKey, user);
     return user;
   }
 
   // https://octokit.github.io/rest.js/#api-Orgs-get
-  const org = await fetchWithOctokit('orgs.get', { org: login }, accessToken).catch(silentError);
+  const org = await fetchWithOctokit(
+    'orgs.get',
+    { org: login },
+    accessToken,
+  ).catch(silentError);
   if (org) {
     cache.set(cacheKey, org);
     return org;
@@ -97,8 +120,11 @@ async function fetchProfile (login, accessToken) {
   return null;
 }
 
-async function fetchReposForProfile (profile, accessToken) {
-  logger.verbose('Fetch repos for profile', { login: profile.login, withAccessToken: !!accessToken });
+async function fetchReposForProfile(profile, accessToken) {
+  logger.verbose('Fetch repos for profile', {
+    login: profile.login,
+    withAccessToken: !!accessToken,
+  });
 
   let repos = [];
 
@@ -126,12 +152,16 @@ async function fetchReposForProfile (profile, accessToken) {
   getReposParameters.page = 1;
   getReposParameters.per_page = 100;
   while (true) {
-    const fetchRepos = await fetchWithOctokit(getReposPath, getReposParameters, accessToken);
-    repos = [ ... repos, ... fetchRepos ];
+    const fetchRepos = await fetchWithOctokit(
+      getReposPath,
+      getReposParameters,
+      accessToken,
+    );
+    repos = [...repos, ...fetchRepos];
     if (fetchRepos.length < getReposParameters.per_page) {
       break;
     }
-    getReposParameters.page ++;
+    getReposParameters.page++;
   }
 
   // Filter forks
@@ -151,47 +181,61 @@ async function fetchReposForProfile (profile, accessToken) {
   return accessToken ? repos : publicRepos;
 }
 
-function searchFilesFromRepo (repo, searchPattern, accessToken) {
-  logger.verbose('Search files from repo', { owner: repo.owner.login, name: repo.name, searchPattern, withAccessToken: !!accessToken });
+function searchFilesFromRepo(repo, searchPattern, accessToken) {
+  logger.verbose('Search files from repo', {
+    owner: repo.owner.login,
+    name: repo.name,
+    searchPattern,
+    withAccessToken: !!accessToken,
+  });
 
   const params = {
     q: `filename:${searchPattern}+repo:${repo.full_name}`,
   };
   return fetchWithOctokit('search.code', params, accessToken)
     .then(result => result.items)
-    .then( // Github returns partial matches (e.g. 'package.json.old'),
-           // so double check hits are actual matches
-      items => items.filter(file => minimatch(file.name, searchPattern))
+    .then(
+      // Github returns partial matches (e.g. 'package.json.old'),
+      // so double check hits are actual matches
+      items => items.filter(file => minimatch(file.name, searchPattern)),
     )
-    .then(items => Promise.all(
-      items.map(item => fetchFileFromRepo(repo, item.path, accessToken))
-    ));
+    .then(items =>
+      Promise.all(
+        items.map(item => fetchFileFromRepo(repo, item.path, accessToken)),
+      ),
+    );
 }
 
-function fetchFileFromRepo (repo, path, accessToken) {
+function fetchFileFromRepo(repo, path, accessToken) {
   const branch = repo.default_branch || repo.defaultBranch;
 
-  logger.verbose('Fetch file from repo',
-    { owner: repo.owner.login, name: repo.name, branch: branch, path, withAccessToken: !!accessToken });
+  logger.verbose('Fetch file from repo', {
+    owner: repo.owner.login,
+    name: repo.name,
+    branch: branch,
+    path,
+    withAccessToken: !!accessToken,
+  });
 
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
     // https://octokit.github.io/rest.js/#api-Repos-getContent
-    return fetchWithOctokit('repos.getContent', params, accessToken).then(getContent);
+    return fetchWithOctokit('repos.getContent', params, accessToken).then(
+      getContent,
+    );
   }
 
   const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
   logger.verbose(`Fetching file from public repo ${relativeUrl}`);
-  return fetch(`${baseRawUrl}${relativeUrl}`)
-    .then(response => {
-      if (response.status === 200) {
-        return response.text();
-      }
-      throw new Error(`Can't fetch ${path} from ${relativeUrl}.`);
-    });
+  return fetch(`${baseRawUrl}${relativeUrl}`).then(response => {
+    if (response.status === 200) {
+      return response.text();
+    }
+    throw new Error(`Can't fetch ${path} from ${relativeUrl}.`);
+  });
 }
 
-function donateToken (accessToken) {
+function donateToken(accessToken) {
   const donatedTokens = cache.get('donatedTokens') || [];
   if (donatedTokens.indexOf(accessToken) === -1) {
     donatedTokens.push(accessToken);

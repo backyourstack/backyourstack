@@ -2,15 +2,9 @@ import fetch from 'cross-fetch';
 
 import logger from '../logger';
 
-import {
-  fetchWithOctokit,
-  fetchProfile,
-  fetchReposForProfile,
-} from './github';
+import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
-import {
-  fetchCollectiveWithBacking,
-} from './opencollective';
+import { fetchCollectiveWithBacking } from './opencollective';
 
 import {
   addProjectToDependencies,
@@ -25,42 +19,42 @@ import {
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
-function fetchDebug (result) {
+function fetchDebug(result) {
   logger.debug(result);
   return result;
 }
 
-function fetchJson (url, params = {}) {
+function fetchJson(url, params = {}) {
   params.credentials = 'same-origin';
   return fetch(url, params)
     .then(res => res.json())
     .then(fetchDebug);
 }
 
-function getProfile (slug, accessToken) {
-  return process.browser ?
-    fetchJson(`/data/getProfile?slug=${slug}`) :
-    fetchProfile(slug, accessToken);
+function getProfile(slug, accessToken) {
+  return process.browser
+    ? fetchJson(`/data/getProfile?slug=${slug}`)
+    : fetchProfile(slug, accessToken);
 }
 
-function getUserOrgs (accessToken) {
-  return process.browser ?
-    fetchJson('/data/getUserOrgs') :
-    fetchWithOctokit('users.getOrgs', {}, accessToken);
+function getUserOrgs(accessToken) {
+  return process.browser
+    ? fetchJson('/data/getUserOrgs')
+    : fetchWithOctokit('users.getOrgs', {}, accessToken);
 }
 
-function searchUsers (q, accessToken) {
-  return process.browser ?
-    fetchJson(`/data/searchUsers?q=${q}`) :
-    fetchWithOctokit('search.users', { q }, accessToken);
+function searchUsers(q, accessToken) {
+  return process.browser
+    ? fetchJson(`/data/searchUsers?q=${q}`)
+    : fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-function getCollectiveWithBacking (profile) {
+function getCollectiveWithBacking(profile) {
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
   return fetchCollectiveWithBacking(slug);
 }
 
-async function getProfileData (id, accessToken) {
+async function getProfileData(id, accessToken) {
   if (process.browser) {
     return fetchJson(`/data/getProfileData?id=${id}`);
   }
@@ -69,22 +63,30 @@ async function getProfileData (id, accessToken) {
 
   const opencollective = await getCollectiveWithBacking(profile);
 
-  const repos = await fetchReposForProfile(profile, accessToken)
-    .then(repos =>
-      Promise.all(repos.map(async repo => {
-        repo.dependencies = await getDependenciesFromGithubRepo(repo, accessToken);
+  const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
+    Promise.all(
+      repos.map(async repo => {
+        repo.dependencies = await getDependenciesFromGithubRepo(
+          repo,
+          accessToken,
+        );
         return repo;
-      }))
-    );
+      }),
+    ),
+  );
 
-  const dependencies = await addProjectToDependencies(getAllDependenciesFromRepos(repos));
+  const dependencies = await addProjectToDependencies(
+    getAllDependenciesFromRepos(repos),
+  );
 
-  const recommendations = await getRecommendedProjectFromDependencies(dependencies);
+  const recommendations = await getRecommendedProjectFromDependencies(
+    dependencies,
+  );
 
   return { profile, opencollective, repos, dependencies, recommendations };
 }
 
-async function getFilesData (sessionFiles) {
+async function getFilesData(sessionFiles) {
   if (process.browser) {
     return fetchJson('/data/getFilesData');
   }
@@ -101,18 +103,22 @@ async function getFilesData (sessionFiles) {
       id,
       name: file.projectName || 'Unnamed project',
       dependencies: dependenciesStats(file),
-      ... file,
+      ...file,
     };
   });
 
-  const dependencies = await addProjectToDependencies(getAllDependenciesFromRepos(repos));
+  const dependencies = await addProjectToDependencies(
+    getAllDependenciesFromRepos(repos),
+  );
 
-  const recommendations = await getRecommendedProjectFromDependencies(dependencies);
+  const recommendations = await getRecommendedProjectFromDependencies(
+    dependencies,
+  );
 
   return { files, repos, dependencies, recommendations };
 }
 
-function emailSubscribe (email, profile) {
+function emailSubscribe(email, profile) {
   if (process.browser) {
     return fetchJson('/data/emailSubscribe', {
       method: 'POST',
@@ -126,16 +132,18 @@ function emailSubscribe (email, profile) {
   const username = 'anystring';
   const password = process.env.MAILCHIMP_API_KEY;
 
-  const basicAuthenticationString = Buffer.from([username, password].join(':')).toString('base64');
+  const basicAuthenticationString = Buffer.from(
+    [username, password].join(':'),
+  ).toString('base64');
 
   return fetch(process.env.MAILCHIMP_API_URL, {
     method: 'POST',
     headers: {
-      'Authorization': `Basic ${basicAuthenticationString}`,
+      Authorization: `Basic ${basicAuthenticationString}`,
       'Content-Type': 'application/json; charset=utf-8',
     },
     body: JSON.stringify({
-      members : [
+      members: [
         {
           email_address: email,
           status: 'subscribed',
