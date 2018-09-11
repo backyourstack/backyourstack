@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-function getFile (filename) {
+function getFile(filename) {
   const file = {
     name: path.basename(filename),
     text: fs.readFileSync(filename, 'utf8'),
@@ -14,11 +14,19 @@ const npmFilename = path.join(path.dirname(__dirname), 'files', 'package.json');
 
 export const npmFile = getFile(npmFilename);
 
-const composerFilename = path.join(path.dirname(__dirname), 'files', 'composer.json');
+const composerFilename = path.join(
+  path.dirname(__dirname),
+  'files',
+  'composer.json',
+);
 
 export const composerFile = getFile(composerFilename);
 
-const nugetCsprojFilename = path.join(path.dirname(__dirname), 'files', 'sample-nuget-project.csproj');
+const nugetCsprojFilename = path.join(
+  path.dirname(__dirname),
+  'files',
+  'sample-nuget-project.csproj',
+);
 
 export const nugetCsprojFile = getFile(nugetCsprojFilename);
 
@@ -26,6 +34,10 @@ const depFilename = path.join(path.dirname(__dirname), 'files', 'Gopkg.lock');
 
 export const depFile = getFile(depFilename);
 
-const bundlerFilename = path.join(path.dirname(__dirname), 'files', 'Gemfile.lock');
+const bundlerFilename = path.join(
+  path.dirname(__dirname),
+  'files',
+  'Gemfile.lock',
+);
 
 export const bundlerFile = getFile(bundlerFilename);

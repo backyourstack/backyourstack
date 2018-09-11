@@ -14,8 +14,7 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 export default class MyApp extends App {
-
-  static async getInitialProps ({ Component, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     const { asPath, req, res } = ctx;
 
     let pageProps = {};
@@ -29,7 +28,10 @@ export default class MyApp extends App {
     if (req) {
       pageProps.loggedInUser = get(req, 'session.passport.user');
     } else if (typeof window !== 'undefined') {
-      pageProps.loggedInUser = get(window, '__NEXT_DATA__.props.pageProps.loggedInUser');
+      pageProps.loggedInUser = get(
+        window,
+        '__NEXT_DATA__.props.pageProps.loggedInUser',
+      );
     }
 
     // Caching anonymous users
@@ -42,7 +44,7 @@ export default class MyApp extends App {
     return { pageProps };
   }
 
-  render () {
+  render() {
     const { Component, pageProps } = this.props;
     return (
       <Container>
@@ -50,5 +52,4 @@ export default class MyApp extends App {
       </Container>
     );
   }
-
 }

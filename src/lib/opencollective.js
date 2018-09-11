@@ -79,7 +79,7 @@ const getAllCollectivesQuery = `query allCollectives($HostCollectiveId: Int, $is
 
 `;
 
-function fetchCollectiveWithBacking (slug) {
+function fetchCollectiveWithBacking(slug) {
   const cacheKey = `collective_with_backing_${slug}`;
 
   if (cache.has(cacheKey)) {
@@ -97,7 +97,7 @@ function fetchCollectiveWithBacking (slug) {
     });
 }
 
-function fetchCollectiveWithMembers (slug) {
+function fetchCollectiveWithMembers(slug) {
   const cacheKey = `collective_with_members_${slug}`;
 
   if (cache.has(cacheKey)) {
@@ -115,9 +115,18 @@ function fetchCollectiveWithMembers (slug) {
     });
 }
 
-function fetchAllCollectives (HostCollectiveId, type, isActive = true, limit = 100) {
-  return request(baseUrl, getAllCollectivesQuery, { HostCollectiveId, type, isActive , limit })
-    .then(data => data.allCollectives.collectives);
+function fetchAllCollectives(
+  HostCollectiveId,
+  type,
+  isActive = true,
+  limit = 100,
+) {
+  return request(baseUrl, getAllCollectivesQuery, {
+    HostCollectiveId,
+    type,
+    isActive,
+    limit,
+  }).then(data => data.allCollectives.collectives);
 }
 
 export {

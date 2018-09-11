@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import { supportedFiles } from '../lib/dependencies';
 
 export default class Upload extends React.Component {
-
   static propTypes = {
     style: PropTypes.object,
     onUpload: PropTypes.func,
@@ -19,7 +18,7 @@ export default class Upload extends React.Component {
     feedbackPosition: 'float',
   };
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = { error: false };
   }
@@ -33,15 +32,16 @@ export default class Upload extends React.Component {
       acceptedFiles.forEach(file => {
         formData.append('files', file);
       });
-      fetch('/files/upload', { method: 'POST', body: formData })
-        .then(response => {
+      fetch('/files/upload', { method: 'POST', body: formData }).then(
+        response => {
           if (response.status !== 200) {
             this.setErrorState();
           } else if (this.props.onUpload) {
             this.props.onUpload();
             this.setState({ error: false });
           }
-        });
+        },
+      );
     }
   };
 
@@ -52,116 +52,117 @@ export default class Upload extends React.Component {
     }, 5000);
   };
 
-  render () {
-
+  render() {
     const supportedFilesAsComponent = supportedFiles
       .map((file, i) => <em key={i}>{file}</em>)
       .reduce((acc, curr, idx, src) => {
         if (idx === 1) {
-          return [ curr ];
+          return [curr];
         } else if (src.length - 1 === idx) {
-          return [ ...acc, ' and ', curr ];
+          return [...acc, ' and ', curr];
         } else {
-          return [ ...acc, ', ', curr ];
+          return [...acc, ', ', curr];
         }
       });
 
     return (
       <Fragment>
-
-        <style jsx global>{`
-        .dropZoneComponent {
-          border-width: 1px;
-          border-color: #9399A3;
-          border-style: dashed;
-          border-radius: 4px;
-          position: relative;
-          color: #9399A3;
-          font-size: 12px;
-          cursor: pointer;
-          transition-duration: 1s;
-        }
-        .dropZoneComponent .text {
-          position: absolute;
-          width: 100%;
-          top: 25%;
-          text-align: center;
-        }
-        .dropZoneComponent.active {
-          color: #7448FF;
-          border-color: #7448FF;
-        }
-        .dropZoneComponent.error {
-          border-color: #F53152;
-          background-color: #FFF2F4;
-        }
-        .dropZoneComponent:hover {
-          color: #7448FF;
-          border-color: #7448FF;
-        }
-        .dropZoneComponent:active, .dropZoneComponent:focus {
-          color: #2E2E99;
-          border-color: #2E2E99;
-        }
-        `}
+        <style jsx global>
+          {`
+            .dropZoneComponent {
+              border-width: 1px;
+              border-color: #9399a3;
+              border-style: dashed;
+              border-radius: 4px;
+              position: relative;
+              color: #9399a3;
+              font-size: 12px;
+              cursor: pointer;
+              transition-duration: 1s;
+            }
+            .dropZoneComponent .text {
+              position: absolute;
+              width: 100%;
+              top: 25%;
+              text-align: center;
+            }
+            .dropZoneComponent.active {
+              color: #7448ff;
+              border-color: #7448ff;
+            }
+            .dropZoneComponent.error {
+              border-color: #f53152;
+              background-color: #fff2f4;
+            }
+            .dropZoneComponent:hover {
+              color: #7448ff;
+              border-color: #7448ff;
+            }
+            .dropZoneComponent:active,
+            .dropZoneComponent:focus {
+              color: #2e2e99;
+              border-color: #2e2e99;
+            }
+          `}
         </style>
 
-        <style jsx>{`
-        .uploadFeedback {
-          font-size: 12px;
-          transition-duration: 1s;
-          opacity: 0;
-          color: #F53152;
-        }
-        .uploadFeedback.float {
-          position: absolute;
-          width: 200px;
-          right: 0;
-          margin-right: -220px;
-        }
-        .uploadFeedback.inside {
-          text-align: center;
-          background-color: #FFF2F4;
-          position: relative;
-          padding: 20px;
-        }
-        .uploadFeedback.error {
-          opacity: 1;
-        }
-        `}
+        <style jsx>
+          {`
+            .uploadFeedback {
+              font-size: 12px;
+              transition-duration: 1s;
+              opacity: 0;
+              color: #f53152;
+            }
+            .uploadFeedback.float {
+              position: absolute;
+              width: 200px;
+              right: 0;
+              margin-right: -220px;
+            }
+            .uploadFeedback.inside {
+              text-align: center;
+              background-color: #fff2f4;
+              position: relative;
+              padding: 20px;
+            }
+            .uploadFeedback.error {
+              opacity: 1;
+            }
+          `}
         </style>
 
         <Dropzone
           onDrop={this.onDrop}
-          className={classNames('dropZoneComponent', { error: this.state.error })}
+          className={classNames('dropZoneComponent', {
+            error: this.state.error,
+          })}
           activeClassName="active"
           maxSize={102400}
           style={this.props.style}
-          >
+        >
           <div className="text">
             <p>
-              Simply drag&#39;n&#39;drop files<br />
+              Simply drag&#39;n&#39;drop files
+              <br />
               or click to select files to upload.
             </p>
           </div>
           <div
-            className={classNames(
-              'uploadFeedback', {
-                error: this.state.error,
-                float: this.props.feedbackPosition === 'float',
-                inside: this.props.feedbackPosition === 'inside',
-              }
-            )}
-            >
+            className={classNames('uploadFeedback', {
+              error: this.state.error,
+              float: this.props.feedbackPosition === 'float',
+              inside: this.props.feedbackPosition === 'inside',
+            })}
+          >
             <p>
-              There was an error while uploading your files.
-              At the moment, we do support {supportedFilesAsComponent}. Please try again. If the problem persists, please contact us.
+              There was an error while uploading your files. At the moment, we
+              do support {supportedFilesAsComponent}. Please try again. If the
+              problem persists, please contact us.
             </p>
           </div>
         </Dropzone>
-
       </Fragment>
     );
   }
-
 }

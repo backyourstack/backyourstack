@@ -13,7 +13,6 @@ const regexps = [
 ];
 
 (async () => {
-
   const projects = await getProjects();
   const collectives = await getCollectives();
 
@@ -22,11 +21,11 @@ const regexps = [
 
     for (const repo of collective.repos) {
       if (repo.languages.indexOf('C#') !== -1) {
-
         // 1. Detect nuget links in Readme
-        const readme = await fetchWithOctokit(
-          'repos.getReadme', { owner: repo.owner.login, repo: repo.name }
-        ).then(getContent);
+        const readme = await fetchWithOctokit('repos.getReadme', {
+          owner: repo.owner.login,
+          repo: repo.name,
+        }).then(getContent);
         if (readme) {
           let result;
           do {
@@ -39,38 +38,46 @@ const regexps = [
             }
           } while (result);
         }
-
       }
     }
 
     packageIds = uniq(packageIds).filter(packageId => !!packageId);
 
     if (packageIds.length) {
-      logger.info(`Collective: ${collective.slug} ${collective.name}`, { packageIds });
-      let project = projects.find(p => get(p, 'opencollective.id') === collective.id);
+      logger.info(`Collective: ${collective.slug} ${collective.name}`, {
+        packageIds,
+      });
+      let project = projects.find(
+        p => get(p, 'opencollective.id') === collective.id,
+      );
       if (!project) {
         project = {
           name: collective.slug,
           packages: [],
           github: collective.github,
-          opencollective: pick(collective, ['id', 'name', 'slug', 'description']),
+          opencollective: pick(collective, [
+            'id',
+            'name',
+            'slug',
+            'description',
+          ]),
         };
         projects.push(project);
       }
       for (const packageId of uniq(packageIds)) {
         const pkg = {
-          'type': 'nuget',
-          'name': packageId,
+          type: 'nuget',
+          name: packageId,
         };
-        const pkgRegistered = project.packages.find(p => p.type === pkg.type && p.name === pkg.name);
+        const pkgRegistered = project.packages.find(
+          p => p.type === pkg.type && p.name === pkg.name,
+        );
         if (!pkgRegistered) {
           project.packages.push(pkg);
         }
       }
-
     }
   }
 
   await saveProjects(projects);
-
 })();

@@ -7,8 +7,7 @@ import Footer from '../components/Footer';
 import CONTRIBUTING from '../../CONTRIBUTING.md';
 
 export default class Login extends React.Component {
-
-  static getInitialProps (ctx) {
+  static getInitialProps(ctx) {
     return { next: ctx.query.next || '/' };
   }
 
@@ -16,38 +15,40 @@ export default class Login extends React.Component {
     loggedInUser: PropTypes.object,
   };
 
-  render () {
+  render() {
     return (
       <div className="Page LoginPage">
-
-        <style jsx>{`
-        .content {
-          width: 540px;
-          border: 1px solid #dcdcdd;
-          border-radius: 12px;
-          margin: 50px auto;
-          padding: 20px 30px;
-        }
-        @media screen and (max-width: 640px) {
-          .content {
-            width: auto;
-            padding: 20px 15px;
-            margin: 50px 20px;
-          }
-        }
-        `}
+        <style jsx>
+          {`
+            .content {
+              width: 540px;
+              border: 1px solid #dcdcdd;
+              border-radius: 12px;
+              margin: 50px auto;
+              padding: 20px 30px;
+            }
+            @media screen and (max-width: 640px) {
+              .content {
+                width: auto;
+                padding: 20px 15px;
+                margin: 50px 20px;
+              }
+            }
+          `}
         </style>
 
-        <Header loggedInUser={this.props.loggedInUser} login={false} brandAlign="auto" />
+        <Header
+          loggedInUser={this.props.loggedInUser}
+          login={false}
+          brandAlign="auto"
+        />
 
         <div className="content">
           <CONTRIBUTING />
         </div>
 
         <Footer />
-
       </div>
     );
   }
-
 }

@@ -15,6 +15,7 @@
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
+    "prettier": "prettier src/**/*.js test/**/*.js --write",
     "test": "jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
@@ -79,6 +80,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.5.0",
     "nodemon": "^1.18.4",
+    "prettier": "^1.14.2",
     "svg-react-loader": "^0.4.5",
     "webpack": "3.10.0",
     "webpack-bundle-analyzer": "^3.0.0"

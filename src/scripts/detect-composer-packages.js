@@ -3,7 +3,12 @@ import logger from '../logger';
 
 import { uniq, pick, get } from 'lodash';
 
-import { fetchWithOctokit, fetchFileFromRepo, getContent, silentError } from '../lib/github';
+import {
+  fetchWithOctokit,
+  fetchFileFromRepo,
+  getContent,
+  silentError,
+} from '../lib/github';
 
 import { getCollectives, getProjects, saveProjects } from '../data';
 
@@ -13,7 +18,6 @@ const regexps = [
 ];
 
 (async () => {
-
   const projects = await getProjects();
   const collectives = await getCollectives();
 
@@ -22,11 +26,13 @@ const regexps = [
 
     for (const repo of collective.repos) {
       if (repo.languages.indexOf('PHP') !== -1) {
-
         // 1. Detect packagist links in Readme
-        const readme = await fetchWithOctokit(
-          'repos.getReadme', { owner: repo.owner.login, repo: repo.name }
-        ).then(getContent).catch(silentError);
+        const readme = await fetchWithOctokit('repos.getReadme', {
+          owner: repo.owner.login,
+          repo: repo.name,
+        })
+          .then(getContent)
+          .catch(silentError);
         if (readme) {
           let result;
           do {
@@ -42,50 +48,64 @@ const regexps = [
 
         // 2. Detect project name in composer.json
         if (repo.files.indexOf('composer.json') !== -1) {
-          const composerJson = await fetchFileFromRepo(repo, 'composer.json').then(JSON.parse).catch(silentError);
+          const composerJson = await fetchFileFromRepo(repo, 'composer.json')
+            .then(JSON.parse)
+            .catch(silentError);
           if (composerJson && composerJson.name) {
             packageIds.push(composerJson.name);
           }
         }
-
       }
     }
 
     packageIds = uniq(packageIds).filter(packageId => !!packageId);
 
     if (packageIds.length) {
-      logger.info(`Collective: ${collective.slug} ${collective.name}`, { packageIds });
-      let project = projects.find(p => get(p, 'opencollective.id') === collective.id);
+      logger.info(`Collective: ${collective.slug} ${collective.name}`, {
+        packageIds,
+      });
+      let project = projects.find(
+        p => get(p, 'opencollective.id') === collective.id,
+      );
       if (!project) {
         project = {
           name: collective.slug,
           packages: [],
           github: collective.github,
-          opencollective: pick(collective, ['id', 'name', 'slug', 'description']),
+          opencollective: pick(collective, [
+            'id',
+            'name',
+            'slug',
+            'description',
+          ]),
         };
         projects.push(project);
       }
       for (const packageId of packageIds) {
         const pkg = {
-          'type': 'composer',
-          'name': packageId,
+          type: 'composer',
+          name: packageId,
         };
-        const pkgRegistered = project.packages.find(p => p.type === pkg.type && p.name === pkg.name);
+        const pkgRegistered = project.packages.find(
+          p => p.type === pkg.type && p.name === pkg.name,
+        );
         if (!pkgRegistered) {
-          const packagistExists = await fetch(`https://repo.packagist.org/p/${packageId}.json`)
-            .then(res => res.status === 200 ? true : false)
+          const packagistExists = await fetch(
+            `https://repo.packagist.org/p/${packageId}.json`,
+          )
+            .then(res => (res.status === 200 ? true : false))
             .catch(() => false);
           if (!packagistExists) {
-            logger.info(`- ${packageId} is not registered on packagist. Ignoring.`);
+            logger.info(
+              `- ${packageId} is not registered on packagist. Ignoring.`,
+            );
             continue;
           }
           project.packages.push(pkg);
         }
       }
     }
-
   }
 
   await saveProjects(projects);
-
 })();

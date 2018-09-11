@@ -7,7 +7,6 @@ import { Link } from '../routes';
 import List from '../components/List';
 
 export default class DependencyTable extends React.Component {
-
   static propTypes = {
     dependencies: PropTypes.array.isRequired,
   };
@@ -30,65 +29,83 @@ export default class DependencyTable extends React.Component {
     }
   };
 
-  githubRepoItem = (repo) => (
+  githubRepoItem = repo => (
     <span key={repo.id}>
-      {repo.full_name &&
+      {repo.full_name && (
         <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
-      }
-      {!repo.full_name &&
-        <span>{repo.name}</span>
-      }
+      )}
+      {!repo.full_name && <span>{repo.name}</span>}
     </span>
   );
 
-  render () {
+  render() {
     const { dependencies } = this.props;
 
     return (
       <div>
-        <style jsx>{`
-        table {
-          width: 100%;
-          border-collapse: collapse;
-        }
-        table th, table td {
-          border: 1px solid #c1c6cc;
-          padding: 0.5em;
-          white-space: nowrap;
-          font-size: 12px;
-          color: #121314;
-        }
-        table td.repos {
-          white-space: normal;
-        }
-        table td a {
-          color: inherit;
-        }
-        table td a:hover {
-          text-decoration: none;
-        }
-        `}
+        <style jsx>
+          {`
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            table th,
+            table td {
+              border: 1px solid #c1c6cc;
+              padding: 0.5em;
+              white-space: nowrap;
+              font-size: 12px;
+              color: #121314;
+            }
+            table td.repos {
+              white-space: normal;
+            }
+            table td a {
+              color: inherit;
+            }
+            table td a:hover {
+              text-decoration: none;
+            }
+          `}
         </style>
-        {dependencies.length === 0 &&
+        {dependencies.length === 0 && (
           <div className="error">
             <p>Sorry, we could not detect any dependencies. </p>
-            <p>We currently support JavaScript (NPM), PHP (Composer), .NET (Nuget) and Go (dep).</p>
             <p>
-              Want so see something else? <Link route="contributing"><a>See how to contribute</a></Link>.
-              Something not working as expected? <a href="https://github.com/opencollective/backyourstack/issues">Report an issue</a>.
+              We currently support JavaScript (NPM), PHP (Composer), .NET
+              (Nuget) and Go (dep).
+            </p>
+            <p>
+              Want so see something else?{' '}
+              <Link route="contributing">
+                <a>See how to contribute</a>
+              </Link>
+              . Something not working as expected?{' '}
+              <a href="https://github.com/opencollective/backyourstack/issues">
+                Report an issue
+              </a>
+              .
             </p>
           </div>
-        }
-        {dependencies.length > 0 &&
+        )}
+        {dependencies.length > 0 && (
           <table>
             <thead>
               <tr>
                 <th>Type</th>
                 <th>Name</th>
-                <th><abbr title="Core dependency count">Core dep.</abbr></th>
-                <th><abbr title="Peer dependency count">Peer dep.</abbr></th>
-                <th><abbr title="Dev dependency count">Dev dep.</abbr></th>
-                <th><abbr title="Engines dependency count">Engines dep.</abbr></th>
+                <th>
+                  <abbr title="Core dependency count">Core dep.</abbr>
+                </th>
+                <th>
+                  <abbr title="Peer dependency count">Peer dep.</abbr>
+                </th>
+                <th>
+                  <abbr title="Dev dependency count">Dev dep.</abbr>
+                </th>
+                <th>
+                  <abbr title="Engines dependency count">Engines dep.</abbr>
+                </th>
                 <th className="repos">Repos</th>
                 <th className="funding">Funding</th>
               </tr>
@@ -107,25 +124,30 @@ export default class DependencyTable extends React.Component {
                       array={dep.repos}
                       map={this.githubRepoItem}
                       cut={20}
-                      />
+                    />
                   </td>
                   <td className="opencollective">
-                    {dep.project && dep.project.opencollective &&
-                      <Fragment>
-                        <span>Open Collective</span>:&nbsp;
-                        <a href={`https://opencollective.com/${dep.project.opencollective.slug}`}>
-                          {dep.project.opencollective.name}
-                        </a>
-                      </Fragment>
-                    }
+                    {dep.project &&
+                      dep.project.opencollective && (
+                        <Fragment>
+                          <span>Open Collective</span>
+                          :&nbsp;
+                          <a
+                            href={`https://opencollective.com/${
+                              dep.project.opencollective.slug
+                            }`}
+                          >
+                            {dep.project.opencollective.name}
+                          </a>
+                        </Fragment>
+                      )}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-        }
+        )}
       </div>
     );
   }
-
 }
