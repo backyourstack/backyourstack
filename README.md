@@ -6,6 +6,8 @@
 [![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
 [![Dependency Status](https://david-dm.org/opencollective/backyourstack/status.svg)](https://david-dm.org/opencollective/backyourstack)
 [![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/backyourstack.svg)](https://greenkeeper.io/)
+[![Backers on Open Collective](https://opencollective.com/backyourstack/backers/badge.svg)](#backers) 
+[![Sponsors on Open Collective](https://opencollective.com/backyourstack/sponsors/badge.svg)](#sponsors) 
 
 Discover the open source projects your organization is using that need financial support.
 
@@ -82,3 +84,33 @@ First:
 If everything is ok, finalize with:
 
 `now alias`
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="graphs/contributors"><img src="https://opencollective.com/backyourstack/contributors.svg?width=890&button=false" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/backyourstack#backer)]
+
+<a href="https://opencollective.com/backyourstack#backers" target="_blank"><img src="https://opencollective.com/backyourstack/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/backyourstack#sponsor)]
+
+<a href="https://opencollective.com/backyourstack/sponsor/0/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/1/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/2/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/3/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/4/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/5/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/6/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/7/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/8/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/sponsor/9/website" target="_blank"><img src="https://opencollective.com/backyourstack/sponsor/9/avatar.svg"></a>
+
+
