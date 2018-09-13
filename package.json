@@ -19,7 +19,8 @@
     "test": "jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
-    "detect-packages": "./src/scripts/detect-all-packages.sh"
+    "detect-packages": "./src/scripts/detect-all-packages.sh",
+    "postinstall": "opencollective-postinstall"
   },
   "author": {
     "name": "Open Collective, Inc.",
@@ -49,6 +50,7 @@
     "next": "^6.1.1",
     "next-routes": "^1.4.2",
     "nprogress": "^0.2.0",
+    "opencollective": "^1.0.3",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0",
     "prop-types": "^15.6.2",
@@ -102,5 +104,9 @@
       "styled-jsx",
       "webpack"
     ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/backyourstack"
   }
 }
