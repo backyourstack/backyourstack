@@ -19,6 +19,7 @@ We need your help and input! There are already issues existing for:
 - <del>[Ruby](https://github.com/opencollective/backyourstack/issues/60)</del> Implemented!
 - [Erlang / Elixir](https://github.com/opencollective/backyourstack/issues/68)
 - <del>[Go](https://github.com/opencollective/backyourstack/issues/75)</del> Implemented!
+- Clojure ([Leiningen](https://github.com/opencollective/backyourstack/issues/96), [deps.edn](https://github.com/opencollective/backyourstack/issues/97))
 
 ### Supporting more funding platforms
 
