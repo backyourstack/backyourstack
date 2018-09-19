@@ -1,10 +1,6 @@
 {
   "presets": [
-    ["next/babel", {
-      "preset-env": {
-        "modules": "auto"
-      }
-    }]
+    "next/babel"
   ],
   "plugins": [
     "lodash"
