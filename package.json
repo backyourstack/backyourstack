@@ -83,5 +83,8 @@
   },
   "nodemonConfig": {
     "watch": ["src/lib", "src/server", "src/routes.js"]
+  },
+  "greenkeeper": {
+    "ignore": ["@babel/cli", "@babel/node", "webpack"]
   }
 }
