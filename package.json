@@ -16,7 +16,7 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
     "prettier": "prettier src/**/*.js test/**/*.js --write",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
     "detect-packages": "./src/scripts/detect-all-packages.sh"
