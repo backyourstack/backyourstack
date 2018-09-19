@@ -10,34 +10,26 @@ function getFile(filename) {
   return file;
 }
 
-const npmFilename = path.join(path.dirname(__dirname), 'files', 'package.json');
+const npmFilename = path.join(__dirname, 'samples', 'package.json');
 
 export const npmFile = getFile(npmFilename);
 
-const composerFilename = path.join(
-  path.dirname(__dirname),
-  'files',
-  'composer.json',
-);
+const composerFilename = path.join(__dirname, 'samples', 'composer.json');
 
 export const composerFile = getFile(composerFilename);
 
 const nugetCsprojFilename = path.join(
-  path.dirname(__dirname),
-  'files',
+  __dirname,
+  'samples',
   'sample-nuget-project.csproj',
 );
 
 export const nugetCsprojFile = getFile(nugetCsprojFilename);
 
-const depFilename = path.join(path.dirname(__dirname), 'files', 'Gopkg.lock');
+const depFilename = path.join(__dirname, 'samples', 'Gopkg.lock');
 
 export const depFile = getFile(depFilename);
 
-const bundlerFilename = path.join(
-  path.dirname(__dirname),
-  'files',
-  'Gemfile.lock',
-);
+const bundlerFilename = path.join(__dirname, 'samples', 'Gemfile.lock');
 
 export const bundlerFile = getFile(bundlerFilename);
