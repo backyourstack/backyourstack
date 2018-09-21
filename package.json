@@ -19,7 +19,8 @@
     "test": "NODE_ENV=test jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
-    "detect-packages": "./src/scripts/detect-all-packages.sh"
+    "detect-packages": "./src/scripts/detect-all-packages.sh",
+    "clean": "rm -rf dist src/.next"
   },
   "author": {
     "name": "Open Collective, Inc.",
