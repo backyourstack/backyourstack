@@ -79,7 +79,7 @@
     "nodemon": "^1.18.4",
     "prettier": "^1.14.3",
     "svg-react-loader": "^0.4.5",
-    "webpack": "4.19.0",
+    "webpack": "4.20.2",
     "webpack-bundle-analyzer": "^3.0.2"
   },
   "nodemonConfig": {
