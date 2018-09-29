@@ -173,6 +173,24 @@
     }
   },
   {
+    "name": "alchemy_cms",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "alchemy_cms"
+      }
+    ],
+    "github": {
+      "repo": "AlchemyCMS/alchemy_cms"
+    },
+    "opencollective": {
+      "id": 21557,
+      "name": "AlchemyCMS",
+      "slug": "alchemy_cms",
+      "description": "Alchemy is an Open Source  Rails CMS engine"
+    }
+  },
+  {
     "name": "allure-report",
     "packages": [
       {
@@ -866,6 +884,24 @@
           "totalDonations": 600000
         }
       ]
+    }
+  },
+  {
+    "name": "assemblyscript",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "assemblyscript"
+      }
+    ],
+    "github": {
+      "repo": "AssemblyScript/assemblyscript"
+    },
+    "opencollective": {
+      "id": 21165,
+      "name": "AssemblyScript",
+      "slug": "assemblyscript",
+      "description": "A TypeScript to WebAssembly compiler 🚀"
     }
   },
   {
@@ -5098,6 +5134,24 @@
     }
   },
   {
+    "name": "djongo",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "djongo"
+      }
+    ],
+    "github": {
+      "repo": "nesdis/djongo"
+    },
+    "opencollective": {
+      "id": 21618,
+      "name": "djongo",
+      "slug": "djongo",
+      "description": "Use MongoDB with Django, by adding just one line of code."
+    }
+  },
+  {
     "name": "dockerio",
     "packages": [
       {
@@ -5312,6 +5366,10 @@
       {
         "type": "npm",
         "name": "docz-plugin-react-native"
+      },
+      {
+        "type": "npm",
+        "name": "docz-utils"
       }
     ],
     "opencollective": {
@@ -6548,6 +6606,10 @@
       {
         "type": "npm",
         "name": "@feathersjs/authentication"
+      },
+      {
+        "type": "npm",
+        "name": "@feathersjs/client"
       }
     ],
     "github": {
@@ -6805,6 +6867,22 @@
       {
         "type": "npm",
         "name": "react-fela"
+      },
+      {
+        "type": "npm",
+        "name": "jest-fela-bindings"
+      },
+      {
+        "type": "npm",
+        "name": "jest-inferno-fela"
+      },
+      {
+        "type": "npm",
+        "name": "jest-preact-fela"
+      },
+      {
+        "type": "npm",
+        "name": "jest-react-fela"
       }
     ],
     "opencollective": {
@@ -10014,6 +10092,10 @@
       {
         "type": "npm",
         "name": "inferno-extras"
+      },
+      {
+        "type": "npm",
+        "name": "inferno-hydrate"
       }
     ],
     "opencollective": {
@@ -10726,6 +10808,48 @@
     },
     "github": {
       "repo": "facebook/jest"
+    }
+  },
+  {
+    "name": "jest-puppeteer",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "jest-puppeteer"
+      },
+      {
+        "type": "npm",
+        "name": "jest-puppeteer/latest"
+      },
+      {
+        "type": "npm",
+        "name": "expect-puppeteer"
+      },
+      {
+        "type": "npm",
+        "name": "jest-dev-server"
+      },
+      {
+        "type": "npm",
+        "name": "jest-environment-puppeteer"
+      },
+      {
+        "type": "npm",
+        "name": "jest-puppeteer-preset"
+      },
+      {
+        "type": "npm",
+        "name": "spawnd"
+      }
+    ],
+    "github": {
+      "repo": "smooth-code/jest-puppeteer"
+    },
+    "opencollective": {
+      "id": 21317,
+      "name": "jest-puppeteer",
+      "slug": "jest-puppeteer",
+      "description": "Run your tests using Jest & Puppeteer 🎪✨"
     }
   },
   {
@@ -12101,6 +12225,24 @@
         "balance": 18104,
         "yearlyBudget": 25072
       }
+    }
+  },
+  {
+    "name": "lint-staged",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "lint-staged"
+      }
+    ],
+    "github": {
+      "repo": "okonet/lint-staged"
+    },
+    "opencollective": {
+      "id": 21646,
+      "name": "lint-staged",
+      "slug": "lint-staged",
+      "description": null
     }
   },
   {
@@ -16126,6 +16268,14 @@
       {
         "type": "npm",
         "name": "vue-pose"
+      },
+      {
+        "type": "npm",
+        "name": "framesync"
+      },
+      {
+        "type": "npm",
+        "name": "stylefire"
       }
     ],
     "github": {
@@ -17480,7 +17630,12 @@
   },
   {
     "name": "react-pwa",
-    "packages": [],
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-pwa"
+      }
+    ],
     "github": {
       "repo": "Atyantik/react-pwa"
     },
@@ -21086,6 +21241,10 @@
       {
         "type": "composer",
         "name": "symfony/var-exporter"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-messageformatter"
       }
     ],
     "github": {
@@ -23132,6 +23291,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "vuetify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "vuetify"
+      }
+    ],
+    "github": {
+      "repo": "vuetifyjs/vuetify"
+    },
+    "opencollective": {
+      "id": 21031,
+      "name": "vuetify",
+      "slug": "vuetify",
+      "description": "Material design components for vue, and so much more"
     }
   },
   {
