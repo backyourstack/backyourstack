@@ -2,12 +2,17 @@ import webpack from 'webpack';
 import withCSS from '@zeit/next-css';
 
 module.exports = withCSS({
-  webpack: config => {
+  webpack: (config, { isServer }) => {
     // For Winston
     // https://github.com/winstonjs/winston/issues/287
     config.node = { fs: 'empty' };
 
     config.plugins.push(
+      // Define constants helping optimize the build
+      new webpack.DefinePlugin({
+        'process.env.IS_SERVER': JSON.stringify(isServer),
+        'process.env.IS_CLIENT': JSON.stringify(!isServer),
+      }),
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       // Make some environment variables accessible from the client

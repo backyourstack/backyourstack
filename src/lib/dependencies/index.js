@@ -5,6 +5,8 @@ import logger from '../../logger';
 import cache from '../cache';
 import { fetchFileFromRepo, searchFilesFromRepo } from '../github';
 
+import supportedFiles from './supported-files';
+
 import * as composer from './composer';
 import * as npm from './npm';
 import * as nuget from './nuget';

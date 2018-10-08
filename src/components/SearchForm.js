@@ -7,7 +7,12 @@ import { Link, Router } from '../routes';
 
 import List from '../components/List';
 
-import { getProfile } from '../lib/data';
+import { fetchJson } from '../lib/fetch';
+
+const getProfile = slug =>
+  process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfile?slug=${slug}`)
+    : import('../lib/data').then(m => m.getProfile(slug));
 
 export default class SearchForm extends React.Component {
   static propTypes = {
@@ -23,6 +28,7 @@ export default class SearchForm extends React.Component {
 
   async stateFeedback(q) {
     const profile = await getProfile(q);
+
     // Handle non-matching feedback
     // (it's possible that 'q' changed since we fired the request,
     // we could try to cancel the http request but this is simpler like that)
