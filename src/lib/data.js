@@ -10,10 +10,8 @@ import {
   getRecommendedProjectFromDependencies,
 } from './utils';
 
-import {
-  getDependenciesFromGithubRepo,
-  dependenciesStats,
-} from './dependencies';
+import { getDependenciesFromGithubRepo } from './dependencies/data';
+import { dependenciesStats } from './dependencies/utils';
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 

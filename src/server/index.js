@@ -20,7 +20,7 @@ import { fetchWithBasicAuthentication } from './utils';
 import {
   detectDependencyFileType,
   detectProjectName,
-} from '../lib/dependencies';
+} from '../lib/dependencies/utils';
 import {
   getProfile,
   getUserOrgs,

@@ -1,5 +1,11 @@
-import * as dependencies from '../../src/lib/dependencies';
 import * as github from '../../src/lib/github';
+
+import { getDependenciesFromGithubRepo } from '../../src/lib/dependencies/data';
+import {
+  detectDependencyFileType,
+  detectProjectName,
+  dependenciesStats,
+} from '../../src/lib/dependencies/utils';
 
 import {
   bundlerFile,
@@ -65,17 +71,17 @@ describe('dependencies', () => {
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
   ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
-      expect(dependencies.detectDependencyFileType(file)).toBe(file);
+      expect(detectDependencyFileType(file)).toBe(file);
       expect(file.type).toBe(type);
       expect(file.matchedPattern).toBe(pattern);
     });
 
     test('should detect project name', () => {
-      expect(dependencies.detectProjectName(file)).toBe(projectName);
+      expect(detectProjectName(file)).toBe(projectName);
     });
 
     test('should return dependency stats', () => {
-      const result = dependencies.dependenciesStats(file);
+      const result = dependenciesStats(file);
       const expected = expectedDependencies[type];
       expect(result).toHaveLength(expected.length);
       expected.forEach(expectedDependency =>
@@ -101,14 +107,12 @@ describe('dependencies', () => {
       test('should get the stats from a Github repo', () => {
         const repo = { language };
         const expected = expectedDependencies[type];
-        return dependencies
-          .getDependenciesFromGithubRepo(repo, 'token')
-          .then(result => {
-            expected.forEach(expectedDependency =>
-              expect(result).toContainEqual(expectedDependency),
-            );
-            expect(result).toHaveLength(expected.length);
-          });
+        return getDependenciesFromGithubRepo(repo, 'token').then(result => {
+          expected.forEach(expectedDependency =>
+            expect(result).toContainEqual(expectedDependency),
+          );
+          expect(result).toHaveLength(expected.length);
+        });
       });
     });
   });
@@ -120,15 +124,15 @@ describe('dependencies', () => {
     };
 
     test('should not detect file type', () => {
-      expect(dependencies.detectDependencyFileType(file)).toBeFalsy();
+      expect(detectDependencyFileType(file)).toBeFalsy();
     });
 
     test('should not detect project name', () => {
-      expect(dependencies.detectProjectName(file)).toBe(undefined);
+      expect(detectProjectName(file)).toBe(undefined);
     });
 
     test('should return empty dependency stats', () => {
-      expect(dependencies.dependenciesStats(file)).toEqual([]);
+      expect(dependenciesStats(file)).toEqual([]);
     });
   });
 });
