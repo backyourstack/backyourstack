@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "nodemon --exec babel-node -- src/server/index.js",
-    "build": "npm run build:server && npm run build:next",
-    "build:server": "babel --copy-files ./src --out-dir ./dist",
+    "build": "npm run build:clean && npm run build:server && npm run build:next",
+    "build:clean": "rm -rf dist src/.next",
+    "build:server": "babel --copy-files ./src --out-dir ./dist --ignore src/pages/*,src/components/*",
     "build:next": "next build dist",
     "start": "NODE_ENV=production node dist/server/index.js",
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
@@ -19,8 +20,7 @@
     "test": "NODE_ENV=test jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
-    "detect-packages": "./src/scripts/detect-all-packages.sh",
-    "clean": "rm -rf dist src/.next"
+    "detect-packages": "./src/scripts/detect-all-packages.sh"
   },
   "author": {
     "name": "Open Collective, Inc.",
