@@ -90,7 +90,7 @@ export default class RecommendationCard extends React.Component {
     if (recommendation.logo) {
       return recommendation.logo;
     } else {
-      return `https://opencollective.com/${
+      return `https://images.opencollective.com/${
         recommendation.opencollective.slug
       }/logo.png?height=55`;
     }
