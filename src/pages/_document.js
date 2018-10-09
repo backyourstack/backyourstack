@@ -12,10 +12,6 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>
-            BackYourStack: Discover the Open Source projects you are using and
-            need financial support.
-          </title>
           <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
           <meta
             property="og:image"

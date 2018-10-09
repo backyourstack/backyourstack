@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app';
+import Head from 'next/head';
 import React from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -48,6 +49,12 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
+        <Head>
+          <title>
+            BackYourStack: Discover the Open Source projects you are using and
+            need financial support.
+          </title>
+        </Head>
         <Component {...pageProps} />
       </Container>
     );
