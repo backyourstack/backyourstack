@@ -84,10 +84,6 @@ export default class Index extends Component {
               margin: 0 auto 25px;
               padding: 0;
             }
-            h1 img {
-              width: 220px;
-              height: 128px;
-            }
 
             .search,
             .description,
@@ -174,6 +170,8 @@ export default class Index extends Component {
             <Link route="index">
               <a>
                 <img
+                  width="220"
+                  height="128"
                   src="/static/img/logo-bys-homepage.png"
                   alt="BackYourStack"
                 />
