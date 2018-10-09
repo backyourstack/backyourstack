@@ -187,7 +187,7 @@ nextApp.prepare().then(() => {
   });
 
   server.use('/static', (req, res, next) => {
-    res.setHeader('Cache-Control', 'public, max-age=3600');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
     next();
   });
 
