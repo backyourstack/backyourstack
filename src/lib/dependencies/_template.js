@@ -1,9 +1,11 @@
 // This is a template to add support for new package managers.
 
-const patterns = ['...']; // Patterns of filenames used by the package manager.
-                          // Supports '*' only at the beginning or end of a pattern.
+// Patterns of filenames used by the package manager.
+// Supports '*' only at the beginning or end of a pattern.
+const patterns = ['...'];
 
-const searchAllRepo = false; // Flag for package managers with files not typically at the root level
+// Flag for package managers with files not typically at the root level
+const searchAllRepo = false;
 
 /**
  * Computes the list of dependencies for the given file.
@@ -12,7 +14,7 @@ const searchAllRepo = false; // Flag for package managers with files not typical
  *   where keys are any of {core|dev|peer|engines} and
  *   values are [dependencyName, ...]
  */
-function dependencies (/* file */) {
+function dependencies(/* file */) {
   return { core: [] };
 }
 
@@ -21,13 +23,8 @@ function dependencies (/* file */) {
  * @param {object} file - Keys: text, matchedPattern, ...
  * @returns {String|null}
  */
-function detectProjectName (/* file */) {
+function detectProjectName(/* file */) {
   return null;
 }
 
-export {
-  patterns,
-  searchAllRepo,
-  dependencies,
-  detectProjectName,
-};
+export { patterns, searchAllRepo, dependencies, detectProjectName };

@@ -7,20 +7,20 @@ const handlers = {
   'Gopkg.toml': gopkgTomlDependencies,
 };
 
-function gopkgLockDependencies (data) {
+function gopkgLockDependencies(data) {
   return data.projects.map(proj => proj.name);
 }
 
-function gopkgTomlDependencies (data) {
+function gopkgTomlDependencies(data) {
   return data.constraint.map(proj => proj.name);
 }
 
-function dependencies (file) {
+function dependencies(file) {
   const data = toml.parse(file.text);
   return { core: handlers[file.matchedPattern](data) };
 }
 
-function detectProjectName () {
+function detectProjectName() {
   return null;
 }
 
