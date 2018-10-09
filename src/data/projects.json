@@ -4256,6 +4256,10 @@
       {
         "type": "npm",
         "name": "cz-jira-smart-commit"
+      },
+      {
+        "type": "npm",
+        "name": "create-commit"
       }
     ],
     "opencollective": {
@@ -4272,6 +4276,24 @@
     },
     "github": {
       "org": "commitizen"
+    }
+  },
+  {
+    "name": "companion",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "companion"
+      }
+    ],
+    "github": {
+      "repo": "bitfocus/companion"
+    },
+    "opencollective": {
+      "id": 22004,
+      "name": "Companion",
+      "slug": "companion",
+      "description": ""
     }
   },
   {
@@ -5283,6 +5305,24 @@
     }
   },
   {
+    "name": "docsite",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "docsite"
+      }
+    ],
+    "github": {
+      "repo": "txd-team/docsite"
+    },
+    "opencollective": {
+      "id": 22075,
+      "name": "docsite",
+      "slug": "docsite",
+      "description": null
+    }
+  },
+  {
     "name": "document-register-element",
     "packages": [
       {
@@ -6143,6 +6183,74 @@
       {
         "type": "npm",
         "name": "@emotion/primitives"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/cache"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/core"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/css"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/hash"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/is-prop-valid"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/memoize"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/preact-core"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/preact-styled-base"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/preact-styled"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/serialize"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/sheet"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/styled-base"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/styled"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/stylis"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/unitless"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/weak-memoize"
       }
     ],
     "github": {
@@ -10079,6 +10187,24 @@
     }
   },
   {
+    "name": "imi",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "yurunsoft/imi"
+      }
+    ],
+    "github": {
+      "repo": "Yurunsoft/IMI"
+    },
+    "opencollective": {
+      "id": 21672,
+      "name": "IMI",
+      "slug": "imi",
+      "description": null
+    }
+  },
+  {
     "name": "immalf",
     "packages": [],
     "github": {
@@ -10243,6 +10369,24 @@
         "name": "inquirer"
       }
     ]
+  },
+  {
+    "name": "intelligo",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "intelligo"
+      }
+    ],
+    "github": {
+      "repo": "techstar-cloud/intelligo"
+    },
+    "opencollective": {
+      "id": 21885,
+      "name": "intelligo",
+      "slug": "intelligo",
+      "description": null
+    }
   },
   {
     "name": "invoiceplane",
@@ -16260,6 +16404,24 @@
     }
   },
   {
+    "name": "pnpm",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "pnpm"
+      }
+    ],
+    "github": {
+      "repo": "pnpm/pnpm"
+    },
+    "opencollective": {
+      "id": 21990,
+      "name": "pnpm",
+      "slug": "pnpm",
+      "description": null
+    }
+  },
+  {
     "name": "podsframework",
     "packages": [
       {
@@ -16421,6 +16583,10 @@
       {
         "type": "npm",
         "name": "stylefire"
+      },
+      {
+        "type": "npm",
+        "name": "@popmotion/popcorn"
       }
     ],
     "github": {
@@ -17977,6 +18143,28 @@
         "yearlyBudget": 0
       },
       "sponsors": []
+    }
+  },
+  {
+    "name": "react-timeline-gantt",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-gantt-timeline"
+      },
+      {
+        "type": "npm",
+        "name": "react-list"
+      }
+    ],
+    "github": {
+      "repo": "guiqui/react-timeline-gantt"
+    },
+    "opencollective": {
+      "id": 21826,
+      "name": "react-timeline-gantt",
+      "slug": "react-timeline-gantt",
+      "description": "Highly functional and optimal  multipurpose timeline"
     }
   },
   {
@@ -19992,6 +20180,24 @@
     }
   },
   {
+    "name": "solidus",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "solidus"
+      }
+    ],
+    "github": {
+      "repo": "solidusio/solidus"
+    },
+    "opencollective": {
+      "id": 21928,
+      "name": "Solidus",
+      "slug": "solidus",
+      "description": "Solidus is a free, open-source ecommerce platform that gives you complete control over your store."
+    }
+  },
+  {
     "name": "sopel",
     "packages": [
       {
@@ -20342,6 +20548,10 @@
       {
         "type": "npm",
         "name": "@storybook/mithril"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/ember"
       }
     ],
     "opencollective": {
@@ -21441,6 +21651,10 @@
       {
         "type": "composer",
         "name": "symfony/polyfill-intl-messageformatter"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-idn"
       }
     ],
     "github": {
