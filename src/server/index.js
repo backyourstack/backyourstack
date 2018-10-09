@@ -191,6 +191,11 @@ nextApp.prepare().then(() => {
     next();
   });
 
+  server.use('/_next/static/fonts', (req, res, next) => {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    next();
+  });
+
   server.use((req, res, next) => {
     const sessionSet =
       has(req, 'session.passport') || has(req, 'session.files');
