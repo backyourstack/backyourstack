@@ -12,7 +12,6 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
           <meta
             property="og:image"
             content="https://backyourstack.com/static/img/logo-og-1.png"

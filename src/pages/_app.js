@@ -5,6 +5,7 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import { get } from 'lodash';
 
+import '../static/fonts/inter-ui/inter-ui.css';
 import '../static/css/main.css';
 import '../static/css/nprogress.css';
 
