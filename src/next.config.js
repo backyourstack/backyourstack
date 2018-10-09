@@ -42,6 +42,19 @@ module.exports = withCSS({
         test: /\.md$/,
         use: ['babel-loader', '@mdx-js/loader'],
       },
+      {
+        test: /\.(woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '/_next/static/fonts/',
+              outputPath: 'static/fonts/',
+              name: '[name]-[hash].[ext]',
+            },
+          },
+        ],
+      },
     );
 
     return config;
