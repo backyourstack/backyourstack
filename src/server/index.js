@@ -191,7 +191,7 @@ nextApp.prepare().then(() => {
     next();
   });
 
-  server.use('/_next/static/fonts', (req, res, next) => {
+  server.use('/_next/static', (req, res, next) => {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     next();
   });
