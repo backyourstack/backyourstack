@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { emailSubscribe } from '../lib/data';
+import { fetchJson } from '../lib/fetch';
 
 export default class SubscribeForm extends React.Component {
   static propTypes = {
@@ -21,10 +21,19 @@ export default class SubscribeForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    emailSubscribe(this.state.email, this.props.profile).then(() => {
+    this.emailSubscribe(this.state.email, this.props.profile).then(() => {
       this.setState({ subscribed: true });
     });
   };
+
+  emailSubscribe = (email, profile) =>
+    fetchJson('/data/emailSubscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify({ email, profile }),
+    });
 
   render() {
     const { email, subscribed } = this.state;

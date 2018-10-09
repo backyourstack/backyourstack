@@ -6,7 +6,7 @@ import { get } from 'lodash';
 
 import { Link } from '../routes';
 
-import { getProfileData } from '../lib/data';
+import { fetchJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,6 +19,11 @@ import SubscribeForm from '../components/SubscribeForm';
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
 
+const getProfileData = (id, accessToken) =>
+  process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfileData?id=${id}`)
+    : import('../lib/data').then(m => m.getProfileData(id, accessToken));
+
 export default class Profile extends React.Component {
   static async getInitialProps({ req, query }) {
     const initialProps = { section: query.section };
@@ -26,6 +31,7 @@ export default class Profile extends React.Component {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
       const data = await getProfileData(query.id, accessToken);
+
       return { ...initialProps, ...data };
     } catch (error) {
       return { ...initialProps, error };

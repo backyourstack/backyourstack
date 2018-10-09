@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { getUserOrgs } from '../lib/data';
-import { supportedFiles } from '../lib/dependencies';
+import { fetchJson } from '../lib/fetch';
+import supportedFiles from '../lib/dependencies/supported-files';
 
 import { Link, Router } from '../routes';
 
@@ -11,6 +11,11 @@ import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
+
+const getUserOrgs = accessToken =>
+  process.env.IS_CLIENT
+    ? fetchJson('/data/getUserOrgs')
+    : import('../lib/data').then(m => m.getUserOrgs(accessToken));
 
 export default class Index extends Component {
   static async getInitialProps({ req }) {

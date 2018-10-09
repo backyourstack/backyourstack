@@ -1,7 +1,5 @@
 import fetch from 'cross-fetch';
 
-import logger from '../logger';
-
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
 import { fetchCollectiveWithBacking } from './opencollective';
@@ -12,56 +10,28 @@ import {
   getRecommendedProjectFromDependencies,
 } from './utils';
 
-import {
-  getDependenciesFromGithubRepo,
-  dependenciesStats,
-} from './dependencies';
+import { getDependenciesFromGithubRepo } from './dependencies/data';
+import { dependenciesStats } from './dependencies/utils';
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
-function fetchDebug(result) {
-  logger.debug(result);
-  return result;
+export function getProfile(slug, accessToken) {
+  return fetchProfile(slug, accessToken);
 }
 
-function fetchJson(url, params = {}) {
-  params.credentials = 'same-origin';
-  return fetch(url, params)
-    .then(res => res.json())
-    .then(fetchDebug);
+export function getUserOrgs(accessToken) {
+  return fetchWithOctokit('users.getOrgs', {}, accessToken);
 }
 
-function getProfile(slug, accessToken) {
-  return process.browser
-    ? fetchJson(`/data/getProfile?slug=${slug}`)
-    : fetchProfile(slug, accessToken);
+export function searchUsers(q, accessToken) {
+  return fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-function getUserOrgs(accessToken) {
-  return process.browser
-    ? fetchJson('/data/getUserOrgs')
-    : fetchWithOctokit('users.getOrgs', {}, accessToken);
-}
-
-function searchUsers(q, accessToken) {
-  return process.browser
-    ? fetchJson(`/data/searchUsers?q=${q}`)
-    : fetchWithOctokit('search.users', { q }, accessToken);
-}
-
-function getCollectiveWithBacking(profile) {
-  const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
-  return fetchCollectiveWithBacking(slug);
-}
-
-async function getProfileData(id, accessToken) {
-  if (process.browser) {
-    return fetchJson(`/data/getProfileData?id=${id}`);
-  }
-
+export async function getProfileData(id, accessToken) {
   const profile = await fetchProfile(id, accessToken);
 
-  const opencollective = await getCollectiveWithBacking(profile);
+  const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
+  const opencollective = await fetchCollectiveWithBacking(slug);
 
   const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
     Promise.all(
@@ -86,11 +56,7 @@ async function getProfileData(id, accessToken) {
   return { profile, opencollective, repos, dependencies, recommendations };
 }
 
-async function getFilesData(sessionFiles) {
-  if (process.browser) {
-    return fetchJson('/data/getFilesData');
-  }
-
+export async function getFilesData(sessionFiles) {
   if (!sessionFiles) {
     return { files: {}, repos: [], dependencies: [], recommendations: [] };
   }
@@ -118,17 +84,7 @@ async function getFilesData(sessionFiles) {
   return { files, repos, dependencies, recommendations };
 }
 
-function emailSubscribe(email, profile) {
-  if (process.browser) {
-    return fetchJson('/data/emailSubscribe', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-      body: JSON.stringify({ email, profile }),
-    });
-  }
-
+export function emailSubscribe(email, profile) {
   const username = 'anystring';
   const password = process.env.MAILCHIMP_API_KEY;
 
@@ -156,12 +112,3 @@ function emailSubscribe(email, profile) {
     }),
   });
 }
-
-export {
-  getProfile,
-  searchUsers,
-  getUserOrgs,
-  getProfileData,
-  getFilesData,
-  emailSubscribe,
-};

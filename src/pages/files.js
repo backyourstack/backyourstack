@@ -5,8 +5,8 @@ import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
 
-import { getFilesData } from '../lib/data';
-import { dependenciesStats } from '../lib/dependencies';
+import { fetchJson } from '../lib/fetch';
+import { dependenciesStats } from '../lib/dependencies/utils';
 
 import Header from '../components/Header';
 import Upload from '../components/Upload';
@@ -14,12 +14,18 @@ import Upload from '../components/Upload';
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
 
+const getFilesData = sessionFiles =>
+  process.env.IS_CLIENT
+    ? fetchJson('/data/getFilesData')
+    : import('../lib/data').then(m => m.getFilesData(sessionFiles));
+
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
     const initialProps = { section: query.section };
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
+
     const { files, dependencies, recommendations } = await getFilesData(
       sessionFiles,
     );
