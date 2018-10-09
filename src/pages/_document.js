@@ -17,7 +17,6 @@ export default class MyDocument extends Document {
             need financial support.
           </title>
           <link rel="stylesheet" href="/static/fonts/inter-ui/inter-ui.css" />
-          <link rel="stylesheet" href="/_next/static/style.css" />
           <meta
             property="og:image"
             content="https://backyourstack.com/static/img/logo-og-1.png"
