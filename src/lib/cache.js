@@ -7,7 +7,7 @@ const options = {
 
 let cache = global.cache;
 if (!cache) {
-  cache = global.cache = lruCache(options);
+  cache = global.cache = new lruCache(options);
 }
 
 export default cache;
