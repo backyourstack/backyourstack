@@ -127,20 +127,19 @@ export default class DependencyTable extends React.Component {
                     />
                   </td>
                   <td className="opencollective">
-                    {dep.project &&
-                      dep.project.opencollective && (
-                        <Fragment>
-                          <span>Open Collective</span>
-                          :&nbsp;
-                          <a
-                            href={`https://opencollective.com/${
-                              dep.project.opencollective.slug
-                            }`}
-                          >
-                            {dep.project.opencollective.name}
-                          </a>
-                        </Fragment>
-                      )}
+                    {dep.project && dep.project.opencollective && (
+                      <Fragment>
+                        <span>Open Collective</span>
+                        :&nbsp;
+                        <a
+                          href={`https://opencollective.com/${
+                            dep.project.opencollective.slug
+                          }`}
+                        >
+                          {dep.project.opencollective.name}
+                        </a>
+                      </Fragment>
+                    )}
                   </td>
                 </tr>
               ))}

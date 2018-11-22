@@ -229,16 +229,16 @@ export default class SearchForm extends React.Component {
 
           {error && <div className="searchFeedback error">{error}</div>}
           {ok && <div className="searchFeedback ok">{ok}</div>}
-          {!error &&
-            !ok && <div className="searchFeedback placeholder">&nbsp;</div>}
+          {!error && !ok && (
+            <div className="searchFeedback placeholder">&nbsp;</div>
+          )}
 
-          {orgs &&
-            orgs.length > 0 && (
-              <p className="searchExamples">
-                Your organizations: &nbsp;
-                <List array={orgs} map={this.searchLink} others={false} />
-              </p>
-            )}
+          {orgs && orgs.length > 0 && (
+            <p className="searchExamples">
+              Your organizations: &nbsp;
+              <List array={orgs} map={this.searchLink} others={false} />
+            </p>
+          )}
 
           {!orgs && (
             <p className="searchExamples">

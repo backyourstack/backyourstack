@@ -260,17 +260,16 @@ export default class RecommendationCard extends React.Component {
             {recommendation.opencollective.description}
           </div>
 
-          {recommendation.repos &&
-            recommendation.repos.length > 0 && (
-              <div className="repos">
-                <strong>Used in</strong>:<br />
-                <List
-                  array={recommendation.repos}
-                  map={this.githubRepoItem}
-                  cut={3}
-                />
-              </div>
-            )}
+          {recommendation.repos && recommendation.repos.length > 0 && (
+            <div className="repos">
+              <strong>Used in</strong>:<br />
+              <List
+                array={recommendation.repos}
+                map={this.githubRepoItem}
+                cut={3}
+              />
+            </div>
+          )}
 
           {(backing || backers.length > 0) && (
             <div className="backers">
@@ -286,8 +285,9 @@ export default class RecommendationCard extends React.Component {
                   ).
                 </Fragment>
               )}
-              {backing &&
-                backers.length > 0 && <Fragment>{' Also: '}</Fragment>}
+              {backing && backers.length > 0 && (
+                <Fragment>{' Also: '}</Fragment>
+              )}
               {backers.length > 0 && (
                 <List array={backers} map={this.backerItem} cut={3} />
               )}

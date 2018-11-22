@@ -23,13 +23,12 @@ export default class List extends React.Component {
           .slice(0, cut)
           .map(el => map(el))
           .reduce((prev, curr) => [prev, ', ', curr])}{' '}
-        {others &&
-          array.length > cut && (
-            <span className="andOthers">
-              and {array.length - cut}{' '}
-              {array.length - cut === 1 ? 'other' : 'others'}
-            </span>
-          )}
+        {others && array.length > cut && (
+          <span className="andOthers">
+            and {array.length - cut}{' '}
+            {array.length - cut === 1 ? 'other' : 'others'}
+          </span>
+        )}
       </Fragment>
     );
   }

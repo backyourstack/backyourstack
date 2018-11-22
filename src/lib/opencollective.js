@@ -76,7 +76,6 @@ const getAllCollectivesQuery = `query allCollectives($HostCollectiveId: Int, $is
     }
   }
 }
-
 `;
 
 function fetchCollectiveWithBacking(slug) {
