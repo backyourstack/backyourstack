@@ -144,33 +144,6 @@
     }
   },
   {
-    "name": "akaunting",
-    "packages": [],
-    "github": {
-      "repo": "akaunting/akaunting"
-    },
-    "opencollective": {
-      "id": 13001,
-      "name": "Akaunting",
-      "slug": "akaunting",
-      "description": "We are in a mission to introduce the power of Open Source to accounting world.",
-      "sponsors": [
-        {
-          "id": 20449,
-          "type": "ORGANIZATION",
-          "slug": "obrienmediauk",
-          "name": "O'Brien Media Limited",
-          "totalDonations": 1500
-        }
-      ],
-      "stats": {
-        "balance": 3600,
-        "yearlyBudget": 14400
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "alchemy_cms",
     "packages": [
       {
@@ -638,25 +611,6 @@
           "totalDonations": 400
         }
       ]
-    }
-  },
-  {
-    "name": "anticensority",
-    "packages": [],
-    "github": {
-      "repo": "anticensority/runet-censorship-bypass"
-    },
-    "opencollective": {
-      "id": 10885,
-      "name": "Обход блокировок Рунета",
-      "slug": "anticensority",
-      "description": "Обход блокировок Рунета",
-      "stats": {
-        "balance": 2026,
-        "yearlyBudget": 2026
-      },
-      "goals": [{}],
-      "sponsors": []
     }
   },
   {
@@ -1190,25 +1144,6 @@
     }
   },
   {
-    "name": "awesome-mac",
-    "packages": [],
-    "github": {
-      "repo": "jaywcjlove/awesome-mac"
-    },
-    "opencollective": {
-      "id": 11371,
-      "name": "Awesome Mac",
-      "slug": "awesome-mac",
-      "description": "This repo is a collection of awesome Mac applications and tools for developers and designers.",
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "awesome-react-native-native-modules",
     "packages": [
       {
@@ -1227,33 +1162,6 @@
       "sponsors": [],
       "stats": {
         "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "ax-boot-framework",
-    "packages": [],
-    "github": {
-      "repo": "axboot/ax-boot-framework"
-    },
-    "opencollective": {
-      "id": 587,
-      "name": "AXBoot Framework",
-      "slug": "ax-boot-framework",
-      "description": null,
-      "sponsors": [
-        {
-          "id": 5330,
-          "type": "ORGANIZATION",
-          "slug": "99nerdsio",
-          "name": "99NERDS",
-          "totalDonations": 612
-        }
-      ],
-      "stats": {
-        "balance": 504,
         "yearlyBudget": 0
       },
       "goals": []
@@ -1310,40 +1218,6 @@
         "name": "axios"
       }
     ]
-  },
-  {
-    "name": "azuracast",
-    "packages": [],
-    "github": {
-      "repo": "AzuraCast/AzuraCast"
-    },
-    "opencollective": {
-      "id": 11912,
-      "name": "AzuraCast",
-      "slug": "azuracast",
-      "description": "A self-hosted web radio management suite, including turnkey installer tools and an easy-to-use web app to manage your stations. ",
-      "sponsors": [
-        {
-          "id": 13437,
-          "type": "ORGANIZATION",
-          "slug": "arulvakku1",
-          "name": "Arulvakku",
-          "totalDonations": 2500
-        },
-        {
-          "id": 12278,
-          "type": "ORGANIZATION",
-          "slug": "radiobrony",
-          "name": "Radio Brony",
-          "totalDonations": 500
-        }
-      ],
-      "stats": {
-        "balance": 2400,
-        "yearlyBudget": 2400
-      },
-      "goals": []
-    }
   },
   {
     "name": "babel",
@@ -2111,61 +1985,6 @@
         "name": "babel-plugin-transform-decorators-legacy"
       }
     ]
-  },
-  {
-    "name": "beaker",
-    "packages": [],
-    "github": {
-      "repo": "beakerbrowser/beaker"
-    },
-    "opencollective": {
-      "id": 788,
-      "name": "Beaker Browser",
-      "slug": "beaker",
-      "description": "Beaker is an experimental Web browser with a peer-to-peer protocol for building decentralized websites and apps.",
-      "sponsors": [
-        {
-          "id": 13759,
-          "type": "ORGANIZATION",
-          "slug": "digispend",
-          "name": "DigiSpend",
-          "totalDonations": 30000
-        },
-        {
-          "id": 1863,
-          "type": "ORGANIZATION",
-          "slug": "triplebyte",
-          "name": "Triplebyte",
-          "totalDonations": 10500
-        },
-        {
-          "id": 14238,
-          "type": "ORGANIZATION",
-          "slug": "monadicus",
-          "name": "MONADIC.US",
-          "totalDonations": 7500
-        },
-        {
-          "id": 9273,
-          "type": "ORGANIZATION",
-          "slug": "whatspast",
-          "name": "Prologue Productions",
-          "totalDonations": 6000
-        },
-        {
-          "id": 21299,
-          "type": "ORGANIZATION",
-          "slug": "transmutableco",
-          "name": "Transmutable",
-          "totalDonations": 1500
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 13483,
-        "yearlyBudget": 2779673
-      }
-    }
   },
   {
     "name": "bedrock",
@@ -3082,47 +2901,6 @@
     }
   },
   {
-    "name": "buttercup",
-    "packages": [],
-    "github": {
-      "repo": "buttercup/buttercup-desktop"
-    },
-    "opencollective": {
-      "id": 9173,
-      "name": "Buttercup",
-      "slug": "buttercup",
-      "description": "Free and Open Source Javascript Password Vault",
-      "sponsors": [
-        {
-          "id": 23119,
-          "type": "ORGANIZATION",
-          "slug": "greyskymedia1",
-          "name": "Grey Sky Media",
-          "totalDonations": 10000
-        },
-        {
-          "id": 19953,
-          "type": "ORGANIZATION",
-          "slug": "unhype",
-          "name": "Unhype",
-          "totalDonations": 500
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 500
-        }
-      ],
-      "stats": {
-        "balance": 28307,
-        "yearlyBudget": 28482
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "cancancan",
     "packages": [
       {
@@ -3664,25 +3442,6 @@
     ]
   },
   {
-    "name": "chamilo",
-    "packages": [],
-    "github": {
-      "repo": "chamilo/chamilo-lms"
-    },
-    "opencollective": {
-      "id": 12812,
-      "name": "Chamilo",
-      "slug": "chamilo",
-      "description": "Accessible, usable Open Source Learning Management System",
-      "sponsors": [],
-      "goals": [{}],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      }
-    }
-  },
-  {
     "name": "chart.js",
     "packages": [
       {
@@ -3908,25 +3667,6 @@
     }
   },
   {
-    "name": "cloudboost",
-    "packages": [],
-    "github": {
-      "repo": "CloudBoost/cloudboost"
-    },
-    "opencollective": {
-      "id": 503,
-      "name": "cloudboost",
-      "slug": "cloudboost",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "cloudcmd",
     "packages": [
       {
@@ -3979,161 +3719,6 @@
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
-      }
-    }
-  },
-  {
-    "name": "cmv-app",
-    "packages": [],
-    "github": {
-      "repo": "cmv/cmv-app"
-    },
-    "opencollective": {
-      "id": 939,
-      "name": "cmv-app",
-      "slug": "cmv-app",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "cockpit",
-    "packages": [],
-    "github": {
-      "repo": "agentejo/cockpit"
-    },
-    "opencollective": {
-      "id": 844,
-      "name": "cockpit",
-      "slug": "cockpit",
-      "description": null,
-      "sponsors": [
-        {
-          "id": 13303,
-          "type": "ORGANIZATION",
-          "slug": "template021",
-          "name": "Template Studio",
-          "totalDonations": 3000
-        },
-        {
-          "id": 22111,
-          "type": "ORGANIZATION",
-          "slug": "bit_design-gmbh",
-          "name": "bit_design GmbH",
-          "totalDonations": 2000
-        },
-        {
-          "id": 20782,
-          "type": "ORGANIZATION",
-          "slug": "weblify",
-          "name": "Weblify",
-          "totalDonations": 900
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 16729,
-        "yearlyBudget": 31526
-      }
-    }
-  },
-  {
-    "name": "code-settings-sync",
-    "packages": [],
-    "github": {
-      "repo": "shanalikhan/code-settings-sync"
-    },
-    "opencollective": {
-      "id": 14042,
-      "name": "Code Settings Sync",
-      "slug": "code-settings-sync",
-      "description": "Visual Studio Code Environment Synchronization Solution",
-      "sponsors": [],
-      "goals": [
-        {
-          "type": "yearlyBudget",
-          "amount": 70000,
-          "title": "Gitlab Sync",
-          "description": "Required to start working on Gitlab Basic features in Extension",
-          "key": 49285
-        },
-        {
-          "key": 36517,
-          "type": "yearlyBudget",
-          "amount": 90000,
-          "title": "Repository Sync",
-          "description": "Allows Us to Develop the Feature to Sync the User Folder as git repository.\nand upload repository on GitHub"
-        },
-        {
-          "key": 74684,
-          "type": "yearlyBudget",
-          "amount": 100000,
-          "title": "Import / Export File System",
-          "description": "Allows us to develop the feature to Export / Import the Settings to File System so you can sync via dropbox"
-        }
-      ],
-      "stats": {
-        "balance": 918,
-        "yearlyBudget": 36903
-      }
-    }
-  },
-  {
-    "name": "code-sleep-python",
-    "packages": [],
-    "github": {
-      "repo": "prateekiiest/Code-Sleep-Python"
-    },
-    "opencollective": {
-      "id": 17449,
-      "name": "Code-Sleep-Python",
-      "slug": "code-sleep-python",
-      "description": "Build solutions for Complex Problems Using Python",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [
-        {
-          "key": 68272,
-          "type": "yearlyBudget",
-          "amount": 100000,
-          "title": "Sponsorship ",
-          "description": "Help us sponsor more open source events to engage a bigger audience in this project who can help and contribute to make a better change"
-        }
-      ],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "codebuddies",
-    "packages": [],
-    "github": {
-      "repo": "codebuddies/codebuddies"
-    },
-    "opencollective": {
-      "id": 305,
-      "name": "CodeBuddies",
-      "slug": "codebuddies",
-      "description": "100% community-built",
-      "sponsors": [
-        {
-          "id": 16473,
-          "type": "ORGANIZATION",
-          "slug": "af_wb1",
-          "name": "Awesome Without Borders",
-          "totalDonations": 100000
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 112727,
-        "yearlyBudget": 106598
       }
     }
   },
@@ -5232,25 +4817,6 @@
     }
   },
   {
-    "name": "devfreebooks",
-    "packages": [],
-    "github": {
-      "repo": "devfreebooks/devfreebooks.github.io"
-    },
-    "opencollective": {
-      "id": 383,
-      "name": "devfreebooks",
-      "slug": "devfreebooks",
-      "description": "A collection of free books for developers and founders",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
-    }
-  },
-  {
     "name": "devise_token_auth",
     "packages": [
       {
@@ -5361,25 +4927,6 @@
         "yearlyBudget": 985154
       },
       "goals": [{}]
-    }
-  },
-  {
-    "name": "distributed",
-    "packages": [],
-    "github": {
-      "repo": "funretro/distributed"
-    },
-    "opencollective": {
-      "id": 698,
-      "name": "distributed",
-      "slug": "distributed",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 4778,
-        "yearlyBudget": 3432
-      },
-      "goals": []
     }
   },
   {
@@ -5815,89 +5362,6 @@
     }
   },
   {
-    "name": "dokku",
-    "packages": [],
-    "github": {
-      "org": "dokku"
-    },
-    "opencollective": {
-      "id": 99,
-      "name": "Dokku",
-      "slug": "dokku",
-      "description": "Docker powered mini-Heroku in around 200 lines of Bash.",
-      "sponsors": [
-        {
-          "id": 13599,
-          "type": "ORGANIZATION",
-          "slug": "plotlygraphs",
-          "name": "Plotly",
-          "totalDonations": 425000
-        },
-        {
-          "id": 14875,
-          "type": "ORGANIZATION",
-          "slug": "hcblocks",
-          "name": "Healthcare Blocks",
-          "totalDonations": 400000
-        },
-        {
-          "id": 6296,
-          "type": "ORGANIZATION",
-          "slug": "finpo",
-          "name": "FINPO, Inc.",
-          "totalDonations": 70000
-        },
-        {
-          "id": 12731,
-          "type": "ORGANIZATION",
-          "slug": "torchbox",
-          "name": "Torchbox",
-          "totalDonations": 10000
-        },
-        {
-          "id": 10442,
-          "type": "ORGANIZATION",
-          "slug": "elixircards",
-          "name": "Elixir Flashcards",
-          "totalDonations": 2600
-        },
-        {
-          "id": 10034,
-          "type": "ORGANIZATION",
-          "slug": "anonymous-new",
-          "name": "anonymous",
-          "totalDonations": 2000
-        },
-        {
-          "id": 15126,
-          "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 1000
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 800
-        },
-        {
-          "id": 13064,
-          "type": "ORGANIZATION",
-          "slug": "seospace",
-          "name": "seospace",
-          "totalDonations": 600
-        }
-      ],
-      "stats": {
-        "balance": 1088329,
-        "yearlyBudget": 1481160
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "dolibarr",
     "packages": [
       {
@@ -5951,25 +5415,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "dot",
-    "packages": [],
-    "github": {
-      "repo": "justJS/SimplePresence"
-    },
-    "opencollective": {
-      "id": 13013,
-      "name": "dotJS",
-      "slug": "dot",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -6088,25 +5533,6 @@
       },
       "goals": [{}],
       "sponsors": []
-    }
-  },
-  {
-    "name": "dv-php-core",
-    "packages": [],
-    "github": {
-      "repo": "DevlessTeam/DV-PHP-CORE"
-    },
-    "opencollective": {
-      "id": 13011,
-      "name": "DV-PHP-CORE",
-      "slug": "dv-php-core",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -6616,40 +6042,6 @@
     }
   },
   {
-    "name": "enso",
-    "packages": [],
-    "github": {
-      "repo": "laravel-enso/Enso"
-    },
-    "opencollective": {
-      "id": 19982,
-      "name": "Enso",
-      "slug": "enso",
-      "description": "A solid start for any Laravel Vue Spa project",
-      "stats": {
-        "balance": 27240,
-        "yearlyBudget": 108960
-      },
-      "goals": [],
-      "sponsors": [
-        {
-          "id": 14113,
-          "type": "ORGANIZATION",
-          "slug": "kmdig",
-          "name": "KM Digital",
-          "totalDonations": 30000
-        },
-        {
-          "id": 13254,
-          "type": "ORGANIZATION",
-          "slug": "dontpayfull",
-          "name": "DontPayFull",
-          "totalDonations": 1500
-        }
-      ]
-    }
-  },
-  {
     "name": "enzyme",
     "packages": [
       {
@@ -6807,33 +6199,6 @@
         "yearlyBudget": 0
       },
       "goals": [{}],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "excel-parser-processor",
-    "packages": [],
-    "github": {
-      "repo": "btargac/excel-parser-processor"
-    },
-    "opencollective": {
-      "id": 18106,
-      "name": "excel-parser-processor",
-      "slug": "excel-parser-processor",
-      "description": "Automate batch excel jobs like downloading all urls in a column",
-      "goals": [
-        {
-          "key": 18083,
-          "type": "balance",
-          "amount": 50000,
-          "title": "Digital Signing Costs",
-          "description": "Exe and DMG files should be digitally signed to be installed easier on windows and mac osx"
-        }
-      ],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
       "sponsors": []
     }
   },
@@ -7562,25 +6927,6 @@
     }
   },
   {
-    "name": "firekylin",
-    "packages": [],
-    "github": {
-      "repo": "firekylin/firekylin"
-    },
-    "opencollective": {
-      "id": 529,
-      "name": "firekylin",
-      "slug": "firekylin",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "flarum",
     "packages": [
       {
@@ -7674,33 +7020,6 @@
     ]
   },
   {
-    "name": "fontplop",
-    "packages": [],
-    "github": {
-      "repo": "matthewgonzalez/fontplop"
-    },
-    "opencollective": {
-      "id": 10679,
-      "name": "fontplop",
-      "slug": "fontplop",
-      "description": null,
-      "sponsors": [
-        {
-          "id": 15981,
-          "type": "ORGANIZATION",
-          "slug": "pnm-sarl",
-          "name": "P.N.M. s.àr.l.",
-          "totalDonations": 2000
-        }
-      ],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 2533
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "framework7",
     "packages": [
       {
@@ -7746,47 +7065,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "front-end-checklist",
-    "packages": [],
-    "github": {
-      "repo": "thedaviddias/Front-End-Checklist"
-    },
-    "opencollective": {
-      "id": 9897,
-      "name": "Front-End-Checklist",
-      "slug": "front-end-checklist",
-      "description": "The Front-End Checklist is perfect for modern websites and meticulous developers. Help us to develop tools around the project.",
-      "sponsors": [
-        {
-          "id": 15126,
-          "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 500
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 400
-        },
-        {
-          "id": 19953,
-          "type": "ORGANIZATION",
-          "slug": "unhype",
-          "name": "Unhype",
-          "totalDonations": 100
-        }
-      ],
-      "stats": {
-        "balance": 6933,
-        "yearlyBudget": 7781
-      },
-      "goals": []
     }
   },
   {
@@ -8266,25 +7544,6 @@
     }
   },
   {
-    "name": "gauth",
-    "packages": [],
-    "github": {
-      "repo": "gbraad/gauth"
-    },
-    "opencollective": {
-      "id": 18655,
-      "name": "gauth",
-      "slug": "gauth",
-      "description": "A simple application for multi-factor authentication",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [{}],
-      "sponsors": []
-    }
-  },
-  {
     "name": "generator-jhipster",
     "packages": [
       {
@@ -8535,25 +7794,6 @@
     ]
   },
   {
-    "name": "go-plus",
-    "packages": [],
-    "github": {
-      "repo": "joefitzgerald/go-plus"
-    },
-    "opencollective": {
-      "id": 414,
-      "name": "go-plus",
-      "slug": "go-plus",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "go-prompt",
     "opencollective": {
       "id": 17998,
@@ -8599,25 +7839,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "google-play-music-desktop-player-unofficial-",
-    "packages": [],
-    "github": {
-      "repo": "MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-"
-    },
-    "opencollective": {
-      "id": 471,
-      "name": "Google-Play-Music-Desktop-Player-UNOFFICIAL-",
-      "slug": "google-play-music-desktop-player-unofficial-",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -10447,25 +9668,6 @@
     }
   },
   {
-    "name": "icestudio",
-    "packages": [],
-    "github": {
-      "repo": "FPGAwars/icestudio"
-    },
-    "opencollective": {
-      "id": 11690,
-      "name": "",
-      "slug": "icestudio",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "iconv-lite",
     "packages": [
       {
@@ -10585,36 +9787,6 @@
     }
   },
   {
-    "name": "imglab",
-    "packages": [],
-    "github": {
-      "repo": "NaturalIntelligence/imglab"
-    },
-    "opencollective": {
-      "id": 19064,
-      "name": "imglab",
-      "slug": "imglab",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [
-        {
-          "key": 82221,
-          "type": "yearlyBudget",
-          "amount": 100000,
-          "title": "Making an Intelligent labeling tool",
-          "description": "I started imglab to speed up the image annotation process. I want to make it more accurate, faster, and intelligent than anytime it is. By reaching this goal I'll be able to spend more time on development."
-        },
-        {
-          "key": 13508
-        }
-      ],
-      "sponsors": []
-    }
-  },
-  {
     "name": "imi",
     "packages": [
       {
@@ -10635,25 +9807,6 @@
         "yearlyBudget": 0
       },
       "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "immalf",
-    "packages": [],
-    "github": {
-      "repo": "pmmp/PocketMine-MP"
-    },
-    "opencollective": {
-      "id": 18050,
-      "name": "Immalf",
-      "slug": "immalf",
-      "description": null,
-      "goals": [{}],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
       "sponsors": []
     }
   },
@@ -10824,25 +9977,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "invoiceplane",
-    "packages": [],
-    "github": {
-      "repo": "InvoicePlane/InvoicePlane"
-    },
-    "opencollective": {
-      "id": 13405,
-      "name": "InvoicePlane",
-      "slug": "invoiceplane",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -11583,25 +10717,6 @@
     }
   },
   {
-    "name": "jqplay",
-    "packages": [],
-    "github": {
-      "repo": "jingweno/jqplay"
-    },
-    "opencollective": {
-      "id": 437,
-      "name": "jqplay",
-      "slug": "jqplay",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 7640,
-        "yearlyBudget": 9660
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "jquery",
     "packages": [
       {
@@ -11609,25 +10724,6 @@
         "name": "jquery"
       }
     ]
-  },
-  {
-    "name": "jquery-adaptive-background",
-    "packages": [],
-    "github": {
-      "repo": "briangonzalez/jquery.adaptive-backgrounds.js"
-    },
-    "opencollective": {
-      "id": 8870,
-      "name": "jquery.adaptive-backgrounds.js",
-      "slug": "jquery-adaptive-background",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
   },
   {
     "name": "jquery-jsonview",
@@ -11948,44 +11044,6 @@
         "balance": 4697,
         "yearlyBudget": 4697
       }
-    }
-  },
-  {
-    "name": "junior-recruit-scheduler",
-    "packages": [],
-    "github": {
-      "repo": "jojoldu/junior-recruit-scheduler"
-    },
-    "opencollective": {
-      "id": 17291,
-      "name": "junior-recruit-scheduler",
-      "slug": "junior-recruit-scheduler",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "kaku",
-    "packages": [],
-    "github": {
-      "repo": "EragonJ/Kaku"
-    },
-    "opencollective": {
-      "id": 667,
-      "name": "Kaku",
-      "slug": "kaku",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 2523,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -12805,25 +11863,6 @@
     }
   },
   {
-    "name": "lcui",
-    "packages": [],
-    "github": {
-      "repo": "lc-soft/LCUI"
-    },
-    "opencollective": {
-      "id": 509,
-      "name": "LCUI",
-      "slug": "lcui",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 285,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "lem",
     "packages": [
       {
@@ -12994,51 +12033,6 @@
         "yearlyBudget": 303770
       },
       "goals": [{}]
-    }
-  },
-  {
-    "name": "lidarr",
-    "packages": [],
-    "github": {
-      "repo": "lidarr/Lidarr"
-    },
-    "opencollective": {
-      "id": 14375,
-      "name": "Lidarr",
-      "slug": "lidarr",
-      "description": "Music Organizer",
-      "sponsors": [
-        {
-          "id": 19175,
-          "type": "ORGANIZATION",
-          "slug": "resizt0r",
-          "name": "resizt0r",
-          "totalDonations": 2000
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 400
-        }
-      ],
-      "goals": [
-        {
-          "type": "yearlyBudget",
-          "amount": 24000,
-          "title": "Yearly Hosting Costs",
-          "description": "Estimated costs for hosting our services for one year. This cost will increase as we gain users and load, but we are actively looking for cheaper hosting solutions and improving caching and performance of our services.",
-          "key": 433
-        },
-        {
-          "key": 72341
-        }
-      ],
-      "stats": {
-        "balance": 22704,
-        "yearlyBudget": 32730
-      }
     }
   },
   {
@@ -13299,55 +12293,6 @@
     ]
   },
   {
-    "name": "marktext",
-    "packages": [],
-    "github": {
-      "repo": "marktext/marktext"
-    },
-    "opencollective": {
-      "id": 14226,
-      "name": "Mark Text",
-      "slug": "marktext",
-      "description": "Next generation markdown editor, running on platforms of MacOS Windows and Linux.",
-      "sponsors": [
-        {
-          "id": 16292,
-          "type": "ORGANIZATION",
-          "slug": "readmeio",
-          "name": "ReadMe",
-          "totalDonations": 70000
-        },
-        {
-          "id": 23910,
-          "type": "ORGANIZATION",
-          "slug": "wemindai1",
-          "name": "WeMindAI",
-          "totalDonations": 10000
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 200
-        }
-      ],
-      "goals": [
-        {
-          "type": "yearlyBudget",
-          "amount": 1000000,
-          "title": "support Mark Text development",
-          "description": "Thank you very much for using Mark Text. If Mark Text helps you and gives you a good writing experience, donate Mark Text for daily development and maintenance.",
-          "key": 35760
-        }
-      ],
-      "stats": {
-        "balance": 74776,
-        "yearlyBudget": 215756
-      }
-    }
-  },
-  {
     "name": "marshmallow",
     "packages": [
       {
@@ -13565,44 +12510,6 @@
     },
     "github": {
       "repo": "mui-org/material-ui"
-    }
-  },
-  {
-    "name": "materialos",
-    "packages": [],
-    "github": {
-      "org": "materialos"
-    },
-    "opencollective": {
-      "id": 12639,
-      "name": "MaterialOS",
-      "slug": "materialos",
-      "description": "Material Design inspired iconography",
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "matterwiki",
-    "packages": [],
-    "github": {
-      "repo": "Matterwiki/Matterwiki"
-    },
-    "opencollective": {
-      "id": 443,
-      "name": "Matterwiki",
-      "slug": "matterwiki",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -14408,25 +13315,6 @@
     ],
     "github": {
       "repo": "chkr1011/MQTTnet"
-    }
-  },
-  {
-    "name": "musicplayer",
-    "packages": [],
-    "github": {
-      "repo": "musicplayer-io/redditmusicplayer"
-    },
-    "opencollective": {
-      "id": 14019,
-      "name": "musicplayer-io",
-      "slug": "musicplayer",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -15419,25 +14307,6 @@
     }
   },
   {
-    "name": "notadd",
-    "packages": [],
-    "github": {
-      "repo": "notadd/notadd"
-    },
-    "opencollective": {
-      "id": 13242,
-      "name": "notadd",
-      "slug": "notadd",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "npm-run-all",
     "packages": [
       {
@@ -15445,25 +14314,6 @@
         "name": "npm-run-all"
       }
     ]
-  },
-  {
-    "name": "npms-www",
-    "packages": [],
-    "github": {
-      "repo": "npms-io/npms-www"
-    },
-    "opencollective": {
-      "id": 255,
-      "name": "npms-www",
-      "slug": "npms-www",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
   },
   {
     "name": "nuxtjs",
@@ -15721,44 +14571,6 @@
     }
   },
   {
-    "name": "ojs",
-    "packages": [],
-    "github": {
-      "repo": "ojs/ojs"
-    },
-    "opencollective": {
-      "id": 501,
-      "name": "ojs",
-      "slug": "ojs",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "onedark-pro",
-    "packages": [],
-    "github": {
-      "repo": "Binaryify/OneDark-Pro"
-    },
-    "opencollective": {
-      "id": 16257,
-      "name": "OneDark-Pro",
-      "slug": "onedark-pro",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "onepager",
     "packages": [
       {
@@ -15911,47 +14723,6 @@
     }
   },
   {
-    "name": "openemr",
-    "packages": [],
-    "github": {
-      "repo": "openemr/openemr"
-    },
-    "opencollective": {
-      "id": 10078,
-      "name": "OpenEMR",
-      "slug": "openemr",
-      "description": "The most popular open source electronic health records and medical practice management solution.",
-      "sponsors": [
-        {
-          "id": 11275,
-          "type": "ORGANIZATION",
-          "slug": "care-management-solutions-inc",
-          "name": "care management solutions, inc.",
-          "totalDonations": 10000
-        },
-        {
-          "id": 13266,
-          "type": "ORGANIZATION",
-          "slug": "vitalityrcm1",
-          "name": "VitalityRCM",
-          "totalDonations": 1500
-        },
-        {
-          "id": 11219,
-          "type": "ORGANIZATION",
-          "slug": "wearejarvus",
-          "name": "Jarvus Innovations",
-          "totalDonations": 1500
-        }
-      ],
-      "stats": {
-        "balance": 61996,
-        "yearlyBudget": 67225
-      },
-      "goals": [{}]
-    }
-  },
-  {
     "name": "openfl",
     "packages": [
       {
@@ -16020,108 +14791,6 @@
     }
   },
   {
-    "name": "openlayers",
-    "packages": [],
-    "github": {
-      "repo": "openlayers/openlayers"
-    },
-    "opencollective": {
-      "id": 456,
-      "name": "openlayers",
-      "slug": "openlayers",
-      "description": "A high-performance, feature-packed library for all your mapping needs.",
-      "sponsors": [],
-      "stats": {
-        "balance": 142,
-        "yearlyBudget": 1704
-      },
-      "goals": [
-        {
-          "key": 8083,
-          "type": "yearlyBudget",
-          "description": "Once a year, a code sprint gathers the most dedicated developers for a collocated week in a remote place with good bandwidth. This strengthen the community spirit and delivers brilliant technical updates.\n",
-          "title": "Yearly code sprint ",
-          "amount": 4600000
-        },
-        {
-          "key": 31130,
-          "type": "yearlyBudget",
-          "description": "The openlayers project maintains a gallery of examples. You’ll find for every use case a starting example as well as mind blowing ideas, you never thought Openlayers could be used for.\n",
-          "title": "Examples gallery and documentation",
-          "amount": 600000
-        },
-        {
-          "key": 76306,
-          "type": "yearlyBudget",
-          "amount": 2100000,
-          "title": "Monthly releases",
-          "description": "Every month, the team does a release. Let’s support this work, as everyone profits from stable releases."
-        },
-        {
-          "key": 89902,
-          "type": "balance",
-          "amount": 5600000,
-          "title": "Community outreach",
-          "description": "The community outreaches at special technical conferences, like FOSS4G and their local events. Let’s support sending committers to these event so that everyone gets the latest updates.\n"
-        }
-      ]
-    }
-  },
-  {
-    "name": "openmined",
-    "packages": [],
-    "github": {
-      "repo": "OpenMined/PySyft"
-    },
-    "opencollective": {
-      "id": 14371,
-      "name": "OpenMined",
-      "slug": "openmined",
-      "description": "OpenMined is an open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence.",
-      "stats": {
-        "balance": 26234,
-        "yearlyBudget": 114321
-      },
-      "goals": [{}],
-      "sponsors": [
-        {
-          "id": 23661,
-          "type": "ORGANIZATION",
-          "slug": "webmart",
-          "name": "Webmart",
-          "totalDonations": 41800
-        }
-      ]
-    }
-  },
-  {
-    "name": "opensourcedesign",
-    "packages": [],
-    "github": {
-      "org": "opensourcedesign"
-    },
-    "opencollective": {
-      "id": 371,
-      "name": "Open Source Design",
-      "slug": "opensourcedesign",
-      "description": "Connecting open source & design! 🎨",
-      "sponsors": [
-        {
-          "id": 10070,
-          "type": "ORGANIZATION",
-          "slug": "discourse",
-          "name": "Civilized Discourse Construction Kit, Inc.",
-          "totalDonations": 100000
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 110388,
-        "yearlyBudget": 77473
-      }
-    }
-  },
-  {
     "name": "openstates",
     "packages": [
       {
@@ -16142,32 +14811,6 @@
         "yearlyBudget": 0
       },
       "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "openwhyd",
-    "packages": [],
-    "github": {
-      "repo": "openwhyd/openwhyd"
-    },
-    "opencollective": {
-      "id": 658,
-      "name": "Openwhyd",
-      "slug": "openwhyd",
-      "description": "Openwhyd - The community of music lovers",
-      "stats": {
-        "balance": 16525,
-        "yearlyBudget": 27635
-      },
-      "goals": [
-        {
-          "key": 89696,
-          "type": "yearlyBudget",
-          "amount": 24000,
-          "title": "1 year of hosting fees + domain name renewal"
-        }
-      ],
       "sponsors": []
     }
   },
@@ -16443,25 +15086,6 @@
         "balance": 71071,
         "yearlyBudget": 105391
       }
-    }
-  },
-  {
-    "name": "owasp-nettacker",
-    "packages": [],
-    "github": {
-      "repo": "zdresearch/OWASP-Nettacker"
-    },
-    "opencollective": {
-      "id": 21750,
-      "name": "OWASP-Nettacker",
-      "slug": "owasp-nettacker",
-      "description": null,
-      "stats": {
-        "balance": 8680,
-        "yearlyBudget": 8680
-      },
-      "goals": [],
-      "sponsors": []
     }
   },
   {
@@ -16791,25 +15415,6 @@
     }
   },
   {
-    "name": "partkeepr",
-    "packages": [],
-    "github": {
-      "repo": "partkeepr/PartKeepr"
-    },
-    "opencollective": {
-      "id": 16606,
-      "name": "PartKeepr",
-      "slug": "partkeepr",
-      "description": "PartKeepr is an inventory management solution, especially for electronic components.",
-      "sponsors": [],
-      "goals": [{}],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      }
-    }
-  },
-  {
     "name": "passport",
     "packages": [
       {
@@ -17107,44 +15712,6 @@
         "yearlyBudget": 0
       },
       "goals": []
-    }
-  },
-  {
-    "name": "pixelfed-528",
-    "packages": [],
-    "github": {
-      "repo": "pixelfed/pixelfed"
-    },
-    "opencollective": {
-      "id": 23791,
-      "name": "pixelfed",
-      "slug": "pixelfed-528",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "platform",
-    "packages": [],
-    "github": {
-      "repo": "ushahidi/platform"
-    },
-    "opencollective": {
-      "id": 21565,
-      "name": "platform",
-      "slug": "platform",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
     }
   },
   {
@@ -17615,80 +16182,6 @@
     }
   },
   {
-    "name": "pterodactyl",
-    "packages": [],
-    "github": {
-      "repo": "Pterodactyl/Panel"
-    },
-    "opencollective": {
-      "id": 10006,
-      "name": "Pterodactyl Software",
-      "slug": "pterodactyl",
-      "description": "We are on a mission to rid the world of expensive, bloated, and inflexible software.",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "publii",
-    "packages": [],
-    "github": {
-      "repo": "GetPublii/Publii"
-    },
-    "opencollective": {
-      "id": 17892,
-      "name": "Publii",
-      "slug": "publii",
-      "description": "Open-Source Static Site CMS available for Windows, MacOs and Linux",
-      "goals": [{}],
-      "stats": {
-        "balance": 53555,
-        "yearlyBudget": 152281
-      },
-      "sponsors": [
-        {
-          "id": 19649,
-          "type": "ORGANIZATION",
-          "slug": "weblegalca",
-          "name": "WebLegal.ca",
-          "totalDonations": 40000
-        },
-        {
-          "id": 22951,
-          "type": "ORGANIZATION",
-          "slug": "noxidsoft1",
-          "name": "Noxidsoft",
-          "totalDonations": 5000
-        },
-        {
-          "id": 20738,
-          "type": "ORGANIZATION",
-          "slug": "uberfacil1",
-          "name": "Uberfácil",
-          "totalDonations": 600
-        },
-        {
-          "id": 15126,
-          "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 500
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 200
-        }
-      ]
-    }
-  },
-  {
     "name": "pug",
     "packages": [
       {
@@ -17983,36 +16476,6 @@
       },
       "goals": [{}],
       "sponsors": []
-    }
-  },
-  {
-    "name": "radarr",
-    "packages": [],
-    "github": {
-      "repo": "Radarr/Radarr"
-    },
-    "opencollective": {
-      "id": 14044,
-      "name": "Radarr",
-      "slug": "radarr",
-      "description": "Radarr provides an excellent automated movie experience.",
-      "sponsors": [],
-      "stats": {
-        "balance": 155758,
-        "yearlyBudget": 189105
-      },
-      "goals": [
-        {
-          "key": 31035,
-          "type": "yearlyBudget",
-          "amount": 30000,
-          "title": "Costs of running the Radarr API server.",
-          "description": "The server running the Radarr API costs 25$ a month, thus 300$ dollars a year."
-        },
-        {
-          "key": 9499
-        }
-      ]
     }
   },
   {
@@ -19377,25 +17840,6 @@
     }
   },
   {
-    "name": "redirectcenter",
-    "packages": [],
-    "github": {
-      "repo": "udleinati/redirect.center"
-    },
-    "opencollective": {
-      "id": 20677,
-      "name": "redirect.center",
-      "slug": "redirectcenter",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
-    }
-  },
-  {
     "name": "redom",
     "packages": [
       {
@@ -19437,68 +17881,6 @@
     ]
   },
   {
-    "name": "redux-devtools-extension",
-    "packages": [],
-    "github": {
-      "repo": "zalmoxisus/redux-devtools-extension"
-    },
-    "opencollective": {
-      "id": 338,
-      "name": "redux-devtools-extension",
-      "slug": "redux-devtools-extension",
-      "description": "DevTools browser extension helps to boost the developer’s productivity significantly and makes the development fun.",
-      "sponsors": [
-        {
-          "id": 2030,
-          "type": "ORGANIZATION",
-          "slug": "accelebrate",
-          "name": "Accelebrate",
-          "totalDonations": 200000
-        },
-        {
-          "id": 4087,
-          "type": "ORGANIZATION",
-          "slug": "airbnb",
-          "name": "Airbnb",
-          "totalDonations": 39600
-        },
-        {
-          "id": 2090,
-          "type": "ORGANIZATION",
-          "slug": "frenchtoastrllc",
-          "name": "French Toasters LLC",
-          "totalDonations": 3500
-        },
-        {
-          "id": 1194,
-          "type": "ORGANIZATION",
-          "slug": "uptrend-tech",
-          "name": "Uptrend Technology, Inc.",
-          "totalDonations": 2600
-        },
-        {
-          "id": 19493,
-          "type": "ORGANIZATION",
-          "slug": "matter_hq",
-          "name": "Matter",
-          "totalDonations": 800
-        },
-        {
-          "id": 13618,
-          "type": "ORGANIZATION",
-          "slug": "fmbase",
-          "name": "FM Base Ltd",
-          "totalDonations": 800
-        }
-      ],
-      "stats": {
-        "balance": 315622,
-        "yearlyBudget": 205340
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "redux-form",
     "packages": [
       {
@@ -19528,25 +17910,6 @@
           "totalDonations": 10000
         }
       ]
-    }
-  },
-  {
-    "name": "redux-in-chinese",
-    "packages": [],
-    "github": {
-      "repo": "camsong/redux-in-chinese"
-    },
-    "opencollective": {
-      "id": 13953,
-      "name": "redux-in-chinese",
-      "slug": "redux-in-chinese",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -19661,25 +18024,6 @@
     }
   },
   {
-    "name": "remote-ftp",
-    "packages": [],
-    "github": {
-      "repo": "icetee/remote-ftp"
-    },
-    "opencollective": {
-      "id": 14243,
-      "name": "remote-ftp",
-      "slug": "remote-ftp",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "request",
     "packages": [
       {
@@ -19687,25 +18031,6 @@
         "name": "request"
       }
     ]
-  },
-  {
-    "name": "research-engine",
-    "packages": [],
-    "github": {
-      "repo": "WorldBrain/Research-Engine"
-    },
-    "opencollective": {
-      "id": 681,
-      "name": "WorldBrain",
-      "slug": "research-engine",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
   },
   {
     "name": "rest-hapi",
@@ -19742,44 +18067,6 @@
         "balance": 0,
         "yearlyBudget": 0
       }
-    }
-  },
-  {
-    "name": "resumake",
-    "packages": [],
-    "github": {
-      "repo": "saadq/resumake.io"
-    },
-    "opencollective": {
-      "id": 13247,
-      "name": "resumake",
-      "slug": "resumake",
-      "description": "Node/React/Redux/Flow",
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "resume",
-    "packages": [],
-    "github": {
-      "repo": "DIYgod/Resume"
-    },
-    "opencollective": {
-      "id": 11200,
-      "name": "Resume",
-      "slug": "resume",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -21949,47 +20236,6 @@
     }
   },
   {
-    "name": "streetmix",
-    "packages": [],
-    "github": {
-      "repo": "streetmix/streetmix"
-    },
-    "opencollective": {
-      "id": 117,
-      "name": "Streetmix",
-      "slug": "streetmix",
-      "description": "Streetmix is a browser-based interactive tool that lets you design, remix, and share your neighborhood street. Add trees or bike paths, widen sidewalks or traffic lanes, and learn how your decisions can impact your community.",
-      "sponsors": [
-        {
-          "id": 8966,
-          "type": "ORGANIZATION",
-          "slug": "arup",
-          "name": "Arup",
-          "totalDonations": 7500
-        },
-        {
-          "id": 8791,
-          "type": "ORGANIZATION",
-          "slug": "octo-sa",
-          "name": "OCTO, SA",
-          "totalDonations": 2000
-        },
-        {
-          "id": 10347,
-          "type": "ORGANIZATION",
-          "slug": "movebybike",
-          "name": "MOVEBYBiKE Stockholm",
-          "totalDonations": 1000
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 203065,
-        "yearlyBudget": 194720
-      }
-    }
-  },
-  {
     "name": "strider",
     "packages": [
       {
@@ -22222,25 +20468,6 @@
         "name": "superagent"
       }
     ]
-  },
-  {
-    "name": "surfbird",
-    "packages": [],
-    "github": {
-      "repo": "surfbirdapp/surfbird"
-    },
-    "opencollective": {
-      "id": 10552,
-      "name": "Surfbird",
-      "slug": "surfbird",
-      "description": "Microblogging client built on Electron and Vue",
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
   },
   {
     "name": "svgr",
@@ -23168,33 +21395,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "tipbox",
-    "packages": [],
-    "github": {
-      "repo": "xdamman/tipbox"
-    },
-    "opencollective": {
-      "id": 7,
-      "name": "tipbox",
-      "slug": "tipbox",
-      "description": "Get anonymous feedback & tips from the communities you want",
-      "sponsors": [
-        {
-          "id": 5659,
-          "type": "ORGANIZATION",
-          "slug": "knightfdn",
-          "name": "Knight Foundation",
-          "totalDonations": 3500000
-        }
-      ],
-      "stats": {
-        "balance": -2798,
-        "yearlyBudget": 0
-      },
-      "goals": []
     }
   },
   {
@@ -24489,25 +22689,6 @@
     }
   },
   {
-    "name": "vim-cheat-sheet",
-    "packages": [],
-    "github": {
-      "repo": "rtorr/vim-cheat-sheet"
-    },
-    "opencollective": {
-      "id": 324,
-      "name": "vim-cheat-sheet",
-      "slug": "vim-cheat-sheet",
-      "description": null,
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "vis",
     "packages": [
       {
@@ -25057,44 +23238,6 @@
         "yearlyBudget": 0
       },
       "goals": []
-    }
-  },
-  {
-    "name": "weather-10kb",
-    "packages": [],
-    "github": {
-      "repo": "JulianNorton/weather-10kb-wxkb"
-    },
-    "opencollective": {
-      "id": 552,
-      "name": "weather-10kb",
-      "slug": "weather-10kb",
-      "description": "https://wxkb.io",
-      "sponsors": [],
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": []
-    }
-  },
-  {
-    "name": "webcomic",
-    "packages": [],
-    "github": {
-      "repo": "mgsisk/webcomic"
-    },
-    "opencollective": {
-      "id": 22968,
-      "name": "webcomic",
-      "slug": "webcomic",
-      "description": null,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
     }
   },
   {
@@ -25818,25 +23961,6 @@
         "name": "winston"
       }
     ]
-  },
-  {
-    "name": "wireflow",
-    "packages": [],
-    "github": {
-      "repo": "vanila-io/wireflow"
-    },
-    "opencollective": {
-      "id": 10685,
-      "name": "wireflow",
-      "slug": "wireflow",
-      "description": "Create simple and beautiful user flows. Real-Time collaboration and over 100 graphics to use.",
-      "sponsors": [],
-      "stats": {
-        "balance": 405,
-        "yearlyBudget": 405
-      },
-      "goals": []
-    }
   },
   {
     "name": "wpgulp",
