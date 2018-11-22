@@ -110,7 +110,7 @@
       "description": "Fullstack authentication and accounts-management for Javascript.",
       "sponsors": [],
       "stats": {
-        "balance": 1620,
+        "balance": 2025,
         "yearlyBudget": 4860
       },
       "goals": []
@@ -160,11 +160,11 @@
           "type": "ORGANIZATION",
           "slug": "obrienmediauk",
           "name": "O'Brien Media Limited",
-          "totalDonations": 1000
+          "totalDonations": 1500
         }
       ],
       "stats": {
-        "balance": 2400,
+        "balance": 3600,
         "yearlyBudget": 14400
       },
       "goals": []
@@ -276,21 +276,21 @@
           "type": "ORGANIZATION",
           "slug": "typhoonhil",
           "name": "Typhoon HIL",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 17419,
           "type": "ORGANIZATION",
           "slug": "pdfanalytics",
           "name": "PDFAnalytics",
-          "totalDonations": 2500
+          "totalDonations": 3000
         },
         {
           "id": 12533,
           "type": "ORGANIZATION",
           "slug": "tinkoffru",
           "name": "Tinkoff",
-          "totalDonations": 1800
+          "totalDonations": 2000
         }
       ],
       "goals": [
@@ -317,8 +317,8 @@
         }
       ],
       "stats": {
-        "balance": 90067,
-        "yearlyBudget": 147732
+        "balance": 101084,
+        "yearlyBudget": 146634
       }
     }
   },
@@ -374,10 +374,18 @@
       "name": "anchor-cms",
       "slug": "anchor-cms",
       "description": "Anchor is a super-simple, lightweight blog system,  made to let you just write.",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 23716,
+          "type": "ORGANIZATION",
+          "slug": "hebergeurweb-ca",
+          "name": "HebergeurWeb.ca",
+          "totalDonations": 5000
+        }
+      ],
       "stats": {
-        "balance": 400,
-        "yearlyBudget": 400
+        "balance": 4675,
+        "yearlyBudget": 51700
       },
       "goals": []
     }
@@ -502,8 +510,8 @@
         }
       ],
       "stats": {
-        "balance": 141371,
-        "yearlyBudget": 65441
+        "balance": 141970,
+        "yearlyBudget": 54923
       },
       "goals": []
     }
@@ -604,8 +612,8 @@
         }
       ],
       "stats": {
-        "balance": 17644,
-        "yearlyBudget": 105864
+        "balance": 26896,
+        "yearlyBudget": 109296
       },
       "sponsors": [
         {
@@ -613,13 +621,20 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 20000
+          "totalDonations": 30000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
+          "totalDonations": 600
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
           "totalDonations": 400
         }
       ]
@@ -637,10 +652,10 @@
       "slug": "anticensority",
       "description": "Обход блокировок Рунета",
       "stats": {
-        "balance": 1200,
-        "yearlyBudget": 1200
+        "balance": 2026,
+        "yearlyBudget": 2026
       },
-      "goals": [],
+      "goals": [{}],
       "sponsors": []
     }
   },
@@ -733,12 +748,12 @@
           "type": "ORGANIZATION",
           "slug": "friendbuy1",
           "name": "friendbuy",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ],
       "stats": {
-        "balance": 37788,
-        "yearlyBudget": 187082
+        "balance": 52461,
+        "yearlyBudget": 180621
       },
       "goals": []
     }
@@ -751,8 +766,8 @@
       "slug": "apex-up",
       "description": null,
       "stats": {
-        "balance": 76063,
-        "yearlyBudget": 358705
+        "balance": 88355,
+        "yearlyBudget": 353468
       },
       "goals": [],
       "sponsors": [
@@ -768,14 +783,14 @@
           "type": "ORGANIZATION",
           "slug": "cheznestor",
           "name": "Chez Nestor",
-          "totalDonations": 6000
+          "totalDonations": 7000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 1400
+          "totalDonations": 1600
         },
         {
           "id": 10117,
@@ -789,7 +804,7 @@
           "type": "ORGANIZATION",
           "slug": "announcekit",
           "name": "AnnounceKit",
-          "totalDonations": 400
+          "totalDonations": 600
         },
         {
           "id": 19113,
@@ -864,7 +879,7 @@
       "description": "Wow, such a beautiful HTML5 music player",
       "sponsors": [],
       "stats": {
-        "balance": 494,
+        "balance": 636,
         "yearlyBudget": 1704
       },
       "goals": []
@@ -887,8 +902,8 @@
       "slug": "asciidoctor",
       "description": "Asciidoctor is a comprehensive, user-friendly publishing toolchain for converting AsciiDoc content to HTML5, DocBook, PDF, and other formats.",
       "stats": {
-        "balance": 358051,
-        "yearlyBudget": 1054201
+        "balance": 389675,
+        "yearlyBudget": 765195
       },
       "goals": [{}],
       "sponsors": [
@@ -919,11 +934,19 @@
       "slug": "assemblyscript",
       "description": "A TypeScript to WebAssembly compiler 🚀",
       "stats": {
-        "balance": 11593,
-        "yearlyBudget": 33544
+        "balance": 14475,
+        "yearlyBudget": 38404
       },
       "goals": [{}],
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
+        }
+      ]
     }
   },
   {
@@ -972,41 +995,48 @@
           "type": "ORGANIZATION",
           "slug": "hogiagroup",
           "name": "Hogia",
-          "totalDonations": 1600000
+          "totalDonations": 1800000
         },
         {
           "id": 12461,
           "type": "ORGANIZATION",
           "slug": "effectory",
           "name": "Effectory",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 13215,
           "type": "ORGANIZATION",
           "slug": "merchise",
           "name": "Merchise",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 13515,
           "type": "ORGANIZATION",
           "slug": "nordic-trustee-as",
           "name": "Nordic Trustee AS",
-          "totalDonations": 80000
+          "totalDonations": 90000
         },
         {
           "id": 14009,
           "type": "ORGANIZATION",
           "slug": "teamextension",
           "name": "Team Extension",
-          "totalDonations": 80000
+          "totalDonations": 90000
         },
         {
           "id": 14196,
           "type": "ORGANIZATION",
           "slug": "diapason-treasury",
           "name": "Diapason Treasury",
+          "totalDonations": 90000
+        },
+        {
+          "id": 15169,
+          "type": "ORGANIZATION",
+          "slug": "ihorizon",
+          "name": "ihorizon Pty Ltd",
           "totalDonations": 80000
         },
         {
@@ -1014,7 +1044,14 @@
           "type": "ORGANIZATION",
           "slug": "vevida1",
           "name": "Vevida BV",
-          "totalDonations": 70000
+          "totalDonations": 80000
+        },
+        {
+          "id": 15425,
+          "type": "ORGANIZATION",
+          "slug": "exceptionless",
+          "name": "Exceptionless",
+          "totalDonations": 80000
         },
         {
           "id": 13388,
@@ -1022,26 +1059,12 @@
           "slug": "ormasoft",
           "name": "Ormasoft",
           "totalDonations": 70000
-        },
-        {
-          "id": 15425,
-          "type": "ORGANIZATION",
-          "slug": "exceptionless",
-          "name": "Exceptionless",
-          "totalDonations": 70000
-        },
-        {
-          "id": 15169,
-          "type": "ORGANIZATION",
-          "slug": "ihorizon",
-          "name": "ihorizon Pty Ltd",
-          "totalDonations": 70000
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 2050265,
-        "yearlyBudget": 3457488
+        "balance": 2268066,
+        "yearlyBudget": 3590332
       }
     }
   },
@@ -1060,7 +1083,21 @@
       "id": 23901,
       "name": "Auto-Keras",
       "slug": "autokeras",
-      "description": "Accessible AutoML for deep learning."
+      "description": "Accessible AutoML for deep learning.",
+      "stats": {
+        "balance": 1641,
+        "yearlyBudget": 10441
+      },
+      "goals": [{}],
+      "sponsors": [
+        {
+          "id": 24965,
+          "type": "ORGANIZATION",
+          "slug": "hosted-nl",
+          "name": "Hosted.nl",
+          "totalDonations": 500
+        }
+      ]
     }
   },
   {
@@ -1081,8 +1118,8 @@
       "description": "Fast and concurrent JavaScript test runner with simple test syntax and Babel built-in.",
       "sponsors": [],
       "stats": {
-        "balance": 405,
-        "yearlyBudget": 0
+        "balance": 1246,
+        "yearlyBudget": 841
       },
       "goals": [
         {
@@ -1124,17 +1161,17 @@
       "slug": "avalonia",
       "description": null,
       "stats": {
-        "balance": 44339,
-        "yearlyBudget": 138789
+        "balance": 54650,
+        "yearlyBudget": 139615
       },
-      "goals": [],
+      "goals": [{}],
       "sponsors": [
         {
           "id": 20540,
           "type": "ORGANIZATION",
           "slug": "themadbotterinc",
           "name": "The Mad Botter INC",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ]
     },
@@ -1260,7 +1297,7 @@
       ],
       "stats": {
         "balance": 875,
-        "yearlyBudget": 6831
+        "yearlyBudget": 4195
       },
       "goals": []
     }
@@ -1981,7 +2018,7 @@
           "type": "ORGANIZATION",
           "slug": "handshake",
           "name": "Handshake",
-          "totalDonations": 3000000
+          "totalDonations": 4000000
         },
         {
           "id": 6060,
@@ -1991,18 +2028,18 @@
           "totalDonations": 2400000
         },
         {
-          "id": 9337,
-          "type": "ORGANIZATION",
-          "slug": "fbopensource",
-          "name": "Facebook Open Source",
-          "totalDonations": 1300000
-        },
-        {
           "id": 4087,
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 1299500
+          "totalDonations": 1535800
+        },
+        {
+          "id": 9337,
+          "type": "ORGANIZATION",
+          "slug": "fbopensource",
+          "name": "Facebook Open Source",
+          "totalDonations": 1400000
         },
         {
           "id": 5610,
@@ -2016,28 +2053,28 @@
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 1060000
+          "totalDonations": 1160000
         },
         {
           "id": 12671,
           "type": "ORGANIZATION",
           "slug": "coinbase",
           "name": "Coinbase",
-          "totalDonations": 950000
+          "totalDonations": 1050000
         },
         {
           "id": 5954,
           "type": "ORGANIZATION",
           "slug": "webflow",
           "name": "Webflow",
-          "totalDonations": 700000
+          "totalDonations": 750000
         },
         {
           "id": 16411,
           "type": "ORGANIZATION",
           "slug": "salesforce",
           "name": "Salesforce",
-          "totalDonations": 600000
+          "totalDonations": 700000
         },
         {
           "id": 2057,
@@ -2047,10 +2084,10 @@
           "totalDonations": 370000
         }
       ],
-      "goals": [],
+      "goals": [{}],
       "stats": {
-        "balance": 8819702,
-        "yearlyBudget": 26509665
+        "balance": 9754352,
+        "yearlyBudget": 28703490
       }
     },
     "github": {
@@ -2095,6 +2132,13 @@
           "totalDonations": 30000
         },
         {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 10500
+        },
+        {
           "id": 14238,
           "type": "ORGANIZATION",
           "slug": "monadicus",
@@ -2113,13 +2157,13 @@
           "type": "ORGANIZATION",
           "slug": "transmutableco",
           "name": "Transmutable",
-          "totalDonations": 1000
+          "totalDonations": 1500
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 5388,
-        "yearlyBudget": 3221502
+        "balance": 13483,
+        "yearlyBudget": 2779673
       }
     }
   },
@@ -2145,7 +2189,7 @@
           "type": "ORGANIZATION",
           "slug": "murmur-creative",
           "name": "Murmur Creative",
-          "totalDonations": 7700
+          "totalDonations": 8400
         },
         {
           "id": 11450,
@@ -2156,7 +2200,7 @@
         }
       ],
       "stats": {
-        "balance": 23251,
+        "balance": 23973,
         "yearlyBudget": 25699
       },
       "goals": []
@@ -2536,8 +2580,8 @@
       "description": "Bevry is an open-company and community dedicated to empowering developers everywhere.",
       "sponsors": [],
       "stats": {
-        "balance": 8500,
-        "yearlyBudget": 7285
+        "balance": 8905,
+        "yearlyBudget": 6475
       },
       "goals": [{}]
     }
@@ -2602,8 +2646,8 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 585349,
-        "yearlyBudget": 613052
+        "balance": 597696,
+        "yearlyBudget": 615860
       }
     }
   },
@@ -2638,7 +2682,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 4661,
+        "balance": 4717,
         "yearlyBudget": 5165
       },
       "goals": []
@@ -2688,11 +2732,18 @@
           "slug": "idnuage",
           "name": "IDNUAGE",
           "totalDonations": 1000
+        },
+        {
+          "id": 22111,
+          "type": "ORGANIZATION",
+          "slug": "bit_design-gmbh",
+          "name": "bit_design GmbH",
+          "totalDonations": 400
         }
       ],
       "stats": {
-        "balance": 52045,
-        "yearlyBudget": 52045
+        "balance": 52329,
+        "yearlyBudget": 52037
       },
       "goals": []
     }
@@ -2726,14 +2777,14 @@
           "type": "ORGANIZATION",
           "slug": "top-mortgage-training",
           "name": "TOP mortgage training",
-          "totalDonations": 60028
+          "totalDonations": 75035
         },
         {
           "id": 19181,
           "type": "ORGANIZATION",
           "slug": "igotcha-media",
           "name": "iGotcha Media",
-          "totalDonations": 30000
+          "totalDonations": 40000
         }
       ],
       "goals": [
@@ -2746,7 +2797,7 @@
         }
       ],
       "stats": {
-        "balance": 354514,
+        "balance": 386049,
         "yearlyBudget": 624629
       }
     }
@@ -2797,35 +2848,42 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 190000
+          "totalDonations": 200000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 160000
+          "totalDonations": 170000
+        },
+        {
+          "id": 23126,
+          "type": "ORGANIZATION",
+          "slug": "webton-bv",
+          "name": "Webton BV",
+          "totalDonations": 120000
         },
         {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 15669,
           "type": "ORGANIZATION",
           "slug": "gadgetcouncil",
           "name": "YourNav",
-          "totalDonations": 60600
+          "totalDonations": 62600
         },
         {
           "id": 18484,
           "type": "ORGANIZATION",
           "slug": "searchpromocodes",
           "name": "SearchPromoCodes",
-          "totalDonations": 40000
+          "totalDonations": 50000
         },
         {
           "id": 7807,
@@ -2835,6 +2893,13 @@
           "totalDonations": 30000
         },
         {
+          "id": 17249,
+          "type": "ORGANIZATION",
+          "slug": "codefirst",
+          "name": "CodeFirst",
+          "totalDonations": 25000
+        },
+        {
           "id": 13254,
           "type": "ORGANIZATION",
           "slug": "dontpayfull",
@@ -2842,30 +2907,16 @@
           "totalDonations": 20000
         },
         {
-          "id": 10327,
+          "id": 24631,
           "type": "ORGANIZATION",
-          "slug": "keycdn",
-          "name": "KeyCDN",
-          "totalDonations": 10000
-        },
-        {
-          "id": 15126,
-          "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 1000
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 200
+          "slug": "vpsservercom1",
+          "name": "VPS Server",
+          "totalDonations": 12500
         }
       ],
       "stats": {
-        "balance": 515731,
-        "yearlyBudget": 459219
+        "balance": 714499,
+        "yearlyBudget": 1192321
       },
       "goals": []
     }
@@ -2909,14 +2960,21 @@
       "id": 17695,
       "name": "brain.js",
       "slug": "brainjs",
-      "description": null,
+      "description": "brain.js is a library of Neural Networks written in JavaScript.",
       "sponsors": [
         {
           "id": 20080,
           "type": "ORGANIZATION",
           "slug": "trooperai",
           "name": "Trooper.AI",
-          "totalDonations": 20000
+          "totalDonations": 30000
+        },
+        {
+          "id": 22398,
+          "type": "ORGANIZATION",
+          "slug": "berrynodes-ltd",
+          "name": "BerryNodes LTD",
+          "totalDonations": 500
         }
       ],
       "goals": [
@@ -2929,8 +2987,8 @@
         }
       ],
       "stats": {
-        "balance": 17160,
-        "yearlyBudget": 102960
+        "balance": 8940,
+        "yearlyBudget": 103360
       }
     }
   },
@@ -2978,10 +3036,25 @@
         }
       ],
       "stats": {
-        "balance": 717,
-        "yearlyBudget": 1869
+        "balance": 1577,
+        "yearlyBudget": 5445
       },
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 22937,
+          "type": "ORGANIZATION",
+          "slug": "0x-tracker",
+          "name": "0x Tracker",
+          "totalDonations": 400
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
+        }
+      ]
     }
   },
   {
@@ -3021,6 +3094,13 @@
       "description": "Free and Open Source Javascript Password Vault",
       "sponsors": [
         {
+          "id": 23119,
+          "type": "ORGANIZATION",
+          "slug": "greyskymedia1",
+          "name": "Grey Sky Media",
+          "totalDonations": 10000
+        },
+        {
           "id": 19953,
           "type": "ORGANIZATION",
           "slug": "unhype",
@@ -3036,8 +3116,8 @@
         }
       ],
       "stats": {
-        "balance": 14984,
-        "yearlyBudget": 20234
+        "balance": 28307,
+        "yearlyBudget": 28482
       },
       "goals": []
     }
@@ -3057,7 +3137,13 @@
       "id": 22267,
       "name": "cancancan",
       "slug": "cancancan",
-      "description": "CanCanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access."
+      "description": "CanCanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -3099,7 +3185,13 @@
       "id": 23564,
       "name": "Carbon",
       "slug": "carbon",
-      "description": "A simple PHP API extension for DateTime."
+      "description": "A simple PHP API extension for DateTime.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -3110,7 +3202,7 @@
       "slug": "catel",
       "description": "Catel is an application development platform with the focus on MVVM",
       "stats": {
-        "balance": 2634,
+        "balance": 3951,
         "yearlyBudget": 15804
       },
       "goals": [
@@ -3193,10 +3285,10 @@
       "description": "AAC communication board with text-to-speech for the browser in 33 languages",
       "sponsors": [],
       "stats": {
-        "balance": 40487,
-        "yearlyBudget": 45623
+        "balance": 50879,
+        "yearlyBudget": 54303
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -3229,19 +3321,26 @@
           "type": "ORGANIZATION",
           "slug": "nomicsfinance",
           "name": "Nomics Crypto API",
-          "totalDonations": 100000
+          "totalDonations": 150000
         },
         {
           "id": 22114,
           "type": "ORGANIZATION",
           "slug": "coincube1",
           "name": "COINCUBE",
-          "totalDonations": 50000
+          "totalDonations": 100000
+        },
+        {
+          "id": 22929,
+          "type": "ORGANIZATION",
+          "slug": "realpinebot1",
+          "name": "Pinebot",
+          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 167664,
-        "yearlyBudget": 1152972
+        "balance": 107114,
+        "yearlyBudget": 1230942
       },
       "goals": []
     }
@@ -3287,31 +3386,35 @@
       "slug": "celery",
       "description": "Task Queue",
       "stats": {
-        "balance": 85318,
-        "yearlyBudget": 147608
+        "balance": 161881,
+        "yearlyBudget": 217971
       },
       "goals": [
         {
           "type": "yearlyBudget",
           "amount": 5000000,
-          "title": "Yearly budget for a full time maintainer"
+          "title": "Yearly budget for a full time maintainer.",
+          "key": 6707,
+          "description": "Celery is a very large project which needs a full-time worker to maintain the project and work on long-standing feature requests, bug fixes and rewrite the celery core and dependencies to fit the modern async world of python3 and other new architectural improvements and stability."
         },
-        {}
+        {
+          "key": 67047
+        }
       ],
       "sponsors": [
         {
           "id": 15031,
           "type": "ORGANIZATION",
           "slug": "likalo_llc1",
-          "name": "Likalo, LLC",
-          "totalDonations": 70000
+          "name": "Docsie.io",
+          "totalDonations": 80000
         },
         {
           "id": 6382,
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 2000
+          "totalDonations": 2500
         },
         {
           "id": 19091,
@@ -3319,6 +3422,20 @@
           "slug": "hypothes_is",
           "name": "Hypothesis Project",
           "totalDonations": 1000
+        },
+        {
+          "id": 23641,
+          "type": "ORGANIZATION",
+          "slug": "pushowl",
+          "name": "PushOwl",
+          "totalDonations": 500
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
         }
       ]
     }
@@ -3379,7 +3496,7 @@
         }
       ],
       "stats": {
-        "balance": 2400,
+        "balance": 2800,
         "yearlyBudget": 4800
       }
     }
@@ -3506,21 +3623,21 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 26400
+          "totalDonations": 30800
         },
         {
           "id": 12801,
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 22500
+          "totalDonations": 25000
         },
         {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 1600
+          "totalDonations": 1800
         },
         {
           "id": 16122,
@@ -3531,8 +3648,8 @@
         }
       ],
       "stats": {
-        "balance": 50893,
-        "yearlyBudget": 93642
+        "balance": 58674,
+        "yearlyBudget": 103751
       },
       "goals": [{}]
     }
@@ -3607,42 +3724,56 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 15400
+          "totalDonations": 17600
         },
         {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 1600
-        },
-        {
-          "id": 19493,
-          "type": "ORGANIZATION",
-          "slug": "matter_hq",
-          "name": "Matter",
-          "totalDonations": 600
+          "totalDonations": 1800
         },
         {
           "id": 16527,
           "type": "ORGANIZATION",
           "slug": "blue-link-seo",
           "name": "Blue Link SEO",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 18796,
           "type": "ORGANIZATION",
           "slug": "scraperapi1",
           "name": "Scraper API",
-          "totalDonations": 600
+          "totalDonations": 800
+        },
+        {
+          "id": 19493,
+          "type": "ORGANIZATION",
+          "slug": "matter_hq",
+          "name": "Matter",
+          "totalDonations": 800
+        },
+        {
+          "id": 24822,
+          "type": "ORGANIZATION",
+          "slug": "linkfish",
+          "name": "link.fish",
+          "totalDonations": 500
+        },
+        {
+          "id": 23527,
+          "type": "ORGANIZATION",
+          "slug": "radwebhosting",
+          "name": "RADWEBHOSTING.COM",
+          "totalDonations": 200
         },
         {
           "id": 19953,
@@ -3653,8 +3784,8 @@
         }
       ],
       "stats": {
-        "balance": 161000,
-        "yearlyBudget": 163664
+        "balance": 164789,
+        "yearlyBudget": 169063
       },
       "goals": []
     }
@@ -3678,8 +3809,8 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 1528,
-        "yearlyBudget": 10521
+        "balance": 2338,
+        "yearlyBudget": 10490
       }
     }
   },
@@ -3700,8 +3831,8 @@
       "slug": "cheton",
       "description": "",
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 288,
+        "yearlyBudget": 288
       },
       "goals": [{}],
       "sponsors": []
@@ -3752,7 +3883,7 @@
           "type": "ORGANIZATION",
           "slug": "gurugate",
           "name": "GuruGate",
-          "totalDonations": 1400
+          "totalDonations": 1600
         },
         {
           "id": 19953,
@@ -3770,8 +3901,8 @@
         }
       ],
       "stats": {
-        "balance": 334072,
-        "yearlyBudget": 175664
+        "balance": 338539,
+        "yearlyBudget": 171440
       },
       "goals": []
     }
@@ -3832,9 +3963,9 @@
     },
     "opencollective": {
       "id": 14039,
-      "name": "cms",
+      "name": "Content Management System",
       "slug": "cms",
-      "description": "Laravel CMS & Admin panel",
+      "description": "Laravel CMS | CRM | ERP",
       "sponsors": [],
       "goals": [
         {
@@ -3890,17 +4021,24 @@
           "totalDonations": 3000
         },
         {
+          "id": 22111,
+          "type": "ORGANIZATION",
+          "slug": "bit_design-gmbh",
+          "name": "bit_design GmbH",
+          "totalDonations": 2000
+        },
+        {
           "id": 20782,
           "type": "ORGANIZATION",
           "slug": "weblify",
           "name": "Weblify",
-          "totalDonations": 600
+          "totalDonations": 900
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 13198,
-        "yearlyBudget": 20713
+        "balance": 16729,
+        "yearlyBudget": 31526
       }
     }
   },
@@ -3940,7 +4078,7 @@
         }
       ],
       "stats": {
-        "balance": 31086,
+        "balance": 918,
         "yearlyBudget": 36903
       }
     }
@@ -3994,8 +4132,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 111342,
-        "yearlyBudget": 108254
+        "balance": 112727,
+        "yearlyBudget": 106598
       }
     }
   },
@@ -4085,6 +4223,13 @@
       "description": "An online editor tailored for web application development",
       "sponsors": [
         {
+          "id": 23685,
+          "type": "ORGANIZATION",
+          "slug": "atlassian1",
+          "name": "Atlassian",
+          "totalDonations": 300000
+        },
+        {
           "id": 7083,
           "type": "ORGANIZATION",
           "slug": "algolia",
@@ -4096,13 +4241,13 @@
           "type": "ORGANIZATION",
           "slug": "jsheroes1",
           "name": "JSHeroes ",
-          "totalDonations": 100000
+          "totalDonations": 120000
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 248781,
-        "yearlyBudget": 369111
+        "balance": 535921,
+        "yearlyBudget": 639061
       }
     },
     "github": {
@@ -4117,8 +4262,8 @@
       "slug": "colly",
       "description": "Fast and Elegant Scraping Framework for Golang",
       "stats": {
-        "balance": 109331,
-        "yearlyBudget": 154147
+        "balance": 110604,
+        "yearlyBudget": 156716
       },
       "goals": [],
       "sponsors": [
@@ -4127,7 +4272,14 @@
           "type": "ORGANIZATION",
           "slug": "scraperapi1",
           "name": "Scraper API",
-          "totalDonations": 600
+          "totalDonations": 800
+        },
+        {
+          "id": 22309,
+          "type": "ORGANIZATION",
+          "slug": "jivesearch",
+          "name": "Jive Search",
+          "totalDonations": 400
         },
         {
           "id": 19113,
@@ -4184,7 +4336,7 @@
       "sponsors": [],
       "stats": {
         "balance": 1728,
-        "yearlyBudget": 1728
+        "yearlyBudget": 1440
       },
       "goals": []
     },
@@ -4322,8 +4474,8 @@
       "slug": "companion",
       "description": "",
       "stats": {
-        "balance": 77060,
-        "yearlyBudget": 95892
+        "balance": 127617,
+        "yearlyBudget": 188308
       },
       "goals": [
         {
@@ -4334,6 +4486,13 @@
         }
       ],
       "sponsors": [
+        {
+          "id": 22137,
+          "type": "ORGANIZATION",
+          "slug": "imimothq1",
+          "name": "Imimot",
+          "totalDonations": 11000
+        },
         {
           "id": 22091,
           "type": "ORGANIZATION",
@@ -4347,6 +4506,13 @@
           "slug": "divipro",
           "name": "DiViPro",
           "totalDonations": 6000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 1000
         }
       ]
     }
@@ -4385,7 +4551,7 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 22744,
+        "balance": 23028,
         "yearlyBudget": 24306
       }
     }
@@ -4549,8 +4715,8 @@
         }
       ],
       "stats": {
-        "balance": 252380,
-        "yearlyBudget": 276870
+        "balance": 257769,
+        "yearlyBudget": 290076
       }
     }
   },
@@ -4700,19 +4866,19 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 7000
+          "totalDonations": 8000
         },
         {
           "id": 18352,
           "type": "ORGANIZATION",
           "slug": "spritecloud1",
           "name": "SpriteCloud BV",
-          "totalDonations": 2000
+          "totalDonations": 2500
         }
       ],
       "stats": {
-        "balance": 40888,
-        "yearlyBudget": 44694
+        "balance": 47005,
+        "yearlyBudget": 45116
       },
       "goals": []
     }
@@ -4774,8 +4940,8 @@
       "slug": "cyclejs",
       "description": "A functional and reactive JavaScript framework.",
       "stats": {
-        "balance": 125107,
-        "yearlyBudget": 357972
+        "balance": 132500,
+        "yearlyBudget": 317281
       },
       "goals": [{}],
       "sponsors": [
@@ -4812,7 +4978,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 3800
+          "totalDonations": 4000
         },
         {
           "id": 2090,
@@ -4826,7 +4992,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 2000
+          "totalDonations": 2500
         },
         {
           "id": 19113,
@@ -4862,7 +5028,7 @@
       "slug": "cypressio",
       "description": "The web has evolved.  Finally, testing has too.",
       "stats": {
-        "balance": 4570,
+        "balance": 5553,
         "yearlyBudget": 14258
       },
       "goals": [{}],
@@ -4888,7 +5054,7 @@
       "sponsors": [],
       "goals": [],
       "stats": {
-        "balance": 5617,
+        "balance": 11234,
         "yearlyBudget": 67404
       }
     }
@@ -4915,12 +5081,12 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 17500
+          "totalDonations": 20000
         }
       ],
       "stats": {
-        "balance": 15870,
-        "yearlyBudget": 26605
+        "balance": 20353,
+        "yearlyBudget": 32833
       },
       "goals": [
         {
@@ -4977,7 +5143,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 17500
+          "totalDonations": 20000
         },
         {
           "id": 16752,
@@ -4991,7 +5157,7 @@
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 1600
+          "totalDonations": 1800
         },
         {
           "id": 19953,
@@ -5002,8 +5168,8 @@
         }
       ],
       "stats": {
-        "balance": 32154,
-        "yearlyBudget": 45735
+        "balance": 35103,
+        "yearlyBudget": 38587
       },
       "goals": []
     }
@@ -5035,8 +5201,8 @@
       "description": "Trusted digital governance for small communities, corporations, large cities & whole nations.",
       "sponsors": [],
       "stats": {
-        "balance": 334861,
-        "yearlyBudget": 195435
+        "balance": 347713,
+        "yearlyBudget": 212845
       },
       "goals": []
     }
@@ -5059,7 +5225,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 5046,
+        "balance": 5887,
         "yearlyBudget": 10092
       },
       "goals": []
@@ -5162,6 +5328,20 @@
           "totalDonations": 2000
         },
         {
+          "id": 22564,
+          "type": "ORGANIZATION",
+          "slug": "quasselquantic1",
+          "name": "quasselquantic",
+          "totalDonations": 2000
+        },
+        {
+          "id": 25071,
+          "type": "ORGANIZATION",
+          "slug": "vinvival1",
+          "name": "VinvivaL",
+          "totalDonations": 1000
+        },
+        {
           "id": 9271,
           "type": "ORGANIZATION",
           "slug": "daniel-boucher",
@@ -5177,8 +5357,8 @@
         }
       ],
       "stats": {
-        "balance": 161192,
-        "yearlyBudget": 960247
+        "balance": 269824,
+        "yearlyBudget": 985154
       },
       "goals": [{}]
     }
@@ -5196,8 +5376,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 4636,
-        "yearlyBudget": 7901
+        "balance": 4778,
+        "yearlyBudget": 3432
       },
       "goals": []
     }
@@ -5217,7 +5397,13 @@
       "id": 22975,
       "name": "django-activity-stream",
       "slug": "django-activity-stream",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -5283,7 +5469,13 @@
       "id": 22983,
       "name": "django-rest-framework-gis",
       "slug": "django-rest-framework-gis",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -5372,16 +5564,30 @@
           "totalDonations": 10000
         },
         {
+          "id": 23343,
+          "type": "ORGANIZATION",
+          "slug": "monostream",
+          "name": "Monostream",
+          "totalDonations": 5000
+        },
+        {
           "id": 12820,
           "type": "ORGANIZATION",
           "slug": "fvcproductions",
           "name": "FVCproductions",
           "totalDonations": 1800
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "stats": {
-        "balance": 10717,
-        "yearlyBudget": 10717
+        "balance": 15424,
+        "yearlyBudget": 16864
       },
       "goals": []
     },
@@ -5435,11 +5641,11 @@
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 100000
+          "totalDonations": 110000
         }
       ],
       "stats": {
-        "balance": 88462,
+        "balance": 97142,
         "yearlyBudget": 105822
       },
       "goals": []
@@ -5462,8 +5668,8 @@
       "slug": "docusaurus",
       "description": "Easy to Maintain Open Source Documentation Websites",
       "stats": {
-        "balance": 289950,
-        "yearlyBudget": 1104840
+        "balance": 384595,
+        "yearlyBudget": 1125420
       },
       "goals": [{}],
       "sponsors": [
@@ -5472,7 +5678,14 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 400000
+          "totalDonations": 500000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
         }
       ]
     }
@@ -5568,8 +5781,8 @@
         }
       ],
       "stats": {
-        "balance": 1200,
-        "yearlyBudget": 4800
+        "balance": 2000,
+        "yearlyBudget": 5200
       },
       "sponsors": []
     },
@@ -5618,20 +5831,20 @@
           "type": "ORGANIZATION",
           "slug": "plotlygraphs",
           "name": "Plotly",
-          "totalDonations": 365000
+          "totalDonations": 425000
         },
         {
           "id": 14875,
           "type": "ORGANIZATION",
           "slug": "hcblocks",
           "name": "Healthcare Blocks",
-          "totalDonations": 350000
+          "totalDonations": 400000
         },
         {
           "id": 6296,
           "type": "ORGANIZATION",
           "slug": "finpo",
-          "name": "Ausir Lo",
+          "name": "FINPO, Inc.",
           "totalDonations": 70000
         },
         {
@@ -5646,7 +5859,7 @@
           "type": "ORGANIZATION",
           "slug": "elixircards",
           "name": "Elixir Flashcards",
-          "totalDonations": 2400
+          "totalDonations": 2600
         },
         {
           "id": 10034,
@@ -5660,6 +5873,13 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
+          "totalDonations": 1000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
           "totalDonations": 800
         },
         {
@@ -5668,18 +5888,11 @@
           "slug": "seospace",
           "name": "seospace",
           "totalDonations": 600
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 600
         }
       ],
       "stats": {
-        "balance": 961536,
-        "yearlyBudget": 1480865
+        "balance": 1088329,
+        "yearlyBudget": 1481160
       },
       "goals": []
     }
@@ -5701,7 +5914,7 @@
       "slug": "dolibarr",
       "description": "Open Source ERP and CRM suite for business",
       "stats": {
-        "balance": 2400,
+        "balance": 2800,
         "yearlyBudget": 4800
       },
       "goals": [],
@@ -5711,7 +5924,7 @@
           "type": "ORGANIZATION",
           "slug": "oscss",
           "name": "OSCSS SHOP",
-          "totalDonations": 3000
+          "totalDonations": 3500
         }
       ]
     }
@@ -5786,7 +5999,7 @@
       "description": "Wow, such a lovely HTML5 danmaku video player",
       "sponsors": [],
       "stats": {
-        "balance": 426,
+        "balance": 568,
         "yearlyBudget": 1704
       },
       "goals": []
@@ -5868,7 +6081,13 @@
       "id": 22981,
       "name": "drf-extensions",
       "slug": "drf-extensions",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -5994,14 +6213,28 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 500000
+          "totalDonations": 600000
         },
         {
           "id": 16976,
           "type": "ORGANIZATION",
           "slug": "teamsqlio",
           "name": "TeamSQL",
-          "totalDonations": 50000
+          "totalDonations": 60000
+        },
+        {
+          "id": 22777,
+          "type": "ORGANIZATION",
+          "slug": "twentyideas",
+          "name": "Twenty Ideas",
+          "totalDonations": 55000
+        },
+        {
+          "id": 24754,
+          "type": "ORGANIZATION",
+          "slug": "brosix1",
+          "name": "Brosix",
+          "totalDonations": 10000
         },
         {
           "id": 14497,
@@ -6015,7 +6248,7 @@
           "type": "ORGANIZATION",
           "slug": "coherentsoft",
           "name": "Coherent Software",
-          "totalDonations": 4000
+          "totalDonations": 5000
         },
         {
           "id": 16100,
@@ -6029,14 +6262,14 @@
           "type": "ORGANIZATION",
           "slug": "1-bar-systems-inc",
           "name": "1 Bar Systems, Inc.",
-          "totalDonations": 2000
+          "totalDonations": 3000
         },
         {
           "id": 20800,
           "type": "ORGANIZATION",
           "slug": "saticon-gmbh",
           "name": "Saticon GmbH",
-          "totalDonations": 2000
+          "totalDonations": 3000
         },
         {
           "id": 17167,
@@ -6044,18 +6277,11 @@
           "slug": "kid-talk2",
           "name": "Kid Talk",
           "totalDonations": 1000
-        },
-        {
-          "id": 15099,
-          "type": "ORGANIZATION",
-          "slug": "lagamestudio",
-          "name": "Lost Astronaut Studios",
-          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 582598,
-        "yearlyBudget": 1334195
+        "balance": 729747,
+        "yearlyBudget": 1381223
       },
       "goals": []
     },
@@ -6081,10 +6307,10 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 14431,
-        "yearlyBudget": 10296
+        "balance": 15646,
+        "yearlyBudget": 10557
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -6134,14 +6360,14 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 210000
+          "totalDonations": 230000
         },
         {
           "id": 17136,
           "type": "ORGANIZATION",
           "slug": "bit_src",
           "name": "Bit",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 13420,
@@ -6165,6 +6391,13 @@
           "totalDonations": 1200
         },
         {
+          "id": 23535,
+          "type": "ORGANIZATION",
+          "slug": "blutv",
+          "name": "BluTV",
+          "totalDonations": 200
+        },
+        {
           "id": 11745,
           "type": "ORGANIZATION",
           "slug": "duotai",
@@ -6173,8 +6406,8 @@
         }
       ],
       "stats": {
-        "balance": 281368,
-        "yearlyBudget": 350683
+        "balance": 307450,
+        "yearlyBudget": 351258
       },
       "goals": []
     },
@@ -6367,11 +6600,19 @@
       "slug": "emotion",
       "description": "Emotion is a css-in-js library focused on performance and developer experience.",
       "stats": {
-        "balance": 2415,
-        "yearlyBudget": 9660
+        "balance": 18239,
+        "yearlyBudget": 24679
       },
       "goals": [{}],
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ]
     }
   },
   {
@@ -6386,7 +6627,7 @@
       "slug": "enso",
       "description": "A solid start for any Laravel Vue Spa project",
       "stats": {
-        "balance": 18160,
+        "balance": 27240,
         "yearlyBudget": 108960
       },
       "goals": [],
@@ -6396,14 +6637,14 @@
           "type": "ORGANIZATION",
           "slug": "kmdig",
           "name": "KM Digital",
-          "totalDonations": 20000
+          "totalDonations": 30000
         },
         {
           "id": 13254,
           "type": "ORGANIZATION",
           "slug": "dontpayfull",
           "name": "DontPayFull",
-          "totalDonations": 1000
+          "totalDonations": 1500
         }
       ]
     }
@@ -6560,7 +6801,13 @@
       "id": 24768,
       "name": "Excalibur",
       "slug": "excalibur",
-      "description": "Excalibur is a free and open source web interface to extract tabular data from PDFs in a scalable manner."
+      "description": "Excalibur is a free and open source web interface to extract tabular data from PDFs in a scalable manner.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -6573,7 +6820,7 @@
       "id": 18106,
       "name": "excel-parser-processor",
       "slug": "excel-parser-processor",
-      "description": null,
+      "description": "Automate batch excel jobs like downloading all urls in a column",
       "goals": [
         {
           "key": 18083,
@@ -6761,7 +7008,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 3800
+          "totalDonations": 4000
         },
         {
           "id": 19953,
@@ -6772,8 +7019,8 @@
         }
       ],
       "stats": {
-        "balance": 13307,
-        "yearlyBudget": 73563
+        "balance": 14841,
+        "yearlyBudget": 74260
       },
       "goals": []
     }
@@ -6791,14 +7038,29 @@
     },
     "opencollective": {
       "id": 11123,
-      "name": "falcon",
+      "name": "Falcon",
       "slug": "falcon",
-      "description": null,
+      "description": "The Bare-Metal Python Web Framework",
       "stats": {
-        "balance": 405,
+        "balance": 810,
         "yearlyBudget": 4860
       },
-      "goals": [],
+      "goals": [
+        {
+          "key": 32974,
+          "type": "yearlyBudget",
+          "amount": 250000,
+          "title": "PyCon Registration + Misc. Expenses",
+          "description": "If we can reach this goal, we will be able to cover the registration cost for all core team members to attend PyCon. Reaching this goal will also give us a small budget to be used for misc. expenses related to project maintenance, hosting, and the development or delivery of educational content around the Falcon framework."
+        },
+        {
+          "key": 61971,
+          "type": "yearlyBudget",
+          "amount": 500000,
+          "title": "PyCon Registration + Sprints + Misc. Expenses",
+          "description": "If we can reach this goal, we will be able to cover the registration cost for all core team members to attend PyCon, as well as subsidize their lodging and meals so they can stay for the sprints. Reaching this goal will also give us a small budget to be used for misc. expenses related to project maintenance, hosting, and the development or delivery of educational content around the Falcon framework."
+        }
+      ],
       "sponsors": []
     }
   },
@@ -6817,7 +7079,13 @@
       "id": 23361,
       "name": "falcon-plus",
       "slug": "falcon-plus",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -6850,8 +7118,8 @@
         }
       ],
       "stats": {
-        "balance": 4441,
-        "yearlyBudget": 5641
+        "balance": 5682,
+        "yearlyBudget": 6482
       }
     }
   },
@@ -6957,7 +7225,7 @@
           "type": "ORGANIZATION",
           "slug": "aquil_io",
           "name": "Aquil.io",
-          "totalDonations": 1000000
+          "totalDonations": 1100000
         },
         {
           "id": 9178,
@@ -6971,14 +7239,14 @@
           "type": "ORGANIZATION",
           "slug": "kalisio",
           "name": "Kalisio",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 19771,
           "type": "ORGANIZATION",
           "slug": "yuser_network2",
           "name": "Yuser Inc.",
-          "totalDonations": 75000
+          "totalDonations": 100000
         },
         {
           "id": 15203,
@@ -6999,7 +7267,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 13284,
@@ -7025,8 +7293,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 1302786,
-        "yearlyBudget": 1776265
+        "balance": 1425175,
+        "yearlyBudget": 1644289
       }
     }
   },
@@ -7221,8 +7489,8 @@
       "description": "State-Driven Styling in JavaScript",
       "sponsors": [],
       "stats": {
-        "balance": 9738,
-        "yearlyBudget": 8087
+        "balance": 39,
+        "yearlyBudget": 6410
       },
       "goals": []
     },
@@ -7276,7 +7544,7 @@
           "type": "ORGANIZATION",
           "slug": "rocket_garden",
           "name": "Rocket Garden Labs Limited",
-          "totalDonations": 17500
+          "totalDonations": 20000
         },
         {
           "id": 3400,
@@ -7287,7 +7555,7 @@
         }
       ],
       "stats": {
-        "balance": 30923,
+        "balance": 33450,
         "yearlyBudget": 45178
       },
       "goals": []
@@ -7338,14 +7606,14 @@
           "type": "ORGANIZATION",
           "slug": "boktnl",
           "name": "Bokt.nl",
-          "totalDonations": 150000
+          "totalDonations": 175000
         },
         {
           "id": 18265,
           "type": "ORGANIZATION",
           "slug": "guitartalksa",
           "name": "GuitarTalk",
-          "totalDonations": 4000
+          "totalDonations": 5000
         }
       ],
       "goals": [
@@ -7358,8 +7626,8 @@
         }
       ],
       "stats": {
-        "balance": 267120,
-        "yearlyBudget": 406038
+        "balance": 323116,
+        "yearlyBudget": 443008
       }
     }
   },
@@ -7445,15 +7713,15 @@
     },
     "opencollective": {
       "id": 13868,
-      "name": "framework7",
+      "name": "Framework7",
       "slug": "framework7",
       "description": "Full featured HTML framework\nfor building iOS & Android apps",
       "sponsors": [],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 1662,
+        "yearlyBudget": 9972
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -7497,14 +7765,14 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 500
         },
         {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 300
+          "totalDonations": 400
         },
         {
           "id": 19953,
@@ -7515,7 +7783,7 @@
         }
       ],
       "stats": {
-        "balance": 6820,
+        "balance": 6933,
         "yearlyBudget": 7781
       },
       "goals": []
@@ -7548,8 +7816,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 61019,
-        "yearlyBudget": 31425
+        "balance": 65702,
+        "yearlyBudget": 34688
       },
       "goals": []
     }
@@ -7921,14 +8189,14 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 110000
+          "totalDonations": 120000
         },
         {
           "id": 1247,
@@ -7970,14 +8238,14 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1000
+          "totalDonations": 1200
         },
         {
           "id": 18433,
           "type": "ORGANIZATION",
           "slug": "cmsbased1",
           "name": "Cmsbased",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 17416,
@@ -7988,8 +8256,8 @@
         }
       ],
       "stats": {
-        "balance": 686754,
-        "yearlyBudget": 685967
+        "balance": 728169,
+        "yearlyBudget": 677484
       },
       "goals": []
     },
@@ -8038,21 +8306,21 @@
           "type": "ORGANIZATION",
           "slug": "okta",
           "name": "Okta",
-          "totalDonations": 1000000
+          "totalDonations": 1100000
         },
         {
           "id": 14656,
           "type": "ORGANIZATION",
           "slug": "forsyslabinc",
           "name": "ForsysLab",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 17423,
           "type": "ORGANIZATION",
           "slug": "cubaplatform",
           "name": "CUBA Platform",
-          "totalDonations": 50000
+          "totalDonations": 60000
         },
         {
           "id": 21009,
@@ -8066,48 +8334,48 @@
           "type": "ORGANIZATION",
           "slug": "neebal",
           "name": "Neebal Technologies Pvt Ltd",
-          "totalDonations": 2200
+          "totalDonations": 2400
         },
         {
           "id": 10872,
           "type": "ORGANIZATION",
           "slug": "code_match_gmbh1",
           "name": "Code Match GmbH",
-          "totalDonations": 2200
+          "totalDonations": 2400
         },
         {
           "id": 11119,
           "type": "ORGANIZATION",
           "slug": "mihaelsedmak1",
           "name": "Bytecraft d.o.o.",
-          "totalDonations": 2200
+          "totalDonations": 2400
         },
         {
           "id": 12443,
           "type": "ORGANIZATION",
           "slug": "elhouti-and-co",
           "name": "Elhouti & Co",
-          "totalDonations": 2000
+          "totalDonations": 2200
         },
         {
           "id": 11806,
           "type": "ORGANIZATION",
           "slug": "swevolutivo",
           "name": "Software Evolutivo",
-          "totalDonations": 2000
+          "totalDonations": 2200
         },
         {
           "id": 11662,
           "type": "ORGANIZATION",
           "slug": "sumberly",
           "name": "Sumberly",
-          "totalDonations": 2000
+          "totalDonations": 2200
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 523546,
-        "yearlyBudget": 1380377
+        "balance": 420432,
+        "yearlyBudget": 1489183
       }
     }
   },
@@ -8133,18 +8401,18 @@
           "type": "ORGANIZATION",
           "slug": "choiceform",
           "name": "choiceform",
-          "totalDonations": 2000
+          "totalDonations": 2500
         },
         {
           "id": 18243,
           "type": "ORGANIZATION",
           "slug": "v1labs",
           "name": "v1Labs",
-          "totalDonations": 2000
+          "totalDonations": 2500
         }
       ],
       "stats": {
-        "balance": 15239,
+        "balance": 18500,
         "yearlyBudget": 44183
       },
       "goals": []
@@ -8167,11 +8435,19 @@
       "slug": "git-bug",
       "description": "Distributed bug tracker embedded in Git",
       "stats": {
-        "balance": 800,
-        "yearlyBudget": 4800
+        "balance": 2446,
+        "yearlyBudget": 6046
       },
       "goals": [{}],
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ]
     }
   },
   {
@@ -8199,8 +8475,8 @@
       "slug": "gitea",
       "description": "Lightweight code hosting solution written in Go",
       "stats": {
-        "balance": 74136,
-        "yearlyBudget": 224415
+        "balance": 92981,
+        "yearlyBudget": 238650
       },
       "goals": [{}],
       "sponsors": [
@@ -8209,7 +8485,7 @@
           "type": "ORGANIZATION",
           "slug": "linder-hard-und-software",
           "name": "Linder Hard- und Software",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 18190,
@@ -8223,14 +8499,14 @@
           "type": "ORGANIZATION",
           "slug": "pplfamily",
           "name": "ppl",
-          "totalDonations": 2500
+          "totalDonations": 3000
         },
         {
           "id": 21014,
           "type": "ORGANIZATION",
           "slug": "scalethat",
           "name": "Scalethat",
-          "totalDonations": 1000
+          "totalDonations": 1500
         },
         {
           "id": 19113,
@@ -8318,8 +8594,8 @@
       "slug": "goby",
       "description": null,
       "stats": {
-        "balance": 19673,
-        "yearlyBudget": 30990
+        "balance": 20873,
+        "yearlyBudget": 30585
       },
       "goals": [],
       "sponsors": []
@@ -8352,11 +8628,18 @@
       "slug": "gorm",
       "description": "The fantastic ORM library for Golang, aims to be developer friendly.",
       "stats": {
-        "balance": 2877,
-        "yearlyBudget": 2472
+        "balance": 8884,
+        "yearlyBudget": 16889
       },
       "goals": [],
       "sponsors": [
+        {
+          "id": 23180,
+          "type": "ORGANIZATION",
+          "slug": "render",
+          "name": "Render",
+          "totalDonations": 2000
+        },
         {
           "id": 19113,
           "type": "ORGANIZATION",
@@ -8453,7 +8736,7 @@
           "type": "ORGANIZATION",
           "slug": "invoiceninja1",
           "name": "Invoice Ninja",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 14173,
@@ -8485,8 +8768,8 @@
         }
       ],
       "stats": {
-        "balance": 103425,
-        "yearlyBudget": 297396
+        "balance": 104047,
+        "yearlyBudget": 298679
       },
       "goals": []
     }
@@ -8516,7 +8799,15 @@
       "name": "graphql-compose",
       "slug": "graphql-compose",
       "description": "Toolkit for generating complex GraphQL schemas in Node.js",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 400
+        }
+      ],
       "goals": [
         {
           "key": 78774,
@@ -8527,8 +8818,8 @@
         }
       ],
       "stats": {
-        "balance": 2000,
-        "yearlyBudget": 4800
+        "balance": 2688,
+        "yearlyBudget": 6528
       }
     }
   },
@@ -8549,7 +8840,7 @@
       "slug": "graphql-php",
       "description": "",
       "stats": {
-        "balance": 1215,
+        "balance": 1620,
         "yearlyBudget": 4860
       },
       "goals": [{}],
@@ -8578,20 +8869,27 @@
           "type": "ORGANIZATION",
           "slug": "graphcms",
           "name": "GraphCMS",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 18995,
           "type": "ORGANIZATION",
           "slug": "affiliategenius",
           "name": "Affiliate Genius",
-          "totalDonations": 600
+          "totalDonations": 800
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 400
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 20818,
-        "yearlyBudget": 117461
+        "balance": 30777,
+        "yearlyBudget": 119189
       }
     }
   },
@@ -8638,14 +8936,14 @@
           "type": "ORGANIZATION",
           "slug": "cp_tutors",
           "name": "College Park Tutors",
-          "totalDonations": 2000
+          "totalDonations": 2200
         },
         {
           "id": 19116,
           "type": "ORGANIZATION",
           "slug": "philippe-levy",
           "name": "Philippe Levy",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 14486,
@@ -8659,7 +8957,14 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 800
+          "totalDonations": 1000
+        },
+        {
+          "id": 23196,
+          "type": "ORGANIZATION",
+          "slug": "givemedeals",
+          "name": "GiveMeDeals.com",
+          "totalDonations": 200
         },
         {
           "id": 9805,
@@ -8670,8 +8975,8 @@
         }
       ],
       "stats": {
-        "balance": 399264,
-        "yearlyBudget": 253745
+        "balance": 415273,
+        "yearlyBudget": 246990
       },
       "goals": [{}]
     }
@@ -8715,7 +9020,7 @@
       ],
       "stats": {
         "balance": 49466,
-        "yearlyBudget": 49004
+        "yearlyBudget": 2830
       },
       "goals": []
     }
@@ -8932,42 +9237,42 @@
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 210000
+          "totalDonations": 220000
         },
         {
           "id": 6965,
           "type": "ORGANIZATION",
           "slug": "craftcms",
           "name": "Craft CMS",
-          "totalDonations": 190000
+          "totalDonations": 200000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 170000
+          "totalDonations": 180000
         },
         {
           "id": 11347,
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 51100
+          "totalDonations": 54800
         },
         {
           "id": 19458,
@@ -9000,19 +9305,12 @@
       ],
       "goals": [
         {
-          "key": 91179,
-          "type": "balance",
-          "amount": 1500000,
-          "title": "Gulp 4 Documentation",
-          "description": "We're doing a massive rewrite of the documentation for gulp 4 - and even making it available on a website!  We've estimated the work will take $15,000 so we're setting a goal to hit that."
-        },
-        {
           "key": 27033
         }
       ],
       "stats": {
-        "balance": 696601,
-        "yearlyBudget": 2084684
+        "balance": 527515,
+        "yearlyBudget": 1871069
       }
     },
     "github": {
@@ -9250,42 +9548,42 @@
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 210000
+          "totalDonations": 220000
         },
         {
           "id": 6965,
           "type": "ORGANIZATION",
           "slug": "craftcms",
           "name": "Craft CMS",
-          "totalDonations": 190000
+          "totalDonations": 200000
         },
         {
           "id": 5301,
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 170000
+          "totalDonations": 180000
         },
         {
           "id": 11347,
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 51100
+          "totalDonations": 54800
         },
         {
           "id": 19458,
@@ -9318,19 +9616,12 @@
       ],
       "goals": [
         {
-          "key": 91179,
-          "type": "balance",
-          "amount": 1500000,
-          "title": "Gulp 4 Documentation",
-          "description": "We're doing a massive rewrite of the documentation for gulp 4 - and even making it available on a website!  We've estimated the work will take $15,000 so we're setting a goal to hit that."
-        },
-        {
           "key": 27033
         }
       ],
       "stats": {
-        "balance": 696601,
-        "yearlyBudget": 2084684
+        "balance": 527515,
+        "yearlyBudget": 1871069
       }
     }
   },
@@ -9775,11 +10066,11 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 9000
+          "totalDonations": 10000
         }
       ],
       "stats": {
-        "balance": 7479,
+        "balance": 8310,
         "yearlyBudget": 9972
       },
       "goals": []
@@ -9949,7 +10240,7 @@
           "type": "ORGANIZATION",
           "slug": "domecloud",
           "name": "DomeCloud Co.,Ltd.",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 10970,
@@ -9963,7 +10254,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 600
         },
         {
           "id": 19113,
@@ -9982,8 +10273,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 390650,
-        "yearlyBudget": 86188
+        "balance": 394438,
+        "yearlyBudget": 80569
       }
     }
   },
@@ -10017,11 +10308,11 @@
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 162500
+          "totalDonations": 175000
         }
       ],
       "stats": {
-        "balance": 123827,
+        "balance": 134684,
         "yearlyBudget": 130284
       },
       "goals": []
@@ -10049,7 +10340,7 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 19133,
@@ -10061,7 +10352,7 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 62386,
+        "balance": 71066,
         "yearlyBudget": 105786
       }
     }
@@ -10121,11 +10412,11 @@
           "type": "ORGANIZATION",
           "slug": "droneio",
           "name": "Brad Rydzewski",
-          "totalDonations": 40000
+          "totalDonations": 45000
         }
       ],
       "stats": {
-        "balance": 73580,
+        "balance": 81638,
         "yearlyBudget": 108406
       },
       "goals": []
@@ -10242,8 +10533,8 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 32083,
-        "yearlyBudget": 27789
+        "balance": 43620,
+        "yearlyBudget": 37179
       }
     },
     "github": {
@@ -10271,8 +10562,8 @@
       "slug": "imagesharp",
       "description": null,
       "stats": {
-        "balance": 337471,
-        "yearlyBudget": 255025
+        "balance": 342215,
+        "yearlyBudget": 235518
       },
       "goals": [],
       "sponsors": [
@@ -10281,7 +10572,7 @@
           "type": "ORGANIZATION",
           "slug": "cofoundry",
           "name": "Cofoundry",
-          "totalDonations": 14000
+          "totalDonations": 16000
         },
         {
           "id": 17043,
@@ -10469,8 +10760,8 @@
         }
       ],
       "stats": {
-        "balance": 46453,
-        "yearlyBudget": 58814
+        "balance": 48889,
+        "yearlyBudget": 63614
       },
       "goals": []
     },
@@ -10624,7 +10915,7 @@
           "type": "ORGANIZATION",
           "slug": "invertase",
           "name": "Invertase Limited",
-          "totalDonations": 10000
+          "totalDonations": 15000
         }
       ],
       "goals": [
@@ -10642,7 +10933,7 @@
         }
       ],
       "stats": {
-        "balance": 8550,
+        "balance": 12825,
         "yearlyBudget": 51300
       }
     }
@@ -10690,7 +10981,7 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 11751,
+        "balance": 13443,
         "yearlyBudget": 24979
       }
     }
@@ -10737,6 +11028,13 @@
           "totalDonations": 10000
         },
         {
+          "id": 24971,
+          "type": "ORGANIZATION",
+          "slug": "flatlogic",
+          "name": "Flatlogic",
+          "totalDonations": 2000
+        },
+        {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
@@ -10753,8 +11051,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 10195,
-        "yearlyBudget": 13840
+        "balance": 11877,
+        "yearlyBudget": 11877
       }
     }
   },
@@ -10812,7 +11110,7 @@
       ],
       "stats": {
         "balance": 16,
-        "yearlyBudget": 18226
+        "yearlyBudget": 16980
       }
     }
   },
@@ -10857,8 +11155,8 @@
       "slug": "jekyll",
       "description": "A simple, blog-aware static site generator.",
       "stats": {
-        "balance": 405959,
-        "yearlyBudget": 1688624
+        "balance": 485287,
+        "yearlyBudget": 1806434
       },
       "goals": [
         {
@@ -10873,28 +11171,56 @@
           "type": "ORGANIZATION",
           "slug": "forestryio",
           "name": "Forestry",
-          "totalDonations": 200000
+          "totalDonations": 250000
         },
         {
           "id": 18922,
           "type": "ORGANIZATION",
           "slug": "siteleaf",
           "name": "Siteleaf",
-          "totalDonations": 150000
+          "totalDonations": 200000
         },
         {
           "id": 18851,
           "type": "ORGANIZATION",
           "slug": "cloudcannon",
           "name": "CloudCannon",
-          "totalDonations": 150000
+          "totalDonations": 200000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 30000
+          "totalDonations": 40000
+        },
+        {
+          "id": 23607,
+          "type": "ORGANIZATION",
+          "slug": "monero",
+          "name": "The Monero Project",
+          "totalDonations": 10000
+        },
+        {
+          "id": 22791,
+          "type": "ORGANIZATION",
+          "slug": "quixzesports",
+          "name": "Quixz eSports",
+          "totalDonations": 2000
+        },
+        {
+          "id": 23196,
+          "type": "ORGANIZATION",
+          "slug": "givemedeals",
+          "name": "GiveMeDeals.com",
+          "totalDonations": 500
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
         }
       ]
     }
@@ -11118,27 +11444,34 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 600000
+          "totalDonations": 700000
         },
         {
           "id": 4087,
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 17600
+          "totalDonations": 22000
         },
         {
           "id": 12801,
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 10000
+          "totalDonations": 12500
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
+          "totalDonations": 1000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
           "totalDonations": 800
         },
         {
@@ -11146,27 +11479,41 @@
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
+          "totalDonations": 800
+        },
+        {
+          "id": 23295,
+          "type": "ORGANIZATION",
+          "slug": "bootstrap-build",
+          "name": "Bootstrap Build",
           "totalDonations": 600
         },
         {
-          "id": 19113,
+          "id": 22780,
           "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 600
+          "slug": "adultseek",
+          "name": "Adultseek",
+          "totalDonations": 400
         },
         {
-          "id": 19953,
+          "id": 24631,
           "type": "ORGANIZATION",
-          "slug": "unhype",
-          "name": "Unhype",
+          "slug": "vpsservercom1",
+          "name": "VPS Server",
+          "totalDonations": 200
+        },
+        {
+          "id": 23548,
+          "type": "ORGANIZATION",
+          "slug": "hrank-com",
+          "name": "HRANK.com",
           "totalDonations": 200
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 587508,
-        "yearlyBudget": 2359338
+        "balance": 698849,
+        "yearlyBudget": 2369781
       }
     },
     "github": {
@@ -11214,7 +11561,7 @@
       "slug": "jest-puppeteer",
       "description": "Run your tests using Jest & Puppeteer 🎪✨",
       "stats": {
-        "balance": 17160,
+        "balance": 25740,
         "yearlyBudget": 102960
       },
       "goals": [
@@ -11230,7 +11577,7 @@
           "type": "ORGANIZATION",
           "slug": "smooth-code",
           "name": "Smooth Code",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ]
     }
@@ -11248,7 +11595,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 7240,
+        "balance": 7640,
         "yearlyBudget": 9660
       },
       "goals": []
@@ -11333,8 +11680,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 56816,
-        "yearlyBudget": 58139
+        "balance": 59000,
+        "yearlyBudget": 59523
       },
       "goals": []
     }
@@ -11505,11 +11852,18 @@
       "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. ",
       "sponsors": [
         {
+          "id": 20801,
+          "type": "ORGANIZATION",
+          "slug": "codefund",
+          "name": "CodeFund",
+          "totalDonations": 4981
+        },
+        {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1200
+          "totalDonations": 1400
         },
         {
           "id": 19871,
@@ -11535,8 +11889,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 64113,
-        "yearlyBudget": 100793
+        "balance": 75409,
+        "yearlyBudget": 102930
       }
     }
   },
@@ -11649,7 +12003,24 @@
       "id": 22334,
       "name": "kan",
       "slug": "kan",
-      "description": "Simple, functional authorization library and role management​ for ruby"
+      "description": "Simple, functional authorization library and role management​ for ruby",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 12511,
+          "amount": 10000,
+          "type": "balance",
+          "title": "Documentation work",
+          "description": "After this goal, I'll add documentation for all popular frameworks"
+        },
+        {
+          "key": 60609
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -11759,7 +12130,7 @@
           "type": "ORGANIZATION",
           "slug": "apprentus",
           "name": "Apprentus",
-          "totalDonations": 25000
+          "totalDonations": 25500
         },
         {
           "id": 10690,
@@ -11770,8 +12141,8 @@
         }
       ],
       "stats": {
-        "balance": 32968,
-        "yearlyBudget": 34920
+        "balance": 33512,
+        "yearlyBudget": 26270
       },
       "goals": []
     }
@@ -11791,7 +12162,21 @@
       "id": 23589,
       "name": "Kivy",
       "slug": "kivy",
-      "description": "Python UI framework for making outstanding desktop and mobile applications"
+      "description": "Python UI framework for making outstanding desktop and mobile applications",
+      "stats": {
+        "balance": 9411,
+        "yearlyBudget": 112932
+      },
+      "goals": [
+        {
+          "key": 52794,
+          "type": "yearlyBudget",
+          "description": "This is a goal for one person working full time on Kivy and all the sisters projects.",
+          "title": "Full time employment for one core developper",
+          "amount": 11000000
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -12215,26 +12600,26 @@
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3500
+          "totalDonations": 4000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 3300
+          "totalDonations": 3600
         },
         {
           "id": 20399,
           "type": "ORGANIZATION",
           "slug": "announcekit",
           "name": "AnnounceKit",
-          "totalDonations": 400
+          "totalDonations": 600
         }
       ],
       "stats": {
-        "balance": 98260,
-        "yearlyBudget": 52377
+        "balance": 100899,
+        "yearlyBudget": 50063
       },
       "goals": []
     }
@@ -12303,10 +12688,18 @@
       "name": "laravel-admin",
       "slug": "laravel-admin",
       "description": null,
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
+        }
+      ],
       "stats": {
-        "balance": 4000,
-        "yearlyBudget": 9600
+        "balance": 5610,
+        "yearlyBudget": 14460
       },
       "goals": []
     }
@@ -12456,10 +12849,10 @@
         }
       ],
       "stats": {
-        "balance": 16480,
-        "yearlyBudget": 268046
+        "balance": 27061,
+        "yearlyBudget": 197325
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -12531,7 +12924,7 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 20764,
+        "balance": 21169,
         "yearlyBudget": 21574
       }
     }
@@ -12561,6 +12954,20 @@
           "totalDonations": 70000
         },
         {
+          "id": 11782,
+          "type": "ORGANIZATION",
+          "slug": "dianet-isp",
+          "name": "DiaNet ISP",
+          "totalDonations": 11000
+        },
+        {
+          "id": 12436,
+          "type": "ORGANIZATION",
+          "slug": "skywave-wireless",
+          "name": "Skywave Wireless",
+          "totalDonations": 11000
+        },
+        {
           "id": 9276,
           "type": "ORGANIZATION",
           "slug": "charles-r-gwyn",
@@ -12568,17 +12975,10 @@
           "totalDonations": 10000
         },
         {
-          "id": 11782,
+          "id": 22583,
           "type": "ORGANIZATION",
-          "slug": "dianet-isp",
-          "name": "DiaNet ISP",
-          "totalDonations": 10000
-        },
-        {
-          "id": 12436,
-          "type": "ORGANIZATION",
-          "slug": "skywave-wireless",
-          "name": "Skywave Wireless",
+          "slug": "convergedcomms1",
+          "name": "Converged Communication Solutions Limited",
           "totalDonations": 10000
         },
         {
@@ -12586,12 +12986,12 @@
           "type": "ORGANIZATION",
           "slug": "coloau1",
           "name": "Colocation Australia",
-          "totalDonations": 4000
+          "totalDonations": 4500
         }
       ],
       "stats": {
-        "balance": 124671,
-        "yearlyBudget": 256815
+        "balance": 148830,
+        "yearlyBudget": 303770
       },
       "goals": [{}]
     }
@@ -12614,6 +13014,13 @@
           "slug": "resizt0r",
           "name": "resizt0r",
           "totalDonations": 2000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 400
         }
       ],
       "goals": [
@@ -12629,8 +13036,8 @@
         }
       ],
       "stats": {
-        "balance": 24284,
-        "yearlyBudget": 32280
+        "balance": 22704,
+        "yearlyBudget": 32730
       }
     }
   },
@@ -12651,10 +13058,10 @@
       "slug": "lint-staged",
       "description": null,
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 8334,
+        "yearlyBudget": 41644
       },
-      "goals": [],
+      "goals": [{}],
       "sponsors": []
     }
   },
@@ -12675,8 +13082,8 @@
       "slug": "localstack",
       "description": null,
       "stats": {
-        "balance": 26698,
-        "yearlyBudget": 34791
+        "balance": 29621,
+        "yearlyBudget": 43634
       },
       "goals": [],
       "sponsors": [
@@ -12688,11 +13095,18 @@
           "totalDonations": 5000
         },
         {
+          "id": 22854,
+          "type": "ORGANIZATION",
+          "slug": "dotdevv1",
+          "name": "DotDev",
+          "totalDonations": 2000
+        },
+        {
           "id": 19113,
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 600
+          "totalDonations": 800
         }
       ]
     }
@@ -12728,8 +13142,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 21635,
-        "yearlyBudget": 6106
+        "balance": 22040,
+        "yearlyBudget": 4860
       },
       "goals": []
     }
@@ -12761,8 +13175,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 44547,
-        "yearlyBudget": 169870
+        "balance": 50948,
+        "yearlyBudget": 151847
       },
       "goals": []
     }
@@ -12775,8 +13189,8 @@
       "slug": "mahappsmetro",
       "description": "MahApps.Metro is a framework that allows developers to cobble together a Metro or Modern UI for their own WPF applications with minimal effort.",
       "stats": {
-        "balance": 72362,
-        "yearlyBudget": 136004
+        "balance": 84937,
+        "yearlyBudget": 151136
       },
       "goals": [
         {
@@ -12793,7 +13207,7 @@
           "type": "ORGANIZATION",
           "slug": "chocolatey",
           "name": "Chocolatey Software",
-          "totalDonations": 60000
+          "totalDonations": 70000
         },
         {
           "id": 17383,
@@ -12869,7 +13283,7 @@
       "description": "The most lightweight, customizable React markdown component.",
       "goals": [{}],
       "stats": {
-        "balance": 224,
+        "balance": 280,
         "yearlyBudget": 672
       },
       "sponsors": []
@@ -12901,7 +13315,21 @@
           "type": "ORGANIZATION",
           "slug": "readmeio",
           "name": "ReadMe",
-          "totalDonations": 60000
+          "totalDonations": 70000
+        },
+        {
+          "id": 23910,
+          "type": "ORGANIZATION",
+          "slug": "wemindai1",
+          "name": "WeMindAI",
+          "totalDonations": 10000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "goals": [
@@ -12914,8 +13342,8 @@
         }
       ],
       "stats": {
-        "balance": 56131,
-        "yearlyBudget": 111811
+        "balance": 74776,
+        "yearlyBudget": 215756
       }
     }
   },
@@ -12936,8 +13364,8 @@
       "slug": "marshmallow",
       "description": "A lightweight library for converting complex objects to and from simple Python datatypes. ",
       "stats": {
-        "balance": 28891,
-        "yearlyBudget": 127126
+        "balance": 14179,
+        "yearlyBudget": 124211
       },
       "goals": [{}],
       "sponsors": [
@@ -12946,7 +13374,14 @@
           "type": "ORGANIZATION",
           "slug": "gorgiasio",
           "name": "Gorgias",
-          "totalDonations": 60000
+          "totalDonations": 70000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
         }
       ]
     }
@@ -12966,7 +13401,13 @@
       "id": 23092,
       "name": "MatchZoo",
       "slug": "matchzoo",
-      "description": "Deep learning for semantic matching"
+      "description": "Deep learning for semantic matching",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -12991,7 +13432,7 @@
           "type": "ORGANIZATION",
           "slug": "daemonite",
           "name": "Daemonite",
-          "totalDonations": 30000
+          "totalDonations": 40000
         }
       ],
       "goals": [
@@ -13009,7 +13450,7 @@
         }
       ],
       "stats": {
-        "balance": 28263,
+        "balance": 36843,
         "yearlyBudget": 105483
       }
     }
@@ -13050,14 +13491,14 @@
           "type": "ORGANIZATION",
           "slug": "creative-tim-theme-affiliations",
           "name": "Creative Tim - Theme Affiliations",
-          "totalDonations": 3196956
+          "totalDonations": 3733442
         },
         {
           "id": 11112,
           "type": "ORGANIZATION",
           "slug": "callemall",
           "name": "Call-Em-All",
-          "totalDonations": 550000
+          "totalDonations": 600000
         },
         {
           "id": 20801,
@@ -13071,7 +13512,14 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 130000
+          "totalDonations": 140000
+        },
+        {
+          "id": 11004,
+          "type": "ORGANIZATION",
+          "slug": "opensourcecollective",
+          "name": "Open Source Collective 501c6 (Non Profit)",
+          "totalDonations": 120800
         },
         {
           "id": 7083,
@@ -13085,41 +13533,34 @@
           "type": "ORGANIZATION",
           "slug": "feeltraincoop1",
           "name": "Feel Train",
-          "totalDonations": 50000
+          "totalDonations": 55000
         },
         {
           "id": 12073,
           "type": "ORGANIZATION",
           "slug": "clearbit",
           "name": "Clearbit",
-          "totalDonations": 50000
+          "totalDonations": 55000
         },
         {
           "id": 20189,
           "type": "ORGANIZATION",
           "slug": "kisi",
           "name": "Kisi",
-          "totalDonations": 30000
+          "totalDonations": 40000
         },
         {
           "id": 20460,
           "type": "ORGANIZATION",
           "slug": "fbo_one1",
           "name": "Amsterdam Software | FBO One",
-          "totalDonations": 20000
-        },
-        {
-          "id": 12126,
-          "type": "ORGANIZATION",
-          "slug": "lyska",
-          "name": "Lyska UG",
-          "totalDonations": 10000
+          "totalDonations": 30000
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 2550604,
-        "yearlyBudget": 7155557
+        "balance": 465852,
+        "yearlyBudget": 7877010
       }
     },
     "github": {
@@ -13326,7 +13767,7 @@
       "description": "A browser extension for the decentralized web.",
       "sponsors": [],
       "stats": {
-        "balance": 2800,
+        "balance": 3200,
         "yearlyBudget": 4800
       },
       "goals": []
@@ -13421,8 +13862,8 @@
         }
       ],
       "stats": {
-        "balance": 173892,
-        "yearlyBudget": 291143
+        "balance": 174462,
+        "yearlyBudget": 207017
       },
       "goals": []
     }
@@ -13536,14 +13977,14 @@
           "type": "ORGANIZATION",
           "slug": "coinbase",
           "name": "Coinbase",
-          "totalDonations": 325000
+          "totalDonations": 350000
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 7083,
@@ -13557,27 +13998,34 @@
           "type": "ORGANIZATION",
           "slug": "teamguilded1",
           "name": "Guilded",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
-          "id": 5686,
+          "id": 23877,
           "type": "ORGANIZATION",
-          "slug": "idonethis",
-          "name": "I Done This",
-          "totalDonations": 10000
+          "slug": "auction-frontier",
+          "name": "Auction Frontier",
+          "totalDonations": 25000
         },
         {
           "id": 21872,
           "type": "ORGANIZATION",
           "slug": "canva1",
           "name": "Canva",
-          "totalDonations": 10000
+          "totalDonations": 20000
         },
         {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
+          "totalDonations": 10000
+        },
+        {
+          "id": 5686,
+          "type": "ORGANIZATION",
+          "slug": "idonethis",
+          "name": "I Done This",
           "totalDonations": 10000
         },
         {
@@ -13593,18 +14041,11 @@
           "slug": "uncommon_is",
           "name": "Uncommon",
           "totalDonations": 5000
-        },
-        {
-          "id": 11939,
-          "type": "ORGANIZATION",
-          "slug": "intreba-bv",
-          "name": "Intreba",
-          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 398157,
-        "yearlyBudget": 1069567
+        "balance": 586016,
+        "yearlyBudget": 1446927
       },
       "goals": []
     }
@@ -13671,7 +14112,7 @@
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 800000
+          "totalDonations": 850000
         },
         {
           "id": 1161,
@@ -13685,7 +14126,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 353800
+          "totalDonations": 354000
         },
         {
           "id": 2501,
@@ -13720,7 +14161,7 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 22500
+          "totalDonations": 25000
         },
         {
           "id": 7807,
@@ -13738,8 +14179,8 @@
         }
       ],
       "stats": {
-        "balance": 2217054,
-        "yearlyBudget": 1010122
+        "balance": 2309479,
+        "yearlyBudget": 1091995
       },
       "goals": []
     }
@@ -13763,7 +14204,7 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 3213,
+        "balance": 3355,
         "yearlyBudget": 4207
       }
     }
@@ -13843,14 +14284,14 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 13390,
           "type": "ORGANIZATION",
           "slug": "localize",
           "name": "Localize Corporation",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 14801,
@@ -13867,6 +14308,13 @@
           "totalDonations": 20000
         },
         {
+          "id": 17249,
+          "type": "ORGANIZATION",
+          "slug": "codefirst",
+          "name": "CodeFirst",
+          "totalDonations": 10000
+        },
+        {
           "id": 13254,
           "type": "ORGANIZATION",
           "slug": "dontpayfull",
@@ -13878,7 +14326,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1200
+          "totalDonations": 1400
         },
         {
           "id": 16122,
@@ -13896,8 +14344,8 @@
         }
       ],
       "stats": {
-        "balance": 390062,
-        "yearlyBudget": 467502
+        "balance": 428775,
+        "yearlyBudget": 593492
       },
       "goals": []
     }
@@ -13989,8 +14437,8 @@
       "slug": "mvvmcross",
       "description": "The .NET MVVM framework for cross-platform solutions, including Xamarin.iOS, Xamarin.Android, Windows and Mac.",
       "stats": {
-        "balance": 334198,
-        "yearlyBudget": 292013
+        "balance": 347170,
+        "yearlyBudget": 277718
       },
       "goals": [{}],
       "sponsors": [
@@ -13999,14 +14447,14 @@
           "type": "ORGANIZATION",
           "slug": "pronama",
           "name": "Pronama LLC",
-          "totalDonations": 20000
+          "totalDonations": 20500
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 2000
+          "totalDonations": 3000
         }
       ]
     },
@@ -14070,13 +14518,27 @@
           "type": "ORGANIZATION",
           "slug": "valorkin",
           "name": "Valor Software",
-          "totalDonations": 1923324
+          "totalDonations": 1933324
+        },
+        {
+          "id": 11004,
+          "type": "ORGANIZATION",
+          "slug": "opensourcecollective",
+          "name": "Open Source Collective 501c6 (Non Profit)",
+          "totalDonations": 150000
         },
         {
           "id": 18867,
           "type": "ORGANIZATION",
           "slug": "httpstwittercomxtremissl",
           "name": "Xtremis",
+          "totalDonations": 150000
+        },
+        {
+          "id": 17317,
+          "type": "ORGANIZATION",
+          "slug": "neotericeu",
+          "name": "Neoteric",
           "totalDonations": 150000
         },
         {
@@ -14087,18 +14549,18 @@
           "totalDonations": 148800
         },
         {
-          "id": 17317,
-          "type": "ORGANIZATION",
-          "slug": "neotericeu",
-          "name": "Neoteric",
-          "totalDonations": 125000
-        },
-        {
           "id": 14760,
           "type": "ORGANIZATION",
           "slug": "gojob_official",
           "name": "Gojob",
-          "totalDonations": 105000
+          "totalDonations": 120000
+        },
+        {
+          "id": 15126,
+          "type": "ORGANIZATION",
+          "slug": "hostpresto1",
+          "name": "HostPresto",
+          "totalDonations": 70000
         },
         {
           "id": 15033,
@@ -14108,17 +14570,10 @@
           "totalDonations": 60000
         },
         {
-          "id": 15126,
+          "id": 21460,
           "type": "ORGANIZATION",
-          "slug": "hostpresto1",
-          "name": "HostPresto",
-          "totalDonations": 60000
-        },
-        {
-          "id": 20199,
-          "type": "ORGANIZATION",
-          "slug": "genuinebeehive",
-          "name": "GenuineBee",
+          "slug": "quanderio",
+          "name": "Quander ",
           "totalDonations": 30000
         },
         {
@@ -14126,14 +14581,7 @@
           "type": "ORGANIZATION",
           "slug": "architectnow",
           "name": "ArchitectNow",
-          "totalDonations": 20000
-        },
-        {
-          "id": 21460,
-          "type": "ORGANIZATION",
-          "slug": "quanderio",
-          "name": "Quander ",
-          "totalDonations": 20000
+          "totalDonations": 30000
         }
       ],
       "goals": [
@@ -14151,8 +14599,8 @@
         }
       ],
       "stats": {
-        "balance": 726089,
-        "yearlyBudget": 3752138
+        "balance": 243246,
+        "yearlyBudget": 3405566
       }
     }
   },
@@ -14267,20 +14715,27 @@
           "type": "ORGANIZATION",
           "slug": "oasisdigitalstl",
           "name": "Oasis Digital Solutions Inc.",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 12890,
           "type": "ORGANIZATION",
           "slug": "briebugsoftware",
           "name": "BrieBug",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 8950,
           "type": "ORGANIZATION",
           "slug": "z-ware-development",
           "name": "Z Ware Development",
+          "totalDonations": 50000
+        },
+        {
+          "id": 24611,
+          "type": "ORGANIZATION",
+          "slug": "briebugsoftware1",
+          "name": "BrieBug",
           "totalDonations": 50000
         },
         {
@@ -14316,7 +14771,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1000
+          "totalDonations": 1200
         },
         {
           "id": 19113,
@@ -14327,10 +14782,10 @@
         }
       ],
       "stats": {
-        "balance": 229722,
-        "yearlyBudget": 836409
+        "balance": 195358,
+        "yearlyBudget": 1281067
       },
-      "goals": []
+      "goals": [{}]
     },
     "github": {
       "repo": "ngrx/platform"
@@ -14354,7 +14809,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 6148,
+        "balance": 6553,
         "yearlyBudget": 7363
       },
       "goals": []
@@ -14518,7 +14973,7 @@
           "type": "ORGANIZATION",
           "slug": "sensorpush",
           "name": "SensorPush",
-          "totalDonations": 87500
+          "totalDonations": 90000
         },
         {
           "id": 1538,
@@ -14529,8 +14984,8 @@
         }
       ],
       "stats": {
-        "balance": 165461,
-        "yearlyBudget": 35069
+        "balance": 167608,
+        "yearlyBudget": 34228
       },
       "goals": []
     }
@@ -14558,6 +15013,20 @@
           "slug": "coinbase",
           "name": "Coinbase",
           "totalDonations": 500000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
+        },
+        {
+          "id": 13569,
+          "type": "ORGANIZATION",
+          "slug": "metabolize",
+          "name": "Metabolize",
+          "totalDonations": 100
         }
       ],
       "goals": [
@@ -14577,8 +15046,8 @@
         }
       ],
       "stats": {
-        "balance": 446759,
-        "yearlyBudget": 456532
+        "balance": 344546,
+        "yearlyBudget": 459268
       }
     }
   },
@@ -14837,7 +15306,7 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 13284,
@@ -14848,7 +15317,7 @@
         }
       ],
       "stats": {
-        "balance": 8680,
+        "balance": 1670,
         "yearlyBudget": 110035
       },
       "goals": [{}]
@@ -14876,7 +15345,7 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 7083,
@@ -14890,7 +15359,7 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 9000
+          "totalDonations": 10000
         },
         {
           "id": 14885,
@@ -14911,14 +15380,14 @@
           "type": "ORGANIZATION",
           "slug": "thebearingedge",
           "name": "Tim Davis",
-          "totalDonations": 1600
+          "totalDonations": 1800
         },
         {
           "id": 15109,
           "type": "ORGANIZATION",
           "slug": "gurugate",
           "name": "GuruGate",
-          "totalDonations": 1400
+          "totalDonations": 1600
         },
         {
           "id": 12026,
@@ -14932,7 +15401,7 @@
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 13212,
@@ -14943,8 +15412,8 @@
         }
       ],
       "stats": {
-        "balance": 169651,
-        "yearlyBudget": 281975
+        "balance": 189710,
+        "yearlyBudget": 278308
       },
       "goals": []
     }
@@ -15014,39 +15483,46 @@
       "description": "Universal Vue.js Applications",
       "sponsors": [
         {
-          "id": 6296,
-          "type": "ORGANIZATION",
-          "slug": "finpo",
-          "name": "Ausir Lo",
-          "totalDonations": 450000
-        },
-        {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 450000
+          "totalDonations": 500000
+        },
+        {
+          "id": 6296,
+          "type": "ORGANIZATION",
+          "slug": "finpo",
+          "name": "FINPO, Inc.",
+          "totalDonations": 475000
         },
         {
           "id": 17945,
           "type": "ORGANIZATION",
           "slug": "storyblok",
           "name": "Storyblok",
-          "totalDonations": 200000
+          "totalDonations": 250000
+        },
+        {
+          "id": 22728,
+          "type": "ORGANIZATION",
+          "slug": "vuemastery",
+          "name": "Vue Mastery",
+          "totalDonations": 100000
         },
         {
           "id": 12817,
           "type": "ORGANIZATION",
           "slug": "vuetifyjs",
           "name": "Vuetify LLC ",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 9633,
           "type": "ORGANIZATION",
           "slug": "studiothomas",
           "name": "Studio Thomas",
-          "totalDonations": 32500
+          "totalDonations": 35000
         },
         {
           "id": 10327,
@@ -15067,27 +15543,20 @@
           "type": "ORGANIZATION",
           "slug": "domainr",
           "name": "Domainr",
-          "totalDonations": 6500
+          "totalDonations": 7000
         },
         {
           "id": 10267,
           "type": "ORGANIZATION",
           "slug": "santihans4056",
           "name": "SANTiHANS LLC",
-          "totalDonations": 6000
-        },
-        {
-          "id": 10412,
-          "type": "ORGANIZATION",
-          "slug": "toxinlabs",
-          "name": "toxinlabs",
-          "totalDonations": 5000
+          "totalDonations": 6500
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 539945,
-        "yearlyBudget": 2532711
+        "balance": 701751,
+        "yearlyBudget": 3189569
       }
     }
   },
@@ -15142,8 +15611,8 @@
       "description": "OctoLinker is a browser extension to navigate through projects on GitHub.com efficiently.",
       "sponsors": [],
       "stats": {
-        "balance": 11044,
-        "yearlyBudget": 11534
+        "balance": 11588,
+        "yearlyBudget": 8693
       },
       "goals": [{}]
     },
@@ -15177,8 +15646,8 @@
         }
       ],
       "stats": {
-        "balance": 32638,
-        "yearlyBudget": 14174
+        "balance": 33466,
+        "yearlyBudget": 13742
       },
       "goals": [
         {
@@ -15227,7 +15696,7 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 2879,
@@ -15245,8 +15714,8 @@
         }
       ],
       "stats": {
-        "balance": 53323,
-        "yearlyBudget": 126174
+        "balance": 62973,
+        "yearlyBudget": 125625
       },
       "goals": []
     }
@@ -15343,8 +15812,8 @@
         }
       ],
       "stats": {
-        "balance": 80319,
-        "yearlyBudget": 102956
+        "balance": 88094,
+        "yearlyBudget": 107281
       },
       "goals": []
     }
@@ -15364,7 +15833,21 @@
       "id": 22824,
       "name": "opal",
       "slug": "opal",
-      "description": "Ruby in the browser"
+      "description": "Ruby in the browser",
+      "stats": {
+        "balance": 12750,
+        "yearlyBudget": 12750
+      },
+      "goals": [
+        {
+          "key": 65682,
+          "title": "Regain control of opalrb.org",
+          "description": "Our historical domain opalrb.org has been taken by a domain squatter that is now promoting *casinos*!, help getting it back!",
+          "type": "balance",
+          "amount": 30000
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -15422,8 +15905,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 55769,
-        "yearlyBudget": 18447
+        "balance": 56600,
+        "yearlyBudget": 16767
       }
     }
   },
@@ -15462,10 +15945,10 @@
         }
       ],
       "stats": {
-        "balance": 60786,
-        "yearlyBudget": 72116
+        "balance": 61996,
+        "yearlyBudget": 67225
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -15527,8 +16010,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 17060,
-        "yearlyBudget": 17870
+        "balance": 17465,
+        "yearlyBudget": 13140
       },
       "goals": []
     },
@@ -15546,13 +16029,42 @@
       "id": 456,
       "name": "openlayers",
       "slug": "openlayers",
-      "description": null,
+      "description": "A high-performance, feature-packed library for all your mapping needs.",
       "sponsors": [],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 142,
+        "yearlyBudget": 1704
       },
-      "goals": []
+      "goals": [
+        {
+          "key": 8083,
+          "type": "yearlyBudget",
+          "description": "Once a year, a code sprint gathers the most dedicated developers for a collocated week in a remote place with good bandwidth. This strengthen the community spirit and delivers brilliant technical updates.\n",
+          "title": "Yearly code sprint ",
+          "amount": 4600000
+        },
+        {
+          "key": 31130,
+          "type": "yearlyBudget",
+          "description": "The openlayers project maintains a gallery of examples. You’ll find for every use case a starting example as well as mind blowing ideas, you never thought Openlayers could be used for.\n",
+          "title": "Examples gallery and documentation",
+          "amount": 600000
+        },
+        {
+          "key": 76306,
+          "type": "yearlyBudget",
+          "amount": 2100000,
+          "title": "Monthly releases",
+          "description": "Every month, the team does a release. Let’s support this work, as everyone profits from stable releases."
+        },
+        {
+          "key": 89902,
+          "type": "balance",
+          "amount": 5600000,
+          "title": "Community outreach",
+          "description": "The community outreaches at special technical conferences, like FOSS4G and their local events. Let’s support sending committers to these event so that everyone gets the latest updates.\n"
+        }
+      ]
     }
   },
   {
@@ -15567,11 +16079,19 @@
       "slug": "openmined",
       "description": "OpenMined is an open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence.",
       "stats": {
-        "balance": 3661,
-        "yearlyBudget": 19632
+        "balance": 26234,
+        "yearlyBudget": 114321
       },
       "goals": [{}],
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 23661,
+          "type": "ORGANIZATION",
+          "slug": "webmart",
+          "name": "Webmart",
+          "totalDonations": 41800
+        }
+      ]
     }
   },
   {
@@ -15596,8 +16116,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 114488,
-        "yearlyBudget": 159832
+        "balance": 110388,
+        "yearlyBudget": 77473
       }
     }
   },
@@ -15637,10 +16157,17 @@
       "slug": "openwhyd",
       "description": "Openwhyd - The community of music lovers",
       "stats": {
-        "balance": 15669,
-        "yearlyBudget": 30964
+        "balance": 16525,
+        "yearlyBudget": 27635
       },
-      "goals": [],
+      "goals": [
+        {
+          "key": 89696,
+          "type": "yearlyBudget",
+          "amount": 24000,
+          "title": "1 year of hosting fees + domain name renewal"
+        }
+      ],
       "sponsors": []
     }
   },
@@ -15661,7 +16188,7 @@
       "slug": "opsdroid",
       "description": "An open source python chat-ops bot framework for creating your own chatbots. ",
       "stats": {
-        "balance": 10994,
+        "balance": 13091,
         "yearlyBudget": 25164
       },
       "goals": [],
@@ -15671,7 +16198,7 @@
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 2000
+          "totalDonations": 2500
         }
       ]
     }
@@ -15894,7 +16421,7 @@
           "type": "ORGANIZATION",
           "slug": "tulip-inc",
           "name": "Tulip Inc.",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 19953,
@@ -15913,7 +16440,7 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 62491,
+        "balance": 71071,
         "yearlyBudget": 105391
       }
     }
@@ -15928,7 +16455,13 @@
       "id": 21750,
       "name": "OWASP-Nettacker",
       "slug": "owasp-nettacker",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 8680,
+        "yearlyBudget": 8680
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -15980,7 +16513,7 @@
       "slug": "pact-foundation",
       "description": "Pact is the industry standard, cross-language collaboration framework that enforces contracts between a consumer and a provider of data.",
       "stats": {
-        "balance": 852,
+        "balance": 994,
         "yearlyBudget": 1704
       },
       "goals": [
@@ -16042,7 +16575,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 20000
+          "totalDonations": 22500
         },
         {
           "id": 11933,
@@ -16063,20 +16596,27 @@
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3000
+          "totalDonations": 3300
         },
         {
           "id": 11890,
           "type": "ORGANIZATION",
           "slug": "jjb",
           "name": "京价保",
-          "totalDonations": 2000
+          "totalDonations": 2200
         },
         {
           "id": 11927,
           "type": "ORGANIZATION",
           "slug": "oneapp",
           "name": "OneApp",
+          "totalDonations": 2200
+        },
+        {
+          "id": 11745,
+          "type": "ORGANIZATION",
+          "slug": "duotai",
+          "name": "多态",
           "totalDonations": 2000
         },
         {
@@ -16085,18 +16625,11 @@
           "slug": "as57695",
           "name": "Misaka Network, Inc.",
           "totalDonations": 2000
-        },
-        {
-          "id": 11745,
-          "type": "ORGANIZATION",
-          "slug": "duotai",
-          "name": "多态",
-          "totalDonations": 2000
         }
       ],
       "stats": {
-        "balance": 364619,
-        "yearlyBudget": 504839
+        "balance": 382013,
+        "yearlyBudget": 502337
       },
       "goals": []
     }
@@ -16147,13 +16680,20 @@
           "type": "ORGANIZATION",
           "slug": "back4app1",
           "name": "Back4app",
-          "totalDonations": 300000
+          "totalDonations": 315000
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
+          "totalDonations": 140000
+        },
+        {
+          "id": 10324,
+          "type": "ORGANIZATION",
+          "slug": "sashidoio1",
+          "name": "SashiDo",
           "totalDonations": 130000
         },
         {
@@ -16164,25 +16704,32 @@
           "totalDonations": 125000
         },
         {
-          "id": 10324,
-          "type": "ORGANIZATION",
-          "slug": "sashidoio1",
-          "name": "SashiDo",
-          "totalDonations": 120000
-        },
-        {
           "id": 11024,
           "type": "ORGANIZATION",
           "slug": "axolsoft1",
           "name": "Axolsoft",
-          "totalDonations": 110000
+          "totalDonations": 120000
+        },
+        {
+          "id": 23074,
+          "type": "ORGANIZATION",
+          "slug": "pretzelapp1",
+          "name": "Pretzel, Inc.",
+          "totalDonations": 20000
         },
         {
           "id": 10514,
           "type": "ORGANIZATION",
           "slug": "davi-macedo-back4app",
           "name": "Davi Macedo",
-          "totalDonations": 18000
+          "totalDonations": 19500
+        },
+        {
+          "id": 22303,
+          "type": "ORGANIZATION",
+          "slug": "alexandre-pestre-conseil-et-edition",
+          "name": "Alexandre Pestre Conseil et Edition",
+          "totalDonations": 2000
         },
         {
           "id": 12917,
@@ -16190,11 +16737,18 @@
           "slug": "prayercircle_1",
           "name": "Prayer Circle",
           "totalDonations": 1500
+        },
+        {
+          "id": 23196,
+          "type": "ORGANIZATION",
+          "slug": "givemedeals",
+          "name": "GiveMeDeals.com",
+          "totalDonations": 200
         }
       ],
       "stats": {
-        "balance": 744089,
-        "yearlyBudget": 909842
+        "balance": 807928,
+        "yearlyBudget": 1103949
       },
       "goals": [{}]
     }
@@ -16293,10 +16847,10 @@
       "slug": "peer",
       "description": "WebRTC implementation",
       "stats": {
-        "balance": 5021,
-        "yearlyBudget": 12590
+        "balance": 6804,
+        "yearlyBudget": 15116
       },
-      "goals": [],
+      "goals": [{}],
       "sponsors": [
         {
           "id": 21562,
@@ -16304,6 +16858,13 @@
           "slug": "painted-tigers-limited",
           "name": "Painted Tigers Limited",
           "totalDonations": 1000
+        },
+        {
+          "id": 24518,
+          "type": "ORGANIZATION",
+          "slug": "syra-technologies",
+          "name": "Syra Technologies",
+          "totalDonations": 200
         }
       ]
     }
@@ -16330,14 +16891,14 @@
           "type": "ORGANIZATION",
           "slug": "savvysoftworks",
           "name": "SavvySoftWorks",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 11873,
           "type": "ORGANIZATION",
           "slug": "banana_software",
           "name": "Banana Software Co., Ltd.",
-          "totalDonations": 5000
+          "totalDonations": 5500
         },
         {
           "id": 21152,
@@ -16368,6 +16929,13 @@
           "totalDonations": 1800
         },
         {
+          "id": 18505,
+          "type": "ORGANIZATION",
+          "slug": "coherentsoft",
+          "name": "Coherent Software",
+          "totalDonations": 1000
+        },
+        {
           "id": 8875,
           "type": "ORGANIZATION",
           "slug": "kiva-tehnologija",
@@ -16375,16 +16943,16 @@
           "totalDonations": 800
         },
         {
-          "id": 18505,
+          "id": 23232,
           "type": "ORGANIZATION",
-          "slug": "coherentsoft",
-          "name": "Coherent Software",
-          "totalDonations": 800
+          "slug": "tvprofil",
+          "name": "TvProfil",
+          "totalDonations": 400
         }
       ],
       "stats": {
-        "balance": 1353728,
-        "yearlyBudget": 1536046
+        "balance": 1418241,
+        "yearlyBudget": 1521015
       },
       "goals": [{}]
     }
@@ -16461,8 +17029,8 @@
       "sponsors": [],
       "goals": [],
       "stats": {
-        "balance": 95195,
-        "yearlyBudget": 17502
+        "balance": 95739,
+        "yearlyBudget": 15535
       }
     },
     "github": {
@@ -16551,7 +17119,13 @@
       "id": 23791,
       "name": "pixelfed",
       "slug": "pixelfed-528",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -16564,7 +17138,13 @@
       "id": 21565,
       "name": "platform",
       "slug": "platform",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -16613,11 +17193,19 @@
       "slug": "pnpm",
       "description": null,
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 9480,
+        "yearlyBudget": 13480
       },
       "goals": [{}],
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 22398,
+          "type": "ORGANIZATION",
+          "slug": "berrynodes-ltd",
+          "name": "BerryNodes LTD",
+          "totalDonations": 1000
+        }
+      ]
     }
   },
   {
@@ -16674,8 +17262,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 67638,
-        "yearlyBudget": 175635
+        "balance": 80287,
+        "yearlyBudget": 106699
       },
       "goals": []
     }
@@ -16719,7 +17307,13 @@
       "id": 23444,
       "name": "poliastro",
       "slug": "poliastro",
-      "description": "Interactive Astrodynamics in Python"
+      "description": "Interactive Astrodynamics in Python",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -16815,7 +17409,7 @@
       "slug": "popmotion",
       "description": "Popmotion is a collection of simple libraries to make delightfully animated user interfaces.",
       "stats": {
-        "balance": 1718,
+        "balance": 2578,
         "yearlyBudget": 20616
       },
       "goals": [
@@ -16838,7 +17432,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 2000
+          "totalDonations": 3000
         }
       ]
     }
@@ -16882,7 +17476,7 @@
           "type": "ORGANIZATION",
           "slug": "amp",
           "name": "AMP Project",
-          "totalDonations": 1000000
+          "totalDonations": 1100000
         },
         {
           "id": 5954,
@@ -16903,14 +17497,14 @@
           "type": "ORGANIZATION",
           "slug": "stickermule",
           "name": "Sticker Mule",
-          "totalDonations": 210000
+          "totalDonations": 220000
         },
         {
           "id": 3960,
           "type": "ORGANIZATION",
           "slug": "gufsky",
           "name": "Gufsky",
-          "totalDonations": 200000
+          "totalDonations": 210000
         },
         {
           "id": 3277,
@@ -16931,7 +17525,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 32500
+          "totalDonations": 35000
         },
         {
           "id": 11108,
@@ -16950,8 +17544,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 2314508,
-        "yearlyBudget": 3123915
+        "balance": 2478556,
+        "yearlyBudget": 2905986
       }
     }
   },
@@ -16973,8 +17567,8 @@
       "description": "Open Source | Open Textbooks | Open Book Publishing",
       "sponsors": [],
       "stats": {
-        "balance": 33462,
-        "yearlyBudget": 58404
+        "balance": 47835,
+        "yearlyBudget": 54935
       },
       "goals": []
     }
@@ -17013,8 +17607,8 @@
       "slug": "property_web_builder",
       "description": "The leading open source real estate website builder",
       "stats": {
-        "balance": 3126,
-        "yearlyBudget": 3836
+        "balance": 5390,
+        "yearlyBudget": 28874
       },
       "goals": [],
       "sponsors": []
@@ -17049,11 +17643,11 @@
       "id": 17892,
       "name": "Publii",
       "slug": "publii",
-      "description": "Open-Source Static Site CMS available for Windows (x64) and Mac Os.",
-      "goals": [],
+      "description": "Open-Source Static Site CMS available for Windows, MacOs and Linux",
+      "goals": [{}],
       "stats": {
-        "balance": 32987,
-        "yearlyBudget": 121293
+        "balance": 53555,
+        "yearlyBudget": 152281
       },
       "sponsors": [
         {
@@ -17061,21 +17655,35 @@
           "type": "ORGANIZATION",
           "slug": "weblegalca",
           "name": "WebLegal.ca",
-          "totalDonations": 30000
+          "totalDonations": 40000
+        },
+        {
+          "id": 22951,
+          "type": "ORGANIZATION",
+          "slug": "noxidsoft1",
+          "name": "Noxidsoft",
+          "totalDonations": 5000
         },
         {
           "id": 20738,
           "type": "ORGANIZATION",
           "slug": "uberfacil1",
           "name": "Uberfácil",
-          "totalDonations": 400
+          "totalDonations": 600
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 500
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ]
     }
@@ -17146,17 +17754,17 @@
           "totalDonations": 120000
         },
         {
-          "id": 5301,
-          "type": "ORGANIZATION",
-          "slug": "clayglobal",
-          "name": "clay",
-          "totalDonations": 30000
-        },
-        {
           "id": 12819,
           "type": "ORGANIZATION",
           "slug": "codeinwp",
           "name": "Vertigo Studio SRL",
+          "totalDonations": 40000
+        },
+        {
+          "id": 5301,
+          "type": "ORGANIZATION",
+          "slug": "clayglobal",
+          "name": "clay",
           "totalDonations": 30000
         },
         {
@@ -17185,7 +17793,14 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 6000
+          "totalDonations": 6400
+        },
+        {
+          "id": 11410,
+          "type": "ORGANIZATION",
+          "slug": "duohui",
+          "name": "多会",
+          "totalDonations": 5500
         },
         {
           "id": 13254,
@@ -17195,23 +17810,16 @@
           "totalDonations": 5000
         },
         {
-          "id": 11410,
+          "id": 15152,
           "type": "ORGANIZATION",
-          "slug": "duohui",
-          "name": "多会",
-          "totalDonations": 5000
-        },
-        {
-          "id": 11890,
-          "type": "ORGANIZATION",
-          "slug": "jjb",
-          "name": "京价保",
-          "totalDonations": 3500
+          "slug": "restpack",
+          "name": "Restpack",
+          "totalDonations": 3600
         }
       ],
       "stats": {
-        "balance": 43435,
-        "yearlyBudget": 271330
+        "balance": 13584,
+        "yearlyBudget": 275061
       },
       "goals": [
         {
@@ -17240,7 +17848,21 @@
       "id": 23563,
       "name": "Pug-php",
       "slug": "pug-php",
-      "description": "The cleanest way to code view templates"
+      "description": "The cleanest way to code view templates",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 79302,
+          "type": "yearlyBudget",
+          "amount": 10000,
+          "title": "Hosting and domain",
+          "description": "Pay the hosting and domain of the documentation, live editor, ensure the support on GitHub issues."
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -17258,7 +17880,20 @@
       "id": 22885,
       "name": "puppeteer-sharp",
       "slug": "puppeteer-sharp",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 34560,
+          "type": "yearlyBudget",
+          "amount": 300000,
+          "title": "Annual Budget"
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -17278,7 +17913,7 @@
       "slug": "purgecss",
       "description": "Remove unused css",
       "stats": {
-        "balance": 1115,
+        "balance": 1257,
         "yearlyBudget": 2535
       },
       "goals": [{}],
@@ -17288,7 +17923,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 400
+          "totalDonations": 600
         }
       ]
     }
@@ -17301,8 +17936,8 @@
       "slug": "qtsharp",
       "description": null,
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 4244,
+        "yearlyBudget": 25464
       },
       "goals": [],
       "sponsors": []
@@ -17363,8 +17998,8 @@
       "description": "Radarr provides an excellent automated movie experience.",
       "sponsors": [],
       "stats": {
-        "balance": 143975,
-        "yearlyBudget": 172665
+        "balance": 155758,
+        "yearlyBudget": 189105
       },
       "goals": [
         {
@@ -17467,7 +18102,21 @@
       "id": 22619,
       "name": "ransack",
       "slug": "ransack",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 8680,
+        "yearlyBudget": 104160
+      },
+      "goals": [],
+      "sponsors": [
+        {
+          "id": 25016,
+          "type": "ORGANIZATION",
+          "slug": "scout",
+          "name": "Scout",
+          "totalDonations": 10000
+        }
+      ]
     }
   },
   {
@@ -17593,20 +18242,20 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1200
+          "totalDonations": 1400
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 511474,
-        "yearlyBudget": 299444
+        "balance": 516269,
+        "yearlyBudget": 233931
       }
     }
   },
@@ -17651,8 +18300,8 @@
       "slug": "react-date-picker",
       "description": "A date picker for your React app.",
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 288,
+        "yearlyBudget": 1728
       },
       "goals": [{}],
       "sponsors": []
@@ -17701,8 +18350,8 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 8310,
-        "yearlyBudget": 10803
+        "balance": 8594,
+        "yearlyBudget": 10014
       }
     }
   },
@@ -17746,10 +18395,18 @@
       "name": "react-hot-loader",
       "slug": "react-hot-loader",
       "description": "Tweak React components in real time!",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
+        }
+      ],
       "stats": {
-        "balance": 3765,
-        "yearlyBudget": 40596
+        "balance": 7958,
+        "yearlyBudget": 45456
       },
       "goals": []
     }
@@ -17772,10 +18429,10 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 65331,
-        "yearlyBudget": 15052
+        "balance": 65473,
+        "yearlyBudget": 5478
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -17794,10 +18451,18 @@
       "name": "React Native Debugger",
       "slug": "react-native-debugger",
       "description": "The standalone app based on official debugger of React Native, and includes React Inspector / Redux DevTools.",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
+        }
+      ],
       "stats": {
-        "balance": 4253,
-        "yearlyBudget": 7679
+        "balance": 4825,
+        "yearlyBudget": 6687
       },
       "goals": []
     }
@@ -17831,13 +18496,13 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 30000
+          "totalDonations": 40000
         }
       ],
       "goals": [{}],
       "stats": {
-        "balance": 79144,
-        "yearlyBudget": 245512
+        "balance": 46720,
+        "yearlyBudget": 232935
       }
     }
   },
@@ -17866,6 +18531,13 @@
           "totalDonations": 20000
         },
         {
+          "id": 10593,
+          "type": "ORGANIZATION",
+          "slug": "compojoom1",
+          "name": "compojoom",
+          "totalDonations": 10000
+        },
+        {
           "id": 15804,
           "type": "ORGANIZATION",
           "slug": "aeyriuminc1",
@@ -17873,10 +18545,10 @@
           "totalDonations": 10000
         },
         {
-          "id": 10593,
+          "id": 23890,
           "type": "ORGANIZATION",
-          "slug": "compojoom1",
-          "name": "compojoom",
+          "slug": "expo",
+          "name": "Expo",
           "totalDonations": 10000
         },
         {
@@ -17891,7 +18563,7 @@
           "type": "ORGANIZATION",
           "slug": "vaduinccom",
           "name": "vaduinc.com",
-          "totalDonations": 3500
+          "totalDonations": 4000
         },
         {
           "id": 10264,
@@ -17905,7 +18577,14 @@
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 600
+          "totalDonations": 800
+        },
+        {
+          "id": 24514,
+          "type": "ORGANIZATION",
+          "slug": "iq-fantasy-sports",
+          "name": "IQ Fantasy Sports",
+          "totalDonations": 800
         },
         {
           "id": 19953,
@@ -17946,8 +18625,8 @@
         }
       ],
       "stats": {
-        "balance": 105484,
-        "yearlyBudget": 143367
+        "balance": 126399,
+        "yearlyBudget": 285130
       }
     }
   },
@@ -17968,7 +18647,7 @@
       "slug": "react-native-iap",
       "description": null,
       "stats": {
-        "balance": 2400,
+        "balance": 3200,
         "yearlyBudget": 9600
       },
       "goals": [{}],
@@ -17997,11 +18676,11 @@
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 600
+          "totalDonations": 800
         }
       ],
       "stats": {
-        "balance": 7306,
+        "balance": 8512,
         "yearlyBudget": 14472
       },
       "goals": []
@@ -18081,8 +18760,8 @@
         }
       ],
       "stats": {
-        "balance": 47443,
-        "yearlyBudget": 11383
+        "balance": 47587,
+        "yearlyBudget": 2559
       },
       "goals": []
     }
@@ -18146,21 +18825,21 @@
           "type": "ORGANIZATION",
           "slug": "project_r",
           "name": "Project R",
-          "totalDonations": 220000
+          "totalDonations": 240000
         },
         {
           "id": 21473,
           "type": "ORGANIZATION",
           "slug": "thecalixnetwork",
           "name": "Calix",
-          "totalDonations": 40000
+          "totalDonations": 60000
         },
         {
           "id": 15152,
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 15200
+          "totalDonations": 15400
         }
       ],
       "goals": [
@@ -18171,8 +18850,8 @@
         }
       ],
       "stats": {
-        "balance": 56129,
-        "yearlyBudget": 699753
+        "balance": 96151,
+        "yearlyBudget": 691659
       }
     },
     "github": {
@@ -18225,7 +18904,7 @@
           "type": "ORGANIZATION",
           "slug": "sagar-shah2",
           "name": "Sagar Shah",
-          "totalDonations": 2600
+          "totalDonations": 2800
         },
         {
           "id": 9250,
@@ -18236,8 +18915,8 @@
         }
       ],
       "stats": {
-        "balance": 8563,
-        "yearlyBudget": 24852
+        "balance": 10120,
+        "yearlyBudget": 22552
       },
       "goals": []
     }
@@ -18306,8 +18985,8 @@
         }
       ],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 1712,
+        "yearlyBudget": 1712
       }
     }
   },
@@ -18329,8 +19008,8 @@
       "description": "A set of simple, spring-physics based primitives (as in building blocks) that should cover most of your animation needs",
       "goals": [{}],
       "stats": {
-        "balance": 14346,
-        "yearlyBudget": 24831
+        "balance": 17992,
+        "yearlyBudget": 35317
       },
       "sponsors": [
         {
@@ -18338,7 +19017,14 @@
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 1500
+          "totalDonations": 2000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
         },
         {
           "id": 19953,
@@ -18461,7 +19147,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 3800
+          "totalDonations": 4000
         },
         {
           "id": 19953,
@@ -18472,8 +19158,8 @@
         }
       ],
       "stats": {
-        "balance": 134998,
-        "yearlyBudget": 51131
+        "balance": 135542,
+        "yearlyBudget": 43304
       },
       "goals": []
     }
@@ -18509,7 +19195,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 4969,
+        "balance": 5197,
         "yearlyBudget": 5508
       },
       "goals": []
@@ -18526,8 +19212,8 @@
       "slug": "reactiveui",
       "description": null,
       "stats": {
-        "balance": 582939,
-        "yearlyBudget": 866408
+        "balance": 629400,
+        "yearlyBudget": 853312
       },
       "goals": [
         {
@@ -18549,7 +19235,7 @@
           "type": "ORGANIZATION",
           "slug": "freshheads",
           "name": "Freshheads",
-          "totalDonations": 195000
+          "totalDonations": 210000
         },
         {
           "id": 8968,
@@ -18563,7 +19249,7 @@
           "type": "ORGANIZATION",
           "slug": "pronama",
           "name": "Pronama LLC",
-          "totalDonations": 8000
+          "totalDonations": 8500
         },
         {
           "id": 8969,
@@ -18614,10 +19300,18 @@
       "description": "Toolkit for building really interactive UIs with React.",
       "goals": [{}],
       "stats": {
-        "balance": 5135,
-        "yearlyBudget": 9185
+        "balance": 7160,
+        "yearlyBudget": 19310
       },
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 500
+        }
+      ]
     }
   },
   {
@@ -18659,7 +19353,27 @@
       "id": 22253,
       "name": "redbaron",
       "slug": "redbaron",
-      "description": "Redbaron (with Baron) is a python library that allows you to parse and modify your python source code files to be able to write custom refactoring script, tooling, code analysis and so on."
+      "description": "Redbaron (with Baron) is a python library that allows you to parse and modify your python source code files to be able to write custom refactoring script, tooling, code analysis and so on.",
+      "stats": {
+        "balance": 7094,
+        "yearlyBudget": 32014
+      },
+      "goals": [
+        {
+          "key": 7915,
+          "type": "yearlyBudget",
+          "amount": 3000000,
+          "title": "Half-time dev salary"
+        },
+        {
+          "key": 2497,
+          "type": "yearlyBudget",
+          "amount": 4000000,
+          "title": "Retribute external contributors",
+          "description": "Contributing to RedBaron codebase is an advanced development task, it would be great to be able to compensate back the dozen of hours some contributors can put into this task."
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -18699,7 +19413,7 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 5764,
+        "balance": 6605,
         "yearlyBudget": 12492
       },
       "goals": []
@@ -18739,14 +19453,14 @@
           "type": "ORGANIZATION",
           "slug": "accelebrate",
           "name": "Accelebrate",
-          "totalDonations": 190000
+          "totalDonations": 200000
         },
         {
           "id": 4087,
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 35200
+          "totalDonations": 39600
         },
         {
           "id": 2090,
@@ -18763,23 +19477,23 @@
           "totalDonations": 2600
         },
         {
+          "id": 19493,
+          "type": "ORGANIZATION",
+          "slug": "matter_hq",
+          "name": "Matter",
+          "totalDonations": 800
+        },
+        {
           "id": 13618,
           "type": "ORGANIZATION",
           "slug": "fmbase",
           "name": "FM Base Ltd",
           "totalDonations": 800
-        },
-        {
-          "id": 19493,
-          "type": "ORGANIZATION",
-          "slug": "matter_hq",
-          "name": "Matter",
-          "totalDonations": 600
         }
       ],
       "stats": {
-        "balance": 296419,
-        "yearlyBudget": 202661
+        "balance": 315622,
+        "yearlyBudget": 205340
       },
       "goals": []
     }
@@ -18802,10 +19516,18 @@
       "description": null,
       "goals": [{}],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 8680,
+        "yearlyBudget": 8680
       },
-      "sponsors": []
+      "sponsors": [
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 10000
+        }
+      ]
     }
   },
   {
@@ -18866,7 +19588,7 @@
           "type": "ORGANIZATION",
           "slug": "datadog",
           "name": "DataDog",
-          "totalDonations": 200000
+          "totalDonations": 210000
         },
         {
           "id": 4743,
@@ -18887,7 +19609,7 @@
           "type": "ORGANIZATION",
           "slug": "uptrend-tech",
           "name": "Uptrend Technology, Inc.",
-          "totalDonations": 10500
+          "totalDonations": 11000
         },
         {
           "id": 9556,
@@ -18901,12 +19623,12 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 9000
+          "totalDonations": 10000
         }
       ],
       "stats": {
-        "balance": 221003,
-        "yearlyBudget": 417721
+        "balance": 237053,
+        "yearlyBudget": 344177
       },
       "goals": []
     },
@@ -19139,27 +19861,31 @@
           "type": "ORGANIZATION",
           "slug": "addli",
           "name": "+Li, Inc.",
-          "totalDonations": 6500
+          "totalDonations": 7000
         },
         {
           "id": 9311,
           "type": "ORGANIZATION",
           "slug": "district51",
           "name": "District 51",
-          "totalDonations": 6500
+          "totalDonations": 7000
         }
       ],
       "goals": [
         {
           "key": 84250,
           "type": "yearlyBudget",
-          "amount": null,
-          "title": "Budget to "
+          "amount": 1600000,
+          "title": "Budget to work part time on Riot.js",
+          "description": "This budget will allow me to work 20% (1 full day a week) on the project"
+        },
+        {
+          "key": 86714
         }
       ],
       "stats": {
-        "balance": 85463,
-        "yearlyBudget": 103850
+        "balance": 89763,
+        "yearlyBudget": 101659
       }
     }
   },
@@ -19180,8 +19906,8 @@
       "slug": "rmwc",
       "description": null,
       "stats": {
-        "balance": 22008,
-        "yearlyBudget": 22008
+        "balance": 22849,
+        "yearlyBudget": 22849
       },
       "goals": [{}],
       "sponsors": [
@@ -19204,7 +19930,7 @@
       "description": ".NET Game Server Plugin Framework",
       "stats": {
         "balance": 3476,
-        "yearlyBudget": 88328
+        "yearlyBudget": 49853
       },
       "goals": [
         {
@@ -19271,11 +19997,18 @@
       "description": "The JavaScript module bundler",
       "sponsors": [
         {
+          "id": 23859,
+          "type": "ORGANIZATION",
+          "slug": "aragonproject",
+          "name": "Aragon",
+          "totalDonations": 289700
+        },
+        {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 225000
+          "totalDonations": 250000
         },
         {
           "id": 7083,
@@ -19289,6 +20022,13 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
+          "totalDonations": 110000
+        },
+        {
+          "id": 2309,
+          "type": "ORGANIZATION",
+          "slug": "amp",
+          "name": "AMP Project",
           "totalDonations": 100000
         },
         {
@@ -19296,14 +20036,7 @@
           "type": "ORGANIZATION",
           "slug": "oasisdigitalstl",
           "name": "Oasis Digital Solutions Inc.",
-          "totalDonations": 90000
-        },
-        {
-          "id": 2309,
-          "type": "ORGANIZATION",
-          "slug": "amp",
-          "name": "AMP Project",
-          "totalDonations": 90000
+          "totalDonations": 100000
         },
         {
           "id": 13180,
@@ -19317,7 +20050,7 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 16000
+          "totalDonations": 18000
         },
         {
           "id": 13420,
@@ -19332,18 +20065,11 @@
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
           "totalDonations": 1500
-        },
-        {
-          "id": 21299,
-          "type": "ORGANIZATION",
-          "slug": "transmutableco",
-          "name": "Transmutable",
-          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 298650,
-        "yearlyBudget": 952054
+        "balance": 603616,
+        "yearlyBudget": 1196859
       },
       "goals": [{}]
     },
@@ -19368,8 +20094,8 @@
       "slug": "rom",
       "description": "Persistence and mapping toolkit for Ruby",
       "stats": {
-        "balance": 45491,
-        "yearlyBudget": 52105
+        "balance": 48363,
+        "yearlyBudget": 53503
       },
       "goals": [],
       "sponsors": []
@@ -19392,8 +20118,8 @@
       "slug": "rspec",
       "description": null,
       "stats": {
-        "balance": 476034,
-        "yearlyBudget": 510144
+        "balance": 486894,
+        "yearlyBudget": 516639
       },
       "goals": [],
       "sponsors": [
@@ -19409,14 +20135,14 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 30800
+          "totalDonations": 35200
         },
         {
           "id": 19054,
           "type": "ORGANIZATION",
           "slug": "seedanddew-earnings-account",
           "name": "SeedAndDew - Earnings Account",
-          "totalDonations": 993
+          "totalDonations": 1503
         }
       ]
     }
@@ -19451,6 +20177,20 @@
           "slug": "rixcloud2",
           "name": "rixCloud, Inc.",
           "totalDonations": 10000
+        },
+        {
+          "id": 23527,
+          "type": "ORGANIZATION",
+          "slug": "radwebhosting",
+          "name": "RADWEBHOSTING.COM",
+          "totalDonations": 200
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 200
         }
       ],
       "goals": [
@@ -19462,8 +20202,8 @@
         }
       ],
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 34320
+        "balance": 288,
+        "yearlyBudget": 36192
       }
     }
   },
@@ -19514,8 +20254,8 @@
       "slug": "rubocop",
       "description": null,
       "stats": {
-        "balance": 848662,
-        "yearlyBudget": 1180216
+        "balance": 902815,
+        "yearlyBudget": 1272987
       },
       "goals": [],
       "sponsors": [
@@ -19545,35 +20285,49 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 74200
+          "totalDonations": 85100
         },
         {
           "id": 1863,
           "type": "ORGANIZATION",
           "slug": "triplebyte",
           "name": "Triplebyte",
-          "totalDonations": 40000
+          "totalDonations": 78000
         },
         {
           "id": 19829,
           "type": "ORGANIZATION",
           "slug": "siderreview1",
           "name": "Sider, Inc.",
-          "totalDonations": 30000
+          "totalDonations": 40000
+        },
+        {
+          "id": 25016,
+          "type": "ORGANIZATION",
+          "slug": "scout",
+          "name": "Scout",
+          "totalDonations": 10000
         },
         {
           "id": 13054,
           "type": "ORGANIZATION",
           "slug": "qnyp",
           "name": "qnyp",
-          "totalDonations": 4000
+          "totalDonations": 4500
+        },
+        {
+          "id": 22580,
+          "type": "ORGANIZATION",
+          "slug": "consonance_app1",
+          "name": "General Products Ltd",
+          "totalDonations": 1000
         },
         {
           "id": 19493,
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 600
+          "totalDonations": 800
         }
       ]
     }
@@ -19586,7 +20340,7 @@
       "slug": "ruijinet",
       "description": "Dotnet distributed crawler framework",
       "stats": {
-        "balance": 574,
+        "balance": 718,
         "yearlyBudget": 1870
       },
       "goals": [
@@ -19610,7 +20364,7 @@
           "type": "ORGANIZATION",
           "slug": "scraperapi1",
           "name": "Scraper API",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 19953,
@@ -19672,6 +20426,20 @@
           "totalDonations": 33300
         },
         {
+          "id": 17249,
+          "type": "ORGANIZATION",
+          "slug": "codefirst",
+          "name": "CodeFirst",
+          "totalDonations": 17000
+        },
+        {
+          "id": 11348,
+          "type": "ORGANIZATION",
+          "slug": "murmur-creative",
+          "name": "Murmur Creative",
+          "totalDonations": 8400
+        },
+        {
           "id": 14868,
           "type": "ORGANIZATION",
           "slug": "designlobby1",
@@ -19679,18 +20447,11 @@
           "totalDonations": 8400
         },
         {
-          "id": 11348,
-          "type": "ORGANIZATION",
-          "slug": "murmur-creative",
-          "name": "Murmur Creative",
-          "totalDonations": 7700
-        },
-        {
           "id": 13017,
           "type": "ORGANIZATION",
           "slug": "proj_assistant1",
           "name": "Project Assistant",
-          "totalDonations": 6300
+          "totalDonations": 7000
         },
         {
           "id": 11450,
@@ -19701,8 +20462,8 @@
         }
       ],
       "stats": {
-        "balance": 217370,
-        "yearlyBudget": 621533
+        "balance": 237469,
+        "yearlyBudget": 750262
       },
       "goals": []
     }
@@ -19734,7 +20495,7 @@
       ],
       "stats": {
         "balance": 185788,
-        "yearlyBudget": 44241
+        "yearlyBudget": 34720
       },
       "goals": []
     }
@@ -19757,10 +20518,10 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 98975,
+        "balance": 47495,
         "yearlyBudget": 98975
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -19812,7 +20573,7 @@
       "slug": "searx",
       "description": null,
       "stats": {
-        "balance": 2304,
+        "balance": 2448,
         "yearlyBudget": 2880
       },
       "goals": [],
@@ -19923,7 +20684,7 @@
           "type": "ORGANIZATION",
           "slug": "lgtmhq",
           "name": "LGTM",
-          "totalDonations": 21000
+          "totalDonations": 24500
         },
         {
           "id": 17497,
@@ -19937,7 +20698,7 @@
           "type": "ORGANIZATION",
           "slug": "northwoodsgo1",
           "name": "Northwoods Software",
-          "totalDonations": 10500
+          "totalDonations": 14000
         },
         {
           "id": 16122,
@@ -19947,6 +20708,13 @@
           "totalDonations": 3500
         },
         {
+          "id": 19493,
+          "type": "ORGANIZATION",
+          "slug": "matter_hq",
+          "name": "Matter",
+          "totalDonations": 1200
+        },
+        {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
@@ -19954,16 +20722,16 @@
           "totalDonations": 1000
         },
         {
-          "id": 19493,
+          "id": 24758,
           "type": "ORGANIZATION",
-          "slug": "matter_hq",
-          "name": "Matter",
-          "totalDonations": 900
+          "slug": "cloudsmith_io1",
+          "name": "Cloudsmith",
+          "totalDonations": 300
         }
       ],
       "stats": {
-        "balance": 87076,
-        "yearlyBudget": 162470
+        "balance": 90434,
+        "yearlyBudget": 157617
       },
       "goals": []
     }
@@ -20042,35 +20810,35 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 4087,
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 69800
+          "totalDonations": 80700
         },
         {
           "id": 12801,
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 17500
+          "totalDonations": 20000
         },
         {
           "id": 13569,
           "type": "ORGANIZATION",
           "slug": "metabolize",
           "name": "Metabolize",
-          "totalDonations": 1600
+          "totalDonations": 1800
         },
         {
           "id": 19493,
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 16122,
@@ -20088,8 +20856,8 @@
         }
       ],
       "stats": {
-        "balance": 108015,
-        "yearlyBudget": 341219
+        "balance": 132343,
+        "yearlyBudget": 341965
       },
       "goals": []
     }
@@ -20111,8 +20879,8 @@
       "slug": "skatejs",
       "description": "Effortless custom elements for modern view libraries.",
       "stats": {
-        "balance": 85741,
-        "yearlyBudget": 128183
+        "balance": 20353,
+        "yearlyBudget": 114368
       },
       "goals": [],
       "sponsors": [
@@ -20217,14 +20985,21 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 90000
+          "totalDonations": 100000
+        },
+        {
+          "id": 12819,
+          "type": "ORGANIZATION",
+          "slug": "codeinwp",
+          "name": "Vertigo Studio SRL",
+          "totalDonations": 40000
         },
         {
           "id": 7807,
@@ -20234,18 +21009,18 @@
           "totalDonations": 30000
         },
         {
-          "id": 12819,
-          "type": "ORGANIZATION",
-          "slug": "codeinwp",
-          "name": "Vertigo Studio SRL",
-          "totalDonations": 30000
-        },
-        {
           "id": 12801,
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 22500
+          "totalDonations": 25000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 20000
         },
         {
           "id": 13420,
@@ -20259,33 +21034,26 @@
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3500
+          "totalDonations": 4000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1000
+          "totalDonations": 1200
         },
         {
           "id": 18505,
           "type": "ORGANIZATION",
           "slug": "coherentsoft",
           "name": "Coherent Software",
-          "totalDonations": 800
-        },
-        {
-          "id": 20399,
-          "type": "ORGANIZATION",
-          "slug": "announcekit",
-          "name": "AnnounceKit",
-          "totalDonations": 400
+          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 228708,
-        "yearlyBudget": 446187
+        "balance": 277951,
+        "yearlyBudget": 455645
       },
       "goals": []
     },
@@ -20315,14 +21083,21 @@
           "type": "ORGANIZATION",
           "slug": "mixmax",
           "name": "Mixmax",
-          "totalDonations": 100000
+          "totalDonations": 110000
         },
         {
           "id": 7410,
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 90000
+          "totalDonations": 100000
+        },
+        {
+          "id": 12819,
+          "type": "ORGANIZATION",
+          "slug": "codeinwp",
+          "name": "Vertigo Studio SRL",
+          "totalDonations": 40000
         },
         {
           "id": 7807,
@@ -20332,18 +21107,18 @@
           "totalDonations": 30000
         },
         {
-          "id": 12819,
-          "type": "ORGANIZATION",
-          "slug": "codeinwp",
-          "name": "Vertigo Studio SRL",
-          "totalDonations": 30000
-        },
-        {
           "id": 12801,
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 22500
+          "totalDonations": 25000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 20000
         },
         {
           "id": 13420,
@@ -20357,33 +21132,26 @@
           "type": "ORGANIZATION",
           "slug": "duohui",
           "name": "多会",
-          "totalDonations": 3500
+          "totalDonations": 4000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 1000
+          "totalDonations": 1200
         },
         {
           "id": 18505,
           "type": "ORGANIZATION",
           "slug": "coherentsoft",
           "name": "Coherent Software",
-          "totalDonations": 800
-        },
-        {
-          "id": 20399,
-          "type": "ORGANIZATION",
-          "slug": "announcekit",
-          "name": "AnnounceKit",
-          "totalDonations": 400
+          "totalDonations": 1000
         }
       ],
       "stats": {
-        "balance": 228708,
-        "yearlyBudget": 446187
+        "balance": 277951,
+        "yearlyBudget": 455645
       },
       "goals": []
     }
@@ -20456,7 +21224,12 @@
         "balance": 0,
         "yearlyBudget": 0
       },
-      "goals": [{}],
+      "goals": [
+        {
+          "key": 49873,
+          "type": "yearlyBudget"
+        }
+      ],
       "sponsors": []
     }
   },
@@ -20499,7 +21272,13 @@
       "id": 22332,
       "name": "Sous-Chefs",
       "slug": "sous-chefs",
-      "description": "Sous-Chefs are a group of like minded Chef practitioners creating high quality Chef Cookbooks"
+      "description": "Sous-Chefs are a group of like minded Chef practitioners creating high quality Chef Cookbooks",
+      "stats": {
+        "balance": 810,
+        "yearlyBudget": 4860
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -20543,8 +21322,8 @@
       "slug": "spina",
       "description": null,
       "stats": {
-        "balance": 6927,
-        "yearlyBudget": 11053
+        "balance": 11566,
+        "yearlyBudget": 15378
       },
       "goals": [
         {
@@ -20582,7 +21361,7 @@
       "slug": "split",
       "description": null,
       "stats": {
-        "balance": 192524,
+        "balance": 203470,
         "yearlyBudget": 165802
       },
       "goals": [{}],
@@ -20592,7 +21371,7 @@
           "type": "ORGANIZATION",
           "slug": "clayglobal",
           "name": "clay",
-          "totalDonations": 160000
+          "totalDonations": 170000
         },
         {
           "id": 2501,
@@ -20606,7 +21385,7 @@
           "type": "ORGANIZATION",
           "slug": "icons8",
           "name": "Free Icons by Icons8",
-          "totalDonations": 8800
+          "totalDonations": 9000
         },
         {
           "id": 13254,
@@ -20640,7 +21419,7 @@
       "id": 10668,
       "name": "Split.js",
       "slug": "splitjs",
-      "description": null,
+      "description": "Small libraries for creating resizeable split views",
       "sponsors": [
         {
           "id": 11989,
@@ -20654,7 +21433,7 @@
         "balance": 8680,
         "yearlyBudget": 8680
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -20674,11 +21453,25 @@
       "slug": "spyder",
       "description": "The Scientific Python Development Environment",
       "stats": {
-        "balance": 423443,
-        "yearlyBudget": 575293
+        "balance": 509605,
+        "yearlyBudget": 632623
       },
       "goals": [{}],
       "sponsors": [
+        {
+          "id": 23850,
+          "type": "ORGANIZATION",
+          "slug": "levitronix-gmbh",
+          "name": "Levitronix GmbH",
+          "totalDonations": 30000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 10000
+        },
         {
           "id": 11489,
           "type": "ORGANIZATION",
@@ -20691,20 +21484,27 @@
           "type": "ORGANIZATION",
           "slug": "audit-data-analytics",
           "name": "Audit Data Analytics",
-          "totalDonations": 2500
+          "totalDonations": 3000
         },
         {
-          "id": 10494,
+          "id": 23548,
           "type": "ORGANIZATION",
-          "slug": "university-of-oslo",
-          "name": "university of oslo",
-          "totalDonations": 1000
+          "slug": "hrank-com",
+          "name": "HRANK.com",
+          "totalDonations": 2000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
+          "totalDonations": 1500
+        },
+        {
+          "id": 10494,
+          "type": "ORGANIZATION",
+          "slug": "university-of-oslo",
+          "name": "university of oslo",
           "totalDonations": 1000
         }
       ]
@@ -20718,7 +21518,7 @@
       "slug": "ssh",
       "description": null,
       "stats": {
-        "balance": 4810,
+        "balance": 5210,
         "yearlyBudget": 9660
       },
       "goals": [],
@@ -20838,35 +21638,35 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 214200
+          "totalDonations": 244800
         },
         {
           "id": 2250,
           "type": "ORGANIZATION",
           "slug": "xebia",
           "name": "Xebia",
-          "totalDonations": 160000
+          "totalDonations": 170000
         },
         {
           "id": 12306,
           "type": "ORGANIZATION",
           "slug": "percy_io",
           "name": "Percy",
-          "totalDonations": 150000
+          "totalDonations": 165000
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 9826,
           "type": "ORGANIZATION",
           "slug": "chromatic",
           "name": "Chromatic",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 7083,
@@ -20880,21 +21680,21 @@
           "type": "ORGANIZATION",
           "slug": "applitoolseyes2",
           "name": "Applitools: AI-powered Visual Testing and Monitoring ",
-          "totalDonations": 90000
+          "totalDonations": 105000
         },
         {
           "id": 5156,
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
-          "totalDonations": 70000
+          "totalDonations": 80000
         },
         {
           "id": 3400,
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 32500
+          "totalDonations": 35000
         },
         {
           "id": 13420,
@@ -20905,8 +21705,8 @@
         }
       ],
       "stats": {
-        "balance": 828096,
-        "yearlyBudget": 1612402
+        "balance": 926491,
+        "yearlyBudget": 1622196
       },
       "goals": []
     },
@@ -21093,8 +21893,8 @@
         }
       ],
       "stats": {
-        "balance": 7222,
-        "yearlyBudget": 145722
+        "balance": 12788,
+        "yearlyBudget": 150888
       },
       "goals": []
     },
@@ -21119,8 +21919,8 @@
       "slug": "streamlink",
       "description": null,
       "stats": {
-        "balance": 36391,
-        "yearlyBudget": 46947
+        "balance": 54965,
+        "yearlyBudget": 73599
       },
       "goals": [{}],
       "sponsors": [
@@ -21129,7 +21929,7 @@
           "type": "ORGANIZATION",
           "slug": "deep-video-analytics",
           "name": "Deep Video Analytics",
-          "totalDonations": 9000
+          "totalDonations": 10000
         },
         {
           "id": 19953,
@@ -21184,8 +21984,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 194737,
-        "yearlyBudget": 204491
+        "balance": 203065,
+        "yearlyBudget": 194720
       }
     }
   },
@@ -21249,7 +22049,7 @@
           "type": "ORGANIZATION",
           "slug": "coinbase",
           "name": "Coinbase",
-          "totalDonations": 225000
+          "totalDonations": 250000
         },
         {
           "id": 1247,
@@ -21270,7 +22070,7 @@
           "type": "ORGANIZATION",
           "slug": "tldrnewsletter",
           "name": "TLDR Newsletter",
-          "totalDonations": 1500
+          "totalDonations": 2000
         },
         {
           "id": 13618,
@@ -21284,7 +22084,7 @@
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 600
+          "totalDonations": 800
         },
         {
           "id": 19953,
@@ -21295,8 +22095,8 @@
         }
       ],
       "stats": {
-        "balance": 267564,
-        "yearlyBudget": 518281
+        "balance": 304896,
+        "yearlyBudget": 530813
       },
       "goals": [{}]
     }
@@ -21323,11 +22123,11 @@
           "type": "ORGANIZATION",
           "slug": "sebastiansoft",
           "name": "Sebastian Software GmbH",
-          "totalDonations": 20000
+          "totalDonations": 22500
         }
       ],
       "stats": {
-        "balance": 18000,
+        "balance": 20522,
         "yearlyBudget": 40544
       },
       "goals": []
@@ -21356,14 +22156,14 @@
           "type": "ORGANIZATION",
           "slug": "codepilotai",
           "name": "CodePilot.ai",
-          "totalDonations": 17500
+          "totalDonations": 20000
         },
         {
           "id": 15126,
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 19953,
@@ -21381,8 +22181,8 @@
         }
       ],
       "stats": {
-        "balance": 20653,
-        "yearlyBudget": 37609
+        "balance": 23491,
+        "yearlyBudget": 29021
       },
       "goals": []
     },
@@ -21475,7 +22275,7 @@
       "slug": "svgr",
       "description": "Transform SVGs into React components 🦁",
       "stats": {
-        "balance": 34380,
+        "balance": 51570,
         "yearlyBudget": 206280
       },
       "goals": [
@@ -21491,7 +22291,7 @@
           "type": "ORGANIZATION",
           "slug": "smooth-code",
           "name": "Smooth Code",
-          "totalDonations": 40000
+          "totalDonations": 60000
         }
       ]
     }
@@ -21517,7 +22317,7 @@
         "balance": 8680,
         "yearlyBudget": 8680
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -21917,15 +22717,80 @@
     },
     "opencollective": {
       "id": 13409,
-      "name": "symfony",
+      "name": "Symfony",
       "slug": "symfony",
-      "description": "The Symfony PHP framework",
-      "sponsors": [],
+      "description": "The Symfony PHP framework Diversity Initiative",
+      "sponsors": [
+        {
+          "id": 23424,
+          "type": "ORGANIZATION",
+          "slug": "symfonycasts",
+          "name": "SymfonyCasts",
+          "totalDonations": 100000
+        },
+        {
+          "id": 25051,
+          "type": "ORGANIZATION",
+          "slug": "cooptilleuls1",
+          "name": "Les-Tilleuls.coop",
+          "totalDonations": 50000
+        },
+        {
+          "id": 24987,
+          "type": "ORGANIZATION",
+          "slug": "sensiolabs2",
+          "name": "SensioLabs",
+          "totalDonations": 50000
+        },
+        {
+          "id": 24967,
+          "type": "ORGANIZATION",
+          "slug": "jolicode",
+          "name": "JoliCode",
+          "totalDonations": 50000
+        },
+        {
+          "id": 23380,
+          "type": "ORGANIZATION",
+          "slug": "blackfireio3",
+          "name": "Blackfire",
+          "totalDonations": 50000
+        },
+        {
+          "id": 23375,
+          "type": "ORGANIZATION",
+          "slug": "symfony2",
+          "name": "Symfony",
+          "totalDonations": 50000
+        },
+        {
+          "id": 23366,
+          "type": "ORGANIZATION",
+          "slug": "liip",
+          "name": "Liip AG",
+          "totalDonations": 50000
+        },
+        {
+          "id": 8686,
+          "type": "ORGANIZATION",
+          "slug": "opencollectiveinc",
+          "name": "OpenCollective",
+          "totalDonations": 500
+        }
+      ],
       "stats": {
-        "balance": 831,
-        "yearlyBudget": 831
+        "balance": 365337,
+        "yearlyBudget": 450942
       },
-      "goals": []
+      "goals": [
+        {
+          "key": 89654,
+          "type": "yearlyBudget",
+          "amount": 450000,
+          "title": "Scholarship fundraising campaign",
+          "description": "We've launched the scholarship program for SymfonyCon Lisbon 2018. We'd like to offer 3 scholarships there. We thus need about 4 000€ to be able to offer them. Each scholarship includes the reimbursement of the travel expenses (flight or train tickets from their city of departure to Lisbon), 3 hotel nights and the conference ticket (Hackday included). We'd be thrilled to collect more than 4 000€, this way we'd be able to offer more scholarships! Thank you for your help and contributions!"
+        }
+      ]
     }
   },
   {
@@ -21978,7 +22843,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 19113,
@@ -21989,8 +22854,8 @@
         }
       ],
       "stats": {
-        "balance": 1574,
-        "yearlyBudget": 2134
+        "balance": 1716,
+        "yearlyBudget": 1990
       },
       "goals": []
     }
@@ -22015,11 +22880,31 @@
       "name": "tabler",
       "slug": "tabler",
       "description": "Premium and Open Source dashboard template with responsive and high quality UI.",
-      "sponsors": [],
-      "goals": [{}],
+      "sponsors": [
+        {
+          "id": 23069,
+          "type": "ORGANIZATION",
+          "slug": "paved",
+          "name": "Paved",
+          "totalDonations": 20000
+        },
+        {
+          "id": 19113,
+          "type": "ORGANIZATION",
+          "slug": "tldrnewsletter",
+          "name": "TLDR Newsletter",
+          "totalDonations": 1000
+        }
+      ],
+      "goals": [
+        {
+          "key": 17313,
+          "type": "yearlyBudget"
+        }
+      ],
       "stats": {
-        "balance": 5086,
-        "yearlyBudget": 5086
+        "balance": 23256,
+        "yearlyBudget": 114106
       }
     }
   },
@@ -22040,8 +22925,8 @@
       "slug": "tabulapdf",
       "description": "We are the maintainers of Tabula, the only free, open-source tool for liberating data trapped inside PDF files.",
       "stats": {
-        "balance": 264463,
-        "yearlyBudget": 157796
+        "balance": 275514,
+        "yearlyBudget": 154312
       },
       "goals": [],
       "sponsors": [
@@ -22098,19 +22983,19 @@
           "type": "ORGANIZATION",
           "slug": "matterstech",
           "name": "Matters",
-          "totalDonations": 9000
+          "totalDonations": 10000
         },
         {
           "id": 13054,
           "type": "ORGANIZATION",
           "slug": "qnyp",
           "name": "qnyp",
-          "totalDonations": 4000
+          "totalDonations": 4500
         }
       ],
       "stats": {
-        "balance": 158581,
-        "yearlyBudget": 174699
+        "balance": 166330,
+        "yearlyBudget": 171352
       },
       "goals": []
     }
@@ -22132,7 +23017,7 @@
       "slug": "task",
       "description": "A task runner / simpler Make alternative written in Go",
       "stats": {
-        "balance": 2805,
+        "balance": 1567,
         "yearlyBudget": 9660
       },
       "goals": [{}],
@@ -22142,7 +23027,7 @@
           "type": "ORGANIZATION",
           "slug": "restpack",
           "name": "Restpack",
-          "totalDonations": 3500
+          "totalDonations": 4000
         }
       ]
     }
@@ -22213,7 +23098,7 @@
           "type": "ORGANIZATION",
           "slug": "gohcltech1",
           "name": "Health Care Logistics Technology Services",
-          "totalDonations": 80000
+          "totalDonations": 90000
         },
         {
           "id": 14113,
@@ -22232,8 +23117,8 @@
       ],
       "goals": [],
       "stats": {
-        "balance": 83444,
-        "yearlyBudget": 258857
+        "balance": 75589,
+        "yearlyBudget": 267492
       }
     }
   },
@@ -22255,7 +23140,7 @@
       "description": "The Lounge is a modern web IRC client designed to be self-hosted.",
       "sponsors": [],
       "stats": {
-        "balance": 5108,
+        "balance": 6223,
         "yearlyBudget": 38398
       },
       "goals": [{}]
@@ -22366,11 +23251,11 @@
           "type": "ORGANIZATION",
           "slug": "digitalocean",
           "name": "DigitalOcean",
-          "totalDonations": 8000
+          "totalDonations": 10000
         }
       ],
       "stats": {
-        "balance": 7689,
+        "balance": 9401,
         "yearlyBudget": 21385
       },
       "goals": [{}]
@@ -22402,8 +23287,8 @@
         }
       ],
       "stats": {
-        "balance": 254426,
-        "yearlyBudget": 27336
+        "balance": 253994,
+        "yearlyBudget": 18656
       },
       "goals": []
     }
@@ -22434,11 +23319,11 @@
           "type": "ORGANIZATION",
           "slug": "medayo",
           "name": "Medayo LTD",
-          "totalDonations": 4500
+          "totalDonations": 5500
         }
       ],
       "stats": {
-        "balance": 6031,
+        "balance": 7262,
         "yearlyBudget": 17572
       },
       "goals": []
@@ -22915,8 +23800,8 @@
         }
       ],
       "stats": {
-        "balance": 143688,
-        "yearlyBudget": 253306
+        "balance": 153946,
+        "yearlyBudget": 263690
       },
       "goals": [{}]
     },
@@ -23273,7 +24158,7 @@
       "slug": "unirx",
       "description": null,
       "stats": {
-        "balance": 199758,
+        "balance": 210470,
         "yearlyBudget": 341096
       },
       "goals": [{}],
@@ -23330,18 +24215,18 @@
           "type": "ORGANIZATION",
           "slug": "digirati",
           "name": "Digirati",
-          "totalDonations": 1020000
+          "totalDonations": 1080000
         },
         {
           "id": 8990,
           "type": "ORGANIZATION",
           "slug": "nlwales",
           "name": "Llyfrgell Genedlaethol Cymru The National Library of Wales",
-          "totalDonations": 260000
+          "totalDonations": 280000
         }
       ],
       "stats": {
-        "balance": 396473,
+        "balance": 173034,
         "yearlyBudget": 1666140
       },
       "goals": [{}]
@@ -23430,8 +24315,8 @@
         }
       ],
       "stats": {
-        "balance": 26937,
-        "yearlyBudget": 27737
+        "balance": 38964,
+        "yearlyBudget": 43364
       },
       "goals": []
     }
@@ -23565,7 +24450,15 @@
       "name": "verdaccio",
       "slug": "verdaccio",
       "description": "A lightweight private npm proxy registry",
-      "sponsors": [],
+      "sponsors": [
+        {
+          "id": 22461,
+          "type": "ORGANIZATION",
+          "slug": "calcun",
+          "name": "Calcun",
+          "totalDonations": 2500
+        }
+      ],
       "goals": [
         {
           "key": 58607,
@@ -23590,8 +24483,8 @@
         }
       ],
       "stats": {
-        "balance": 4779,
-        "yearlyBudget": 12375
+        "balance": 7171,
+        "yearlyBudget": 14940
       }
     }
   },
@@ -23640,8 +24533,8 @@
         }
       ],
       "stats": {
-        "balance": 13786,
-        "yearlyBudget": 13786
+        "balance": 16299,
+        "yearlyBudget": 16299
       },
       "goals": []
     }
@@ -23697,8 +24590,8 @@
         }
       ],
       "stats": {
-        "balance": 3657,
-        "yearlyBudget": 3657
+        "balance": 4483,
+        "yearlyBudget": 4483
       }
     }
   },
@@ -23720,8 +24613,8 @@
       "description": null,
       "sponsors": [],
       "stats": {
-        "balance": 6917,
-        "yearlyBudget": 3720
+        "balance": 7059,
+        "yearlyBudget": 3432
       },
       "goals": []
     }
@@ -23886,7 +24779,7 @@
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 130000
+          "totalDonations": 140000
         },
         {
           "id": 7083,
@@ -23900,26 +24793,26 @@
           "type": "ORGANIZATION",
           "slug": "bgasoft",
           "name": "BGASoft",
+          "totalDonations": 110000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 102400
+        },
+        {
+          "id": 22721,
+          "type": "ORGANIZATION",
+          "slug": "factset",
+          "name": "",
           "totalDonations": 100000
-        },
-        {
-          "id": 19819,
-          "type": "ORGANIZATION",
-          "slug": "volaresystems1",
-          "name": "Volare Systems",
-          "totalDonations": 75000
-        },
-        {
-          "id": 5156,
-          "type": "ORGANIZATION",
-          "slug": "tipe",
-          "name": "Tipe",
-          "totalDonations": 70000
         }
       ],
       "stats": {
-        "balance": 997610,
-        "yearlyBudget": 2653446
+        "balance": 1172219,
+        "yearlyBudget": 3575846
       },
       "goals": []
     },
@@ -23940,15 +24833,15 @@
     },
     "opencollective": {
       "id": 13418,
-      "name": "vuesax",
+      "name": "Vuesax",
       "slug": "vuesax",
-      "description": "Components for vue js",
+      "description": "New Framework Components for Vuejs",
       "sponsors": [],
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
       },
-      "goals": []
+      "goals": [{}]
     }
   },
   {
@@ -23966,10 +24859,10 @@
       "id": 21031,
       "name": "vuetify",
       "slug": "vuetify",
-      "description": "Material design components for vue, and so much more",
+      "description": "Material design components for vue",
       "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
+        "balance": 142,
+        "yearlyBudget": 1704
       },
       "goals": [],
       "sponsors": []
@@ -24098,7 +24991,7 @@
           "type": "ORGANIZATION",
           "slug": "hostpresto1",
           "name": "HostPresto",
-          "totalDonations": 800
+          "totalDonations": 1000
         },
         {
           "id": 19113,
@@ -24110,8 +25003,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 16490,
-        "yearlyBudget": 21886
+        "balance": 26022,
+        "yearlyBudget": 31418
       }
     },
     "github": {
@@ -24180,7 +25073,7 @@
       "sponsors": [],
       "stats": {
         "balance": 0,
-        "yearlyBudget": 425
+        "yearlyBudget": 0
       },
       "goals": []
     }
@@ -24195,7 +25088,13 @@
       "id": 22968,
       "name": "webcomic",
       "slug": "webcomic",
-      "description": null
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -24535,7 +25434,7 @@
           "type": "ORGANIZATION",
           "slug": "trivago",
           "name": "trivago",
-          "totalDonations": 15000000
+          "totalDonations": 16000000
         },
         {
           "id": 5422,
@@ -24549,21 +25448,21 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 1509400
+          "totalDonations": 1618800
         },
         {
           "id": 9337,
           "type": "ORGANIZATION",
           "slug": "fbopensource",
           "name": "Facebook Open Source",
-          "totalDonations": 1300000
+          "totalDonations": 1400000
         },
         {
-          "id": 5023,
+          "id": 4409,
           "type": "ORGANIZATION",
-          "slug": "capitalone",
-          "name": "Capital One",
-          "totalDonations": 1200000
+          "slug": "frontendmasters",
+          "name": "Frontend Masters",
+          "totalDonations": 1220000
         },
         {
           "id": 5610,
@@ -24573,11 +25472,18 @@
           "totalDonations": 1200000
         },
         {
-          "id": 4409,
+          "id": 5023,
           "type": "ORGANIZATION",
-          "slug": "frontendmasters",
-          "name": "Frontend Masters",
-          "totalDonations": 1190000
+          "slug": "capitalone",
+          "name": "Capital One",
+          "totalDonations": 1200000
+        },
+        {
+          "id": 12671,
+          "type": "ORGANIZATION",
+          "slug": "coinbase",
+          "name": "Coinbase",
+          "totalDonations": 1050000
         },
         {
           "id": 16284,
@@ -24587,18 +25493,11 @@
           "totalDonations": 1000000
         },
         {
-          "id": 12671,
+          "id": 5954,
           "type": "ORGANIZATION",
-          "slug": "coinbase",
-          "name": "Coinbase",
-          "totalDonations": 950000
-        },
-        {
-          "id": 7194,
-          "type": "ORGANIZATION",
-          "slug": "slack",
-          "name": "Slack",
-          "totalDonations": 800000
+          "slug": "webflow",
+          "name": "Webflow",
+          "totalDonations": 810000
         }
       ],
       "goals": [
@@ -24632,8 +25531,8 @@
         }
       ],
       "stats": {
-        "balance": 1749590,
-        "yearlyBudget": 38099303
+        "balance": 1543619,
+        "yearlyBudget": 38372253
       }
     },
     "github": {
@@ -24814,8 +25713,8 @@
       "description": "WhitestormJS - 3D Framework for GameDev & VR in WEB",
       "sponsors": [],
       "stats": {
-        "balance": 9864,
-        "yearlyBudget": 8667
+        "balance": 6180,
+        "yearlyBudget": 6872
       },
       "goals": [{}]
     }
@@ -24842,14 +25741,21 @@
           "type": "ORGANIZATION",
           "slug": "weblegalca",
           "name": "WebLegal.ca",
-          "totalDonations": 7500
+          "totalDonations": 10000
         },
         {
           "id": 15653,
           "type": "ORGANIZATION",
           "slug": "medschooltutors1",
           "name": "Med School Tutors",
-          "totalDonations": 6000
+          "totalDonations": 7000
+        },
+        {
+          "id": 24704,
+          "type": "ORGANIZATION",
+          "slug": "boxboat2",
+          "name": "BoxBoat",
+          "totalDonations": 5000
         },
         {
           "id": 11842,
@@ -24875,8 +25781,8 @@
       ],
       "goals": [],
       "stats": {
-        "balance": 32343,
-        "yearlyBudget": 98389
+        "balance": 44969,
+        "yearlyBudget": 163054
       }
     }
   },
@@ -25006,8 +25912,8 @@
       "slug": "xstate",
       "description": null,
       "stats": {
-        "balance": 17360,
-        "yearlyBudget": 104160
+        "balance": 43835,
+        "yearlyBudget": 317700
       },
       "goals": [{}],
       "sponsors": [
@@ -25016,6 +25922,13 @@
           "type": "ORGANIZATION",
           "slug": "tipe",
           "name": "Tipe",
+          "totalDonations": 30000
+        },
+        {
+          "id": 5954,
+          "type": "ORGANIZATION",
+          "slug": "webflow",
+          "name": "Webflow",
           "totalDonations": 20000
         }
       ]
@@ -25228,7 +26141,7 @@
           "type": "ORGANIZATION",
           "slug": "airbnb",
           "name": "Airbnb",
-          "totalDonations": 22000
+          "totalDonations": 24200
         },
         {
           "id": 8686,
@@ -25256,12 +26169,12 @@
           "type": "ORGANIZATION",
           "slug": "matter_hq",
           "name": "Matter",
-          "totalDonations": 300
+          "totalDonations": 400
         }
       ],
       "stats": {
-        "balance": 155656,
-        "yearlyBudget": 125426
+        "balance": 166769,
+        "yearlyBudget": 128740
       },
       "goals": []
     }
@@ -25343,8 +26256,8 @@
       "sponsors": [],
       "goals": [{}],
       "stats": {
-        "balance": 188278,
-        "yearlyBudget": 158833
+        "balance": 199446,
+        "yearlyBudget": 159254
       }
     }
   }
