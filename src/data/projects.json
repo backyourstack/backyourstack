@@ -101,6 +101,10 @@
       {
         "type": "npm",
         "name": "@accounts/types"
+      },
+      {
+        "type": "npm",
+        "name": "@accounts/boost"
       }
     ],
     "opencollective": {
@@ -4435,6 +4439,10 @@
       {
         "type": "gem",
         "name": "cucumber-formatter-dots"
+      },
+      {
+        "type": "npm",
+        "name": "c21e"
       }
     ],
     "github": {
@@ -7077,6 +7085,30 @@
     ]
   },
   {
+    "name": "functional-data-grid",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "functional-data-grid"
+      }
+    ],
+    "github": {
+      "repo": "energydrink9/functional-data-grid"
+    },
+    "opencollective": {
+      "id": 23081,
+      "name": "functional-data-grid",
+      "slug": "functional-data-grid",
+      "description": "Data grids in ReactJS",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "fuse-box",
     "packages": [
       {
@@ -7098,6 +7130,30 @@
         "yearlyBudget": 34688
       },
       "goals": []
+    }
+  },
+  {
+    "name": "galio",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "galio-framework"
+      }
+    ],
+    "github": {
+      "repo": "galio-org/galio"
+    },
+    "opencollective": {
+      "id": 23101,
+      "name": "galio",
+      "slug": "galio",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -7454,6 +7510,26 @@
       {
         "type": "npm",
         "name": "gatsby-plugin-subfont"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-gatsby-package"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-gatsby"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-cxs"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-google-gtag"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-transformer-pdf"
       }
     ],
     "opencollective": {
@@ -7734,8 +7810,8 @@
       "slug": "gitea",
       "description": "Lightweight code hosting solution written in Go",
       "stats": {
-        "balance": 92981,
-        "yearlyBudget": 238650
+        "balance": 101661,
+        "yearlyBudget": 247330
       },
       "goals": [{}],
       "sponsors": [
@@ -7745,6 +7821,13 @@
           "slug": "linder-hard-und-software",
           "name": "Linder Hard- und Software",
           "totalDonations": 40000
+        },
+        {
+          "id": 1863,
+          "type": "ORGANIZATION",
+          "slug": "triplebyte",
+          "name": "Triplebyte",
+          "totalDonations": 13000
         },
         {
           "id": 18190,
@@ -7993,6 +8076,34 @@
         "yearlyBudget": 298679
       },
       "goals": []
+    }
+  },
+  {
+    "name": "graphpack",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "babel-preset-graphpack"
+      },
+      {
+        "type": "npm",
+        "name": "graphpack"
+      }
+    ],
+    "github": {
+      "repo": "glennreyes/graphpack"
+    },
+    "opencollective": {
+      "id": 23254,
+      "name": "Graphpack",
+      "slug": "graphpack",
+      "description": "Engineer • I build things using web technologies • React, GraphQL, TypeScript • OSS • Speaker • Author Graphpack",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -10646,8 +10757,8 @@
       ],
       "goals": [{}],
       "stats": {
-        "balance": 698849,
-        "yearlyBudget": 2369781
+        "balance": 698991,
+        "yearlyBudget": 2371485
       }
     },
     "github": {
@@ -10780,6 +10891,30 @@
         "yearlyBudget": 59523
       },
       "goals": []
+    }
+  },
+  {
+    "name": "jscpd",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "jscpd"
+      }
+    ],
+    "github": {
+      "repo": "kucherenko/jscpd"
+    },
+    "opencollective": {
+      "id": 22372,
+      "name": "jscpd",
+      "slug": "jscpd",
+      "description": "Copy/paste detector.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -11044,6 +11179,30 @@
         "balance": 4697,
         "yearlyBudget": 4697
       }
+    }
+  },
+  {
+    "name": "just-api",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "just-api"
+      }
+    ],
+    "github": {
+      "repo": "kiranz/just-api"
+    },
+    "opencollective": {
+      "id": 22730,
+      "name": "just-api",
+      "slug": "just-api",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -11913,6 +12072,30 @@
     ]
   },
   {
+    "name": "less-watch-compiler",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "less-watch-compiler"
+      }
+    ],
+    "github": {
+      "repo": "jonycheung/deadsimple-less-watch-compiler"
+    },
+    "opencollective": {
+      "id": 23646,
+      "name": "less-watch-compiler",
+      "slug": "less-watch-compiler",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "lethargy",
     "packages": [
       {
@@ -11966,6 +12149,30 @@
         "balance": 21169,
         "yearlyBudget": 21574
       }
+    }
+  },
+  {
+    "name": "libreact",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "libreact"
+      }
+    ],
+    "github": {
+      "repo": "streamich/libreact"
+    },
+    "opencollective": {
+      "id": 22877,
+      "name": "libreact",
+      "slug": "libreact",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -12157,6 +12364,10 @@
       {
         "type": "npm",
         "name": "lumo"
+      },
+      {
+        "type": "npm",
+        "name": "lumo-cljs"
       }
     ],
     "github": {
@@ -12423,6 +12634,18 @@
       {
         "type": "npm",
         "name": "material-ui"
+      },
+      {
+        "type": "npm",
+        "name": "@material-ui/lab"
+      },
+      {
+        "type": "npm",
+        "name": "@material-ui/styles"
+      },
+      {
+        "type": "npm",
+        "name": "@material-ui/utils"
       }
     ],
     "opencollective": {
@@ -12776,6 +12999,59 @@
     }
   },
   {
+    "name": "metro4",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "metro4"
+      }
+    ],
+    "github": {
+      "repo": "olton/Metro-UI-CSS"
+    },
+    "opencollective": {
+      "id": 22586,
+      "name": "Metro 4 Components Library",
+      "slug": "metro4",
+      "description": "Build responsive, mobile-first projects on the web with the first front-end component library in Metro Style.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 88543,
+          "type": "yearlyBudget",
+          "amount": 1200000,
+          "title": "Half time",
+          "description": "I will be able to dedicate half of my working time to Metro 4. Development of support for Fluent design in Metro 4 will begin."
+        },
+        {
+          "key": 86626,
+          "type": "yearlyBudget",
+          "amount": 3600000,
+          "title": "Full time",
+          "description": "I will be dedicated to working on Metro 4 full time if this goal is met. Begin Angular support."
+        },
+        {
+          "key": 28865,
+          "type": "yearlyBudget",
+          "amount": 4800000,
+          "title": "Frameworks",
+          "description": "Add Angular support and React bindings. I will add a new component every month."
+        },
+        {
+          "key": 43264,
+          "type": "yearlyBudget",
+          "amount": 6000000,
+          "description": "If this goal is met, I can spend less time thinking about private monetization channels (e.g. taking on support/consulting contracts) and instead work more on content that benefits the entire Metro 4 community, e.g. more educational blog posts, videos and even books!",
+          "title": "Super goal"
+        }
+      ],
+      "sponsors": []
+    }
+  },
+  {
     "name": "midorirb",
     "packages": [
       {
@@ -12803,6 +13079,58 @@
       "name": "midori.rb",
       "slug": "midorirb",
       "description": "Midori is a Ruby Web Framework, providing high performance and proper abstraction.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
+    }
+  },
+  {
+    "name": "midway",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "midway"
+      },
+      {
+        "type": "npm",
+        "name": "midway-web"
+      },
+      {
+        "type": "npm",
+        "name": "midway-core"
+      },
+      {
+        "type": "npm",
+        "name": "midway-mock"
+      },
+      {
+        "type": "npm",
+        "name": "midway-init"
+      },
+      {
+        "type": "npm",
+        "name": "midway-bin"
+      },
+      {
+        "type": "npm",
+        "name": "midway-schedule"
+      },
+      {
+        "type": "npm",
+        "name": "injection"
+      }
+    ],
+    "github": {
+      "repo": "midwayjs/midway"
+    },
+    "opencollective": {
+      "id": 24983,
+      "name": "midway",
+      "slug": "midway",
+      "description": null,
       "stats": {
         "balance": 0,
         "yearlyBudget": 0
@@ -13282,6 +13610,30 @@
     }
   },
   {
+    "name": "mpvue-weui",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "mpvue-weui"
+      }
+    ],
+    "github": {
+      "repo": "KuangPF/mpvue-weui"
+    },
+    "opencollective": {
+      "id": 22466,
+      "name": "mpvue-weui",
+      "slug": "mpvue-weui",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "mqttnet",
     "opencollective": {
       "id": 17433,
@@ -13390,6 +13742,22 @@
       {
         "type": "npm",
         "name": "@nestjs/core"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/common"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/microservices"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/testing"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/websockets"
       }
     ],
     "github": {
@@ -13565,6 +13933,30 @@
     }
   },
   {
+    "name": "ng-alain",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ng-alain"
+      }
+    ],
+    "github": {
+      "repo": "ng-alain/ng-alain"
+    },
+    "opencollective": {
+      "id": 23115,
+      "name": "ng-alain",
+      "slug": "ng-alain",
+      "description": "Out-of-box UI solution for enterprise applications, Let developers focus on business.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "ngrx",
     "packages": [
       {
@@ -13701,6 +14093,45 @@
         "yearlyBudget": 7363
       },
       "goals": []
+    }
+  },
+  {
+    "name": "ngx-scanner",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@zxing/ngx-scanner"
+      }
+    ],
+    "github": {
+      "repo": "zxing-js/ngx-scanner"
+    },
+    "opencollective": {
+      "id": 24543,
+      "name": "@zxing/ngx-scanner",
+      "slug": "ngx-scanner",
+      "description": "1D and 2D Barcode scanner for Angular.",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 78677,
+          "type": "balance",
+          "title": "Domain registration",
+          "amount": 4376,
+          "description": "We want to register a nice domain to help people find us with a cool website.\n\nDomain: $32.88 (renews at 34.88)\nSSL: $8.88"
+        },
+        {
+          "key": 3311,
+          "type": "yearlyBudget",
+          "title": "One coffee per day",
+          "amount": 150000,
+          "description": "Stay awake late night to answer issues requires a lot of coffee! ☕️ \n\nThis is less than $5 per day for 365 days of coffee."
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -14321,6 +14752,50 @@
       {
         "type": "npm",
         "name": "nuxt"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/babel-preset-app"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/builder"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/common"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/config"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/core"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/generator"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/server"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/vue-app"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/vue-renderer"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/webpack"
       }
     ],
     "github": {
@@ -16005,6 +16480,50 @@
     }
   },
   {
+    "name": "popperjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@popperjs/babel-config"
+      },
+      {
+        "type": "npm",
+        "name": "@popperjs/bundle"
+      },
+      {
+        "type": "npm",
+        "name": "popper.js"
+      },
+      {
+        "type": "npm",
+        "name": "@popperjs/test-utils"
+      },
+      {
+        "type": "npm",
+        "name": "@popperjs/test"
+      },
+      {
+        "type": "npm",
+        "name": "tooltip.js"
+      }
+    ],
+    "github": {
+      "repo": "FezVrasta/popper.js"
+    },
+    "opencollective": {
+      "id": 24931,
+      "name": "PopperJS",
+      "slug": "popperjs",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "postcss",
     "packages": [
       {
@@ -16580,6 +17099,41 @@
           "totalDonations": 10000
         }
       ]
+    }
+  },
+  {
+    "name": "rawact",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "babel-plugin-rawact"
+      }
+    ],
+    "github": {
+      "repo": "sokra/rawact"
+    },
+    "opencollective": {
+      "id": 23862,
+      "name": "Rawact",
+      "slug": "rawact",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [
+        {
+          "key": 47750,
+          "type": "balance",
+          "amount": 1000000,
+          "title": "One month for Rawact",
+          "description": "Work 1 month on Rawact to make it more stable and add missing features. Larges sponsor can choose one react app which we try to get working with Rawact."
+        },
+        {
+          "key": 63297
+        }
+      ],
+      "sponsors": []
     }
   },
   {
@@ -17751,6 +18305,10 @@
       {
         "type": "npm",
         "name": "reakit-theme-default"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-codemods"
       }
     ],
     "github": {
@@ -19867,6 +20425,30 @@
     }
   },
   {
+    "name": "statusfy",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "statusfy"
+      }
+    ],
+    "github": {
+      "repo": "bazzite/statusfy"
+    },
+    "opencollective": {
+      "id": 25028,
+      "name": "Statusfy",
+      "slug": "statusfy",
+      "description": "A Marvelous Open Source Status Page System",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
+    }
+  },
+  {
     "name": "storybook",
     "packages": [
       {
@@ -20491,6 +21073,58 @@
       {
         "type": "npm",
         "name": "@svgr/webpack"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-add-jsx-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-remove-jsx-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-remove-jsx-empty-expression"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-replace-jsx-attribute-value"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-svg-dynamic-title"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-svg-em-dimensions"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-transform-react-native-svg"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-plugin-transform-svg-component"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/babel-preset"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/hast-util-to-babel-ast"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/plugin-jsx"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/plugin-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/plugin-svgo"
       }
     ],
     "github": {
@@ -21225,6 +21859,174 @@
         "yearlyBudget": 171352
       },
       "goals": []
+    }
+  },
+  {
+    "name": "taro",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@tarojs/taro"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-jsx-to-stylesheet"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-config-taro"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-taro"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-plugin-constparse"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-pxtransform"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-alipay"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/async-await"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/components-rn"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/components"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-h5"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/mobx-common"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/mobx-h5"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/mobx-rn"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/mobx"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-babel"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-csso"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-less"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-sass"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-stylus"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-typescript"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/plugin-uglifyjs"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/redux-h5"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-redux-rn"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/redux"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/rn-runner"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-rn"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-router-rn"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/router"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-swan"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/transformer-wx"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-weapp"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/webpack-runner"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/with-weapp"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taroize"
+      }
+    ],
+    "github": {
+      "repo": "NervJS/taro"
+    },
+    "opencollective": {
+      "id": 25034,
+      "name": "taro",
+      "slug": "taro",
+      "description": null,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -23159,6 +23961,10 @@
       {
         "type": "npm",
         "name": "@warriorjs/helper-get-play-score"
+      },
+      {
+        "type": "npm",
+        "name": "@warriorjs/helper-get-level-score"
       }
     ],
     "opencollective": {
