@@ -50,7 +50,7 @@ async function getCollectiveRepos(collective) {
           org: githubOrg,
           per_page: 100,
         });
-        if (repos) {
+        if (reposForOrg) {
           allRepos = reposForOrg.map(repo => ({
             owner: repo.owner.login,
             name: repo.name,
