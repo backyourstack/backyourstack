@@ -4310,6 +4310,24 @@
     }
   },
   {
+    "name": "css-file-icons",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "css-file-icons"
+      }
+    ],
+    "github": {
+      "repo": "colorswall/CSS-file-icons"
+    },
+    "opencollective": {
+      "id": 25108,
+      "name": "CSS-file-icons",
+      "slug": "css-file-icons",
+      "description": null
+    }
+  },
+  {
     "name": "csvtojson",
     "packages": [
       {
@@ -7016,6 +7034,92 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "fody",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Anotar.Log4Net.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "AsyncErrorHandler.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Costura.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Equals.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Fielder.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Freezable.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "InfoOf.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Janitor.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "MethodDecorator.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "ModuleInit.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Obsolete.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "PropertyChanging.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Resourcer.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "ToString.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Unsealed.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Validar.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Visualize.Fody"
+      }
+    ],
+    "github": {
+      "org": "Fody"
+    },
+    "opencollective": {
+      "id": 11423,
+      "name": "Fody",
+      "slug": "fody",
+      "description": "Extensible tool for weaving .net assemblies"
     }
   },
   {
@@ -23127,6 +23231,56 @@
         "name": "underscore"
       }
     ]
+  },
+  {
+    "name": "unified",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "unified-ui"
+      },
+      {
+        "type": "npm",
+        "name": "unified"
+      },
+      {
+        "type": "npm",
+        "name": "unified-args"
+      },
+      {
+        "type": "npm",
+        "name": "unified-diff"
+      },
+      {
+        "type": "npm",
+        "name": "unified-engine"
+      },
+      {
+        "type": "npm",
+        "name": "unified-engine-atom"
+      },
+      {
+        "type": "npm",
+        "name": "unified-engine-gulp"
+      },
+      {
+        "type": "npm",
+        "name": "unified-message-control"
+      },
+      {
+        "type": "npm",
+        "name": "unified-stream"
+      }
+    ],
+    "github": {
+      "org": "unifiedjs"
+    },
+    "opencollective": {
+      "id": 22994,
+      "name": "unified",
+      "slug": "unified",
+      "description": "Building a bridge between formats"
+    }
   },
   {
     "name": "uniread",
