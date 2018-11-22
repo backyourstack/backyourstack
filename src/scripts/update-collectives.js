@@ -46,7 +46,7 @@ async function getCollectiveRepos(collective) {
       allRepos = Object.keys(repos).map(name => ({ owner: githubOrg, name }));
     } else {
       try {
-        const reposForOrg = await fetchWithOctokit('repos.getForOrg', {
+        const reposForOrg = await fetchWithOctokit('repos.listForOrg', {
           org: githubOrg,
           per_page: 100,
         });

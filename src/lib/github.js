@@ -95,9 +95,9 @@ async function fetchProfile(login, accessToken) {
     return profile;
   }
 
-  // https://octokit.github.io/rest.js/#api-Users-getForUser
+  // https://octokit.github.io/rest.js/#api-Users-getByUsername
   const user = await fetchWithOctokit(
-    'users.getForUser',
+    'users.getByUsername',
     { username: login },
     accessToken,
   ).catch(silentError);
@@ -139,12 +139,12 @@ async function fetchReposForProfile(profile, accessToken) {
 
   let getReposPath, getReposParameters;
   if (profile.type == 'Organization') {
-    // https://octokit.github.io/rest.js/#api-Repos-getForOrg
-    getReposPath = 'repos.getForOrg';
+    // https://octokit.github.io/rest.js/#api-Repos-listForOrg
+    getReposPath = 'repos.listForOrg';
     getReposParameters = { org: profile.login };
   } else {
-    // https://octokit.github.io/rest.js/#api-Repos-getForUser
-    getReposPath = 'repos.getForUser';
+    // https://octokit.github.io/rest.js/#api-Repos-listForUser
+    getReposPath = 'repos.listForUser';
     getReposParameters = { username: profile.login };
   }
 
