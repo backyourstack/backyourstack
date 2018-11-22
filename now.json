@@ -1,10 +1,7 @@
 {
+  "version": 1,
   "type": "npm",
-  "alias": [
-    "backyourstack",
-    "backyourstack.com",
-    "www.backyourstack.com"
-  ],
+  "alias": ["backyourstack", "backyourstack.com", "www.backyourstack.com"],
   "env": {
     "GITHUB_CLIENT_ID": "@github_client_id",
     "GITHUB_CLIENT_SECRET": "@github_client_secret",
