@@ -706,6 +706,10 @@
       {
         "type": "npm",
         "name": "up"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/apex/js"
       }
     ],
     "github": {
@@ -1039,6 +1043,24 @@
         "balance": 2050265,
         "yearlyBudget": 3457488
       }
+    }
+  },
+  {
+    "name": "autokeras",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "autokeras"
+      }
+    ],
+    "github": {
+      "repo": "jhfjhfj1/autokeras"
+    },
+    "opencollective": {
+      "id": 23901,
+      "name": "Auto-Keras",
+      "slug": "autokeras",
+      "description": "Accessible AutoML for deep learning."
     }
   },
   {
@@ -3021,6 +3043,24 @@
     }
   },
   {
+    "name": "cancancan",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "cancancan"
+      }
+    ],
+    "github": {
+      "repo": "CanCanCommunity/cancancan"
+    },
+    "opencollective": {
+      "id": 22267,
+      "name": "cancancan",
+      "slug": "cancancan",
+      "description": "CanCanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access."
+    }
+  },
+  {
     "name": "caption",
     "packages": [
       {
@@ -3042,6 +3082,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "carbon",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "nesbot/carbon"
+      }
+    ],
+    "github": {
+      "repo": "briannesbitt/Carbon"
+    },
+    "opencollective": {
+      "id": 23564,
+      "name": "Carbon",
+      "slug": "carbon",
+      "description": "A simple PHP API extension for DateTime."
     }
   },
   {
@@ -4618,6 +4676,14 @@
       {
         "type": "npm",
         "name": "cucumber-messages"
+      },
+      {
+        "type": "gem",
+        "name": "c21e"
+      },
+      {
+        "type": "gem",
+        "name": "cucumber-formatter-dots"
       }
     ],
     "github": {
@@ -5137,6 +5203,24 @@
     }
   },
   {
+    "name": "django-activity-stream",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-activity-stream"
+      }
+    ],
+    "github": {
+      "repo": "justquick/django-activity-stream"
+    },
+    "opencollective": {
+      "id": 22975,
+      "name": "django-activity-stream",
+      "slug": "django-activity-stream",
+      "description": null
+    }
+  },
+  {
     "name": "django-dynamic-preferences",
     "packages": [
       {
@@ -5182,6 +5266,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "django-rest-framework-gis",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "djangorestframework-gis"
+      }
+    ],
+    "github": {
+      "repo": "djangonauts/django-rest-framework-gis"
+    },
+    "opencollective": {
+      "id": 22983,
+      "name": "django-rest-framework-gis",
+      "slug": "django-rest-framework-gis",
+      "description": null
     }
   },
   {
@@ -5749,6 +5851,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "drf-extensions",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "drf-extensions"
+      }
+    ],
+    "github": {
+      "repo": "chibisov/drf-extensions"
+    },
+    "opencollective": {
+      "id": 22981,
+      "name": "drf-extensions",
+      "slug": "drf-extensions",
+      "description": null
     }
   },
   {
@@ -6426,6 +6546,24 @@
     }
   },
   {
+    "name": "excalibur",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "excalibur-py"
+      }
+    ],
+    "github": {
+      "repo": "camelot-dev/excalibur"
+    },
+    "opencollective": {
+      "id": 24768,
+      "name": "Excalibur",
+      "slug": "excalibur",
+      "description": "Excalibur is a free and open source web interface to extract tabular data from PDFs in a scalable manner."
+    }
+  },
+  {
     "name": "excel-parser-processor",
     "packages": [],
     "github": {
@@ -6662,6 +6800,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "falcon-plus",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/open-falcon/falcon-plus"
+      }
+    ],
+    "github": {
+      "repo": "open-falcon/falcon-plus"
+    },
+    "opencollective": {
+      "id": 23361,
+      "name": "falcon-plus",
+      "slug": "falcon-plus",
+      "description": null
     }
   },
   {
@@ -7162,6 +7318,10 @@
       {
         "type": "composer",
         "name": "flarum/flarum"
+      },
+      {
+        "type": "composer",
+        "name": "flarum/core"
       }
     ],
     "github": {
@@ -11475,6 +11635,24 @@
     }
   },
   {
+    "name": "kan",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "kan"
+      }
+    ],
+    "github": {
+      "repo": "davydovanton/kan"
+    },
+    "opencollective": {
+      "id": 22334,
+      "name": "kan",
+      "slug": "kan",
+      "description": "Simple, functional authorization library and role management​ for ruby"
+    }
+  },
+  {
     "name": "karafka",
     "packages": [
       {
@@ -11596,6 +11774,24 @@
         "yearlyBudget": 34920
       },
       "goals": []
+    }
+  },
+  {
+    "name": "kivy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "Kivy"
+      }
+    ],
+    "github": {
+      "repo": "kivy/kivy"
+    },
+    "opencollective": {
+      "id": 23589,
+      "name": "Kivy",
+      "slug": "kivy",
+      "description": "Python UI framework for making outstanding desktop and mobile applications"
     }
   },
   {
@@ -12463,15 +12659,6 @@
     }
   },
   {
-    "name": "lint-staged",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "lint-staged"
-      }
-    ]
-  },
-  {
     "name": "localstack",
     "packages": [
       {
@@ -12762,6 +12949,24 @@
           "totalDonations": 60000
         }
       ]
+    }
+  },
+  {
+    "name": "matchzoo",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "MatchZoo"
+      }
+    ],
+    "github": {
+      "repo": "NTMC-Community/MatchZoo"
+    },
+    "opencollective": {
+      "id": 23092,
+      "name": "MatchZoo",
+      "slug": "matchzoo",
+      "description": "Deep learning for semantic matching"
     }
   },
   {
@@ -15145,6 +15350,24 @@
     }
   },
   {
+    "name": "opal",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "opal"
+      }
+    ],
+    "github": {
+      "repo": "opal/opal"
+    },
+    "opencollective": {
+      "id": 22824,
+      "name": "opal",
+      "slug": "opal",
+      "description": "Ruby in the browser"
+    }
+  },
+  {
     "name": "opencollective",
     "packages": [
       {
@@ -15693,6 +15916,19 @@
         "balance": 62491,
         "yearlyBudget": 105391
       }
+    }
+  },
+  {
+    "name": "owasp-nettacker",
+    "packages": [],
+    "github": {
+      "repo": "zdresearch/OWASP-Nettacker"
+    },
+    "opencollective": {
+      "id": 21750,
+      "name": "OWASP-Nettacker",
+      "slug": "owasp-nettacker",
+      "description": null
     }
   },
   {
@@ -16306,6 +16542,32 @@
     }
   },
   {
+    "name": "pixelfed-528",
+    "packages": [],
+    "github": {
+      "repo": "pixelfed/pixelfed"
+    },
+    "opencollective": {
+      "id": 23791,
+      "name": "pixelfed",
+      "slug": "pixelfed-528",
+      "description": null
+    }
+  },
+  {
+    "name": "platform",
+    "packages": [],
+    "github": {
+      "repo": "ushahidi/platform"
+    },
+    "opencollective": {
+      "id": 21565,
+      "name": "platform",
+      "slug": "platform",
+      "description": null
+    }
+  },
+  {
     "name": "plus",
     "packages": [
       {
@@ -16440,6 +16702,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "poliastro",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "poliastro"
+      }
+    ],
+    "github": {
+      "repo": "poliastro/poliastro"
+    },
+    "opencollective": {
+      "id": 23444,
+      "name": "poliastro",
+      "slug": "poliastro",
+      "description": "Interactive Astrodynamics in Python"
     }
   },
   {
@@ -16946,6 +17226,42 @@
     }
   },
   {
+    "name": "pug-php",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "pug-php/pug"
+      }
+    ],
+    "github": {
+      "repo": "pug-php/pug"
+    },
+    "opencollective": {
+      "id": 23563,
+      "name": "Pug-php",
+      "slug": "pug-php",
+      "description": "The cleanest way to code view templates"
+    }
+  },
+  {
+    "name": "puppeteer-sharp",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "PuppeteerSharp"
+      }
+    ],
+    "github": {
+      "repo": "kblok/puppeteer-sharp"
+    },
+    "opencollective": {
+      "id": 22885,
+      "name": "puppeteer-sharp",
+      "slug": "puppeteer-sharp",
+      "description": null
+    }
+  },
+  {
     "name": "purgecss",
     "packages": [
       {
@@ -17134,6 +17450,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "ransack",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "ransack"
+      }
+    ],
+    "github": {
+      "repo": "activerecord-hackery/ransack"
+    },
+    "opencollective": {
+      "id": 22619,
+      "name": "ransack",
+      "slug": "ransack",
+      "description": null
     }
   },
   {
@@ -18308,6 +18642,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "redbaron",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "redbaron"
+      }
+    ],
+    "github": {
+      "repo": "PyCQA/redbaron"
+    },
+    "opencollective": {
+      "id": 22253,
+      "name": "redbaron",
+      "slug": "redbaron",
+      "description": "Redbaron (with Baron) is a python library that allows you to parse and modify your python source code files to be able to write custom refactoring script, tooling, code analysis and so on."
     }
   },
   {
@@ -20133,6 +20485,24 @@
     }
   },
   {
+    "name": "sous-chefs",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "thor-foodcritic"
+      }
+    ],
+    "github": {
+      "org": "sous-chefs"
+    },
+    "opencollective": {
+      "id": 22332,
+      "name": "Sous-Chefs",
+      "slug": "sous-chefs",
+      "description": "Sous-Chefs are a group of like minded Chef practitioners creating high quality Chef Cookbooks"
+    }
+  },
+  {
     "name": "speedtracker",
     "packages": [
       {
@@ -21528,6 +21898,18 @@
       {
         "type": "composer",
         "name": "symfony/polyfill-intl-idn"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mercure"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mercure-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/webpack-encore-bundle"
       }
     ],
     "github": {
@@ -23801,6 +24183,19 @@
         "yearlyBudget": 425
       },
       "goals": []
+    }
+  },
+  {
+    "name": "webcomic",
+    "packages": [],
+    "github": {
+      "repo": "mgsisk/webcomic"
+    },
+    "opencollective": {
+      "id": 22968,
+      "name": "webcomic",
+      "slug": "webcomic",
+      "description": null
     }
   },
   {
