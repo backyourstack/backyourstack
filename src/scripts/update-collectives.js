@@ -35,26 +35,44 @@ const repositoryQuery = `query repository($owner: String!, $name: String!) {
 }`;
 
 async function getCollectiveRepos(collective) {
-  const repos = get(collective, 'data.repos');
-  const githubOrg = get(collective, 'settings.githubOrg');
+  let githubOrgs;
+  if (has(collective, 'settings.githubOrgs')) {
+    githubOrgs = get(collective, 'settings.githubOrgs');
+  } else if (has(collective, 'settings.githubOrg')) {
+    githubOrgs = [get(collective, 'settings.githubOrg')];
+  }
+
   const githubRepo = get(collective, 'settings.githubRepo');
 
   let allRepos = [];
 
-  if (githubOrg) {
-    if (repos) {
-      allRepos = Object.keys(repos).map(name => ({ owner: githubOrg, name }));
-    } else {
+  if (githubOrgs && githubOrgs.length > 0) {
+    for (const githubOrg of githubOrgs) {
       try {
-        const reposForOrg = await fetchWithOctokit('repos.listForOrg', {
+        const reposListForOrgParameters = {
           org: githubOrg,
+          page: 1,
           per_page: 100,
-        });
-        if (reposForOrg) {
-          allRepos = reposForOrg.map(repo => ({
-            owner: repo.owner.login,
-            name: repo.name,
-          }));
+        };
+        while (true) {
+          const reposForOrg = await fetchWithOctokit(
+            'repos.listForOrg',
+            reposListForOrgParameters,
+          );
+          if (reposForOrg) {
+            for (const repo of reposForOrg) {
+              if (!repo.fork) {
+                allRepos.push({
+                  owner: repo.owner.login,
+                  name: repo.name,
+                });
+              }
+            }
+          }
+          if (reposForOrg.length < reposListForOrgParameters.per_page) {
+            break;
+          }
+          reposListForOrgParameters.page++;
         }
       } catch (e) {
         logger.warn(`Could not fetch repos for org ${githubOrg}`);
@@ -86,7 +104,9 @@ async function getCollectiveRepos(collective) {
     logger.info(`Collective: ${collective.slug} ${collective.name}`);
 
     let github;
-    if (has(collective, 'settings.githubOrg')) {
+    if (has(collective, 'settings.githubOrgs')) {
+      github = { orgs: get(collective, 'settings.githubOrgs') };
+    } else if (has(collective, 'settings.githubOrg')) {
       github = { org: get(collective, 'settings.githubOrg') };
     } else if (has(collective, 'settings.githubRepo')) {
       github = { repo: get(collective, 'settings.githubRepo') };
@@ -118,6 +138,7 @@ async function getCollectiveRepos(collective) {
     }
 
     for (const repo of repos) {
+      logger.verbose('Fetch repo with GraphQL', repo);
       let githubRepo;
       try {
         githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
