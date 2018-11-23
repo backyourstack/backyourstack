@@ -20,7 +20,8 @@ export function getProfile(slug, accessToken) {
 }
 
 export function getUserOrgs(accessToken) {
-  return fetchWithOctokit('users.getOrgs', {}, accessToken);
+  // https://octokit.github.io/rest.js/#api-Orgs-listForAuthenticatedUser
+  return fetchWithOctokit('orgs.listForAuthenticatedUser', {}, accessToken);
 }
 
 export function searchUsers(q, accessToken) {
