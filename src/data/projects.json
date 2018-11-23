@@ -7110,6 +7110,38 @@
       {
         "type": "nuget",
         "name": "Visualize.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Immutable.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Ionad.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "LoadAssembliesOnStartup.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "MethodTimer.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "NullGuard.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "PropertyChanged.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Publicize.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Scalpel.Fody"
       }
     ],
     "github": {
@@ -23270,6 +23302,1194 @@
       {
         "type": "npm",
         "name": "unified-stream"
+      },
+      {
+        "type": "npm",
+        "name": "to-vfile"
+      },
+      {
+        "type": "npm",
+        "name": "vfile"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-find-down"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-find-up"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-is"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-location"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-message"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-reporter"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-reporter-folder-json"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-reporter-json"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-reporter-pretty"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-sort"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-statistics"
+      },
+      {
+        "type": "npm",
+        "name": "vfile-to-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-remark"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-remark"
+      },
+      {
+        "type": "npm",
+        "name": "hast-to-hyperscript"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-assert"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-embedded"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-find-and-replace"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-from-dom"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-from-parse5"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-has-property"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-heading"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-interactive"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-element"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-labelable"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-menu-state"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-parse-selector"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-phrasing"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-raw"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-sanitize"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-script-supporting"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-sectioning"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-select"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-dom"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-html"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-mdast"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-nlcst"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-parse5"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-snabbdom"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-transparent"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-whitespace"
+      },
+      {
+        "type": "npm",
+        "name": "hastscript"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-comment-marker"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-normalize-headings"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-squeeze-paragraphs"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-assert"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-compact"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-definitions"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-heading-range"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-heading-style"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-phrasing"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-to-hast"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-to-nlcst"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-to-string"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-util-toc"
+      },
+      {
+        "type": "npm",
+        "name": "mdast-zone"
+      },
+      {
+        "type": "npm",
+        "name": "create-mdx"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/loader"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/mdx"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/mdxast"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/parcel-plugin-mdx"
+      },
+      {
+        "type": "npm",
+        "name": "remark-images"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/runtime"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/tag"
+      },
+      {
+        "type": "npm",
+        "name": "mdxfmt"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-affix-emoticon-modifier"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-emoji-modifier"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-emoticon-modifier"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-is-literal"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-normalize"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-search"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-test"
+      },
+      {
+        "type": "npm",
+        "name": "nlcst-to-string"
+      },
+      {
+        "type": "npm",
+        "name": "redot-cli"
+      },
+      {
+        "type": "npm",
+        "name": "redot-parse"
+      },
+      {
+        "type": "npm",
+        "name": "redot-stringify"
+      },
+      {
+        "type": "npm",
+        "name": "redot"
+      },
+      {
+        "type": "npm",
+        "name": "redot-lint"
+      },
+      {
+        "type": "npm",
+        "name": "redot-message-control"
+      },
+      {
+        "type": "npm",
+        "name": "rehype"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-cli"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-parse"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-stringify"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-autolink-headings"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-document"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-format"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-highlight"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-preset-minify"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-from-string"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-body-ok-link"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-conditional-comment"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-css-link"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-css-style"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-event-handler"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-is-javascript"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-to-string"
+      },
+      {
+        "type": "npm",
+        "name": "html-url-attributes"
+      },
+      {
+        "type": "npm",
+        "name": "html-whitespace-sensitive-tag-names"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-concat-css-style"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-concat-javascript"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-css-to-top"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-javascript-to-bottom"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-attribute-whitespace"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-css-style"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-doctype"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-enumerated-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-event-handler"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-javascript-script"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-javascript-url"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-json-script"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-media-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-meta-color"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-meta-content"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-style-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-url"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-minify-whitespace"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-normalize-attribute-value-case"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-prevent-favicon-request"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-comments"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-duplicate-attribute-values"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-empty-attribute"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-external-script-content"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-meta-http-equiv"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-script-type-javascript"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remove-style-type-css"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-sort-attribute-values"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-sort-attributes"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-picture"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-raw"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-remark"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-retext"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-sanitize"
+      },
+      {
+        "type": "npm",
+        "name": "rehype-slug"
+      },
+      {
+        "type": "npm",
+        "name": "remark"
+      },
+      {
+        "type": "npm",
+        "name": "remark-cli"
+      },
+      {
+        "type": "npm",
+        "name": "remark-parse"
+      },
+      {
+        "type": "npm",
+        "name": "remark-stringify"
+      },
+      {
+        "type": "npm",
+        "name": "remark-autolink-headings"
+      },
+      {
+        "type": "npm",
+        "name": "remark-bookmarks"
+      },
+      {
+        "type": "npm",
+        "name": "remark-breaks"
+      },
+      {
+        "type": "npm",
+        "name": "remark-comment-blocks"
+      },
+      {
+        "type": "npm",
+        "name": "remark-comment-config"
+      },
+      {
+        "type": "npm",
+        "name": "remark-defsplit"
+      },
+      {
+        "type": "npm",
+        "name": "remark-embed-images"
+      },
+      {
+        "type": "npm",
+        "name": "remark-external-links"
+      },
+      {
+        "type": "npm",
+        "name": "remark-frontmatter"
+      },
+      {
+        "type": "npm",
+        "name": "remark-gemoji"
+      },
+      {
+        "type": "npm",
+        "name": "remark-github"
+      },
+      {
+        "type": "npm",
+        "name": "remark-heading-gap"
+      },
+      {
+        "type": "npm",
+        "name": "remark-highlight.js"
+      },
+      {
+        "type": "npm",
+        "name": "remark-html"
+      },
+      {
+        "type": "npm",
+        "name": "remark-inline-links"
+      },
+      {
+        "type": "npm",
+        "name": "@dumpster/hast-react-renderer"
+      },
+      {
+        "type": "npm",
+        "name": "@dumpster/remark-custom-element-to-hast"
+      },
+      {
+        "type": "npm",
+        "name": "remark-license"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-blockquote-indentation"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-checkbox-character-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-checkbox-content-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-code-block-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-definition-case"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-definition-spacing"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-emphasis-marker"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-fenced-code-flag"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-fenced-code-marker"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-file-extension"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-final-definition"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-final-newline"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-first-heading-level"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-hard-break-spaces"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-heading-increment"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-heading-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-linebreak-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-link-title-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-list-item-bullet-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-list-item-content-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-list-item-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-list-item-spacing"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-maximum-heading-length"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-maximum-line-length"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-auto-link-without-protocol"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-blockquote-without-marker"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-consecutive-blank-lines"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-duplicate-definitions"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-duplicate-headings-in-section"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-duplicate-headings"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-emphasis-as-heading"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-empty-url"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-file-name-articles"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-file-name-consecutive-dashes"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-file-name-irregular-characters"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-file-name-mixed-case"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-file-name-outer-dashes"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-heading-content-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-heading-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-heading-like-paragraph"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-heading-punctuation"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-html"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-inline-padding"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-literal-urls"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-missing-blank-lines"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-multiple-toplevel-headings"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-paragraph-content-indent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-reference-like-url"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-shell-dollars"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-shortcut-reference-image"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-shortcut-reference-link"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-table-indentation"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-tabs"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-undefined-references"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-no-unused-definitions"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-ordered-list-marker-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-ordered-list-marker-value"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-rule-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-strong-marker"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-table-cell-padding"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-table-pipe-alignment"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-table-pipes"
+      },
+      {
+        "type": "npm",
+        "name": "remark-lint-unordered-list-marker-style"
+      },
+      {
+        "type": "npm",
+        "name": "remark-preset-lint-consistent"
+      },
+      {
+        "type": "npm",
+        "name": "remark-preset-lint-markdown-style-guide"
+      },
+      {
+        "type": "npm",
+        "name": "remark-preset-lint-recommended"
+      },
+      {
+        "type": "npm",
+        "name": "unified-lint-rule"
+      },
+      {
+        "type": "npm",
+        "name": "remark-man"
+      },
+      {
+        "type": "npm",
+        "name": "remark-message-control"
+      },
+      {
+        "type": "npm",
+        "name": "remark-midas"
+      },
+      {
+        "type": "npm",
+        "name": "remark-normalize-headings"
+      },
+      {
+        "type": "npm",
+        "name": "remark-reference-links"
+      },
+      {
+        "type": "npm",
+        "name": "remark-rehype"
+      },
+      {
+        "type": "npm",
+        "name": "remark-retext"
+      },
+      {
+        "type": "npm",
+        "name": "remark-slug"
+      },
+      {
+        "type": "npm",
+        "name": "remark-squeeze-paragraphs"
+      },
+      {
+        "type": "npm",
+        "name": "remark-strip-badges"
+      },
+      {
+        "type": "npm",
+        "name": "remark-textr"
+      },
+      {
+        "type": "npm",
+        "name": "remark-toc"
+      },
+      {
+        "type": "npm",
+        "name": "remark-unlink"
+      },
+      {
+        "type": "npm",
+        "name": "remark-usage"
+      },
+      {
+        "type": "npm",
+        "name": "remark-validate-links"
+      },
+      {
+        "type": "npm",
+        "name": "remark-vdom"
+      },
+      {
+        "type": "npm",
+        "name": "remark-word-wrap"
+      },
+      {
+        "type": "npm",
+        "name": "remark-yaml-config"
+      },
+      {
+        "type": "npm",
+        "name": "retext"
+      },
+      {
+        "type": "npm",
+        "name": "retext-dutch"
+      },
+      {
+        "type": "npm",
+        "name": "retext-english"
+      },
+      {
+        "type": "npm",
+        "name": "retext-latin"
+      },
+      {
+        "type": "npm",
+        "name": "retext-stringify"
+      },
+      {
+        "type": "npm",
+        "name": "retext-contractions"
+      },
+      {
+        "type": "npm",
+        "name": "retext-diacritics"
+      },
+      {
+        "type": "npm",
+        "name": "retext-emoji"
+      },
+      {
+        "type": "npm",
+        "name": "retext-equality"
+      },
+      {
+        "type": "npm",
+        "name": "retext-indefinite-article"
+      },
+      {
+        "type": "npm",
+        "name": "retext-intensify"
+      },
+      {
+        "type": "npm",
+        "name": "retext-keywords"
+      },
+      {
+        "type": "npm",
+        "name": "retext-passive"
+      },
+      {
+        "type": "npm",
+        "name": "retext-pos"
+      },
+      {
+        "type": "npm",
+        "name": "retext-profanities"
+      },
+      {
+        "type": "npm",
+        "name": "retext-quotes"
+      },
+      {
+        "type": "npm",
+        "name": "retext-readability"
+      },
+      {
+        "type": "npm",
+        "name": "retext-redundant-acronyms"
+      },
+      {
+        "type": "npm",
+        "name": "retext-repeated-words"
+      },
+      {
+        "type": "npm",
+        "name": "retext-sentence-spacing"
+      },
+      {
+        "type": "npm",
+        "name": "retext-sentiment"
+      },
+      {
+        "type": "npm",
+        "name": "retext-simplify"
+      },
+      {
+        "type": "npm",
+        "name": "retext-smartypants"
+      },
+      {
+        "type": "npm",
+        "name": "retext-spell"
+      },
+      {
+        "type": "npm",
+        "name": "retext-syntax-mentions"
+      },
+      {
+        "type": "npm",
+        "name": "retext-syntax-urls"
+      },
+      {
+        "type": "npm",
+        "name": "strip-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "unist-builder"
+      },
+      {
+        "type": "npm",
+        "name": "unist-builder-blueprint"
+      },
+      {
+        "type": "npm",
+        "name": "unist-builder-blueprint-cli"
+      },
+      {
+        "type": "npm",
+        "name": "unist-diff"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-assert"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-filter"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-find-after"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-find-all-after"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-find-all-before"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-find-before"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-generated"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-index"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-inspect"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-is"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-map"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-modify-children"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-parents"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-position"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-remove"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-remove-position"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-select"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-size"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-source"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-stringify-position"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-visit"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-visit-children"
+      },
+      {
+        "type": "npm",
+        "name": "unist-util-visit-parents"
       }
     ],
     "github": {
