@@ -16,8 +16,9 @@
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
-    "prettier": "prettier \"src/**/*.js\" \"src/data/*.json\" \"test/**/*.js\"",
+    "prettier": "prettier \"*.json\" \"src/**/*.js\" \"src/data/*.json\" \"test/**/*.js\"",
     "prettier:write": "npm run prettier -- --write",
+    "prettier:check": "npm run prettier -- --list-different",
     "test": "NODE_ENV=test jest",
     "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
@@ -27,7 +28,9 @@
     "name": "Open Collective, Inc.",
     "email": "team@opencollective.com"
   },
-  "contributors": ["François Hodierne <francois@opencollective.com>"],
+  "contributors": [
+    "François Hodierne <francois@opencollective.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^16.0.5",
@@ -81,13 +84,33 @@
     "nodemon": "^1.18.7",
     "prettier": "^1.15.2",
     "svg-react-loader": "^0.4.6",
+    "thanks": "^2.0.0",
     "webpack": "4.20.2",
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "nodemonConfig": {
-    "watch": ["src/lib", "src/server", "src/routes.js"]
+    "watch": [
+      "src/lib",
+      "src/server",
+      "src/routes.js"
+    ]
   },
   "greenkeeper": {
-    "ignore": ["@babel/cli", "@babel/node", "webpack"]
+    "ignore": [
+      "@babel/cli",
+      "@babel/node",
+      "webpack"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
