@@ -14,7 +14,7 @@ export function saveCollectives(collectives) {
 }
 
 export function getProjects() {
-  return fs.readJsonSync(path.join(__dirname, 'projects.json'));
+  return fs.readJson(path.join(__dirname, 'projects.json'));
 }
 
 export function saveProjects(projects) {
