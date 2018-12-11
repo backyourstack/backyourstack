@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Upload should render 1`] = `
+<div
+  aria-disabled={false}
+  className="dropZoneComponent"
+  onClick={[Function]}
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDragStart={[Function]}
+  onDrop={[Function]}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="jsx-47610240 text"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      Simply drag'n'drop files
+      <br
+        className="jsx-47610240"
+      />
+      or click to select files to upload.
+    </p>
+  </div>
+  <div
+    className="jsx-47610240 uploadFeedback float"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      There was an error while uploading your files. At the moment, we do support 
+      <em>
+        composer.json
+      </em>
+      , 
+      <em>
+        *.csproj
+      </em>
+      , 
+      <em>
+        packages.config
+      </em>
+      , 
+      <em>
+        Gopkg.lock
+      </em>
+       and 
+      <em>
+        Gemfile.lock
+      </em>
+      . Please try again. If the problem persists, please contact us.
+    </p>
+  </div>
+  <input
+    autoComplete="off"
+    disabled={false}
+    multiple={true}
+    onChange={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0.00001,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="file"
+  />
+</div>
+`;
+
+exports[`Upload should render with feedbackPosition 1`] = `
+<div
+  aria-disabled={false}
+  className="dropZoneComponent"
+  onClick={[Function]}
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDragStart={[Function]}
+  onDrop={[Function]}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="jsx-47610240 text"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      Simply drag'n'drop files
+      <br
+        className="jsx-47610240"
+      />
+      or click to select files to upload.
+    </p>
+  </div>
+  <div
+    className="jsx-47610240 uploadFeedback inside"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      There was an error while uploading your files. At the moment, we do support 
+      <em>
+        composer.json
+      </em>
+      , 
+      <em>
+        *.csproj
+      </em>
+      , 
+      <em>
+        packages.config
+      </em>
+      , 
+      <em>
+        Gopkg.lock
+      </em>
+       and 
+      <em>
+        Gemfile.lock
+      </em>
+      . Please try again. If the problem persists, please contact us.
+    </p>
+  </div>
+  <input
+    autoComplete="off"
+    disabled={false}
+    multiple={true}
+    onChange={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0.00001,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="file"
+  />
+</div>
+`;
+
+exports[`Upload should render with style 1`] = `
+<div
+  aria-disabled={false}
+  className="dropZoneComponent"
+  onClick={[Function]}
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDragStart={[Function]}
+  onDrop={[Function]}
+  style={
+    Object {
+      "border": "1px solid red",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="jsx-47610240 text"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      Simply drag'n'drop files
+      <br
+        className="jsx-47610240"
+      />
+      or click to select files to upload.
+    </p>
+  </div>
+  <div
+    className="jsx-47610240 uploadFeedback float"
+  >
+    <p
+      className="jsx-47610240"
+    >
+      There was an error while uploading your files. At the moment, we do support 
+      <em>
+        composer.json
+      </em>
+      , 
+      <em>
+        *.csproj
+      </em>
+      , 
+      <em>
+        packages.config
+      </em>
+      , 
+      <em>
+        Gopkg.lock
+      </em>
+       and 
+      <em>
+        Gemfile.lock
+      </em>
+      . Please try again. If the problem persists, please contact us.
+    </p>
+  </div>
+  <input
+    autoComplete="off"
+    disabled={false}
+    multiple={true}
+    onChange={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0.00001,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="file"
+  />
+</div>
+`;
