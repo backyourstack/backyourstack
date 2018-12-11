@@ -1883,6 +1883,14 @@
       {
         "type": "npm",
         "name": "gulp-babel"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/helper-create-class-features-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/plugin-proposal-private-methods"
       }
     ],
     "opencollective": {
@@ -2488,6 +2496,28 @@
     ]
   },
   {
+    "name": "bootstrap",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "bootstrap"
+      },
+      {
+        "type": "npm",
+        "name": "bootstrap"
+      }
+    ],
+    "github": {
+      "repo": "twbs/bootstrap"
+    },
+    "opencollective": {
+      "id": 26104,
+      "name": "bootstrap",
+      "slug": "bootstrap",
+      "description": null
+    }
+  },
+  {
     "name": "bootstrap-table",
     "packages": [
       {
@@ -2647,6 +2677,24 @@
         "yearlyBudget": 0
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "botui",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "botui"
+      }
+    ],
+    "github": {
+      "repo": "botui/botui"
+    },
+    "opencollective": {
+      "id": 25257,
+      "name": "BotUI",
+      "slug": "botui",
+      "description": "Conversational UI framework"
     }
   },
   {
@@ -4786,6 +4834,24 @@
     }
   },
   {
+    "name": "deep-cover",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "deep-cover"
+      }
+    ],
+    "github": {
+      "repo": "deep-cover/deep-cover"
+    },
+    "opencollective": {
+      "id": 25867,
+      "name": "deep-cover",
+      "slug": "deep-cover",
+      "description": null
+    }
+  },
+  {
     "name": "del",
     "packages": [
       {
@@ -6871,6 +6937,10 @@
       {
         "type": "npm",
         "name": "jest-react-fela"
+      },
+      {
+        "type": "npm",
+        "name": "fela-codemods"
       }
     ],
     "opencollective": {
@@ -7142,6 +7212,10 @@
       {
         "type": "nuget",
         "name": "Scalpel.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Anotar.LibLog.Fody"
       }
     ],
     "github": {
@@ -10964,6 +11038,24 @@
     }
   },
   {
+    "name": "jovo-framework-nodejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "jovo-framework"
+      }
+    ],
+    "github": {
+      "repo": "jovotech/jovo-framework-nodejs"
+    },
+    "opencollective": {
+      "id": 25404,
+      "name": "jovo-framework-nodejs",
+      "slug": "jovo-framework-nodejs",
+      "description": null
+    }
+  },
+  {
     "name": "jquery",
     "packages": [
       {
@@ -11443,6 +11535,22 @@
       {
         "type": "npm",
         "name": "karma-typescript"
+      },
+      {
+        "type": "npm",
+        "name": "karma-typescript-angular2-transform"
+      },
+      {
+        "type": "npm",
+        "name": "karma-typescript-cssmodules-transform"
+      },
+      {
+        "type": "npm",
+        "name": "karma-typescript-es6-transform"
+      },
+      {
+        "type": "npm",
+        "name": "karma-typescript-postcss-transform"
       }
     ],
     "github": {
@@ -12131,6 +12239,28 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "laravel-zero",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "laravel-zero/framework"
+      },
+      {
+        "type": "composer",
+        "name": "laravel-zero/laravel-zero"
+      }
+    ],
+    "github": {
+      "repo": "laravel-zero/laravel-zero"
+    },
+    "opencollective": {
+      "id": 25444,
+      "name": "Laravel Zero",
+      "slug": "laravel-zero",
+      "description": "Laravel Zero was created by, and is maintained by Nuno Maduro, and is a micro-framework that provides an elegant starting point for your console application."
     }
   },
   {
@@ -13467,6 +13597,10 @@
       {
         "type": "npm",
         "name": "mowatch"
+      },
+      {
+        "type": "npm",
+        "name": "@mocha/contributors"
       }
     ],
     "github": {
@@ -14093,6 +14227,24 @@
     }
   },
   {
+    "name": "ng-packagr",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ng-packagr"
+      }
+    ],
+    "github": {
+      "repo": "ng-packagr/ng-packagr"
+    },
+    "opencollective": {
+      "id": 25220,
+      "name": "ng-packagr",
+      "slug": "ng-packagr",
+      "description": "Transpiles your component libraries to Angular Package Format."
+    }
+  },
+  {
     "name": "ngrx",
     "packages": [
       {
@@ -14232,6 +14384,58 @@
     }
   },
   {
+    "name": "ngx-progressbar",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@ngx-progressbar/core"
+      },
+      {
+        "type": "npm",
+        "name": "express"
+      },
+      {
+        "type": "npm",
+        "name": "ngx-progressbar"
+      }
+    ],
+    "github": {
+      "repo": "MurhafSousli/ngx-progressbar"
+    },
+    "opencollective": {
+      "id": 25200,
+      "name": "ngx-progressbar",
+      "slug": "ngx-progressbar",
+      "description": "Angular Progress Bar"
+    }
+  },
+  {
+    "name": "ngx-progressbar-482",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@ngx-progressbar/core"
+      },
+      {
+        "type": "npm",
+        "name": "express"
+      },
+      {
+        "type": "npm",
+        "name": "ngx-progressbar"
+      }
+    ],
+    "github": {
+      "repo": "MurhafSousli/ngx-progressbar"
+    },
+    "opencollective": {
+      "id": 25201,
+      "name": "ngx-progressbar",
+      "slug": "ngx-progressbar-482",
+      "description": "Angular Progress Bar"
+    }
+  },
+  {
     "name": "ngx-scanner",
     "packages": [
       {
@@ -14268,6 +14472,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ngxs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@ngxs/store"
+      }
+    ],
+    "github": {
+      "repo": "ngxs/store"
+    },
+    "opencollective": {
+      "id": 14542,
+      "name": "NGXS",
+      "slug": "ngxs",
+      "description": "State Management for Angular "
     }
   },
   {
@@ -14883,6 +15105,32 @@
     ]
   },
   {
+    "name": "nswag",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "nswag"
+      },
+      {
+        "type": "nuget",
+        "name": "NSwag.Core"
+      },
+      {
+        "type": "nuget",
+        "name": "NSwag.Core.Yaml"
+      }
+    ],
+    "github": {
+      "repo": "RSuter/NSwag"
+    },
+    "opencollective": {
+      "id": 26004,
+      "name": "NSwag",
+      "slug": "nswag",
+      "description": "The Swagger/OpenAPI toolchain for .NET, Web API and TypeScript. "
+    }
+  },
+  {
     "name": "nuxtjs",
     "packages": [
       {
@@ -15286,18 +15534,6 @@
       },
       {
         "type": "npm",
-        "name": "express-server-status"
-      },
-      {
-        "type": "npm",
-        "name": "intelligence"
-      },
-      {
-        "type": "npm",
-        "name": "ledger"
-      },
-      {
-        "type": "npm",
         "name": "opencollective"
       },
       {
@@ -15307,6 +15543,18 @@
       {
         "type": "npm",
         "name": "opencollective-postinstall"
+      },
+      {
+        "type": "npm",
+        "name": "express-server-status"
+      },
+      {
+        "type": "npm",
+        "name": "intelligence"
+      },
+      {
+        "type": "npm",
+        "name": "ledger"
       }
     ],
     "github": {
@@ -16235,6 +16483,10 @@
       {
         "type": "npm",
         "name": "@phenomic/preset-react-app"
+      },
+      {
+        "type": "npm",
+        "name": "@phenomic/bs-platform"
       }
     ],
     "opencollective": {
@@ -17074,6 +17326,24 @@
           "totalDonations": 600
         }
       ]
+    }
+  },
+  {
+    "name": "pygorithm",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pygorithm"
+      }
+    ],
+    "github": {
+      "repo": "OmkarPathak/pygorithm"
+    },
+    "opencollective": {
+      "id": 25794,
+      "name": "pygorithm",
+      "slug": "pygorithm",
+      "description": null
     }
   },
   {
@@ -18425,6 +18695,10 @@
       {
         "type": "nuget",
         "name": "reactiveui-core"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Fody"
       }
     ],
     "github": {
@@ -19881,6 +20155,10 @@
       {
         "type": "npm",
         "name": "sketchpad"
+      },
+      {
+        "type": "npm",
+        "name": "@amaplex-software/sketchpad"
       }
     ],
     "github": {
@@ -19945,6 +20223,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "sniffer-377",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "sniffer"
+      }
+    ],
+    "github": {
+      "repo": "aderyabin/sniffer"
+    },
+    "opencollective": {
+      "id": 18920,
+      "name": "sniffer",
+      "slug": "sniffer-377",
+      "description": null
     }
   },
   {
@@ -20881,6 +21177,38 @@
       {
         "type": "npm",
         "name": "strapi-utils"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-email-amazon-ses"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-email-mailgun"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-email-sendgrid"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-email-sendmail"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-upload-aws-s3"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-upload-cloudinary"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-upload-local"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-provider-upload-rackspace"
       }
     ],
     "opencollective": {
@@ -21261,6 +21589,10 @@
       {
         "type": "npm",
         "name": "@svgr/plugin-svgo"
+      },
+      {
+        "type": "npm",
+        "name": "@svgr/parcel-plugin-svgr"
       }
     ],
     "github": {
@@ -22147,6 +22479,18 @@
       {
         "type": "npm",
         "name": "@tarojs/taroize"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-taro-unit-transform"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/mobx-prop-types"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-tt"
       }
     ],
     "github": {
@@ -23202,6 +23546,24 @@
         "name": "uglify-js"
       }
     ]
+  },
+  {
+    "name": "ui-cropper",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ui-cropper"
+      }
+    ],
+    "github": {
+      "repo": "CrackerakiUA/ui-cropper"
+    },
+    "opencollective": {
+      "id": 25941,
+      "name": "ui-cropper",
+      "slug": "ui-cropper",
+      "description": "The most useful and elegant AngularJS cropper"
+    }
   },
   {
     "name": "ui-grid",
@@ -24490,6 +24852,14 @@
       {
         "type": "npm",
         "name": "unist-util-visit-parents"
+      },
+      {
+        "type": "npm",
+        "name": "remark-contributors"
+      },
+      {
+        "type": "npm",
+        "name": "remark-git-contributors"
       }
     ],
     "github": {
@@ -25088,6 +25458,10 @@
       {
         "type": "npm",
         "name": "vue-rx"
+      },
+      {
+        "type": "npm",
+        "name": "@vue/cli"
       }
     ],
     "opencollective": {
@@ -26481,6 +26855,24 @@
         "yearlyBudget": 128740
       },
       "goals": []
+    }
+  },
+  {
+    "name": "yetiforcecrm",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "yetiforce/yetiforce-crm"
+      }
+    ],
+    "github": {
+      "repo": "YetiForceCompany/YetiForceCRM"
+    },
+    "opencollective": {
+      "id": 25418,
+      "name": "YetiForceCRM",
+      "slug": "yetiforcecrm",
+      "description": null
     }
   },
   {
