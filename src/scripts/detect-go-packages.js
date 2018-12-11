@@ -66,6 +66,7 @@ const regexp = /https:\/\/godoc\.org\/([a-z0-9-./]*)/gi;
             'name',
             'slug',
             'description',
+            'pledge',
           ]),
         };
         projects.push(project);

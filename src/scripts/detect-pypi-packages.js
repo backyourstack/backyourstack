@@ -87,6 +87,7 @@ const regexps = [
             'name',
             'slug',
             'description',
+            'pledge',
           ]),
         };
         projects.push(project);

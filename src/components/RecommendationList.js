@@ -14,9 +14,7 @@ export default class RecommendationList extends React.Component {
   render() {
     const { recommendations, opencollective } = this.props;
 
-    const projectsRequiringFunding = recommendations.filter(
-      r => r.opencollective,
-    );
+    const projects = recommendations.filter(r => r.opencollective || r.github);
 
     return (
       <Fragment>
@@ -30,7 +28,7 @@ export default class RecommendationList extends React.Component {
         </style>
 
         <div className="Recommendations">
-          {projectsRequiringFunding.length === 0 && (
+          {projects.length === 0 && (
             <div className="error">
               <p>
                 Sorry, we could not detect any projects requiring funding. We
@@ -59,8 +57,8 @@ export default class RecommendationList extends React.Component {
               </p>
             </div>
           )}
-          {projectsRequiringFunding.length > 0 &&
-            projectsRequiringFunding.map(recommendation => (
+          {projects.length > 0 &&
+            projects.map(recommendation => (
               <RecommendationCard
                 key={recommendation.name}
                 opencollective={opencollective}

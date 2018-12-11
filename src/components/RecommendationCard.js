@@ -2,9 +2,14 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
-import { get } from 'lodash';
+import { get, has } from 'lodash';
 
 import List from '../components/List';
+
+const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
+
+const ocImagesUrl =
+  process.env.IMAGES_URL || 'https://images.opencollective.com';
 
 export default class RecommendationCard extends React.Component {
   static propTypes = {
@@ -62,7 +67,7 @@ export default class RecommendationCard extends React.Component {
 
   backerItem = backer => (
     <span key={backer.id}>
-      <a href={`https://opencollective.com/${backer.slug}`}>{backer.name}</a>
+      <a href={`${ocWebsiteUrl}/${backer.slug}`}>{backer.name}</a>
       &nbsp;
       <span>({this.formatDonation(backer.totalDonations / 100)})</span>
     </span>
@@ -81,27 +86,44 @@ export default class RecommendationCard extends React.Component {
     opencollective &&
     opencollective.backing.find(
       membership =>
+        recommendation.opencollective &&
         recommendation.opencollective.id === membership.collective.id,
     );
 
-  logoSrc = () => {
-    const { recommendation } = this.props;
+  ocLogoSrc = () => {
+    const opencollective = this.props.recommendation.opencollective;
 
-    if (recommendation.logo) {
-      return recommendation.logo;
-    } else {
-      return `https://images.opencollective.com/${
-        recommendation.opencollective.slug
-      }/logo.png?height=55`;
+    if (opencollective) {
+      return `${ocImagesUrl}/${opencollective.slug}/logo.png?height=55`;
     }
   };
 
-  contributeUrl = () => {
-    const { recommendation } = this.props;
+  ocLogoStyle = () => {
+    const opencollective = this.props.recommendation.opencollective;
 
-    let url = `https://opencollective.com/${
-      recommendation.opencollective.slug
-    }`;
+    const style = {};
+
+    if (opencollective) {
+      style.backgroundImage = `url(${ocImagesUrl}/${
+        opencollective.slug
+      }/background.png?height=250)`;
+      style.backgroundPosition = 'center top';
+    }
+
+    return style;
+  };
+
+  contributeUrl = () => {
+    const { name, opencollective, github } = this.props.recommendation;
+
+    let url;
+    if (opencollective) {
+      url = `${ocWebsiteUrl}/${opencollective.slug}`;
+    } else if (github) {
+      const githubHandle = github.org || github.repo;
+      url = `${ocWebsiteUrl}/pledges/new?name=${name}&githubHandle=${githubHandle}`;
+    }
+
     if (process.env.OPENCOLLECTIVE_REFERRAL) {
       url += `?referral=${process.env.OPENCOLLECTIVE_REFERRAL}`;
     }
@@ -109,12 +131,33 @@ export default class RecommendationCard extends React.Component {
     return url;
   };
 
+  contributeButton = () => {
+    const { recommendation } = this.props;
+    const existingPledge = get(recommendation, 'opencollective.pledge', false);
+    const firstPledge = !has(recommendation, 'opencollective');
+
+    return (
+      <a
+        className={classNames('bigButton', 'contributeButton', {
+          pledge: existingPledge || firstPledge,
+        })}
+        href={this.contributeUrl()}
+      >
+        {firstPledge
+          ? 'Create first Pledge'
+          : existingPledge
+          ? 'Add a Pledge'
+          : 'Contribute'}
+      </a>
+    );
+  };
+
   render() {
     const { recommendation, opencollective } = this.props;
 
     const backing = this.getBackingData(recommendation, opencollective);
 
-    const backers = (recommendation.opencollective.sponsors || []).filter(
+    const backers = get(recommendation, 'opencollective.sponsors', []).filter(
       backer => !opencollective || opencollective.slug !== backer.slug,
     );
 
@@ -123,6 +166,10 @@ export default class RecommendationCard extends React.Component {
       'opencollective.stats.yearlyBudget',
       0,
     );
+
+    const existingPledge = get(recommendation, 'opencollective.pledge', false);
+
+    const firstPledge = !has(recommendation, 'opencollective');
 
     return (
       <Fragment>
@@ -150,15 +197,39 @@ export default class RecommendationCard extends React.Component {
 
             .Recommendation .logo {
               margin-bottom: 10px;
+              width: 55px;
+              height: 55px;
             }
             .Recommendation .logo img {
+              display: block;
+            }
+            .Recommendation .logo.bys img {
+              width: 55px;
+              height: 55px;
               border-radius: 12px;
+            }
+            .Recommendation .logo.oc {
+              border-radius: 12px;
+              background-color: #fcfcfc;
+            }
+            .Recommendation .logo.oc img {
+              width: 45px;
+              height: 45px;
+              padding: 5px;
+            }
+            .Recommendation .logo.empty {
+              width: 55px;
+              height: 55px;
+              border-radius: 12px;
+              border: 1px dotted #ccc;
+              background-color: #fcfcfc;
             }
 
             .Recommendation .name {
               font-size: 20px;
               font-weight: bold;
               margin-bottom: 10px;
+              text-transform: capitalize;
             }
 
             .Recommendation .description {
@@ -217,6 +288,11 @@ export default class RecommendationCard extends React.Component {
               content: '\00a0 ';
             }
 
+            .contributeButton.existingPledge,
+            .contributeButton.firstPledge {
+              background-color: #3385ff;
+            }
+
             .noGoal {
               color: #6e747a;
               font-style: italic;
@@ -248,16 +324,36 @@ export default class RecommendationCard extends React.Component {
         </style>
 
         <div className={classNames('Recommendation', { backing: !!backing })}>
-          <div className="logo">
-            <img src={this.logoSrc()} width="55" height="55" alt="" />
-          </div>
+          {recommendation.logo && (
+            <div className="logo bys">
+              <img src={recommendation.logo} alt="" />
+            </div>
+          )}
+          {!recommendation.logo &&
+            recommendation.opencollective &&
+            !recommendation.opencollective.pledge && (
+              <div className="logo oc" style={this.ocLogoStyle()}>
+                <img src={this.ocLogoSrc()} alt="" />
+              </div>
+            )}
+          {!recommendation.logo &&
+            (!recommendation.opencollective ||
+              recommendation.opencollective.pledge) && (
+              <div className="logo empty" />
+            )}
 
           <div className="name">
-            <b>{recommendation.opencollective.name}</b>
+            <b>
+              {get(recommendation, 'opencollective.name', recommendation.name)}
+            </b>
           </div>
 
           <div className="description">
-            {recommendation.opencollective.description}
+            {get(
+              recommendation,
+              'opencollective.description',
+              recommendation.description,
+            )}
           </div>
 
           {recommendation.repos && recommendation.repos.length > 0 && (
@@ -276,7 +372,7 @@ export default class RecommendationCard extends React.Component {
               <strong>Backers</strong>:<br />
               {backing && (
                 <Fragment>
-                  <a href={`https://opencollective.com/${opencollective.slug}`}>
+                  <a href={`${ocWebsiteUrl}/${opencollective.slug}`}>
                     {opencollective.name}
                   </a>{' '}
                   (
@@ -319,12 +415,41 @@ export default class RecommendationCard extends React.Component {
             </Fragment>
           )}
 
+          {firstPledge && (
+            <div className="description">
+              <em>
+                To our knowledge, this project is not on Open Collective or
+                other funding platform. You can create a pledge. This will
+                incentivize them to start collecting money to fund their
+                activities.
+              </em>
+            </div>
+          )}
+
+          {existingPledge && (
+            <div className="description">
+              <em>
+                At least one person (or organization) already pledged to this
+                project on Open Collective. You can add your pledge. This will
+                incentivize them to start collecting money to fund their
+                activities.
+              </em>
+            </div>
+          )}
+
           <div className="secondPart">
             <a
-              className="bigButton contributeButton"
+              className={classNames('bigButton', 'contributeButton', {
+                existingPledge,
+                firstPledge,
+              })}
               href={this.contributeUrl()}
             >
-              Contribute
+              {firstPledge
+                ? 'Create first Pledge'
+                : existingPledge
+                ? 'Add a Pledge'
+                : 'Contribute'}
             </a>
           </div>
         </div>

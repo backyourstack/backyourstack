@@ -34,6 +34,9 @@ const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
     slug
     name
     description
+    website
+    githubHandle
+    tags
     stats {
       balance
       yearlyBudget
@@ -52,12 +55,25 @@ const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
         slug
       }
     }
+    isActive
   }
 }
 `;
 
-const getAllCollectivesQuery = `query allCollectives($HostCollectiveId: Int, $isActive: Boolean, $limit: Int, $type: TypeOfCollective) {
-  allCollectives(HostCollectiveId: $HostCollectiveId, isActive: $isActive, limit: $limit, type: $type) {
+const getAllCollectivesQuery = `query allCollectives(
+    $HostCollectiveId: Int,
+    $isActive: Boolean,
+    $limit: Int,
+    $type: TypeOfCollective,
+    $tags: [String]
+  ) {
+  allCollectives(
+    HostCollectiveId: $HostCollectiveId,
+    isActive: $isActive,
+    limit: $limit,
+    type: $type
+    tags: $tags
+  ) {
     total
     limit
     offset
@@ -67,12 +83,16 @@ const getAllCollectivesQuery = `query allCollectives($HostCollectiveId: Int, $is
       slug
       name
       description
+      website
+      githubHandle
+      tags
       stats {
         balance
         yearlyBudget
       }
       settings
       data
+      isActive
     }
   }
 }
@@ -114,18 +134,10 @@ function fetchCollectiveWithMembers(slug) {
     });
 }
 
-function fetchAllCollectives(
-  HostCollectiveId,
-  type,
-  isActive = true,
-  limit = 100,
-) {
-  return request(baseUrl, getAllCollectivesQuery, {
-    HostCollectiveId,
-    type,
-    isActive,
-    limit,
-  }).then(data => data.allCollectives.collectives);
+function fetchAllCollectives(parameters) {
+  return request(baseUrl, getAllCollectivesQuery, parameters).then(
+    data => data.allCollectives.collectives,
+  );
 }
 
 export {

@@ -129,7 +129,12 @@ export default class DependencyTable extends React.Component {
                   <td className="opencollective">
                     {dep.project && dep.project.opencollective && (
                       <Fragment>
-                        <span>Open Collective</span>
+                        {dep.project.opencollective.pledge && (
+                          <span>Open Collective (pledge)</span>
+                        )}
+                        {!dep.project.opencollective.pledge && (
+                          <span>Open Collective</span>
+                        )}
                         :&nbsp;
                         <a
                           href={`https://opencollective.com/${
@@ -140,6 +145,23 @@ export default class DependencyTable extends React.Component {
                         </a>
                       </Fragment>
                     )}
+                    {dep.project &&
+                      dep.project.github &&
+                      !dep.project.opencollective && (
+                        <Fragment>
+                          <span>
+                            <a
+                              href={`https://opencollective.com/pledges/new?name=${
+                                dep.project.name
+                              }&githubHandle=${dep.project.github.org ||
+                                dep.project.github.repo}`}
+                            >
+                              Pledge to <b>{dep.project.name}</b> on Open
+                              Collective
+                            </a>
+                          </span>
+                        </Fragment>
+                      )}
                   </td>
                 </tr>
               ))}

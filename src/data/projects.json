@@ -376,6 +376,9 @@
   },
   {
     "name": "angular",
+    "github": {
+      "org": "angular"
+    },
     "packages": [
       {
         "type": "npm",
@@ -1251,6 +1254,9 @@
   },
   {
     "name": "axios",
+    "github": {
+      "org": "axios"
+    },
     "packages": [
       {
         "type": "npm",
@@ -2486,6 +2492,9 @@
   },
   {
     "name": "bluebird",
+    "github": {
+      "repo": "petkaantonov/bluebird"
+    },
     "packages": [
       {
         "type": "npm",
@@ -2535,6 +2544,10 @@
       {
         "type": "npm",
         "name": "bootstrap"
+      },
+      {
+        "type": "npm",
+        "name": "bootstrap-sass"
       }
     ],
     "github": {
@@ -2552,19 +2565,6 @@
       "goals": [],
       "sponsors": []
     }
-  },
-  {
-    "name": "bootstrap",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "bootstrap"
-      },
-      {
-        "type": "npm",
-        "name": "bootstrap-sass"
-      }
-    ]
   },
   {
     "name": "bootstrap-table",
@@ -3563,6 +3563,9 @@
   },
   {
     "name": "chalk",
+    "github": {
+      "org": "chalk"
+    },
     "packages": [
       {
         "type": "npm",
@@ -6283,6 +6286,9 @@
   },
   {
     "name": "enzyme",
+    "github": {
+      "repo": "airbnb/enzyme"
+    },
     "packages": [
       {
         "type": "npm",
@@ -6320,6 +6326,9 @@
   },
   {
     "name": "eslint",
+    "github": {
+      "org": "eslint"
+    },
     "packages": [
       {
         "type": "npm",
@@ -6480,6 +6489,18 @@
     "packages": [
       {
         "type": "npm",
+        "name": "express"
+      },
+      {
+        "type": "npm",
+        "name": "api-error-handler"
+      },
+      {
+        "type": "npm",
+        "name": "basic-auth-connect"
+      },
+      {
+        "type": "npm",
         "name": "body-parser"
       },
       {
@@ -6488,7 +6509,23 @@
       },
       {
         "type": "npm",
+        "name": "connect-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "connect-multiparty"
+      },
+      {
+        "type": "npm",
+        "name": "connect-rid"
+      },
+      {
+        "type": "npm",
         "name": "cookie-parser"
+      },
+      {
+        "type": "npm",
+        "name": "cookie-session"
       },
       {
         "type": "npm",
@@ -6496,11 +6533,47 @@
       },
       {
         "type": "npm",
-        "name": "express"
+        "name": "csurf"
       },
       {
         "type": "npm",
-        "name": "express-session"
+        "name": "domain-middleware"
+      },
+      {
+        "type": "npm",
+        "name": "errorhandler"
+      },
+      {
+        "type": "npm",
+        "name": "express-expose"
+      },
+      {
+        "type": "npm",
+        "name": "express-namespace"
+      },
+      {
+        "type": "npm",
+        "name": "express-paginate"
+      },
+      {
+        "type": "npm",
+        "name": "express-params"
+      },
+      {
+        "type": "npm",
+        "name": "flash"
+      },
+      {
+        "type": "npm",
+        "name": "express-generator"
+      },
+      {
+        "type": "npm",
+        "name": "method-override"
+      },
+      {
+        "type": "npm",
+        "name": "mime-extended"
       },
       {
         "type": "npm",
@@ -6512,9 +6585,63 @@
       },
       {
         "type": "npm",
+        "name": "response-time"
+      },
+      {
+        "type": "npm",
+        "name": "restful-router"
+      },
+      {
+        "type": "npm",
+        "name": "routification"
+      },
+      {
+        "type": "npm",
+        "name": "serve-static"
+      },
+      {
+        "type": "npm",
         "name": "serve-favicon"
+      },
+      {
+        "type": "npm",
+        "name": "serve-index"
+      },
+      {
+        "type": "npm",
+        "name": "express-session"
+      },
+      {
+        "type": "npm",
+        "name": "set-type"
+      },
+      {
+        "type": "npm",
+        "name": "connect-timeout"
+      },
+      {
+        "type": "npm",
+        "name": "urlrouter"
+      },
+      {
+        "type": "npm",
+        "name": "vhost"
+      },
+      {
+        "type": "npm",
+        "name": "vhostess"
       }
-    ]
+    ],
+    "github": {
+      "repo": "expressjs/express"
+    },
+    "opencollective": {
+      "id": 26129,
+      "name": "Express",
+      "slug": "express",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "express-validator",
@@ -7413,6 +7540,9 @@
   },
   {
     "name": "font-awesome",
+    "github": {
+      "repo": "FortAwesome/Font-Awesome"
+    },
     "packages": [
       {
         "type": "npm",
@@ -10150,6 +10280,9 @@
   },
   {
     "name": "husky",
+    "github": {
+      "repo": "typicode/husky"
+    },
     "packages": [
       {
         "type": "npm",
@@ -10683,6 +10816,9 @@
   },
   {
     "name": "istanbul",
+    "github": {
+      "org": "istanbuljs"
+    },
     "packages": [
       {
         "type": "npm",
@@ -10753,6 +10889,9 @@
   },
   {
     "name": "jasmine",
+    "github": {
+      "org": "jasmine"
+    },
     "packages": [
       {
         "type": "npm",
@@ -11768,6 +11907,9 @@
   },
   {
     "name": "karma",
+    "github": {
+      "org": "karma-runner"
+    },
     "packages": [
       {
         "type": "npm",
@@ -12601,6 +12743,9 @@
   },
   {
     "name": "lerna",
+    "github": {
+      "org": "lerna"
+    },
     "packages": [
       {
         "type": "npm",
@@ -12867,6 +13012,9 @@
   },
   {
     "name": "lodash",
+    "github": {
+      "org": "lodash"
+    },
     "packages": [
       {
         "type": "npm",
@@ -14049,6 +14197,9 @@
   },
   {
     "name": "moment",
+    "github": {
+      "org": "moment"
+    },
     "packages": [
       {
         "type": "npm",
@@ -14704,10 +14855,6 @@
       {
         "type": "npm",
         "name": "@ngx-progressbar/core"
-      },
-      {
-        "type": "npm",
-        "name": "express"
       },
       {
         "type": "npm",
@@ -16637,6 +16784,9 @@
   },
   {
     "name": "passport",
+    "github": {
+      "repo": " jaredhanson/passport"
+    },
     "packages": [
       {
         "type": "npm",
@@ -17426,6 +17576,9 @@
   },
   {
     "name": "prettier",
+    "github": {
+      "org": "prettier"
+    },
     "packages": [
       {
         "type": "npm",
@@ -17736,6 +17889,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "pytest",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pytest"
+      }
+    ],
+    "github": {
+      "repo": "pytest-dev/pytest"
+    },
+    "opencollective": {
+      "id": 23430,
+      "name": "pytest",
+      "slug": "pytest",
+      "description": null
     }
   },
   {
@@ -20496,6 +20667,28 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "simple-injector",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "simpleinjector"
+      },
+      {
+        "type": "nuget",
+        "name": "SimpleInjector"
+      }
+    ],
+    "github": {
+      "repo": "simpleinjector/SimpleInjector"
+    },
+    "opencollective": {
+      "id": 24599,
+      "name": "Simple Injector",
+      "slug": "simple-injector",
+      "description": null
     }
   },
   {
@@ -27113,6 +27306,9 @@
   },
   {
     "name": "winston",
+    "github": {
+      "org": "winstonjs"
+    },
     "packages": [
       {
         "type": "npm",
