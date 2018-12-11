@@ -842,7 +842,7 @@
         ]
       },
       {
-        "name": "yeoman.github.io",
+        "name": "yeoman.io",
         "owner": {
           "login": "yeoman"
         },
@@ -1232,6 +1232,15 @@
       "org": "apex"
     },
     "repos": [
+      {
+        "name": "actions",
+        "owner": {
+          "login": "apex"
+        },
+        "defaultBranch": "master",
+        "languages": ["Dockerfile"],
+        "files": ["History.md", "Readme.md"]
+      },
       {
         "name": "apex",
         "owner": {
@@ -2218,6 +2227,23 @@
     },
     "repos": [
       {
+        "name": "contributors",
+        "owner": {
+          "login": "mochajs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".eslintrc.yml",
+          ".gitignore",
+          ".travis.yml",
+          "LICENSE",
+          "package-lock.json",
+          "package.json"
+        ]
+      },
+      {
         "name": "eslint-config-mocha",
         "owner": {
           "login": "mochajs"
@@ -2254,6 +2280,7 @@
           ".lintstagedrc.json",
           ".mailmap",
           ".markdownlint.json",
+          ".mocharc.yml",
           ".nycrc",
           ".ruby-version",
           ".travis.yml",
@@ -4350,6 +4377,27 @@
         ]
       },
       {
+        "name": "fancy-log",
+        "owner": {
+          "login": "gulpjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".eslintrc",
+          ".gitattributes",
+          ".gitignore",
+          ".npmrc",
+          ".travis.yml",
+          "LICENSE",
+          "README.md",
+          "appveyor.yml",
+          "index.js",
+          "package.json"
+        ]
+      },
+      {
         "name": "fs-mkdirp-stream",
         "owner": {
           "login": "gulpjs"
@@ -4411,6 +4459,24 @@
           "LICENSE",
           "README.md",
           "appveyor.yml",
+          "index.js",
+          "package.json"
+        ]
+      },
+      {
+        "name": "glogg",
+        "owner": {
+          "login": "gulpjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".eslintrc",
+          ".gitignore",
+          ".travis.yml",
+          "LICENSE",
+          "README.md",
           "index.js",
           "package.json"
         ]
@@ -4654,6 +4720,27 @@
           ".gitattributes",
           ".gitignore",
           ".jscsrc",
+          ".travis.yml",
+          "LICENSE",
+          "README.md",
+          "appveyor.yml",
+          "index.js",
+          "package.json"
+        ]
+      },
+      {
+        "name": "parse-node-version",
+        "owner": {
+          "login": "gulpjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".eslintrc",
+          ".gitattributes",
+          ".gitignore",
+          ".npmrc",
           ".travis.yml",
           "LICENSE",
           "README.md",
@@ -6422,7 +6509,10 @@
         "defaultBranch": "master",
         "languages": ["JavaScript"],
         "files": [
+          ".eslintrc.yml",
           ".gitignore",
+          ".npmrc",
+          ".travis.yml",
           "History.md",
           "Readme.md",
           "example.js",
@@ -6673,6 +6763,7 @@
         "files": [
           ".gitignore",
           ".npmignore",
+          ".npmrc",
           "LICENSE",
           "README.md",
           "example.js",
@@ -9007,7 +9098,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -9071,10 +9161,9 @@
           "login": "bevry"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript"],
+        "languages": ["JavaScript", "TypeScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -9085,8 +9174,18 @@
           "index.js",
           "package-lock.json",
           "package.json",
-          "test.js"
+          "test.js",
+          "tsconfig.json"
         ]
+      },
+      {
+        "name": "awesome-crypto",
+        "owner": {
+          "login": "bevry"
+        },
+        "defaultBranch": "master",
+        "languages": [],
+        "files": [".editorconfig", "README.md"]
       },
       {
         "name": "awesome-travis",
@@ -9186,6 +9285,15 @@
           "package-lock.json",
           "package.json"
         ]
+      },
+      {
+        "name": "bindsource",
+        "owner": {
+          "login": "bevry"
+        },
+        "defaultBranch": "master",
+        "languages": [],
+        "files": []
       },
       {
         "name": "boundation",
@@ -9727,7 +9835,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -9905,7 +10012,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -9913,9 +10019,8 @@
           "HISTORY.md",
           "LICENSE.md",
           "README.md",
-          "index.js",
-          "package.json",
-          "test.js"
+          "package-lock.json",
+          "package.json"
         ]
       },
       {
@@ -10194,7 +10299,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -10202,6 +10306,7 @@
           "HISTORY.md",
           "LICENSE.md",
           "README.md",
+          "index.d.ts",
           "index.js",
           "package-lock.json",
           "package.json",
@@ -10942,7 +11047,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -10964,13 +11068,14 @@
         "languages": ["HTML", "JavaScript", "CSS"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
+          ".stylelintrc.js",
           ".travis.yml",
           "CONTRIBUTING.md",
           "LICENSE.md",
           "README.md",
           "docpad.js",
+          "now.json",
           "package-lock.json",
           "package.json"
         ]
@@ -11088,7 +11193,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -11155,8 +11259,6 @@
         "languages": ["JavaScript"],
         "files": [
           ".editorconfig",
-          ".eslintrc.js",
-          ".flowconfig",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
@@ -11164,7 +11266,6 @@
           "HISTORY.md",
           "LICENSE.md",
           "README.md",
-          "bin",
           "index.js",
           "package-lock.json",
           "package.json",
@@ -11694,6 +11795,7 @@
           "azure-pipelines.yml",
           "jest-transformer.js",
           "jest.config.js",
+          "junit.xml",
           "lerna.json",
           "netlify.toml",
           "package.json",
@@ -11744,7 +11846,7 @@
     "id": 191,
     "name": "24pullrequests",
     "slug": "24pullrequests",
-    "description": "Giving back little gifts of code for Christmas",
+    "description": "Giving back to open source for the holidays",
     "github": {
       "repo": "24pullrequests/24pullrequests"
     },
@@ -11757,7 +11859,6 @@
         "defaultBranch": "master",
         "languages": [
           "Ruby",
-          "Smarty",
           "Shell",
           "JavaScript",
           "CoffeeScript",
@@ -11766,13 +11867,8 @@
           "Dockerfile"
         ],
         "files": [
-          ".codeclimate.yml",
-          ".csslintrc",
           ".editorconfig",
-          ".eslintignore",
-          ".eslintrc",
           ".gitignore",
-          ".pullreview.yml",
           ".rspec",
           ".rubocop.yml",
           ".ruby-version",
@@ -11788,8 +11884,6 @@
           "Procfile",
           "Rakefile",
           "Readme.md",
-          "Vagrantfile",
-          "coffeelint.json",
           "config.ru",
           "docker-compose.yml"
         ]
@@ -11981,6 +12075,7 @@
           ".cz-config.js",
           ".editorconfig",
           ".gitignore",
+          ".npmrc",
           ".prettierignore",
           ".travis.yml",
           "CNAME",
@@ -11993,6 +12088,8 @@
           "karma.conf.js",
           "logo.png",
           "package.json",
+          "pnpm-workspace.yaml",
+          "pnpmfile.js",
           "shrinkwrap.yaml",
           "tsconfig.common.json",
           "tsconfig.lint.json",
@@ -12308,9 +12405,9 @@
         "files": [
           ".editorconfig",
           ".eslintignore",
-          ".eslintrc",
+          ".eslintrc.js",
           ".gitignore",
-          ".jsbeautifyrc",
+          ".prettierrc.js",
           ".travis.yml",
           "LICENSE",
           "README.md",
@@ -12980,7 +13077,14 @@
           "login": "tomatoes-app"
         },
         "defaultBranch": "master",
-        "languages": ["Ruby", "JavaScript", "CSS", "HTML"],
+        "languages": [
+          "Ruby",
+          "JavaScript",
+          "CSS",
+          "HTML",
+          "Dockerfile",
+          "Shell"
+        ],
         "files": [
           ".codeclimate.yml",
           ".coveralls.yml",
@@ -12991,13 +13095,16 @@
           ".simplecov",
           ".travis.yml",
           "CONTRIBUTING.md",
+          "Dockerfile",
           "Gemfile",
           "Gemfile.lock",
           "MIT-LICENSE",
           "Procfile",
           "README.md",
           "Rakefile",
-          "config.ru"
+          "config.ru",
+          "docker-compose.yml",
+          "docker-entrypoint.sh"
         ]
       }
     ]
@@ -13201,13 +13308,15 @@
           "ISSUE_TEMPLATE.md",
           "LICENSE",
           "NOTICE",
+          "Pipfile",
+          "Pipfile.lock",
           "README.md",
           "manage.py",
           "pytest.ini",
           "regenerate.sh",
-          "requirements-devel.txt",
           "requirements.txt",
-          "setup.cfg"
+          "setup.cfg",
+          "tox.ini"
         ]
       }
     ]
@@ -13303,7 +13412,7 @@
   },
   {
     "id": 338,
-    "name": "redux-devtools-extension",
+    "name": "Redux DevTools",
     "slug": "redux-devtools-extension",
     "description": "DevTools browser extension helps to boost the developer’s productivity significantly and makes the development fun.",
     "github": {
@@ -13693,7 +13802,6 @@
           "CODE_OF_CONDUCT.md",
           "LICENSE",
           "README.md",
-          "logo.svg",
           "package.json",
           "typings.json"
         ]
@@ -13766,6 +13874,8 @@
           "LICENSE",
           "README.md",
           "appveyor.yml",
+          "babel-jest.upward.js",
+          "babel.config.js",
           "jest-setup.js",
           "lerna.json",
           "netlify.toml",
@@ -13799,6 +13909,8 @@
           ".gitignore",
           ".jest.js",
           ".jest.node.js",
+          ".prettierignore",
+          ".prettierrc",
           ".stylelintrc",
           ".travis.yml",
           "AUTHORS.txt",
@@ -13808,6 +13920,7 @@
           "LICENSE",
           "README-zh_CN.md",
           "README.md",
+          "crowdin.yml",
           "index-with-locales.js",
           "index.js",
           "netlify.toml",
@@ -13979,8 +14092,10 @@
         "files": [
           ".dockerignore",
           ".env.example",
+          ".foreman",
           ".gitignore",
           ".rubocop.yml",
+          ".rubocop_todo.yml",
           ".ruby-version",
           ".slugignore",
           ".travis.yml",
@@ -14413,6 +14528,7 @@
           ".npmignore",
           ".prettierignore",
           ".prettierrc",
+          ".release-it.json",
           ".rspec",
           ".rubocop.yml",
           ".scss-lint.yml",
@@ -15405,10 +15521,10 @@
           "login": "skatejs"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript", "HTML"],
+        "languages": ["JavaScript", "HTML", "TypeScript"],
         "files": [
           ".editorconfig",
-          ".flowconfig",
+          ".gitattributes",
           ".gitignore",
           ".nvmrc",
           ".prettierignore",
@@ -15420,7 +15536,7 @@
           "netlify.toml",
           "package.json",
           "projector.js",
-          "renovate.json",
+          "tsconfig.json",
           "yarn.lock"
         ]
       }
@@ -15510,10 +15626,10 @@
           ".prettierrc",
           ".travis.yml",
           "AUTHORS",
+          "CHANGELOG.md",
           "CONTRIBUTING.md",
           "Gemfile",
           "Gemfile.lock",
-          "History.md",
           "LICENSE",
           "README.md",
           "RELEASE.md",
@@ -16277,6 +16393,7 @@
         "files": [
           ".eslintrc",
           ".gitignore",
+          ".prettierrc",
           ".travis.yml",
           "CHANGELOG.md",
           "Dockerfile",
@@ -16347,24 +16464,9 @@
         "owner": {
           "login": "vue-bulma"
         },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "HTML", "Vue"],
-        "files": [
-          ".babelrc",
-          ".editorconfig",
-          ".eslintignore",
-          ".eslintrc.js",
-          ".gitignore",
-          ".travis.yml",
-          "LICENSE",
-          "README.md",
-          "appveyor.yml",
-          "backers.md",
-          "electronIndex.js",
-          "index.html",
-          "package.json",
-          "yarn.lock"
-        ]
+        "defaultBranch": "next",
+        "languages": [],
+        "files": ["README.md"]
       }
     ]
   },
@@ -16619,8 +16721,8 @@
           "README.md",
           "code_of_conduct.md",
           "index.js",
-          "package-lock.json",
-          "package.json"
+          "package.json",
+          "yarn.lock"
         ]
       }
     ]
@@ -16854,6 +16956,7 @@
           "CHANGELOG-3.3.md",
           "CHANGELOG-3.4.md",
           "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "LICENSE-PHP.txt",
           "LICENSE-ZEND.txt",
@@ -17273,17 +17376,13 @@
         "files": [
           ".editorconfig",
           ".gitignore",
-          ".npmignore",
-          ".npmrc",
           ".travis.yml",
-          "LICENSE",
           "README.md",
           "appveyor.yml",
-          "cookbook.md",
+          "ci-install.js",
+          "lerna.json",
           "obliterate.sh",
-          "package.json",
-          "tsconfig.json",
-          "tslint.json"
+          "package.json"
         ]
       }
     ]
@@ -17761,13 +17860,16 @@
           "login": "xdamman"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript", "CSS"],
+        "languages": ["JavaScript", "CSS", "Shell"],
         "files": [
+          ".eslintrc",
           ".gitignore",
           ".npmignore",
+          ".stylelintrc",
           "Gruntfile.js",
           "LICENSE",
           "README.md",
+          "package-lock.json",
           "package.json"
         ]
       }
@@ -17797,6 +17899,7 @@
           ".gitignore",
           ".npmrc",
           ".yarnrc",
+          "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
           "LICENSE",
           "README.md",
@@ -18958,7 +19061,7 @@
           "login": "cucumber"
         },
         "defaultBranch": "master",
-        "languages": ["Ruby", "HTML", "Gherkin"],
+        "languages": ["Ruby", "HTML", "Gherkin", "Shell"],
         "files": [
           ".gitignore",
           ".rspec",
@@ -18967,7 +19070,6 @@
           "CHANGELOG.md",
           "CONTRIBUTING.md",
           "Gemfile",
-          "Gemfile.appraisal",
           "LICENSE",
           "README.md",
           "Rakefile",
@@ -19822,7 +19924,6 @@
           "gulpfile.js",
           "logo.png",
           "logo.svg",
-          "package-lock.json",
           "package.json",
           "test.js"
         ]
@@ -19844,7 +19945,7 @@
           "login": "react-native-community"
         },
         "defaultBranch": "master",
-        "languages": ["Objective-C", "JavaScript", "Java", "Ruby"],
+        "languages": ["Objective-C", "JavaScript", "Java", "Ruby", "C#"],
         "files": [
           ".eslintrc",
           ".flowconfig",
@@ -20664,7 +20765,7 @@
           "login": "onevcat"
         },
         "defaultBranch": "master",
-        "languages": ["Swift", "Objective-C", "Ruby", "Shell"],
+        "languages": ["Swift", "Objective-C", "Ruby"],
         "files": [
           ".gitignore",
           ".ruby-version",
@@ -20679,8 +20780,7 @@
           "Podfile",
           "Podfile.lock",
           "README.md",
-          "codecov.yml",
-          "setup.sh"
+          "codecov.yml"
         ]
       }
     ]
@@ -22089,6 +22189,7 @@
           "LICENSE.txt",
           "Procfile",
           "Procfile.dev",
+          "README-ES.md",
           "README.md",
           "Rakefile",
           "code_of_conduct.md",
@@ -22244,16 +22345,18 @@
           "login": "opencollective"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript", "Shell"],
+        "languages": ["JavaScript", "Shell", "Dockerfile"],
         "files": [
           ".babelrc",
           ".eslintignore",
           ".eslintrc",
           ".gitignore",
           ".sequelizerc",
+          "Dockerfile",
           "README.md",
           "apidoc.json",
           "development.env",
+          "docker-compose.yml",
           "package-lock.json",
           "package.json",
           "test.env"
@@ -22307,8 +22410,6 @@
           ".babelrc",
           ".dockerignore",
           ".editorconfig",
-          ".env.development",
-          ".env.test",
           ".eslintignore",
           ".eslintrc",
           ".gitignore",
@@ -22397,6 +22498,7 @@
           ".gitignore",
           ".graphqlconfig",
           ".nvmrc",
+          ".prettierignore",
           ".prettierrc",
           "CONTRIBUTING.md",
           "Dockerfile",
@@ -22405,7 +22507,8 @@
           "cypress.json",
           "now.json",
           "package-lock.json",
-          "package.json"
+          "package.json",
+          "styleguide.config.js"
         ]
       },
       {
@@ -22419,6 +22522,30 @@
           ".babelrc",
           ".dockerignore",
           ".editorconfig",
+          ".env.local",
+          ".env.staging",
+          ".eslintrc",
+          ".gitignore",
+          ".nvmrc",
+          ".prettierrc",
+          "CONTRIBUTING.md",
+          "Dockerfile",
+          "LICENSE",
+          "README.md",
+          "now.json",
+          "package-lock.json",
+          "package.json"
+        ]
+      },
+      {
+        "name": "opencollective-invoices",
+        "owner": {
+          "login": "opencollective"
+        },
+        "defaultBranch": "master",
+        "languages": ["Dockerfile", "Shell", "JavaScript"],
+        "files": [
+          ".babelrc",
           ".env.local",
           ".env.staging",
           ".eslintrc",
@@ -23209,31 +23336,6 @@
           "elixir_buildpack.config",
           "mix.exs",
           "mix.lock"
-        ]
-      },
-      {
-        "name": "nerves_uart",
-        "owner": {
-          "login": "nerves-project"
-        },
-        "defaultBranch": "master",
-        "languages": ["Makefile", "Elixir", "QMake", "C"],
-        "files": [
-          ".ebert.yml",
-          ".formatter.exs",
-          ".gitignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "ISSUE_TEMPLATE.md",
-          "LICENSE",
-          "README.md",
-          "RELEASE.md",
-          "appveyor.yml",
-          "mix.exs",
-          "mix.lock",
-          "nerves_uart.pro"
         ]
       },
       {
@@ -24329,14 +24431,15 @@
         "defaultBranch": "master",
         "languages": ["JavaScript", "Vue", "TypeScript"],
         "files": [
-          ".babelrc",
           ".eslintrc.js",
           ".gitignore",
           ".npmignore",
           "CODE_OF_CONDUCT.md",
           "LICENSE.md",
           "README.md",
+          "babel.config.js",
           "circle.yml",
+          "jest.config.js",
           "package-lock.json",
           "package.json"
         ]
@@ -24526,7 +24629,7 @@
     "id": 943,
     "name": "idyll",
     "slug": "idyll",
-    "description": null,
+    "description": "A toolkit for creating data-driven stories and explorable explanations.",
     "github": {
       "repo": "idyll-lang/idyll"
     },
@@ -25200,17 +25303,19 @@
           "Vue",
           "CSS",
           "Dockerfile",
-          "Java",
-          "Objective-C"
+          "Objective-C",
+          "Java"
         ],
         "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".travis.yml",
           "CONTRIBUTING.md",
           "LICENSE",
           "README.md",
-          "docker-compose.prod.yml",
-          "docker-compose.yml",
-          "lesspass.sh",
-          "todo.md"
+          "TODO.md",
+          "package.json",
+          "yarn.lock"
         ]
       }
     ]
@@ -26187,7 +26292,7 @@
         "defaultBranch": "dev",
         "languages": ["Vue", "JavaScript", "Shell", "HTML", "CSS"],
         "files": [
-          ".babelrc",
+          ".browserslistrc",
           ".editorconfig",
           ".eslintignore",
           ".eslintrc.js",
@@ -26197,6 +26302,7 @@
           "CONTRIBUTING.md",
           "LICENSE",
           "README.md",
+          "babel.config.js",
           "banner.png",
           "package.json",
           "yarn.lock"
@@ -26240,10 +26346,13 @@
           ".env.example",
           ".gitignore",
           ".travis.yml",
+          "API_README.md",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "LICENSE",
           "README.md",
+          "_rest_config.php",
+          "_rest_routes.inc.php",
           "acknowledge_license_cert.html",
           "acl_setup.php",
           "acl_upgrade.php",
@@ -26710,7 +26819,7 @@
           "login": "remy"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript", "HTML"],
+        "languages": ["JavaScript", "HTML", "Dockerfile", "Shell"],
         "files": [
           ".gitignore",
           ".jscsrc",
@@ -26719,6 +26828,7 @@
           ".npmrc",
           ".travis.yml",
           "CODE_OF_CONDUCT.md",
+          "Dockerfile",
           "README.md",
           "commitlint.config.js",
           "faq.md",
@@ -26773,6 +26883,7 @@
           "RELEASE.md",
           "TROUBLESHOOTING.md",
           "appveyor.yml",
+          "azure-pipelines.yml",
           "bootstrap.py",
           "conftest.py",
           "create_app.py",
@@ -26837,7 +26948,6 @@
           "LICENSE",
           "README.md",
           "SiaNet.sln",
-          "SolutionAssemblyVersionInfo.cs",
           "desktop.ini",
           "icon_32.PNG",
           "icon_64.PNG"
@@ -27247,6 +27357,7 @@
           "README.md",
           "composer.json",
           "composer.lock",
+          "dependencies.yml",
           "phpcs.xml",
           "wp-cli.yml"
         ]
@@ -27395,6 +27506,7 @@
         "defaultBranch": "master",
         "languages": ["Ruby", "HTML", "JavaScript", "CSS"],
         "files": [
+          ".codeclimate.yml",
           ".gitattributes",
           ".gitbook.yaml",
           ".github_changelog_generator",
@@ -27836,20 +27948,17 @@
           ".gitattributes",
           ".gitignore",
           ".gitmodules",
-          ".travis.yml",
+          ".nuke",
           "Avalonia.sln",
           "Avalonia.sln.DotSettings",
           "Avalonia.v3.ncrunchsolution",
           "Directory.Build.props",
           "NuGet.Config",
           "Settings.StyleCop",
-          "appveyor.yml",
           "azure-pipelines.yml",
           "build-native.sh",
-          "build.cake",
           "build.ps1",
           "build.sh",
-          "cake.config",
           "dirs.proj",
           "global.json",
           "licence.md",
@@ -28639,9 +28748,9 @@
           ".gitignore",
           "LICENSE",
           "README.md",
-          "catatan_rilis_18.11-pasca.txt",
+          "catatan_rilis_18.12-pasca.txt",
           "catatan_singkat_library_yang_digunakan.txt",
-          "contoh_data_awal_20181101.sql",
+          "contoh_data_awal_20181205.sql",
           "favicon.ico",
           "htaccess.txt",
           "index.php"
@@ -28673,7 +28782,6 @@
           ".travis.yml",
           "CHANGELOG.md",
           "CONTRIBUTING.md",
-          "HGCircularSlider.framework.zip",
           "HGCircularSlider.podspec",
           "LICENSE",
           "README.md"
@@ -28685,7 +28793,7 @@
     "id": 11281,
     "name": "ramda-adjunct",
     "slug": "ramda-adjunct",
-    "description": "Community-maintained extension of Ramda",
+    "description": "Ramda Adjunct is the most popular and most comprehensive set of utilities for use with Ramda, providing a variety of useful, well tested functions with excellent documentation.",
     "github": {
       "repo": "char0n/ramda-adjunct"
     },
@@ -28774,7 +28882,7 @@
           "login": "Hexworks"
         },
         "defaultBranch": "master",
-        "languages": ["Kotlin", "Java"],
+        "languages": ["Kotlin"],
         "files": [
           ".gitignore",
           "LICENSE",
@@ -28892,6 +29000,15 @@
           "gradlew",
           "settings.gradle"
         ]
+      },
+      {
+        "name": "microcline.protobuf",
+        "owner": {
+          "login": "Hexworks"
+        },
+        "defaultBranch": "master",
+        "languages": [],
+        "files": ["LICENSE", "README.md"]
       },
       {
         "name": "mixite",
@@ -29788,10 +29905,12 @@
           "License.txt",
           "NuGet.Config",
           "NugetConfigReader.cs",
-          "README.md",
           "Verifier.cs",
           "appveyor.yml",
-          "package_icon.png"
+          "backers.md",
+          "package_icon.png",
+          "readme.md",
+          "vsts-integration.yml"
         ]
       },
       {
@@ -30671,6 +30790,8 @@
           ".eslintrc.json",
           ".gitattributes",
           ".gitignore",
+          ".huskyrc",
+          ".lintstagedrc",
           ".prettierrc",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
@@ -30702,7 +30823,7 @@
           "login": "wenzhixin"
         },
         "defaultBranch": "develop",
-        "languages": ["JavaScript", "HTML"],
+        "languages": ["JavaScript", "HTML", "Ruby", "Shell"],
         "files": [
           ".eslintrc.js",
           ".gitignore",
@@ -30710,6 +30831,7 @@
           "CHANGELOG.md",
           "CONTRIBUTING.md",
           "DONATORS.md",
+          "Gemfile",
           "Gruntfile.js",
           "LICENSE",
           "README.md",
@@ -30717,6 +30839,8 @@
           "bootstrap-table.jquery.json",
           "bower.json",
           "composer.json",
+          "deploy.sh",
+          "deploy_key.enc",
           "index.d.ts",
           "package.json"
         ]
@@ -30900,7 +31024,6 @@
           "gulpfile.js",
           "index.html",
           "manifest.json",
-          "npm-debug.log",
           "package-lock.json",
           "package.json",
           "polymer.json",
@@ -31060,7 +31183,7 @@
           "JavaScript",
           "CSS",
           "Dockerfile",
-          "CoffeeScript"
+          "Vue"
         ],
         "files": [
           ".editorconfig",
@@ -31152,6 +31275,7 @@
           ".travis.yml",
           "9o.md",
           "AUTHORS.md",
+          "Ariana.sublime-color-scheme",
           "CHANGELOG.md",
           "CONTRIBUTING.md",
           "Comments.tmPreferences",
@@ -31300,10 +31424,10 @@
         "defaultBranch": "master",
         "languages": ["JavaScript"],
         "files": [
-          ".babelrc",
           ".editorconfig",
           ".eslintignore",
           ".eslintrc",
+          ".flowconfig",
           ".gitignore",
           ".npmignore",
           ".nvmrc",
@@ -31312,7 +31436,7 @@
           ".travis.yml",
           "License.md",
           "Readme.md",
-          "browserslist",
+          "babel.config.js",
           "cypress.json",
           "dangerfile.js",
           "jsconfig.json",
@@ -31348,6 +31472,7 @@
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "Dockerfile",
+          "Dockerfile.cgo",
           "LICENSE.md",
           "Makefile",
           "README.md",
@@ -31975,6 +32100,7 @@
         "files": [
           ".gitattributes",
           ".gitignore",
+          ".whitesource",
           "CODE_OF_CONDUCT.md",
           "LICENSE",
           "README.md",
@@ -31985,7 +32111,8 @@
           "lethargy.js",
           "lethargy.min.js",
           "package.json",
-          "with-jquery.html"
+          "with-jquery.html",
+          "yarn.lock"
         ]
       }
     ]
@@ -32716,6 +32843,7 @@
           ".scrutinizer.yml",
           ".travis.yml",
           ".yamllint_config",
+          "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "LICENSE",
           "README.md",
@@ -34429,6 +34557,7 @@
           "composer.lock",
           "docker-compose.yml",
           "index.php",
+          "nginx.conf.example",
           "phpunit.xml",
           "web.config"
         ]
@@ -34958,12 +35087,12 @@
         "defaultBranch": "master",
         "languages": ["Julia"],
         "files": [
-          ".github_changelog_generator",
           ".gitignore",
           ".travis.yml",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
+          "HUMANS.md",
           "LICENSE",
           "Manifest.toml",
           "Project.toml",
@@ -35217,7 +35346,7 @@
           "login": "BioJulia"
         },
         "defaultBranch": "develop",
-        "languages": [],
+        "languages": ["Julia"],
         "files": [
           ".codecov.yml",
           ".gitignore",
@@ -36831,6 +36960,7 @@
         "files": [
           ".gitignore",
           "CHANGELOG.md",
+          "ClassExistsMock.php",
           "ClockMock.php",
           "CoverageListener.php",
           "DeprecationErrorHandler.php",
@@ -37542,6 +37672,7 @@
           "UPGRADE-4.0.md",
           "UPGRADE-4.1.md",
           "UPGRADE-4.2.md",
+          "UPGRADE-4.3.md",
           "UPGRADE-5.0.md",
           "composer.json",
           "link",
@@ -37570,7 +37701,7 @@
         "files": [
           ".editorconfig",
           ".gitignore",
-          ".platform.app.yaml",
+          ".symfony.cloud.yaml",
           ".travis.yml",
           "Dockerfile",
           "README.markdown",
@@ -38882,7 +39013,6 @@
           "go.mod",
           "go.sum",
           "main.go",
-          "main_test.go.bak",
           "package.json",
           "yarn.lock"
         ]
@@ -39024,7 +39154,7 @@
           "login": "ory"
         },
         "defaultBranch": "master",
-        "languages": ["Go", "Shell", "Dockerfile"],
+        "languages": ["Go", "Shell", "Dockerfile", "Makefile"],
         "files": [
           ".gitattributes",
           ".gitignore",
@@ -39034,14 +39164,15 @@
           "CONTRIBUTING.md",
           "Dockerfile",
           "Dockerfile-alpine",
-          "Gopkg.lock",
-          "Gopkg.toml",
           "LICENSE",
+          "Makefile",
           "README.md",
           "UPGRADE.md",
           "doc.go",
           "doc_swagger.go",
           "docker-compose.yml",
+          "go.mod",
+          "go.sum",
           "main.go",
           "package.json"
         ]
@@ -39203,17 +39334,18 @@
           "login": "ory"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript"],
+        "languages": ["JavaScript", "TypeScript"],
         "files": [
           ".babelrc",
-          ".flowconfig",
           ".gitignore",
           ".npmignore",
           ".travis.yml",
           "LICENSE",
           "README.md",
+          "jest.config.js",
+          "package-lock.json",
           "package.json",
-          "yarn.lock"
+          "tsconfig.json"
         ]
       },
       {
@@ -39474,7 +39606,6 @@
           ".travis.yml",
           "LICENSE",
           "README.md",
-          "gulpfile.js",
           "package-lock.json",
           "package.json"
         ]
@@ -39855,6 +39986,7 @@
           "changelog.tpl",
           "changelog_release.tpl",
           "create_test_cases.py",
+          "deploy.sh",
           "gulpFile.js",
           "package-lock.json",
           "package.json",
@@ -40208,7 +40340,6 @@
           "gradle.properties",
           "gradlew",
           "gradlew.bat",
-          "irc_badge.png",
           "settings.gradle"
         ]
       }
@@ -40603,6 +40734,20 @@
           "package.json",
           "subscriptionManager.js",
           "tx-filter.js"
+        ]
+      },
+      {
+        "name": "eth-json-rpc-infura",
+        "owner": {
+          "login": "MetaMask"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".gitignore",
+          "README.md",
+          "package-lock.json",
+          "package.json"
         ]
       },
       {
@@ -41061,11 +41206,13 @@
           "login": "MetaMask"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript"],
+        "languages": ["JavaScript", "Dockerfile", "Shell"],
         "files": [
           ".gitignore",
+          "Dockerfile",
           "README.md",
           "architecture.md",
+          "builddocker.sh",
           "package-lock.json",
           "package.json"
         ]
@@ -41142,6 +41289,22 @@
         ]
       },
       {
+        "name": "metamask-docs",
+        "owner": {
+          "login": "MetaMask"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          "03_API_Reference.md",
+          "04_Contributing.md",
+          "05_FAQs.md",
+          "README.md",
+          "index.md",
+          "uncrate.config.js"
+        ]
+      },
+      {
         "name": "metamask-extension",
         "owner": {
           "login": "MetaMask"
@@ -41156,7 +41319,6 @@
           ".eslintrc",
           ".gitattributes",
           ".gitignore",
-          ".nsprc",
           ".nvmrc",
           ".stylelintignore",
           ".stylelintrc",
@@ -41635,6 +41797,7 @@
           ".huskyrc.json",
           ".lintstagedrc.json",
           ".prettierrc.json",
+          ".travis.yml",
           ".yarnrc",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
@@ -41643,12 +41806,12 @@
           "README.md",
           "angular.json",
           "book.json",
+          "greenkeeper.json",
           "karma.conf.js",
           "package.json",
-          "test.ts",
-          "tsconfig.app.json",
           "tsconfig.build.json",
           "tsconfig.json",
+          "tsconfig.lib.json",
           "tsconfig.spec.json",
           "tslint.json",
           "typedoc.json",
@@ -41683,7 +41846,7 @@
           ".npmignore",
           ".travis.yml",
           "README.md",
-          "package-lock.json",
+          "constructor-name.js",
           "package.json",
           "rollup.config.js"
         ]
@@ -41794,7 +41957,6 @@
           "Perl",
           "Visual Basic",
           "Makefile",
-          "Awk",
           "Python",
           "Batchfile",
           "DIGITAL Command Language",
@@ -41905,6 +42067,7 @@
           ".gitattributes",
           ".gitignore",
           ".lgtm",
+          ".revive.toml",
           "BSDmakefile",
           "CHANGELOG.md",
           "CONTRIBUTING.md",
@@ -42056,7 +42219,8 @@
           "Python",
           "C++",
           "Shell",
-          "Dockerfile"
+          "Dockerfile",
+          "JSONiq"
         ],
         "files": [
           ".dockerignore",
@@ -42129,7 +42293,7 @@
           "air.conf",
           "codecov.yml",
           "docker-compose.yml",
-          "favicon.ico",
+          "favicon.png",
           "magefile.go",
           "main.go",
           "package-lock.json",
@@ -42589,6 +42753,7 @@
           ".gitattributes",
           ".gitignore",
           ".nginx.conf",
+          "CHANGELOG.md",
           "LICENSE",
           "README.md",
           "composer.json",
@@ -43154,6 +43319,7 @@
           "package.json",
           "renovate.json",
           "rollup.config.js",
+          "tsconfig.json",
           "webpack.config.js"
         ]
       }
@@ -43186,10 +43352,13 @@
           "LICENSE",
           "LICENSE+",
           "appveyor.yml",
+          "azure-pipelines.yml",
           "build.cake",
           "build.ps1",
           "mahapps.metro.logo.png",
           "mahapps.metro.logo2.png",
+          "paket.dependencies",
+          "paket.lock",
           "readme.md"
         ]
       }
@@ -43287,7 +43456,7 @@
           "login": "ant-design"
         },
         "defaultBranch": "master",
-        "languages": ["JavaScript", "HTML", "CSS", "Shell", "Dockerfile"],
+        "languages": ["JavaScript", "HTML", "CSS", "Dockerfile"],
         "files": [
           ".dockerignore",
           ".editorconfig",
@@ -43673,6 +43842,7 @@
           "crowdin.yaml",
           "eslintImportResolver.js",
           "jest",
+          "jest-worker",
           "jest.config.ci.js",
           "jest.config.js",
           "jsconfig.json",
@@ -43774,9 +43944,7 @@
           "CHANGELOG.md",
           "LICENSE",
           "README.md",
-          "hey.conf.js",
-          "hey.esm.js",
-          "hey.lang.js",
+          "index.html",
           "package.json"
         ]
       }
@@ -43977,7 +44145,8 @@
           "Makefile",
           "JavaScript",
           "Dockerfile",
-          "HTML"
+          "HTML",
+          "Smarty"
         ],
         "files": [
           ".gitignore",
@@ -44890,6 +45059,7 @@
           ".gitignore",
           ".travis.yml",
           "LICENSE",
+          "MQTTnet.noUWP.sln",
           "MQTTnet.sln",
           "MQTTnet.sln.DotSettings",
           "README.md",
@@ -45721,10 +45891,7 @@
           ".gitignore",
           ".size-snapshot.json",
           ".travis.yml",
-          "API-OVERVIEW.md",
-          "API.md",
           "LICENSE",
-          "ROADMAP.md",
           "doczrc.js",
           "index.d.ts",
           "package.json",
@@ -45878,7 +46045,7 @@
           "login": "c-bata"
         },
         "defaultBranch": "master",
-        "languages": ["Makefile", "Go", "Python"],
+        "languages": ["Makefile", "Go", "Python", "Shell"],
         "files": [
           ".gitignore",
           ".travis.yml",
@@ -46442,8 +46609,7 @@
           "package.json",
           "postcss.config.js",
           "pre-processor.js",
-          "process.yml",
-          "yarn.lock"
+          "process.yml"
         ]
       }
     ]
@@ -46530,7 +46696,6 @@
           ".prettierignore",
           ".prettierrc.yaml",
           ".yarnrc",
-          "BREAKING_CHANGES_IN_V10.md",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
@@ -47168,6 +47333,7 @@
           "README.md",
           "faceppSampleResponse.json",
           "index.html",
+          "privacy-policy.html",
           "vision.md"
         ]
       }
@@ -47304,7 +47470,7 @@
   {
     "id": 19131,
     "name": "react-pdf",
-    "slug": "react-pdf-950",
+    "slug": "react-pdf-wojtekmaj",
     "description": "Display PDFs in your React app as easily as if they were images.",
     "github": {
       "repo": "wojtekmaj/react-pdf"
@@ -47630,6 +47796,7 @@
           "LICENSE",
           "README.md",
           "connection.go",
+          "connectionOptions.go",
           "defaultSessionManager.go",
           "deregisterHandler.go",
           "errors.go",
@@ -47657,6 +47824,7 @@
           "sessionRegistry.go",
           "sessionRegistry_test.go",
           "socket.go",
+          "translateContextError.go",
           "transport.go"
         ]
       }
@@ -47773,7 +47941,14 @@
         },
         "defaultBranch": "master",
         "languages": ["Python", "JavaScript", "HTML", "Shell"],
-        "files": ["LICENSE", "README.md", "appmon.py", "viewreport.py"]
+        "files": [
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "appmon.py",
+          "requirements.txt",
+          "viewreport.py"
+        ]
       }
     ]
   },
@@ -48402,7 +48577,6 @@
           "make.sh",
           "mascot.png",
           "package.xml",
-          "php7_wrapper.h",
           "php_swoole.h",
           "swoole.c",
           "swoole_async.cc",
@@ -48422,7 +48596,6 @@
           "swoole_http_client.h",
           "swoole_http_client_coro.cc",
           "swoole_http_server.cc",
-          "swoole_http_v2_client.c",
           "swoole_http_v2_client.h",
           "swoole_http_v2_client_coro.cc",
           "swoole_http_v2_server.cc",
@@ -48653,6 +48826,7 @@
           ".gitignore",
           ".npmignore",
           ".prettierignore",
+          ".prettierrc.js",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
@@ -48746,6 +48920,7 @@
           ".gitignore",
           ".prettierrc",
           ".travis.yml",
+          "CODE_OF_CONDUCT.md",
           "ISSUE_TEMPLATE.md",
           "LICENSE",
           "README.md",
@@ -48818,8 +48993,10 @@
         "defaultBranch": "master",
         "languages": ["JavaScript", "HTML"],
         "files": [
+          ".all-contributorsrc",
           ".editorconfig",
           ".eslintrc",
+          ".gitattributes",
           ".gitignore",
           "CONTRIBUTING.md",
           "README.md",
@@ -49440,6 +49617,7 @@
           "LICENSE",
           "README.md",
           "babel.config.js",
+          "jest.config.js",
           "lerna.json",
           "now.json",
           "package.json",
@@ -50200,8 +50378,6 @@
           "README.md",
           "Rakefile",
           "app.json",
-          "build-ci.rb",
-          "build.sh",
           "logo.svg",
           "netlify.toml",
           "solidus.gemspec"
@@ -50267,6 +50443,7 @@
           ".gitmodules",
           ".travis.yml",
           "CHANGELOG.md",
+          "CNAME",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "DEVELOPER.md",
@@ -50936,7 +51113,6 @@
           ".kitchen.dokken.yml",
           ".kitchen.yml",
           ".rubocop.yml",
-          ".travis.yml",
           "Berksfile",
           "CHANGELOG.md",
           "CODEOWNERS",
@@ -51205,23 +51381,8 @@
           "login": "sous-chefs"
         },
         "defaultBranch": "master",
-        "languages": ["Ruby"],
-        "files": [
-          ".foodcritic",
-          ".gitignore",
-          ".kitchen.dokken.yml",
-          ".kitchen.yml",
-          ".rubocop.yml",
-          "Berksfile",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "Dangerfile",
-          "LICENSE",
-          "README.md",
-          "chefignore",
-          "metadata.rb"
-        ]
+        "languages": [],
+        "files": []
       },
       {
         "name": "nagios",
@@ -51499,6 +51660,29 @@
         ]
       },
       {
+        "name": "redisio",
+        "owner": {
+          "login": "sous-chefs"
+        },
+        "defaultBranch": "master",
+        "languages": ["Ruby", "Shell", "HTML"],
+        "files": [
+          ".foodcritic",
+          ".gitignore",
+          ".travis.yml",
+          "Berksfile",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "changelog.md",
+          "chefignore",
+          "kitchen.dokken.yml",
+          "kitchen.yml",
+          "metadata.rb"
+        ]
+      },
+      {
         "name": "repo-management",
         "owner": {
           "login": "sous-chefs"
@@ -51600,14 +51784,14 @@
         "defaultBranch": "master",
         "languages": ["Ruby", "HTML", "Shell"],
         "files": [
+          ".foodcritic",
           ".gitignore",
           ".kitchen.dokken.yml",
           ".kitchen.yml",
-          ".rspec",
           ".rubocop.yml",
-          ".travis.yml",
           "Berksfile",
           "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
           "Dangerfile",
           "Gemfile",
@@ -51886,7 +52070,6 @@
           "meta.tf",
           "mongodb.tf",
           "mysql.tf",
-          "mysql_database.tf",
           "nagios.tf",
           "nano.tf",
           "nginx_simplecgi.tf",
@@ -52065,8 +52248,16 @@
           "login": "sous-chefs"
         },
         "defaultBranch": "master",
-        "languages": ["HTML", "CSS", "JavaScript"],
-        "files": [".travis.yml", "CNAME", "LICENSE", "README.md", "config.toml"]
+        "languages": [],
+        "files": [
+          ".gitignore",
+          ".gitmodules",
+          ".travis.yml",
+          "CNAME",
+          "LICENSE",
+          "README.md",
+          "config.toml"
+        ]
       },
       {
         "name": "winrm",
@@ -52277,9 +52468,7 @@
           ".gitmodules",
           ".travis.yml",
           "Config.groovy",
-          "ISSUE_TEMPLATE.md",
           "LICENSE",
-          "PULL_REQUEST_TEMPLATE.md",
           "README.adoc",
           "build.gradle",
           "gradle.properties",
@@ -52476,7 +52665,13 @@
         },
         "defaultBranch": "master",
         "languages": ["Standard ML", "Shell", "Ruby", "Batchfile"],
-        "files": [".gitignore", ".travis.yml", "LICENSE", "README.md"]
+        "files": [
+          ".gitignore",
+          ".travis.yml",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md"
+        ]
       }
     ]
   },
@@ -52696,6 +52891,7 @@
           "LICENSE",
           "README.md",
           "appveyor-demo.yml",
+          "appveyor-fullframework.yml",
           "appveyor.yml"
         ]
       }
@@ -53012,11 +53208,38 @@
       {
         "name": "governance",
         "owner": {
+          "login": "remarkjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".npmrc",
+          ".remarkrc.js",
+          ".travis.yml",
+          "collaborators.json",
+          "license",
+          "package.json",
+          "readme.md"
+        ]
+      },
+      {
+        "name": "governance",
+        "owner": {
           "login": "unifiedjs"
         },
         "defaultBranch": "master",
         "languages": [],
-        "files": ["readme.md"]
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          "decisions.md",
+          "github.md",
+          "governance-grant.md",
+          "package.json",
+          "readme.md"
+        ]
       },
       {
         "name": "grunt-remark",
@@ -54634,6 +54857,28 @@
         ]
       },
       {
+        "name": "remark-contributors",
+        "owner": {
+          "login": "remarkjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".npmrc",
+          ".prettierignore",
+          ".remarkignore",
+          ".travis.yml",
+          "formatters.js",
+          "index.js",
+          "license",
+          "package.json",
+          "readme.md",
+          "test.js"
+        ]
+      },
+      {
         "name": "remark-defsplit",
         "owner": {
           "login": "remarkjs"
@@ -54728,6 +54973,26 @@
           "package.json",
           "readme.md",
           "test.js"
+        ]
+      },
+      {
+        "name": "remark-git-contributors",
+        "owner": {
+          "login": "remarkjs"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".npmrc",
+          ".travis.yml",
+          "appveyor.yml",
+          "formatters.js",
+          "index.js",
+          "license",
+          "package.json",
+          "readme.md"
         ]
       },
       {
@@ -55673,6 +55938,15 @@
           "package.json",
           "readme.md"
         ]
+      },
+      {
+        "name": "rfcs",
+        "owner": {
+          "login": "unifiedjs"
+        },
+        "defaultBranch": "master",
+        "languages": [],
+        "files": ["0000-template.md", "readme.md"]
       },
       {
         "name": "specification",
@@ -57123,7 +57397,9 @@
           "Swift",
           "Makefile",
           "Shell",
-          "JavaScript"
+          "JavaScript",
+          "Ruby",
+          "Gherkin"
         ],
         "files": [
           ".editorconfig",
@@ -57134,12 +57410,15 @@
           ".swift-version",
           ".swiftlint.yml",
           "CHANGELOG.md",
+          "Gemfile",
+          "Gemfile.lock",
           "LICENSE.md",
           "Makefile",
           "Package.resolved",
           "Package.swift",
           "README.md",
-          "RELEASE.md"
+          "RELEASE.md",
+          "Rakefile"
         ]
       }
     ]
@@ -57177,6 +57456,7 @@
           ".mailmap",
           "CONTRIBUTING.md",
           "CommonAssemblyInfo.cs",
+          "CommonAssemblyInfoExternals.cs",
           "CustomDictionary.xml",
           "Directory.Build.props",
           "Directory.Build.targets",
@@ -57341,6 +57621,7 @@
           "LICENSE",
           "build.php",
           "composer.json",
+          "contributing.md",
           "phpdoc.php",
           "phpstan.neon",
           "phpunit.xml.dist",
@@ -57441,6 +57722,7 @@
         "defaultBranch": "develop",
         "languages": ["Rust", "C++", "Dockerfile", "Shell"],
         "files": [
+          ".codecov.yml",
           ".dockerignore",
           ".gitignore",
           "Cargo.lock",
@@ -57488,6 +57770,7 @@
           "gas.targets",
           "gas.xml",
           "i686-w64-mingw32-as.exe",
+          "safeseh.h",
           "thcrap.props",
           "thcrap.sln"
         ]
@@ -57540,6 +57823,7 @@
           ".dockerignore",
           ".editorconfig",
           ".env.example",
+          ".env.testing",
           ".gitattributes",
           ".gitignore",
           "CODE_OF_CONDUCT.md",
@@ -57609,12 +57893,12 @@
         "defaultBranch": "master",
         "languages": ["JavaScript", "HTML"],
         "files": [
-          ".babelrc.js",
           ".editorconfig",
           ".gitignore",
           ".prettierrc.js",
           "LICENSE",
           "README.md",
+          "babel.config.js",
           "package.json",
           "yarn.lock"
         ]
@@ -57925,7 +58209,6 @@
         "files": [
           ".gitignore",
           ".travis.yml",
-          "AUTHORS",
           "CHANGELOG.md",
           "CONTRIBUTING.md",
           "LICENSE",
@@ -57955,7 +58238,7 @@
           "login": "bazzite"
         },
         "defaultBranch": "develop",
-        "languages": ["JavaScript", "CSS", "Vue", "Smarty"],
+        "languages": ["JavaScript", "CSS", "Vue", "Smarty", "XSLT"],
         "files": [
           ".editorconfig",
           ".gitignore",
@@ -57995,6 +58278,7 @@
         "defaultBranch": "master",
         "languages": ["JavaScript", "HTML", "CSS", "TypeScript"],
         "files": [
+          ".commitlintrc.js",
           ".editorconfig",
           ".eslintrc.js",
           ".gitignore",
@@ -58066,6 +58350,781 @@
           "bors.toml",
           "build.rs",
           "rustfmt.toml"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25200,
+    "name": "ngx-progressbar",
+    "slug": "ngx-progressbar",
+    "description": "Angular Progress Bar",
+    "github": {
+      "repo": "MurhafSousli/ngx-progressbar"
+    },
+    "repos": [
+      {
+        "name": "ngx-progressbar",
+        "owner": {
+          "login": "MurhafSousli"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "README_V3.md",
+          "angular.json",
+          "package-lock.json",
+          "package.json",
+          "tsconfig.json",
+          "tslint.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25201,
+    "name": "ngx-progressbar",
+    "slug": "ngx-progressbar-482",
+    "description": "Angular Progress Bar",
+    "github": {
+      "repo": "MurhafSousli/ngx-progressbar"
+    },
+    "repos": [
+      {
+        "name": "ngx-progressbar",
+        "owner": {
+          "login": "MurhafSousli"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
+        "files": [
+          ".editorconfig",
+          ".gitignore",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "README_V3.md",
+          "angular.json",
+          "package-lock.json",
+          "package.json",
+          "tsconfig.json",
+          "tslint.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25220,
+    "name": "ng-packagr",
+    "slug": "ng-packagr",
+    "description": "Transpiles your component libraries to Angular Package Format.",
+    "github": {
+      "repo": "ng-packagr/ng-packagr"
+    },
+    "repos": [
+      {
+        "name": "ng-packagr",
+        "owner": {
+          "login": "ng-packagr"
+        },
+        "defaultBranch": "master",
+        "languages": ["TypeScript", "JavaScript", "HTML", "CSS", "Shell"],
+        "files": [
+          ".appveyor.yml",
+          ".editorconfig",
+          ".gitignore",
+          ".prettierignore",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "commitlint.config.js",
+          "package.json",
+          "prettier.config.js",
+          "renovate.json",
+          "tsconfig.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25257,
+    "name": "BotUI",
+    "slug": "botui",
+    "description": "Conversational UI framework",
+    "github": {
+      "repo": "botui/botui"
+    },
+    "repos": [
+      {
+        "name": "botui",
+        "owner": {
+          "login": "botui"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "files": [
+          ".bumpedrc",
+          ".gitignore",
+          ".npmignore",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "Gulpfile.js",
+          "LICENSE",
+          "README.md",
+          "Showcase.md",
+          "logo.svg",
+          "newsletter.svg",
+          "package.json",
+          "preview.png",
+          "test.html"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25263,
+    "name": "RVM",
+    "slug": "rvm",
+    "description": "Command-line tool allowing to easily install, manage, and work with multiple ruby environments and sets of gems",
+    "github": {
+      "repo": "rvm/rvm"
+    },
+    "repos": [
+      {
+        "name": "rvm",
+        "owner": {
+          "login": "rvm"
+        },
+        "defaultBranch": "master",
+        "languages": ["Ruby", "Shell", "Java"],
+        "files": [
+          ".editorconfig",
+          ".gems",
+          ".github_changelog_generator",
+          ".gitignore",
+          ".gitmodules",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "FORMATTING.md",
+          "HACKING.md",
+          "LICENSE",
+          "README.md",
+          "Rakefile",
+          "VERSION",
+          "install",
+          "sign-releases.sh",
+          "update-remote.sh"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25377,
+    "name": "You-need-to-know-css",
+    "slug": "you-need-to-know-css",
+    "description": null,
+    "github": {
+      "repo": "l-hammer/You-need-to-know-css"
+    },
+    "repos": [
+      {
+        "name": "You-need-to-know-css",
+        "owner": {
+          "login": "l-hammer"
+        },
+        "defaultBranch": "master",
+        "languages": ["HTML", "CSS", "JavaScript"],
+        "files": [
+          ".gitignore",
+          ".nojekyll",
+          "LICENSE",
+          "README.md",
+          "_sidebar.md",
+          "bevel-corners.md",
+          "blink.md",
+          "blurry-weaken-background.md",
+          "bounce.md",
+          "centering-known.md",
+          "circular-smooth.md",
+          "circular-text.md",
+          "class-order-layout.md",
+          "custom-checkbox.md",
+          "custom-radio.md",
+          "custom-variables.md",
+          "double-wing-layout.md",
+          "elastic.md",
+          "ellipse.md",
+          "extend-hit-area.md",
+          "extended-bg-position.md",
+          "flexbox-layout.md",
+          "fluid-fixed.md",
+          "frosted-glass.md",
+          "holy-grail-layout.md",
+          "hotspot-like.md",
+          "image-slider.md",
+          "index.html",
+          "inner-rounding.md",
+          "input-align.md",
+          "interesting-usage.md",
+          "introduce.md",
+          "irregular-projection.md",
+          "line-breaks.md",
+          "mouse-cursor.md",
+          "multiple-borders.md",
+          "one-pixel-line.md",
+          "parallelogram.md",
+          "pie-chart.md",
+          "polygon.md",
+          "poptip.md",
+          "scrollbar.md",
+          "shadow-weaken-background.md",
+          "shake.md",
+          "single-projection.md",
+          "smooth.md",
+          "sticky-footer.md",
+          "stripes-background.md",
+          "sw.js",
+          "text-effects.md",
+          "text-underline.md",
+          "translucent-borders.md",
+          "typing.md",
+          "zebra-stripes.md"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25404,
+    "name": "jovo-framework-nodejs",
+    "slug": "jovo-framework-nodejs",
+    "description": null,
+    "github": {
+      "repo": "jovotech/jovo-framework-nodejs"
+    },
+    "repos": [
+      {
+        "name": "jovo-framework-nodejs",
+        "owner": {
+          "login": "jovotech"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".eslintrc.json",
+          ".gitattributes",
+          ".gitignore",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "LICENSE",
+          "README.md",
+          "index.js",
+          "package-lock.json",
+          "package.json"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25418,
+    "name": "YetiForceCRM",
+    "slug": "yetiforcecrm",
+    "description": null,
+    "github": {
+      "repo": "YetiForceCompany/YetiForceCRM"
+    },
+    "repos": [
+      {
+        "name": "YetiForceCRM",
+        "owner": {
+          "login": "YetiForceCompany"
+        },
+        "defaultBranch": "developer",
+        "languages": [
+          "PHP",
+          "HTML",
+          "Shell",
+          "Batchfile",
+          "Smarty",
+          "CSS",
+          "JavaScript"
+        ],
+        "files": [
+          ".codecov.yml",
+          ".gitattributes",
+          ".gitignore",
+          ".htaccess",
+          ".php_cs.dist",
+          ".scrutinizer.yml",
+          ".sensiolabs.yml",
+          ".travis.yml",
+          ".user.ini",
+          ".yarnclean",
+          "LICENSE",
+          "README.md",
+          "composer.json",
+          "composer.lock",
+          "cron.php",
+          "dav.php",
+          "favicon.ico",
+          "file.php",
+          "index.php",
+          "package.json",
+          "robots.txt",
+          "shorturl.php",
+          "sonar-project.properties",
+          "webservice.php",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25444,
+    "name": "Laravel Zero",
+    "slug": "laravel-zero",
+    "description": "Laravel Zero was created by, and is maintained by Nuno Maduro, and is a micro-framework that provides an elegant starting point for your console application.",
+    "github": {
+      "repo": "laravel-zero/laravel-zero"
+    },
+    "repos": [
+      {
+        "name": "laravel-zero",
+        "owner": {
+          "login": "laravel-zero"
+        },
+        "defaultBranch": "stable",
+        "languages": ["PHP"],
+        "files": [
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".scrutinizer.yml",
+          ".styleci.yml",
+          ".travis.yml",
+          "BACKERS.md",
+          "CHANGELOG.md",
+          "CONTRIBUTING.md",
+          "LICENSE.md",
+          "README.md",
+          "application",
+          "box.json",
+          "composer.json",
+          "phpunit.xml.dist"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25446,
+    "name": "AmazMod",
+    "slug": "amazmod-33",
+    "description": "AmazMod – the missing link for Amazfit Pace, Stratos and Verge devices",
+    "github": {
+      "repo": "edotassi/AmazMod"
+    },
+    "repos": []
+  },
+  {
+    "id": 25458,
+    "name": "ant-design-landing",
+    "slug": "ant-design-landing",
+    "description": null,
+    "github": {
+      "repo": "ant-design/ant-design-landing"
+    },
+    "repos": [
+      {
+        "name": "ant-design-landing",
+        "owner": {
+          "login": "ant-design"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "CSS", "HTML"],
+        "files": [
+          ".editorconfig",
+          ".eslintignore",
+          ".eslintrc.js",
+          ".gitignore",
+          ".stylelintrc",
+          "LICENSE",
+          "README-zh_CN.md",
+          "README.md",
+          "documentation.md",
+          "index.text",
+          "package.json"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25459,
+    "name": "blog",
+    "slug": "blog",
+    "description": null,
+    "github": {
+      "repo": "LeachZhou/blog"
+    },
+    "repos": [
+      {
+        "name": "blog",
+        "owner": {
+          "login": "LeachZhou"
+        },
+        "defaultBranch": "master",
+        "languages": ["HTML", "JavaScript", "Vue", "CSS"],
+        "files": [
+          ".babelrc",
+          ".editorconfig",
+          ".gitignore",
+          ".postcssrc.js",
+          ".travis.yml",
+          "CNAME",
+          "LICENSE",
+          "README.md",
+          "index.html",
+          "package-lock.json",
+          "package.json"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25485,
+    "name": "You-need-to-know-css",
+    "slug": "you-need-to-know-css-473",
+    "description": null,
+    "github": {
+      "repo": "l-hammer/You-need-to-know-css"
+    },
+    "repos": [
+      {
+        "name": "You-need-to-know-css",
+        "owner": {
+          "login": "l-hammer"
+        },
+        "defaultBranch": "master",
+        "languages": ["HTML", "CSS", "JavaScript"],
+        "files": [
+          ".gitignore",
+          ".nojekyll",
+          "LICENSE",
+          "README.md",
+          "_sidebar.md",
+          "bevel-corners.md",
+          "blink.md",
+          "blurry-weaken-background.md",
+          "bounce.md",
+          "centering-known.md",
+          "circular-smooth.md",
+          "circular-text.md",
+          "class-order-layout.md",
+          "custom-checkbox.md",
+          "custom-radio.md",
+          "custom-variables.md",
+          "double-wing-layout.md",
+          "elastic.md",
+          "ellipse.md",
+          "extend-hit-area.md",
+          "extended-bg-position.md",
+          "flexbox-layout.md",
+          "fluid-fixed.md",
+          "frosted-glass.md",
+          "holy-grail-layout.md",
+          "hotspot-like.md",
+          "image-slider.md",
+          "index.html",
+          "inner-rounding.md",
+          "input-align.md",
+          "interesting-usage.md",
+          "introduce.md",
+          "irregular-projection.md",
+          "line-breaks.md",
+          "mouse-cursor.md",
+          "multiple-borders.md",
+          "one-pixel-line.md",
+          "parallelogram.md",
+          "pie-chart.md",
+          "polygon.md",
+          "poptip.md",
+          "scrollbar.md",
+          "shadow-weaken-background.md",
+          "shake.md",
+          "single-projection.md",
+          "smooth.md",
+          "sticky-footer.md",
+          "stripes-background.md",
+          "sw.js",
+          "text-effects.md",
+          "text-underline.md",
+          "translucent-borders.md",
+          "typing.md",
+          "zebra-stripes.md"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25794,
+    "name": "pygorithm",
+    "slug": "pygorithm",
+    "description": null,
+    "github": {
+      "repo": "OmkarPathak/pygorithm"
+    },
+    "repos": [
+      {
+        "name": "pygorithm",
+        "owner": {
+          "login": "OmkarPathak"
+        },
+        "defaultBranch": "master",
+        "languages": ["Python", "Batchfile"],
+        "files": [
+          ".gitignore",
+          "CONTIRBUTORS.md",
+          "LICENSE",
+          "MANIFEST.in",
+          "README.rst",
+          "TODO.md",
+          "setup.cfg",
+          "setup.py"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25823,
+    "name": "ownhealthrecord",
+    "slug": "ownhealthrecord",
+    "description": "Your own Health Record on your site",
+    "github": {
+      "repo": "petrk94/ownhealthrecord"
+    },
+    "repos": [
+      {
+        "name": "ownhealthrecord",
+        "owner": {
+          "login": "petrk94"
+        },
+        "defaultBranch": "master",
+        "languages": ["PHP", "CSS", "JavaScript", "Hack"],
+        "files": [
+          "DeveloperLog.md",
+          "README.md",
+          "database_structure.sql",
+          "error.php",
+          "index.php",
+          "install.php",
+          "register.php",
+          "register_success.php",
+          "signup.php",
+          "upload.php"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25867,
+    "name": "deep-cover",
+    "slug": "deep-cover",
+    "description": null,
+    "github": {
+      "repo": "deep-cover/deep-cover"
+    },
+    "repos": [
+      {
+        "name": "deep-cover",
+        "owner": {
+          "login": "deep-cover"
+        },
+        "defaultBranch": "master",
+        "languages": ["Ruby", "Shell", "JavaScript", "CSS", "HTML"],
+        "files": [
+          ".deep_cover.rb",
+          ".gitignore",
+          ".rspec",
+          ".rspec_all",
+          ".rubocop.yml",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "Gemfile",
+          "LICENSE.txt",
+          "README.md",
+          "Rakefile",
+          "deep_cover.gemspec"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25886,
+    "name": "react-lifecycle-methods-diagram",
+    "slug": "react-lifecycle-methods-diagram",
+    "description": "Interactive React Lifecycle Methods diagram.",
+    "github": {
+      "repo": "wojtekmaj/react-lifecycle-methods-diagram"
+    },
+    "repos": [
+      {
+        "name": "react-lifecycle-methods-diagram",
+        "owner": {
+          "login": "wojtekmaj"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "CSS", "HTML"],
+        "files": [
+          ".babelrc",
+          ".codeclimate.yml",
+          ".eslintrc.json",
+          ".gitattributes",
+          ".gitignore",
+          ".travis.yml",
+          "LICENSE",
+          "README.md",
+          "package.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25941,
+    "name": "ui-cropper",
+    "slug": "ui-cropper",
+    "description": "The most useful and elegant AngularJS cropper",
+    "github": {
+      "repo": "CrackerakiUA/ui-cropper"
+    },
+    "repos": [
+      {
+        "name": "ui-cropper",
+        "owner": {
+          "login": "CrackerakiUA"
+        },
+        "defaultBranch": "master",
+        "languages": ["CSS", "JavaScript", "HTML"],
+        "files": [
+          ".eslintignore",
+          ".eslintrc.js",
+          ".gitattributes",
+          ".gitignore",
+          ".jshintignore",
+          ".jshintrc",
+          ".npmignore",
+          ".travis.yml",
+          "CHANGELOG.md",
+          "LICENSE",
+          "README.md",
+          "bower.json",
+          "gulpfile.js",
+          "index.js",
+          "package.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26004,
+    "name": "NSwag",
+    "slug": "nswag",
+    "description": "The Swagger/OpenAPI toolchain for .NET, Web API and TypeScript. ",
+    "github": {
+      "repo": "RSuter/NSwag"
+    },
+    "repos": [
+      {
+        "name": "NSwag",
+        "owner": {
+          "login": "RSuter"
+        },
+        "defaultBranch": "master",
+        "languages": [
+          "C#",
+          "ASP",
+          "TypeScript",
+          "HTML",
+          "Batchfile",
+          "PowerShell",
+          "JavaScript",
+          "CSS",
+          "Liquid"
+        ],
+        "files": [
+          ".gitattributes",
+          ".gitignore",
+          "CHANGELOG.md",
+          "CONTRIBUTING.md",
+          "LICENSE.md",
+          "README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26104,
+    "name": "bootstrap",
+    "slug": "bootstrap",
+    "description": null,
+    "github": {
+      "repo": "twbs/bootstrap"
+    },
+    "repos": [
+      {
+        "name": "bootstrap",
+        "owner": {
+          "login": "twbs"
+        },
+        "defaultBranch": "v4-dev",
+        "languages": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "PowerShell",
+          "Ruby",
+          "Shell"
+        ],
+        "files": [
+          ".babelrc.js",
+          ".browserslistrc",
+          ".editorconfig",
+          ".eslintignore",
+          ".eslintrc.json",
+          ".gitattributes",
+          ".gitignore",
+          ".stylelintignore",
+          ".stylelintrc",
+          ".travis.yml",
+          "CNAME",
+          "CODE_OF_CONDUCT.md",
+          "Gemfile",
+          "Gemfile.lock",
+          "LICENSE",
+          "README.md",
+          "_config.yml",
+          "composer.json",
+          "package-lock.json",
+          "package.js",
+          "package.json"
         ]
       }
     ]
