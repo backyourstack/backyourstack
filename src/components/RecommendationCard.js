@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
+import queryString from 'query-string';
 import { get, has } from 'lodash';
 
 import List from '../components/List';
@@ -117,15 +118,21 @@ export default class RecommendationCard extends React.Component {
     const { name, opencollective, github } = this.props.recommendation;
 
     let url;
+    const urlParams = {};
     if (opencollective) {
       url = `${ocWebsiteUrl}/${opencollective.slug}`;
     } else if (github) {
-      const githubHandle = github.org || github.repo;
-      url = `${ocWebsiteUrl}/pledges/new?name=${name}&githubHandle=${githubHandle}`;
+      url = `${ocWebsiteUrl}/pledges/new`;
+      urlParams.name = name;
+      urlParams.githubHandle = github.org || github.repo;
     }
 
     if (process.env.OPENCOLLECTIVE_REFERRAL) {
-      url += `?referral=${process.env.OPENCOLLECTIVE_REFERRAL}`;
+      urlParams.referral = process.env.OPENCOLLECTIVE_REFERRAL;
+    }
+
+    if (Object.keys(urlParams).length) {
+      url += `?${queryString.stringify(urlParams)}`;
     }
 
     return url;

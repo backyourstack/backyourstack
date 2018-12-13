@@ -87,11 +87,15 @@ function getRecommendedProjectFromDependencies(deps) {
       });
     })
     .then(projects => {
-      return projects.sort((a, b) =>
-        a.repos.length != b.repos.length
-          ? b.repos.length - a.repos.length
-          : a.name.localeCompare(b.name),
-      );
+      return projects.sort((a, b) => {
+        if (!!a.opencollective != !!b.opencollective) {
+          return a.opencollective ? -1 : 1;
+        } else if (a.repos.length != b.repos.length) {
+          return b.repos.length - a.repos.length;
+        } else {
+          return a.name.localeCompare(b.name);
+        }
+      });
     })
 
     .then(recommendations => recommendations.filter(r => r.project));

@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import { get } from 'lodash';
 
 import { Link } from '../routes';
 
 import List from '../components/List';
+
+const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
 
 export default class DependencyTable extends React.Component {
   static propTypes = {
@@ -130,10 +133,10 @@ export default class DependencyTable extends React.Component {
                     {dep.project && dep.project.opencollective && (
                       <Fragment>
                         {dep.project.opencollective.pledge && (
-                          <span>Open Collective (pledge)</span>
+                          <span>Add a pledge on Open Collective</span>
                         )}
                         {!dep.project.opencollective.pledge && (
-                          <span>Open Collective</span>
+                          <span>Contribute on Open Collective</span>
                         )}
                         :&nbsp;
                         <a
@@ -149,17 +152,20 @@ export default class DependencyTable extends React.Component {
                       dep.project.github &&
                       !dep.project.opencollective && (
                         <Fragment>
-                          <span>
-                            <a
-                              href={`https://opencollective.com/pledges/new?name=${
-                                dep.project.name
-                              }&githubHandle=${dep.project.github.org ||
-                                dep.project.github.repo}`}
-                            >
-                              Pledge to <b>{dep.project.name}</b> on Open
-                              Collective
-                            </a>
-                          </span>
+                          <span>Create first pledge on Open Collective</span>
+                          :&nbsp;
+                          <a
+                            href={`${ocWebsiteUrl}/pledges/new?${queryString.stringify(
+                              {
+                                name: dep.project.name,
+                                githubHandle:
+                                  dep.project.github.org ||
+                                  dep.project.github.repo,
+                              },
+                            )})`}
+                          >
+                            {dep.project.name}
+                          </a>
                         </Fragment>
                       )}
                   </td>
