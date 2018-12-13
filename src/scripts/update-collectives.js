@@ -34,15 +34,9 @@ const repositoryQuery = `query repository($owner: String!, $name: String!) {
   }
 }`;
 
-async function getCollectiveRepos(collective) {
-  let githubOrgs;
-  if (has(collective, 'settings.githubOrgs')) {
-    githubOrgs = get(collective, 'settings.githubOrgs');
-  } else if (has(collective, 'settings.githubOrg')) {
-    githubOrgs = [get(collective, 'settings.githubOrg')];
-  }
-
-  const githubRepo = get(collective, 'settings.githubRepo');
+async function getCollectiveRepos(github) {
+  const githubRepo = github.repo;
+  const githubOrgs = github.orgs ? github.orgs : github.org ? [github.org] : [];
 
   let allRepos = [];
 
@@ -89,96 +83,137 @@ async function getCollectiveRepos(collective) {
 (async () => {
   const storedCollectives = await getCollectives();
 
-  const allCollectives = await fetchAllCollectives(
-    11004,
-    'COLLECTIVE',
-    true,
-    1000,
-  );
+  const queries = [
+    // Active Open Source collectives
+    {
+      tags: 'open source',
+      isActive: true,
+      limit: 1000,
+    },
+    // Pledged collectives
+    {
+      tags: 'pledged',
+      isActive: false,
+      limit: 1000,
+    },
+  ];
+  for (const query of queries) {
+    const allCollectives = await fetchAllCollectives(query);
 
-  for (const collective of allCollectives) {
-    if (collective.id === 1) {
-      continue;
-    }
-
-    logger.info(`Collective: ${collective.slug} ${collective.name}`);
-
-    let github;
-    if (has(collective, 'settings.githubOrgs')) {
-      github = { orgs: get(collective, 'settings.githubOrgs') };
-    } else if (has(collective, 'settings.githubOrg')) {
-      github = { org: get(collective, 'settings.githubOrg') };
-    } else if (has(collective, 'settings.githubRepo')) {
-      github = { repo: get(collective, 'settings.githubRepo') };
-    } else {
-      continue;
-    }
-
-    let storedCollective = storedCollectives.find(c => c.id === collective.id);
-    if (!storedCollective) {
-      storedCollective = pick(collective, [
-        'id',
-        'name',
-        'slug',
-        'description',
-      ]);
-      storedCollectives.push(storedCollective);
-    } else {
-      storedCollective = merge(
-        storedCollective,
-        pick(collective, ['id', 'name', 'slug', 'description']),
-      );
-    }
-    storedCollective.github = github;
-    storedCollective.repos = [];
-
-    const repos = await getCollectiveRepos(collective);
-    if (!repos || !repos.length) {
-      continue;
-    }
-
-    for (const repo of repos) {
-      logger.verbose('Fetch repo with GraphQL', repo);
-      let githubRepo;
-      try {
-        githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
-          data => data.repository,
-        );
-        if (githubRepo.isFork) {
-          continue;
-        }
-      } catch (e) {
-        logger.warn(`Could not fetch repo ${repo.owner} ${repo.name}`);
+    for (const collective of allCollectives) {
+      if (collective.id === 1) {
         continue;
       }
-      let storedRepo = storedCollective.repos.find(
-        r =>
-          r.name === githubRepo.name &&
-          r.owner.login === githubRepo.owner.login,
-      );
-      if (!storedRepo) {
-        storedRepo = pick(githubRepo, ['name', 'owner']);
-        storedCollective.repos.push(storedRepo);
+
+      logger.info(`Collective: ${collective.slug} ${collective.name}`);
+
+      let github;
+      if (has(collective, 'settings.githubOrgs')) {
+        github = { orgs: get(collective, 'settings.githubOrgs') };
+      } else if (has(collective, 'settings.githubOrg')) {
+        github = { org: get(collective, 'settings.githubOrg') };
+      } else if (has(collective, 'settings.githubRepo')) {
+        github = { repo: get(collective, 'settings.githubRepo') };
+      } else {
+        const website = get(collective, 'website');
+        let githubHandle = get(collective, 'githubHandle');
+        if (!githubHandle && website && website.includes('github.com/')) {
+          githubHandle = website
+            .replace('github.com/', '')
+            .replace('https://', '')
+            .replace('http://', '');
+        }
+        if (githubHandle) {
+          if (githubHandle.includes('/')) {
+            github = { repo: githubHandle };
+          } else {
+            github = { org: githubHandle };
+          }
+        } else {
+          continue;
+        }
       }
-      storedRepo.defaultBranch = get(
-        githubRepo,
-        'defaultBranchRef.name',
-        'master',
+
+      let storedCollective = storedCollectives.find(
+        c => c.id === collective.id,
       );
-      storedRepo.languages = get(githubRepo, 'languages.nodes', []).map(
-        node => node.name,
+      if (!storedCollective) {
+        storedCollective = pick(collective, [
+          'id',
+          'name',
+          'slug',
+          'description',
+        ]);
+        storedCollectives.push(storedCollective);
+      } else {
+        storedCollective = merge(
+          storedCollective,
+          pick(collective, ['id', 'name', 'slug', 'description']),
+        );
+      }
+
+      // Pledge
+      if (
+        collective.tags &&
+        collective.tags.includes('pledged') &&
+        collective.isActive === false
+      ) {
+        storedCollective.pledge = true;
+      } else {
+        delete storedCollective.pledge;
+      }
+
+      storedCollective.github = github;
+      storedCollective.repos = [];
+
+      const repos = await getCollectiveRepos(github);
+      if (!repos || !repos.length) {
+        continue;
+      }
+
+      for (const repo of repos) {
+        logger.verbose('Fetch repo with GraphQL', repo);
+        let githubRepo;
+        try {
+          githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
+            data => data.repository,
+          );
+          if (githubRepo.isFork) {
+            continue;
+          }
+        } catch (e) {
+          logger.warn(`Could not fetch repo ${repo.owner} ${repo.name}`);
+          continue;
+        }
+        let storedRepo = storedCollective.repos.find(
+          r =>
+            r.name === githubRepo.name &&
+            r.owner.login === githubRepo.owner.login,
+        );
+        if (!storedRepo) {
+          storedRepo = pick(githubRepo, ['name', 'owner']);
+          storedCollective.repos.push(storedRepo);
+        }
+        storedRepo.defaultBranch = get(
+          githubRepo,
+          'defaultBranchRef.name',
+          'master',
+        );
+        storedRepo.languages = get(githubRepo, 'languages.nodes', []).map(
+          node => node.name,
+        );
+        storedRepo.files = get(githubRepo, 'files.entries', [])
+          .filter(e => e.type === 'blob')
+          .map(e => e.name);
+      }
+
+      storedCollective.repos.sort(
+        (a, b) =>
+          a.name.localeCompare(b.name) ||
+          a.owner.login.localeCompare(b.owner.login),
       );
-      storedRepo.files = get(githubRepo, 'files.entries', [])
-        .filter(e => e.type === 'blob')
-        .map(e => e.name);
+
+      await saveCollectives(storedCollectives);
     }
-
-    storedCollective.repos.sort(
-      (a, b) =>
-        a.name.localeCompare(b.name) ||
-        a.owner.login.localeCompare(b.owner.login),
-    );
-
-    await saveCollectives(storedCollectives);
   }
 })();

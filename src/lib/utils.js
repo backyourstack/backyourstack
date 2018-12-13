@@ -64,9 +64,17 @@ function getRecommendedProjectFromDependencies(deps) {
       for (const dep of deps) {
         const id = dep.project ? dep.project.name : dep.name;
         if (!projects[id]) {
-          projects[id] = dep.project
-            ? pick(dep.project, ['name', 'logo', 'opencollective'])
-            : pick(dep, ['name']);
+          if (dep.project) {
+            projects[id] = pick(dep.project, [
+              'name',
+              'logo',
+              'opencollective',
+              'github',
+            ]);
+            projects[id].project = true;
+          } else {
+            projects[id] = pick(dep, ['name']);
+          }
           projects[id]['repos'] = [];
         }
         dep.repos.forEach(repo => (projects[id]['repos'][repo.id] = repo));
@@ -79,13 +87,18 @@ function getRecommendedProjectFromDependencies(deps) {
       });
     })
     .then(projects => {
-      return projects.sort((a, b) =>
-        a.repos.length != b.repos.length
-          ? b.repos.length - a.repos.length
-          : a.name.localeCompare(b.name),
-      );
+      return projects.sort((a, b) => {
+        if (!!a.opencollective != !!b.opencollective) {
+          return a.opencollective ? -1 : 1;
+        } else if (a.repos.length != b.repos.length) {
+          return b.repos.length - a.repos.length;
+        } else {
+          return a.name.localeCompare(b.name);
+        }
+      });
     })
-    .then(recommendations => recommendations.filter(r => r.opencollective));
+
+    .then(recommendations => recommendations.filter(r => r.project));
 }
 
 export {

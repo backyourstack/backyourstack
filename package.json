@@ -28,9 +28,7 @@
     "name": "Open Collective, Inc.",
     "email": "team@opencollective.com"
   },
-  "contributors": [
-    "François Hodierne <francois@opencollective.com>"
-  ],
+  "contributors": ["François Hodierne <francois@opencollective.com>"],
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^16.0.5",
@@ -50,11 +48,12 @@
     "moment": "^2.22.2",
     "multer": "^1.4.1",
     "next": "7.0.2",
-    "next-routes": "^1.4.2",
     "next-nprogress": "^1.4.0",
+    "next-routes": "^1.4.2",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0",
     "prop-types": "^15.6.2",
+    "query-string": "^6.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-dropzone": "^7.0.1",
@@ -90,18 +89,10 @@
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "nodemonConfig": {
-    "watch": [
-      "src/lib",
-      "src/server",
-      "src/routes.js"
-    ]
+    "watch": ["src/server", "src/routes.js"]
   },
   "greenkeeper": {
-    "ignore": [
-      "@babel/cli",
-      "@babel/node",
-      "webpack"
-    ]
+    "ignore": ["@babel/cli", "@babel/node", "webpack"]
   },
   "husky": {
     "hooks": {
@@ -109,9 +100,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json}": ["prettier --write", "git add"]
   }
 }

@@ -32,6 +32,16 @@ fs.readJson(filename)
         } else if (githubRepo) {
           project.github = { repo: githubRepo };
         }
+        // Pledge
+        if (
+          data.tags &&
+          data.tags.includes('pledged') &&
+          data.isActive === false
+        ) {
+          data.pledge = true;
+        } else {
+          delete data.pledge;
+        }
         // Sponsors
         let members = data.members
           .filter(m => m.role === 'BACKER' && m.member.type === 'ORGANIZATION')
