@@ -453,9 +453,9 @@ export default class RecommendationCard extends React.Component {
               href={this.contributeUrl()}
             >
               {firstPledge
-                ? 'Create first Pledge'
+                ? 'Pledge'
                 : existingPledge
-                ? 'Add a Pledge'
+                ? 'Pledge'
                 : 'Contribute'}
             </a>
           </div>

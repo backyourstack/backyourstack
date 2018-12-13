@@ -60,7 +60,8 @@ export default class DependencyTable extends React.Component {
               font-size: 12px;
               color: #121314;
             }
-            table td.repos {
+            table td.repos,
+            table td.funding {
               white-space: normal;
             }
             table td a {
@@ -129,11 +130,11 @@ export default class DependencyTable extends React.Component {
                       cut={20}
                     />
                   </td>
-                  <td className="opencollective">
+                  <td className="funding">
                     {dep.project && dep.project.opencollective && (
                       <Fragment>
                         {dep.project.opencollective.pledge && (
-                          <span>Add a pledge on Open Collective</span>
+                          <span>Pledge on Open Collective</span>
                         )}
                         {!dep.project.opencollective.pledge && (
                           <span>Contribute on Open Collective</span>
@@ -152,7 +153,7 @@ export default class DependencyTable extends React.Component {
                       dep.project.github &&
                       !dep.project.opencollective && (
                         <Fragment>
-                          <span>Create first pledge on Open Collective</span>
+                          <span>Pledge on Open Collective</span>
                           :&nbsp;
                           <a
                             href={`${ocWebsiteUrl}/pledges/new?${queryString.stringify(
