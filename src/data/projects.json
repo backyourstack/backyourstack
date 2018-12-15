@@ -2040,6 +2040,24 @@
     ]
   },
   {
+    "name": "barbajs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "barba.js"
+      }
+    ],
+    "github": {
+      "repo": "luruke/barba.js"
+    },
+    "opencollective": {
+      "id": 173,
+      "name": "Barba.js",
+      "slug": "barbajs",
+      "description": "Create badass, fluid and smooth transition between your website's pages."
+    }
+  },
+  {
     "name": "bedrock",
     "packages": [
       {
@@ -2501,6 +2519,25 @@
         "name": "bluebird"
       }
     ]
+  },
+  {
+    "name": "bluebird",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "bluebird"
+      }
+    ],
+    "github": {
+      "repo": "petkaantonov/bluebird"
+    },
+    "opencollective": {
+      "id": 26333,
+      "name": "Bluebird",
+      "slug": "bluebird",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "boostnoteio",
@@ -4991,30 +5028,6 @@
     ]
   },
   {
-    "name": "democracyearth",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "delegation"
-      }
-    ],
-    "github": {
-      "org": "democracyearth"
-    },
-    "opencollective": {
-      "id": 55,
-      "name": "Democracy Earth Foundation",
-      "slug": "democracyearth",
-      "description": "Trusted digital governance for small communities, corporations, large cities & whole nations.",
-      "sponsors": [],
-      "stats": {
-        "balance": 358418,
-        "yearlyBudget": 183252
-      },
-      "goals": []
-    }
-  },
-  {
     "name": "dep",
     "packages": [
       {
@@ -6251,6 +6264,10 @@
       {
         "type": "npm",
         "name": "@emotion/weak-memoize"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/babel-preset-css-prop"
       }
     ],
     "github": {
@@ -6335,6 +6352,73 @@
         "name": "eslint"
       }
     ]
+  },
+  {
+    "name": "eslint",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "doctrine"
+      },
+      {
+        "type": "npm",
+        "name": "eslint"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-canary"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-cli"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-release"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-scope"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-tester"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-transforms"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-visitor-keys"
+      },
+      {
+        "type": "npm",
+        "name": "espree"
+      },
+      {
+        "type": "npm",
+        "name": "generator-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "typescript-eslint-parser"
+      }
+    ],
+    "github": {
+      "org": "eslint"
+    },
+    "opencollective": {
+      "id": 26331,
+      "name": "ESLint",
+      "slug": "eslint",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "eslint-config-airbnb",
@@ -11585,6 +11669,24 @@
     }
   },
   {
+    "name": "json-schema-faker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "json-schema-faker"
+      }
+    ],
+    "github": {
+      "repo": "json-schema-faker/json-schema-faker"
+    },
+    "opencollective": {
+      "id": 157,
+      "name": "json-schema-faker",
+      "slug": "json-schema-faker",
+      "description": null
+    }
+  },
+  {
     "name": "jsonmvc",
     "packages": [
       {
@@ -13012,19 +13114,34 @@
   },
   {
     "name": "lodash",
-    "github": {
-      "org": "lodash"
-    },
     "packages": [
+      {
+        "type": "npm",
+        "name": "lodash"
+      },
       {
         "type": "npm",
         "name": "babel-plugin-lodash"
       },
       {
         "type": "npm",
-        "name": "lodash"
+        "name": "lodash-doc-globals"
+      },
+      {
+        "type": "npm",
+        "name": "lodash-webpack-plugin"
       }
-    ]
+    ],
+    "github": {
+      "org": "lodash"
+    },
+    "opencollective": {
+      "id": 26332,
+      "name": "Lodash",
+      "slug": "lodash",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "lolashare",
@@ -13085,6 +13202,24 @@
         "yearlyBudget": 141964
       },
       "goals": []
+    }
+  },
+  {
+    "name": "lyrebird",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "lyrebird"
+      }
+    ],
+    "github": {
+      "repo": "meituan/lyrebird"
+    },
+    "opencollective": {
+      "id": 26117,
+      "name": "Lyrebird",
+      "slug": "lyrebird",
+      "description": "An open platform for testing mobile apps"
     }
   },
   {
@@ -13855,6 +13990,24 @@
     }
   },
   {
+    "name": "milligram",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "milligram"
+      }
+    ],
+    "github": {
+      "repo": "milligram/milligram"
+    },
+    "opencollective": {
+      "id": 162,
+      "name": "Milligram",
+      "slug": "milligram",
+      "description": "A minimalist CSS framework"
+    }
+  },
+  {
     "name": "mimic",
     "packages": [
       {
@@ -14210,6 +14363,37 @@
         "name": "moment-timezone"
       }
     ]
+  },
+  {
+    "name": "moment",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "luxon"
+      },
+      {
+        "type": "npm",
+        "name": "moment"
+      },
+      {
+        "type": "npm",
+        "name": "moment-cldr"
+      },
+      {
+        "type": "npm",
+        "name": "moment-timezone"
+      }
+    ],
+    "github": {
+      "org": "moment"
+    },
+    "opencollective": {
+      "id": 26334,
+      "name": "Moment.js",
+      "slug": "moment",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "mongodb",
@@ -15584,6 +15768,24 @@
     }
   },
   {
+    "name": "notifynder",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "fenos/notifynder"
+      }
+    ],
+    "github": {
+      "repo": "fenos/Notifynder"
+    },
+    "opencollective": {
+      "id": 135,
+      "name": "Notifynder",
+      "slug": "notifynder",
+      "description": null
+    }
+  },
+  {
     "name": "npm-run-all",
     "packages": [
       {
@@ -15591,6 +15793,76 @@
         "name": "npm-run-all"
       }
     ]
+  },
+  {
+    "name": "nservicebusextensions",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Newtonsoft.Encryption"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Attachments.Sql"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Attachments.FileShare"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.AuditFilter"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.HandlerOrdering"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Jil"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.MicrosoftLogging"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.SqlServer.Native"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.SqlServer.HttpPassthrough"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.ProtoBufGoogle"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.ProtoBuf"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Serilog"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.FluentValidation"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.ZeroFormatter"
+      }
+    ],
+    "github": {
+      "org": "NServiceBusExtensions"
+    },
+    "opencollective": {
+      "id": 25205,
+      "name": "NServiceBusExtensions",
+      "slug": "nservicebusextensions",
+      "description": "Extensions for NServiceBus"
+    }
   },
   {
     "name": "nswag",
@@ -17448,6 +17720,36 @@
     ]
   },
   {
+    "name": "pre-commit",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pre_commit"
+      },
+      {
+        "type": "pypi",
+        "name": "pre_commit_hooks"
+      },
+      {
+        "type": "pypi",
+        "name": "pre-commit-installed"
+      },
+      {
+        "type": "pypi",
+        "name": "pre-commit-mirror-maker"
+      }
+    ],
+    "github": {
+      "org": "pre-commit"
+    },
+    "opencollective": {
+      "id": 23400,
+      "name": "pre-commit",
+      "slug": "pre-commit",
+      "description": null
+    }
+  },
+  {
     "name": "preact",
     "packages": [
       {
@@ -19200,6 +19502,24 @@
     }
   },
   {
+    "name": "react-virtualized",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-virtualized"
+      }
+    ],
+    "github": {
+      "repo": "bvaughn/react-virtualized"
+    },
+    "opencollective": {
+      "id": 118,
+      "name": "react-virtualized",
+      "slug": "react-virtualized",
+      "description": null
+    }
+  },
+  {
     "name": "reactabular",
     "packages": [
       {
@@ -19315,6 +19635,24 @@
     ],
     "github": {
       "repo": "reactiveui/ReactiveUI"
+    }
+  },
+  {
+    "name": "readline",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/chzyer/readline"
+      }
+    ],
+    "github": {
+      "repo": "chzyer/readline"
+    },
+    "opencollective": {
+      "id": 38,
+      "name": "Readline",
+      "slug": "readline",
+      "description": "Readline is a pure go(golang) implementation for GNU-Readline kind library"
     }
   },
   {
@@ -23301,7 +23639,11 @@
       },
       {
         "type": "composer",
-        "name": "laravel/laravel"
+        "name": "tenancy/hyn-nova"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/laravel-websockets-bridge"
       }
     ],
     "github": {
