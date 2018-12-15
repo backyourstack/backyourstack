@@ -20,9 +20,9 @@
     "prettier:write": "npm run prettier -- --write",
     "prettier:check": "npm run prettier -- --list-different",
     "test": "NODE_ENV=test jest",
-    "update-projects": "babel-node src/scripts/update-projects",
     "update-collectives": "babel-node src/scripts/update-collectives",
-    "detect-packages": "./src/scripts/detect-all-packages.sh"
+    "detect-packages": "./src/scripts/detect-all-packages.sh",
+    "sync-projects-with-opencollective": "babel-node src/scripts/sync-projects-with-opencollective"
   },
   "author": {
     "name": "Open Collective, Inc.",
