@@ -138,27 +138,6 @@ export default class RecommendationCard extends React.Component {
     return url;
   };
 
-  contributeButton = () => {
-    const { recommendation } = this.props;
-    const existingPledge = get(recommendation, 'opencollective.pledge', false);
-    const firstPledge = !has(recommendation, 'opencollective');
-
-    return (
-      <a
-        className={classNames('bigButton', 'contributeButton', {
-          pledge: existingPledge || firstPledge,
-        })}
-        href={this.contributeUrl()}
-      >
-        {firstPledge
-          ? 'Create first Pledge'
-          : existingPledge
-          ? 'Add a Pledge'
-          : 'Contribute'}
-      </a>
-    );
-  };
-
   render() {
     const { recommendation, opencollective } = this.props;
 
