@@ -28,15 +28,17 @@
     "name": "Open Collective, Inc.",
     "email": "team@opencollective.com"
   },
-  "contributors": ["François Hodierne <francois@opencollective.com>"],
+  "contributors": [
+    "François Hodierne <francois@opencollective.com>"
+  ],
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^16.0.5",
+    "@octokit/rest": "^16.2.0",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.3",
     "cross-fetch": "^3.0.0",
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "fs-extra": "^7.0.1",
@@ -45,7 +47,7 @@
     "lodash": "^4.17.11",
     "lru-cache": "^5.1.1",
     "md5": "^2.2.1",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "multer": "^1.4.1",
     "next": "7.0.2",
     "next-nprogress": "^1.4.0",
@@ -68,11 +70,11 @@
   "devDependencies": {
     "@babel/cli": "7.0.0",
     "@babel/node": "7.0.0",
-    "@mdx-js/loader": "^0.16.5",
-    "@mdx-js/mdx": "^0.16.5",
+    "@mdx-js/loader": "^0.16.6",
+    "@mdx-js/mdx": "^0.16.6",
     "babel-eslint": "^10.0.1",
     "babel-plugin-lodash": "^3.3.4",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-opencollective": "^1.5.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.14.0",
@@ -80,8 +82,8 @@
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "jest": "^23.6.0",
-    "nodemon": "^1.18.7",
-    "prettier": "^1.15.2",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3",
     "react-test-renderer": "^16.6.3",
     "svg-react-loader": "^0.4.6",
     "thanks": "^2.0.0",
@@ -89,10 +91,17 @@
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "nodemonConfig": {
-    "watch": ["src/server", "src/routes.js"]
+    "watch": [
+      "src/server",
+      "src/routes.js"
+    ]
   },
   "greenkeeper": {
-    "ignore": ["@babel/cli", "@babel/node", "webpack"]
+    "ignore": [
+      "@babel/cli",
+      "@babel/node",
+      "webpack"
+    ]
   },
   "husky": {
     "hooks": {
@@ -100,6 +109,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"]
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
