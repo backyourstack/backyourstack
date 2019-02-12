@@ -6820,18 +6820,6 @@
   },
   {
     "name": "eslint",
-    "github": {
-      "org": "eslint"
-    },
-    "packages": [
-      {
-        "type": "npm",
-        "name": "eslint"
-      }
-    ]
-  },
-  {
-    "name": "eslint",
     "packages": [
       {
         "type": "npm",
@@ -6894,7 +6882,6 @@
       "name": "ESLint",
       "slug": "eslint",
       "description": "The pluggable linting utility for JavaScript and JSX",
-      "pledge": true,
       "stats": {
         "balance": 195096,
         "yearlyBudget": 2149862
