@@ -105,6 +105,10 @@
       {
         "type": "npm",
         "name": "@accounts/boost"
+      },
+      {
+        "type": "npm",
+        "name": "@accounts/typeorm"
       }
     ],
     "opencollective": {
@@ -121,6 +125,24 @@
     },
     "github": {
       "repo": "accounts-js/accounts"
+    }
+  },
+  {
+    "name": "activeadmin",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "activeadmin"
+      }
+    ],
+    "github": {
+      "repo": "activeadmin/activeadmin"
+    },
+    "opencollective": {
+      "id": 26304,
+      "name": "activeadmin",
+      "slug": "activeadmin",
+      "description": "The administration framework for business critical Ruby on Rails applications"
     }
   },
   {
@@ -309,6 +331,10 @@
       {
         "type": "npm",
         "name": "altair-static"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-altair-graphql"
       }
     ],
     "opencollective": {
@@ -693,6 +719,10 @@
       {
         "type": "dep",
         "name": "github.com/apex/js"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/apex/actions"
       }
     ],
     "github": {
@@ -1932,6 +1962,10 @@
       {
         "type": "npm",
         "name": "@babel/plugin-proposal-private-methods"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/plugin-transform-named-capturing-groups-regex"
       }
     ],
     "opencollective": {
@@ -2038,6 +2072,24 @@
         "name": "babel-plugin-transform-decorators-legacy"
       }
     ]
+  },
+  {
+    "name": "bagisto",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "bagisto/bagisto"
+      }
+    ],
+    "github": {
+      "repo": "bagisto/bagisto"
+    },
+    "opencollective": {
+      "id": 26770,
+      "name": "Bagisto - Laravel eCommerce",
+      "slug": "bagisto",
+      "description": "Open Source eCommerce Framework on Laravel"
+    }
   },
   {
     "name": "barbajs",
@@ -2516,18 +2568,6 @@
   },
   {
     "name": "bluebird",
-    "github": {
-      "repo": "petkaantonov/bluebird"
-    },
-    "packages": [
-      {
-        "type": "npm",
-        "name": "bluebird"
-      }
-    ]
-  },
-  {
-    "name": "bluebird",
     "packages": [
       {
         "type": "npm",
@@ -2984,6 +3024,41 @@
     }
   },
   {
+    "name": "breeze",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "breeze-client"
+      },
+      {
+        "type": "npm",
+        "name": "breeze-bridge-angular"
+      },
+      {
+        "type": "npm",
+        "name": "breeze-bridge2-angular"
+      },
+      {
+        "type": "npm",
+        "name": "breezejs"
+      },
+      {
+        "type": "npm",
+        "name": "breeze-client-labs"
+      }
+    ],
+    "github": {
+      "org": "Breeze"
+    },
+    "opencollective": {
+      "id": 26398,
+      "name": "Breeze",
+      "slug": "breeze",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "browser-sync",
     "packages": [
       {
@@ -3094,6 +3169,76 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "cannercms",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "canner-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/container"
+      },
+      {
+        "type": "npm",
+        "name": "canner-graphql-interface"
+      },
+      {
+        "type": "npm",
+        "name": "canner-graphql-utils"
+      },
+      {
+        "type": "npm",
+        "name": "canner-helpers"
+      },
+      {
+        "type": "npm",
+        "name": "canner-layouts"
+      },
+      {
+        "type": "npm",
+        "name": "canner-ref-id"
+      },
+      {
+        "type": "npm",
+        "name": "canner-schema-loader"
+      },
+      {
+        "type": "npm",
+        "name": "canner-script"
+      },
+      {
+        "type": "npm",
+        "name": "canner-simulator"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/storage"
+      },
+      {
+        "type": "npm",
+        "name": "canner"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/history-router"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/router"
+      }
+    ],
+    "github": {
+      "repo": "Canner/canner"
+    },
+    "opencollective": {
+      "id": 27433,
+      "name": "CannerCMS",
+      "slug": "cannercms",
+      "description": "Create flexible Content Management System fast and easy"
     }
   },
   {
@@ -4666,6 +4811,14 @@
       {
         "type": "npm",
         "name": "c21e"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/cucumber/pretty-formatter-go"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/cucumber/tag-expressions-go"
       }
     ],
     "github": {
@@ -5055,6 +5208,28 @@
     ]
   },
   {
+    "name": "democracyearth",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "delegation"
+      },
+      {
+        "type": "npm",
+        "name": "exodus"
+      }
+    ],
+    "github": {
+      "org": "democracyearth"
+    },
+    "opencollective": {
+      "id": 55,
+      "name": "Democracy Earth Foundation",
+      "slug": "democracyearth",
+      "description": "Trusted digital governance for small communities, corporations, large cities & whole nations."
+    }
+  },
+  {
     "name": "dep",
     "packages": [
       {
@@ -5227,6 +5402,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "django-crm",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-crm"
+      }
+    ],
+    "github": {
+      "repo": "MicroPyramid/Django-CRM"
+    },
+    "opencollective": {
+      "id": 30217,
+      "name": "Django-CRM",
+      "slug": "django-crm",
+      "description": "Open Source Python CRM based on Django"
     }
   },
   {
@@ -6303,6 +6496,10 @@
       {
         "type": "npm",
         "name": "@emotion/babel-preset-css-prop"
+      },
+      {
+        "type": "npm",
+        "name": "@emotion/babel-plugin-jsx-pragmatic"
       }
     ],
     "github": {
@@ -7093,6 +7290,14 @@
       {
         "type": "npm",
         "name": "@feathersjs/client"
+      },
+      {
+        "type": "npm",
+        "name": "@feathersjs/adapter-commons"
+      },
+      {
+        "type": "npm",
+        "name": "@feathersjs/adapter-tests"
       }
     ],
     "github": {
@@ -7447,6 +7652,24 @@
         "yearlyBudget": 49428
       },
       "goals": []
+    }
+  },
+  {
+    "name": "firefly-iii",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "grumpydictator/firefly-iii"
+      }
+    ],
+    "github": {
+      "repo": "firefly-iii/firefly-iii"
+    },
+    "opencollective": {
+      "id": 27566,
+      "name": "Firefly III",
+      "slug": "firefly-iii",
+      "description": "Firefly III is a open source self-hosted personal finances manager built in PHP7.2"
     }
   },
   {
@@ -8198,6 +8421,14 @@
       {
         "type": "npm",
         "name": "gatsby-transformer-pdf"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-source-shopify"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-transformer-asciidoc"
       }
     ],
     "opencollective": {
@@ -10795,6 +11026,24 @@
     ]
   },
   {
+    "name": "instapy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "instapy"
+      }
+    ],
+    "github": {
+      "repo": "timgrossmann/InstaPy"
+    },
+    "opencollective": {
+      "id": 27337,
+      "name": "InstaPy",
+      "slug": "instapy",
+      "description": "Instagram bot - Like, Comment, and Follow automation"
+    }
+  },
+  {
     "name": "intelligo",
     "packages": [
       {
@@ -10909,6 +11158,24 @@
         "balance": 12825,
         "yearlyBudget": 12825
       }
+    }
+  },
+  {
+    "name": "ipfs-search",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/ipfs-search/ipfs-search"
+      }
+    ],
+    "github": {
+      "repo": "ipfs-search/ipfs-search"
+    },
+    "opencollective": {
+      "id": 27077,
+      "name": "ipfs-search",
+      "slug": "ipfs-search",
+      "description": "Search engine for the Interplanetary Filesystem (IPFS)."
     }
   },
   {
@@ -11030,6 +11297,25 @@
         "balance": 11877,
         "yearlyBudget": 11877
       }
+    }
+  },
+  {
+    "name": "janrywang/redux-callbag",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "redux-callbag"
+      }
+    ],
+    "github": {
+      "repo": "janryWang/redux-callbag"
+    },
+    "opencollective": {
+      "id": 27087,
+      "name": "janryWang",
+      "slug": "janrywang/redux-callbag",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -11730,6 +12016,24 @@
     }
   },
   {
+    "name": "json-rpc",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "json-rpc"
+      }
+    ],
+    "github": {
+      "repo": "pavlov99/json-rpc"
+    },
+    "opencollective": {
+      "id": 27126,
+      "name": "json-rpc",
+      "slug": "json-rpc",
+      "description": null
+    }
+  },
+  {
     "name": "json-schema-faker",
     "packages": [
       {
@@ -11874,6 +12178,66 @@
       {
         "type": "npm",
         "name": "react-jss"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-cache"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-camel-case"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-compose"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-default-unit"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-expand"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-extend"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-global"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-isolate"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-nested"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-props-sort"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-rule-value-function"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-rule-value-observable"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-template"
+      },
+      {
+        "type": "npm",
+        "name": "jss-plugin-vendor-prefixer"
+      },
+      {
+        "type": "npm",
+        "name": "jss-starter-kit"
       }
     ],
     "github": {
@@ -12259,6 +12623,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "known",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "idno/known"
+      }
+    ],
+    "github": {
+      "repo": "idno/known"
+    },
+    "opencollective": {
+      "id": 27943,
+      "name": "Known",
+      "slug": "known",
+      "description": null
     }
   },
   {
@@ -12855,6 +13237,24 @@
     }
   },
   {
+    "name": "larecipe",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "binarytorch/larecipe"
+      }
+    ],
+    "github": {
+      "repo": "saleem-hadad/larecipe"
+    },
+    "opencollective": {
+      "id": 29703,
+      "name": "LaRecipe",
+      "slug": "larecipe",
+      "description": "Write gorgeous documentations for your products using Markdown inside your Laravel app."
+    }
+  },
+  {
     "name": "lazy-bot",
     "packages": [
       {
@@ -13110,6 +13510,24 @@
     }
   },
   {
+    "name": "limarka",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "limarka"
+      }
+    ],
+    "github": {
+      "repo": "abntex/limarka"
+    },
+    "opencollective": {
+      "id": 27410,
+      "name": "limarka",
+      "slug": "limarka",
+      "description": null
+    }
+  },
+  {
     "name": "lint-staged",
     "packages": [
       {
@@ -13131,6 +13549,28 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "live2d-widgetjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "live2d-widget"
+      },
+      {
+        "type": "npm",
+        "name": "current-device"
+      }
+    ],
+    "github": {
+      "repo": "xiazeyu/live2d-widget.js"
+    },
+    "opencollective": {
+      "id": 27472,
+      "name": "live2d-widget.js",
+      "slug": "live2d-widgetjs",
+      "description": null
     }
   },
   {
@@ -13575,6 +14015,10 @@
       {
         "type": "npm",
         "name": "@material-ui/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@material-ui/system"
       }
     ],
     "opencollective": {
@@ -13662,6 +14106,24 @@
     },
     "github": {
       "repo": "mui-org/material-ui"
+    }
+  },
+  {
+    "name": "mediasoup",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "mediasoup"
+      }
+    ],
+    "github": {
+      "repo": "versatica/mediasoup"
+    },
+    "opencollective": {
+      "id": 28407,
+      "name": "mediasoup",
+      "slug": "mediasoup",
+      "description": "Cutting Edge WebRTC Video Conferencing"
     }
   },
   {
@@ -14135,6 +14597,60 @@
     ]
   },
   {
+    "name": "mirakurun",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "mirakurun"
+      }
+    ],
+    "github": {
+      "repo": "Chinachu/Mirakurun"
+    },
+    "opencollective": {
+      "id": 28124,
+      "name": "Mirakurun",
+      "slug": "mirakurun",
+      "description": null
+    }
+  },
+  {
+    "name": "miscord",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "miscord"
+      }
+    ],
+    "github": {
+      "repo": "miscord/miscord"
+    },
+    "opencollective": {
+      "id": 26827,
+      "name": "Miscord",
+      "slug": "miscord",
+      "description": null
+    }
+  },
+  {
+    "name": "mithriljs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "mithril"
+      }
+    ],
+    "github": {
+      "repo": "MithrilJS/mithril.js"
+    },
+    "opencollective": {
+      "id": 25870,
+      "name": "mithril.js",
+      "slug": "mithriljs",
+      "description": "Mithril is a modern client-side JavaScript framework for building Single Page Applications"
+    }
+  },
+  {
     "name": "mkdirp",
     "packages": [
       {
@@ -14432,22 +14948,6 @@
         "yearlyBudget": 400
       }
     }
-  },
-  {
-    "name": "moment",
-    "github": {
-      "org": "moment"
-    },
-    "packages": [
-      {
-        "type": "npm",
-        "name": "moment"
-      },
-      {
-        "type": "npm",
-        "name": "moment-timezone"
-      }
-    ]
   },
   {
     "name": "moment",
@@ -15153,38 +15653,6 @@
     }
   },
   {
-    "name": "ngx-progressbar-482",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "@ngx-progressbar/core"
-      },
-      {
-        "type": "npm",
-        "name": "express"
-      },
-      {
-        "type": "npm",
-        "name": "ngx-progressbar"
-      }
-    ],
-    "github": {
-      "repo": "MurhafSousli/ngx-progressbar"
-    },
-    "opencollective": {
-      "id": 25201,
-      "name": "ngx-progressbar",
-      "slug": "ngx-progressbar-482",
-      "description": "Angular Progress Bar",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [{}],
-      "sponsors": []
-    }
-  },
-  {
     "name": "ngx-scanner",
     "packages": [
       {
@@ -15611,6 +16079,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "node-evercookie",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "evercookie"
+      }
+    ],
+    "github": {
+      "repo": "truongsinh/node-evercookie"
+    },
+    "opencollective": {
+      "id": 26453,
+      "name": "node-evercookie",
+      "slug": "node-evercookie",
+      "description": null
     }
   },
   {
@@ -16057,6 +16543,14 @@
       {
         "type": "npm",
         "name": "@nuxt/webpack"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/typescript"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/utils"
       }
     ],
     "github": {
@@ -16144,6 +16638,25 @@
         "balance": 763929,
         "yearlyBudget": 3171345
       }
+    }
+  },
+  {
+    "name": "octobercms",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "october/october"
+      }
+    ],
+    "github": {
+      "repo": "octobercms/october"
+    },
+    "opencollective": {
+      "id": 27158,
+      "name": "October CMS",
+      "slug": "octobercms",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -16542,6 +17055,24 @@
     }
   },
   {
+    "name": "openmined",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "syft"
+      }
+    ],
+    "github": {
+      "repo": "OpenMined/PySyft"
+    },
+    "opencollective": {
+      "id": 14371,
+      "name": "OpenMined",
+      "slug": "openmined",
+      "description": "OpenMined is an open-source community focused on researching, developing, and promoting tools for secure, privacy-preserving, value-aligned artificial intelligence."
+    }
+  },
+  {
     "name": "openstates",
     "packages": [
       {
@@ -16563,6 +17094,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "openstf",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "stf"
+      }
+    ],
+    "github": {
+      "repo": "openstf/stf"
+    },
+    "opencollective": {
+      "id": 28204,
+      "name": "OpenSTF",
+      "slug": "openstf",
+      "description": "Control and manage Android devices from your browser"
     }
   },
   {
@@ -17236,6 +17785,42 @@
     }
   },
   {
+    "name": "peermaps",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "peermaps"
+      }
+    ],
+    "github": {
+      "repo": "peermaps/peermaps"
+    },
+    "opencollective": {
+      "id": 26816,
+      "name": "peermaps",
+      "slug": "peermaps",
+      "description": "peer to peer cartography"
+    }
+  },
+  {
+    "name": "perfumejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "perfume.js"
+      }
+    ],
+    "github": {
+      "repo": "Zizzamia/perfume.js"
+    },
+    "opencollective": {
+      "id": 30244,
+      "name": "perfume.js",
+      "slug": "perfumejs",
+      "description": null
+    }
+  },
+  {
     "name": "phalcon",
     "packages": [
       {
@@ -17408,6 +17993,24 @@
     }
   },
   {
+    "name": "photography",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "photography"
+      }
+    ],
+    "github": {
+      "repo": "rampatra/photography"
+    },
+    "opencollective": {
+      "id": 28823,
+      "name": "Photography",
+      "slug": "photography",
+      "description": "A free online portfolio website to showcase your works."
+    }
+  },
+  {
     "name": "php-pkpass",
     "packages": [
       {
@@ -17477,6 +18080,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "pixelfed",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "pixelfed/pixelfed"
+      }
+    ],
+    "github": {
+      "repo": "pixelfed/pixelfed"
+    },
+    "opencollective": {
+      "id": 23791,
+      "name": "pixelfed",
+      "slug": "pixelfed",
+      "description": null
     }
   },
   {
@@ -18965,6 +19586,26 @@
       {
         "type": "npm",
         "name": "react-native-firebase"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/analytics"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/app"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/functions"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/app-types"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/common"
       }
     ],
     "github": {
@@ -19217,6 +19858,24 @@
         "yearlyBudget": 5295
       },
       "goals": []
+    }
+  },
+  {
+    "name": "react-native-storage",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-native-storage"
+      }
+    ],
+    "github": {
+      "repo": "sunnylqm/react-native-storage"
+    },
+    "opencollective": {
+      "id": 26966,
+      "name": "react-native-storage",
+      "slug": "react-native-storage",
+      "description": null
     }
   },
   {
@@ -19985,6 +20644,24 @@
     ]
   },
   {
+    "name": "redux-devtools-extension",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "remotedev-redux-devtools-extension"
+      }
+    ],
+    "github": {
+      "repo": "zalmoxisus/redux-devtools-extension"
+    },
+    "opencollective": {
+      "id": 338,
+      "name": "Redux DevTools",
+      "slug": "redux-devtools-extension",
+      "description": "Developer Tools to power-up Redux development workflow or any other architecture which handles the state change. It helps to boost the developer’s productivity significantly and makes the development fun."
+    }
+  },
+  {
     "name": "redux-form",
     "packages": [
       {
@@ -20042,6 +20719,18 @@
       {
         "type": "npm",
         "name": "@redux-saga/symbols"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/core"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/testing-utils"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/types"
       }
     ],
     "opencollective": {
@@ -20286,6 +20975,10 @@
       {
         "type": "npm",
         "name": "rmwc"
+      },
+      {
+        "type": "npm",
+        "name": "@rmwc/base"
       }
     ],
     "github": {
@@ -20347,6 +21040,24 @@
     ],
     "github": {
       "repo": "RocketMod/Rocket"
+    }
+  },
+  {
+    "name": "rodal",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "rodal"
+      }
+    ],
+    "github": {
+      "repo": "chenjiahan/rodal"
+    },
+    "opencollective": {
+      "id": 27533,
+      "name": "rodal",
+      "slug": "rodal",
+      "description": null
     }
   },
   {
@@ -20923,6 +21634,24 @@
     }
   },
   {
+    "name": "scroll-into-view",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "scroll-into-view"
+      }
+    ],
+    "github": {
+      "repo": "KoryNunn/scroll-into-view"
+    },
+    "opencollective": {
+      "id": 28008,
+      "name": "scroll-into-view",
+      "slug": "scroll-into-view",
+      "description": null
+    }
+  },
+  {
     "name": "searchkit",
     "packages": [
       {
@@ -21384,6 +22113,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "smproxy",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "louislivi/smproxy"
+      }
+    ],
+    "github": {
+      "repo": "louislivi/SMProxy"
+    },
+    "opencollective": {
+      "id": 27060,
+      "name": "SMProxy",
+      "slug": "smproxy",
+      "description": "A MySQL database connection pool based on MySQL protocol and Swoole.Swoole MySQL Proxy"
     }
   },
   {
@@ -22003,6 +22750,24 @@
     }
   },
   {
+    "name": "squirrelly",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "squirrelly"
+      }
+    ],
+    "github": {
+      "repo": "nebrelbug/squirrelly"
+    },
+    "opencollective": {
+      "id": 26856,
+      "name": "squirrelly",
+      "slug": "squirrelly",
+      "description": null
+    }
+  },
+  {
     "name": "ssh",
     "opencollective": {
       "id": 537,
@@ -22069,6 +22834,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "static-site-boilerplate",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "static-site-boilerplate"
+      }
+    ],
+    "github": {
+      "repo": "ericalli/static-site-boilerplate"
+    },
+    "opencollective": {
+      "id": 28610,
+      "name": "static-site-boilerplate",
+      "slug": "static-site-boilerplate",
+      "description": "A better workflow for building modern static websites."
     }
   },
   {
@@ -22141,6 +22924,10 @@
       {
         "type": "npm",
         "name": "@storybook/ember"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/preact"
       }
     ],
     "opencollective": {
@@ -22424,6 +23211,10 @@
       {
         "type": "npm",
         "name": "strapi-provider-upload-rackspace"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-plugin-documentation"
       }
     ],
     "opencollective": {
@@ -22641,6 +23432,46 @@
         "yearlyBudget": 539465
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "styled-icons",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "styled-icons"
+      },
+      {
+        "type": "npm",
+        "name": "next-plugin-styled-icons"
+      }
+    ],
+    "github": {
+      "repo": "jacobwgillespie/styled-icons"
+    },
+    "opencollective": {
+      "id": 26753,
+      "name": "styled-icons",
+      "slug": "styled-icons",
+      "description": null
+    }
+  },
+  {
+    "name": "styled-reset",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "styled-reset"
+      }
+    ],
+    "github": {
+      "repo": "zacanger/styled-reset"
+    },
+    "opencollective": {
+      "id": 27419,
+      "name": "styled-reset",
+      "slug": "styled-reset",
+      "description": "Reset CSS for Styled Components"
     }
   },
   {
@@ -22873,6 +23704,24 @@
           "totalDonations": 80000
         }
       ]
+    }
+  },
+  {
+    "name": "swc",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "swc"
+      }
+    ],
+    "github": {
+      "repo": "swc-project/swc"
+    },
+    "opencollective": {
+      "id": 30236,
+      "name": "swc",
+      "slug": "swc",
+      "description": null
     }
   },
   {
@@ -23580,6 +24429,88 @@
     }
   },
   {
+    "name": "tandem",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "tandem-cli"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-common"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-front-end"
+      },
+      {
+        "type": "npm",
+        "name": "fsbox"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-dom-recorder"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-linter"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-migrator"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-react-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-react-loader"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-sketch"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-static-html-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-tandem"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-virtual-dom-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-starter-kits"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-webpack-preview-server"
+      },
+      {
+        "type": "npm",
+        "name": "vscode-tandem-extension"
+      }
+    ],
+    "github": {
+      "repo": "tandemcode/tandem"
+    },
+    "opencollective": {
+      "id": 29388,
+      "name": "tandem",
+      "slug": "tandem",
+      "description": null
+    }
+  },
+  {
     "name": "taro",
     "packages": [
       {
@@ -23789,6 +24720,24 @@
           "totalDonations": 4500
         }
       ]
+    }
+  },
+  {
+    "name": "tastyigniter",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "tastyigniter/tastyigniter"
+      }
+    ],
+    "github": {
+      "repo": "tastyigniter/TastyIgniter"
+    },
+    "opencollective": {
+      "id": 28094,
+      "name": "TastyIgniter",
+      "slug": "tastyigniter",
+      "description": "Easy to use PHP platform for online food ordering, restaurant reservation and management."
     }
   },
   {
@@ -24842,6 +25791,90 @@
       {
         "type": "npm",
         "name": "angular-ui-grid"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/auto-resize"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/cell-nav"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/core"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/edit"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/empty-base-layer"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/expandable"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/exporter"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/grouping"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/i18n"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/importer"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/infinite-scroll"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/move-columns"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/pagination"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/pinning"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/resize-columns"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/row-edit"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/save-state"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/selection"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/tree-base"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/tree-view"
+      },
+      {
+        "type": "npm",
+        "name": "@ui-grid/validate"
       }
     ],
     "github": {
@@ -26127,6 +27160,14 @@
       {
         "type": "npm",
         "name": "remark-git-contributors"
+      },
+      {
+        "type": "npm",
+        "name": "remark-mdx"
+      },
+      {
+        "type": "npm",
+        "name": "remark-react"
       }
     ],
     "github": {
@@ -26439,6 +27480,24 @@
         "name": "validator"
       }
     ]
+  },
+  {
+    "name": "validatorjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "validator"
+      }
+    ],
+    "github": {
+      "repo": "chriso/validator.js"
+    },
+    "opencollective": {
+      "id": 26894,
+      "name": "validator.js",
+      "slug": "validatorjs",
+      "description": null
+    }
   },
   {
     "name": "vcr",
@@ -26905,6 +27964,22 @@
       {
         "type": "npm",
         "name": "vuetify"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify"
+      },
+      {
+        "type": "npm",
+        "name": "vuetify-loader"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-config-vuetify"
+      },
+      {
+        "type": "npm",
+        "name": "@vuetify/vuex-cognito-module"
       }
     ],
     "github": {
@@ -27649,6 +28724,24 @@
     }
   },
   {
+    "name": "wedding-website",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "wedding-website"
+      }
+    ],
+    "github": {
+      "repo": "rampatra/wedding-website"
+    },
+    "opencollective": {
+      "id": 28825,
+      "name": "Wedding Website",
+      "slug": "wedding-website",
+      "description": "An open-source wedding website for your big day."
+    }
+  },
+  {
     "name": "weex-ui",
     "packages": [
       {
@@ -28311,6 +29404,25 @@
         "balance": 209788,
         "yearlyBudget": 150199
       }
+    }
+  },
+  {
+    "name": "zulip",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "zulip"
+      }
+    ],
+    "github": {
+      "repo": "zulip/zulip"
+    },
+    "opencollective": {
+      "id": 30312,
+      "name": "Zulip",
+      "slug": "zulip",
+      "description": null,
+      "pledge": true
     }
   }
 ]
