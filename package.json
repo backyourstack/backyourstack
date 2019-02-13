@@ -36,7 +36,7 @@
     "@octokit/rest": "^16.15.0",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
-    "cookie-parser": "^1.4.3",
+    "cookie-parser": "^1.4.4",
     "cross-fetch": "^3.0.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
