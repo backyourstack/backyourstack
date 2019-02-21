@@ -58,7 +58,7 @@
     "query-string": "^6.2.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-dropzone": "^7.0.1",
+    "react-dropzone": "^8.2.0",
     "serve-favicon": "^2.5.0",
     "toml": "^3.0.0",
     "winston": "^3.2.1",
