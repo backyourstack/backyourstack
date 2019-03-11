@@ -608,6 +608,24 @@
     }
   },
   {
+    "name": "ant-design-mobile-rn",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@ant-design/react-native"
+      }
+    ],
+    "github": {
+      "repo": "ant-design/ant-design-mobile-rn"
+    },
+    "opencollective": {
+      "id": 31049,
+      "name": "ant-design-mobile-rn",
+      "slug": "ant-design-mobile-rn",
+      "description": null
+    }
+  },
+  {
     "name": "ant-design-vue",
     "packages": [
       {
@@ -897,6 +915,50 @@
     }
   },
   {
+    "name": "applause-button",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "applause-button"
+      }
+    ],
+    "github": {
+      "repo": "ColinEberhardt/applause-button"
+    },
+    "opencollective": {
+      "id": 32034,
+      "name": "Applause Button",
+      "slug": "applause-button",
+      "description": "Applause button is a zero-configuration button for adding  applause / claps to web pages and blog-posts"
+    }
+  },
+  {
+    "name": "approvals",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/approvals/go-approval-tests"
+      },
+      {
+        "type": "npm",
+        "name": "approvals"
+      },
+      {
+        "type": "pypi",
+        "name": "approvaltests"
+      }
+    ],
+    "github": {
+      "org": "approvals"
+    },
+    "opencollective": {
+      "id": 29676,
+      "name": "ApprovalTests.Net",
+      "slug": "approvals",
+      "description": null
+    }
+  },
+  {
     "name": "asciidoctor",
     "packages": [
       {
@@ -1147,6 +1209,24 @@
     }
   },
   {
+    "name": "autolinker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "autolinker"
+      }
+    ],
+    "github": {
+      "repo": "gregjacobs/Autolinker.js"
+    },
+    "opencollective": {
+      "id": 31162,
+      "name": "Autolinker",
+      "slug": "autolinker",
+      "description": null
+    }
+  },
+  {
     "name": "ava",
     "packages": [
       {
@@ -1313,6 +1393,51 @@
         "name": "axios"
       }
     ]
+  },
+  {
+    "name": "axios",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "axios"
+      },
+      {
+        "type": "npm",
+        "name": "karma-moxios"
+      },
+      {
+        "type": "npm",
+        "name": "moxios"
+      }
+    ],
+    "github": {
+      "org": "axios"
+    },
+    "opencollective": {
+      "id": 33649,
+      "name": "axios",
+      "slug": "axios",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
+    "name": "azuracast",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "azuracast/azuracast"
+      }
+    ],
+    "github": {
+      "repo": "AzuraCast/AzuraCast"
+    },
+    "opencollective": {
+      "id": 11912,
+      "name": "AzuraCast",
+      "slug": "azuracast",
+      "description": "A self-hosted web radio management suite, including turnkey installer tools and an easy-to-use web app to manage your stations. "
+    }
   },
   {
     "name": "babel",
@@ -3317,6 +3442,30 @@
       {
         "type": "npm",
         "name": "@canner/router"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/auth-server"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/bundle"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/server"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/cms-server"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/graphql-server"
+      },
+      {
+        "type": "npm",
+        "name": "@canner/server-common"
       }
     ],
     "github": {
@@ -4181,6 +4330,25 @@
     }
   },
   {
+    "name": "cloudpickle",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cloudpickle"
+      }
+    ],
+    "github": {
+      "repo": "cloudpipe/cloudpickle"
+    },
+    "opencollective": {
+      "id": 33121,
+      "name": "cloudpickle",
+      "slug": "cloudpickle",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "cms",
     "packages": [
       {
@@ -4220,6 +4388,24 @@
         "name": "codecov"
       }
     ]
+  },
+  {
+    "name": "codecrumbs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "codecrumbs"
+      }
+    ],
+    "github": {
+      "repo": "Bogdan-Lyashenko/codecrumbs"
+    },
+    "opencollective": {
+      "id": 30741,
+      "name": "codecrumbs",
+      "slug": "codecrumbs",
+      "description": "Developer tool to help with learning, designing and documenting a codebase by putting breadcrumbs in source code"
+    }
   },
   {
     "name": "codeforboston",
@@ -6132,6 +6318,24 @@
     }
   },
   {
+    "name": "doorkeeper-gem",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "doorkeeper"
+      }
+    ],
+    "github": {
+      "repo": "doorkeeper-gem/doorkeeper"
+    },
+    "opencollective": {
+      "id": 31925,
+      "name": "doorkeeper",
+      "slug": "doorkeeper-gem",
+      "description": "Doorkeeper is an oAuth2 provider built for Ruby, Rails and Grape"
+    }
+  },
+  {
     "name": "dotenv",
     "packages": [
       {
@@ -6162,6 +6366,24 @@
         "yearlyBudget": 1704
       },
       "goals": []
+    }
+  },
+  {
+    "name": "dracula",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "graphdracula"
+      }
+    ],
+    "github": {
+      "repo": "strathausen/dracula"
+    },
+    "opencollective": {
+      "id": 32295,
+      "name": "dracula",
+      "slug": "dracula",
+      "description": null
     }
   },
   {
@@ -6255,6 +6477,24 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "drupalconsole",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "drupal/console"
+      }
+    ],
+    "github": {
+      "repo": "hechoendrupal/DrupalConsole"
+    },
+    "opencollective": {
+      "id": 161,
+      "name": "DrupalConsole",
+      "slug": "drupalconsole",
+      "description": null
     }
   },
   {
@@ -7466,6 +7706,24 @@
     }
   },
   {
+    "name": "fastpack",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "fastpack"
+      }
+    ],
+    "github": {
+      "repo": "fastpack/fastpack"
+    },
+    "opencollective": {
+      "id": 31094,
+      "name": "fastpack",
+      "slug": "fastpack",
+      "description": "Pack JavaScript fast & easy!"
+    }
+  },
+  {
     "name": "feathers",
     "packages": [
       {
@@ -8212,6 +8470,24 @@
     ]
   },
   {
+    "name": "fractal",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@frctl/fractal"
+      }
+    ],
+    "github": {
+      "repo": "frctl/fractal"
+    },
+    "opencollective": {
+      "id": 32054,
+      "name": "Fractal",
+      "slug": "fractal",
+      "description": null
+    }
+  },
+  {
     "name": "framework7",
     "packages": [
       {
@@ -8722,6 +8998,10 @@
       {
         "type": "npm",
         "name": "gatsby-transformer-asciidoc"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-cypress"
       }
     ],
     "opencollective": {
@@ -10313,6 +10593,28 @@
     ]
   },
   {
+    "name": "hep",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "go-hep.org/x/hep"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/go-hep/hep"
+      }
+    ],
+    "github": {
+      "repo": "go-hep/hep"
+    },
+    "opencollective": {
+      "id": 30493,
+      "name": "hep",
+      "slug": "hep",
+      "description": "Go-HEP is a set of libraries and applications to write efficient analysis code in the Go programming language."
+    }
+  },
+  {
     "name": "hexo",
     "packages": [
       {
@@ -10334,6 +10636,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "hexo-helper-live2d",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hexo-helper-live2d"
+      }
+    ],
+    "github": {
+      "repo": "EYHN/hexo-helper-live2d"
+    },
+    "opencollective": {
+      "id": 27473,
+      "name": "hexo-helper-live2d",
+      "slug": "hexo-helper-live2d",
+      "description": null
     }
   },
   {
@@ -12081,6 +12401,42 @@
       {
         "type": "npm",
         "name": "pretty-format"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/console"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/core"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/environment"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/fake-timers"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/reporters"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/source-map"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/test-result"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/transform"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/types"
       }
     ],
     "opencollective": {
@@ -14376,6 +14732,10 @@
       {
         "type": "pypi",
         "name": "MatchZoo"
+      },
+      {
+        "type": "pypi",
+        "name": "matchzoo"
       }
     ],
     "github": {
@@ -14983,6 +15343,18 @@
       {
         "type": "npm",
         "name": "injection"
+      },
+      {
+        "type": "npm",
+        "name": "@midwayjs/decorator"
+      },
+      {
+        "type": "npm",
+        "name": "@midwayjs/definition"
+      },
+      {
+        "type": "npm",
+        "name": "tslint-midway-contrib"
       }
     ],
     "github": {
@@ -17355,6 +17727,24 @@
     }
   },
   {
+    "name": "ojs",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "vipa/vipa"
+      }
+    ],
+    "github": {
+      "repo": "ojs/ojs"
+    },
+    "opencollective": {
+      "id": 501,
+      "name": "ojs",
+      "slug": "ojs",
+      "description": null
+    }
+  },
+  {
     "name": "onepager",
     "packages": [
       {
@@ -17925,6 +18315,10 @@
       {
         "type": "dep",
         "name": "github.com/ory/osin-storage/storage/postgres"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/ory/x"
       }
     ],
     "github": {
@@ -19261,9 +19655,6 @@
   },
   {
     "name": "prettier",
-    "github": {
-      "org": "prettier"
-    },
     "packages": [
       {
         "type": "npm",
@@ -19275,9 +19666,67 @@
       },
       {
         "type": "npm",
+        "name": "@prettier/plugin-lua"
+      },
+      {
+        "type": "npm",
+        "name": "@prettier/plugin-php"
+      },
+      {
+        "type": "npm",
+        "name": "@prettier/plugin-python"
+      },
+      {
+        "type": "npm",
+        "name": "@prettier/plugin-ruby"
+      },
+      {
+        "type": "npm",
         "name": "prettier"
+      },
+      {
+        "type": "npm",
+        "name": "prettier-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "prettier-eslint-cli"
+      },
+      {
+        "type": "npm",
+        "name": "prettier-linter-helpers"
+      },
+      {
+        "type": "npm",
+        "name": "@sandhose/prettier-animated-logo"
+      },
+      {
+        "type": "npm",
+        "name": "stylelint-config-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "stylelint-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "tslint-config-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "tslint-plugin-prettier"
       }
-    ]
+    ],
+    "github": {
+      "org": "prettier"
+    },
+    "opencollective": {
+      "id": 33650,
+      "name": "prettier",
+      "slug": "prettier",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "property_web_builder",
@@ -19598,6 +20047,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "python-sortedcontainers",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pip"
+      }
+    ],
+    "github": {
+      "repo": "grantjenks/python-sortedcontainers"
+    },
+    "opencollective": {
+      "id": 28636,
+      "name": "Python Sorted Containers",
+      "slug": "python-sortedcontainers",
+      "description": "Sorted Containers is an Apache2 licensed sorted collections library, written in pure-Python, and fast as C-extensions."
     }
   },
   {
@@ -20258,6 +20725,42 @@
       {
         "type": "npm",
         "name": "@react-native-firebase/common"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/auth"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/firestore"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/crashlytics"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/fiam"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/iid"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/mlkit"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/perf"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/config"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/utils"
       }
     ],
     "github": {
@@ -20537,6 +21040,24 @@
     }
   },
   {
+    "name": "react-native-vanilla",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-native-vanilla"
+      }
+    ],
+    "github": {
+      "repo": "pavjacko/react-native-vanilla"
+    },
+    "opencollective": {
+      "id": 30953,
+      "name": "react-native-vanilla",
+      "slug": "react-native-vanilla",
+      "description": "Build universal cross-platform apps with react native"
+    }
+  },
+  {
     "name": "react-on-rails",
     "packages": [
       {
@@ -20734,6 +21255,36 @@
         "name": "react-router-dom"
       }
     ]
+  },
+  {
+    "name": "react-router",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-router"
+      },
+      {
+        "type": "npm",
+        "name": "react-router-dom"
+      },
+      {
+        "type": "npm",
+        "name": "react-router-native"
+      },
+      {
+        "type": "npm",
+        "name": "react-router-config"
+      }
+    ],
+    "github": {
+      "repo": "ReactTraining/react-router"
+    },
+    "opencollective": {
+      "id": 32377,
+      "name": "React Router",
+      "slug": "react-router",
+      "description": null
+    }
   },
   {
     "name": "react-slick",
@@ -21466,6 +22017,10 @@
       {
         "type": "npm",
         "name": "@redux-saga/types"
+      },
+      {
+        "type": "npm",
+        "name": "@redux-saga/simple-saga-monitor"
       }
     ],
     "opencollective": {
@@ -22383,6 +22938,25 @@
         "yearlyBudget": 8680
       },
       "goals": []
+    }
+  },
+  {
+    "name": "scikit-learn",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "scikit-learn"
+      }
+    ],
+    "github": {
+      "org": "scikit-learn"
+    },
+    "opencollective": {
+      "id": 33383,
+      "name": "scikit-learn",
+      "slug": "scikit-learn",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -23495,6 +24069,22 @@
       {
         "type": "npm",
         "name": "split.js"
+      },
+      {
+        "type": "npm",
+        "name": "grid-template-utils"
+      },
+      {
+        "type": "npm",
+        "name": "react-split-grid"
+      },
+      {
+        "type": "npm",
+        "name": "react-split"
+      },
+      {
+        "type": "npm",
+        "name": "split-grid"
       }
     ],
     "github": {
@@ -24614,6 +25204,28 @@
     }
   },
   {
+    "name": "swag",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/swaggo/swagg"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/swaggo/swag"
+      }
+    ],
+    "github": {
+      "repo": "swaggo/swag"
+    },
+    "opencollective": {
+      "id": 31698,
+      "name": "swag",
+      "slug": "swag",
+      "description": "Automatically generate RESTful API documentation with Swagger 2.0 for Go."
+    }
+  },
+  {
     "name": "swc",
     "packages": [
       {
@@ -25059,6 +25671,14 @@
       {
         "type": "composer",
         "name": "symfony/webpack-encore-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-client"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mime"
       }
     ],
     "github": {
@@ -25734,6 +26354,30 @@
       {
         "type": "composer",
         "name": "tenancy/laravel-websockets-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-cache"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-filesystem"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-logs"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/bridge-hyn-multi-tenant"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/framework"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/testing"
       }
     ],
     "github": {
@@ -26700,6 +27344,40 @@
     },
     "github": {
       "repo": "KyleAMathews/typography.js"
+    }
+  },
+  {
+    "name": "ua-parser",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "ua-parser/uap-php"
+      },
+      {
+        "type": "gem",
+        "name": "user_agent_parser"
+      },
+      {
+        "type": "npm",
+        "name": "uap-core"
+      },
+      {
+        "type": "npm",
+        "name": "uap-ref-impl"
+      },
+      {
+        "type": "pypi",
+        "name": "ua-parser"
+      }
+    ],
+    "github": {
+      "org": "ua-parser"
+    },
+    "opencollective": {
+      "id": 33085,
+      "name": "ua-parser",
+      "slug": "ua-parser",
+      "description": null
     }
   },
   {
@@ -28122,6 +28800,10 @@
       {
         "type": "npm",
         "name": "remark-react"
+      },
+      {
+        "type": "npm",
+        "name": "remark-unwrap-images"
       }
     ],
     "github": {
@@ -28328,6 +29010,24 @@
         "name": "update-notifier"
       }
     ]
+  },
+  {
+    "name": "urduhack",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "urduhack"
+      }
+    ],
+    "github": {
+      "org": "urduhack"
+    },
+    "opencollective": {
+      "id": 32789,
+      "name": "UrduHack",
+      "slug": "urduhack",
+      "description": "Research community for Urdu NLP"
+    }
   },
   {
     "name": "url-shortener",
@@ -30014,6 +30714,24 @@
         "name": "ws"
       }
     ]
+  },
+  {
+    "name": "xgboost",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "xgboost"
+      }
+    ],
+    "github": {
+      "repo": "dmlc/xgboost"
+    },
+    "opencollective": {
+      "id": 30659,
+      "name": "DMLC/XGBoost",
+      "slug": "xgboost",
+      "description": "Scalable, Portable Gradient Boosting"
+    }
   },
   {
     "name": "xorm",
