@@ -22,14 +22,16 @@ function getSharedAccessToken() {
 }
 
 function getOctokit(accessToken) {
-  const octokit = octokitRest();
+  const octokitParams = {};
+
   if (!accessToken) {
     accessToken = getSharedAccessToken();
   }
   if (accessToken) {
-    octokit.authenticate({ type: 'oauth', token: accessToken });
+    octokitParams.auth = `token ${accessToken}`;
   }
-  return octokit;
+
+  return octokitRest(octokitParams);
 }
 
 function getData(res) {
