@@ -68,7 +68,7 @@
     "node": "10.x.x"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0",
+    "@babel/cli": "7.1.2",
     "@babel/node": "7.0.0",
     "@mdx-js/loader": "^0.20.3",
     "@mdx-js/mdx": "^0.20.3",
@@ -89,7 +89,6 @@
     "react-test-renderer": "^16.8.1",
     "svg-react-loader": "^0.4.6",
     "thanks": "^2.0.0",
-    "webpack": "4.20.2",
     "webpack-bundle-analyzer": "^3.0.4"
   },
   "nodemonConfig": {
