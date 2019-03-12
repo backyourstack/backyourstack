@@ -1,11 +1,19 @@
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import NProgress from 'next-nprogress/component';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import { get } from 'lodash';
 
 import '../static/fonts/inter-ui/inter-ui.css';
 import '../static/css/main.css';
+import '../static/css/nprogress.css';
+
+Router.onRouteChangeStart = () => NProgress.start();
+
+Router.onRouteChangeComplete = () => NProgress.done();
+
+Router.onRouteChangeError = () => NProgress.done();
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -49,7 +57,6 @@ class MyApp extends App {
           </title>
         </Head>
         <Component {...pageProps} />
-        <NProgress color="#3b0c9c" />
       </Container>
     );
   }
