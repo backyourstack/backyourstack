@@ -37,6 +37,11 @@ const repositoryQuery = `query repository($owner: String!, $name: String!) {
 async function getCollectiveRepos(github) {
   const githubRepo = github.repo;
   const githubOrgs = github.orgs ? github.orgs : github.org ? [github.org] : [];
+  const githubUsers = github.users
+    ? github.users
+    : github.user
+    ? [github.user]
+    : [];
 
   let allRepos = [];
 
@@ -49,6 +54,7 @@ async function getCollectiveRepos(github) {
           per_page: 100,
         };
         while (true) {
+          // https://octokit.github.io/rest.js/#api-Repos-listForOrg
           const reposForOrg = await fetchWithOctokit(
             'repos.listForOrg',
             reposListForOrgParameters,
@@ -70,6 +76,39 @@ async function getCollectiveRepos(github) {
         }
       } catch (e) {
         logger.warn(`Could not fetch repos for org ${githubOrg}`);
+      }
+    }
+  } else if (githubUsers && githubUsers.length > 0) {
+    for (const githubUser of githubUsers) {
+      try {
+        const reposListForUserParameters = {
+          username: githubUser,
+          page: 1,
+          per_page: 100,
+        };
+        while (true) {
+          // https://octokit.github.io/rest.js/#api-Repos-listForUser
+          const reposForUser = await fetchWithOctokit(
+            'repos.listForUser',
+            reposListForUserParameters,
+          );
+          if (reposForUser) {
+            for (const repo of reposForUser) {
+              if (!repo.fork) {
+                allRepos.push({
+                  owner: repo.owner.login,
+                  name: repo.name,
+                });
+              }
+            }
+          }
+          if (reposForUser.length < reposListForUserParameters.per_page) {
+            break;
+          }
+          reposListForUserParameters.page++;
+        }
+      } catch (e) {
+        logger.warn(`Could not fetch repos for user ${githubUser}`);
       }
     }
   } else if (githubRepo) {
@@ -108,7 +147,9 @@ async function getCollectiveRepos(github) {
       logger.info(`Collective: ${collective.slug} ${collective.name}`);
 
       let github;
-      if (has(collective, 'settings.githubOrgs')) {
+      if (has(collective, 'settings.githubUsers')) {
+        github = { users: get(collective, 'settings.githubUsers') };
+      } else if (has(collective, 'settings.githubOrgs')) {
         github = { orgs: get(collective, 'settings.githubOrgs') };
       } else if (has(collective, 'settings.githubOrg')) {
         github = { org: get(collective, 'settings.githubOrg') };
@@ -124,6 +165,7 @@ async function getCollectiveRepos(github) {
             .replace('http://', '');
         }
         if (githubHandle) {
+          // This can be an user too, this should be tested
           if (githubHandle.includes('/')) {
             github = { repo: githubHandle };
           } else {

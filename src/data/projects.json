@@ -23837,6 +23837,3500 @@
     }
   },
   {
+    "name": "sindresorhus",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "acosh"
+      },
+      {
+        "type": "npm",
+        "name": "active-win"
+      },
+      {
+        "type": "npm",
+        "name": "active-win-cli"
+      },
+      {
+        "type": "npm",
+        "name": "add-asset-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "add-module-exports-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "aggregate-error"
+      },
+      {
+        "type": "npm",
+        "name": "alfred-emoj"
+      },
+      {
+        "type": "npm",
+        "name": "alfred-npms"
+      },
+      {
+        "type": "npm",
+        "name": "alfy"
+      },
+      {
+        "type": "npm",
+        "name": "aliases"
+      },
+      {
+        "type": "npm",
+        "name": "all-keys"
+      },
+      {
+        "type": "npm",
+        "name": "alpha-sort"
+      },
+      {
+        "type": "npm",
+        "name": "ansi-escapes"
+      },
+      {
+        "type": "npm",
+        "name": "any-observable"
+      },
+      {
+        "type": "npm",
+        "name": "anybar"
+      },
+      {
+        "type": "npm",
+        "name": "anybar-cli"
+      },
+      {
+        "type": "npm",
+        "name": "app-path"
+      },
+      {
+        "type": "npm",
+        "name": "app-path-cli"
+      },
+      {
+        "type": "npm",
+        "name": "archive-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "archs"
+      },
+      {
+        "type": "npm",
+        "name": "arr-exclude"
+      },
+      {
+        "type": "npm",
+        "name": "arr-include"
+      },
+      {
+        "type": "npm",
+        "name": "array-differ"
+      },
+      {
+        "type": "npm",
+        "name": "array-find-index"
+      },
+      {
+        "type": "npm",
+        "name": "array-move"
+      },
+      {
+        "type": "npm",
+        "name": "array-shuffle"
+      },
+      {
+        "type": "npm",
+        "name": "array-union"
+      },
+      {
+        "type": "npm",
+        "name": "array-uniq"
+      },
+      {
+        "type": "npm",
+        "name": "arrify"
+      },
+      {
+        "type": "npm",
+        "name": "article-title"
+      },
+      {
+        "type": "npm",
+        "name": "article-title-cli"
+      },
+      {
+        "type": "npm",
+        "name": "asinh"
+      },
+      {
+        "type": "npm",
+        "name": "atom-set-text"
+      },
+      {
+        "type": "npm",
+        "name": "auto-bind"
+      },
+      {
+        "type": "npm",
+        "name": "awesome-lint"
+      },
+      {
+        "type": "npm",
+        "name": "beeper"
+      },
+      {
+        "type": "npm",
+        "name": "bin-version"
+      },
+      {
+        "type": "npm",
+        "name": "bin-version-check"
+      },
+      {
+        "type": "npm",
+        "name": "bin-version-check-cli"
+      },
+      {
+        "type": "npm",
+        "name": "bin-version-cli"
+      },
+      {
+        "type": "npm",
+        "name": "binary-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "bind-methods"
+      },
+      {
+        "type": "npm",
+        "name": "bitbar"
+      },
+      {
+        "type": "npm",
+        "name": "bower-components"
+      },
+      {
+        "type": "npm",
+        "name": "bower-name"
+      },
+      {
+        "type": "npm",
+        "name": "bower-name-cli"
+      },
+      {
+        "type": "npm",
+        "name": "boxen"
+      },
+      {
+        "type": "npm",
+        "name": "boxen-cli"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-autoprefixer"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-closure-compiler"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-cssnano"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-csso"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-defeatureify"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-dust"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-es6-transpiler"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-htmlmin"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-jade"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-less"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-nunjucks"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-regenerator"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-strip-css-comments"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-strip-debug"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-strip-json-comments"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-stylus"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-svgo"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-sweetjs"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-traceur"
+      },
+      {
+        "type": "npm",
+        "name": "broccoli-uncss"
+      },
+      {
+        "type": "npm",
+        "name": "buf-compare"
+      },
+      {
+        "type": "npm",
+        "name": "buf-indexof"
+      },
+      {
+        "type": "npm",
+        "name": "buffer-equals"
+      },
+      {
+        "type": "npm",
+        "name": "buffer-equals-constant"
+      },
+      {
+        "type": "npm",
+        "name": "buffer-includes"
+      },
+      {
+        "type": "npm",
+        "name": "builtin-modules"
+      },
+      {
+        "type": "npm",
+        "name": "bundle-id"
+      },
+      {
+        "type": "npm",
+        "name": "bundle-id-cli"
+      },
+      {
+        "type": "npm",
+        "name": "bundle-name"
+      },
+      {
+        "type": "npm",
+        "name": "bundle-name-cli"
+      },
+      {
+        "type": "npm",
+        "name": "caller-callsite"
+      },
+      {
+        "type": "npm",
+        "name": "caller-path"
+      },
+      {
+        "type": "npm",
+        "name": "callsites"
+      },
+      {
+        "type": "npm",
+        "name": "camelcase"
+      },
+      {
+        "type": "npm",
+        "name": "camelcase-keys"
+      },
+      {
+        "type": "npm",
+        "name": "caprine"
+      },
+      {
+        "type": "npm",
+        "name": "capture-website"
+      },
+      {
+        "type": "npm",
+        "name": "capture-website-cli"
+      },
+      {
+        "type": "npm",
+        "name": "cat-names"
+      },
+      {
+        "type": "npm",
+        "name": "cat-pad"
+      },
+      {
+        "type": "npm",
+        "name": "cbrt"
+      },
+      {
+        "type": "npm",
+        "name": "child-process-ctor"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/class-names"
+      },
+      {
+        "type": "npm",
+        "name": "clean-stack"
+      },
+      {
+        "type": "npm",
+        "name": "clear-cli"
+      },
+      {
+        "type": "npm",
+        "name": "clear-module"
+      },
+      {
+        "type": "npm",
+        "name": "cli-boxes"
+      },
+      {
+        "type": "npm",
+        "name": "cli-cursor"
+      },
+      {
+        "type": "npm",
+        "name": "cli-spinners"
+      },
+      {
+        "type": "npm",
+        "name": "cli-truncate"
+      },
+      {
+        "type": "npm",
+        "name": "clipboard-cli"
+      },
+      {
+        "type": "npm",
+        "name": "clipboardy"
+      },
+      {
+        "type": "npm",
+        "name": "clone-regexp"
+      },
+      {
+        "type": "npm",
+        "name": "clz32"
+      },
+      {
+        "type": "npm",
+        "name": "cocoa-dialog"
+      },
+      {
+        "type": "npm",
+        "name": "code-point-at"
+      },
+      {
+        "type": "npm",
+        "name": "comment-regex"
+      },
+      {
+        "type": "npm",
+        "name": "compare-urls"
+      },
+      {
+        "type": "npm",
+        "name": "compressed-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "condense-whitespace"
+      },
+      {
+        "type": "npm",
+        "name": "conduct"
+      },
+      {
+        "type": "npm",
+        "name": "conf"
+      },
+      {
+        "type": "npm",
+        "name": "convert-hrtime"
+      },
+      {
+        "type": "npm",
+        "name": "copy-text-to-clipboard"
+      },
+      {
+        "type": "npm",
+        "name": "core-assert"
+      },
+      {
+        "type": "npm",
+        "name": "cows"
+      },
+      {
+        "type": "npm",
+        "name": "cp-file"
+      },
+      {
+        "type": "npm",
+        "name": "cpy"
+      },
+      {
+        "type": "npm",
+        "name": "cpy-cli"
+      },
+      {
+        "type": "npm",
+        "name": "create-dmg"
+      },
+      {
+        "type": "npm",
+        "name": "create-html-element"
+      },
+      {
+        "type": "npm",
+        "name": "crypto-hash"
+      },
+      {
+        "type": "npm",
+        "name": "crypto-random-string"
+      },
+      {
+        "type": "npm",
+        "name": "current-path"
+      },
+      {
+        "type": "npm",
+        "name": "current-path-cli"
+      },
+      {
+        "type": "npm",
+        "name": "cycled"
+      },
+      {
+        "type": "npm",
+        "name": "dargs"
+      },
+      {
+        "type": "npm",
+        "name": "date-now-cli"
+      },
+      {
+        "type": "npm",
+        "name": "date-time"
+      },
+      {
+        "type": "npm",
+        "name": "debounce-fn"
+      },
+      {
+        "type": "npm",
+        "name": "debug-log"
+      },
+      {
+        "type": "npm",
+        "name": "decamelize"
+      },
+      {
+        "type": "npm",
+        "name": "decompress-response"
+      },
+      {
+        "type": "npm",
+        "name": "deep-assign"
+      },
+      {
+        "type": "npm",
+        "name": "deep-strict-equal"
+      },
+      {
+        "type": "npm",
+        "name": "default-browser"
+      },
+      {
+        "type": "npm",
+        "name": "default-browser-cli"
+      },
+      {
+        "type": "npm",
+        "name": "default-browser-id"
+      },
+      {
+        "type": "npm",
+        "name": "default-shell"
+      },
+      {
+        "type": "npm",
+        "name": "default-uid"
+      },
+      {
+        "type": "npm",
+        "name": "define-lazy-prop"
+      },
+      {
+        "type": "npm",
+        "name": "del"
+      },
+      {
+        "type": "npm",
+        "name": "del-cli"
+      },
+      {
+        "type": "npm",
+        "name": "delay"
+      },
+      {
+        "type": "npm",
+        "name": "delay-cli"
+      },
+      {
+        "type": "npm",
+        "name": "detect-indent"
+      },
+      {
+        "type": "npm",
+        "name": "detect-indent-cli"
+      },
+      {
+        "type": "npm",
+        "name": "detect-newline"
+      },
+      {
+        "type": "npm",
+        "name": "detect-newline-cli"
+      },
+      {
+        "type": "npm",
+        "name": "devtools-detect"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/df"
+      },
+      {
+        "type": "npm",
+        "name": "display-notification"
+      },
+      {
+        "type": "npm",
+        "name": "djb2a"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/do-not-disturb"
+      },
+      {
+        "type": "npm",
+        "name": "do-not-disturb-cli"
+      },
+      {
+        "type": "npm",
+        "name": "dofle"
+      },
+      {
+        "type": "npm",
+        "name": "dog-names"
+      },
+      {
+        "type": "npm",
+        "name": "doge-seed-cli"
+      },
+      {
+        "type": "npm",
+        "name": "dom-loaded"
+      },
+      {
+        "type": "npm",
+        "name": "dot-prop"
+      },
+      {
+        "type": "npm",
+        "name": "downgrade-root"
+      },
+      {
+        "type": "npm",
+        "name": "each-async"
+      },
+      {
+        "type": "npm",
+        "name": "electron-better-ipc"
+      },
+      {
+        "type": "npm",
+        "name": "electron-context-menu"
+      },
+      {
+        "type": "npm",
+        "name": "electron-debug"
+      },
+      {
+        "type": "npm",
+        "name": "electron-dl"
+      },
+      {
+        "type": "npm",
+        "name": "electron-is-dev"
+      },
+      {
+        "type": "npm",
+        "name": "electron-main-fetch"
+      },
+      {
+        "type": "npm",
+        "name": "electron-reloader"
+      },
+      {
+        "type": "npm",
+        "name": "electron-serve"
+      },
+      {
+        "type": "npm",
+        "name": "electron-store"
+      },
+      {
+        "type": "npm",
+        "name": "electron-timber"
+      },
+      {
+        "type": "npm",
+        "name": "electron-unhandled"
+      },
+      {
+        "type": "npm",
+        "name": "electron-util"
+      },
+      {
+        "type": "npm",
+        "name": "elegant-spinner"
+      },
+      {
+        "type": "npm",
+        "name": "element-ready"
+      },
+      {
+        "type": "npm",
+        "name": "email-regex"
+      },
+      {
+        "type": "npm",
+        "name": "emittery"
+      },
+      {
+        "type": "npm",
+        "name": "emoj"
+      },
+      {
+        "type": "npm",
+        "name": "empty-trash"
+      },
+      {
+        "type": "npm",
+        "name": "empty-trash-cli"
+      },
+      {
+        "type": "npm",
+        "name": "ensure-error"
+      },
+      {
+        "type": "npm",
+        "name": "env-editor"
+      },
+      {
+        "type": "npm",
+        "name": "env-paths"
+      },
+      {
+        "type": "npm",
+        "name": "envcheck"
+      },
+      {
+        "type": "npm",
+        "name": "error-dialog"
+      },
+      {
+        "type": "npm",
+        "name": "esc-exit"
+      },
+      {
+        "type": "npm",
+        "name": "escape-goat"
+      },
+      {
+        "type": "npm",
+        "name": "escape-string-applescript"
+      },
+      {
+        "type": "npm",
+        "name": "escape-string-regexp"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-formatter-pretty"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-json"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-unicorn"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-stylish"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-tap"
+      },
+      {
+        "type": "npm",
+        "name": "exec-file-sync"
+      },
+      {
+        "type": "npm",
+        "name": "execa"
+      },
+      {
+        "type": "npm",
+        "name": "execall"
+      },
+      {
+        "type": "npm",
+        "name": "exit-hook"
+      },
+      {
+        "type": "npm",
+        "name": "expm1"
+      },
+      {
+        "type": "npm",
+        "name": "extract-stack"
+      },
+      {
+        "type": "npm",
+        "name": "fast-cli"
+      },
+      {
+        "type": "npm",
+        "name": "figures"
+      },
+      {
+        "type": "npm",
+        "name": "file-icon"
+      },
+      {
+        "type": "npm",
+        "name": "file-icon-cli"
+      },
+      {
+        "type": "npm",
+        "name": "file-metadata"
+      },
+      {
+        "type": "npm",
+        "name": "file-type"
+      },
+      {
+        "type": "npm",
+        "name": "file-type-cli"
+      },
+      {
+        "type": "npm",
+        "name": "file-url"
+      },
+      {
+        "type": "npm",
+        "name": "file-url-cli"
+      },
+      {
+        "type": "npm",
+        "name": "file-uti"
+      },
+      {
+        "type": "npm",
+        "name": "filename-reserved-regex"
+      },
+      {
+        "type": "npm",
+        "name": "filenamify"
+      },
+      {
+        "type": "npm",
+        "name": "filenamify-cli"
+      },
+      {
+        "type": "npm",
+        "name": "filenamify-url"
+      },
+      {
+        "type": "npm",
+        "name": "filled-array"
+      },
+      {
+        "type": "npm",
+        "name": "filter-console"
+      },
+      {
+        "type": "npm",
+        "name": "filter-obj"
+      },
+      {
+        "type": "npm",
+        "name": "find-up"
+      },
+      {
+        "type": "npm",
+        "name": "find-up-cli"
+      },
+      {
+        "type": "npm",
+        "name": "find-versions"
+      },
+      {
+        "type": "npm",
+        "name": "find-versions-cli"
+      },
+      {
+        "type": "npm",
+        "name": "finder-path"
+      },
+      {
+        "type": "npm",
+        "name": "first-chunk-min-size-stream"
+      },
+      {
+        "type": "npm",
+        "name": "first-chunk-stream"
+      },
+      {
+        "type": "npm",
+        "name": "first-run"
+      },
+      {
+        "type": "npm",
+        "name": "fix-path"
+      },
+      {
+        "type": "npm",
+        "name": "fkill"
+      },
+      {
+        "type": "npm",
+        "name": "fkill-cli"
+      },
+      {
+        "type": "npm",
+        "name": "float-equal"
+      },
+      {
+        "type": "npm",
+        "name": "fn-args"
+      },
+      {
+        "type": "npm",
+        "name": "fn-name"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/fnv1a"
+      },
+      {
+        "type": "npm",
+        "name": "fs-access"
+      },
+      {
+        "type": "npm",
+        "name": "fullname"
+      },
+      {
+        "type": "npm",
+        "name": "fullname-cli"
+      },
+      {
+        "type": "npm",
+        "name": "fullname-native"
+      },
+      {
+        "type": "npm",
+        "name": "generate-github-markdown-css"
+      },
+      {
+        "type": "npm",
+        "name": "generator-electron"
+      },
+      {
+        "type": "npm",
+        "name": "generator-gulp-plugin-boilerplate"
+      },
+      {
+        "type": "npm",
+        "name": "generator-nm"
+      },
+      {
+        "type": "npm",
+        "name": "generator-pure"
+      },
+      {
+        "type": "npm",
+        "name": "get-emails"
+      },
+      {
+        "type": "npm",
+        "name": "get-emails-cli"
+      },
+      {
+        "type": "npm",
+        "name": "get-gravatar"
+      },
+      {
+        "type": "npm",
+        "name": "get-grunt-tasks"
+      },
+      {
+        "type": "npm",
+        "name": "get-gulp-tasks"
+      },
+      {
+        "type": "npm",
+        "name": "get-port"
+      },
+      {
+        "type": "npm",
+        "name": "get-port-cli"
+      },
+      {
+        "type": "npm",
+        "name": "get-range"
+      },
+      {
+        "type": "npm",
+        "name": "get-stdin"
+      },
+      {
+        "type": "npm",
+        "name": "get-stream"
+      },
+      {
+        "type": "npm",
+        "name": "get-urls"
+      },
+      {
+        "type": "npm",
+        "name": "get-urls-cli"
+      },
+      {
+        "type": "npm",
+        "name": "gh-avatar"
+      },
+      {
+        "type": "npm",
+        "name": "gh-got"
+      },
+      {
+        "type": "npm",
+        "name": "gh-home"
+      },
+      {
+        "type": "npm",
+        "name": "gh-user"
+      },
+      {
+        "type": "npm",
+        "name": "git-remote-origin-url"
+      },
+      {
+        "type": "npm",
+        "name": "github-username"
+      },
+      {
+        "type": "npm",
+        "name": "github-username-cli"
+      },
+      {
+        "type": "npm",
+        "name": "global-dirs"
+      },
+      {
+        "type": "npm",
+        "name": "globals"
+      },
+      {
+        "type": "npm",
+        "name": "globby"
+      },
+      {
+        "type": "npm",
+        "name": "got"
+      },
+      {
+        "type": "npm",
+        "name": "gravatar-url"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-concurrent"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-cssnano"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-debug-files"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-dependency-check"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-electron"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-es6-transpiler"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-footer"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-ftp"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-header"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-minify-html"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-myth"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-pageres"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-php"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-recess"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-regenerator"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-sass"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-shell"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-sizediff"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-strip-css-comments"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-strip-debug"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-strip-json-comments"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-styl"
+      },
+      {
+        "type": "npm",
+        "name": "grunt-svgmin"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-autoprefixer"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-bom"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-changed"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-chmod"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-chown"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-debug"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-dust"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-es6-transpiler"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-esformatter"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-esnext"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-filter"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-ftp"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-google-cdn"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-imagemin"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-jasmine"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-jsvalidate"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-markdown-pdf"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-micro"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-mocha"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-myth"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-ngmin"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-nunjucks"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-plato"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-react"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-recess"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-regenerator"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-rev"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-revert-path"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-rework"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-ruby-sass"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-size"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-strip-css-comments"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-strip-debug"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-strip-json-comments"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-styl"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-tar"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-template"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-traceur"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-vulcanize"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-webp"
+      },
+      {
+        "type": "npm",
+        "name": "gulp-zip"
+      },
+      {
+        "type": "npm",
+        "name": "gzip-size"
+      },
+      {
+        "type": "npm",
+        "name": "gzip-size-cli"
+      },
+      {
+        "type": "npm",
+        "name": "hard-rejection"
+      },
+      {
+        "type": "npm",
+        "name": "has-dom"
+      },
+      {
+        "type": "npm",
+        "name": "has-emoji"
+      },
+      {
+        "type": "npm",
+        "name": "has-flag"
+      },
+      {
+        "type": "npm",
+        "name": "has-generator"
+      },
+      {
+        "type": "npm",
+        "name": "has-jsx-pragma"
+      },
+      {
+        "type": "npm",
+        "name": "has-own-prop"
+      },
+      {
+        "type": "npm",
+        "name": "has-yarn"
+      },
+      {
+        "type": "npm",
+        "name": "has-yarn-cli"
+      },
+      {
+        "type": "npm",
+        "name": "hash-obj"
+      },
+      {
+        "type": "npm",
+        "name": "hasha"
+      },
+      {
+        "type": "npm",
+        "name": "hasha-cli"
+      },
+      {
+        "type": "npm",
+        "name": "hex-rgb"
+      },
+      {
+        "type": "npm",
+        "name": "home-or-tmp"
+      },
+      {
+        "type": "npm",
+        "name": "hook-std"
+      },
+      {
+        "type": "npm",
+        "name": "html-tags"
+      },
+      {
+        "type": "npm",
+        "name": "humanize-string"
+      },
+      {
+        "type": "npm",
+        "name": "humanize-url"
+      },
+      {
+        "type": "npm",
+        "name": "hyper-hide-title"
+      },
+      {
+        "type": "npm",
+        "name": "hyper-snazzy"
+      },
+      {
+        "type": "npm",
+        "name": "hypot"
+      },
+      {
+        "type": "npm",
+        "name": "icloud-tabs"
+      },
+      {
+        "type": "npm",
+        "name": "image-type"
+      },
+      {
+        "type": "npm",
+        "name": "import-cwd"
+      },
+      {
+        "type": "npm",
+        "name": "import-fresh"
+      },
+      {
+        "type": "npm",
+        "name": "import-from"
+      },
+      {
+        "type": "npm",
+        "name": "import-global"
+      },
+      {
+        "type": "npm",
+        "name": "import-lazy"
+      },
+      {
+        "type": "npm",
+        "name": "import-local"
+      },
+      {
+        "type": "npm",
+        "name": "import-modify"
+      },
+      {
+        "type": "npm",
+        "name": "import-modules"
+      },
+      {
+        "type": "npm",
+        "name": "imul"
+      },
+      {
+        "type": "npm",
+        "name": "in-range"
+      },
+      {
+        "type": "npm",
+        "name": "indent-string"
+      },
+      {
+        "type": "npm",
+        "name": "indent-string-cli"
+      },
+      {
+        "type": "npm",
+        "name": "infer-bin"
+      },
+      {
+        "type": "npm",
+        "name": "ink-big-text"
+      },
+      {
+        "type": "npm",
+        "name": "ink-box"
+      },
+      {
+        "type": "npm",
+        "name": "ink-gradient"
+      },
+      {
+        "type": "npm",
+        "name": "ink-link"
+      },
+      {
+        "type": "npm",
+        "name": "internal-ip"
+      },
+      {
+        "type": "npm",
+        "name": "internal-ip-cli"
+      },
+      {
+        "type": "npm",
+        "name": "into-stream"
+      },
+      {
+        "type": "npm",
+        "name": "invert-kv"
+      },
+      {
+        "type": "npm",
+        "name": "ip-regex"
+      },
+      {
+        "type": "npm",
+        "name": "ipify"
+      },
+      {
+        "type": "npm",
+        "name": "ipify-cli"
+      },
+      {
+        "type": "npm",
+        "name": "irregular-plurals"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/is"
+      },
+      {
+        "type": "npm",
+        "name": "is-absolute-url"
+      },
+      {
+        "type": "npm",
+        "name": "is-admin"
+      },
+      {
+        "type": "npm",
+        "name": "is-archive"
+      },
+      {
+        "type": "npm",
+        "name": "is-array-sorted"
+      },
+      {
+        "type": "npm",
+        "name": "is-binary-path"
+      },
+      {
+        "type": "npm",
+        "name": "is-blob"
+      },
+      {
+        "type": "npm",
+        "name": "is-bmp"
+      },
+      {
+        "type": "npm",
+        "name": "is-builtin-module"
+      },
+      {
+        "type": "npm",
+        "name": "is-camera-on-cli"
+      },
+      {
+        "type": "npm",
+        "name": "is-chakra"
+      },
+      {
+        "type": "npm",
+        "name": "is-compressed"
+      },
+      {
+        "type": "npm",
+        "name": "is-docker"
+      },
+      {
+        "type": "npm",
+        "name": "is-elevated"
+      },
+      {
+        "type": "npm",
+        "name": "is-email-like"
+      },
+      {
+        "type": "npm",
+        "name": "is-empty-iterable"
+      },
+      {
+        "type": "npm",
+        "name": "is-epub"
+      },
+      {
+        "type": "npm",
+        "name": "is-error-constructor"
+      },
+      {
+        "type": "npm",
+        "name": "is-finite"
+      },
+      {
+        "type": "npm",
+        "name": "is-fn"
+      },
+      {
+        "type": "npm",
+        "name": "is-fullwidth-code-point"
+      },
+      {
+        "type": "npm",
+        "name": "is-generator-fn"
+      },
+      {
+        "type": "npm",
+        "name": "is-gif"
+      },
+      {
+        "type": "npm",
+        "name": "is-github-down"
+      },
+      {
+        "type": "npm",
+        "name": "is-heroku"
+      },
+      {
+        "type": "npm",
+        "name": "is-html"
+      },
+      {
+        "type": "npm",
+        "name": "is-hyper"
+      },
+      {
+        "type": "npm",
+        "name": "is-image"
+      },
+      {
+        "type": "npm",
+        "name": "is-installed-globally"
+      },
+      {
+        "type": "npm",
+        "name": "is-io"
+      },
+      {
+        "type": "npm",
+        "name": "is-ip"
+      },
+      {
+        "type": "npm",
+        "name": "is-jpg"
+      },
+      {
+        "type": "npm",
+        "name": "is-jxa"
+      },
+      {
+        "type": "npm",
+        "name": "is-jxr"
+      },
+      {
+        "type": "npm",
+        "name": "is-md"
+      },
+      {
+        "type": "npm",
+        "name": "is-npm"
+      },
+      {
+        "type": "npm",
+        "name": "is-obj"
+      },
+      {
+        "type": "npm",
+        "name": "is-observable"
+      },
+      {
+        "type": "npm",
+        "name": "is-online"
+      },
+      {
+        "type": "npm",
+        "name": "is-online-cli"
+      },
+      {
+        "type": "npm",
+        "name": "is-path-cwd"
+      },
+      {
+        "type": "npm",
+        "name": "is-path-in-cwd"
+      },
+      {
+        "type": "npm",
+        "name": "is-path-inside"
+      },
+      {
+        "type": "npm",
+        "name": "is-plain-obj"
+      },
+      {
+        "type": "npm",
+        "name": "is-png"
+      },
+      {
+        "type": "npm",
+        "name": "is-port-reachable"
+      },
+      {
+        "type": "npm",
+        "name": "is-progressive"
+      },
+      {
+        "type": "npm",
+        "name": "is-progressive-cli"
+      },
+      {
+        "type": "npm",
+        "name": "is-psd"
+      },
+      {
+        "type": "npm",
+        "name": "is-public-domain"
+      },
+      {
+        "type": "npm",
+        "name": "is-reachable"
+      },
+      {
+        "type": "npm",
+        "name": "is-redirect"
+      },
+      {
+        "type": "npm",
+        "name": "is-regexp"
+      },
+      {
+        "type": "npm",
+        "name": "is-relative-url"
+      },
+      {
+        "type": "npm",
+        "name": "is-root"
+      },
+      {
+        "type": "npm",
+        "name": "is-root-path"
+      },
+      {
+        "type": "npm",
+        "name": "is-safe-integer"
+      },
+      {
+        "type": "npm",
+        "name": "is-scoped"
+      },
+      {
+        "type": "npm",
+        "name": "is-stream"
+      },
+      {
+        "type": "npm",
+        "name": "is-supported-regexp-flag"
+      },
+      {
+        "type": "npm",
+        "name": "is-svg"
+      },
+      {
+        "type": "npm",
+        "name": "is-text-path"
+      },
+      {
+        "type": "npm",
+        "name": "is-tif"
+      },
+      {
+        "type": "npm",
+        "name": "is-travis"
+      },
+      {
+        "type": "npm",
+        "name": "is-up"
+      },
+      {
+        "type": "npm",
+        "name": "is-up-cli"
+      },
+      {
+        "type": "npm",
+        "name": "is-url-superb"
+      },
+      {
+        "type": "npm",
+        "name": "is-video"
+      },
+      {
+        "type": "npm",
+        "name": "is-webp"
+      },
+      {
+        "type": "npm",
+        "name": "is-wsl"
+      },
+      {
+        "type": "npm",
+        "name": "issue-regex"
+      },
+      {
+        "type": "npm",
+        "name": "iterm2-version"
+      },
+      {
+        "type": "npm",
+        "name": "js-types"
+      },
+      {
+        "type": "npm",
+        "name": "jscs-xo"
+      },
+      {
+        "type": "npm",
+        "name": "jsftp-mkdirp"
+      },
+      {
+        "type": "npm",
+        "name": "jshint-json"
+      },
+      {
+        "type": "npm",
+        "name": "jshint-stylish"
+      },
+      {
+        "type": "npm",
+        "name": "junk"
+      },
+      {
+        "type": "npm",
+        "name": "kill-tabs"
+      },
+      {
+        "type": "npm",
+        "name": "known"
+      },
+      {
+        "type": "npm",
+        "name": "ky"
+      },
+      {
+        "type": "npm",
+        "name": "ky-universal"
+      },
+      {
+        "type": "npm",
+        "name": "latest-semver"
+      },
+      {
+        "type": "npm",
+        "name": "latest-version"
+      },
+      {
+        "type": "npm",
+        "name": "latest-version-cli"
+      },
+      {
+        "type": "npm",
+        "name": "lazy-value"
+      },
+      {
+        "type": "npm",
+        "name": "lcid"
+      },
+      {
+        "type": "npm",
+        "name": "leap-year"
+      },
+      {
+        "type": "npm",
+        "name": "leven"
+      },
+      {
+        "type": "npm",
+        "name": "leven-cli"
+      },
+      {
+        "type": "npm",
+        "name": "line-column-path"
+      },
+      {
+        "type": "npm",
+        "name": "linkify-issues"
+      },
+      {
+        "type": "npm",
+        "name": "linkify-urls"
+      },
+      {
+        "type": "npm",
+        "name": "load-grunt-tasks"
+      },
+      {
+        "type": "npm",
+        "name": "load-json-file"
+      },
+      {
+        "type": "npm",
+        "name": "locate-path"
+      },
+      {
+        "type": "npm",
+        "name": "lock-cli"
+      },
+      {
+        "type": "npm",
+        "name": "lock-system"
+      },
+      {
+        "type": "npm",
+        "name": "log-symbols"
+      },
+      {
+        "type": "npm",
+        "name": "log-update"
+      },
+      {
+        "type": "npm",
+        "name": "log10"
+      },
+      {
+        "type": "npm",
+        "name": "log1p"
+      },
+      {
+        "type": "npm",
+        "name": "loud-rejection"
+      },
+      {
+        "type": "npm",
+        "name": "lowercase-keys"
+      },
+      {
+        "type": "npm",
+        "name": "lpad"
+      },
+      {
+        "type": "npm",
+        "name": "lungo-cli"
+      },
+      {
+        "type": "npm",
+        "name": "macos-release"
+      },
+      {
+        "type": "npm",
+        "name": "macos-version"
+      },
+      {
+        "type": "npm",
+        "name": "macos-version-cli"
+      },
+      {
+        "type": "npm",
+        "name": "magic-iterable"
+      },
+      {
+        "type": "npm",
+        "name": "make-dir"
+      },
+      {
+        "type": "npm",
+        "name": "make-dir-cli"
+      },
+      {
+        "type": "npm",
+        "name": "manage-wifi"
+      },
+      {
+        "type": "npm",
+        "name": "manage-wifi-cli"
+      },
+      {
+        "type": "npm",
+        "name": "map-obj"
+      },
+      {
+        "type": "npm",
+        "name": "mapcode"
+      },
+      {
+        "type": "npm",
+        "name": "mapcode-regex"
+      },
+      {
+        "type": "npm",
+        "name": "markdown-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "matcher"
+      },
+      {
+        "type": "npm",
+        "name": "matcher-cli"
+      },
+      {
+        "type": "npm",
+        "name": "math-avg"
+      },
+      {
+        "type": "npm",
+        "name": "math-clamp"
+      },
+      {
+        "type": "npm",
+        "name": "math-cosh"
+      },
+      {
+        "type": "npm",
+        "name": "math-log2"
+      },
+      {
+        "type": "npm",
+        "name": "math-sign"
+      },
+      {
+        "type": "npm",
+        "name": "math-sinh"
+      },
+      {
+        "type": "npm",
+        "name": "math-sum"
+      },
+      {
+        "type": "npm",
+        "name": "max-safe-integer"
+      },
+      {
+        "type": "npm",
+        "name": "max-timeout"
+      },
+      {
+        "type": "npm",
+        "name": "maxmin"
+      },
+      {
+        "type": "npm",
+        "name": "md5-hex"
+      },
+      {
+        "type": "npm",
+        "name": "mem"
+      },
+      {
+        "type": "npm",
+        "name": "meow"
+      },
+      {
+        "type": "npm",
+        "name": "mimic-fn"
+      },
+      {
+        "type": "npm",
+        "name": "mimic-response"
+      },
+      {
+        "type": "npm",
+        "name": "mnemonic-words"
+      },
+      {
+        "type": "npm",
+        "name": "modify-filename"
+      },
+      {
+        "type": "npm",
+        "name": "modify-keys"
+      },
+      {
+        "type": "npm",
+        "name": "modify-values"
+      },
+      {
+        "type": "npm",
+        "name": "month-days"
+      },
+      {
+        "type": "npm",
+        "name": "move-file"
+      },
+      {
+        "type": "npm",
+        "name": "multi-download"
+      },
+      {
+        "type": "npm",
+        "name": "multiline"
+      },
+      {
+        "type": "npm",
+        "name": "multimatch"
+      },
+      {
+        "type": "npm",
+        "name": "ncname"
+      },
+      {
+        "type": "npm",
+        "name": "neat-csv"
+      },
+      {
+        "type": "npm",
+        "name": "negative-array"
+      },
+      {
+        "type": "npm",
+        "name": "negative-zero"
+      },
+      {
+        "type": "npm",
+        "name": "new-github-issue-url"
+      },
+      {
+        "type": "npm",
+        "name": "new-github-release-url"
+      },
+      {
+        "type": "npm",
+        "name": "newline-br"
+      },
+      {
+        "type": "npm",
+        "name": "dark-mode"
+      },
+      {
+        "type": "npm",
+        "name": "node-env-webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "is-camera-on"
+      },
+      {
+        "type": "npm",
+        "name": "node-platforms"
+      },
+      {
+        "type": "npm",
+        "name": "node-status-codes"
+      },
+      {
+        "type": "npm",
+        "name": "non-ascii"
+      },
+      {
+        "type": "npm",
+        "name": "noop-cli"
+      },
+      {
+        "type": "npm",
+        "name": "noop-process"
+      },
+      {
+        "type": "npm",
+        "name": "noop3"
+      },
+      {
+        "type": "npm",
+        "name": "normalize-newline"
+      },
+      {
+        "type": "npm",
+        "name": "normalize-newline-cli"
+      },
+      {
+        "type": "npm",
+        "name": "normalize-url"
+      },
+      {
+        "type": "npm",
+        "name": "norway-postal-codes"
+      },
+      {
+        "type": "npm",
+        "name": "np"
+      },
+      {
+        "type": "npm",
+        "name": "npm-email"
+      },
+      {
+        "type": "npm",
+        "name": "npm-email-cli"
+      },
+      {
+        "type": "npm",
+        "name": "npm-home"
+      },
+      {
+        "type": "npm",
+        "name": "npm-keyword"
+      },
+      {
+        "type": "npm",
+        "name": "npm-name"
+      },
+      {
+        "type": "npm",
+        "name": "npm-name-cli"
+      },
+      {
+        "type": "npm",
+        "name": "npm-run-path"
+      },
+      {
+        "type": "npm",
+        "name": "npm-run-path-cli"
+      },
+      {
+        "type": "npm",
+        "name": "npm-user"
+      },
+      {
+        "type": "npm",
+        "name": "npm-user-cli"
+      },
+      {
+        "type": "npm",
+        "name": "npmlint"
+      },
+      {
+        "type": "npm",
+        "name": "null-check"
+      },
+      {
+        "type": "npm",
+        "name": "num-sort"
+      },
+      {
+        "type": "npm",
+        "name": "number-epsilon"
+      },
+      {
+        "type": "npm",
+        "name": "number-is-float"
+      },
+      {
+        "type": "npm",
+        "name": "number-is-integer"
+      },
+      {
+        "type": "npm",
+        "name": "number-is-nan"
+      },
+      {
+        "type": "npm",
+        "name": "object-assign"
+      },
+      {
+        "type": "npm",
+        "name": "object-values"
+      },
+      {
+        "type": "npm",
+        "name": "observable-to-promise"
+      },
+      {
+        "type": "npm",
+        "name": "on-change"
+      },
+      {
+        "type": "npm",
+        "name": "onetime"
+      },
+      {
+        "type": "npm",
+        "name": "open-editor"
+      },
+      {
+        "type": "npm",
+        "name": "open-editor-cli"
+      },
+      {
+        "type": "npm",
+        "name": "open-shortcut"
+      },
+      {
+        "type": "npm",
+        "name": "open-shortcut-cli"
+      },
+      {
+        "type": "npm",
+        "name": "opn"
+      },
+      {
+        "type": "npm",
+        "name": "opn-cli"
+      },
+      {
+        "type": "npm",
+        "name": "ora"
+      },
+      {
+        "type": "npm",
+        "name": "os-homedir"
+      },
+      {
+        "type": "npm",
+        "name": "os-locale"
+      },
+      {
+        "type": "npm",
+        "name": "os-name"
+      },
+      {
+        "type": "npm",
+        "name": "os-name-cli"
+      },
+      {
+        "type": "npm",
+        "name": "os-tmpdir"
+      },
+      {
+        "type": "npm",
+        "name": "ow"
+      },
+      {
+        "type": "npm",
+        "name": "p-all"
+      },
+      {
+        "type": "npm",
+        "name": "p-any"
+      },
+      {
+        "type": "npm",
+        "name": "p-break"
+      },
+      {
+        "type": "npm",
+        "name": "p-cancelable"
+      },
+      {
+        "type": "npm",
+        "name": "p-catch-if"
+      },
+      {
+        "type": "npm",
+        "name": "p-debounce"
+      },
+      {
+        "type": "npm",
+        "name": "p-defer"
+      },
+      {
+        "type": "npm",
+        "name": "p-do-whilst"
+      },
+      {
+        "type": "npm",
+        "name": "p-each-series"
+      },
+      {
+        "type": "npm",
+        "name": "p-event"
+      },
+      {
+        "type": "npm",
+        "name": "p-filter"
+      },
+      {
+        "type": "npm",
+        "name": "p-finally"
+      },
+      {
+        "type": "npm",
+        "name": "p-forever"
+      },
+      {
+        "type": "npm",
+        "name": "p-if"
+      },
+      {
+        "type": "npm",
+        "name": "p-immediate"
+      },
+      {
+        "type": "npm",
+        "name": "p-is-promise"
+      },
+      {
+        "type": "npm",
+        "name": "p-lazy"
+      },
+      {
+        "type": "npm",
+        "name": "p-limit"
+      },
+      {
+        "type": "npm",
+        "name": "p-locate"
+      },
+      {
+        "type": "npm",
+        "name": "p-log"
+      },
+      {
+        "type": "npm",
+        "name": "p-map"
+      },
+      {
+        "type": "npm",
+        "name": "p-map-series"
+      },
+      {
+        "type": "npm",
+        "name": "p-memoize"
+      },
+      {
+        "type": "npm",
+        "name": "p-min-delay"
+      },
+      {
+        "type": "npm",
+        "name": "p-pipe"
+      },
+      {
+        "type": "npm",
+        "name": "p-progress"
+      },
+      {
+        "type": "npm",
+        "name": "p-props"
+      },
+      {
+        "type": "npm",
+        "name": "p-queue"
+      },
+      {
+        "type": "npm",
+        "name": "p-race"
+      },
+      {
+        "type": "npm",
+        "name": "p-reduce"
+      },
+      {
+        "type": "npm",
+        "name": "p-reflect"
+      },
+      {
+        "type": "npm",
+        "name": "p-retry"
+      },
+      {
+        "type": "npm",
+        "name": "p-series"
+      },
+      {
+        "type": "npm",
+        "name": "p-settle"
+      },
+      {
+        "type": "npm",
+        "name": "p-some"
+      },
+      {
+        "type": "npm",
+        "name": "p-tap"
+      },
+      {
+        "type": "npm",
+        "name": "p-throttle"
+      },
+      {
+        "type": "npm",
+        "name": "p-time"
+      },
+      {
+        "type": "npm",
+        "name": "p-timeout"
+      },
+      {
+        "type": "npm",
+        "name": "p-times"
+      },
+      {
+        "type": "npm",
+        "name": "p-try"
+      },
+      {
+        "type": "npm",
+        "name": "p-wait-for"
+      },
+      {
+        "type": "npm",
+        "name": "p-waterfall"
+      },
+      {
+        "type": "npm",
+        "name": "p-whilst"
+      },
+      {
+        "type": "npm",
+        "name": "package-json"
+      },
+      {
+        "type": "npm",
+        "name": "package-json-cli"
+      },
+      {
+        "type": "npm",
+        "name": "pad-stdio"
+      },
+      {
+        "type": "npm",
+        "name": "pad-stream"
+      },
+      {
+        "type": "npm",
+        "name": "pageres"
+      },
+      {
+        "type": "npm",
+        "name": "pageres-cli"
+      },
+      {
+        "type": "npm",
+        "name": "parent-dirs"
+      },
+      {
+        "type": "npm",
+        "name": "parent-module"
+      },
+      {
+        "type": "npm",
+        "name": "park-miller"
+      },
+      {
+        "type": "npm",
+        "name": "parse-columns"
+      },
+      {
+        "type": "npm",
+        "name": "parse-columns-cli"
+      },
+      {
+        "type": "npm",
+        "name": "parse-cookie-phantomjs"
+      },
+      {
+        "type": "npm",
+        "name": "parse-help"
+      },
+      {
+        "type": "npm",
+        "name": "parse-json"
+      },
+      {
+        "type": "npm",
+        "name": "parse-ms"
+      },
+      {
+        "type": "npm",
+        "name": "passwd-user"
+      },
+      {
+        "type": "npm",
+        "name": "path-exists"
+      },
+      {
+        "type": "npm",
+        "name": "path-exists-cli"
+      },
+      {
+        "type": "npm",
+        "name": "path-is-absolute"
+      },
+      {
+        "type": "npm",
+        "name": "path-key"
+      },
+      {
+        "type": "npm",
+        "name": "path-type"
+      },
+      {
+        "type": "npm",
+        "name": "phantom-bridge"
+      },
+      {
+        "type": "npm",
+        "name": "pick-random"
+      },
+      {
+        "type": "npm",
+        "name": "pick-random-cli"
+      },
+      {
+        "type": "npm",
+        "name": "pify"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-conf"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-dir"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-dir-cli"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-name"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-up"
+      },
+      {
+        "type": "npm",
+        "name": "pkg-versions"
+      },
+      {
+        "type": "npm",
+        "name": "plur"
+      },
+      {
+        "type": "npm",
+        "name": "pokemon"
+      },
+      {
+        "type": "npm",
+        "name": "pokemon-cli"
+      },
+      {
+        "type": "npm",
+        "name": "positive-zero"
+      },
+      {
+        "type": "npm",
+        "name": "prepend-http"
+      },
+      {
+        "type": "npm",
+        "name": "pretty-bytes"
+      },
+      {
+        "type": "npm",
+        "name": "pretty-bytes-cli"
+      },
+      {
+        "type": "npm",
+        "name": "pretty-ms"
+      },
+      {
+        "type": "npm",
+        "name": "pretty-ms-cli"
+      },
+      {
+        "type": "npm",
+        "name": "process-exists"
+      },
+      {
+        "type": "npm",
+        "name": "proto-props"
+      },
+      {
+        "type": "npm",
+        "name": "protocolify"
+      },
+      {
+        "type": "npm",
+        "name": "ps-list"
+      },
+      {
+        "type": "npm",
+        "name": "public-ip"
+      },
+      {
+        "type": "npm",
+        "name": "public-ip-cli"
+      },
+      {
+        "type": "npm",
+        "name": "pupa"
+      },
+      {
+        "type": "npm",
+        "name": "pwuid"
+      },
+      {
+        "type": "npm",
+        "name": "query-string"
+      },
+      {
+        "type": "npm",
+        "name": "quick-lru"
+      },
+      {
+        "type": "npm",
+        "name": "random-bytes-readable-stream"
+      },
+      {
+        "type": "npm",
+        "name": "random-float"
+      },
+      {
+        "type": "npm",
+        "name": "random-int"
+      },
+      {
+        "type": "npm",
+        "name": "random-item"
+      },
+      {
+        "type": "npm",
+        "name": "random-obj-key"
+      },
+      {
+        "type": "npm",
+        "name": "random-obj-prop"
+      },
+      {
+        "type": "npm",
+        "name": "random-word"
+      },
+      {
+        "type": "npm",
+        "name": "random-word-cli"
+      },
+      {
+        "type": "npm",
+        "name": "randoma"
+      },
+      {
+        "type": "npm",
+        "name": "react-dom-pragma"
+      },
+      {
+        "type": "npm",
+        "name": "react-extras"
+      },
+      {
+        "type": "npm",
+        "name": "react-router-util"
+      },
+      {
+        "type": "npm",
+        "name": "read-chunk"
+      },
+      {
+        "type": "npm",
+        "name": "read-pkg"
+      },
+      {
+        "type": "npm",
+        "name": "read-pkg-up"
+      },
+      {
+        "type": "npm",
+        "name": "realpath"
+      },
+      {
+        "type": "npm",
+        "name": "redent"
+      },
+      {
+        "type": "npm",
+        "name": "registry-url"
+      },
+      {
+        "type": "npm",
+        "name": "remote-git-tags"
+      },
+      {
+        "type": "npm",
+        "name": "rename-fn"
+      },
+      {
+        "type": "npm",
+        "name": "repeating"
+      },
+      {
+        "type": "npm",
+        "name": "repeating-cli"
+      },
+      {
+        "type": "npm",
+        "name": "replace-string"
+      },
+      {
+        "type": "npm",
+        "name": "require-fool-webpack"
+      },
+      {
+        "type": "npm",
+        "name": "resolve-cwd"
+      },
+      {
+        "type": "npm",
+        "name": "resolve-from"
+      },
+      {
+        "type": "npm",
+        "name": "resolve-global"
+      },
+      {
+        "type": "npm",
+        "name": "resolve-pkg"
+      },
+      {
+        "type": "npm",
+        "name": "restore-cursor"
+      },
+      {
+        "type": "npm",
+        "name": "rev-file"
+      },
+      {
+        "type": "npm",
+        "name": "rev-hash"
+      },
+      {
+        "type": "npm",
+        "name": "rev-path"
+      },
+      {
+        "type": "npm",
+        "name": "review-times"
+      },
+      {
+        "type": "npm",
+        "name": "rgb-hex"
+      },
+      {
+        "type": "npm",
+        "name": "rgb-hex-cli"
+      },
+      {
+        "type": "npm",
+        "name": "rocambole-node-remove"
+      },
+      {
+        "type": "npm",
+        "name": "rocambole-node-update"
+      },
+      {
+        "type": "npm",
+        "name": "rocambole-strip-console"
+      },
+      {
+        "type": "npm",
+        "name": "rocambole-strip-debugger"
+      },
+      {
+        "type": "npm",
+        "name": "root-check"
+      },
+      {
+        "type": "npm",
+        "name": "round-to"
+      },
+      {
+        "type": "npm",
+        "name": "router-ips"
+      },
+      {
+        "type": "npm",
+        "name": "run-applescript"
+      },
+      {
+        "type": "npm",
+        "name": "run-electron"
+      },
+      {
+        "type": "npm",
+        "name": "run-jxa"
+      },
+      {
+        "type": "npm",
+        "name": "sass-extras"
+      },
+      {
+        "type": "npm",
+        "name": "scoped-regex"
+      },
+      {
+        "type": "npm",
+        "name": "screenfull"
+      },
+      {
+        "type": "npm",
+        "name": "sdbm"
+      },
+      {
+        "type": "npm",
+        "name": "sec"
+      },
+      {
+        "type": "npm",
+        "name": "self-path"
+      },
+      {
+        "type": "npm",
+        "name": "semver-diff"
+      },
+      {
+        "type": "npm",
+        "name": "semver-regex"
+      },
+      {
+        "type": "npm",
+        "name": "semver-truncate"
+      },
+      {
+        "type": "npm",
+        "name": "serialize-error"
+      },
+      {
+        "type": "npm",
+        "name": "set-immediate-shim"
+      },
+      {
+        "type": "npm",
+        "name": "set-map"
+      },
+      {
+        "type": "npm",
+        "name": "shebang-regex"
+      },
+      {
+        "type": "npm",
+        "name": "shell-env"
+      },
+      {
+        "type": "npm",
+        "name": "shell-history"
+      },
+      {
+        "type": "npm",
+        "name": "shell-path"
+      },
+      {
+        "type": "npm",
+        "name": "shortcut-url"
+      },
+      {
+        "type": "npm",
+        "name": "shortcut-url-cli"
+      },
+      {
+        "type": "npm",
+        "name": "sindre-playground"
+      },
+      {
+        "type": "npm",
+        "name": "sindresorhus"
+      },
+      {
+        "type": "npm",
+        "name": "skin-tone"
+      },
+      {
+        "type": "npm",
+        "name": "slash"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/slugify"
+      },
+      {
+        "type": "npm",
+        "name": "slugify-cli"
+      },
+      {
+        "type": "npm",
+        "name": "somebody"
+      },
+      {
+        "type": "npm",
+        "name": "sort-keys"
+      },
+      {
+        "type": "npm",
+        "name": "sort-on"
+      },
+      {
+        "type": "npm",
+        "name": "source-map-to-comment"
+      },
+      {
+        "type": "npm",
+        "name": "sparkly"
+      },
+      {
+        "type": "npm",
+        "name": "sparkly-cli"
+      },
+      {
+        "type": "npm",
+        "name": "spdx-license-list"
+      },
+      {
+        "type": "npm",
+        "name": "speed-test"
+      },
+      {
+        "type": "npm",
+        "name": "splice-string"
+      },
+      {
+        "type": "npm",
+        "name": "split-at"
+      },
+      {
+        "type": "npm",
+        "name": "split-lines"
+      },
+      {
+        "type": "npm",
+        "name": "split-on-first"
+      },
+      {
+        "type": "npm",
+        "name": "srcset"
+      },
+      {
+        "type": "npm",
+        "name": "stable-fn"
+      },
+      {
+        "type": "npm",
+        "name": "strict-import"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/string-hash"
+      },
+      {
+        "type": "npm",
+        "name": "string-length"
+      },
+      {
+        "type": "npm",
+        "name": "string-width"
+      },
+      {
+        "type": "npm",
+        "name": "string-width-cli"
+      },
+      {
+        "type": "npm",
+        "name": "stringify-attributes"
+      },
+      {
+        "type": "npm",
+        "name": "strip-bom"
+      },
+      {
+        "type": "npm",
+        "name": "strip-bom-buf"
+      },
+      {
+        "type": "npm",
+        "name": "strip-bom-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-bom-stream"
+      },
+      {
+        "type": "npm",
+        "name": "strip-css-comments"
+      },
+      {
+        "type": "npm",
+        "name": "strip-css-comments-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-debug"
+      },
+      {
+        "type": "npm",
+        "name": "strip-debug-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-final-newline"
+      },
+      {
+        "type": "npm",
+        "name": "strip-indent"
+      },
+      {
+        "type": "npm",
+        "name": "strip-indent-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-json-comments"
+      },
+      {
+        "type": "npm",
+        "name": "strip-json-comments-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-outer"
+      },
+      {
+        "type": "npm",
+        "name": "strip-path"
+      },
+      {
+        "type": "npm",
+        "name": "strip-shebang"
+      },
+      {
+        "type": "npm",
+        "name": "strip-url-auth"
+      },
+      {
+        "type": "npm",
+        "name": "subsume"
+      },
+      {
+        "type": "npm",
+        "name": "sudo-block"
+      },
+      {
+        "type": "npm",
+        "name": "superb"
+      },
+      {
+        "type": "npm",
+        "name": "superb-cli"
+      },
+      {
+        "type": "npm",
+        "name": "superheroes"
+      },
+      {
+        "type": "npm",
+        "name": "superheroes-cli"
+      },
+      {
+        "type": "npm",
+        "name": "supervillains"
+      },
+      {
+        "type": "npm",
+        "name": "supervillains-cli"
+      },
+      {
+        "type": "npm",
+        "name": "taskkill"
+      },
+      {
+        "type": "npm",
+        "name": "tasklist"
+      },
+      {
+        "type": "npm",
+        "name": "temp-dir"
+      },
+      {
+        "type": "npm",
+        "name": "temp-write"
+      },
+      {
+        "type": "npm",
+        "name": "tempfile"
+      },
+      {
+        "type": "npm",
+        "name": "tempy"
+      },
+      {
+        "type": "npm",
+        "name": "term-img"
+      },
+      {
+        "type": "npm",
+        "name": "term-img-cli"
+      },
+      {
+        "type": "npm",
+        "name": "term-size"
+      },
+      {
+        "type": "npm",
+        "name": "term-size-cli"
+      },
+      {
+        "type": "npm",
+        "name": "terminal-image"
+      },
+      {
+        "type": "npm",
+        "name": "terminal-image-cli"
+      },
+      {
+        "type": "npm",
+        "name": "terminal-link"
+      },
+      {
+        "type": "npm",
+        "name": "terminal-link-cli"
+      },
+      {
+        "type": "npm",
+        "name": "text-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "ti-os"
+      },
+      {
+        "type": "npm",
+        "name": "ti-rate-reminder"
+      },
+      {
+        "type": "npm",
+        "name": "tildify"
+      },
+      {
+        "type": "npm",
+        "name": "time-grunt"
+      },
+      {
+        "type": "npm",
+        "name": "time-span"
+      },
+      {
+        "type": "npm",
+        "name": "time-zone"
+      },
+      {
+        "type": "npm",
+        "name": "titleize"
+      },
+      {
+        "type": "npm",
+        "name": "tmpin"
+      },
+      {
+        "type": "npm",
+        "name": "to-double-quotes"
+      },
+      {
+        "type": "npm",
+        "name": "to-double-quotes-cli"
+      },
+      {
+        "type": "npm",
+        "name": "to-fast-properties"
+      },
+      {
+        "type": "npm",
+        "name": "@sindresorhus/to-milliseconds"
+      },
+      {
+        "type": "npm",
+        "name": "to-readable-stream"
+      },
+      {
+        "type": "npm",
+        "name": "to-semver"
+      },
+      {
+        "type": "npm",
+        "name": "to-single-quotes"
+      },
+      {
+        "type": "npm",
+        "name": "to-single-quotes-cli"
+      },
+      {
+        "type": "npm",
+        "name": "touch-bar"
+      },
+      {
+        "type": "npm",
+        "name": "trash"
+      },
+      {
+        "type": "npm",
+        "name": "trash-cli"
+      },
+      {
+        "type": "npm",
+        "name": "trayballoon"
+      },
+      {
+        "type": "npm",
+        "name": "trim-left"
+      },
+      {
+        "type": "npm",
+        "name": "trim-newlines"
+      },
+      {
+        "type": "npm",
+        "name": "trim-repeated"
+      },
+      {
+        "type": "npm",
+        "name": "trim-right"
+      },
+      {
+        "type": "npm",
+        "name": "truncate-url"
+      },
+      {
+        "type": "npm",
+        "name": "ua-string"
+      },
+      {
+        "type": "npm",
+        "name": "unique-random"
+      },
+      {
+        "type": "npm",
+        "name": "unique-random-array"
+      },
+      {
+        "type": "npm",
+        "name": "unique-string"
+      },
+      {
+        "type": "npm",
+        "name": "unix-path-max"
+      },
+      {
+        "type": "npm",
+        "name": "unstated-debug"
+      },
+      {
+        "type": "npm",
+        "name": "untildify"
+      },
+      {
+        "type": "npm",
+        "name": "unused-filename"
+      },
+      {
+        "type": "npm",
+        "name": "url-format-lax"
+      },
+      {
+        "type": "npm",
+        "name": "url-parse-lax"
+      },
+      {
+        "type": "npm",
+        "name": "urls-md"
+      },
+      {
+        "type": "npm",
+        "name": "user-home"
+      },
+      {
+        "type": "npm",
+        "name": "user-home-cli"
+      },
+      {
+        "type": "npm",
+        "name": "user-info"
+      },
+      {
+        "type": "npm",
+        "name": "username"
+      },
+      {
+        "type": "npm",
+        "name": "username-cli"
+      },
+      {
+        "type": "npm",
+        "name": "uti-cli"
+      },
+      {
+        "type": "npm",
+        "name": "vaca"
+      },
+      {
+        "type": "npm",
+        "name": "valid-filename"
+      },
+      {
+        "type": "npm",
+        "name": "validate-element-name"
+      },
+      {
+        "type": "npm",
+        "name": "video-extensions"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-file"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-paths"
+      },
+      {
+        "type": "npm",
+        "name": "wait-for-localhost"
+      },
+      {
+        "type": "npm",
+        "name": "wait-for-localhost-cli"
+      },
+      {
+        "type": "npm",
+        "name": "wallpaper"
+      },
+      {
+        "type": "npm",
+        "name": "wallpaper-cli"
+      },
+      {
+        "type": "npm",
+        "name": "website-popup"
+      },
+      {
+        "type": "npm",
+        "name": "website-popup-cli"
+      },
+      {
+        "type": "npm",
+        "name": "widest-line"
+      },
+      {
+        "type": "npm",
+        "name": "windows-release"
+      },
+      {
+        "type": "npm",
+        "name": "word-list"
+      },
+      {
+        "type": "npm",
+        "name": "word-stream"
+      },
+      {
+        "type": "npm",
+        "name": "write-json-file"
+      },
+      {
+        "type": "npm",
+        "name": "write-pkg"
+      },
+      {
+        "type": "npm",
+        "name": "xdg-basedir"
+      },
+      {
+        "type": "npm",
+        "name": "xml-char-classes"
+      },
+      {
+        "type": "npm",
+        "name": "xterm-colors"
+      },
+      {
+        "type": "npm",
+        "name": "year-days"
+      },
+      {
+        "type": "npm",
+        "name": "yes-no-words"
+      },
+      {
+        "type": "npm",
+        "name": "yn"
+      },
+      {
+        "type": "npm",
+        "name": "yoctodelay"
+      }
+    ],
+    "github": {
+      "users": ["sindresorhus"]
+    },
+    "opencollective": {
+      "id": 33343,
+      "name": "Sindre Sorhus",
+      "slug": "sindresorhus",
+      "description": "Full-Time Open-Sourcerer"
+    }
+  },
+  {
     "name": "sinon",
     "packages": [
       {
