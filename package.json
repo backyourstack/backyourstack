@@ -100,7 +100,8 @@
   "greenkeeper": {
     "ignore": [
       "@babel/cli",
-      "@babel/node"
+      "@babel/node",
+      "react-dropzone"
     ]
   },
   "husky": {
