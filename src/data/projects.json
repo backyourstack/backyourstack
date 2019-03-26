@@ -2219,6 +2219,18 @@
       {
         "type": "npm",
         "name": "@babel/plugin-transform-named-capturing-groups-regex"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/plugin-proposal-partial-application"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/plugin-syntax-partial-application"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/runtime-corejs3"
       }
     ],
     "opencollective": {
@@ -2356,6 +2368,22 @@
       {
         "type": "npm",
         "name": "barba.js"
+      },
+      {
+        "type": "npm",
+        "name": "@barba/core"
+      },
+      {
+        "type": "npm",
+        "name": "@barba/css"
+      },
+      {
+        "type": "npm",
+        "name": "@barba/prefetch"
+      },
+      {
+        "type": "npm",
+        "name": "@barba/router"
       }
     ],
     "github": {
@@ -6317,6 +6345,10 @@
       {
         "type": "npm",
         "name": "docusaurus"
+      },
+      {
+        "type": "npm",
+        "name": "docusaurus-init"
       }
     ],
     "github": {
@@ -12358,6 +12390,33 @@
     ]
   },
   {
+    "name": "jasminebdd",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jasmine-core"
+      },
+      {
+        "type": "npm",
+        "name": "jasmine-core"
+      },
+      {
+        "type": "pypi",
+        "name": "jasmine-core"
+      }
+    ],
+    "github": {
+      "repo": "jasmine/jasmine"
+    },
+    "opencollective": {
+      "id": 31143,
+      "name": "Jasmine",
+      "slug": "jasminebdd",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "javascript-obfuscator",
     "packages": [
       {
@@ -16547,6 +16606,22 @@
       {
         "type": "npm",
         "name": "@nestjs/websockets"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/platform-express"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/platform-fastify"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/platform-socket.io"
+      },
+      {
+        "type": "npm",
+        "name": "@nestjs/platform-ws"
       }
     ],
     "github": {
@@ -22720,6 +22795,10 @@
       {
         "type": "dep",
         "name": "github.com/haya14busa/reviewdog"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/reviewdog/reviewdog"
       }
     ],
     "github": {
@@ -27318,6 +27397,10 @@
       {
         "type": "npm",
         "name": "yoctodelay"
+      },
+      {
+        "type": "npm",
+        "name": "type-fest"
       }
     ],
     "github": {
@@ -28422,6 +28505,10 @@
       {
         "type": "npm",
         "name": "@storybook/preact"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/react-native-server"
       }
     ],
     "opencollective": {
@@ -30277,6 +30364,18 @@
       {
         "type": "npm",
         "name": "@tarojs/taro-tt"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-transform-taroapi"
+      },
+      {
+        "type": "npm",
+        "name": "stylelint-config-taro-rn"
+      },
+      {
+        "type": "npm",
+        "name": "stylelint-taro-rn"
       }
     ],
     "github": {
@@ -32861,6 +32960,18 @@
       {
         "type": "npm",
         "name": "remark-unwrap-images"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-from-text"
+      },
+      {
+        "type": "npm",
+        "name": "hast-util-shift-heading"
+      },
+      {
+        "type": "npm",
+        "name": "remark-mdx-remove-imports"
       }
     ],
     "github": {
