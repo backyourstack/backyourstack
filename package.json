@@ -70,7 +70,7 @@
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/node": "7.0.0",
-    "@mdx-js/loader": "^0.20.3",
+    "@mdx-js/loader": "^1.0.1",
     "@mdx-js/mdx": "^1.0.19",
     "babel-eslint": "^10.0.1",
     "babel-plugin-lodash": "^3.3.4",
