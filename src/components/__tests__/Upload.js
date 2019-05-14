@@ -1,6 +1,7 @@
 import React from 'react';
-import Upload from '../Upload';
 import renderer from 'react-test-renderer';
+
+import Upload from '../Upload';
 
 test('Upload should render', () => {
   const component = renderer.create(<Upload />);

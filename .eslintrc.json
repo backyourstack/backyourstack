@@ -1,0 +1,11 @@
+{
+  "extends": ["opencollective"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "require-await": "warn",
+    "no-constant-condition": ["warn", { "checkLoops": false }]
+  }
+}

@@ -54,7 +54,7 @@ export default class Upload extends React.Component {
 
   render() {
     const supportedFilesAsComponent = supportedFiles
-      .map((file, i) => <em key={i}>{file}</em>)
+      .map(file => <em key={file}>{file}</em>)
       .reduce((acc, curr, idx, src) => {
         if (idx === 1) {
           return [curr];
