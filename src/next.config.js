@@ -1,9 +1,7 @@
-/*  eslint-disable-next-line import/no-unresolved */
-import webpack from 'webpack';
 import withCSS from '@zeit/next-css';
 
 module.exports = withCSS({
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, webpack }) => {
     // For Winston
     // https://github.com/winstonjs/winston/issues/287
     config.node = { fs: 'empty' };
