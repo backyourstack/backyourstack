@@ -1,5 +1,43 @@
 [
   {
+    "name": "11ty",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@11ty/logo"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/website"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/eleventy"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/eleventy-plugin-inclusive-language"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/eleventy-plugin-rss"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/eleventy-plugin-syntaxhighlight"
+      }
+    ],
+    "github": {
+      "org": "11ty"
+    },
+    "opencollective": {
+      "id": 37254,
+      "name": "Eleventy",
+      "slug": "11ty",
+      "description": "A simpler static site generator."
+    }
+  },
+  {
     "name": "30-seconds-of-code",
     "packages": [
       {
@@ -265,6 +303,18 @@
       {
         "type": "pypi",
         "name": "nose-allure-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "allure-cucumberjs"
+      },
+      {
+        "type": "npm",
+        "name": "allure-jasmine"
+      },
+      {
+        "type": "npm",
+        "name": "allure-mochajs"
       }
     ],
     "github": {
@@ -341,6 +391,10 @@
       {
         "type": "npm",
         "name": "gatsby-plugin-altair-graphql"
+      },
+      {
+        "type": "npm",
+        "name": "altair-koa-middleware"
       }
     ],
     "opencollective": {
@@ -979,6 +1033,22 @@
       {
         "type": "pypi",
         "name": "approvaltests"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.AppConfig"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.NHibernate"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.StatePrinter"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.Wpf"
       }
     ],
     "github": {
@@ -3099,6 +3169,38 @@
       {
         "type": "npm",
         "name": "botkit"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-web"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-slack"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-webex"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-hangouts"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-twilio-sms"
+      },
+      {
+        "type": "npm",
+        "name": "botbuilder-adapter-facebook"
+      },
+      {
+        "type": "npm",
+        "name": "generator-botkit"
+      },
+      {
+        "type": "npm",
+        "name": "botkit-plugin-cms"
       }
     ],
     "github": {
@@ -4503,6 +4605,28 @@
     }
   },
   {
+    "name": "circles",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "metatx-client"
+      },
+      {
+        "type": "npm",
+        "name": "metatx-server"
+      }
+    ],
+    "github": {
+      "org": "CirclesUBI"
+    },
+    "opencollective": {
+      "id": 23610,
+      "name": "Circles",
+      "slug": "circles",
+      "description": "A Decentralized Basic Income"
+    }
+  },
+  {
     "name": "cloudcmd",
     "packages": [
       {
@@ -4740,6 +4864,24 @@
     },
     "github": {
       "repo": "CompuIves/codesandbox-client"
+    }
+  },
+  {
+    "name": "collection",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/jianfengye/collection"
+      }
+    ],
+    "github": {
+      "repo": "jianfengye/collection"
+    },
+    "opencollective": {
+      "id": 42702,
+      "name": "collection",
+      "slug": "collection",
+      "description": "go collection package for fasting coding"
     }
   },
   {
@@ -5101,6 +5243,24 @@
     }
   },
   {
+    "name": "config",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Config.Net"
+      }
+    ],
+    "github": {
+      "repo": "aloneguid/config"
+    },
+    "opencollective": {
+      "id": 28537,
+      "name": "Config.Net",
+      "slug": "config",
+      "description": "The easiest configuration framework for .NET developers"
+    }
+  },
+  {
     "name": "core-js",
     "packages": [
       {
@@ -5108,6 +5268,40 @@
         "name": "core-js"
       }
     ]
+  },
+  {
+    "name": "core-js",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "core-js"
+      },
+      {
+        "type": "npm",
+        "name": "core-js-builder"
+      },
+      {
+        "type": "npm",
+        "name": "core-js-bundle"
+      },
+      {
+        "type": "npm",
+        "name": "core-js-compat"
+      },
+      {
+        "type": "npm",
+        "name": "core-js-pure"
+      }
+    ],
+    "github": {
+      "repo": "zloirock/core-js"
+    },
+    "opencollective": {
+      "id": 33182,
+      "name": "core-js",
+      "slug": "core-js",
+      "description": "Standard Library"
+    }
   },
   {
     "name": "coveralls",
@@ -5293,6 +5487,176 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "cssnano",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "cssnano"
+      },
+      {
+        "type": "npm",
+        "name": "css-size"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-preset-advanced"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-preset-default"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-util-get-arguments"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-util-get-match"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-util-raw-cache"
+      },
+      {
+        "type": "npm",
+        "name": "cssnano-util-same-parent"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-colormin"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-convert-values"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-discard-comments"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-discard-duplicates"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-discard-empty"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-discard-overridden"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-discard-unused"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-merge-idents"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-merge-longhand"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-merge-rules"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-minify-font-values"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-minify-gradients"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-minify-params"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-minify-selectors"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-charset"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-display-values"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-positions"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-repeat-style"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-string"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-timing-functions"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-unicode"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-url"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-normalize-whitespace"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-ordered-values"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-reduce-idents"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-reduce-initial"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-reduce-transforms"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-svgo"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-unique-selectors"
+      },
+      {
+        "type": "npm",
+        "name": "postcss-zindex"
+      },
+      {
+        "type": "npm",
+        "name": "stylehacks"
+      }
+    ],
+    "github": {
+      "repo": "cssnano/cssnano"
+    },
+    "opencollective": {
+      "id": 40181,
+      "name": "cssnano",
+      "slug": "cssnano",
+      "description": "A modular minifier, built on top of the PostCSS ecosystem."
     }
   },
   {
@@ -6384,6 +6748,38 @@
       {
         "type": "npm",
         "name": "docusaurus-init"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/mdx-loader"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/plugin-content-blog"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/plugin-content-docs"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/plugin-content-pages"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/plugin-sitemap"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/preset-classic"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/core"
       }
     ],
     "github": {
@@ -6653,6 +7049,24 @@
     ]
   },
   {
+    "name": "dotenv",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "dotenv"
+      }
+    ],
+    "github": {
+      "repo": "motdotla/dotenv"
+    },
+    "opencollective": {
+      "id": 40633,
+      "name": "Dotenv",
+      "slug": "dotenv",
+      "description": "Loads environment variables from .env for nodejs projects."
+    }
+  },
+  {
     "name": "dplayer",
     "packages": [
       {
@@ -6887,6 +7301,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "editorjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@editorjs/editorjs"
+      }
+    ],
+    "github": {
+      "repo": "codex-team/editor.js"
+    },
+    "opencollective": {
+      "id": 37258,
+      "name": "Editor.js",
+      "slug": "editorjs",
+      "description": "The new block-styled editor that returns clean data output"
     }
   },
   {
@@ -7542,6 +7974,24 @@
     ]
   },
   {
+    "name": "eslint-plugin-compat",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "eslint-plugin-compat"
+      }
+    ],
+    "github": {
+      "repo": "amilajack/eslint-plugin-compat"
+    },
+    "opencollective": {
+      "id": 35367,
+      "name": "eslint-plugin-compat",
+      "slug": "eslint-plugin-compat",
+      "description": "Lint the browser compatibility of your code"
+    }
+  },
+  {
     "name": "eslint-plugin-flowtype",
     "packages": [
       {
@@ -7617,6 +8067,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "ethlint",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ethlint"
+      }
+    ],
+    "github": {
+      "repo": "duaraghav8/Ethlint"
+    },
+    "opencollective": {
+      "id": 38807,
+      "name": "Ethlint",
+      "slug": "ethlint",
+      "description": "(Formerly Solium) Linter to identify and fix style & security issues in Solidity"
     }
   },
   {
@@ -8200,6 +8668,10 @@
       {
         "type": "npm",
         "name": "@feathersjs/adapter-tests"
+      },
+      {
+        "type": "npm",
+        "name": "@feathersjs/authentication-oauth"
       }
     ],
     "github": {
@@ -8475,6 +8947,10 @@
       {
         "type": "npm",
         "name": "fela-codemods"
+      },
+      {
+        "type": "npm",
+        "name": "fela-plugin-typescript"
       }
     ],
     "opencollective": {
@@ -8515,6 +8991,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "filesaverjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "file-saver"
+      }
+    ],
+    "github": {
+      "repo": "eligrey/FileSaver.js"
+    },
+    "opencollective": {
+      "id": 39534,
+      "name": "FileSaver.js",
+      "slug": "filesaverjs",
+      "description": "An HTML5 saveAs() FileSaver implementation"
     }
   },
   {
@@ -8649,6 +9143,24 @@
         "balance": 466606,
         "yearlyBudget": 502657
       }
+    }
+  },
+  {
+    "name": "flextype-95",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "flextype/flextype"
+      }
+    ],
+    "github": {
+      "repo": "flextype/flextype"
+    },
+    "opencollective": {
+      "id": 30966,
+      "name": "flextype",
+      "slug": "flextype-95",
+      "description": null
     }
   },
   {
@@ -8794,6 +9306,10 @@
       {
         "type": "nuget",
         "name": "Anotar.LibLog.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Anotar.NLog.Fody"
       }
     ],
     "github": {
@@ -8873,6 +9389,42 @@
         "name": "font-awesome"
       }
     ]
+  },
+  {
+    "name": "form-builder",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "xaboy/form-builder"
+      }
+    ],
+    "github": {
+      "repo": "xaboy/form-builder"
+    },
+    "opencollective": {
+      "id": 36818,
+      "name": "form-builder",
+      "slug": "form-builder",
+      "description": "PHP表单生成器，快速生成现代化的form表单。包含复选框、单选框、输入框、下拉选择框等元素以及,省市区三级联动,时间选择,日期选择,颜色选择,文件/图片上传等功能。"
+    }
+  },
+  {
+    "name": "foxify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "foxify"
+      }
+    ],
+    "github": {
+      "repo": "foxifyjs/foxify"
+    },
+    "opencollective": {
+      "id": 32780,
+      "name": "Foxify",
+      "slug": "foxify",
+      "description": "The fast, easy to use & typescript ready web framework for Node.js"
+    }
   },
   {
     "name": "fractal",
@@ -9413,6 +9965,10 @@
       {
         "type": "npm",
         "name": "gatsby-cypress"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-telemetry"
       }
     ],
     "opencollective": {
@@ -9595,6 +10151,28 @@
         "balance": 645754,
         "yearlyBudget": 1728900
       }
+    }
+  },
+  {
+    "name": "geojson-net",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "GeoJSON.NET"
+      },
+      {
+        "type": "nuget",
+        "name": "GeoJSON.NET.Contrib.EntityFramework"
+      }
+    ],
+    "github": {
+      "org": "GeoJSON-Net"
+    },
+    "opencollective": {
+      "id": 38026,
+      "name": "GeoJSON.Net",
+      "slug": "geojson-net",
+      "description": ".Net library for GeoJSON types & corresponding Json.Net (de)serializers"
     }
   },
   {
@@ -9913,6 +10491,24 @@
     }
   },
   {
+    "name": "gpujs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "gpu.js"
+      }
+    ],
+    "github": {
+      "repo": "gpujs/gpu.js"
+    },
+    "opencollective": {
+      "id": 40037,
+      "name": "gpu.js",
+      "slug": "gpujs",
+      "description": "GPU Accelerated JavaScript"
+    }
+  },
+  {
     "name": "gramework",
     "opencollective": {
       "id": 10839,
@@ -10088,6 +10684,24 @@
     }
   },
   {
+    "name": "graphql-net",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "GraphQL"
+      }
+    ],
+    "github": {
+      "repo": "graphql-dotnet/graphql-dotnet"
+    },
+    "opencollective": {
+      "id": 27734,
+      "name": "graphql-dotnet",
+      "slug": "graphql-net",
+      "description": null
+    }
+  },
+  {
     "name": "graphql-php",
     "packages": [
       {
@@ -10162,6 +10776,24 @@
         "balance": 96086,
         "yearlyBudget": 144662
       }
+    }
+  },
+  {
+    "name": "graphqlentityframework",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "GraphQL.EntityFramework"
+      }
+    ],
+    "github": {
+      "repo": "SimonCropp/GraphQL.EntityFramework"
+    },
+    "opencollective": {
+      "id": 33126,
+      "name": "GraphQL.EntityFramework",
+      "slug": "graphqlentityframework",
+      "description": "Adds EntityFramework Core IQueryable support to GraphQL"
     }
   },
   {
@@ -11018,6 +11650,92 @@
     ]
   },
   {
+    "name": "hemera",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hemera-ajv"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-blipp"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-graceful-shutdown"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-jaeger"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-joi"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-jwt-auth"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-knabe"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-mail"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-msgpack"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-prometheus"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-safe-promises"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-slackbot"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-sqs"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-stats"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-store"
+      },
+      {
+        "type": "npm",
+        "name": "hemera-web"
+      },
+      {
+        "type": "npm",
+        "name": "nats-hemera"
+      }
+    ],
+    "github": {
+      "repo": "hemerajs/hemera"
+    },
+    "opencollective": {
+      "id": 37954,
+      "name": "Hemera",
+      "slug": "hemera",
+      "description": "🔬 Writing reliable & fault-tolerant microservices in Node.js"
+    }
+  },
+  {
     "name": "hep",
     "packages": [
       {
@@ -11710,6 +12428,24 @@
     }
   },
   {
+    "name": "html2canvas",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "html2canvas"
+      }
+    ],
+    "github": {
+      "repo": "niklasvh/html2canvas"
+    },
+    "opencollective": {
+      "id": 38579,
+      "name": "html2canvas",
+      "slug": "html2canvas",
+      "description": "Screenshots with JavaScript"
+    }
+  },
+  {
     "name": "htmlhint",
     "packages": [
       {
@@ -11744,6 +12480,32 @@
         "name": "husky"
       }
     ]
+  },
+  {
+    "name": "hyperapp",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hyperapp"
+      },
+      {
+        "type": "npm",
+        "name": "@hyperapp/html"
+      },
+      {
+        "type": "npm",
+        "name": "@hyperapp/time"
+      }
+    ],
+    "github": {
+      "repo": "jorgebucaran/hyperapp"
+    },
+    "opencollective": {
+      "id": 37955,
+      "name": "hyperapp",
+      "slug": "hyperapp",
+      "description": null
+    }
   },
   {
     "name": "hyperhtml",
@@ -11799,6 +12561,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "hyphenopoly",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hyphenopoly"
+      }
+    ],
+    "github": {
+      "repo": "mnater/Hyphenopoly"
+    },
+    "opencollective": {
+      "id": 32648,
+      "name": "Hyphenopoly",
+      "slug": "hyphenopoly",
+      "description": "Hyphenation for node and Polyfill for client-side hyphenation."
     }
   },
   {
@@ -12922,6 +13702,10 @@
       {
         "type": "npm",
         "name": "@jest/types"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/test-sequencer"
       }
     ],
     "opencollective": {
@@ -13071,6 +13855,84 @@
           "totalDonations": 70000
         }
       ]
+    }
+  },
+  {
+    "name": "jitesoft-open-source",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "hrafn/router"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/container"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/datastructures"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/exceptions"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/loggers"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/math"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/router"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/validator"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/xml2struct"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/simple-login"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/socialite-hub"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/babel-preset-main"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/eslint-config"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/events"
+      },
+      {
+        "type": "npm",
+        "name": "cookie-sanction"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog"
+      }
+    ],
+    "github": {
+      "org": "jitesoft"
+    },
+    "opencollective": {
+      "id": 39900,
+      "name": "Jitesoft - Open Source",
+      "slug": "jitesoft-open-source",
+      "description": "Open source projects by Jitesoft."
     }
   },
   {
@@ -13834,6 +14696,24 @@
           "totalDonations": 10000
         }
       ]
+    }
+  },
+  {
+    "name": "kiwitcms",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "kiwitcms"
+      }
+    ],
+    "github": {
+      "repo": "kiwitcms/Kiwi"
+    },
+    "opencollective": {
+      "id": 27038,
+      "name": "Kiwi TCMS",
+      "slug": "kiwitcms",
+      "description": "the leading open source test case management system"
     }
   },
   {
@@ -14873,6 +15753,24 @@
     }
   },
   {
+    "name": "limitrr",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "limitrr"
+      }
+    ],
+    "github": {
+      "repo": "eddiejibson/limitrr"
+    },
+    "opencollective": {
+      "id": 32940,
+      "name": "Limitrr",
+      "slug": "limitrr",
+      "description": "Light NodeJS rate limiting using Redis - including Express middleware."
+    }
+  },
+  {
     "name": "lint-staged",
     "packages": [
       {
@@ -14922,6 +15820,36 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "loadable",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@loadable/component"
+      },
+      {
+        "type": "npm",
+        "name": "@loadable/babel-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@loadable/server"
+      },
+      {
+        "type": "npm",
+        "name": "@loadable/webpack-plugin"
+      }
+    ],
+    "github": {
+      "repo": "smooth-code/loadable-components"
+    },
+    "opencollective": {
+      "id": 39888,
+      "name": "Loadable Components",
+      "slug": "loadable",
+      "description": "React code splitting made easy ✂️✨- Recommended by React team"
     }
   },
   {
@@ -15090,6 +16018,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "madge",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "madge"
+      }
+    ],
+    "github": {
+      "repo": "pahen/madge"
+    },
+    "opencollective": {
+      "id": 35200,
+      "name": "Madge",
+      "slug": "madge",
+      "description": "Create graphs from your CommonJS, AMD or ES6 module dependencies"
     }
   },
   {
@@ -15373,6 +16319,10 @@
       {
         "type": "npm",
         "name": "@material-ui/system"
+      },
+      {
+        "type": "npm",
+        "name": "@material-ui/types"
       }
     ],
     "opencollective": {
@@ -15460,6 +16410,28 @@
     },
     "github": {
       "repo": "mui-org/material-ui"
+    }
+  },
+  {
+    "name": "materialdesigninxaml",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MaterialDesignThemes"
+      },
+      {
+        "type": "nuget",
+        "name": "MaterialDesignColors"
+      }
+    ],
+    "github": {
+      "repo": "MaterialDesignInXAML/MaterialDesignInXamlToolkit"
+    },
+    "opencollective": {
+      "id": 41919,
+      "name": "MaterialDesignInXAML",
+      "slug": "materialdesigninxaml",
+      "description": "Google's Material Design in XAML & WPF, for C# & VB.Net. "
     }
   },
   {
@@ -17085,6 +18057,24 @@
     }
   },
   {
+    "name": "ngx-bootstrap",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ngx-bootstrap"
+      }
+    ],
+    "github": {
+      "repo": "valor-software/ngx-bootstrap"
+    },
+    "opencollective": {
+      "id": 37773,
+      "name": "ngx-bootstrap",
+      "slug": "ngx-bootstrap",
+      "description": "Fast and reliable Bootstrap widgets in Angular"
+    }
+  },
+  {
     "name": "ngx-infinite-scroll",
     "packages": [
       {
@@ -17106,6 +18096,24 @@
         "yearlyBudget": 8194
       },
       "goals": []
+    }
+  },
+  {
+    "name": "ngx-mask",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ngx-mask"
+      }
+    ],
+    "github": {
+      "repo": "JsDaddy/ngx-mask"
+    },
+    "opencollective": {
+      "id": 37391,
+      "name": "ngx-mask",
+      "slug": "ngx-mask",
+      "description": "Angular Plugin to make masks on form fields and html elements."
     }
   },
   {
@@ -17134,6 +18142,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ngx-scanner",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@zxing/ngx-scanner"
+      }
+    ],
+    "github": {
+      "repo": "zxing-js/ngx-scanner"
+    },
+    "opencollective": {
+      "id": 24543,
+      "name": "@zxing/ngx-scanner",
+      "slug": "ngx-scanner",
+      "description": "1D and 2D Barcode scanner for Angular."
     }
   },
   {
@@ -17286,6 +18312,30 @@
       {
         "type": "npm",
         "name": "@nivo/scales"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/annotations"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/colors"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/geo"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/network"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/swarmplot"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/tooltip"
       }
     ],
     "github": {
@@ -17864,6 +18914,10 @@
       {
         "type": "nuget",
         "name": "NServiceBus.ZeroFormatter"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.ApprovalTests"
       }
     ],
     "github": {
@@ -18644,6 +19698,29 @@
     }
   },
   {
+    "name": "openstreetmap",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "quad_tile"
+      },
+      {
+        "type": "npm",
+        "name": "leaflet-osm"
+      }
+    ],
+    "github": {
+      "org": "openstreetmap"
+    },
+    "opencollective": {
+      "id": 33380,
+      "name": "OpenStreetMap",
+      "slug": "openstreetmap",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "opsdroid",
     "packages": [
       {
@@ -18889,6 +19966,14 @@
       {
         "type": "dep",
         "name": "github.com/ory/x"
+      },
+      {
+        "type": "npm",
+        "name": "@oryd/hydra"
+      },
+      {
+        "type": "npm",
+        "name": "hydra-login-consent-logout"
       }
     ],
     "github": {
@@ -19678,6 +20763,24 @@
     }
   },
   {
+    "name": "piranhacms",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Piranha"
+      }
+    ],
+    "github": {
+      "repo": "PiranhaCMS/piranha.core"
+    },
+    "opencollective": {
+      "id": 36558,
+      "name": "Piranha CMS",
+      "slug": "piranhacms",
+      "description": "A lightweight & unobtrusive CMS for ASP.NET Core"
+    }
+  },
+  {
     "name": "pixelfed",
     "packages": [
       {
@@ -19900,6 +21003,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "pongo2",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/flosch/pongo2"
+      }
+    ],
+    "github": {
+      "repo": "flosch/pongo2"
+    },
+    "opencollective": {
+      "id": 33696,
+      "name": "pongo2",
+      "slug": "pongo2",
+      "description": "Django-syntax like template-engine for Go"
     }
   },
   {
@@ -20285,6 +21406,10 @@
       {
         "type": "npm",
         "name": "tslint-plugin-prettier"
+      },
+      {
+        "type": "gem",
+        "name": "prettier"
       }
     ],
     "github": {
@@ -20602,6 +21727,24 @@
     }
   },
   {
+    "name": "pyinquirer",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "PyInquirer"
+      }
+    ],
+    "github": {
+      "repo": "CITGuru/PyInquirer"
+    },
+    "opencollective": {
+      "id": 41662,
+      "name": "PyInquirer",
+      "slug": "pyinquirer",
+      "description": "A Python module for common interactive command line user interfaces"
+    }
+  },
+  {
     "name": "pytest",
     "packages": [
       {
@@ -20679,6 +21822,24 @@
     ],
     "github": {
       "repo": "ddobrev/QtSharp"
+    }
+  },
+  {
+    "name": "quantaxis",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "quantaxis"
+      }
+    ],
+    "github": {
+      "repo": "QUANTAXIS/QUANTAXIS"
+    },
+    "opencollective": {
+      "id": 33273,
+      "name": "quantaxis",
+      "slug": "quantaxis",
+      "description": "QUANTAXIS 股票/期货/自定义市场 数据爬取-清洗/存储-分析/回测-可视化/交易/复盘的本地一站式解决方案"
     }
   },
   {
@@ -20827,6 +21988,24 @@
           "totalDonations": 50000
         }
       ]
+    }
+  },
+  {
+    "name": "ravenreader",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "raven-reader"
+      }
+    ],
+    "github": {
+      "repo": "mrgodhani/raven-reader"
+    },
+    "opencollective": {
+      "id": 35517,
+      "name": "Raven Reader ",
+      "slug": "ravenreader",
+      "description": "📖Desktop RSS Reader application without any distraction and offline ready."
     }
   },
   {
@@ -21180,6 +22359,24 @@
     }
   },
   {
+    "name": "react-insta-stories",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-insta-stories"
+      }
+    ],
+    "github": {
+      "repo": "mohitk05/react-insta-stories"
+    },
+    "opencollective": {
+      "id": 37536,
+      "name": "react-insta-stories",
+      "slug": "react-insta-stories",
+      "description": "A React component for Instagram like stories"
+    }
+  },
+  {
     "name": "react-native-camera",
     "packages": [
       {
@@ -21365,6 +22562,18 @@
       {
         "type": "npm",
         "name": "@react-native-firebase/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/invites"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/storage"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/template"
       }
     ],
     "github": {
@@ -21561,6 +22770,47 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "react-native-navigation",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-native-navigation"
+      },
+      {
+        "type": "npm",
+        "name": "react-native-navigation/latest"
+      }
+    ],
+    "github": {
+      "repo": "wix/react-native-navigation"
+    },
+    "opencollective": {
+      "id": 41911,
+      "name": "React Native Navigation",
+      "slug": "react-native-navigation",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
+    "name": "react-native-qrcode-scanner",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-native-qrcode-scanner"
+      }
+    ],
+    "github": {
+      "repo": "moaazsidat/react-native-qrcode-scanner"
+    },
+    "opencollective": {
+      "id": 41673,
+      "name": "react-native-qrcode-scanner",
+      "slug": "react-native-qrcode-scanner",
+      "description": "A QR code scanner component for React Native."
     }
   },
   {
@@ -21767,6 +23017,24 @@
     }
   },
   {
+    "name": "react-pdf-wojtekmaj",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-pdf"
+      }
+    ],
+    "github": {
+      "repo": "wojtekmaj/react-pdf"
+    },
+    "opencollective": {
+      "id": 19131,
+      "name": "react-pdf",
+      "slug": "react-pdf-wojtekmaj",
+      "description": "Display PDFs in your React app as easily as if they were images."
+    }
+  },
+  {
     "name": "react-pwa",
     "packages": [
       {
@@ -21809,6 +23077,24 @@
           "amount": 500000
         }
       ]
+    }
+  },
+  {
+    "name": "react-reactive-form",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-reactive-form"
+      }
+    ],
+    "github": {
+      "repo": "bietkul/react-reactive-form"
+    },
+    "opencollective": {
+      "id": 38850,
+      "name": "React Reactive Form",
+      "slug": "react-reactive-form",
+      "description": "Angular like reactive forms in React."
     }
   },
   {
@@ -22306,6 +23592,50 @@
       {
         "type": "nuget",
         "name": "ReactiveUI.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Events"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Testing"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.WPF"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.WinForms"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Events.WPF"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.XamForms"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.AndroidSupport"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Events.WinForms"
+      },
+      {
+        "type": "nuget",
+        "name": "Avalonia.ReactiveUI"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Validation"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Events.XamForms"
       }
     ],
     "github": {
@@ -22358,6 +23688,18 @@
       {
         "type": "npm",
         "name": "reakit-codemods"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-playground"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-system-bootstrap"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-system-palette"
       }
     ],
     "github": {
@@ -22770,6 +24112,24 @@
         "name": "request"
       }
     ]
+  },
+  {
+    "name": "respec",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "respec"
+      }
+    ],
+    "github": {
+      "repo": "w3c/respec"
+    },
+    "opencollective": {
+      "id": 39987,
+      "name": "respec",
+      "slug": "respec",
+      "description": "A tool for creating technical documents and web standards"
+    }
   },
   {
     "name": "rest-hapi",
@@ -23474,6 +24834,96 @@
     ]
   },
   {
+    "name": "saber",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "create-blog"
+      },
+      {
+        "type": "npm",
+        "name": "create-site"
+      },
+      {
+        "type": "npm",
+        "name": "saber-highlight-css"
+      },
+      {
+        "type": "npm",
+        "name": "saber-highlighter-prism"
+      },
+      {
+        "type": "npm",
+        "name": "saber-log"
+      },
+      {
+        "type": "npm",
+        "name": "saber-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-feed"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-git-modification-time"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-google-analytics"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-image"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-meta-redirect"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-netlify-redirect"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-prismjs"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-pwa"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-query-posts"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-transformer-html"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-transformer-pug"
+      },
+      {
+        "type": "npm",
+        "name": "saber-utils"
+      },
+      {
+        "type": "npm",
+        "name": "saber"
+      }
+    ],
+    "github": {
+      "repo": "egoist/saber"
+    },
+    "opencollective": {
+      "id": 40923,
+      "name": "Saber",
+      "slug": "saber",
+      "description": "A static website generator for building blazing fast websites with Vue.js"
+    }
+  },
+  {
     "name": "sage",
     "packages": [
       {
@@ -23749,6 +25199,24 @@
         "name": "semver"
       }
     ]
+  },
+  {
+    "name": "sharejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "share"
+      }
+    ],
+    "github": {
+      "repo": "share/ShareJS"
+    },
+    "opencollective": {
+      "id": 54,
+      "name": "ShareJS",
+      "slug": "sharejs",
+      "description": "Collaborative editing in any app"
+    }
   },
   {
     "name": "sharpneat",
@@ -29973,6 +31441,22 @@
       {
         "type": "npm",
         "name": "stylelint-taro-rn"
+      },
+      {
+        "type": "npm",
+        "name": "taro-css-to-react-native"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/components-qa"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-qq"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-quickapp"
       }
     ],
     "github": {
@@ -30125,6 +31609,22 @@
       {
         "type": "composer",
         "name": "tenancy/testing"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-routes"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-views"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/db-driver-sqlite"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/identification-driver-queue"
       }
     ],
     "github": {
@@ -31115,6 +32615,10 @@
       {
         "type": "pypi",
         "name": "ua-parser"
+      },
+      {
+        "type": "nuget",
+        "name": "UAParser"
       }
     ],
     "github": {
@@ -32569,6 +34073,26 @@
       {
         "type": "npm",
         "name": "remark-mdx-remove-imports"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-theme-mdx"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/react"
+      },
+      {
+        "type": "npm",
+        "name": "remark-mdx-remove-exports"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/vue-loader"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/vue"
       }
     ],
     "github": {
@@ -33229,6 +34753,24 @@
     }
   },
   {
+    "name": "vue-at",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "vue-at"
+      }
+    ],
+    "github": {
+      "repo": "fritx/vue-at"
+    },
+    "opencollective": {
+      "id": 40894,
+      "name": "Contributors of vue-at",
+      "slug": "vue-at",
+      "description": "At.js for Vue."
+    }
+  },
+  {
     "name": "vue-babylonjs",
     "packages": [
       {
@@ -33728,6 +35270,43 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "weblate",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "Weblate"
+      }
+    ],
+    "github": {
+      "repo": "WeblateOrg/weblate"
+    },
+    "opencollective": {
+      "id": 40581,
+      "name": "Weblate",
+      "slug": "weblate",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
+    "name": "webonyx-graphql-php",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "webonyx/graphql-php"
+      }
+    ],
+    "github": {
+      "repo": "webonyx/graphql-php"
+    },
+    "opencollective": {
+      "id": 36661,
+      "name": "graphql-php",
+      "slug": "webonyx-graphql-php",
+      "description": "A PHP port of GraphQL reference implementation"
     }
   },
   {
