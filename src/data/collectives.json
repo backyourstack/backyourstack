@@ -26893,62 +26893,6 @@
     ]
   },
   {
-    "id": 9866,
-    "name": "Revery",
-    "slug": "revery",
-    "description": "High-performance, cross-platform desktop apps - built with Reason!",
-    "github": {
-      "repo": "onivim/oni"
-    },
-    "repos": [
-      {
-        "name": "oni",
-        "owner": {
-          "login": "onivim"
-        },
-        "defaultBranch": "master",
-        "languages": [
-          "Shell",
-          "TypeScript",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Vim script",
-          "Inno Setup",
-          "PowerShell",
-          "Batchfile"
-        ],
-        "files": [
-          ".editorconfig",
-          ".gitattributes",
-          ".gitignore",
-          ".gitmodules",
-          ".npmignore",
-          ".nvmrc",
-          ".prettierignore",
-          ".prettierrc",
-          ".travis.yml",
-          ".yarnrc",
-          "ACCOUNTING.md",
-          "BACKERS.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "LICENSE",
-          "README.md",
-          "appveyor.yml",
-          "codecov.yml",
-          "index.dev.html",
-          "index.html",
-          "jest.config.js",
-          "package.json",
-          "preload.js",
-          "tslint.json",
-          "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
     "id": 9883,
     "name": "shields.io",
     "slug": "shields",
@@ -67112,44 +67056,6 @@
     ]
   },
   {
-    "id": 24543,
-    "name": "@zxing/ngx-scanner",
-    "slug": "ngx-scanner",
-    "description": "1D and 2D Barcode scanner for Angular.",
-    "github": {
-      "repo": "zxing-js/ngx-scanner"
-    },
-    "repos": [
-      {
-        "name": "ngx-scanner",
-        "owner": {
-          "login": "zxing-js"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "HTML", "TypeScript", "CSS"],
-        "files": [
-          ".editorconfig",
-          ".gitignore",
-          ".travis.yml",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "ISSUE_TEMPLATE.md",
-          "LICENSE",
-          "README.md",
-          "_config.yml",
-          "angular.json",
-          "karma.conf.js",
-          "ngx-zxing.iml",
-          "package.json",
-          "protractor.conf.js",
-          "tsconfig.json",
-          "tslint.json",
-          "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
     "id": 24550,
     "name": "CTF_web",
     "slug": "ctf_web",
@@ -72220,37 +72126,6 @@
           "go.sum",
           "main.go",
           "main_test.go"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 27087,
-    "name": "redux-callbag",
-    "slug": "redux-callbag",
-    "description": null,
-    "pledge": true,
-    "github": {
-      "repo": "janryWang/redux-callbag"
-    },
-    "repos": [
-      {
-        "name": "redux-callbag",
-        "owner": {
-          "login": "janryWang"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript"],
-        "files": [
-          ".babelrc.js",
-          ".gitignore",
-          ".travis.yml",
-          "README.md",
-          "logo.jpg",
-          "package-lock.json",
-          "package.json",
-          "rollup.config.js",
-          "test.js"
         ]
       }
     ]
@@ -79039,63 +78914,6 @@
           "_config.yml",
           "commitlint.config.js",
           "package.json"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 30953,
-    "name": "ReNative",
-    "slug": "renative",
-    "description": "Build universal cross-platform apps with react native",
-    "github": {
-      "repo": "pavjacko/react-native-vanilla"
-    },
-    "repos": [
-      {
-        "name": "renative",
-        "owner": {
-          "login": "pavjacko"
-        },
-        "defaultBranch": "master",
-        "languages": [
-          "Kotlin",
-          "JavaScript",
-          "Ruby",
-          "Swift",
-          "CSS",
-          "HTML",
-          "C"
-        ],
-        "files": [
-          ".editorconfig",
-          ".eslintignore",
-          ".eslintrc.js",
-          ".gitignore",
-          ".npmignore",
-          ".travis.yml",
-          "CONTRIBUTING.md",
-          "LICENSE",
-          "README.md",
-          "_config.yml",
-          "babel.config.js",
-          "index.android.js",
-          "index.androidtv.js",
-          "index.androidwear.js",
-          "index.firefoxos.js",
-          "index.firefoxtv.js",
-          "index.ios.js",
-          "index.kaios.js",
-          "index.macos.js",
-          "index.tizen.js",
-          "index.tizenwatch.js",
-          "index.tvos.js",
-          "index.web.js",
-          "index.webos.js",
-          "index.windows.js",
-          "package.json",
-          "rn-cli.config.js",
-          "rnv-config.json"
         ]
       }
     ]

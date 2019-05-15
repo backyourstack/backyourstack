@@ -13201,47 +13201,6 @@
     }
   },
   {
-    "name": "janrywang/redux-callbag",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "redux-callbag"
-      }
-    ],
-    "github": {
-      "repo": "janryWang/redux-callbag"
-    },
-    "opencollective": {
-      "id": 27087,
-      "name": "janryWang",
-      "slug": "janrywang/redux-callbag",
-      "description": null,
-      "pledge": true,
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "jasmine",
-    "github": {
-      "org": "jasmine"
-    },
-    "packages": [
-      {
-        "type": "npm",
-        "name": "jasmine"
-      },
-      {
-        "type": "npm",
-        "name": "jasmine-core"
-      }
-    ]
-  },
-  {
     "name": "jasminebdd",
     "packages": [
       {
@@ -18145,24 +18104,6 @@
     }
   },
   {
-    "name": "ngx-scanner",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "@zxing/ngx-scanner"
-      }
-    ],
-    "github": {
-      "repo": "zxing-js/ngx-scanner"
-    },
-    "opencollective": {
-      "id": 24543,
-      "name": "@zxing/ngx-scanner",
-      "slug": "ngx-scanner",
-      "description": "1D and 2D Barcode scanner for Angular."
-    }
-  },
-  {
     "name": "ngxs",
     "packages": [
       {
@@ -19358,52 +19299,6 @@
       },
       "goals": [],
       "sponsors": []
-    }
-  },
-  {
-    "name": "oni",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "oni"
-      }
-    ],
-    "github": {
-      "repo": "onivim/oni"
-    },
-    "opencollective": {
-      "id": 9866,
-      "name": "Oni",
-      "slug": "oni",
-      "description": "Modal editing for the future",
-      "sponsors": [
-        {
-          "id": 1863,
-          "type": "ORGANIZATION",
-          "slug": "triplebyte",
-          "name": "Triplebyte",
-          "totalDonations": 10000
-        },
-        {
-          "id": 26383,
-          "type": "ORGANIZATION",
-          "slug": "twostoryrobot",
-          "name": "Two Story Robot",
-          "totalDonations": 1000
-        },
-        {
-          "id": 19113,
-          "type": "ORGANIZATION",
-          "slug": "tldrnewsletter",
-          "name": "TLDR Newsletter",
-          "totalDonations": 200
-        }
-      ],
-      "stats": {
-        "balance": 109246,
-        "yearlyBudget": 80177
-      },
-      "goals": []
     }
   },
   {
@@ -22890,30 +22785,6 @@
         "yearlyBudget": 0
       },
       "goals": [],
-      "sponsors": []
-    }
-  },
-  {
-    "name": "react-native-vanilla",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "react-native-vanilla"
-      }
-    ],
-    "github": {
-      "repo": "pavjacko/react-native-vanilla"
-    },
-    "opencollective": {
-      "id": 30953,
-      "name": "react-native-vanilla",
-      "slug": "react-native-vanilla",
-      "description": "Build universal cross-platform apps with react native",
-      "stats": {
-        "balance": 0,
-        "yearlyBudget": 0
-      },
-      "goals": [{}],
       "sponsors": []
     }
   },
