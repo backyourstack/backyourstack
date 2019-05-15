@@ -4985,6 +4985,22 @@
       {
         "type": "npm",
         "name": "smooshpack"
+      },
+      {
+        "type": "npm",
+        "name": "@codesandbox/common"
+      },
+      {
+        "type": "npm",
+        "name": "node-services"
+      },
+      {
+        "type": "npm",
+        "name": "@codesandbox/notifications"
+      },
+      {
+        "type": "npm",
+        "name": "@codesandbox/react-embed"
       }
     ],
     "opencollective": {
@@ -7020,6 +7036,14 @@
       {
         "type": "npm",
         "name": "@docusaurus/core"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/theme-classic"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/theme-search-algolia"
       }
     ],
     "github": {
@@ -9283,6 +9307,10 @@
       {
         "type": "npm",
         "name": "fela-plugin-typescript"
+      },
+      {
+        "type": "npm",
+        "name": "fela-sort-classnames"
       }
     ],
     "opencollective": {
@@ -24536,6 +24564,25 @@
     ]
   },
   {
+    "name": "redux-callbag",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "redux-callbag"
+      }
+    ],
+    "github": {
+      "repo": "janryWang/redux-callbag"
+    },
+    "opencollective": {
+      "id": 27087,
+      "name": "redux-callbag",
+      "slug": "redux-callbag",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "redux-devtools-extension",
     "packages": [
       {
@@ -24808,6 +24855,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "renative",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "renative"
+      }
+    ],
+    "github": {
+      "repo": "pavjacko/react-native-vanilla"
+    },
+    "opencollective": {
+      "id": 30953,
+      "name": "ReNative",
+      "slug": "renative",
+      "description": "Build universal cross-platform apps with react native"
     }
   },
   {
