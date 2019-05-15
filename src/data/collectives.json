@@ -26893,6 +26893,62 @@
     ]
   },
   {
+    "id": 9866,
+    "name": "Revery",
+    "slug": "revery",
+    "description": "High-performance, cross-platform desktop apps - built with Reason!",
+    "github": {
+      "repo": "onivim/oni"
+    },
+    "repos": [
+      {
+        "name": "oni",
+        "owner": {
+          "login": "onivim"
+        },
+        "defaultBranch": "master",
+        "languages": [
+          "Shell",
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vim script",
+          "Inno Setup",
+          "PowerShell",
+          "Batchfile"
+        ],
+        "files": [
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".gitmodules",
+          ".npmignore",
+          ".nvmrc",
+          ".prettierignore",
+          ".prettierrc",
+          ".travis.yml",
+          ".yarnrc",
+          "ACCOUNTING.md",
+          "BACKERS.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "appveyor.yml",
+          "codecov.yml",
+          "index.dev.html",
+          "index.html",
+          "jest.config.js",
+          "package.json",
+          "preload.js",
+          "tslint.json",
+          "yarn.lock"
+        ]
+      }
+    ]
+  },
+  {
     "id": 9883,
     "name": "shields.io",
     "slug": "shields",
@@ -46238,6 +46294,7 @@
         "files": [
           ".gitignore",
           ".travis.yml",
+          "CONTRIBUTING.md",
           "LICENSE",
           "README.md",
           "ci-lint.sh",
@@ -46481,6 +46538,7 @@
         "files": [
           ".dockerignore",
           ".gitignore",
+          "CONTRIBUTING.md",
           "Dockerfile",
           "LICENSE",
           "README.md",
@@ -46531,7 +46589,7 @@
         },
         "defaultBranch": "master",
         "languages": [],
-        "files": [".gitignore", "README.md"]
+        "files": [".gitignore", "CONTRIBUTING.md", "README.md"]
       },
       {
         "name": "keto",
@@ -46869,6 +46927,7 @@
         "files": [
           ".gitignore",
           ".goimportsignore",
+          "CONTRIBUTING.md",
           "LICENSE",
           "Makefile",
           "README.md",
@@ -51875,7 +51934,7 @@
     "id": 16803,
     "name": "Node.js • Apprendre par la pratique",
     "slug": "nodebook",
-    "description": "Un ouvrage numérique et papier de 480 pages pour se familiariser avec JavaScript, Node.js et l’écosystème de modules npm. Apprenez à concevoir et à déployer des applications web et des outils en ligne de commande.",
+    "description": "Un ouvrage papier de 480 pages, un module npm et un livre numérique gratuit pour se familiariser avec JavaScript, Node.js et l’écosystème de modules npm.",
     "github": {
       "repo": "oncletom/nodebook"
     },
@@ -60406,8 +60465,7 @@
         "languages": ["Ruby"],
         "files": [
           ".gitignore",
-          ".kitchen.dokken.yml",
-          ".kitchen.yml",
+          ".mdlrc",
           ".rubocop.yml",
           "Berksfile",
           "CHANGELOG.md",
@@ -60416,7 +60474,10 @@
           "Dangerfile",
           "LICENSE",
           "README.md",
+          "TESTING.md",
           "chefignore",
+          "kitchen.dokken.yml",
+          "kitchen.yml",
           "metadata.rb"
         ]
       },
@@ -72131,6 +72192,37 @@
     ]
   },
   {
+    "id": 27087,
+    "name": "redux-callbag",
+    "slug": "redux-callbag",
+    "description": null,
+    "pledge": true,
+    "github": {
+      "repo": "janryWang/redux-callbag"
+    },
+    "repos": [
+      {
+        "name": "redux-callbag",
+        "owner": {
+          "login": "janryWang"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".babelrc.js",
+          ".gitignore",
+          ".travis.yml",
+          "README.md",
+          "logo.jpg",
+          "package-lock.json",
+          "package.json",
+          "rollup.config.js",
+          "test.js"
+        ]
+      }
+    ]
+  },
+  {
     "id": 27126,
     "name": "json-rpc",
     "slug": "json-rpc",
@@ -78919,6 +79011,63 @@
     ]
   },
   {
+    "id": 30953,
+    "name": "ReNative",
+    "slug": "renative",
+    "description": "Build universal cross-platform apps with react native",
+    "github": {
+      "repo": "pavjacko/react-native-vanilla"
+    },
+    "repos": [
+      {
+        "name": "renative",
+        "owner": {
+          "login": "pavjacko"
+        },
+        "defaultBranch": "master",
+        "languages": [
+          "Kotlin",
+          "JavaScript",
+          "Ruby",
+          "Swift",
+          "CSS",
+          "HTML",
+          "C"
+        ],
+        "files": [
+          ".editorconfig",
+          ".eslintignore",
+          ".eslintrc.js",
+          ".gitignore",
+          ".npmignore",
+          ".travis.yml",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "README.md",
+          "_config.yml",
+          "babel.config.js",
+          "index.android.js",
+          "index.androidtv.js",
+          "index.androidwear.js",
+          "index.firefoxos.js",
+          "index.firefoxtv.js",
+          "index.ios.js",
+          "index.kaios.js",
+          "index.macos.js",
+          "index.tizen.js",
+          "index.tizenwatch.js",
+          "index.tvos.js",
+          "index.web.js",
+          "index.webos.js",
+          "index.windows.js",
+          "package.json",
+          "rn-cli.config.js",
+          "rnv-config.json"
+        ]
+      }
+    ]
+  },
+  {
     "id": 30966,
     "name": "flextype",
     "slug": "flextype-95",
@@ -84651,6 +84800,32 @@
         ]
       },
       {
+        "name": "dog-names",
+        "owner": {
+          "login": "sindresorhus"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "TypeScript"],
+        "files": [
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".npmrc",
+          ".travis.yml",
+          "cli.js",
+          "female-dog-names.json",
+          "index.d.ts",
+          "index.js",
+          "index.test-d.ts",
+          "kira.jpg",
+          "license",
+          "male-dog-names.json",
+          "package.json",
+          "readme.md",
+          "test.js"
+        ]
+      },
+      {
         "name": "doge-seed-cli",
         "owner": {
           "login": "sindresorhus"
@@ -87852,6 +88027,28 @@
         ]
       },
       {
+        "name": "gulp-debug",
+        "owner": {
+          "login": "sindresorhus"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript"],
+        "files": [
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".npmrc",
+          ".travis.yml",
+          "gulpfile.js",
+          "index.js",
+          "license",
+          "package.json",
+          "readme.md",
+          "screenshot.png",
+          "test.js"
+        ]
+      },
+      {
         "name": "gulp-dust",
         "owner": {
           "login": "sindresorhus"
@@ -89589,6 +89786,28 @@
       },
       {
         "name": "into-stream",
+        "owner": {
+          "login": "sindresorhus"
+        },
+        "defaultBranch": "master",
+        "languages": ["JavaScript", "TypeScript"],
+        "files": [
+          ".editorconfig",
+          ".gitattributes",
+          ".gitignore",
+          ".npmrc",
+          ".travis.yml",
+          "index.d.ts",
+          "index.js",
+          "index.test-d.ts",
+          "license",
+          "package.json",
+          "readme.md",
+          "test.js"
+        ]
+      },
+      {
+        "name": "invert-kv",
         "owner": {
           "login": "sindresorhus"
         },
@@ -92749,6 +92968,15 @@
           "readme.md",
           "screenshot.png"
         ]
+      },
+      {
+        "name": "meta",
+        "owner": {
+          "login": "sindresorhus"
+        },
+        "defaultBranch": "master",
+        "languages": [],
+        "files": ["readme.md"]
       },
       {
         "name": "mimic-fn",
@@ -106264,6 +106492,21 @@
         "defaultBranch": "master",
         "languages": [],
         "files": [".gitignore", "LICENSE", "README.md"]
+      },
+      {
+        "name": "terraform-external-array-diff",
+        "owner": {
+          "login": "jitesoft"
+        },
+        "defaultBranch": "master",
+        "languages": ["Shell", "HCL"],
+        "files": [
+          "README.md",
+          "diff.sh",
+          "main.tf",
+          "outputs.tf",
+          "variables.tf"
+        ]
       },
       {
         "name": "webpage",
