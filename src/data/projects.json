@@ -7590,8 +7590,8 @@
       "slug": "editorjs",
       "description": "The new block-styled editor that returns clean data output",
       "stats": {
-        "balance": 24241,
-        "yearlyBudget": 221641
+        "balance": 25933,
+        "yearlyBudget": 223333
       },
       "goals": [
         {
@@ -7625,6 +7625,13 @@
           "slug": "hummearth",
           "name": "Humm",
           "totalDonations": 20000
+        },
+        {
+          "id": 42905,
+          "type": "ORGANIZATION",
+          "slug": "bazium",
+          "name": "Bazium",
+          "totalDonations": 2000
         },
         {
           "id": 37933,
@@ -10710,8 +10717,8 @@
       "slug": "gitea",
       "description": "Lightweight code hosting solution written in Go",
       "stats": {
-        "balance": 210899,
-        "yearlyBudget": 311805
+        "balance": 230181,
+        "yearlyBudget": 331087
       },
       "goals": [{}],
       "sponsors": [
@@ -10723,18 +10730,18 @@
           "totalDonations": 100000
         },
         {
+          "id": 18190,
+          "type": "ORGANIZATION",
+          "slug": "manitz-it",
+          "name": "MANITZ IT",
+          "totalDonations": 34500
+        },
+        {
           "id": 1863,
           "type": "ORGANIZATION",
           "slug": "triplebyte",
           "name": "Triplebyte",
           "totalDonations": 19500
-        },
-        {
-          "id": 18190,
-          "type": "ORGANIZATION",
-          "slug": "manitz-it",
-          "name": "MANITZ IT",
-          "totalDonations": 12000
         },
         {
           "id": 16891,
@@ -24579,7 +24586,13 @@
       "name": "redux-callbag",
       "slug": "redux-callbag",
       "description": null,
-      "pledge": true
+      "pledge": true,
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [],
+      "sponsors": []
     }
   },
   {
@@ -24872,7 +24885,13 @@
       "id": 30953,
       "name": "ReNative",
       "slug": "renative",
-      "description": "Build universal cross-platform apps with react native"
+      "description": "Build universal cross-platform apps with react native",
+      "stats": {
+        "balance": 0,
+        "yearlyBudget": 0
+      },
+      "goals": [{}],
+      "sponsors": []
     }
   },
   {
@@ -35088,7 +35107,7 @@
       "description": null,
       "stats": {
         "balance": 283612,
-        "yearlyBudget": 355741
+        "yearlyBudget": 355341
       },
       "goals": [{}],
       "sponsors": [
