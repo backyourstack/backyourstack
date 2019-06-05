@@ -21,7 +21,7 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
-Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm use`.
+Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm install`.
 
 ### Install
 
@@ -65,10 +65,10 @@ Switch to the Open Collective team account:
 
 Make sure that the following secrets are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
 
-| name                   | description |
-| ---------------------- | ----------- |
-| `github_client_id`     | Client id for the GitHub oAuth app |
-| `github_client_secret` | Client secret for the GitHub oAuth app |
+| name                   | description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| `github_client_id`     | Client id for the GitHub oAuth app                           |
+| `github_client_secret` | Client secret for the GitHub oAuth app                       |
 | `github_guest_token`   | GitHub access token used to process unauthenticated requests |
 
 Eg: `now secret add github_client_id {value}`
