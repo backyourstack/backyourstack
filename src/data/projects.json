@@ -23082,7 +23082,6 @@
       "name": "Prettier",
       "slug": "prettier",
       "description": "Prettier is an opinionated code formatter.",
-      "pledge": true,
       "stats": {
         "balance": 17255,
         "yearlyBudget": 44112
