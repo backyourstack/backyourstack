@@ -220,6 +220,24 @@
     }
   },
   {
+    "name": "agent",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jenssegers/agent"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/agent"
+    },
+    "opencollective": {
+      "id": 44100,
+      "name": "jenssegers/agent",
+      "slug": "agent",
+      "description": "👮 A PHP desktop/mobile user agent parser with support for Laravel, based on Mobiledetect"
+    }
+  },
+  {
     "name": "alchemy_cms",
     "packages": [
       {
@@ -1513,6 +1531,24 @@
     ],
     "github": {
       "repo": "AvaloniaUI/Avalonia"
+    }
+  },
+  {
+    "name": "awesdotio",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "awes-io/awes-io"
+      }
+    ],
+    "github": {
+      "repo": "awes-io/awes-io"
+    },
+    "opencollective": {
+      "id": 45135,
+      "name": "Awes.io",
+      "slug": "awesdotio",
+      "description": "Boilerplate based on Laravel and Vue.js. Dedicated packages. Free Laravel Nova and Spark alternative."
     }
   },
   {
@@ -5191,6 +5227,24 @@
     }
   },
   {
+    "name": "color-picker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "c-p"
+      }
+    ],
+    "github": {
+      "repo": "tovic/color-picker"
+    },
+    "opencollective": {
+      "id": 43916,
+      "name": "color-picker",
+      "slug": "color-picker",
+      "description": "A simple color picker plugin written in pure JavaScript, for modern browsers."
+    }
+  },
+  {
     "name": "color-space",
     "packages": [
       {
@@ -5564,6 +5618,56 @@
         "balance": 831,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "create-react-app",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "babel-plugin-named-asset-import"
+      },
+      {
+        "type": "npm",
+        "name": "babel-preset-react-app"
+      },
+      {
+        "type": "npm",
+        "name": "confusing-browser-globals"
+      },
+      {
+        "type": "npm",
+        "name": "create-react-app"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-config-react-app"
+      },
+      {
+        "type": "npm",
+        "name": "react-app-polyfill"
+      },
+      {
+        "type": "npm",
+        "name": "react-dev-utils"
+      },
+      {
+        "type": "npm",
+        "name": "react-error-overlay"
+      },
+      {
+        "type": "npm",
+        "name": "react-scripts"
+      }
+    ],
+    "github": {
+      "repo": "facebook/create-react-app"
+    },
+    "opencollective": {
+      "id": 43741,
+      "name": "Create React App",
+      "slug": "create-react-app",
+      "description": "Set up a modern web app by running one command."
     }
   },
   {
@@ -6290,6 +6394,24 @@
     }
   },
   {
+    "name": "date",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jenssegers/date"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/date"
+    },
+    "opencollective": {
+      "id": 44104,
+      "name": "jenssegers/date",
+      "slug": "date",
+      "description": "🗓 A library to help you work with dates in multiple languages, based on Carbon."
+    }
+  },
+  {
     "name": "date-fns",
     "packages": [
       {
@@ -6712,6 +6834,24 @@
     }
   },
   {
+    "name": "django-admin-interface",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-admin-interface"
+      }
+    ],
+    "github": {
+      "repo": "fabiocaccamo/django-admin-interface"
+    },
+    "opencollective": {
+      "id": 45468,
+      "name": "django-admin-interface",
+      "slug": "django-admin-interface",
+      "description": "django-admin-interface is a customizable responsive admin interface, based on a modern flat theme, it lets you customize the admin title, logo and colors by the admin itself. Popup windows replaced by modals."
+    }
+  },
+  {
     "name": "django-crm",
     "packages": [
       {
@@ -6781,6 +6921,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "django-maintenance-mode",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-maintenance-mode"
+      }
+    ],
+    "github": {
+      "repo": "fabiocaccamo/django-maintenance-mode"
+    },
+    "opencollective": {
+      "id": 45517,
+      "name": "django-maintenance-mode",
+      "slug": "django-maintenance-mode",
+      "description": "django-maintenance-mode shows a 503 error page when maintenance mode is on."
     }
   },
   {
@@ -7304,6 +7462,24 @@
     }
   },
   {
+    "name": "dorita980",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "dorita980"
+      }
+    ],
+    "github": {
+      "repo": "koalazak/dorita980"
+    },
+    "opencollective": {
+      "id": 44510,
+      "name": "dorita980",
+      "slug": "dorita980",
+      "description": "Unofficial iRobot Roomba 900 series 980 / i7 / i7+ node.js library / SDK to control your robot"
+    }
+  },
+  {
     "name": "dotenv",
     "packages": [
       {
@@ -7499,6 +7675,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "dumperjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "dumper.js"
+      }
+    ],
+    "github": {
+      "repo": "ziishaned/dumper.js"
+    },
+    "opencollective": {
+      "id": 44464,
+      "name": "dumper.js",
+      "slug": "dumperjs",
+      "description": "A better and pretty variable inspector for your Node.js applications"
     }
   },
   {
@@ -9424,6 +9618,24 @@
     }
   },
   {
+    "name": "finta",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "finta"
+      }
+    ],
+    "github": {
+      "repo": "peerchemist/finta"
+    },
+    "opencollective": {
+      "id": 45007,
+      "name": "finta",
+      "slug": "finta",
+      "description": "Common financial technical indicators implemented in Pandas."
+    }
+  },
+  {
     "name": "firefly-iii",
     "packages": [
       {
@@ -9769,6 +9981,132 @@
           "totalDonations": 900
         }
       ]
+    }
+  },
+  {
+    "name": "fof",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "flagrow/ads"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/flarum-ext-analytics"
+      },
+      {
+        "type": "composer",
+        "name": "fof/auth-discord"
+      },
+      {
+        "type": "composer",
+        "name": "fof/bbcode-details"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/byobu"
+      },
+      {
+        "type": "composer",
+        "name": "fof/console"
+      },
+      {
+        "type": "composer",
+        "name": "fof/custom-footer"
+      },
+      {
+        "type": "composer",
+        "name": "fof/default-group"
+      },
+      {
+        "type": "composer",
+        "name": "fof/default-user-preferences"
+      },
+      {
+        "type": "composer",
+        "name": "fof/formatting"
+      },
+      {
+        "type": "composer",
+        "name": "fof/frontpage"
+      },
+      {
+        "type": "composer",
+        "name": "fof/links"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/masquerade"
+      },
+      {
+        "type": "composer",
+        "name": "fof/merge-discussions"
+      },
+      {
+        "type": "composer",
+        "name": "fof/pages"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/passport"
+      },
+      {
+        "type": "composer",
+        "name": "fof/prevent-necrobumping"
+      },
+      {
+        "type": "composer",
+        "name": "fof/profile-image-crop"
+      },
+      {
+        "type": "composer",
+        "name": "fof/recaptcha"
+      },
+      {
+        "type": "composer",
+        "name": "fof/secure-https"
+      },
+      {
+        "type": "composer",
+        "name": "fof/sentry"
+      },
+      {
+        "type": "composer",
+        "name": "fof/socialprofile"
+      },
+      {
+        "type": "composer",
+        "name": "fof/spamblock"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/split"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/subscribed"
+      },
+      {
+        "type": "composer",
+        "name": "fof/transliterator"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/upload"
+      },
+      {
+        "type": "composer",
+        "name": "fof/user-bio"
+      }
+    ],
+    "github": {
+      "org": "friendsofflarum"
+    },
+    "opencollective": {
+      "id": 44631,
+      "name": "Friends of Flarum",
+      "slug": "fof",
+      "description": "Open source extensions for Flarum "
     }
   },
   {
@@ -10374,6 +10712,10 @@
       {
         "type": "npm",
         "name": "gatsby-telemetry"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-graphiql-explorer"
       }
     ],
     "opencollective": {
@@ -10559,6 +10901,24 @@
     }
   },
   {
+    "name": "gentelella-rtl",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "gentelella-rtl"
+      }
+    ],
+    "github": {
+      "repo": "mortezakarimi/gentelella-rtl"
+    },
+    "opencollective": {
+      "id": 45254,
+      "name": "Gentelella RTL admin template",
+      "slug": "gentelella-rtl",
+      "description": "Free RTL Bootstrap 3 Admin Template"
+    }
+  },
+  {
     "name": "geojson-net",
     "packages": [
       {
@@ -10651,6 +11011,25 @@
         "yearlyBudget": 253508
       },
       "goals": []
+    }
+  },
+  {
+    "name": "gin",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/gin-gonic/gin"
+      }
+    ],
+    "github": {
+      "repo": "gin-gonic/gin"
+    },
+    "opencollective": {
+      "id": 44717,
+      "name": "Gin",
+      "slug": "gin",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -13153,6 +13532,24 @@
     }
   },
   {
+    "name": "imagehash",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jenssegers/imagehash"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/imagehash"
+    },
+    "opencollective": {
+      "id": 44102,
+      "name": "jenssegers/imagehash",
+      "slug": "imagehash",
+      "description": "🌄 Perceptual image hashing for PHP"
+    }
+  },
+  {
     "name": "imagesharp",
     "packages": [
       {
@@ -13980,6 +14377,46 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "jenssegers-blade",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jenssegers/blade"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/blade"
+    },
+    "opencollective": {
+      "id": 44212,
+      "name": "jenssegers/blade",
+      "slug": "jenssegers-blade",
+      "description": "🔪 A standalone version of Laravel's Blade templating engine for use outside of Laravel."
+    }
+  },
+  {
+    "name": "jenssegersoptimus",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "propaganistas/laravel-fakeid"
+      },
+      {
+        "type": "composer",
+        "name": "jenssegers/optimus"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/optimus"
+    },
+    "opencollective": {
+      "id": 44106,
+      "name": "jenssegers/optimus",
+      "slug": "jenssegersoptimus",
+      "description": "🤖 Id obfuscation based on Knuth's multiplicative hashing method for PHP."
     }
   },
   {
@@ -15884,6 +16321,24 @@
     }
   },
   {
+    "name": "laravel-mongodb",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jenssegers/mongodb"
+      }
+    ],
+    "github": {
+      "repo": "jenssegers/laravel-mongodb"
+    },
+    "opencollective": {
+      "id": 44101,
+      "name": "jenssegers/laravel-mongodb",
+      "slug": "laravel-mongodb",
+      "description": "A MongoDB based Eloquent model and Query builder for Laravel (Moloquent)"
+    }
+  },
+  {
     "name": "laravel-scout-tntsearch-driver",
     "packages": [
       {
@@ -16674,6 +17129,46 @@
     }
   },
   {
+    "name": "mailgo",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "mailgo"
+      }
+    ],
+    "github": {
+      "repo": "manzinello/mailgo"
+    },
+    "opencollective": {
+      "id": 44647,
+      "name": "mailgo",
+      "slug": "mailgo",
+      "description": "💌 mailgo, a different mailto: more possibilities, less spam (WIP)"
+    }
+  },
+  {
+    "name": "maintainerati",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "maintainerati/bikeshed"
+      },
+      {
+        "type": "npm",
+        "name": "@maintainerati/bikeshed-assets"
+      }
+    ],
+    "github": {
+      "org": "maintainerati"
+    },
+    "opencollective": {
+      "id": 42022,
+      "name": "Maintainerati",
+      "slug": "maintainerati",
+      "description": "Maintainerati is a series of events across the globe for the community of open source maintainers to gather, present, and discuss the unique and pressing challenges they see in a face-to-face setting."
+    }
+  },
+  {
     "name": "mamba",
     "packages": [
       {
@@ -17033,6 +17528,72 @@
     }
   },
   {
+    "name": "measurement-lab",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/annotation-service"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/bmctool"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/pusher"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/gcs-opensource"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/go"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/index2ip"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/ndt-server"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/ndt7-client-go"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/ndt7-client-go/cmd/ndt7-client"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/nodeinfo"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/rebot"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/tcp-info"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/uuid"
+      }
+    ],
+    "github": {
+      "org": "m-lab"
+    },
+    "opencollective": {
+      "id": 43155,
+      "name": "Measurement Lab",
+      "slug": "measurement-lab",
+      "description": "measure the internet, save the data, make it universally accessible and useful."
+    }
+  },
+  {
     "name": "mediasoup",
     "packages": [
       {
@@ -17212,6 +17773,50 @@
       {
         "type": "npm",
         "name": "obs-store"
+      },
+      {
+        "type": "npm",
+        "name": "eth-json-rpc-filters"
+      },
+      {
+        "type": "npm",
+        "name": "eth-json-rpc-infura"
+      },
+      {
+        "type": "npm",
+        "name": "eth-method-registry"
+      },
+      {
+        "type": "npm",
+        "name": "eth-login-controller"
+      },
+      {
+        "type": "npm",
+        "name": "json-rpc-capabilities-middleware"
+      },
+      {
+        "type": "npm",
+        "name": "json-rpc-engine"
+      },
+      {
+        "type": "npm",
+        "name": "json-rpc-middleware-stream"
+      },
+      {
+        "type": "npm",
+        "name": "nonce-tracker"
+      },
+      {
+        "type": "npm",
+        "name": "react-metamask-login-button"
+      },
+      {
+        "type": "npm",
+        "name": "safe-event-emitter"
+      },
+      {
+        "type": "npm",
+        "name": "tx-state-manager"
       }
     ],
     "github": {
@@ -17384,6 +17989,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "micromustache",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "micromustache"
+      }
+    ],
+    "github": {
+      "repo": "userpixel/micromustache"
+    },
+    "opencollective": {
+      "id": 45301,
+      "name": "micromustache",
+      "slug": "micromustache",
+      "description": "An extremely fast and small sub-implementation of the {{mustache}} template engine for JavaScript"
     }
   },
   {
@@ -18152,6 +18775,24 @@
     }
   },
   {
+    "name": "motus",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "motus"
+      }
+    ],
+    "github": {
+      "repo": "alexcambose/motus"
+    },
+    "opencollective": {
+      "id": 45261,
+      "name": "motus",
+      "slug": "motus",
+      "description": "Animation library that mimics CSS keyframes when scrolling."
+    }
+  },
+  {
     "name": "mpvue-weui",
     "packages": [
       {
@@ -18248,6 +18889,24 @@
     ],
     "github": {
       "repo": "MvvmCross/MvvmCross"
+    }
+  },
+  {
+    "name": "nativebase",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "native-base"
+      }
+    ],
+    "github": {
+      "repo": "GeekyAnts/NativeBase"
+    },
+    "opencollective": {
+      "id": 44067,
+      "name": "NativeBase",
+      "slug": "nativebase",
+      "description": "Essential cross-platform UI components for React Native"
     }
   },
   {
@@ -18957,6 +19616,10 @@
       {
         "type": "npm",
         "name": "@nivo/tooltip"
+      },
+      {
+        "type": "npm",
+        "name": "@nivo/bump"
       }
     ],
     "github": {
@@ -20057,73 +20720,6 @@
     }
   },
   {
-    "name": "opencollective",
-    "packages": [
-      {
-        "type": "npm",
-        "name": "babel-preset-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "eslint-config-opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-jobs"
-      },
-      {
-        "type": "npm",
-        "name": "opencollective-postinstall"
-      },
-      {
-        "type": "npm",
-        "name": "express-server-status"
-      },
-      {
-        "type": "npm",
-        "name": "intelligence"
-      },
-      {
-        "type": "npm",
-        "name": "ledger"
-      }
-    ],
-    "github": {
-      "org": "opencollective"
-    },
-    "opencollective": {
-      "id": 811,
-      "name": "Open Collective",
-      "slug": "opencollective-oss",
-      "description": "We are on a mission to create a new generation of association transparent by design",
-      "sponsors": [
-        {
-          "id": 4409,
-          "type": "ORGANIZATION",
-          "slug": "frontendmasters",
-          "name": "Frontend Masters",
-          "totalDonations": 10000
-        },
-        {
-          "id": 11347,
-          "type": "ORGANIZATION",
-          "slug": "mixmax",
-          "name": "Mixmax",
-          "totalDonations": 5000
-        }
-      ],
-      "goals": [{}],
-      "stats": {
-        "balance": 1934,
-        "yearlyBudget": 21850
-      }
-    }
-  },
-  {
     "name": "openfl",
     "packages": [
       {
@@ -20664,6 +21260,24 @@
     }
   },
   {
+    "name": "p3x-redis-ui",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "p3x-redis-ui"
+      }
+    ],
+    "github": {
+      "repo": "patrikx3/redis-ui"
+    },
+    "opencollective": {
+      "id": 44553,
+      "name": "p3x-redis-ui",
+      "slug": "p3x-redis-ui",
+      "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)"
+    }
+  },
+  {
     "name": "pact-foundation",
     "packages": [
       {
@@ -20988,6 +21602,24 @@
         "name": "passport-local"
       }
     ]
+  },
+  {
+    "name": "patchwork",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ssb-patchwork"
+      }
+    ],
+    "github": {
+      "repo": "ssbc/patchwork"
+    },
+    "opencollective": {
+      "id": 45205,
+      "name": "Patchwork",
+      "slug": "patchwork",
+      "description": "A decentralized messaging and sharing app built on top of Secure Scuttlebutt (SSB)."
+    }
   },
   {
     "name": "peer",
@@ -22463,6 +23095,24 @@
     }
   },
   {
+    "name": "python-nox",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "nox"
+      }
+    ],
+    "github": {
+      "repo": "theacodes/nox"
+    },
+    "opencollective": {
+      "id": 43234,
+      "name": "Nox",
+      "slug": "python-nox",
+      "description": "Flexible test automation for Python"
+    }
+  },
+  {
     "name": "python-sortedcontainers",
     "packages": [
       {
@@ -22929,6 +23579,24 @@
     }
   },
   {
+    "name": "react-d3-graph",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-d3-graph"
+      }
+    ],
+    "github": {
+      "repo": "danielcaldas/react-d3-graph"
+    },
+    "opencollective": {
+      "id": 44492,
+      "name": "react-d3-graph",
+      "slug": "react-d3-graph",
+      "description": "Interactive and configurable graphs with react and d3 effortlessly"
+    }
+  },
+  {
     "name": "react-date-picker",
     "packages": [
       {
@@ -23300,6 +23968,14 @@
       {
         "type": "npm",
         "name": "@react-native-firebase/template"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/database"
+      },
+      {
+        "type": "npm",
+        "name": "@react-native-firebase/ml-natural-language"
       }
     ],
     "github": {
@@ -24148,6 +24824,24 @@
     }
   },
   {
+    "name": "react-use",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-use"
+      }
+    ],
+    "github": {
+      "repo": "streamich/react-use"
+    },
+    "opencollective": {
+      "id": 45249,
+      "name": "react-use",
+      "slug": "react-use",
+      "description": "React Hooks — 👍"
+    }
+  },
+  {
     "name": "react-virtualized",
     "packages": [
       {
@@ -24489,6 +25183,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "rectorphp",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "rector/rector"
+      }
+    ],
+    "github": {
+      "repo": "rectorphp/rector"
+    },
+    "opencollective": {
+      "id": 44400,
+      "name": "Rector",
+      "slug": "rectorphp",
+      "description": "Instant Upgrades and Instant Refactoring of any PHP 5.3+ code"
     }
   },
   {
@@ -24876,6 +25588,18 @@
       {
         "type": "npm",
         "name": "renative"
+      },
+      {
+        "type": "npm",
+        "name": "renative-template-blank"
+      },
+      {
+        "type": "npm",
+        "name": "renative-template-hello-world"
+      },
+      {
+        "type": "npm",
+        "name": "rnv"
       }
     ],
     "github": {
@@ -29754,6 +30478,18 @@
       {
         "type": "npm",
         "name": "type-fest"
+      },
+      {
+        "type": "npm",
+        "name": "open"
+      },
+      {
+        "type": "npm",
+        "name": "open-cli"
+      },
+      {
+        "type": "npm",
+        "name": "php-server"
       }
     ],
     "github": {
@@ -32517,6 +33253,18 @@
       {
         "type": "composer",
         "name": "tenancy/identification-driver-queue"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-config"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-models"
+      },
+      {
+        "type": "composer",
+        "name": "hyn/multi-tenant"
       }
     ],
     "github": {
@@ -37030,6 +37778,24 @@
         "name": "winston"
       }
     ]
+  },
+  {
+    "name": "wp-papi",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "wp-papi/papi"
+      }
+    ],
+    "github": {
+      "repo": "wp-papi/papi"
+    },
+    "opencollective": {
+      "id": 45374,
+      "name": "Papi",
+      "slug": "wp-papi",
+      "description": "WordPress Page Type API with custom fields"
+    }
   },
   {
     "name": "wpgulp",
