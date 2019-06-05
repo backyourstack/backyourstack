@@ -25,6 +25,12 @@ This is not easy. Review the staged changes one more time.
 git commit -m "data(projects): update"
 ```
 
+Now, you should remove all non-commited data from `projects.json`:
+
+```
+git checkout src/data/projects.json
+```
+
 ## Syncing project with Open Collective
 
 ```
