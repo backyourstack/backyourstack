@@ -3,7 +3,7 @@ import logger from '../logger';
 
 import { uniq, pick, get } from 'lodash';
 
-import { fetchWithOctokit, getContent } from '../lib/github';
+import { fetchWithOctokit, getContent, silentError } from '../lib/github';
 
 import { getCollectives, getProjects, saveProjects } from '../data';
 
@@ -25,7 +25,9 @@ const regexps = [
         const readme = await fetchWithOctokit('repos.getReadme', {
           owner: repo.owner.login,
           repo: repo.name,
-        }).then(getContent);
+        })
+          .then(getContent)
+          .catch(silentError);
         if (readme) {
           let result;
           do {
