@@ -3,7 +3,7 @@
 </p>
 
 [![Build Status](https://travis-ci.org/opencollective/backyourstack.svg?branch=master)](https://travis-ci.org/opencollective/backyourstack)
-[![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
+[![Financial Contributors on Open Collective](https://opencollective.com/backyourstack/all/badge.svg?label=financial+contributors)](https://opencollective.com/backyourstack) [![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
 [![Dependency Status](https://david-dm.org/opencollective/backyourstack/status.svg)](https://david-dm.org/opencollective/backyourstack)
 [![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/backyourstack.svg)](https://greenkeeper.io/)
 
@@ -82,3 +82,33 @@ First:
 If everything is ok, finalize with:
 
 `now alias`
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/opencollective/backyourstack/graphs/contributors"><img src="https://opencollective.com/backyourstack/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/backyourstack/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/backyourstack"><img src="https://opencollective.com/backyourstack/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/backyourstack/contribute)]
+
+<a href="https://opencollective.com/backyourstack/organization/0/website"><img src="https://opencollective.com/backyourstack/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/1/website"><img src="https://opencollective.com/backyourstack/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/2/website"><img src="https://opencollective.com/backyourstack/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/3/website"><img src="https://opencollective.com/backyourstack/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/4/website"><img src="https://opencollective.com/backyourstack/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/5/website"><img src="https://opencollective.com/backyourstack/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/6/website"><img src="https://opencollective.com/backyourstack/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/7/website"><img src="https://opencollective.com/backyourstack/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/8/website"><img src="https://opencollective.com/backyourstack/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/backyourstack/organization/9/website"><img src="https://opencollective.com/backyourstack/organization/9/avatar.svg"></a>
