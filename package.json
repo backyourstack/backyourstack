@@ -22,7 +22,8 @@
     "test": "NODE_ENV=test jest",
     "update-collectives": "babel-node src/scripts/update-collectives",
     "detect-packages": "./src/scripts/detect-all-packages.sh",
-    "sync-projects-with-opencollective": "babel-node src/scripts/sync-projects-with-opencollective"
+    "sync-projects-with-opencollective": "babel-node src/scripts/sync-projects-with-opencollective",
+    "postinstall": "opencollective-postinstall"
   },
   "author": {
     "name": "Open Collective, Inc.",
@@ -53,6 +54,7 @@
     "next": "8.1.0",
     "next-routes": "^1.4.2",
     "nprogress": "^0.2.0",
+    "opencollective-postinstall": "^2.0.2",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0",
     "prop-types": "^15.7.2",
@@ -115,5 +117,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/backyourstack"
   }
 }
