@@ -110766,50 +110766,6 @@
     ]
   },
   {
-    "id": 44492,
-    "name": "react-d3-graph",
-    "slug": "react-d3-graph",
-    "description": "Interactive and configurable graphs with react and d3 effortlessly",
-    "github": {
-      "repo": "danielcaldas/react-d3-graph"
-    },
-    "repos": [
-      {
-        "name": "react-d3-graph",
-        "owner": {
-          "login": "danielcaldas"
-        },
-        "defaultBranch": "master",
-        "languages": ["HTML", "JavaScript", "CSS"],
-        "files": [
-          ".babelrc",
-          ".editorconfig",
-          ".eslintignore",
-          ".eslintrc.js",
-          ".eslintrc.test.config.js",
-          ".gitignore",
-          ".npmignore",
-          ".npmrc",
-          ".prettierignore",
-          ".prettierrc.js",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "LICENSE",
-          "README.md",
-          "RELEASE_PROCESS.md",
-          "cypress.json",
-          "documentation.yml",
-          "jest.config.js",
-          "package-lock.json",
-          "package.json",
-          "tsconfig.json",
-          "webpack.config.dist.js",
-          "webpack.config.js"
-        ]
-      }
-    ]
-  },
-  {
     "id": 44505,
     "name": "Event Sourcing in .NET Core",
     "slug": "eventsourcingnetcore",
@@ -112335,53 +112291,6 @@
           "pureftpd-mysql.conf",
           "pureftpd-pgsql.conf",
           "pureftpd.schema"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 45374,
-    "name": "Papi",
-    "slug": "wp-papi",
-    "description": "WordPress Page Type API with custom fields",
-    "github": {
-      "repo": "wp-papi/papi"
-    },
-    "repos": [
-      {
-        "name": "papi",
-        "owner": {
-          "login": "wp-papi"
-        },
-        "defaultBranch": "master",
-        "languages": [
-          "JavaScript",
-          "CSS",
-          "PHP",
-          "Shell",
-          "Makefile",
-          "Gherkin"
-        ],
-        "files": [
-          ".editorconfig",
-          ".gitattributes",
-          ".gitignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "LICENSE",
-          "Makefile",
-          "README.md",
-          "behat.yml",
-          "composer.json",
-          "docker-compose.yml",
-          "package.json",
-          "papi-loader.php",
-          "phpcs.xml",
-          "phpunit.xml.dist",
-          "webpack.config.js",
-          "yarn.lock"
         ]
       }
     ]
