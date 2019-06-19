@@ -10,7 +10,7 @@ import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
-import { get, has } from 'lodash';
+import { get, has, pick } from 'lodash';
 
 import routes from '../routes';
 import logger from '../logger';
@@ -184,6 +184,36 @@ nextApp.prepare().then(() => {
       delete sessionFiles[id];
     }
     res.send('Ok');
+  });
+
+  server.get('/:id/backing.json', async (req, res) => {
+    const accessToken = get(req, 'session.passport.user.accessToken');
+    const profileData = await getProfileData(req.params.id, accessToken);
+
+    const { recommendations, opencollectiveAccount } = profileData;
+
+    const backing = recommendations
+      .filter(r => r.opencollective)
+      .filter(r => r.opencollective.pledge !== true)
+      .map(recommendation => {
+        const { opencollective, github } = recommendation;
+        const order =
+          opencollectiveAccount &&
+          get(opencollectiveAccount, 'orders.nodes', []).find(
+            order =>
+              opencollective && opencollective.slug === order.toAccount.slug,
+          );
+        if (order) {
+          opencollective.order = order;
+        }
+        return {
+          weigh: 100,
+          opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
+          github: github,
+        };
+      });
+
+    res.send(backing);
   });
 
   server.use('/static', (req, res, next) => {
