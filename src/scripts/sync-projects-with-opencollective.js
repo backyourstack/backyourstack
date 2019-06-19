@@ -33,11 +33,7 @@ fs.readJson(filename)
           project.github = { repo: githubRepo };
         }
         // Pledge
-        if (
-          data.tags &&
-          data.tags.includes('pledged') &&
-          data.isActive === false
-        ) {
+        if (data.isPledged) {
           data.pledge = true;
         } else {
           delete data.pledge;

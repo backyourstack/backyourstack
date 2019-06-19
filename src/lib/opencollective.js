@@ -37,6 +37,7 @@ const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
     website
     githubHandle
     tags
+    isPledged
     stats {
       balance
       yearlyBudget
@@ -128,7 +129,8 @@ function fetchCollectiveWithMembers(slug) {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
     })
-    .catch(() => {
+    .catch(err => {
+      console.log(err);
       cache.set(cacheKey, null);
       return null;
     });
