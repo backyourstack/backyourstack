@@ -683,6 +683,24 @@
     }
   },
   {
+    "name": "angular-tree-component",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "angular-tree-component"
+      }
+    ],
+    "github": {
+      "repo": "500tech/angular-tree-component"
+    },
+    "opencollective": {
+      "id": 45763,
+      "name": "Angular Tree Component",
+      "slug": "angular-tree-component",
+      "description": "A simple yet powerful tree component for Angular (>=2)"
+    }
+  },
+  {
     "name": "anspress",
     "packages": [
       {
@@ -1118,6 +1136,10 @@
       {
         "type": "nuget",
         "name": "ApprovalTests.Wpf"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.WinForms"
       }
     ],
     "github": {
@@ -3233,6 +3255,42 @@
     }
   },
   {
+    "name": "bootstrap-fileinput",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "bootstrap-fileinput"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/bootstrap-fileinput"
+    },
+    "opencollective": {
+      "id": 46002,
+      "name": "bootstrap-fileinput",
+      "slug": "bootstrap-fileinput",
+      "description": "An enhanced HTML 5 file input for Bootstrap 3.x with file preview, multiple selection, and more features."
+    }
+  },
+  {
+    "name": "bootstrap-star-rating",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "bootstrap-star-rating"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/bootstrap-star-rating"
+    },
+    "opencollective": {
+      "id": 47460,
+      "name": "bootstrap-star-rating",
+      "slug": "bootstrap-star-rating",
+      "description": "A simple yet powerful JQuery star rating plugin with fractional rating support."
+    }
+  },
+  {
     "name": "bootstrap-table",
     "packages": [
       {
@@ -4962,6 +5020,28 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "code-surfer",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "code-surfer"
+      },
+      {
+        "type": "npm",
+        "name": "mdx-deck-code-surfer"
+      }
+    ],
+    "github": {
+      "repo": "pomber/code-surfer"
+    },
+    "opencollective": {
+      "id": 47210,
+      "name": "Code Surfer",
+      "slug": "code-surfer",
+      "description": "Next generation code slides <🏄/>"
     }
   },
   {
@@ -6793,6 +6873,24 @@
     }
   },
   {
+    "name": "dependent-dropdown",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "dependent-dropdown"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/dependent-dropdown"
+    },
+    "opencollective": {
+      "id": 47457,
+      "name": "dependent-dropdown",
+      "slug": "dependent-dropdown",
+      "description": "JQuery plugin that enables to add and control multi level dependent dropdown lists."
+    }
+  },
+  {
     "name": "devise_token_auth",
     "packages": [
       {
@@ -7332,6 +7430,10 @@
       {
         "type": "npm",
         "name": "@docusaurus/theme-search-algolia"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/theme-live-codeblock"
       }
     ],
     "github": {
@@ -8448,6 +8550,24 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "envinfo",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "envinfo"
+      }
+    ],
+    "github": {
+      "repo": "tabrindle/envinfo"
+    },
+    "opencollective": {
+      "id": 45795,
+      "name": "envinfo",
+      "slug": "envinfo",
+      "description": "Generate a report about your development environment for debugging and issue reporting"
     }
   },
   {
@@ -9669,6 +9789,10 @@
       {
         "type": "npm",
         "name": "fela-sort-classnames"
+      },
+      {
+        "type": "npm",
+        "name": "fela-plugin-expand-shorthand"
       }
     ],
     "opencollective": {
@@ -10262,6 +10386,26 @@
       {
         "type": "composer",
         "name": "fof/user-bio"
+      },
+      {
+        "type": "composer",
+        "name": "fof/auth-gitlab"
+      },
+      {
+        "type": "composer",
+        "name": "fof/extend"
+      },
+      {
+        "type": "composer",
+        "name": "fof/open-collective"
+      },
+      {
+        "type": "composer",
+        "name": "fof/share-social"
+      },
+      {
+        "type": "composer",
+        "name": "fof/user-directory"
       }
     ],
     "github": {
@@ -11444,6 +11588,24 @@
     }
   },
   {
+    "name": "googlecl",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "google_cl"
+      }
+    ],
+    "github": {
+      "repo": "vinitkumar/googlecl"
+    },
+    "opencollective": {
+      "id": 46485,
+      "name": "GoogleCL",
+      "slug": "googlecl",
+      "description": "Join googlecl-dev chat here 👉🏻"
+    }
+  },
+  {
     "name": "gorm",
     "opencollective": {
       "id": 12910,
@@ -12202,6 +12364,74 @@
       {
         "type": "npm",
         "name": "vinyl-sourcemap"
+      },
+      {
+        "type": "npm",
+        "name": "emit-mapper"
+      },
+      {
+        "type": "npm",
+        "name": "empty-dir"
+      },
+      {
+        "type": "npm",
+        "name": "evented-require"
+      },
+      {
+        "type": "npm",
+        "name": "fancy-log"
+      },
+      {
+        "type": "npm",
+        "name": "findup-sync"
+      },
+      {
+        "type": "npm",
+        "name": "fined"
+      },
+      {
+        "type": "npm",
+        "name": "flagged-respawn"
+      },
+      {
+        "type": "npm",
+        "name": "glob-parent"
+      },
+      {
+        "type": "npm",
+        "name": "glogg"
+      },
+      {
+        "type": "npm",
+        "name": "hacker"
+      },
+      {
+        "type": "npm",
+        "name": "ordered-read-streams"
+      },
+      {
+        "type": "npm",
+        "name": "parse-node-version"
+      },
+      {
+        "type": "npm",
+        "name": "path-dirname"
+      },
+      {
+        "type": "npm",
+        "name": "rechoir"
+      },
+      {
+        "type": "npm",
+        "name": "@gulpjs/update-template"
+      },
+      {
+        "type": "npm",
+        "name": "v8flags"
+      },
+      {
+        "type": "npm",
+        "name": "vinyl-contents"
       }
     ],
     "opencollective": {
@@ -14352,6 +14582,24 @@
     }
   },
   {
+    "name": "jaime-olivares-opensource",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "ZipStorer"
+      }
+    ],
+    "github": {
+      "repo": "jaime-olivares/zipstorer"
+    },
+    "opencollective": {
+      "id": 45914,
+      "name": "Jaime Olivares' open source",
+      "slug": "jaime-olivares-opensource",
+      "description": "A Pure C# Class to Store Files in Zip"
+    }
+  },
+  {
     "name": "jasminebdd",
     "packages": [
       {
@@ -15509,6 +15757,10 @@
       {
         "type": "npm",
         "name": "jss-starter-kit"
+      },
+      {
+        "type": "npm",
+        "name": "css-jss"
       }
     ],
     "github": {
@@ -18107,6 +18359,18 @@
       {
         "type": "npm",
         "name": "tx-state-manager"
+      },
+      {
+        "type": "npm",
+        "name": "pending-tx-tracker"
+      },
+      {
+        "type": "npm",
+        "name": "sesify"
+      },
+      {
+        "type": "npm",
+        "name": "tx-gas-utils"
       }
     ],
     "github": {
@@ -19743,6 +20007,24 @@
     }
   },
   {
+    "name": "ngx-translate-extract",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@biesbjerg/ngx-translate-extract"
+      }
+    ],
+    "github": {
+      "repo": "biesbjerg/ngx-translate-extract"
+    },
+    "opencollective": {
+      "id": 46642,
+      "name": "ngx-translate-extract",
+      "slug": "ngx-translate-extract",
+      "description": null
+    }
+  },
+  {
     "name": "ngxs",
     "packages": [
       {
@@ -20080,6 +20362,24 @@
         "balance": 302474,
         "yearlyBudget": 18887
       }
+    }
+  },
+  {
+    "name": "node-argon2",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "argon2"
+      }
+    ],
+    "github": {
+      "repo": "ranisalt/node-argon2"
+    },
+    "opencollective": {
+      "id": 47284,
+      "name": "Argon2 for Node.js",
+      "slug": "node-argon2",
+      "description": "Node.js bindings for Argon2 hashing algorithm"
     }
   },
   {
@@ -20459,6 +20759,24 @@
     }
   },
   {
+    "name": "nodetwitter",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "nwitter"
+      }
+    ],
+    "github": {
+      "repo": "vinitkumar/node-twitter"
+    },
+    "opencollective": {
+      "id": 46483,
+      "name": "Node Twitter",
+      "slug": "nodetwitter",
+      "description": "Twitter clone with node.js"
+    }
+  },
+  {
     "name": "notifynder",
     "packages": [
       {
@@ -20553,6 +20871,14 @@
       {
         "type": "nuget",
         "name": "NServiceBus.ApprovalTests"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.MessagePack"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.MsgPack"
       }
     ],
     "github": {
@@ -21665,6 +21991,24 @@
     }
   },
   {
+    "name": "pangu",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "pangu"
+      }
+    ],
+    "github": {
+      "repo": "vinta/pangu.js"
+    },
+    "opencollective": {
+      "id": 45958,
+      "name": "pangu",
+      "slug": "pangu",
+      "description": "Paranoid text spacing in JavaScript"
+    }
+  },
+  {
     "name": "parcel",
     "packages": [
       {
@@ -21940,6 +22284,24 @@
     ]
   },
   {
+    "name": "patchbay",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "patchbay"
+      }
+    ],
+    "github": {
+      "repo": "ssbc/patchbay"
+    },
+    "opencollective": {
+      "id": 45859,
+      "name": "patchbay",
+      "slug": "patchbay",
+      "description": "An alternative Secure Scuttlebutt client interface that is fully compatible with Patchwork"
+    }
+  },
+  {
     "name": "patchwork",
     "packages": [
       {
@@ -21961,6 +22323,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "peachpiecompiler",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Peachpie.App"
+      }
+    ],
+    "github": {
+      "repo": "peachpiecompiler/peachpie"
+    },
+    "opencollective": {
+      "id": 45777,
+      "name": "PeachPie Compiler",
+      "slug": "peachpiecompiler",
+      "description": "PeachPie - the PHP compiler and runtime for .NET and .NET Core"
     }
   },
   {
@@ -22662,6 +23042,36 @@
     }
   },
   {
+    "name": "polka",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "polka"
+      },
+      {
+        "type": "npm",
+        "name": "@polka/send-type"
+      },
+      {
+        "type": "npm",
+        "name": "@polka/send"
+      },
+      {
+        "type": "npm",
+        "name": "@polka/url"
+      }
+    ],
+    "github": {
+      "repo": "lukeed/polka"
+    },
+    "opencollective": {
+      "id": 46703,
+      "name": "Polka",
+      "slug": "polka",
+      "description": "A micro web server so fast, it'll make you dance! :dancers:"
+    }
+  },
+  {
     "name": "pongo2",
     "packages": [
       {
@@ -23113,6 +23523,24 @@
     }
   },
   {
+    "name": "printthis",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "print-this"
+      }
+    ],
+    "github": {
+      "repo": "jasonday/printThis"
+    },
+    "opencollective": {
+      "id": 46068,
+      "name": "printThis",
+      "slug": "printthis",
+      "description": "jQuery printing plugin; print specific elements on a page"
+    }
+  },
+  {
     "name": "property_web_builder",
     "packages": [
       {
@@ -23374,6 +23802,88 @@
           "totalDonations": 1000
         }
       ]
+    }
+  },
+  {
+    "name": "pwa",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@pwa/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/core"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-brotli"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-buble"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-critters"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-eslint"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-gzip"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-offline"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-prettier"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-sw-precache"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-sw-workbox"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-zopfli"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/preset-preact"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/preset-react"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/preset-svelte"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/preset-vue"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/webpack-assets"
+      }
+    ],
+    "github": {
+      "repo": "lukeed/pwa"
+    },
+    "opencollective": {
+      "id": 46704,
+      "name": "PWA",
+      "slug": "pwa",
+      "description": "Universal PWA Builder"
     }
   },
   {
@@ -24144,6 +24654,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "react-native-auto-height-image",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-native-auto-height-image"
+      }
+    ],
+    "github": {
+      "repo": "vivaxy/react-native-auto-height-image"
+    },
+    "opencollective": {
+      "id": 46352,
+      "name": "react-native-auto-height-image",
+      "slug": "react-native-auto-height-image",
+      "description": "🖼️React native auto height image"
     }
   },
   {
@@ -25221,6 +25749,24 @@
     }
   },
   {
+    "name": "react-unity-webgl",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-unity-webgl"
+      }
+    ],
+    "github": {
+      "repo": "elraccoone/react-unity-webgl"
+    },
+    "opencollective": {
+      "id": 45755,
+      "name": "React Unity WebGL",
+      "slug": "react-unity-webgl",
+      "description": "React Unity WebGL provides an easy solution for embedding Unity WebGL builds in your React application, with two-way communication between your React and Unity application with advanced API's."
+    }
+  },
+  {
     "name": "react-use",
     "packages": [
       {
@@ -25545,6 +26091,14 @@
       {
         "type": "npm",
         "name": "reakit-system-palette"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-system"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-utils"
       }
     ],
     "github": {
@@ -32102,6 +32656,10 @@
       {
         "type": "npm",
         "name": "@storybook/react-native-server"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/rax"
       }
     ],
     "opencollective": {
