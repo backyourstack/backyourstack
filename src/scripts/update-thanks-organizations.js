@@ -47,9 +47,9 @@ const updateOrganizations = async () => {
       );
       if (npmOrganizations && npmOrganizations.length > 0) {
         for (const npmOrganization of npmOrganizations) {
-          organizations[npmOrganization] = `https://opencollective.com/${
-            collective.slug
-          }`;
+          organizations[
+            npmOrganization
+          ] = `https://opencollective.com/${collective.slug}`;
         }
       }
     }

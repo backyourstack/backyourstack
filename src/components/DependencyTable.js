@@ -141,9 +141,7 @@ export default class DependencyTable extends React.Component {
                         )}
                         :&nbsp;
                         <a
-                          href={`https://opencollective.com/${
-                            dep.project.opencollective.slug
-                          }`}
+                          href={`https://opencollective.com/${dep.project.opencollective.slug}`}
                         >
                           {dep.project.opencollective.name}
                         </a>

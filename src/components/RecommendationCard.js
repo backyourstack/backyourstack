@@ -105,9 +105,7 @@ export default class RecommendationCard extends React.Component {
     const style = {};
 
     if (opencollective) {
-      style.backgroundImage = `url(${ocImagesUrl}/${
-        opencollective.slug
-      }/background.png?height=250)`;
+      style.backgroundImage = `url(${ocImagesUrl}/${opencollective.slug}/background.png?height=250)`;
       style.backgroundPosition = 'center top';
     }
 
