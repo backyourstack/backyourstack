@@ -15,7 +15,7 @@ const ocImagesUrl =
 export default class RecommendationCard extends React.Component {
   static propTypes = {
     recommendation: PropTypes.object.isRequired,
-    opencollective: PropTypes.object,
+    opencollectiveAccount: PropTypes.object,
   };
 
   budgetFormatter = new Intl.NumberFormat('en', {
@@ -83,12 +83,12 @@ export default class RecommendationCard extends React.Component {
     </span>
   );
 
-  getBackingData = (recommendation, opencollective) =>
-    opencollective &&
-    opencollective.backing.find(
-      membership =>
+  getMatchingOrder = (recommendation, opencollectiveAccount) =>
+    opencollectiveAccount &&
+    get(opencollectiveAccount, 'orders.nodes', []).find(
+      order =>
         recommendation.opencollective &&
-        recommendation.opencollective.id === membership.collective.id,
+        recommendation.opencollective.slug === order.toAccount.slug,
     );
 
   ocLogoSrc = () => {
@@ -137,12 +137,13 @@ export default class RecommendationCard extends React.Component {
   };
 
   render() {
-    const { recommendation, opencollective } = this.props;
+    const { recommendation, opencollectiveAccount } = this.props;
 
-    const backing = this.getBackingData(recommendation, opencollective);
+    const order = this.getMatchingOrder(recommendation, opencollectiveAccount);
 
     const backers = get(recommendation, 'opencollective.sponsors', []).filter(
-      backer => !opencollective || opencollective.slug !== backer.slug,
+      backer =>
+        !opencollectiveAccount || opencollectiveAccount.slug !== backer.slug,
     );
 
     const yearlyBudget = get(
@@ -307,7 +308,7 @@ export default class RecommendationCard extends React.Component {
           `}
         </style>
 
-        <div className={classNames('Recommendation', { backing: !!backing })}>
+        <div className={classNames('Recommendation', { backing: !!order })}>
           {recommendation.logo && (
             <div className="logo bys">
               <img src={recommendation.logo} alt="" />
@@ -351,23 +352,20 @@ export default class RecommendationCard extends React.Component {
             </div>
           )}
 
-          {(backing || backers.length > 0) && (
+          {(order || backers.length > 0) && (
             <div className="backers">
               <strong>Backers</strong>:<br />
-              {backing && (
+              {order && (
                 <Fragment>
-                  <a href={`${ocWebsiteUrl}/${opencollective.slug}`}>
-                    {opencollective.name}
+                  <a href={`${ocWebsiteUrl}/${opencollectiveAccount.slug}`}>
+                    {opencollectiveAccount.name}
                   </a>{' '}
-                  (
-                  {this.formatBackingAmount(backing.stats.totalDonations / 100)}{' '}
-                  since {this.formatBackingDate(backing.createdAt)}
+                  ({this.formatBackingAmount(order.totalDonations.value)} since{' '}
+                  {this.formatBackingDate(order.createdAt)}
                   ).
                 </Fragment>
               )}
-              {backing && backers.length > 0 && (
-                <Fragment>{' Also: '}</Fragment>
-              )}
+              {order && backers.length > 0 && <Fragment>{' Also: '}</Fragment>}
               {backers.length > 0 && (
                 <List array={backers} map={this.backerItem} cut={3} />
               )}

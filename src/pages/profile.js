@@ -19,6 +19,8 @@ import SubscribeForm from '../components/SubscribeForm';
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
 
+const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
+
 const getProfileData = (id, accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/getProfileData?id=${id}`)
@@ -43,7 +45,7 @@ export default class Profile extends React.Component {
     pathname: PropTypes.string,
     loggedInUser: PropTypes.object,
     profile: PropTypes.object,
-    opencollective: PropTypes.object,
+    opencollectiveAccount: PropTypes.object,
     repos: PropTypes.array,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
@@ -57,14 +59,14 @@ export default class Profile extends React.Component {
   githubLink = () => `https://github.com/${this.props.profile.login}`;
 
   opencollectiveLink = () =>
-    this.props.opencollective &&
-    `https://opencollective.com/${this.props.opencollective.slug}`;
+    this.props.opencollectiveAccount &&
+    `${ocWebsiteUrl}/${this.props.opencollectiveAccount.slug}`;
 
   profileName = () => {
     const githubProfileName =
       this.props.profile.name || this.props.profile.login;
     const opencollectiveProfileName =
-      this.props.opencollective && this.props.opencollective.name;
+      this.props.opencollectiveAccount && this.props.opencollectiveAccount.name;
     if (opencollectiveProfileName) {
       if (opencollectiveProfileName.length < githubProfileName.length) {
         return opencollectiveProfileName;
@@ -78,7 +80,7 @@ export default class Profile extends React.Component {
       section,
       error,
       profile,
-      opencollective,
+      opencollectiveAccount,
       repos,
       dependencies,
       recommendations,
@@ -205,7 +207,7 @@ export default class Profile extends React.Component {
                 <a href={this.githubLink()} className="github">
                   &gt; {this.githubLink().replace('https://', '')}
                 </a>
-                {opencollective && (
+                {opencollectiveAccount && (
                   <a
                     href={this.opencollectiveLink()}
                     className="opencollective"
@@ -268,7 +270,7 @@ export default class Profile extends React.Component {
               {(!section || section === 'recommendations') && (
                 <RecommendationList
                   recommendations={recommendations}
-                  opencollective={opencollective}
+                  opencollectiveAccount={opencollectiveAccount}
                 />
               )}
 
