@@ -37,10 +37,12 @@ export async function getProfileData(id, accessToken) {
   const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
     Promise.all(
       repos.map(async repo => {
-        repo.dependencies = await getDependenciesFromGithubRepo(
+        const dependencies = await getDependenciesFromGithubRepo(
           repo,
           accessToken,
         );
+        // eslint-disable-next-line require-atomic-updates
+        repo.dependencies = dependencies;
         return repo;
       }),
     ),
