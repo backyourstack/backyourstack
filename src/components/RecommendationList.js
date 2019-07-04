@@ -8,11 +8,11 @@ import RecommendationCard from '../components/RecommendationCard';
 export default class RecommendationList extends React.Component {
   static propTypes = {
     recommendations: PropTypes.array.isRequired,
-    opencollective: PropTypes.object,
+    opencollectiveAccount: PropTypes.object,
   };
 
   render() {
-    const { recommendations, opencollective } = this.props;
+    const { recommendations, opencollectiveAccount } = this.props;
 
     const projects = recommendations.filter(r => r.opencollective || r.github);
 
@@ -61,7 +61,7 @@ export default class RecommendationList extends React.Component {
             projects.map(recommendation => (
               <RecommendationCard
                 key={recommendation.name}
-                opencollective={opencollective}
+                opencollectiveAccount={opencollectiveAccount}
                 recommendation={recommendation}
               />
             ))}

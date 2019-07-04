@@ -3,25 +3,25 @@ import request from 'graphql-request';
 import cache from './cache';
 
 const baseUrl = 'https://opencollective.com/api/graphql';
+const baseUrlV2 = 'https://opencollective.com/api/graphql/v2';
 
-const getCollectiveWithBackingQuery = `query Collective($slug: String!) {
-  Collective(slug: $slug) {
-    id
-    type
-    slug
+const getAccountOrdersQuery = `query account($slug: String!) {
+  account(slug: $slug) {
     name
-    backing: memberOf(role: "BACKER", limit: 100) {
-      id
-      role
-      createdAt
-      stats {
-        totalDonations
-      }
-      collective {
-        id
-        name
-        slug
-        type
+    slug
+    orders(status: ACTIVE) {
+      nodes {
+        amount {
+          value
+        }
+        toAccount {
+          slug
+        }
+        totalDonations {
+          value
+        }
+        frequency
+        createdAt
       }
     }
   }
@@ -99,17 +99,17 @@ const getAllCollectivesQuery = `query allCollectives(
 }
 `;
 
-function fetchCollectiveWithBacking(slug) {
-  const cacheKey = `collective_with_backing_${slug}`;
+function fetchAccountWithOrders(slug) {
+  const cacheKey = `account_with_orders_${slug}`;
 
   if (cache.has(cacheKey)) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrl, getCollectiveWithBackingQuery, { slug })
+  return request(baseUrlV2, getAccountOrdersQuery, { slug })
     .then(data => {
-      cache.set(cacheKey, data.Collective);
-      return data.Collective;
+      cache.set(cacheKey, data.account);
+      return data.account;
     })
     .catch(() => {
       cache.set(cacheKey, null);
@@ -143,7 +143,7 @@ function fetchAllCollectives(parameters) {
 }
 
 export {
-  fetchCollectiveWithBacking,
+  fetchAccountWithOrders,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
 };

@@ -2,7 +2,7 @@ import fetch from 'cross-fetch';
 
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
-import { fetchCollectiveWithBacking } from './opencollective';
+import { fetchAccountWithOrders } from './opencollective';
 
 import {
   addProjectToDependencies,
@@ -32,7 +32,7 @@ export async function getProfileData(id, accessToken) {
   const profile = await fetchProfile(id, accessToken);
 
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
-  const opencollective = await fetchCollectiveWithBacking(slug);
+  const opencollectiveAccount = await fetchAccountWithOrders(slug);
 
   const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
     Promise.all(
@@ -56,7 +56,13 @@ export async function getProfileData(id, accessToken) {
     dependencies,
   );
 
-  return { profile, opencollective, repos, dependencies, recommendations };
+  return {
+    profile,
+    opencollectiveAccount,
+    repos,
+    dependencies,
+    recommendations,
+  };
 }
 
 export async function getFilesData(sessionFiles) {
