@@ -29,7 +29,7 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
-import { uploadFiles } from '../lib/awsS3';
+import { uploadFiles, getFile } from '../lib/awsS3';
 
 const {
   PORT,
@@ -230,6 +230,26 @@ nextApp.prepare().then(() => {
       });
 
     res.send(backing);
+  });
+
+  server.get('/:key/file/backing.json', async (req, res) => {
+    if (!req.params.key) {
+      return res.status(400).send('Please provide the file key');
+    }
+
+    let data;
+
+    try {
+      data = await getFile(req.params.key);
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send('Unable to fetch file');
+    }
+
+    if (!data) {
+      return res.status(404).send('No file found');
+    }
+    return res.status(200).send(data.Body.toString('utf-8'));
   });
 
   server.use('/static', (req, res, next) => {
