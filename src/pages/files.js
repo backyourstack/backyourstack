@@ -13,6 +13,7 @@ import Upload from '../components/Upload';
 
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
+import SaveProfile from '../components/SaveProfile';
 
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
@@ -55,6 +56,7 @@ export default class Files extends React.Component {
       files: props.files,
       dependencies: props.dependencies,
       recommendations: props.recommendations,
+      savedFileUrls: [],
     };
   }
 
@@ -70,6 +72,33 @@ export default class Files extends React.Component {
     } else {
       this.setState({ files, dependencies, recommendations });
     }
+  };
+
+  handleSaveProfile = event => {
+    event.stopPropagation();
+    const { files } = this.state;
+    const ids = Object.keys(files);
+    const params = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ids }),
+      credentials: 'same-origin',
+    };
+    fetch('/files/save', params)
+      .then(response => {
+        return response.json();
+      })
+      .then(result => {
+        this.setState({
+          savedFileUrls: [...result, ...this.state.savedFileUrls],
+        });
+      })
+      .catch(err => {
+        console.error(err);
+      });
   };
 
   handleRemoveFile = (id, event) => {
@@ -164,6 +193,10 @@ export default class Files extends React.Component {
               </button>
             </div>
           ))}
+          <SaveProfile
+            onClickSaveProfile={this.handleSaveProfile}
+            savedFileUrls={this.state.savedFileUrls}
+          />
 
           <Upload
             onUpload={this.refresh}
