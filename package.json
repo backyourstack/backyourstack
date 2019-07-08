@@ -38,6 +38,7 @@
   "dependencies": {
     "@octokit/rest": "^16.28.3",
     "@zeit/next-css": "^1.0.1",
+    "aws-sdk": "^2.488.0",
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.4",
     "cross-fetch": "^3.0.4",
@@ -65,6 +66,7 @@
     "react-dropzone": "^7.0.1",
     "serve-favicon": "^2.5.0",
     "toml": "^3.0.0",
+    "uuid": "^3.3.2",
     "winston": "^3.2.1",
     "xmldoc": "^1.1.2"
   },
