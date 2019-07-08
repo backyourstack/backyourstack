@@ -29,6 +29,7 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
+import { uploadFiles } from '../lib/awsS3';
 
 const {
   PORT,
@@ -184,6 +185,21 @@ nextApp.prepare().then(() => {
       delete sessionFiles[id];
     }
     res.send('Ok');
+  });
+
+  server.post('/files/save', async (req, res) => {
+    const ids = get(req, 'body.ids');
+    const sessionFiles = get(req, 'session.files');
+    const files = {};
+    ids.forEach(id => {
+      files[id] = sessionFiles[id];
+    });
+    try {
+      const savedData = await uploadFiles(files);
+      res.status(200).send(savedData);
+    } catch (err) {
+      res.status(400).send('Unable to save file');
+    }
   });
 
   server.get('/:id/backing.json', async (req, res) => {
