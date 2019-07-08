@@ -32,3 +32,14 @@ export const uploadFiles = files => {
   });
   return Promise.all(promises);
 };
+
+export const getFile = key => {
+  const Key = `${key}.json`;
+  const params = {
+    Bucket,
+    Key,
+    ResponseContentType: 'application/json',
+  };
+
+  return s3.getObject(params).promise();
+};
