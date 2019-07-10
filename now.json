@@ -11,7 +11,8 @@
     "MAILCHIMP_API_URL": "@mailchimp_api_url",
     "OPENCOLLECTIVE_REFERRAL": "20206",
     "AWS_ACCESS_KEY_ID": "@aws_access_key_id",
-    "AWS_SECRET_KEY": "@aws_secret_key"
+    "AWS_SECRET_KEY": "@aws_secret_key",
+    "AWS_S3_BUCKET": "@aws_s3_bucket"
   },
   "scale": {
     "sfo1": {
