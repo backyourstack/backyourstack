@@ -1,5 +1,6 @@
 import { S3 } from 'aws-sdk';
 import uuidv1 from 'uuid/v1';
+import { get, keys } from 'lodash';
 
 const s3 = new S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -9,28 +10,38 @@ const s3 = new S3({
 
 const Bucket = 'backyourstack-test';
 
-export const uploadFiles = files => {
+export const uploadFiles = async files => {
   const count = Object.keys(files).length;
-  const folder = `Project-${uuidv1()}`;
-  const promises = [];
-  Object.entries(files).map(([id, file]) => {
-    const filename = [uuidv1(), '.json'].join('');
-    let key;
-    if (count > 1) {
-      key = `${folder}/${filename}`;
-    } else {
-      key = filename;
+  // For a single file
+  if (count === 1) {
+    const id = keys(files)[0];
+    const key = [id, '.json'].join('');
+    const body = get(files, `${id}.json`);
+    return saveFileToS3(key, body);
+  } else {
+    const metaData = {};
+    // Save individual files and get their metaData
+    for (const id of files) {
+      const key = [id, '.json'].join('');
+      const body = get(files, `${id}.json`);
+      const data = await saveFileToS3(key, body);
+      metaData[id] = { url: data.Location };
     }
-    const uploadParam = {
-      Bucket,
-      Key: key,
-      Body: JSON.stringify(file.json),
-      ACL: 'public-read',
-      ContentType: 'application/json',
-    };
-    promises.push(s3.upload(uploadParam).promise());
-  });
-  return Promise.all(promises);
+    // Save the metaData as a folder dukw
+    const folderKey = [uuidv1(), '.json'].join('');
+    return saveFileToS3(folderKey, metaData);
+  }
+};
+
+export const saveFileToS3 = (Key, Body) => {
+  const uploadParam = {
+    Bucket,
+    Key,
+    Body: JSON.stringify(Body),
+    ACL: 'public-read',
+    ContentType: 'application/json',
+  };
+  return s3.upload(uploadParam).promise();
 };
 
 export const getFile = key => {
