@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const SaveProfile = ({ onClickSaveProfile, savedFileUrls }) => {
+const SaveProfile = ({ onClickSaveProfile, savedFileUrl }) => {
   return (
     <Fragment>
       <style jsx>
@@ -24,13 +24,13 @@ const SaveProfile = ({ onClickSaveProfile, savedFileUrls }) => {
         `}
       </style>
       <div className="saveProfileWrapper">
-        {savedFileUrls && (
-          <div key={savedFileUrls.key} className="savedFileUrlContainer">
+        {savedFileUrl && (
+          <div key={savedFileUrl.key} className="savedFileUrlContainer">
             <label>Saved File Url</label>
-            <input type="url" value={savedFileUrls.Location} />
+            <input type="url" value={savedFileUrl.Location} />
           </div>
         )}
-        {!savedFileUrls && (
+        {!savedFileUrl && (
           <button
             className="bigButton saveProfileBtn"
             onClick={onClickSaveProfile}
