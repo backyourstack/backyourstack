@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import getConfig from 'next/config';
 import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
@@ -17,6 +18,7 @@ import SaveProfile from '../components/SaveProfile';
 import BackMyStack from '../components/BackMyStack';
 import Modal from '../components/Modal';
 
+const { publicRuntimeConfig } = getConfig();
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
@@ -28,12 +30,20 @@ export default class Files extends React.Component {
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
+    const openCollectiveRedirectUrl =
+      publicRuntimeConfig.openCollectiveRedirectUrl;
 
     const { files, dependencies, recommendations } = await getFilesData(
       sessionFiles,
     );
 
-    return { ...initialProps, files, dependencies, recommendations };
+    return {
+      ...initialProps,
+      files,
+      dependencies,
+      recommendations,
+      openCollectiveRedirectUrl,
+    };
   }
 
   static propTypes = {
@@ -43,6 +53,7 @@ export default class Files extends React.Component {
     files: PropTypes.object,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
+    openCollectiveRedirectUrl: PropTypes.string,
   };
 
   static defaultProps = {
@@ -58,7 +69,7 @@ export default class Files extends React.Component {
       files: props.files,
       dependencies: props.dependencies,
       recommendations: props.recommendations,
-      savedFileUrls: null,
+      savedFileUrl: null,
       canBackMyStack: false,
       showModal: false,
     };
@@ -97,7 +108,7 @@ export default class Files extends React.Component {
       })
       .then(result => {
         this.setState({
-          savedFileUrls: { ...result },
+          savedFileUrl: { ...result },
           canBackMyStack: true,
         });
       })
@@ -130,11 +141,13 @@ export default class Files extends React.Component {
 
   handleContinueBacMyStack = () => {
     // Get the key url of the file
-    const { savedFileUrls } = this.state;
+    const { savedFileUrl } = this.state;
+    const { openCollectiveRedirectUrl } = this.props;
     const { hostname, protocol } = window.location;
-    const jsonUrl = `"${protocol}//${hostname}/${savedFileUrls.Key}/file/backing.json"`;
-    const contributionPath = `http://staging.opencollective.com/backyourstack2/contribute/level-1-9912/checkout?data={"jsonUrl":${jsonUrl}}`;
-    window.location.replace(contributionPath);
+    const fileKey = savedFileUrl.Key.replace('.json', '');
+    const jsonUrl = `"${protocol}//${hostname}/${fileKey}/file/backing.json"`;
+    const contributionUrl = `${openCollectiveRedirectUrl}?data={"jsonUrl":${jsonUrl}}`;
+    window.location.replace(contributionUrl);
   };
 
   render() {
@@ -229,7 +242,7 @@ export default class Files extends React.Component {
             ))}
             <SaveProfile
               onClickSaveProfile={this.handleSaveProfile}
-              savedFileUrls={this.state.savedFileUrls}
+              savedFileUrl={this.state.savedFileUrl}
             />
 
             <Upload

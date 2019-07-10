@@ -58,4 +58,7 @@ module.exports = withCSS({
 
     return config;
   },
+  publicRuntimeConfig: {
+    openCollectiveRedirectUrl: process.env.OPENCOLLECTIVE_REDIRECT_URL,
+  },
 });
