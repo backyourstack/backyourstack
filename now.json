@@ -9,7 +9,9 @@
     "GITHUB_TOKEN_DONATORS": "@github_token_donators",
     "MAILCHIMP_API_KEY": "@mailchimp_api_key",
     "MAILCHIMP_API_URL": "@mailchimp_api_url",
-    "OPENCOLLECTIVE_REFERRAL": "20206"
+    "OPENCOLLECTIVE_REFERRAL": "20206",
+    "AWS_ACCESS_KEY_ID": "@aws_access_key_id",
+    "AWS_SECRET_KEY": "@aws_secret_key"
   },
   "scale": {
     "sfo1": {
