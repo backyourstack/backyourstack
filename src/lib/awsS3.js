@@ -8,7 +8,7 @@ const s3 = new S3({
   apiVersion: '2006-03-01',
 });
 
-const Bucket = 'backyourstack-test';
+const Bucket = process.env.AWS_S3_BUCKET;
 
 export const uploadFiles = async files => {
   const count = Object.keys(files).length;
