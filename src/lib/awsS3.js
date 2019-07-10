@@ -21,7 +21,7 @@ export const uploadFiles = async files => {
   } else {
     const metaData = {};
     // Save individual files and get their metaData
-    for (const id of files) {
+    for (const id in files) {
       const key = [id, '.json'].join('');
       const body = get(files, `${id}.json`);
       const data = await saveFileToS3(key, body);
