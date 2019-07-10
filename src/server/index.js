@@ -10,6 +10,7 @@ import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
+import isUUID from 'validator/lib/isUUID';
 import { get, has, pick } from 'lodash';
 
 import routes from '../routes';
@@ -29,7 +30,7 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
-import { uploadFiles, getFile } from '../lib/awsS3';
+import { uploadFiles, getFile, getMultipleFiles } from '../lib/awsS3';
 
 const {
   PORT,
@@ -237,11 +238,16 @@ nextApp.prepare().then(() => {
     if (!req.params.key) {
       return res.status(400).send('Please provide the file key');
     }
-
+    const key = req.params.key;
     let data;
 
     try {
-      data = await getFile(req.params.key);
+      if (isUUID(key)) {
+        data = await getMultipleFiles(key);
+      } else {
+        const file = await getFile(key);
+        data = JSON.parse(file.Body.toString('utf-8'));
+      }
     } catch (err) {
       console.error(err);
       return res.status(400).send('Unable to fetch file');
@@ -250,7 +256,9 @@ nextApp.prepare().then(() => {
     if (!data) {
       return res.status(404).send('No file found');
     }
-    return res.status(200).send(data.Body.toString('utf-8'));
+
+    const { recommendations } = await getFilesData(data);
+    return res.status(200).send(recommendations);
   });
 
   server.use('/static', (req, res, next) => {
