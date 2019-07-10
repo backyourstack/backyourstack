@@ -1,4 +1,5 @@
 .env
+coverage
 dist
 src/.next
 node_modules

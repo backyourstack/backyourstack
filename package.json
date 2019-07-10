@@ -7,9 +7,10 @@
     "url": "https://github.com/opencollective/backyourstack.git"
   },
   "scripts": {
+    "clean": "npm run build:clean && npm run test:clean",
     "dev": "nodemon --exec babel-node -- src/server/index.js",
     "build": "npm run build:clean && npm run build:server && npm run build:next",
-    "build:clean": "rm -rf dist src/.next",
+    "build:clean": "rimraf dist src/.next",
     "build:server": "babel --copy-files ./src --out-dir ./dist --ignore src/pages/*,src/components/*",
     "build:next": "next build dist",
     "start": "NODE_ENV=production node dist/server/index.js",
@@ -20,6 +21,8 @@
     "prettier:write": "npm run prettier -- --write",
     "prettier:check": "npm run prettier -- --list-different",
     "test": "NODE_ENV=test jest",
+    "test:clean": "rimraf coverage",
+    "coverage": "codecov",
     "update-collectives": "babel-node src/scripts/update-collectives",
     "detect-packages": "./src/scripts/detect-all-packages.sh",
     "sync-projects-with-opencollective": "babel-node src/scripts/sync-projects-with-opencollective"
@@ -75,6 +78,7 @@
     "@mdx-js/mdx": "^1.0.21",
     "babel-eslint": "^10.0.2",
     "babel-plugin-lodash": "^3.3.4",
+    "codecov": "^3.5.0",
     "eslint": "^6.0.1",
     "eslint-config-opencollective": "^2.0.0",
     "eslint-plugin-babel": "^5.3.0",
@@ -88,6 +92,7 @@
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
+    "rimraf": "^2.6.3",
     "svg-react-loader": "^0.4.6",
     "thanks": "^2.0.2",
     "webpack-bundle-analyzer": "^3.3.2"
@@ -115,5 +120,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
