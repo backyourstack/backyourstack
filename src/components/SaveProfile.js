@@ -6,36 +6,31 @@ const SaveProfile = ({ onClickSaveProfile, savedFileUrls }) => {
       <style jsx>
         {`
           .saveProfileWrapper {
-            margin: 10px;
-          }
-          .savedFileUrlContainer {
-            padding: 20px;
+            width: 100%;
+            margin: 20px 0;
           }
           .savedFileUrlContainer label {
             font-size: 15px;
-            font-weight: 500;
+            font-weight: 600;
           }
           .savedFileUrlContainer input {
-            width: 100%;
+            width: 94%;
             height: 10px;
             padding: 10px;
           }
           .saveProfileBtn {
-            cusor: pointer;
+            cursor: pointer;
           }
         `}
       </style>
       <div className="saveProfileWrapper">
-        {savedFileUrls.length > 0 &&
-          savedFileUrls.map(url => {
-            return (
-              <div key={url.key} className="savedFileUrlContainer">
-                <label>Saved File Url</label>
-                <input type="url" value={url.Location} />
-              </div>
-            );
-          })}
-        {savedFileUrls.length === 0 && (
+        {savedFileUrls && (
+          <div key={savedFileUrls.key} className="savedFileUrlContainer">
+            <label>Saved File Url</label>
+            <input type="url" value={savedFileUrls.Location} />
+          </div>
+        )}
+        {!savedFileUrls && (
           <button
             className="bigButton saveProfileBtn"
             onClick={onClickSaveProfile}
