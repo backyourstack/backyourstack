@@ -14,6 +14,8 @@ import Upload from '../components/Upload';
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
 import SaveProfile from '../components/SaveProfile';
+import BackMyStack from '../components/BackMyStack';
+import Modal from '../components/Modal';
 
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
@@ -56,7 +58,9 @@ export default class Files extends React.Component {
       files: props.files,
       dependencies: props.dependencies,
       recommendations: props.recommendations,
-      savedFileUrls: [],
+      savedFileUrls: null,
+      canBackMyStack: false,
+      showModal: false,
     };
   }
 
@@ -93,7 +97,8 @@ export default class Files extends React.Component {
       })
       .then(result => {
         this.setState({
-          savedFileUrls: [...result, ...this.state.savedFileUrls],
+          savedFileUrls: { ...result },
+          canBackMyStack: true,
         });
       })
       .catch(err => {
@@ -117,116 +122,202 @@ export default class Files extends React.Component {
     });
   };
 
+  handleBackMyStack = () => {
+    this.setState({
+      showModal: true,
+    });
+  };
+
+  handleContinueBacMyStack = () => {
+    // Get the key url of the file
+    const { savedFileUrls } = this.state;
+    const { hostname, protocol } = window.location;
+    const jsonUrl = `"${protocol}//${hostname}/${savedFileUrls.Key}/file/backing.json"`;
+    const contributionPath = `http://staging.opencollective.com/backyourstack2/contribute/level-1-9912/checkout?data={"jsonUrl":${jsonUrl}}`;
+    window.location.replace(contributionPath);
+  };
+
   render() {
     const { section, pathname, loggedInUser } = this.props;
-    const { files, dependencies, recommendations } = this.state;
+    const { files, dependencies, recommendations, canBackMyStack } = this.state;
     const count = Object.keys(files).length;
     return (
-      <div className="Page FilesPage">
-        <style jsx global>
-          {`
-            .FilesPage {
-              position: relative;
-            }
-          `}
-        </style>
+      <Fragment>
+        <div className="Page FilesPage">
+          <style jsx global>
+            {`
+              .FilesPage {
+                position: relative;
+              }
+              hr.dividerLine {
+                border-top: 1px solid #d7dbe0;
+              }
+            `}
+          </style>
 
-        <style jsx>
-          {`
-            .File {
-              margin-bottom: 40px;
-            }
-            .File .name {
-              font-size: 20px;
-              line-height: 26px;
-              color: #2e3033;
-            }
-            .File .dependencies {
-              font-size: 16px;
-              line-height: 24px;
-              color: #6e747a;
-              margin-top: 5px;
-            }
-            .File .actionButton {
-              margin-top: 10px;
-            }
-          `}
-        </style>
+          <style jsx>
+            {`
+              .File {
+                margin-bottom: 40px;
+              }
+              .File .name {
+                font-size: 20px;
+                line-height: 26px;
+                color: #2e3033;
+              }
+              .File .dependencies {
+                font-size: 16px;
+                line-height: 24px;
+                color: #6e747a;
+                margin-top: 5px;
+              }
+              .File .actionButton {
+                margin-top: 10px;
+              }
+            `}
+          </style>
 
-        <Header loggedInUser={loggedInUser} pathname={pathname} />
+          <Header loggedInUser={loggedInUser} pathname={pathname} />
 
-        <div className="navigation">
-          <h1>
-            {count === 0 && 'No uploaded file'}
-            {count === 1 && '1 file analyzed'}
-            {count > 1 && `${count} files analyzed`}
-          </h1>
+          <nav className="navigation">
+            <div className="analyzedFileInfo">
+              <h1>
+                {count === 0 && 'No uploaded file'}
+                {count === 1 && '1 file analyzed'}
+                {count > 1 && `${count} files analyzed`}
+              </h1>
+            </div>
+            <div className="navigation-items">
+              <div>
+                <Link route="files">
+                  <a className={classNames({ active: !section })}>
+                    Projects requiring funding
+                  </a>
+                </Link>
+                <Link route="files" params={{ section: 'dependencies' }}>
+                  <a
+                    className={classNames({
+                      active: section === 'dependencies',
+                    })}
+                  >
+                    Detected Dependencies
+                  </a>
+                </Link>
+              </div>
+              {canBackMyStack && (
+                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+              )}
+            </div>
+          </nav>
 
-          <div className="navigation-items">
-            <Link route="files">
-              <a className={classNames({ active: !section })}>
-                Projects requiring funding
-              </a>
-            </Link>
-            <Link route="files" params={{ section: 'dependencies' }}>
-              <a className={classNames({ active: section === 'dependencies' })}>
-                Detected Dependencies
-              </a>
-            </Link>
-          </div>
+          <aside>
+            {Object.entries(files).map(([id, file]) => (
+              <div key={id} className="File">
+                <div className="name">
+                  <strong>{file.projectName || 'Unnamed project'}</strong>
+                </div>
+                <div className="dependencies">
+                  {dependenciesStats(file).length} dependencies
+                </div>
+                <button
+                  className="actionButton"
+                  onClick={e => this.handleRemoveFile(id, e)}
+                >
+                  ✘ Remove file
+                </button>
+              </div>
+            ))}
+            <SaveProfile
+              onClickSaveProfile={this.handleSaveProfile}
+              savedFileUrls={this.state.savedFileUrls}
+            />
+
+            <Upload
+              onUpload={this.refresh}
+              onUpdate={this.refresh}
+              feedbackPosition="inside"
+            />
+          </aside>
+
+          <main>
+            {count === 0 && (
+              <div className="error">
+                <p>
+                  Please upload at least one file to detect dependencies and
+                  projects.
+                </p>
+              </div>
+            )}
+            {count > 0 && (
+              <Fragment>
+                {!section && (
+                  <RecommendationList recommendations={recommendations} />
+                )}
+
+                {section === 'dependencies' && (
+                  <DependencyTable dependencies={dependencies} />
+                )}
+              </Fragment>
+            )}
+          </main>
         </div>
-
-        <aside>
-          {Object.entries(files).map(([id, file]) => (
-            <div key={id} className="File">
-              <div className="name">
-                <strong>{file.projectName || 'Unnamed project'}</strong>
-              </div>
-              <div className="dependencies">
-                {dependenciesStats(file).length} dependencies
-              </div>
+        <Modal
+          show={this.state.showModal}
+          onClose={() => {
+            this.setState({ showModal: false });
+          }}
+          title="Back My Stack"
+        >
+          <div>
+            <style jsx>
+              {`
+                .modalActionBtnWrapper {
+                  display: flex;
+                }
+                .modalActionBtnWrapper > button {
+                  margin: 10px;
+                  cursor: pointer;
+                  font-size: 1.4rem;
+                  padding: 8px 16px;
+                  outline: none;
+                  border: 1px solid #dcdee0;
+                  border-radius: 100px;
+                }
+                .cancelBtn {
+                  background: #fff;
+                  color: #71757a;
+                }
+                .continueBtn {
+                  background: #3f00a5;
+                  color: #fff;
+                }
+              `}
+            </style>
+            <p>
+              You&apos;re about to back your entier stack, donations will be
+              shared every month amongst your stack collectives registerd on
+              Open Collective.
+            </p>
+            <hr className="dividerLine" />
+            <div className="modalActionBtnWrapper">
               <button
-                className="actionButton"
-                onClick={e => this.handleRemoveFile(id, e)}
+                className="cancelBtn"
+                onClick={() => {
+                  this.setState({ showModal: false });
+                }}
               >
-                ✘ Remove file
+                Cancel
+              </button>
+              <button
+                className="continueBtn"
+                onClick={this.handleContinueBacMyStack}
+              >
+                Continue
               </button>
             </div>
-          ))}
-          <SaveProfile
-            onClickSaveProfile={this.handleSaveProfile}
-            savedFileUrls={this.state.savedFileUrls}
-          />
-
-          <Upload
-            onUpload={this.refresh}
-            onUpdate={this.refresh}
-            feedbackPosition="inside"
-          />
-        </aside>
-
-        <main>
-          {count === 0 && (
-            <div className="error">
-              <p>
-                Please upload at least one file to detect dependencies and
-                projects.
-              </p>
-            </div>
-          )}
-          {count > 0 && (
-            <Fragment>
-              {!section && (
-                <RecommendationList recommendations={recommendations} />
-              )}
-
-              {section === 'dependencies' && (
-                <DependencyTable dependencies={dependencies} />
-              )}
-            </Fragment>
-          )}
-        </main>
-      </div>
+          </div>
+        </Modal>
+      </Fragment>
     );
   }
 }
