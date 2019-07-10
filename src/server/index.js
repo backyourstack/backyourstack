@@ -198,6 +198,7 @@ nextApp.prepare().then(() => {
       const savedData = await uploadFiles(files);
       res.status(200).send(savedData);
     } catch (err) {
+      console.error(err);
       res.status(400).send('Unable to save file');
     }
   });
