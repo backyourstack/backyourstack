@@ -153,8 +153,12 @@ h3 {
 
 .navigation {
   background-color: #f7f8fa;
-  padding: 20px 56px;
-  position: relative;
+  max-height: 90px;
+  padding: 20px;
+  display: flex;
+}
+.analyzedFileInfo {
+  margin-left: 60px;
 }
 .navigation h1 {
   margin: 0;
@@ -164,9 +168,10 @@ h3 {
   font-weight: bold;
   letter-spacing: -0.4px;
   line-height: 36px;
-  width: 250px;
 }
 .navigation-items {
+  display: flex;
+  align-items: baseline;
   position: absolute;
   left: 380px;
   bottom: -1px;
