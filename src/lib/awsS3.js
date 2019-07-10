@@ -27,7 +27,7 @@ export const uploadFiles = async files => {
       const data = await saveFileToS3(key, body);
       metaData[id] = { url: data.Location };
     }
-    // Save the metaData as a folder dukw
+    // Save the metaData as a folder file
     const folderKey = [uuidv1(), '.json'].join('');
     return saveFileToS3(folderKey, metaData);
   }

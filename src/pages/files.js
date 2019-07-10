@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import getConfig from 'next/config';
 import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
@@ -18,7 +17,6 @@ import SaveProfile from '../components/SaveProfile';
 import BackMyStack from '../components/BackMyStack';
 import Modal from '../components/Modal';
 
-const { publicRuntimeConfig } = getConfig();
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
@@ -30,8 +28,7 @@ export default class Files extends React.Component {
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
-    const openCollectiveRedirectUrl =
-      publicRuntimeConfig.openCollectiveRedirectUrl;
+    const openCollectiveRedirectUrl = process.env.OPENCOLLECTIVE_REDIRECT_URL;
 
     const { files, dependencies, recommendations } = await getFilesData(
       sessionFiles,
