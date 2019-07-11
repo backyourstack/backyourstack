@@ -64,7 +64,6 @@
     "serve-favicon": "^2.5.0",
     "toml": "^3.0.0",
     "uuid": "^3.3.2",
-    "validator": "^11.1.0",
     "winston": "^3.2.1",
     "xmldoc": "^1.1.2"
   },
