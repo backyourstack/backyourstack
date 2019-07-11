@@ -72,8 +72,8 @@
     "node": "10.x.x"
   },
   "devDependencies": {
-    "@babel/cli": "7.1.2",
-    "@babel/node": "7.0.0",
+    "@babel/cli": "7.4.4",
+    "@babel/node": "7.4.5",
     "@mdx-js/loader": "^1.0.23",
     "@mdx-js/mdx": "^1.0.23",
     "babel-eslint": "^10.0.2",
