@@ -141,9 +141,12 @@ export default class Files extends React.Component {
     const { savedFileUrl } = this.state;
     const { openCollectiveRedirectUrl } = this.props;
     const { hostname, protocol } = window.location;
-    const fileKey = savedFileUrl.Key.replace('.json', '');
-    const jsonUrl = `"${protocol}//${hostname}/${fileKey}/file/backing.json"`;
-    const contributionUrl = `${openCollectiveRedirectUrl}?data={"jsonUrl":${jsonUrl}}`;
+    const uuid = savedFileUrl.Key.split('/')[0];
+    const jsonUrl = `${protocol}//${hostname}/${uuid}/file/backing.json`;
+    const data = JSON.stringify({
+      jsonUrl,
+    });
+    const contributionUrl = `${openCollectiveRedirectUrl}?data={${data}}`;
     window.location.replace(contributionUrl);
   };
 
