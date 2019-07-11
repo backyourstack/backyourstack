@@ -25,7 +25,12 @@ const getFilesData = sessionFiles =>
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
     const initialProps = { section: query.section };
-
+    let protocol = 'https:';
+    const host = req ? req.headers.host : window.location.hostname;
+    if (host.indexOf('localhost') > -1) {
+      protocol = 'http:';
+    }
+    const baseUrl = `${protocol}//${host}`;
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
     const openCollectiveRedirectUrl = process.env.OPENCOLLECTIVE_REDIRECT_URL;
@@ -40,6 +45,7 @@ export default class Files extends React.Component {
       dependencies,
       recommendations,
       openCollectiveRedirectUrl,
+      baseUrl,
     };
   }
 
@@ -51,6 +57,7 @@ export default class Files extends React.Component {
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
     openCollectiveRedirectUrl: PropTypes.string,
+    baseUrl: PropTypes.string,
   };
 
   static defaultProps = {
@@ -136,18 +143,20 @@ export default class Files extends React.Component {
     });
   };
 
-  handleContinueBacMyStack = () => {
+  getContributionUrl = () => {
     // Get the key url of the file
     const { savedFileUrl } = this.state;
-    const { openCollectiveRedirectUrl } = this.props;
-    const { hostname, protocol } = window.location;
-    const uuid = savedFileUrl.Key.split('/')[0];
-    const jsonUrl = `${protocol}//${hostname}/${uuid}/file/backing.json`;
-    const data = JSON.stringify({
-      jsonUrl,
-    });
-    const contributionUrl = `${openCollectiveRedirectUrl}?data={${data}}`;
-    window.location.replace(contributionUrl);
+    const { openCollectiveRedirectUrl, baseUrl } = this.props;
+    if (savedFileUrl) {
+      const uuid = savedFileUrl.Key.split('/')[0];
+      const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
+      const data = JSON.stringify({
+        jsonUrl,
+      });
+      const searchParams = new URLSearchParams(`data=${data}`);
+      const contributionUrl = `${openCollectiveRedirectUrl}?${searchParams}`;
+      return contributionUrl;
+    }
   };
 
   render() {
@@ -287,7 +296,7 @@ export default class Files extends React.Component {
                 .modalActionBtnWrapper {
                   display: flex;
                 }
-                .modalActionBtnWrapper > button {
+                .modalBtn {
                   margin: 10px;
                   cursor: pointer;
                   font-size: 1.4rem;
@@ -296,6 +305,10 @@ export default class Files extends React.Component {
                   border: 1px solid #dcdee0;
                   border-radius: 100px;
                 }
+                .BtnlikeLink {
+                  padding: 8px 16px;
+                  text-decoration: nonde;
+                }
                 .cancelBtn {
                   background: #fff;
                   color: #71757a;
@@ -303,6 +316,7 @@ export default class Files extends React.Component {
                 .continueBtn {
                   background: #3f00a5;
                   color: #fff;
+                  text-decoration: none;
                 }
               `}
             </style>
@@ -314,19 +328,19 @@ export default class Files extends React.Component {
             <hr className="dividerLine" />
             <div className="modalActionBtnWrapper">
               <button
-                className="cancelBtn"
+                className="modalBtn cancelBtn"
                 onClick={() => {
                   this.setState({ showModal: false });
                 }}
               >
                 Cancel
               </button>
-              <button
-                className="continueBtn"
-                onClick={this.handleContinueBacMyStack}
+              <a
+                className="modalBtn continueBtn"
+                href={`${this.getContributionUrl()}`}
               >
                 Continue
-              </button>
+              </a>
             </div>
           </div>
         </Modal>
