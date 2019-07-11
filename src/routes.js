@@ -6,6 +6,7 @@ routes
   .add('login')
   .add('logout')
   .add('faq')
+  .add('confirm')
   .add('contributing')
   .add('index', '/')
   .add('search', '/search')
