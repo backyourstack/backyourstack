@@ -153,7 +153,8 @@ export default class Files extends React.Component {
       const data = JSON.stringify({
         jsonUrl,
       });
-      const searchParams = new URLSearchParams(`data=${data}`);
+      const redirectUrl = `${baseUrl}/confirm`;
+      const searchParams = new URLSearchParams({ data, redirectUrl });
       const contributionUrl = `${openCollectiveRedirectUrl}?${searchParams}`;
       return contributionUrl;
     }
