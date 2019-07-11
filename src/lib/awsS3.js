@@ -1,6 +1,5 @@
 import { S3 } from 'aws-sdk';
 import uuidv1 from 'uuid/v1';
-import { keys } from 'lodash';
 
 const s3 = new S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -11,26 +10,16 @@ const s3 = new S3({
 const Bucket = process.env.AWS_S3_BUCKET;
 
 export const uploadFiles = async files => {
-  const count = Object.keys(files).length;
-  // For a single file
-  if (count === 1) {
-    const id = keys(files)[0];
-    const key = [id, '.json'].join('');
+  const metaData = {};
+  const identifier = uuidv1();
+  for (const id in files) {
+    const key = `${identifier}/${id}.json`;
     const body = { [id]: files[id] };
-    return saveFileToS3(key, body);
-  } else {
-    const metaData = {};
-    // Save individual files and get their metaData
-    for (const id in files) {
-      const key = [id, '.json'].join('');
-      const body = { [id]: files[id] };
-      const data = await saveFileToS3(key, body);
-      metaData[id] = { url: data.Location, key: data.Key };
-    }
-    // Save the metaData as a folder file
-    const folderKey = [uuidv1(), '.json'].join('');
-    return saveFileToS3(folderKey, metaData);
+    const data = await saveFileToS3(key, body);
+    metaData[id] = { url: data.Location };
   }
+  const folderKey = `${identifier}/dependencies.json`;
+  return saveFileToS3(folderKey, { files: metaData });
 };
 
 export const saveFileToS3 = (Key, Body) => {
@@ -44,33 +33,31 @@ export const saveFileToS3 = (Key, Body) => {
   return s3.upload(uploadParam).promise();
 };
 
-export const getFile = key => {
-  const Key = `${key}.json`;
+export const getObjectList = uuid => {
   const params = {
     Bucket,
-    Key,
-    ResponseContentType: 'application/json',
+    Prefix: `${uuid}/`,
   };
-
-  return s3.getObject(params).promise();
+  return s3.listObjects(params).promise();
 };
 
-export const getMultipleFiles = async key => {
+export const getFiles = async uuid => {
+  const { Contents } = await getObjectList(uuid);
   const data = {};
-  let metaData;
 
-  try {
-    const file = await getFile(key);
-    metaData = JSON.parse(file.Body.toString('utf-8'));
-  } catch (err) {
-    throw new Error('Invalid file content');
+  if (Contents.length === 0) {
+    return {};
   }
 
-  for (const id in metaData) {
-    const key = metaData[id].key.replace('.json', ''); // getFile method expect key without ext hence why remove .json
-    let content = await getFile(key);
-    content = JSON.parse(content.Body.toString('utf-8'));
-    data[id] = content[id];
+  for (const content of Contents) {
+    // checks if it is the index file and skips over it
+    if (content.Key.indexOf('dependencies') !== -1) {
+      continue;
+    }
+    const params = { Bucket, Key: content.Key };
+    const { Body } = await s3.getObject(params).promise();
+    const file = JSON.parse(Body.toString('utf-8'));
+    Object.assign(data, file);
   }
   return data;
 };
