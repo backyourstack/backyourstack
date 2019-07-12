@@ -250,8 +250,28 @@ nextApp.prepare().then(() => {
       return res.status(404).send('No file found');
     }
 
-    const { recommendations } = await getFilesData(data);
-    return res.status(200).send(recommendations);
+    const { recommendations, opencollectiveAccount } = await getFilesData(data);
+    const backing = recommendations
+      .filter(r => r.opencollective)
+      .filter(r => r.opencollective.pledge !== true)
+      .map(recommendation => {
+        const { opencollective, github } = recommendation;
+        const order =
+          opencollectiveAccount &&
+          get(opencollectiveAccount, 'orders.nodes', []).find(
+            order =>
+              opencollective && opencollective.slug === order.toAccount.slug,
+          );
+        if (order) {
+          opencollective.order = order;
+        }
+        return {
+          weigh: 100,
+          opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
+          github: github,
+        };
+      });
+    return res.status(200).send(backing);
   });
 
   server.use('/static', (req, res, next) => {
