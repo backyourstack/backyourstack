@@ -2,8 +2,9 @@ import request from 'graphql-request';
 
 import cache from './cache';
 
-const baseUrl = 'https://opencollective.com/api/graphql';
-const baseUrlV2 = 'https://opencollective.com/api/graphql/v2';
+const opencollectiveUrl = process.env.OPENCOLLECTIVE_URL;
+const baseUrl = `${opencollectiveUrl}/api/graphql`;
+const baseUrlV2 = `${opencollectiveUrl}/api/graphql/v2`;
 
 const getAccountOrdersQuery = `query account($slug: String!) {
   account(slug: $slug) {
@@ -26,6 +27,41 @@ const getAccountOrdersQuery = `query account($slug: String!) {
     }
   }
 }`;
+
+const getOrder = `
+query getOrder($id: Int!) {
+  Order(id: $id) {
+    id
+    interval
+    publicMessage
+    quantity
+    totalAmount
+    status
+    data
+    collective {
+      slug
+      currency
+      host {
+        id
+        name
+      }
+      isActive
+      name
+      paymentMethods {
+        id
+        name
+        service
+      }
+      website
+    }
+    fromCollective {
+      id
+      name
+      type
+    }
+  }
+}
+`;
 
 const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
   Collective(slug: $slug) {
@@ -117,6 +153,24 @@ function fetchAccountWithOrders(slug) {
     });
 }
 
+function fetchOrder(id) {
+  const cacheKey = `order_with_id_${id}`;
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
+  }
+
+  return request(baseUrl, getOrder, { id })
+    .then(data => {
+      cache.set(cacheKey, data.Order);
+      return data.Order;
+    })
+    .catch(err => {
+      console.error(err);
+      cache.set(cacheKey, null);
+      return null;
+    });
+}
+
 function fetchCollectiveWithMembers(slug) {
   const cacheKey = `collective_with_members_${slug}`;
 
@@ -146,4 +200,5 @@ export {
   fetchAccountWithOrders,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
+  fetchOrder,
 };
