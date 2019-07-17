@@ -18,6 +18,7 @@ module.exports = withCSS({
       new webpack.EnvironmentPlugin({
         OPENCOLLECTIVE_REFERRAL: null,
         OPENCOLLECTIVE_REDIRECT_URL: process.env.OPENCOLLECTIVE_REDIRECT_URL,
+        OPENCOLLECTIVE_URL: process.env.OPENCOLLECTIVE_URL,
       }),
     );
 
