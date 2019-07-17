@@ -17,8 +17,8 @@ module.exports = withCSS({
       // Make some environment variables accessible from the client
       new webpack.EnvironmentPlugin({
         OPENCOLLECTIVE_REFERRAL: null,
-        OPENCOLLECTIVE_REDIRECT_URL: process.env.OPENCOLLECTIVE_REDIRECT_URL,
-        OPENCOLLECTIVE_URL: process.env.OPENCOLLECTIVE_URL,
+        OPENCOLLECTIVE_REDIRECT_PATH: process.env.OPENCOLLECTIVE_REDIRECT_PATH,
+        OPENCOLLECTIVE_BASE_URL: process.env.OPENCOLLECTIVE_BASE_URL,
       }),
     );
 
