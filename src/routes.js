@@ -6,9 +6,10 @@ routes
   .add('login')
   .add('logout')
   .add('faq')
-  .add('confirm')
   .add('contributing')
   .add('index', '/')
+  .add('confirmed', '/confirmed')
+  .add('backmystack', '/backmystack')
   .add('search', '/search')
   .add('files', '/files/:section(dependencies|repositories)?')
   .add('profile', '/:id/:section(dependencies|repositories)?');
