@@ -224,7 +224,7 @@ nextApp.prepare().then(() => {
           opencollective.order = order;
         }
         return {
-          weigh: 100,
+          weight: 100,
           opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
           github: github,
         };
@@ -266,7 +266,7 @@ nextApp.prepare().then(() => {
           opencollective.order = order;
         }
         return {
-          weigh: 100,
+          weight: 100,
           opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
           github: github,
         };
