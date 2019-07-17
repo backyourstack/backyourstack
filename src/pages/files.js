@@ -24,15 +24,8 @@ const getFilesData = sessionFiles =>
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
     const initialProps = { section: query.section };
-    let protocol = 'https:';
-    const host = req ? req.headers.host : window.location.hostname;
-    if (host.indexOf('localhost') > -1) {
-      protocol = 'http:';
-    }
-    const baseUrl = `${protocol}//${host}`;
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
-    const openCollectiveRedirectUrl = process.env.OPENCOLLECTIVE_REDIRECT_URL;
 
     const { files, dependencies, recommendations } = await getFilesData(
       sessionFiles,
@@ -43,8 +36,6 @@ export default class Files extends React.Component {
       files,
       dependencies,
       recommendations,
-      openCollectiveRedirectUrl,
-      baseUrl,
     };
   }
 
@@ -135,23 +126,6 @@ export default class Files extends React.Component {
       });
     } catch (err) {
       console.error(err);
-    }
-  };
-
-  getContributionUrl = () => {
-    // Get the key url of the file
-    const { savedFileUrl } = this.state;
-    const { openCollectiveRedirectUrl, baseUrl } = this.props;
-    if (savedFileUrl) {
-      const uuid = savedFileUrl.Key.split('/')[0];
-      const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
-      const data = JSON.stringify({
-        jsonUrl,
-      });
-      const redirectUrl = `${baseUrl}/confirm`;
-      const searchParams = new URLSearchParams({ data, redirectUrl });
-      const contributionUrl = `${openCollectiveRedirectUrl}?${searchParams}`;
-      return contributionUrl;
     }
   };
 
