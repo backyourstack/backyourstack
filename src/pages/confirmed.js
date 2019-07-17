@@ -40,7 +40,6 @@ export default class Confirmed extends React.Component {
 
   render() {
     const { dispatchedOrders } = this.state;
-    console.log(dispatchedOrders);
     return (
       <div className="Page ConfirmPage">
         <style jsx>
