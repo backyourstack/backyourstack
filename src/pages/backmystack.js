@@ -7,7 +7,8 @@ import Footer from '../components/Footer';
 export default class BackMyStack extends React.Component {
   static getInitialProps({ req, query }) {
     const uuid = query.uuid; // handle case where the uuid is not supplied
-    const openCollectiveRedirectUrl = process.env.OPENCOLLECTIVE_REDIRECT_URL;
+    const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
+    const openCollectiveRedirectUrl = `${opencollectiveBaseUrl}${process.env.OPENCOLLECTIVE_REDIRECT_PATH}`;
 
     let protocol = 'https:';
     const host = req ? req.headers.host : window.location.hostname;
@@ -39,7 +40,7 @@ export default class BackMyStack extends React.Component {
       const data = JSON.stringify({
         jsonUrl,
       });
-      const redirect = `${baseUrl}/confirm`;
+      const redirect = `${baseUrl}/confirmed`;
       const searchParams = new URLSearchParams({ data, redirect });
       const contributionUrl = `${openCollectiveRedirectUrl}?${searchParams}`;
       return contributionUrl;
