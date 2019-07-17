@@ -2,9 +2,9 @@ import request from 'graphql-request';
 
 import cache from './cache';
 
-const opencollectiveUrl = process.env.OPENCOLLECTIVE_URL;
-const baseUrl = `${opencollectiveUrl}/api/graphql`;
-const baseUrlV2 = `${opencollectiveUrl}/api/graphql/v2`;
+const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
+const baseUrl = `${opencollectiveBaseUrl}/api/graphql`;
+const baseUrlV2 = `${opencollectiveBaseUrl}/api/graphql/v2`;
 
 const getAccountOrdersQuery = `query account($slug: String!) {
   account(slug: $slug) {
@@ -28,39 +28,17 @@ const getAccountOrdersQuery = `query account($slug: String!) {
   }
 }`;
 
-const getOrder = `
-query getOrder($id: Int!) {
-  Order(id: $id) {
-    id
-    interval
-    publicMessage
-    quantity
-    totalAmount
-    status
-    data
-    collective {
-      slug
-      currency
-      host {
-        id
-        name
-      }
-      isActive
-      name
-      paymentMethods {
-        id
-        name
-        service
-      }
-      website
-    }
-    fromCollective {
+const dispatchOrder = `
+  mutation dispatchOrder($id: Int!) {
+    dispatchOrder(id: $id) {
       id
-      name
-      type
+      totalAmount
+      collective {
+        name
+        slug
+      }
     }
   }
-}
 `;
 
 const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
@@ -153,16 +131,16 @@ function fetchAccountWithOrders(slug) {
     });
 }
 
-function fetchOrder(id) {
+function dispatchOrderMutation(id) {
   const cacheKey = `order_with_id_${id}`;
   if (cache.has(cacheKey)) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrl, getOrder, { id })
+  return request(baseUrl, dispatchOrder, { id })
     .then(data => {
-      cache.set(cacheKey, data.Order);
-      return data.Order;
+      cache.set(cacheKey, data.dispatchOrder);
+      return data.dispatchOrder;
     })
     .catch(err => {
       console.error(err);
@@ -200,5 +178,5 @@ export {
   fetchAccountWithOrders,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
-  fetchOrder,
+  dispatchOrderMutation,
 };
