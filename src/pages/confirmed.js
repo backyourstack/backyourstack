@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { fetchOrder } from '../lib/opencollective';
+import { dispatchOrderMutation } from '../lib/opencollective';
 import ConfirmationFAQ from '../../ConfirmationFAQ.md';
 
 export default class Confirmed extends React.Component {
@@ -23,6 +23,7 @@ export default class Confirmed extends React.Component {
     super(props);
     this.state = {
       dispatchedOrders: [],
+      status: null,
     };
   }
 
@@ -30,19 +31,59 @@ export default class Confirmed extends React.Component {
     if (!this.props.orderId) {
       return;
     }
-    const order = await fetchOrder(parseInt(this.props.orderId));
-    if (order.data.dispatchedOrders) {
+    this.setState({
+      status: 'dispatching',
+    });
+    const dispatchedOrders = await dispatchOrderMutation(
+      parseInt(this.props.orderId),
+    );
+
+    if (dispatchedOrders) {
       this.setState({
-        dispatchedOrders: order.data.dispatchedOrders,
+        dispatchedOrders,
+        status: 'success',
+      });
+    } else {
+      this.setState({
+        status: 'failuere',
       });
     }
   }
 
+  renderDispatchedOrders(dispatchedOrders) {
+    return (
+      <div className="confirmationWrapper">
+        <h3>Woot woot! 🎉</h3>
+        <p>
+          Your donation was successfully dispatched, you&apos;re now monthly
+          backing the following collectives:
+        </p>
+        <div className="tableWrapper">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+            </tr>
+            {dispatchedOrders.map(order => {
+              const collective = order.collective;
+              return (
+                <tr key={order.id}>
+                  <td>{collective.name}</td>
+                  <td>{order.totalAmount} per month</td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
+      </div>
+    );
+  }
+
   render() {
-    const { dispatchedOrders } = this.state;
+    const { dispatchedOrders, status } = this.state;
     return (
       <div className="Page ConfirmPage">
-        <style jsx>
+        <style jsx global>
           {`
             .confirmationMessage {
               display: flex;
@@ -79,32 +120,16 @@ export default class Confirmed extends React.Component {
           brandAlign="auto"
         />
 
-        <div className="confirmationWrapper">
-          <h3>Woot woot! 🎉</h3>
-          <p>
-            Your donation was successfully dispatched, you&apos;re now monthly
-            backing the following collectives:
-          </p>
-          <div className="tableWrapper">
-            {dispatchedOrders.length !== 0 && (
-              <table>
-                <tr>
-                  <th>Name</th>
-                  <th>Amount</th>
-                </tr>
-                {dispatchedOrders.map(order => {
-                  const collective = order.collective;
-                  return (
-                    <tr key={order.id}>
-                      <td>{collective.name}</td>
-                      <td>{order.totalAmount} per month</td>
-                    </tr>
-                  );
-                })}
-              </table>
-            )}
-          </div>
-        </div>
+        {status === 'dispatching' && (
+          <h3>
+            Your order was created successfully, it is now being dispatched to
+            various collectives...
+          </h3>
+        )}
+        {status === 'failure' && (
+          <h3 color="red">Unable to dispatch funds at this time</h3>
+        )}
+        {status === 'success' && this.renderDispatchedOrders(dispatchedOrders)}
         <div className="content">
           <ConfirmationFAQ />
         </div>
