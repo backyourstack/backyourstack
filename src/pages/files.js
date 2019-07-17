@@ -13,7 +13,6 @@ import Upload from '../components/Upload';
 
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
-import SaveProfile from '../components/SaveProfile';
 import BackMyStack from '../components/BackMyStack';
 import Modal from '../components/Modal';
 
@@ -93,8 +92,7 @@ export default class Files extends React.Component {
     }
   };
 
-  handleSaveProfile = event => {
-    event.stopPropagation();
+  saveFileToS3() {
     const { files } = this.state;
     const ids = Object.keys(files);
     const params = {
@@ -106,20 +104,11 @@ export default class Files extends React.Component {
       body: JSON.stringify({ ids }),
       credentials: 'same-origin',
     };
-    fetch('/files/save', params)
-      .then(response => {
-        return response.json();
-      })
-      .then(result => {
-        this.setState({
-          savedFileUrl: { ...result },
-          canBackMyStack: true,
-        });
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  };
+
+    return fetch('/files/save', params).then(response => {
+      return response.json();
+    });
+  }
 
   handleRemoveFile = (id, event) => {
     event.stopPropagation();
@@ -137,10 +126,16 @@ export default class Files extends React.Component {
     });
   };
 
-  handleBackMyStack = () => {
-    this.setState({
-      showModal: true,
-    });
+  handleBackMyStack = async () => {
+    try {
+      const savedFileUrl = await this.saveFileToS3();
+      const uuid = savedFileUrl.Key.split('/')[0];
+      await Router.pushRoute('backmystack', {
+        uuid,
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   getContributionUrl = () => {
@@ -162,7 +157,7 @@ export default class Files extends React.Component {
 
   render() {
     const { section, pathname, loggedInUser } = this.props;
-    const { files, dependencies, recommendations, canBackMyStack } = this.state;
+    const { files, dependencies, recommendations } = this.state;
     const count = Object.keys(files).length;
     return (
       <Fragment>
@@ -227,12 +222,8 @@ export default class Files extends React.Component {
                   </a>
                 </Link>
               </div>
-              {canBackMyStack && (
-                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
-              )}
             </div>
           </nav>
-
           <aside>
             {Object.entries(files).map(([id, file]) => (
               <div key={id} className="File">
@@ -250,10 +241,6 @@ export default class Files extends React.Component {
                 </button>
               </div>
             ))}
-            <SaveProfile
-              onClickSaveProfile={this.handleSaveProfile}
-              savedFileUrl={this.state.savedFileUrl}
-            />
 
             <Upload
               onUpload={this.refresh}
@@ -273,6 +260,7 @@ export default class Files extends React.Component {
             )}
             {count > 0 && (
               <Fragment>
+                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
                 {!section && (
                   <RecommendationList recommendations={recommendations} />
                 )}
