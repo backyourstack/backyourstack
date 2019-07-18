@@ -14,7 +14,6 @@ import Upload from '../components/Upload';
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
 import BackMyStack from '../components/BackMyStack';
-import Modal from '../components/Modal';
 
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
@@ -246,67 +245,6 @@ export default class Files extends React.Component {
             )}
           </main>
         </div>
-        <Modal
-          show={this.state.showModal}
-          onClose={() => {
-            this.setState({ showModal: false });
-          }}
-          title="Back My Stack"
-        >
-          <div>
-            <style jsx>
-              {`
-                .modalActionBtnWrapper {
-                  display: flex;
-                }
-                .modalBtn {
-                  margin: 10px;
-                  cursor: pointer;
-                  font-size: 1.4rem;
-                  padding: 8px 16px;
-                  outline: none;
-                  border: 1px solid #dcdee0;
-                  border-radius: 100px;
-                }
-                .BtnlikeLink {
-                  padding: 8px 16px;
-                  text-decoration: nonde;
-                }
-                .cancelBtn {
-                  background: #fff;
-                  color: #71757a;
-                }
-                .continueBtn {
-                  background: #3f00a5;
-                  color: #fff;
-                  text-decoration: none;
-                }
-              `}
-            </style>
-            <p>
-              You&apos;re about to back your entier stack, donations will be
-              shared every month amongst your stack collectives registerd on
-              Open Collective.
-            </p>
-            <hr className="dividerLine" />
-            <div className="modalActionBtnWrapper">
-              <button
-                className="modalBtn cancelBtn"
-                onClick={() => {
-                  this.setState({ showModal: false });
-                }}
-              >
-                Cancel
-              </button>
-              <a
-                className="modalBtn continueBtn"
-                href={`${this.getContributionUrl()}`}
-              >
-                Continue
-              </a>
-            </div>
-          </div>
-        </Modal>
       </Fragment>
     );
   }
