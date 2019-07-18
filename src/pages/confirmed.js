@@ -8,15 +8,20 @@ import ConfirmationFAQ from '../../ConfirmationFAQ.md';
 
 export default class Confirmed extends React.Component {
   static async getInitialProps({ query }) {
-    let dispatchedOrders;
+    let dispatchedOrders, error;
     if (query.orderId) {
-      dispatchedOrders = await dispatchOrderMutation(parseInt(query.orderId));
+      try {
+        dispatchedOrders = await dispatchOrderMutation(parseInt(query.orderId));
+      } catch (e) {
+        error = e.message;
+      }
     }
 
     return {
       next: query.next || '/',
       orderId: query.orderId,
       dispatchedOrders: dispatchedOrders || [],
+      error: error || null,
     };
   }
 
@@ -24,6 +29,7 @@ export default class Confirmed extends React.Component {
     loggedInUser: PropTypes.object,
     orderId: PropTypes.string,
     dispatchedOrders: PropTypes.array,
+    error: PropTypes.string,
   };
 
   constructor(props) {
@@ -107,9 +113,12 @@ export default class Confirmed extends React.Component {
           brandAlign="auto"
         />
         {dispatchedOrders.length === 0 && (
-          <h3 className="error">
-            Your order was created but unable to dispatch funds at this time
-          </h3>
+          <div className="error">
+            <h3>
+              Your order was created but unable to dispatch funds at this time
+            </h3>
+            {this.props.error && <p>{this.props.error}</p>}
+          </div>
         )}
         {dispatchedOrders.length !== 0 &&
           this.renderDispatchedOrders(dispatchedOrders)}
