@@ -132,20 +132,12 @@ function fetchAccountWithOrders(slug) {
 }
 
 function dispatchOrderMutation(id) {
-  const cacheKey = `order_with_id_${id}`;
-  if (cache.has(cacheKey)) {
-    return cache.get(cacheKey);
-  }
-
   return request(baseUrl, dispatchOrder, { id })
     .then(data => {
-      cache.set(cacheKey, data.dispatchOrder);
       return data.dispatchOrder;
     })
     .catch(err => {
-      console.error(err);
-      cache.set(cacheKey, null);
-      return null;
+      throw new Error(err.message);
     });
 }
 
