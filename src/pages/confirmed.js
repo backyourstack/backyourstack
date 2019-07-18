@@ -7,47 +7,30 @@ import { dispatchOrderMutation } from '../lib/opencollective';
 import ConfirmationFAQ from '../../ConfirmationFAQ.md';
 
 export default class Confirmed extends React.Component {
-  static getInitialProps({ query }) {
+  static async getInitialProps({ query }) {
+    let dispatchedOrders;
+    if (query.orderId) {
+      dispatchedOrders = await dispatchOrderMutation(parseInt(query.orderId));
+    }
+
     return {
       next: query.next || '/',
       orderId: query.orderId,
+      dispatchedOrders: dispatchedOrders || [],
     };
   }
 
   static propTypes = {
     loggedInUser: PropTypes.object,
     orderId: PropTypes.string,
+    dispatchedOrders: PropTypes.array,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      dispatchedOrders: [],
-      status: null,
+      dispatchedOrders: props.dispatchedOrders,
     };
-  }
-
-  async componentDidMount() {
-    if (!this.props.orderId) {
-      return;
-    }
-    this.setState({
-      status: 'dispatching',
-    });
-    const dispatchedOrders = await dispatchOrderMutation(
-      parseInt(this.props.orderId),
-    );
-
-    if (dispatchedOrders) {
-      this.setState({
-        dispatchedOrders,
-        status: 'success',
-      });
-    } else {
-      this.setState({
-        status: 'failuere',
-      });
-    }
   }
 
   renderDispatchedOrders(dispatchedOrders) {
@@ -80,7 +63,7 @@ export default class Confirmed extends React.Component {
   }
 
   render() {
-    const { dispatchedOrders, status } = this.state;
+    const { dispatchedOrders } = this.state;
     return (
       <div className="Page ConfirmPage">
         <style jsx global>
@@ -112,6 +95,10 @@ export default class Confirmed extends React.Component {
                 margin: 50px 20px;
               }
             }
+            .error {
+              color: red;
+              text-align: center;
+            }
           `}
         </style>
         <Header
@@ -119,17 +106,13 @@ export default class Confirmed extends React.Component {
           login={false}
           brandAlign="auto"
         />
-
-        {status === 'dispatching' && (
-          <h3>
-            Your order was created successfully, it is now being dispatched to
-            various collectives...
+        {dispatchedOrders.length === 0 && (
+          <h3 className="error">
+            Your order was created but unable to dispatch funds at this time
           </h3>
         )}
-        {status === 'failure' && (
-          <h3 color="red">Unable to dispatch funds at this time</h3>
-        )}
-        {status === 'success' && this.renderDispatchedOrders(dispatchedOrders)}
+        {dispatchedOrders.length !== 0 &&
+          this.renderDispatchedOrders(dispatchedOrders)}
         <div className="content">
           <ConfirmationFAQ />
         </div>
