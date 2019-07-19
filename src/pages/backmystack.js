@@ -11,7 +11,7 @@ export default class BackMyStack extends React.Component {
     const openCollectiveRedirectUrl = `${opencollectiveBaseUrl}${process.env.OPENCOLLECTIVE_REDIRECT_PATH}`;
 
     let protocol = 'https:';
-    const host = req ? req.headers.host : window.location.hostname;
+    const host = req ? req.headers.host : window.location.host;
     if (host.indexOf('localhost') > -1) {
       protocol = 'http:';
     }
