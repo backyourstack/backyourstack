@@ -17,6 +17,7 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
+import { dispatchOrderMutation } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -196,10 +197,10 @@ nextApp.prepare().then(() => {
     });
     try {
       const savedData = await uploadFiles(files);
-      res.status(200).send(savedData);
+      return res.status(200).send(savedData);
     } catch (err) {
       console.error(err);
-      res.status(400).send('Unable to save file');
+      return res.status(400).send('Unable to save file');
     }
   });
 
@@ -272,6 +273,17 @@ nextApp.prepare().then(() => {
         };
       });
     return res.status(200).send(backing);
+  });
+
+  server.post('/order/dispatch', async (req, res) => {
+    const orderId = get(req, 'body.orderId');
+    try {
+      const dispatchedOrders = await dispatchOrderMutation(orderId);
+      return res.status(200).send(dispatchedOrders);
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send({ error: JSON.stringify(err.message) });
+    }
   });
 
   server.use('/static', (req, res, next) => {
