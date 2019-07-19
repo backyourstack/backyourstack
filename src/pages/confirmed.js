@@ -3,40 +3,67 @@ import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { dispatchOrderMutation } from '../lib/opencollective';
 import ConfirmationFAQ from '../../ConfirmationFAQ.md';
 
 export default class Confirmed extends React.Component {
-  static async getInitialProps({ query }) {
-    let dispatchedOrders, error;
-    if (query.orderId) {
-      try {
-        dispatchedOrders = await dispatchOrderMutation(parseInt(query.orderId));
-      } catch (e) {
-        error = e.message;
-      }
-    }
-
+  static getInitialProps({ query }) {
     return {
       next: query.next || '/',
-      orderId: query.orderId,
-      dispatchedOrders: dispatchedOrders || [],
-      error: error || null,
+      orderId: query.orderId || null,
     };
   }
 
   static propTypes = {
     loggedInUser: PropTypes.object,
     orderId: PropTypes.string,
-    dispatchedOrders: PropTypes.array,
-    error: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      dispatchedOrders: props.dispatchedOrders,
+      dispatchedOrders: [],
+      status: null,
+      errMesg: null,
     };
+  }
+
+  async componentDidMount() {
+    const { orderId } = this.props;
+    if (!orderId) {
+      return;
+    }
+    await this.dispatchOrder(parseInt(orderId));
+  }
+
+  dispatchOrder(orderId) {
+    const params = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ orderId }),
+      credentials: 'same-origin',
+    };
+
+    this.setState({ status: 'processing' });
+    fetch('/order/dispatch', params)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        if (data.error) {
+          this.setState({
+            status: 'failure',
+            errMesg: data.error,
+          });
+        } else {
+          this.setState({
+            status: 'success',
+            dispatchedOrders: data,
+          });
+        }
+      });
   }
 
   renderDispatchedOrders(dispatchedOrders) {
@@ -69,7 +96,7 @@ export default class Confirmed extends React.Component {
   }
 
   render() {
-    const { dispatchedOrders } = this.state;
+    const { dispatchedOrders, status, errMesg } = this.state;
     return (
       <div className="Page ConfirmPage">
         <style jsx global>
@@ -105,6 +132,10 @@ export default class Confirmed extends React.Component {
               color: red;
               text-align: center;
             }
+            .dispatchingWrapper {
+              text-align: center;
+              color: green;
+            }
           `}
         </style>
         <Header
@@ -112,16 +143,20 @@ export default class Confirmed extends React.Component {
           login={false}
           brandAlign="auto"
         />
-        {dispatchedOrders.length === 0 && (
+        {status === 'failure' && (
           <div className="error">
             <h3>
               Your order was created but unable to dispatch funds at this time
             </h3>
-            {this.props.error && <p>{this.props.error}</p>}
+            {errMesg && <p>{errMesg}</p>}
           </div>
         )}
-        {dispatchedOrders.length !== 0 &&
-          this.renderDispatchedOrders(dispatchedOrders)}
+        {status === 'processing' && (
+          <div className="dispatchingWrapper">
+            <h3>Dispatching....</h3>
+          </div>
+        )}
+        {status === 'success' && this.renderDispatchedOrders(dispatchedOrders)}
         <div className="content">
           <ConfirmationFAQ />
         </div>
