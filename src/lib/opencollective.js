@@ -28,19 +28,6 @@ const getAccountOrdersQuery = `query account($slug: String!) {
   }
 }`;
 
-const dispatchOrder = `
-  mutation dispatchOrder($id: Int!) {
-    dispatchOrder(id: $id) {
-      id
-      totalAmount
-      collective {
-        name
-        slug
-      }
-    }
-  }
-`;
-
 const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
   Collective(slug: $slug) {
     id
@@ -113,6 +100,19 @@ const getAllCollectivesQuery = `query allCollectives(
 }
 `;
 
+const dispatchOrderQuery = `
+  mutation backyourstackDispatchOrder($id: Int!) {
+    backyourstackDispatchOrder(id: $id) {
+      id
+      totalAmount
+      collective {
+        name
+        slug
+      }
+    }
+  }
+`;
+
 function fetchAccountWithOrders(slug) {
   const cacheKey = `account_with_orders_${slug}`;
 
@@ -128,16 +128,6 @@ function fetchAccountWithOrders(slug) {
     .catch(() => {
       cache.set(cacheKey, null);
       return null;
-    });
-}
-
-function dispatchOrderMutation(id) {
-  return request(baseUrl, dispatchOrder, { id })
-    .then(data => {
-      return data.dispatchOrder;
-    })
-    .catch(err => {
-      throw new Error(err.message);
     });
 }
 
@@ -166,9 +156,19 @@ function fetchAllCollectives(parameters) {
   );
 }
 
+function dispatchOrder(id) {
+  return request(baseUrl, dispatchOrderQuery, { id })
+    .then(data => {
+      return data.dispatchOrder;
+    })
+    .catch(err => {
+      throw new Error(err.message);
+    });
+}
+
 export {
   fetchAccountWithOrders,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
-  dispatchOrderMutation,
+  dispatchOrder,
 };

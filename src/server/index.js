@@ -17,7 +17,7 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
-import { dispatchOrderMutation } from '../lib/opencollective';
+import { dispatchOrder } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -278,7 +278,7 @@ nextApp.prepare().then(() => {
   server.post('/order/dispatch', async (req, res) => {
     const orderId = get(req, 'body.orderId');
     try {
-      const dispatchedOrders = await dispatchOrderMutation(orderId);
+      const dispatchedOrders = await dispatchOrder(orderId);
       return res.status(200).send(dispatchedOrders);
     } catch (err) {
       console.error(err);
