@@ -100,7 +100,7 @@ const getAllCollectivesQuery = `query allCollectives(
 }
 `;
 
-const dispatchOrderQuery = `
+const backyourstackDispatchOrderMutation = `
   mutation backyourstackDispatchOrder($id: Int!) {
     backyourstackDispatchOrder(id: $id) {
       id
@@ -157,9 +157,9 @@ function fetchAllCollectives(parameters) {
 }
 
 function dispatchOrder(id) {
-  return request(baseUrl, dispatchOrderQuery, { id })
+  return request(baseUrl, backyourstackDispatchOrderMutation, { id })
     .then(data => {
-      return data.dispatchOrder;
+      return data.backyourstackDispatchOrder;
     })
     .catch(err => {
       throw new Error(err.message);

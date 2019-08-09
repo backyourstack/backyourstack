@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ConfirmationFAQ from '../../ConfirmationFAQ.md';
 
-export default class Confirmed extends React.Component {
+export default class MonthlyPlanConfirmation extends React.Component {
   static getInitialProps({ query }) {
     return {
       next: query.next || '/',
@@ -81,13 +80,14 @@ export default class Confirmed extends React.Component {
               <th>Amount</th>
             </tr>
             {dispatchedOrders.map(order => {
-              const collective = order.collective;
-              return (
-                <tr key={order.id}>
-                  <td>{collective.name}</td>
-                  <td>{order.totalAmount} per month</td>
-                </tr>
-              );
+              if (order) {
+                return (
+                  <tr key={order.id}>
+                    <td>{order.collective.name}</td>
+                    <td>{order.totalAmount} per month</td>
+                  </tr>
+                );
+              }
             })}
           </table>
         </div>
@@ -143,22 +143,22 @@ export default class Confirmed extends React.Component {
           login={false}
           brandAlign="auto"
         />
-        {status === 'failure' && (
-          <div className="error">
-            <h3>
-              Your order was created but unable to dispatch funds at this time
-            </h3>
-            {errMesg && <p>{errMesg}</p>}
-          </div>
-        )}
-        {status === 'processing' && (
-          <div className="dispatchingWrapper">
-            <h3>Dispatching....</h3>
-          </div>
-        )}
-        {status === 'success' && this.renderDispatchedOrders(dispatchedOrders)}
         <div className="content">
-          <ConfirmationFAQ />
+          {status === 'failure' && (
+            <div className="error">
+              <h3>
+                Your order was created but unable to dispatch funds at this time
+              </h3>
+              {errMesg && <p>{errMesg}</p>}
+            </div>
+          )}
+          {status === 'processing' && (
+            <div className="dispatchingWrapper">
+              <h3>Dispatching....</h3>
+            </div>
+          )}
+          {status === 'success' &&
+            this.renderDispatchedOrders(dispatchedOrders)}
         </div>
         <Footer />
       </div>

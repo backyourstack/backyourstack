@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default class BackMyStack extends React.Component {
+export default class MonthlyPlan extends React.Component {
   static getInitialProps({ req, query }) {
     const uuid = query.uuid; // handle case where the uuid is not supplied
     const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
@@ -40,7 +40,7 @@ export default class BackMyStack extends React.Component {
       const data = JSON.stringify({
         jsonUrl,
       });
-      const redirect = `${baseUrl}/confirmed`;
+      const redirect = `${baseUrl}/monthly-plan/confirmation`;
       const searchParams = new URLSearchParams({ data, redirect });
       const contributionUrl = `${openCollectiveRedirectUrl}?${searchParams}`;
       return contributionUrl;

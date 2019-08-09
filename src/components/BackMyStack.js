@@ -26,6 +26,7 @@ const BackMyStack = ({ onClickBackMyStack }) => {
           }
           .backMyStackBtn {
             height: 50px;
+            cursor: pointer;
           }
         `}
       </style>
