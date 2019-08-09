@@ -1,5 +1,3 @@
-import request from 'graphql-request';
-
 import cache from './cache';
 
 const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
@@ -113,6 +111,25 @@ const backyourstackDispatchOrderMutation = `
   }
 `;
 
+function graphqlRequest(url, query, variables) {
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  })
+    .then(result => result.json())
+    .then(response => {
+      if (response.errors) {
+        console.log(response.errors);
+        throw new Error(response.errors[0].message);
+      }
+      return response.data;
+    });
+}
+
 function fetchAccountWithOrders(slug) {
   const cacheKey = `account_with_orders_${slug}`;
 
@@ -120,7 +137,7 @@ function fetchAccountWithOrders(slug) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrlV2, getAccountOrdersQuery, { slug })
+  return graphqlRequest(baseUrlV2, getAccountOrdersQuery, { slug })
     .then(data => {
       cache.set(cacheKey, data.account);
       return data.account;
@@ -138,7 +155,7 @@ function fetchCollectiveWithMembers(slug) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrl, getCollectiveWithMembersQuery, { slug })
+  return graphqlRequest(baseUrl, getCollectiveWithMembersQuery, { slug })
     .then(data => {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
@@ -151,19 +168,15 @@ function fetchCollectiveWithMembers(slug) {
 }
 
 function fetchAllCollectives(parameters) {
-  return request(baseUrl, getAllCollectivesQuery, parameters).then(
+  return graphqlRequest(baseUrl, getAllCollectivesQuery, parameters).then(
     data => data.allCollectives.collectives,
   );
 }
 
 function dispatchOrder(id) {
-  return request(baseUrl, backyourstackDispatchOrderMutation, { id })
-    .then(data => {
-      return data.backyourstackDispatchOrder;
-    })
-    .catch(err => {
-      throw new Error(err.message);
-    });
+  return graphqlRequest(baseUrl, backyourstackDispatchOrderMutation, {
+    id,
+  }).then(data => data.backyourstackDispatchOrder);
 }
 
 export {

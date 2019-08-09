@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { postJson } from '../lib/fetch';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -35,64 +37,21 @@ export default class MonthlyPlanConfirmation extends React.Component {
   }
 
   dispatchOrder(orderId) {
-    const params = {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ orderId }),
-      credentials: 'same-origin',
-    };
-
     this.setState({ status: 'processing' });
-    fetch('/order/dispatch', params)
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        if (data.error) {
-          this.setState({
-            status: 'failure',
-            errMesg: data.error,
-          });
-        } else {
-          this.setState({
-            status: 'success',
-            dispatchedOrders: data,
-          });
-        }
-      });
-  }
 
-  renderDispatchedOrders(dispatchedOrders) {
-    return (
-      <div className="confirmationWrapper">
-        <h3>Woot woot! 🎉</h3>
-        <p>
-          Your donation was successfully dispatched, you&apos;re now monthly
-          backing the following collectives:
-        </p>
-        <div className="tableWrapper">
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Amount</th>
-            </tr>
-            {dispatchedOrders.map(order => {
-              if (order) {
-                return (
-                  <tr key={order.id}>
-                    <td>{order.collective.name}</td>
-                    <td>{order.totalAmount} per month</td>
-                  </tr>
-                );
-              }
-            })}
-          </table>
-        </div>
-      </div>
-    );
+    postJson('/order/dispatch', { orderId }).then(data => {
+      if (data.error) {
+        this.setState({
+          status: 'failure',
+          errMesg: data.error,
+        });
+      } else {
+        this.setState({
+          status: 'success',
+          dispatchedOrders: data,
+        });
+      }
+    });
   }
 
   render() {
@@ -115,11 +74,17 @@ export default class MonthlyPlanConfirmation extends React.Component {
               margin: 50px auto;
               padding: 20px 30px;
             }
-            .confirmationWrapper {
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              align-items: center;
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            table th,
+            table td {
+              border: 1px solid #c1c6cc;
+              padding: 0.5em;
+              white-space: nowrap;
+              font-size: 12px;
+              color: #121314;
             }
             @media screen and (max-width: 640px) {
               .content {
@@ -134,7 +99,6 @@ export default class MonthlyPlanConfirmation extends React.Component {
             }
             .dispatchingWrapper {
               text-align: center;
-              color: green;
             }
           `}
         </style>
@@ -154,11 +118,48 @@ export default class MonthlyPlanConfirmation extends React.Component {
           )}
           {status === 'processing' && (
             <div className="dispatchingWrapper">
-              <h3>Dispatching....</h3>
+              <h3>Dispatching...</h3>
             </div>
           )}
-          {status === 'success' &&
-            this.renderDispatchedOrders(dispatchedOrders)}
+          {status === 'success' && (
+            <div className="confirmationWrapper">
+              <h3>Woot woot! 🎉</h3>
+              <p>
+                Your first payment was successfully dispatched, you just backed
+                the following collectives:
+              </p>
+              <div className="tableWrapper">
+                <table>
+                  <tr>
+                    <th>Collective</th>
+                    <th>Amount</th>
+                  </tr>
+                  {dispatchedOrders.map(order => {
+                    if (order) {
+                      return (
+                        <tr key={order.id}>
+                          <td>
+                            <a
+                              href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${order.collective.slug}`}
+                            >
+                              {order.collective.name}
+                            </a>
+                          </td>
+                          <td>${(order.totalAmount / 100).toFixed(2)}</td>
+                        </tr>
+                      );
+                    }
+                  })}
+                </table>
+                <p>
+                  <strong>What&apos;s next?</strong> Your subscription being now
+                  active, you will be charged next month and the money will be
+                  automatically dispatched to your dependencies. You don&apos;t
+                  have to do anything. 🤞
+                </p>
+              </div>
+            </div>
+          )}
         </div>
         <Footer />
       </div>

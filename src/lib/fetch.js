@@ -11,3 +11,13 @@ export function fetchJson(url, params = {}) {
     .then(res => res.json())
     .then(fetchDebug);
 }
+
+export function postJson(url, body, params = {}) {
+  params.method = 'POST';
+  params.headers = {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  };
+  params.body = JSON.stringify(body);
+  return fetchJson(url, params);
+}

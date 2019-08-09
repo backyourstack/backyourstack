@@ -282,7 +282,7 @@ nextApp.prepare().then(() => {
       return res.status(200).send(dispatchedOrders);
     } catch (err) {
       console.error(err);
-      return res.status(400).send({ error: JSON.stringify(err.message) });
+      return res.status(400).send({ error: err.message });
     }
   });
 
