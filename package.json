@@ -17,7 +17,7 @@
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
-    "prettier": "prettier \"*.json\" \"src/**/*.js\" \"src/data/*.json\" \"test/**/*.js\"",
+    "prettier": "prettier \"*.json\" \"src/**/*.js\" \"src/**/*.css\" \"src/data/*.json\" \"test/**/*.js\"",
     "prettier:write": "npm run prettier -- --write",
     "prettier:check": "npm run prettier -- --list-different",
     "test": "NODE_ENV=test jest",
@@ -118,7 +118,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "*.{js,json,css}": [
       "prettier --write",
       "git add"
     ]

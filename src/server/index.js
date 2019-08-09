@@ -30,7 +30,7 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
-import { uploadFiles, getFiles } from '../lib/awsS3';
+import { uploadFiles, getFiles } from '../lib/s3';
 
 const {
   PORT,

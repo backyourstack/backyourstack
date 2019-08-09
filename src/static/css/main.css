@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -19,7 +20,9 @@ button {
   font-size: 12px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -47,7 +50,7 @@ h3 {
 
 .button {
   color: #8800ff;
-  border: 1px solid #D5DAE0;
+  border: 1px solid #d5dae0;
   background: white;
   border-radius: 6px;
   padding: 10px 20px;
@@ -57,16 +60,17 @@ h3 {
   color: #8800ff;
   border-color: #8800ff;
 }
-.button:active, .button:focus {
+.button:active,
+.button:focus {
   color: white;
   border-color: #3c0d9b;
-  background-color: #3c0d9b
+  background-color: #3c0d9b;
 }
 
 .shareButton {
   display: inline-block;
-  color: #6E747A;
-  border: 1px solid #D5DAE0;
+  color: #6e747a;
+  border: 1px solid #d5dae0;
   border-radius: 6px;
   padding: 10px 20px;
   margin-right: 15px;
@@ -76,7 +80,8 @@ h3 {
   color: #8b00ff;
   border-color: #8b00ff;
 }
-.shareButton:active, .shareButton:focus {
+.shareButton:active,
+.shareButton:focus {
   color: white;
   border-color: #8b00ff;
   background-color: #8b00ff;
@@ -92,7 +97,8 @@ h3 {
 .shareButton:hover .logo #main {
   fill: #c89bff;
 }
-.shareButton:active .logo #main, .button:focus .logo #main {
+.shareButton:active .logo #main,
+.button:focus .logo #main {
   fill: white;
 }
 
@@ -111,7 +117,8 @@ h3 {
   color: #8800ff;
   border-color: #8800ff;
 }
-.actionButton:active, .actionButton:focus {
+.actionButton:active,
+.actionButton:focus {
   color: white;
   border-color: #8800ff;
   background: #8800ff;
@@ -153,32 +160,27 @@ h3 {
 
 .navigation {
   background-color: #f7f8fa;
-  max-height: 90px;
-  padding: 20px;
-  display: flex;
+  padding: 20px 56px;
+  position: relative;
 }
-.analyzedFileInfo {
-  margin-left: 60px;
-}
+
 .navigation h1 {
   margin: 0;
   padding: 0;
-  color: #2E3033;
+  color: #2e3033;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: -0.4px;
   line-height: 36px;
 }
 .navigation-items {
-  display: flex;
-  align-items: baseline;
   position: absolute;
   left: 380px;
   bottom: -1px;
-  white-space : nowrap;
+  white-space: nowrap;
 }
 .navigation-items a {
-  color: #2E2E99;
+  color: #2e2e99;
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.8px;
@@ -190,9 +192,10 @@ h3 {
   margin-right: 40px;
   padding-bottom: 20px;
 }
-.navigation-items a.active, .navigation-items a:hover {
-  color: #2E2E99;
-  border-color: #2E2E99;
+.navigation-items a.active,
+.navigation-items a:hover {
+  color: #2e2e99;
+  border-color: #2e2e99;
 }
 
 aside {
@@ -208,7 +211,7 @@ main {
   padding-right: 60px;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .navigation {
     padding: 0;
   }
