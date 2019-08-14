@@ -29,8 +29,8 @@ const getAccountOrdersQuery = `query account($slug: String!) {
 }`;
 
 const dispatchOrder = `
-  mutation dispatchOrder($id: Int!) {
-    dispatchOrder(id: $id) {
+  mutation backyourstackDispatchOrder($id: Int!) {
+    backyourstackDispatchOrder(id: $id) {
       id
       totalAmount
       collective {
@@ -134,7 +134,7 @@ function fetchAccountWithOrders(slug) {
 function dispatchOrderMutation(id) {
   return request(baseUrl, dispatchOrder, { id })
     .then(data => {
-      return data.dispatchOrder;
+      return data.backyourstackDispatchOrder;
     })
     .catch(err => {
       throw new Error(err.message);

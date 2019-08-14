@@ -63,6 +63,9 @@ export default class Confirmed extends React.Component {
             dispatchedOrders: data,
           });
         }
+      })
+      .catch(err => {
+        console.error(err);
       });
   }
 
