@@ -56,6 +56,7 @@ export default class Files extends React.Component {
       dependencies: props.dependencies,
       recommendations: props.recommendations,
     };
+    this.showBackMyStack = process.env.SHOW_BACK_MY_STACK === 'true';
   }
 
   componentDidMount() {
@@ -104,6 +105,7 @@ export default class Files extends React.Component {
     const { section, pathname, loggedInUser } = this.props;
     const { files, dependencies, recommendations } = this.state;
     const count = Object.keys(files).length;
+    console.log(this.showBackMyStack);
     return (
       <div className="Page FilesPage">
         <style jsx global>
@@ -193,7 +195,9 @@ export default class Files extends React.Component {
           )}
           {count > 0 && (
             <Fragment>
-              <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+              {this.showBackMyStack && (
+                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+              )}
               {!section && (
                 <RecommendationList recommendations={recommendations} />
               )}

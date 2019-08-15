@@ -19,6 +19,7 @@ module.exports = withCSS({
         OPENCOLLECTIVE_REFERRAL: null,
         OPENCOLLECTIVE_REDIRECT_PATH: null,
         OPENCOLLECTIVE_BASE_URL: null,
+        SHOW_BACK_MY_STACK: null,
       }),
     );
 
