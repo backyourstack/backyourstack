@@ -105,7 +105,6 @@ export default class Files extends React.Component {
     const { section, pathname, loggedInUser } = this.props;
     const { files, dependencies, recommendations } = this.state;
     const count = Object.keys(files).length;
-    console.log(this.showBackMyStack);
     return (
       <div className="Page FilesPage">
         <style jsx global>
