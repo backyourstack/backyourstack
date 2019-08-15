@@ -77,7 +77,7 @@ export default class Files extends React.Component {
 
     const ids = Object.keys(files);
 
-    return postJson('/files/save', { ids }).then(response => response.json());
+    return postJson('/files/save', { ids });
   }
 
   handleRemoveFile = (id, event) => {
