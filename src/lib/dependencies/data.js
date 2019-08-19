@@ -40,27 +40,19 @@ export async function getFirstMatchingFiles(
   githubAccessToken,
 ) {
   for (const pattern of manager.patterns) {
-    let fileContents;
+    let files;
     if (manager.searchAllRepo) {
-      fileContents = await searchFilesFromRepo(
-        githubRepo,
-        pattern,
-        githubAccessToken,
-      );
+      files = await searchFilesFromRepo(githubRepo, pattern, githubAccessToken);
     } else {
-      fileContents = await fetchFileFromRepo(
-        githubRepo,
-        pattern,
-        githubAccessToken,
-      )
-        .then(content => [content])
+      files = await fetchFileFromRepo(githubRepo, pattern, githubAccessToken)
+        .then(file => [file])
         .catch(() => []);
     }
-
-    if (fileContents.length) {
-      return fileContents.map(text => ({
+    if (files.length) {
+      return files.map(({ content, fileUrl }) => ({
         matchedPattern: pattern,
-        text,
+        text: content,
+        fileUrl: fileUrl,
       }));
     }
   }

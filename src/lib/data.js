@@ -37,12 +37,14 @@ export async function getProfileData(id, accessToken) {
   const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
     Promise.all(
       repos.map(async repo => {
-        const dependencies = await getDependenciesFromGithubRepo(
+        const { dependencies, fileUrls } = await getDependenciesFromGithubRepo(
           repo,
           accessToken,
         );
         // eslint-disable-next-line require-atomic-updates
         repo.dependencies = dependencies;
+        // eslint-disable-next-line require-atomic-updates
+        repo.dependencies_file_urls = fileUrls;
         return repo;
       }),
     ),
@@ -51,7 +53,7 @@ export async function getProfileData(id, accessToken) {
   const dependencies = await addProjectToDependencies(
     getAllDependenciesFromRepos(repos),
   );
-
+  console.log('I was here');
   const recommendations = await getRecommendedProjectFromDependencies(
     dependencies,
   );
