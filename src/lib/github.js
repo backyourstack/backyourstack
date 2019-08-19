@@ -210,7 +210,6 @@ function searchFilesFromRepo(repo, searchPattern, accessToken) {
 
 function fetchFileFromRepo(repo, path, accessToken) {
   const branch = repo.default_branch || repo.defaultBranch;
-
   logger.verbose('Fetch file from repo', {
     owner: repo.owner.login,
     name: repo.name,
@@ -222,16 +221,21 @@ function fetchFileFromRepo(repo, path, accessToken) {
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
     // https://octokit.github.io/rest.js/#api-Repos-getContent
-    return fetchWithOctokit('repos.getContents', params, accessToken).then(
-      getContent,
-    );
+    const content = fetchWithOctokit(
+      'repos.getContents',
+      params,
+      accessToken,
+    ).then(getContent);
+    return { content, fileUrl: null };
   }
 
   const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
   logger.verbose(`Fetching file from public repo ${relativeUrl}`);
-  return fetch(`${baseRawUrl}${relativeUrl}`).then(response => {
+  return fetch(`${baseRawUrl}${relativeUrl}`).then(async response => {
     if (response.status === 200) {
-      return response.text();
+      const content = await response.text();
+      const fileUrl = `${baseRawUrl}${relativeUrl}`;
+      return { content, fileUrl };
     }
     throw new Error(`Can't fetch ${path} from ${relativeUrl}.`);
   });
