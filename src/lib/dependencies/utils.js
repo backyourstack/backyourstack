@@ -5,8 +5,10 @@ import dependencyManagers from './dependency-managers';
 // Assumes dependencyObject is {core: ['dependency', ...], ...}
 // Returns [{type: 'npm', name: 'dependency', core: 1}, ...]
 export function transformToStats(manager, ...dependencyObjects) {
-  const index = {};
-  dependencyObjects.forEach(dependencies => {
+  const index = {},
+    fileUrls = [];
+  dependencyObjects.forEach(({ dependencies, fileUrl }) => {
+    fileUrls.push(fileUrl);
     Object.entries(dependencies).forEach(
       ([dependencyType, dependencyNames]) => {
         dependencyNames.forEach(name => {
@@ -16,7 +18,7 @@ export function transformToStats(manager, ...dependencyObjects) {
       },
     );
   });
-  return Object.values(index);
+  return { dependencies: Object.values(index), fileUrls };
 }
 
 export function dependenciesStats(file) {

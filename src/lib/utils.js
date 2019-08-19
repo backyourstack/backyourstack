@@ -14,29 +14,30 @@ function getProjectFromDependency(name, type) {
 
 function getAllDependenciesFromRepos(repos) {
   const dependencies = [];
-
   for (const repo of repos) {
-    for (const dependency of repo.dependencies) {
-      const id = `${dependency.type}_${dependency.name}`;
-      dependencies[id] = dependencies[id] || pick(dependency, ['type', 'name']);
-      // Count all occurences of each dependency
-      for (const dependencyType of dependencyTypes) {
-        dependencies[id][dependencyType] =
-          dependencies[id][dependencyType] || 0;
-        if (dependency[dependencyType]) {
-          dependencies[id][dependencyType] += dependency[dependencyType];
+    if (repo.dependencies) {
+      for (const dependency of repo.dependencies) {
+        const id = `${dependency.type}_${dependency.name}`;
+        dependencies[id] =
+          dependencies[id] || pick(dependency, ['type', 'name']);
+        // Count all occurences of each dependency
+        for (const dependencyType of dependencyTypes) {
+          dependencies[id][dependencyType] =
+            dependencies[id][dependencyType] || 0;
+          if (dependency[dependencyType]) {
+            dependencies[id][dependencyType] += dependency[dependencyType];
+          }
         }
+        // Keep track of repos
+        dependencies[id]['repos'] = dependencies[id]['repos'] || {};
+        dependencies[id]['repos'][repo.id] = pick(repo, [
+          'id',
+          'name',
+          'full_name',
+        ]);
       }
-      // Keep track of repos
-      dependencies[id]['repos'] = dependencies[id]['repos'] || {};
-      dependencies[id]['repos'][repo.id] = pick(repo, [
-        'id',
-        'name',
-        'full_name',
-      ]);
     }
   }
-
   // Convert objects with ids as key to arrays
   return Object.values(dependencies).map(dependency => {
     dependency.repos = Object.values(dependency.repos);
