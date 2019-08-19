@@ -28,7 +28,12 @@ function packagesConfigDependencies(packagesConfig) {
 
 function dependencies(file) {
   const xml = new xmldoc.XmlDocument(file.text);
-  return { core: handlers[file.matchedPattern](xml) };
+  const dependencies = { core: handlers[file.matchedPattern](xml) };
+
+  return {
+    dependencies,
+    fileUrl: file.fileUrl || null,
+  };
 }
 
 function detectProjectName(file) {

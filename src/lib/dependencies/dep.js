@@ -17,7 +17,11 @@ function gopkgTomlDependencies(data) {
 
 function dependencies(file) {
   const data = toml.parse(file.text);
-  return { core: handlers[file.matchedPattern](data) };
+  const dependencies = { core: handlers[file.matchedPattern](data) };
+  return {
+    dependencies,
+    fileUrl: file.fileUrl || null,
+  };
 }
 
 function detectProjectName() {

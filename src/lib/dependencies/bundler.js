@@ -7,7 +7,12 @@ function dependencies(file) {
   const gemfile = interpret(file.text);
   const core = Object.keys(gemfile['DEPENDENCIES'] || {});
   const peer = difference(Object.keys(gemfile['GEM'].specs || {}), core);
-  return { core, peer };
+  const dependencies = { core, peer };
+
+  return {
+    dependencies,
+    fileUrl: file.fileUrl || null,
+  };
 }
 
 function detectProjectName() {

@@ -14,7 +14,10 @@ function json(file) {
 }
 
 function dependencies(file) {
-  return dependencyObject(json(file));
+  return {
+    dependencies: dependencyObject(json(file)),
+    fileUrl: file.fileUrl || null,
+  };
 }
 
 function detectProjectName(file) {
