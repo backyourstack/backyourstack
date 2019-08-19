@@ -22,7 +22,10 @@ const getFilesData = sessionFiles =>
 
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
-    const initialProps = { section: query.section };
+    const initialProps = {
+      section: query.section,
+      showBackMyStack: query.showBackMyStack,
+    };
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
@@ -40,6 +43,7 @@ export default class Files extends React.Component {
     files: PropTypes.object,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
+    showBackMyStack: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -56,7 +60,9 @@ export default class Files extends React.Component {
       dependencies: props.dependencies,
       recommendations: props.recommendations,
     };
-    this.showBackMyStack = process.env.SHOW_BACK_MY_STACK === 'true';
+    this.showBackMyStack =
+      props.showBackMyStack === 'true' ||
+      process.env.SHOW_BACK_MY_STACK === 'true';
   }
 
   componentDidMount() {
