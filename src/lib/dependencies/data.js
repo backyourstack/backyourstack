@@ -34,6 +34,19 @@ export function getDependenciesFromGithubRepo(githubRepo, githubAccessToken) {
   });
 }
 
+export function fetchDependenciesFileContent(githubRepo, githubAccessToken) {
+  const fileType = languageToFileType[githubRepo.language];
+  const manager = dependencyManagers[fileType];
+  return getFirstMatchingFiles(manager, githubRepo, githubAccessToken).catch(
+    err => {
+      logger.error(
+        `${fileType}.getDependenciesFromGithubRepo error: ${err.message}`,
+      );
+      return [];
+    },
+  );
+}
+
 export async function getFirstMatchingFiles(
   manager,
   githubRepo,
