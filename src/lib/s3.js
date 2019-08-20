@@ -33,6 +33,32 @@ export const saveFileToS3 = (Key, Body) => {
   return s3.upload(uploadParam).promise();
 };
 
+export const saveProfile = async (profileId, repos) => {
+  const metaData = { profile: true, files: {} };
+  for (const repo of repos) {
+    if (repo.files) {
+      const savedFileUrls = await saveProfileFiles(profileId, repo.files);
+      metaData.files[repo.name] = {
+        urls: [savedFileUrls],
+        private: repo.private,
+      };
+    }
+  }
+  const key = `${profileId}/dependencies.json`;
+  return saveFileToS3(key, metaData);
+};
+
+export const saveProfileFiles = async (profileId, files) => {
+  const savedFileUrls = [];
+  for (const file of files) {
+    const key = `${profileId}/${uuidv1()}.json`;
+    const body = { [file.id]: file };
+    const data = await saveFileToS3(key, body);
+    savedFileUrls.push(data.Location);
+  }
+  return savedFileUrls;
+};
+
 export const getObjectList = uuid => {
   const params = {
     Bucket,
