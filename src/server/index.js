@@ -257,14 +257,14 @@ nextApp.prepare().then(() => {
     res.send(backing);
   });
 
-  server.get('/:uuid/file/backing.json', async (req, res) => {
-    if (!req.params.uuid) {
+  server.get('/:id/file/backing.json', async (req, res) => {
+    if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
     }
     let data;
 
     try {
-      data = await getFiles(req.params.uuid);
+      data = await getFiles(req.params.id);
     } catch (err) {
       console.error(err);
       return res.status(400).send('Unable to fetch file');

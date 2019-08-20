@@ -59,16 +59,16 @@ export const saveProfileFiles = async (profileId, files) => {
   return savedFileUrls;
 };
 
-export const getObjectList = uuid => {
+export const getObjectList = id => {
   const params = {
     Bucket,
-    Prefix: `${uuid}/`,
+    Prefix: `${id}/`,
   };
   return s3.listObjects(params).promise();
 };
 
-export const getFiles = async uuid => {
-  const { Contents } = await getObjectList(uuid);
+export const getFiles = async id => {
+  const { Contents } = await getObjectList(id);
   const data = {};
 
   if (Contents.length === 0) {
