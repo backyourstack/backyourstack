@@ -17,7 +17,7 @@ const getFilesData = sessionFiles =>
 
 export default class MonthlyPlan extends React.Component {
   static async getInitialProps({ req, query }) {
-    const uuid = query.uuid; // handle case where the uuid is not supplied
+    const id = query.Id;
 
     let protocol = 'https:';
     const host = req ? req.headers.host : window.location.host;
@@ -31,7 +31,7 @@ export default class MonthlyPlan extends React.Component {
     const { recommendations } = await getFilesData(sessionFiles);
 
     return {
-      uuid,
+      id,
       baseUrl,
       recommendations,
       next: query.next || '/',
@@ -39,7 +39,7 @@ export default class MonthlyPlan extends React.Component {
   }
 
   static propTypes = {
-    uuid: PropTypes.string,
+    id: PropTypes.string,
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
@@ -47,9 +47,9 @@ export default class MonthlyPlan extends React.Component {
 
   getContributionUrl = () => {
     // Get the key url of the file
-    const { baseUrl, uuid } = this.props;
-    if (uuid) {
-      const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
+    const { baseUrl, id } = this.props;
+    if (id) {
+      const jsonUrl = `${baseUrl}/${id}/file/backing.json`;
       const data = JSON.stringify({ jsonUrl });
       const redirect = `${baseUrl}/monthly-plan/confirmation`;
       const searchParams = new URLSearchParams({ data, redirect });
