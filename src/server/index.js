@@ -29,8 +29,9 @@ import {
   getProfileData,
   getFilesData,
   emailSubscribe,
+  getDependenciesFileContent,
 } from '../lib/data';
-import { uploadFiles, getFiles } from '../lib/s3';
+import { uploadFiles, getFiles, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -202,6 +203,32 @@ nextApp.prepare().then(() => {
       console.error(err);
       return res.status(400).send('Unable to save file');
     }
+  });
+
+  server.post('/profile/save', async (req, res) => {
+    const id = get(req, 'body.id');
+    const accessToken = get(req, 'session.passport.user.accessToken');
+    if (!accessToken) {
+      res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
+    }
+
+    const { repos, profile } = await getProfileData(id, accessToken);
+    for (const repo of repos) {
+      let files = await getDependenciesFileContent(repo, accessToken);
+      if (files.length) {
+        files = files.map(({ matchedPattern, text }) => {
+          const file = { name: matchedPattern, text };
+          file.projectName = detectProjectName(file);
+          file.id = file.projectName;
+          return file;
+        });
+        repo.files = files;
+      } else {
+        continue;
+      }
+    }
+    const savedData = await saveProfile(profile.login, repos);
+    return res.status(200).send(savedData);
   });
 
   server.get('/:id/backing.json', async (req, res) => {
