@@ -88,7 +88,7 @@ export default class Profile extends React.Component {
       const savedProfileUrl = await this.saveProfileToS3();
       const profileId = savedProfileUrl.Key.split('/')[0];
       await Router.pushRoute('monthly-plan', {
-        profileId,
+        id: profileId,
       });
     } catch (err) {
       console.error(err);
