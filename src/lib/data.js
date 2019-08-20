@@ -10,10 +10,7 @@ import {
   getRecommendedProjectFromDependencies,
 } from './utils';
 
-import {
-  getDependenciesFromGithubRepo,
-  fetchDependenciesFileContent,
-} from './dependencies/data';
+import { getDependenciesFromGithubRepo } from './dependencies/data';
 import { dependenciesStats } from './dependencies/utils';
 
 import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
@@ -66,10 +63,6 @@ export async function getProfileData(id, accessToken) {
     dependencies,
     recommendations,
   };
-}
-
-export function getDependenciesFileContent(repo, accessToken) {
-  return fetchDependenciesFileContent(repo, accessToken);
 }
 
 export async function getFilesData(sessionFiles) {
