@@ -189,9 +189,9 @@ export default class Index extends Component {
 
           <p className="description secondaryDescription">
             * We currently detect dependencies from JavaScript (NPM), PHP
-            (Composer), .NET (Nuget), Go (dep) and Ruby (Gem).
+            (Composer), .NET (Nuget), Go (dep) and Ruby (RubyGems). Want to see
+            something else?
             <br />
-            Want to see something else?{' '}
             <Link route="contributing">
               <a>See how to contribute</a>
             </Link>
