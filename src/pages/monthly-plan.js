@@ -109,19 +109,14 @@ export default class MonthlyPlan extends React.Component {
           </style>
           <Header loggedInUser={loggedInUser} login={false} brandAlign="auto" />
           <div className="content">
-            <h3>Brilliant!</h3>
+            <p>Congratulations, you&apos;re about to Back Your Stack!</p>
             <p>
-              You&apos;re about to subscribe to the BackYourStack monthly plan
-              on Open Collective.
-            </p>
-            <p>
-              Each month, you will be charged once by BackYourStack through Open
-              Collective. The money will then be dispatched equally between all
-              detected dependencies.
-            </p>
-            <p>
-              If new dependencies are joining Open Collective, they will be
-              detected and taking care of in the next monthly dispatch.
+              You&apos;ll make a single monthly payment and we&apos;ll
+              distribute the funds to your detected dependencies below. If new
+              dependencies join in the future, they will be detected and added
+              the following month. Your subscription will not change, we&apos;ll
+              distribute it amongst more dependencies You can always update the
+              amount.
             </p>
             <p>
               <strong>Example</strong>: you decide to give ${EXAMPLE_VALUE}{' '}
@@ -150,11 +145,7 @@ export default class MonthlyPlan extends React.Component {
                   </tr>
                 ))}
             </table>
-            <p>
-              * Estimation, final value may be slightly different depending of
-              payment processor fees.
-            </p>
-            <p>Sounds good?</p>
+            <p>* May vary slightly depending on payment processor fees.</p>
             <a
               className="button bigButton continueButton"
               href={`${this.getContributionUrl()}`}

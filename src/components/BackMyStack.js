@@ -34,9 +34,8 @@ const BackMyStack = ({ onClickBackMyStack }) => {
         <div className="backMyStackInfoWrapper">
           <h2>NEW: Automatically Back Your Stack every month</h2>
           <p>
-            With our monthly plan available from Open Collective, commit a fixed
-            amount every month and the money will be automatically dispatched to
-            your dependencies!
+            Set up a monthly subscription and we will automatically distribute
+            the funds among your dependencies on Open Collective!
           </p>
         </div>
         <button

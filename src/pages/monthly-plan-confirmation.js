@@ -123,11 +123,10 @@ export default class MonthlyPlanConfirmation extends React.Component {
           )}
           {status === 'success' && (
             <div className="confirmationWrapper">
-              <h3>Woot woot! 🎉</h3>
-              <p>
-                Your first payment was successfully dispatched, you just backed
-                the following collectives:
-              </p>
+              <h3>
+                Woot woot! 🎉 Your first payment was successfully dispatched.
+              </h3>
+              <p>You&apos;re contributing to the following Collectives:</p>
               <div className="tableWrapper">
                 <table>
                   <tr>
@@ -152,11 +151,18 @@ export default class MonthlyPlanConfirmation extends React.Component {
                   })}
                 </table>
                 <p>
-                  <strong>What&apos;s next?</strong> Your subscription being now
-                  active, you will be charged next month and the money will be
-                  automatically dispatched to your dependencies. You don&apos;t
-                  have to do anything. 🤞
+                  That&apos;s it! You will be charged for the first time today,
+                  then on the 1st of each month from now on. The funds will be
+                  automatically distributed to your dependencies.
                 </p>
+                <ul>
+                  <li>
+                    Note: Since the next charge will be on the 1st of the month,
+                    you may be charged twice in a short period if you set this
+                    up near the end of the month.
+                  </li>
+                </ul>
+                <p>Thank you for Backing Your Stack!</p>
               </div>
             </div>
           )}
