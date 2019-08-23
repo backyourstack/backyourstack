@@ -17,6 +17,9 @@ module.exports = withCSS({
       // Make some environment variables accessible from the client
       new webpack.EnvironmentPlugin({
         OPENCOLLECTIVE_REFERRAL: null,
+        OPENCOLLECTIVE_REDIRECT_PATH: null,
+        OPENCOLLECTIVE_BASE_URL: null,
+        SHOW_BACK_MY_STACK: null,
       }),
     );
 
@@ -55,7 +58,6 @@ module.exports = withCSS({
         ],
       },
     );
-
     return config;
   },
 });

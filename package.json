@@ -17,7 +17,7 @@
     "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "lint:quiet": "npm run lint -- --quiet",
-    "prettier": "prettier \"*.json\" \"src/**/*.js\" \"src/data/*.json\" \"test/**/*.js\"",
+    "prettier": "prettier \"*.json\" \"src/**/*.js\" \"src/**/*.css\" \"src/data/*.json\" \"test/**/*.js\"",
     "prettier:write": "npm run prettier -- --write",
     "prettier:check": "npm run prettier -- --list-different",
     "test": "NODE_ENV=test jest",
@@ -38,6 +38,7 @@
   "dependencies": {
     "@octokit/rest": "^16.28.3",
     "@zeit/next-css": "^1.0.1",
+    "aws-sdk": "^2.488.0",
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.4",
     "cross-fetch": "^3.0.4",
@@ -65,6 +66,7 @@
     "react-dropzone": "^7.0.1",
     "serve-favicon": "^2.5.0",
     "toml": "^3.0.0",
+    "uuid": "^3.3.2",
     "winston": "^3.2.1",
     "xmldoc": "^1.1.2"
   },
@@ -116,7 +118,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "*.{js,json,css}": [
       "prettier --write",
       "git add"
     ]

@@ -1,9 +1,8 @@
-import request from 'graphql-request';
-
 import cache from './cache';
 
-const baseUrl = 'https://opencollective.com/api/graphql';
-const baseUrlV2 = 'https://opencollective.com/api/graphql/v2';
+const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
+const baseUrl = `${opencollectiveBaseUrl}/api/graphql`;
+const baseUrlV2 = `${opencollectiveBaseUrl}/api/graphql/v2`;
 
 const getAccountOrdersQuery = `query account($slug: String!) {
   account(slug: $slug) {
@@ -99,6 +98,38 @@ const getAllCollectivesQuery = `query allCollectives(
 }
 `;
 
+const backyourstackDispatchOrderMutation = `
+  mutation backyourstackDispatchOrder($id: Int!) {
+    backyourstackDispatchOrder(id: $id) {
+      id
+      totalAmount
+      collective {
+        name
+        slug
+      }
+    }
+  }
+`;
+
+function graphqlRequest(url, query, variables) {
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  })
+    .then(result => result.json())
+    .then(response => {
+      if (response.errors) {
+        console.log(response.errors);
+        throw new Error(response.errors[0].message);
+      }
+      return response.data;
+    });
+}
+
 function fetchAccountWithOrders(slug) {
   const cacheKey = `account_with_orders_${slug}`;
 
@@ -106,7 +137,7 @@ function fetchAccountWithOrders(slug) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrlV2, getAccountOrdersQuery, { slug })
+  return graphqlRequest(baseUrlV2, getAccountOrdersQuery, { slug })
     .then(data => {
       cache.set(cacheKey, data.account);
       return data.account;
@@ -124,7 +155,7 @@ function fetchCollectiveWithMembers(slug) {
     return cache.get(cacheKey);
   }
 
-  return request(baseUrl, getCollectiveWithMembersQuery, { slug })
+  return graphqlRequest(baseUrl, getCollectiveWithMembersQuery, { slug })
     .then(data => {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
@@ -137,13 +168,20 @@ function fetchCollectiveWithMembers(slug) {
 }
 
 function fetchAllCollectives(parameters) {
-  return request(baseUrl, getAllCollectivesQuery, parameters).then(
+  return graphqlRequest(baseUrl, getAllCollectivesQuery, parameters).then(
     data => data.allCollectives.collectives,
   );
+}
+
+function dispatchOrder(id) {
+  return graphqlRequest(baseUrl, backyourstackDispatchOrderMutation, {
+    id,
+  }).then(data => data.backyourstackDispatchOrder);
 }
 
 export {
   fetchAccountWithOrders,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
+  dispatchOrder,
 };

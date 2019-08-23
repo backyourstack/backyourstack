@@ -17,6 +17,7 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
+import { dispatchOrder } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -29,6 +30,7 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
+import { uploadFiles, getFiles } from '../lib/s3';
 
 const {
   PORT,
@@ -186,6 +188,22 @@ nextApp.prepare().then(() => {
     res.send('Ok');
   });
 
+  server.post('/files/save', async (req, res) => {
+    const ids = get(req, 'body.ids');
+    const sessionFiles = get(req, 'session.files');
+    const files = {};
+    ids.forEach(id => {
+      files[id] = sessionFiles[id];
+    });
+    try {
+      const savedData = await uploadFiles(files);
+      return res.status(200).send(savedData);
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send('Unable to save file');
+    }
+  });
+
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const profileData = await getProfileData(req.params.id, accessToken);
@@ -207,13 +225,56 @@ nextApp.prepare().then(() => {
           opencollective.order = order;
         }
         return {
-          weigh: 100,
+          weight: 100,
           opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
           github: github,
         };
       });
 
     res.send(backing);
+  });
+
+  server.get('/:uuid/file/backing.json', async (req, res) => {
+    if (!req.params.uuid) {
+      return res.status(400).send('Please provide the file key');
+    }
+    let data;
+
+    try {
+      data = await getFiles(req.params.uuid);
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send('Unable to fetch file');
+    }
+
+    if (!data) {
+      return res.status(404).send('No file found');
+    }
+
+    const { recommendations } = await getFilesData(data);
+    const backing = recommendations
+      .filter(r => r.opencollective)
+      .filter(r => r.opencollective.pledge !== true)
+      .map(recommendation => {
+        const { opencollective, github } = recommendation;
+        return {
+          weight: 100,
+          opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
+          github: github,
+        };
+      });
+    return res.status(200).send(backing);
+  });
+
+  server.post('/order/dispatch', async (req, res) => {
+    const orderId = get(req, 'body.orderId');
+    try {
+      const dispatchedOrders = await dispatchOrder(orderId);
+      return res.status(200).send(dispatchedOrders);
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send({ error: err.message });
+    }
   });
 
   server.use('/static', (req, res, next) => {
