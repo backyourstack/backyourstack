@@ -15500,18 +15500,6 @@
   },
   {
     "name": "husky",
-    "github": {
-      "repo": "typicode/husky"
-    },
-    "packages": [
-      {
-        "type": "npm",
-        "name": "husky"
-      }
-    ]
-  },
-  {
-    "name": "husky",
     "packages": [
       {
         "type": "npm",
