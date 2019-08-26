@@ -9750,38 +9750,6 @@
     ]
   },
   {
-    "id": 135,
-    "name": "Notifynder",
-    "slug": "notifynder",
-    "description": null,
-    "github": {
-      "repo": "fenos/Notifynder"
-    },
-    "repos": [
-      {
-        "name": "Notifynder",
-        "owner": {
-          "login": "fenos"
-        },
-        "defaultBranch": "master",
-        "languages": ["PHP"],
-        "files": [
-          ".codeclimate.yml",
-          ".coveralls.yml",
-          ".gitignore",
-          ".scrutinizer.yml",
-          ".styleci.yml",
-          ".travis.yml",
-          "LICENSE",
-          "README.md",
-          "composer.json",
-          "phpspec.yml",
-          "phpunit.xml"
-        ]
-      }
-    ]
-  },
-  {
     "id": 150,
     "name": "Tessel",
     "slug": "tessel",
@@ -27699,47 +27667,6 @@
           "protractor.conf.js",
           "tsconfig.json",
           "tslint.json"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 9507,
-    "name": "vis.js",
-    "slug": "vis",
-    "description": "Sophisticated visualisation library with multiple diagram types.",
-    "github": {
-      "repo": "almende/vis"
-    },
-    "repos": [
-      {
-        "name": "vis",
-        "owner": {
-          "login": "almende"
-        },
-        "defaultBranch": "master",
-        "languages": ["CSS", "JavaScript", "HTML"],
-        "files": [
-          ".babelrc",
-          ".codeclimate.yml",
-          ".csslintrc",
-          ".eslintrc",
-          ".gitignore",
-          ".mdlrc",
-          ".npmignore",
-          ".travis.yml",
-          "CONTRIBUTING.md",
-          "HISTORY.md",
-          "LICENSE-APACHE-2.0",
-          "LICENSE-MIT",
-          "README.md",
-          "bower.json",
-          "gulpfile.js",
-          "index-graph3d.js",
-          "index-network.js",
-          "index-timeline-graph2d.js",
-          "index.js",
-          "package.json"
         ]
       }
     ]
@@ -55618,48 +55545,6 @@
           "composer.json",
           "composer.lock",
           "phpunit.xml"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 18277,
-    "name": "doorkeeper",
-    "slug": "doorkeeper",
-    "description": null,
-    "github": {
-      "repo": "doorkeeper-gem/doorkeeper"
-    },
-    "repos": [
-      {
-        "name": "doorkeeper",
-        "owner": {
-          "login": "doorkeeper-gem"
-        },
-        "defaultBranch": "master",
-        "languages": ["Ruby", "CSS", "HTML", "JavaScript", "Dockerfile"],
-        "files": [
-          ".coveralls.yml",
-          ".gitignore",
-          ".hound.yml",
-          ".rspec",
-          ".rubocop.yml",
-          ".travis.yml",
-          "Appraisals",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "Dangerfile",
-          "Dockerfile",
-          "Gemfile",
-          "MIT-LICENSE",
-          "NEWS.md",
-          "README.md",
-          "RELEASING.md",
-          "Rakefile",
-          "SECURITY.md",
-          "UPGRADE.md",
-          "doorkeeper.gemspec"
         ]
       }
     ]
@@ -108860,36 +108745,6 @@
     ]
   },
   {
-    "id": 41264,
-    "name": "jrnl",
-    "slug": "jrnl",
-    "description": "A simple command line journal application that stores your journal in a plain text file.",
-    "github": {
-      "repo": "maebert/jrnl"
-    },
-    "repos": [
-      {
-        "name": "jrnl",
-        "owner": {
-          "login": "maebert"
-        },
-        "defaultBranch": "master",
-        "languages": ["Makefile", "Python", "Gherkin"],
-        "files": [
-          ".gitignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "CONTRIBUTING.md",
-          "LICENSE",
-          "MANIFEST.in",
-          "Makefile",
-          "README.md",
-          "setup.py"
-        ]
-      }
-    ]
-  },
-  {
     "id": 41528,
     "name": "awesome-go",
     "slug": "awesome-go",
@@ -114466,34 +114321,6 @@
           "prettier.config.js",
           "vue.config.js",
           "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 45755,
-    "name": "React Unity WebGL",
-    "slug": "react-unity-webgl",
-    "description": "React Unity WebGL provides an easy solution for embedding Unity WebGL builds in your React application, with two-way communication between your React and Unity application with advanced API's.",
-    "github": {
-      "repo": "elraccoone/react-unity-webgl"
-    },
-    "repos": [
-      {
-        "name": "react-unity-webgl",
-        "owner": {
-          "login": "elraccoone"
-        },
-        "defaultBranch": "master",
-        "languages": ["TypeScript"],
-        "files": [
-          ".gitignore",
-          ".npmignore",
-          "LICENSE.md",
-          "README.md",
-          "package-lock.json",
-          "package.json",
-          "tsconfig.json"
         ]
       }
     ]
