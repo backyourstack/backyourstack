@@ -74,16 +74,12 @@ export default class Upload extends React.Component {
               border-color: #9399a3;
               border-style: dashed;
               border-radius: 4px;
-              position: relative;
               color: #9399a3;
               font-size: 12px;
               cursor: pointer;
               transition-duration: 1s;
             }
             .dropZoneComponent .text {
-              position: absolute;
-              width: 100%;
-              top: 25%;
               text-align: center;
             }
             .dropZoneComponent.active {
@@ -112,13 +108,8 @@ export default class Upload extends React.Component {
               font-size: 12px;
               transition-duration: 1s;
               opacity: 0;
+              display: none;
               color: #f53152;
-            }
-            .uploadFeedback.float {
-              position: absolute;
-              width: 200px;
-              right: 0;
-              margin-right: -220px;
             }
             .uploadFeedback.inside {
               text-align: center;
@@ -128,26 +119,29 @@ export default class Upload extends React.Component {
             }
             .uploadFeedback.error {
               opacity: 1;
+              display: block;
             }
           `}
         </style>
 
-        <Dropzone
-          onDrop={this.onDrop}
-          className={classNames('dropZoneComponent', {
-            error: this.state.error,
-          })}
-          activeClassName="active"
-          maxSize={102400}
-          style={this.props.style}
-        >
-          <div className="text">
-            <p>
-              Simply drag&#39;n&#39;drop files
-              <br />
-              or click to select files to upload.
-            </p>
-          </div>
+        <div className="uploadWrapper">
+          <Dropzone
+            onDrop={this.onDrop}
+            className={classNames('dropZoneComponent', {
+              error: this.state.error,
+            })}
+            activeClassName="active"
+            maxSize={102400}
+            style={this.props.style}
+          >
+            <div className="text">
+              <p>
+                Simply drag and drop files
+                <br />
+                or click to select files to upload.
+              </p>
+            </div>
+          </Dropzone>
           <div
             className={classNames('uploadFeedback', {
               error: this.state.error,
@@ -161,7 +155,7 @@ export default class Upload extends React.Component {
               problem persists, please contact us.
             </p>
           </div>
-        </Dropzone>
+        </div>
       </Fragment>
     );
   }
