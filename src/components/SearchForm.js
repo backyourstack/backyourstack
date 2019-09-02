@@ -105,6 +105,8 @@ export default class SearchForm extends React.Component {
           {`
             form {
               position: relative;
+              display: flex;
+              flex-direction: column;
             }
             .searchInput {
               padding: 12px 17px;
@@ -163,12 +165,9 @@ export default class SearchForm extends React.Component {
             }
 
             .searchFeedback {
-              position: absolute;
               font-size: 12px;
-              width: 200px;
               right: 0;
               top: 0;
-              margin-right: -220px;
               margin-top: 5px;
             }
             .searchFeedback.ok {
@@ -177,7 +176,6 @@ export default class SearchForm extends React.Component {
             .searchFeedback.error {
               color: #f53152;
             }
-
             @media screen and (max-width: 500px) {
               .searchInput {
                 margin-top: 25px;
@@ -194,7 +192,6 @@ export default class SearchForm extends React.Component {
                 margin-top: 25px;
               }
               .searchFeedback {
-                position: static;
                 width: auto;
                 margin: 0;
                 text-align: center;
@@ -212,7 +209,7 @@ export default class SearchForm extends React.Component {
             })}
             onClick={this.focus}
           >
-            <span>https://github.com/</span>
+            <span className="preInput">https://github.com/</span>
             <input
               ref={this.searchInput}
               type="text"
@@ -226,13 +223,8 @@ export default class SearchForm extends React.Component {
               autoCapitalize="none"
             />
           </div>
-
           {error && <div className="searchFeedback error">{error}</div>}
           {ok && <div className="searchFeedback ok">{ok}</div>}
-          {!error && !ok && (
-            <div className="searchFeedback placeholder">&nbsp;</div>
-          )}
-
           {orgs && orgs.length > 0 && (
             <p className="searchExamples">
               Your organizations: &nbsp;
