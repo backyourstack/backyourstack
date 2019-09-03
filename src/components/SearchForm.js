@@ -109,12 +109,11 @@ export default class SearchForm extends React.Component {
               flex-direction: column;
             }
             .searchInput {
-              padding: 12px 17px;
-              position: relative;
-              border: 1px solid rgba(18, 19, 20, 0.16);
-              border-radius: 4px;
-              background-color: #f7f8fa;
-              box-shadow: inset 0 1px 3px 0 rgba(18, 19, 20, 0.08);
+              border: 1px solid rgba(24, 26, 31, 0.1);
+              border-radius: 8px;
+              background-color: #fff;
+              display: flex;
+              align-items: baseline;
             }
             .searchInput.focused {
               background: white;
@@ -126,12 +125,20 @@ export default class SearchForm extends React.Component {
             .searchInput.focused.error {
               border-color: #f53152;
             }
-            .searchInput span {
+            .searchInput div {
               font-size: 16px;
-              color: #c2c6cc;
+              color: #c0c5cc;
+              background: #f5f7fa;
+              font-size: 14px;
+              line-height: 22px;
+              text-align: center;
+              border: none;
+              border-left-radius: 8px;
+              padding: 10px;
             }
             .searchInput input {
               font-size: 16px;
+              padding: 10px;
               border: 0;
               border-style: solid;
               background: transparent;
@@ -139,7 +146,9 @@ export default class SearchForm extends React.Component {
             }
             .searchInput input,
             .searchInput input::placeholder {
-              color: #9399a3;
+              color: #c0c5cc;
+              font-size: 14px;
+              line-height: 24px;
             }
             .searchInput input:focus {
               outline: none;
@@ -209,7 +218,7 @@ export default class SearchForm extends React.Component {
             })}
             onClick={this.focus}
           >
-            <span className="preInput">https://github.com/</span>
+            <div className="preInput">github.com/</div>
             <input
               ref={this.searchInput}
               type="text"
