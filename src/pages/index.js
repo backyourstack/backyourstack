@@ -88,9 +88,16 @@ export default class Index extends Component {
               text-align: center;
               color: #9399a3;
             }
-            .homepage {
+            .background {
               background: url(/static/img/background-colors.svg);
               background-repeat: no-repeat;
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              opacity: 0.65;
+              z-index: -1;
+            }
+            .homepage {
               display: flex;
               flex-direction: column;
               width: 100%;
@@ -104,7 +111,7 @@ export default class Index extends Component {
               text-align: center;
               width: 55%;
               letter-spacing: -0.4px;
-              margin: 20px;
+              margin: 60px 20px 20px;
             }
             .asterisk {
               color: #180c66;
@@ -188,15 +195,15 @@ export default class Index extends Component {
         </style>
 
         <Header pathname={pathname} loggedInUser={loggedInUser} />
-
+        <div className="background"></div>
         <div className="homepage">
-          <h3 className="description">
+          <h1 className="description">
             Discover the Open Source projects
             <small className="asterisk">
               <sup>*</sup>
             </small>{' '}
             your organization is using that need financial support.
-          </h3>
+          </h1>
           <p className="secondaryDescription">
             <span className="asterisk">*</span>We currently detect dependencies
             from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep) and
