@@ -78,6 +78,9 @@ export default class Upload extends React.Component {
               font-size: 12px;
               cursor: pointer;
               transition-duration: 1s;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
             .dropZoneComponent .text {
               text-align: center;
