@@ -29,7 +29,8 @@ export default class Header extends React.Component {
               justify-content: space-between;
               align-items: center;
               width: 100%;
-              height: 80px;
+              height: 70px;
+              border-bottom: 1px solid #d5dae0;
             }
 
             .brand {
@@ -114,7 +115,7 @@ export default class Header extends React.Component {
               <a>
                 <img
                   className="default"
-                  src="/static/img/logo-bys-horizontal.png"
+                  src="/static/img/backyourstack-logo.svg"
                   alt="BackYourStack"
                 />
                 <img
