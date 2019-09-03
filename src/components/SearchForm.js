@@ -126,14 +126,14 @@ export default class SearchForm extends React.Component {
               border-color: #f53152;
             }
             .searchInput div {
-              font-size: 16px;
               color: #c0c5cc;
               background: #f5f7fa;
               font-size: 14px;
               line-height: 22px;
               text-align: center;
               border: none;
-              border-left-radius: 8px;
+              border-top-left-radius: 8px;
+              border-bottom-left-radius: 8px;
               padding: 10px;
             }
             .searchInput input {
@@ -157,7 +157,7 @@ export default class SearchForm extends React.Component {
 
             .searchButton {
               margin: 50px auto;
-              width: 250px;
+              width: 200px;
             }
 
             .searchExamples {
@@ -186,17 +186,6 @@ export default class SearchForm extends React.Component {
               color: #f53152;
             }
             @media screen and (max-width: 500px) {
-              .searchInput {
-                margin-top: 25px;
-                padding: 10px 10px;
-              }
-              .searchInput span {
-                font-size: 14px;
-              }
-              .searchInput input {
-                font-size: 14px;
-                width: calc(100% - 140px);
-              }
               .searchButton {
                 margin-top: 25px;
               }
@@ -204,6 +193,10 @@ export default class SearchForm extends React.Component {
                 width: auto;
                 margin: 0;
                 text-align: center;
+              }
+              .searchInput div,
+              .searchInput input {
+                padding: 5px;
               }
             }
           `}

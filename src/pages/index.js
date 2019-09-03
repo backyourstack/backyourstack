@@ -69,7 +69,7 @@ export default class Index extends Component {
         <style jsx global>
           {`
             @media screen and (max-width: 500px) {
-              .IndexPage {
+              .homepage {
                 padding: 20px;
               }
             }
@@ -96,12 +96,14 @@ export default class Index extends Component {
               width: 100%;
               opacity: 0.65;
               z-index: -1;
+              right: 0;
             }
             .homepage {
               display: flex;
               flex-direction: column;
               width: 100%;
               align-items: center;
+              box-sizing: border-box;
             }
             .description {
               color: #141414;
@@ -139,6 +141,7 @@ export default class Index extends Component {
               display: flex;
               justify-content: center;
               margin-bottom: 20px;
+              box-sizing: border-box;
             }
             .box {
               width: 450px;
@@ -150,6 +153,7 @@ export default class Index extends Component {
               border-radius: 8px;
               margin: 20px;
               padding: 10px 20px;
+              box-sizing: border-box;
             }
             .boxHeader {
               display: flex;
@@ -178,17 +182,25 @@ export default class Index extends Component {
               h1 {
                 margin-bottom: 25px;
               }
+              .background {
+                background: url(/static/img/mobile-background-colors.svg);
+                opacity: 1;
+              }
+              .description {
+                width: 100%;
+              }
               .description,
               .secondaryDescription,
-              .optionsDescription {
+              .optionsDescription,
+              .uploadContainer {
                 width: 80%;
               }
               .boxWrapper {
                 flex-direction: column;
+                align-items: center;
               }
-              .uploadContainer,
               .box {
-                width: 80%;
+                width: 100%;
               }
             }
           `}
