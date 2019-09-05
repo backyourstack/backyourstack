@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { debounce } from 'lodash';
 
 import { Link, Router } from '../routes';
 
 import List from '../components/List';
+import InputGroup from './InputGroup';
 
 import { fetchJson } from '../lib/fetch';
 
@@ -97,69 +97,21 @@ export default class SearchForm extends React.Component {
 
   render() {
     const { orgs } = this.props;
-    const { q, ok, error, focused } = this.state;
-
+    const { q, ok, error } = this.state;
     return (
       <Fragment>
         <style jsx>
           {`
-            form {
+            .searchForm {
               position: relative;
               display: flex;
               flex-direction: column;
             }
-            .searchInput {
-              border: 1px solid rgba(24, 26, 31, 0.1);
-              border-radius: 8px;
-              background-color: #fff;
-              display: flex;
-              align-items: baseline;
-            }
-            .searchInput.focused {
-              background: white;
-            }
-            .searchInput.focused,
-            .searchInput:hover {
-              border-color: #3a2fac;
-            }
-            .searchInput.focused.error {
-              border-color: #f53152;
-            }
-            .searchInput div {
-              color: #c0c5cc;
-              background: #f5f7fa;
-              font-size: 14px;
-              line-height: 22px;
-              text-align: center;
-              border: none;
-              border-top-left-radius: 8px;
-              border-bottom-left-radius: 8px;
-              padding: 10px;
-            }
-            .searchInput input {
-              font-size: 16px;
-              padding: 10px;
-              border: 0;
-              border-style: solid;
-              background: transparent;
-              width: calc(100% - 160px);
-            }
-            .searchInput input,
-            .searchInput input::placeholder {
-              color: #c0c5cc;
-              font-size: 14px;
-              line-height: 24px;
-            }
-            .searchInput input:focus {
-              outline: none;
-              color: #2e3033;
-            }
 
             .searchButton {
               margin: 50px auto;
-              width: 200px;
+              width: 100%;
             }
-
             .searchExamples {
               font-size: 12px;
               text-align: center;
@@ -172,7 +124,6 @@ export default class SearchForm extends React.Component {
             .searchExamples a:hover {
               text-decoration: none;
             }
-
             .searchFeedback {
               font-size: 12px;
               right: 0;
@@ -194,37 +145,26 @@ export default class SearchForm extends React.Component {
                 margin: 0;
                 text-align: center;
               }
-              .searchInput div,
-              .searchInput input {
-                padding: 5px;
-              }
             }
           `}
         </style>
 
-        <form method="GET" action="/search" onSubmit={this.handleSubmit}>
-          <div
-            className={classNames('searchInput', {
-              error: !!error,
-              ok: !!ok,
-              focused: focused,
-            })}
-            onClick={this.focus}
-          >
-            <div className="preInput">github.com/</div>
-            <input
-              ref={this.searchInput}
-              type="text"
-              name="q"
-              value={q}
-              placeholder="your organization"
-              onChange={this.handleChange}
-              onFocus={this.handleFocus}
-              onBlur={this.handleFocus}
-              autoComplete="off"
-              autoCapitalize="none"
-            />
-          </div>
+        <form
+          className="searchForm"
+          method="GET"
+          action="/search"
+          onSubmit={this.handleSubmit}
+        >
+          <InputGroup
+            onChange={this.handleChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleFocus}
+            type="url"
+            name="q"
+            value={q}
+            prepend="github.com/"
+            placeholder="your organization"
+          />
           {error && <div className="searchFeedback error">{error}</div>}
           {ok && <div className="searchFeedback ok">{ok}</div>}
           {orgs && orgs.length > 0 && (
