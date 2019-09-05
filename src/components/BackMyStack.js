@@ -45,6 +45,34 @@ const BackMyStack = ({ onClickBackMyStack }) => {
             outline: none;
             cursor: pointer;
           }
+          @media screen and (max-width: 768px),
+            @media screen and (max-width: 500px) {
+            .backMyStackWrapper {
+              background: url('/static/img/mobile-backmystack-banner.png');
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              width: 100%;
+            }
+            .backMyStackInfoWrapper {
+              width: 78%;
+            }
+            .backMyStackInfoWrapper h2 {
+              margin: 0;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 28px;
+              letter-spacing: -0.4px;
+            }
+            .backMyStackInfoWrapper p {
+              font-size: 14px;
+              line-height: 22px;
+              letter-spacing: -0.2px;
+              font-weight: 300;
+            }
+            .newText {
+              margin-bottom: 20px;
+            }
+          }
           .backMyStackBtn:hover {
             opacity: 0.8;
           }
