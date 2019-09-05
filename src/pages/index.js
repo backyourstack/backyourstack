@@ -178,6 +178,15 @@ export default class Index extends Component {
               width: 280px;
               align-self: center;
             }
+            @media screen and (min-width: 1450px) {
+              .description {
+                width: 784px;
+              }
+              .secondaryDescription,
+              .optionsDescription {
+                width: 700px;
+              }
+            }
             @media screen and (max-width: 500px) {
               h1 {
                 margin-bottom: 25px;
