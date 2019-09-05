@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { debounce } from 'lodash';
 
 import { Link, Router } from '../routes';
@@ -96,12 +97,13 @@ export default class SearchForm extends React.Component {
 
   render() {
     const { orgs } = this.props;
-    const { q, ok, error } = this.state;
+    const { q, ok, error, focused } = this.state;
+
     return (
       <Fragment>
         <style jsx>
           {`
-            .searchForm {
+            form {
               position: relative;
               display: flex;
               flex-direction: column;
@@ -189,26 +191,37 @@ export default class SearchForm extends React.Component {
                 margin: 0;
                 text-align: center;
               }
+              .searchInput div,
+              .searchInput input {
+                padding: 5px;
+              }
             }
           `}
         </style>
 
-        <form
-          className="searchForm"
-          method="GET"
-          action="/search"
-          onSubmit={this.handleSubmit}
-        >
-          <InputGroup
-            onChange={this.handleChange}
-            onFocus={this.handleFocus}
-            onBlur={this.handleFocus}
-            type="url"
-            name="q"
-            value={q}
-            prepend="github.com/"
-            placeholder="your organization"
-          />
+        <form method="GET" action="/search" onSubmit={this.handleSubmit}>
+          <div
+            className={classNames('searchInput', {
+              error: !!error,
+              ok: !!ok,
+              focused: focused,
+            })}
+            onClick={this.focus}
+          >
+            <div className="preInput">github.com/</div>
+            <input
+              ref={this.searchInput}
+              type="text"
+              name="q"
+              value={q}
+              placeholder="your organization"
+              onChange={this.handleChange}
+              onFocus={this.handleFocus}
+              onBlur={this.handleFocus}
+              autoComplete="off"
+              autoCapitalize="none"
+            />
+          </div>
           {error && <div className="searchFeedback error">{error}</div>}
           {ok && <div className="searchFeedback ok">{ok}</div>}
           {orgs && orgs.length > 0 && (
