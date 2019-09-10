@@ -64,6 +64,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-dropzone": "^7.0.1",
+    "react-number-format": "^4.2.0",
     "serve-favicon": "^2.5.0",
     "toml": "^3.0.0",
     "uuid": "^3.3.3",
