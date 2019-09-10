@@ -11,7 +11,6 @@ import Footer from '../components/Footer';
 import UpArrow from '../static/img/up-arrow.svg';
 import DownArrow from '../static/img/down-arrow.svg';
 
-const EXAMPLE_VALUE = 200;
 const EXAMPLE_FEES = 0.15;
 
 const getFilesData = sessionFiles =>
@@ -115,17 +114,30 @@ export default class MonthlyPlan extends React.Component {
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
+      disableContributionLink: true,
     };
+  }
+
+  componentDidMount() {
+    const isMobile = window.innerWidth <= 640;
+
+    // amountList should not be expanded by default in mobile view
+    if (isMobile) {
+      this.setState({
+        mobileToggleExpanded: false,
+      });
+    }
   }
 
   getContributionUrl = () => {
     // Get the key url of the file
     const { baseUrl, uuid } = this.props;
+    const amount = this.getTotalAmount();
     if (uuid) {
       const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
       const data = JSON.stringify({ jsonUrl });
       const redirect = `${baseUrl}/monthly-plan/confirmation`;
-      const searchParams = new URLSearchParams({ data, redirect });
+      const searchParams = new URLSearchParams({ data, redirect, amount });
       const opencollectiveRedirectUrl = `${process.env.OPENCOLLECTIVE_BASE_URL}${process.env.OPENCOLLECTIVE_REDIRECT_PATH}`;
       return `${opencollectiveRedirectUrl}?${searchParams}`;
     }
@@ -141,6 +153,7 @@ export default class MonthlyPlan extends React.Component {
   handleOnAmountSelect = selectedAmount => {
     this.setState({
       selectedAmount,
+      disableContributionLink: false,
     });
   };
 
@@ -285,6 +298,14 @@ export default class MonthlyPlan extends React.Component {
               .mobileSuggestedAmountToggle {
                 display: none;
               }
+              @media screen and (max-width: 768px) {
+                .amountList {
+                  margin-left: 10px;
+                }
+                .amountCard {
+                  margin-right: 15px;
+                }
+              }
               @media screen and (max-width: 640px) {
                 .customAmountCard {
                   display: flex;
@@ -294,6 +315,18 @@ export default class MonthlyPlan extends React.Component {
                 }
                 .amountList {
                   flex-direction: column;
+                  width: 100%;
+                  position: relative;
+                }
+                .amountCard {
+                  width: 100%;
+                }
+                .customAmountInput {
+                  width: 200px;
+                }
+                .amountInput::placeholder {
+                  color: #9D9FA3;
+                  font-size: 14px;
                 }
                 .amountCard:not(.mobileSuggestedAmountToggle) {
                   border-bottom: none;
@@ -380,13 +413,13 @@ export default class MonthlyPlan extends React.Component {
 
   render() {
     const { loggedInUser, recommendations } = this.props;
+    const { disableContributionLink } = this.state;
     const totalAmount = this.getTotalAmount();
-
     const opencollectiveRecommendations = recommendations
       .filter(r => r.opencollective)
       .filter(r => r.opencollective.pledge !== true);
 
-    const dispatchedValue = EXAMPLE_VALUE * (1 - EXAMPLE_FEES);
+    const dispatchedValue = totalAmount * (1 - EXAMPLE_FEES);
     const singleValue = (
       dispatchedValue / opencollectiveRecommendations.length
     ).toFixed(2);
@@ -486,6 +519,11 @@ export default class MonthlyPlan extends React.Component {
                 font-size: 12px;
                 text-align: center;
               }
+              .disableContributionLink {
+                pointer-events: none;
+                cursor: default;
+                opacity: 0.5;
+              }
               @media screen and (max-width: 640px) {
                 .mainWrapper {
                   background: url(/static/img/mobile-background-colors.svg)
@@ -494,6 +532,10 @@ export default class MonthlyPlan extends React.Component {
                 }
                 .content {
                   width: 90%;
+                  position: relative;
+                }
+                .topContent {
+                  width: 100%;
                 }
                 .amountTableWrapper {
                   margin: 10px 50px;
@@ -504,7 +546,7 @@ export default class MonthlyPlan extends React.Component {
           <Header loggedInUser={loggedInUser} login={false} brandAlign="auto" />
           <div className="mainWrapper">
             <div className="contentWrapper">
-              <div className="content">
+              <div className="content topContent">
                 <h1>Congratulations 🎉</h1>
                 <h4>You&apos;re about to Back Your Stack!</h4>
                 <p>
@@ -559,7 +601,9 @@ export default class MonthlyPlan extends React.Component {
                   payment processor fees.
                 </p>
                 <a
-                  className="button bigButton continueButton"
+                  className={classnames('button bigButton continueButton', {
+                    disableContributionLink,
+                  })}
                   href={`${this.getContributionUrl()}`}
                 >
                   Continue on Open Collective
