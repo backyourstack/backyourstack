@@ -60,6 +60,12 @@ export default class MonthlyPlanConfirmation extends React.Component {
       <div className="Page ConfirmPage">
         <style jsx global>
           {`
+            .contentWrapper {
+              background: url(/static/img/background-colors.svg) no-repeat;
+              margin: 0;
+              padding: 20px;
+              min-height: 700px;
+            }
             .confirmationMessage {
               display: flex;
               justify-content: center;
@@ -68,11 +74,36 @@ export default class MonthlyPlanConfirmation extends React.Component {
               font-size: 1.4rem;
             }
             .content {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .contentCard {
+              background: #fff;
+              border: 1px solid rgba(24, 26, 31, 0.1);
+              border-radius: 8px;
               width: 540px;
-              border: 1px solid #dcdcdd;
-              border-radius: 12px;
-              margin: 50px auto;
+              margin-top: 30px;
               padding: 20px 30px;
+              color: #76777a;
+              box-sizing: border-box;
+            }
+            .confirmationWrapper h1 {
+              font-weight: 900;
+              font-size: 32px;
+              line-height: 36px;
+              letter-spacing: -0.4px;
+              color: #141414;
+            }
+            .confirmationWrapper h3 {
+              font-size: 20px;
+              line-height: 22px;
+              letter-spacing: -0.2px;
+              color: #141414;
+            }
+            .tableDescription {
+              font-size: 14px;
+              font-weight: 400;
             }
             table {
               width: 100%;
@@ -80,17 +111,55 @@ export default class MonthlyPlanConfirmation extends React.Component {
             }
             table th,
             table td {
-              border: 1px solid #c1c6cc;
+              border-bottom: 1px solid #dcdee0;
               padding: 0.5em;
               white-space: nowrap;
+              font-size: 14px;
+            }
+            table tr th:nth-child(2),
+            table tr td:nth-child(2) {
+              text-align: right;
+            }
+            table tr th:nth-child(1),
+            table tr td:nth-child(1) {
+              text-align: left;
+            }
+            table th {
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 10px;
+            }
+            .collectiveLink:hover {
+              color: #76777a;
+            }
+            .note {
               font-size: 12px;
-              color: #121314;
+              line-height: 18px;
+              color: #4e5052;
+            }
+            .thankYouText {
+              font-size: 20px;
+              line-height: 22px;
+              color: #141414;
+              margin-top: 30px;
+              margin-bottom: 30px;
             }
             @media screen and (max-width: 640px) {
-              .content {
-                width: auto;
-                padding: 20px 15px;
-                margin: 50px 20px;
+              .contentWrapper {
+                background: url(/static/img/mobile-background-colors.svg)
+                  no-repeat;
+                background-size: 100%;
+              }
+              .confirmationWrapper h1 {
+                font-size: 24px;
+                margin-bottom: 5px;
+              }
+              .confirmationWrapper h3 {
+                font-size: 16px;
+                margin-top: 5px;
+              }
+              .contentCard {
+                width: 100%;
               }
             }
             .error {
@@ -107,67 +176,72 @@ export default class MonthlyPlanConfirmation extends React.Component {
           login={false}
           brandAlign="auto"
         />
-        <div className="content">
-          {status === 'failure' && (
-            <div className="error">
-              <h3>
-                Your order was created but unable to dispatch funds at this time
-              </h3>
-              {errMesg && <p>{errMesg}</p>}
-            </div>
-          )}
-          {status === 'processing' && (
-            <div className="dispatchingWrapper">
-              <h3>Dispatching...</h3>
-            </div>
-          )}
-          {status === 'success' && (
-            <div className="confirmationWrapper">
-              <h3>
-                Woot woot! 🎉 Your first payment was successfully dispatched.
-              </h3>
-              <p>You&apos;re contributing to the following Collectives:</p>
-              <div className="tableWrapper">
-                <table>
-                  <tr>
-                    <th>Collective</th>
-                    <th>Amount</th>
-                  </tr>
-                  {dispatchedOrders.map(order => {
-                    if (order) {
-                      return (
-                        <tr key={order.id}>
-                          <td>
-                            <a
-                              href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${order.collective.slug}`}
-                            >
-                              {order.collective.name}
-                            </a>
-                          </td>
-                          <td>${(order.totalAmount / 100).toFixed(2)}</td>
-                        </tr>
-                      );
-                    }
-                  })}
-                </table>
-                <p>
-                  That&apos;s it! You will be charged for the first time today,
-                  then on the 1st of each month from now on. The funds will be
-                  automatically distributed to your dependencies.
-                </p>
-                <ul>
-                  <li>
-                    Note: Since the next charge will be on the 1st of the month,
-                    you may be charged twice in a short period if you set this
-                    up near the end of the month.
-                  </li>
-                </ul>
-                <p>Thank you for Backing Your Stack!</p>
+        <div className="contentWrapper">
+          <div className="content">
+            {status === 'failure' && (
+              <div className="error contentCard">
+                <h3>
+                  Your order was created but unable to dispatch funds at this
+                  time
+                </h3>
+                {errMesg && <p>{errMesg}</p>}
               </div>
-            </div>
-          )}
+            )}
+            {status === 'processing' && (
+              <div className="dispatchingWrapper contentCard">
+                <h3>Dispatching...</h3>
+              </div>
+            )}
+            {status === 'success' && (
+              <div className="confirmationWrapper">
+                <h1>Woot woot! 🎉</h1>
+                <h3>Your first payment was successfully dispatched.</h3>
+                <div className="tableWrapper contentCard">
+                  <p className="tableDescription">
+                    You&apos;re contributing to the following Collectives:
+                  </p>
+                  <table>
+                    <tr>
+                      <th>Collective</th>
+                      <th>Amount</th>
+                    </tr>
+                    {dispatchedOrders.map(order => {
+                      if (order) {
+                        return (
+                          <tr key={order.id}>
+                            <td>
+                              <a
+                                className="collectiveLink"
+                                href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${order.collective.slug}`}
+                              >
+                                {order.collective.name}
+                              </a>
+                            </td>
+                            <td>${(order.totalAmount / 100).toFixed(2)}</td>
+                          </tr>
+                        );
+                      }
+                    })}
+                  </table>
+                  <p className="tableDescription">
+                    That&apos;s it! You will be charged for the first time
+                    today, then on the 1st of each month from now on. The funds
+                    will be automatically distributed to your dependencies.
+                  </p>
+                  <p className="note">
+                    <strong>*Note</strong>: Since the next charge will be on the
+                    1st of the month, you may be charged twice in a short period
+                    if you set this up near the end of the month.
+                  </p>
+                  <h3 className="thankYouText">
+                    Thank you for Backing Your Stack!
+                  </h3>
+                </div>
+              </div>
+            )}
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     );
   }
