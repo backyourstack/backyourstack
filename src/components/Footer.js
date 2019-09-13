@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
             }
             .footer-icons {
               display: flex;
-              align-items: baseline;
+              align-items: center;
               justify-content: center;
               color: #9399a3;
             }
