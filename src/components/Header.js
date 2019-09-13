@@ -27,20 +27,18 @@ export default class Header extends React.Component {
             header {
               display: flex;
               justify-content: space-between;
-              align-items: center;
               width: 100%;
-              height: 70px;
+              min-height: 70px;
               border-bottom: 1px solid #d5dae0;
+              align-items: center;
             }
-
             .brand {
-              margin-left: 60px;
+              margin-left: 30px;
             }
-
             .brand img.default {
-              display: block;
-              width: 200px;
-              height: 45px;
+              width: 212px;
+              height: 50px;
+              margin-top: 20px;
             }
             .brand img.small {
               display: none;
@@ -81,7 +79,16 @@ export default class Header extends React.Component {
               margin-right: 20px;
               border: 0;
             }
-
+            @media screen and (max-width: 768px) {
+              .brand {
+                margin-left: 0;
+              }
+              .login,
+              .loggedInUser {
+                margin-left: auto;
+                margin-right: 20px;
+              }
+            }
             @media screen and (max-width: 500px) {
               .brand {
                 margin-left: 20px;
