@@ -265,6 +265,8 @@ export default class MonthlyPlan extends React.Component {
                 font-size: 12px;
                 line-height: 18px;
                 color: #9D9FA3;
+                position: relative;
+                top: -5px;
               }
               .amountFig {
                 font-weight: bold;
