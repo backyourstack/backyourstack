@@ -233,12 +233,14 @@ export default class MonthlyPlan extends React.Component {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-around;
               }
               .moreCard a {
                 background: #2C2C85;
                 color: #fff;
                 border: none;
+                white-space: nowrap;
+                padding: 10px;
+                margin-top: 10px;
               }
               .moreCard a:hover {
                 color: #fff;
@@ -249,7 +251,9 @@ export default class MonthlyPlan extends React.Component {
                 background: #6F5AFA;
                 color: #fff;
               }
-              .amountCard p {
+              .customAmountText,
+              .employeeRange,
+              .employeeText {
                 margin: 0;
               }
               .customAmountText,
@@ -265,13 +269,17 @@ export default class MonthlyPlan extends React.Component {
                 font-size: 12px;
                 line-height: 18px;
                 color: #9D9FA3;
-                position: relative;
-                top: -5px;
+                margin-bottom: 10px;
+              }
+              .amountFigWrapper {
+                display: flex;
+                align-items: baseline;
               }
               .amountFig {
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 24px;
+                margin-right: 5px;
               }
               .currrencyAndFreq {
                 font-weight: 400;
@@ -326,7 +334,7 @@ export default class MonthlyPlan extends React.Component {
                   margin-left: 10px;
                 }
                 .amountCard {
-                  margin-right: 15px;
+                  margin-right: 8px;
                 }
                 .moreCard {
                   padding: 5px;
