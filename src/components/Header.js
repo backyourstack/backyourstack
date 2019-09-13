@@ -28,7 +28,7 @@ export default class Header extends React.Component {
               display: flex;
               justify-content: space-between;
               width: 100%;
-              min-height: 70px;
+              height: 80px;
               border-bottom: 1px solid #d5dae0;
               align-items: center;
             }
