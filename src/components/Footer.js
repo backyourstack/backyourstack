@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GithubLogo from '../static/img/icon-github.svg';
-import TwitterLogo from '../static/img/twitter.svg';
+import GithubLogo from '../static/img/gray-github.svg';
+import TwitterLogo from '../static/img/gray-twitter.svg';
 import { Link } from '../routes';
 
 export default class Footer extends React.Component {
@@ -31,9 +31,9 @@ export default class Footer extends React.Component {
               display: flex;
               align-items: center;
               justify-content: center;
-              width: 50px;
-              height: 50px;
-              margin: 20px;
+              width: 35px;
+              height: 35px;
+              margin: 25px 10px;
               border: 1px solid #9399a3;
               border-radius: 30px;
               padding: 5px;
