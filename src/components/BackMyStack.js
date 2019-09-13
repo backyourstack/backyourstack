@@ -42,6 +42,11 @@ const BackMyStack = ({ onClickBackMyStack }) => {
             background: #2c2c85;
             font-size: 14px;
             line-height: 21px;
+            outline: none;
+            cursor: pointer;
+          }
+          .backMyStackBtn:hover {
+            opacity: 0.8;
           }
           @media screen and (max-width: 768px),
             @media screen and (max-width: 500px) {
