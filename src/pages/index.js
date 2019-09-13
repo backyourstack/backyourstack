@@ -55,14 +55,14 @@ export default class Index extends Component {
     const supportedFilesAsComponent = supportedFiles
       .map(file => <em key={file}>{file}</em>)
       .reduce((acc, curr, idx, src) => {
-        if (idx === 1) {
+        if (idx === 0) {
           return [curr];
         } else if (src.length - 1 === idx) {
           return [...acc, ' and ', curr];
         } else {
           return [...acc, ', ', curr];
         }
-      });
+      }, []);
 
     return (
       <div className="Page IndexPage">
@@ -226,19 +226,18 @@ export default class Index extends Component {
             your organization is using that need financial support.
           </h1>
           <p className="secondaryDescription">
-            <span className="asterisk">*</span>We currently detect dependencies
+            <span className="asterisk">*</span> We currently detect dependencies
             from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep) and
-            Ruby (Gem). Want to see something else?{' '}
+            Ruby (Gem). Want to see more languages? Please{' '}
             <Link route="contributing">
-              <a className="seeHowLink">See how to contribute</a>
+              <a className="seeHowLink">see how to contribute</a>
             </Link>
             .
           </p>
           <p className="optionsDescription">
-            You have <strong>two different</strong> options to perform an
-            analysis of your code to know which{' '}
-            <strong>Open Source Projects</strong> you are going to contribute
-            to.
+            Use one of the two options below to scan your organization&apos;s
+            code and find out which of your dependencies are seeking funding.
+            You can now support them!
           </p>
           <div className="boxWrapper">
             <div className="box">
@@ -246,11 +245,12 @@ export default class Index extends Component {
                 <div className="icon">
                   <GithubLogo />
                 </div>
-                <h3>Use your github link</h3>
+                <h3>Use a GitHub profile</h3>
               </div>
               <p className="boxDescription">
-                Just copy and paste the URL of the repository that you want to
-                scan and set a contribution.
+                Enter your GitHub profile id and we&apos;ll scan all public
+                repositories under it. You may Sign In with GitHub if you want
+                to give us access to private repositories too.
               </p>
               <SearchForm orgs={loggedInUserOrgs} />
             </div>
@@ -259,12 +259,12 @@ export default class Index extends Component {
                 <div className="icon">
                   <UploadIcon />
                 </div>
-                <h3>Upload your own file</h3>
+                <h3>Upload dependency files</h3>
               </div>
               <p className="boxDescription">
-                If you want to analyze non-public repositories, sign in with
-                your GitHub account or simply upload dependency files. At the
-                moment, we do support {supportedFilesAsComponent}.
+                If you want to analyze private or local repositories simply
+                upload dependency files. At the moment, we do support{' '}
+                {supportedFilesAsComponent}.
               </p>
               <div className="uploadContainer">
                 <Upload
@@ -274,8 +274,8 @@ export default class Index extends Component {
                 />
               </div>
               <p className="boxDescription">
-                The uploaded files will not be shared with anyone and will be
-                deleted when your session expire.
+                The uploaded files will not be shared and we will store them
+                only with your explicit consent.
               </p>
             </div>
           </div>
