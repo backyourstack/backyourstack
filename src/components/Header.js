@@ -33,11 +33,9 @@ export default class Header extends React.Component {
               align-items: center;
             }
             .brand {
-              margin-left: 30px;
+              margin-left: 50px;
             }
             .brand img.default {
-              width: 212px;
-              height: 50px;
               margin-top: 20px;
             }
             .brand img.small {
