@@ -21,59 +21,41 @@ const getFilesData = sessionFiles =>
 const suggestedAmounts = [
   {
     id: 1,
-    employeeRange: '100-200',
-    totalAmount: 2500,
+    employeeRange: '1-10',
+    totalAmount: 100,
     frequency: 'mo',
     currency: 'USD',
     currencySymbol: '$',
   },
   {
     id: 2,
-    employeeRange: '200-500',
-    totalAmount: 5000,
+    employeeRange: '10-100',
+    totalAmount: 1000,
     frequency: 'mo',
     currency: 'USD',
     currencySymbol: '$',
   },
   {
     id: 3,
-    employeeRange: '220-530',
-    totalAmount: 7000,
+    employeeRange: '100-1000',
+    totalAmount: 5000,
     frequency: 'mo',
     currency: 'USD',
     currencySymbol: '$',
   },
   {
     id: 4,
-    employeeRange: '420-530',
-    totalAmount: 8000,
+    employeeRange: '1000-5000',
+    totalAmount: 10000,
     frequency: 'mo',
     currency: 'USD',
     currencySymbol: '$',
   },
   {
-    id: 5,
-    employeeRange: '420-530',
-    totalAmount: 9000,
-    frequency: 'mo',
-    currency: 'USD',
-    currencySymbol: '$',
+    id: 'more',
   },
   {
-    id: 6,
-    employeeRange: '420-530',
-    totalAmount: 9000,
-    frequency: 'mo',
-    currency: 'USD',
-    currencySymbol: '$',
-  },
-  {
-    id: 7,
-    employeeRange: '420-530',
-    totalAmount: 9000,
-    frequency: 'mo',
-    currency: 'USD',
-    currencySymbol: '$',
+    id: 'custom',
   },
 ];
 
@@ -110,7 +92,7 @@ export default class MonthlyPlan extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedAmount: {},
+      selectedAmount: suggestedAmounts[2], // set default selected amount
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
@@ -186,8 +168,35 @@ export default class MonthlyPlan extends React.Component {
     );
   }
 
+  renderCustomAmountCard(suggestedAmount) {
+    const { customAmount, selectedAmount } = this.state;
+
+    return (
+      <div
+        key={suggestedAmount.id}
+        className={classnames('amountCard', 'customAmountCard', {
+          selectedAmountCard: selectedAmount.id === 'custom',
+        })}
+        onClick={() => this.handleOnAmountSelect(suggestedAmount)}
+      >
+        <p className="customAmountText">Custom Amount</p>
+        <div className="customAmountInput">
+          <div className="prepend">$</div>
+          <input
+            type="number"
+            className="amountInput"
+            name="totalAmount"
+            placeholder="0.00 USD / mo"
+            value={customAmount}
+            onChange={this.handleAmountChange}
+          />
+        </div>
+      </div>
+    );
+  }
+
   renderSuggestedAmount() {
-    const { selectedAmount, customAmount, mobileToggleExpanded } = this.state;
+    const { selectedAmount, mobileToggleExpanded } = this.state;
     let suggestedAmountsToShow;
 
     // For mobile view
@@ -221,6 +230,18 @@ export default class MonthlyPlan extends React.Component {
                 padding: 5px;
                 cursor: pointer;
                 color: #141414;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+              }
+              .moreCard a {
+                background: #2C2C85;
+                color: #fff;
+                border: none;
+              }
+              .moreCard a:hover {
+                color: #fff;
               }
               .selectedAmountCard,
               .amountCard:hover:not(.mobileSuggestedAmountToggle) {
@@ -305,6 +326,9 @@ export default class MonthlyPlan extends React.Component {
                 .amountCard {
                   margin-right: 15px;
                 }
+                .moreCard {
+                  padding: 5px;
+                }
               }
               @media screen and (max-width: 640px) {
                 .customAmountCard {
@@ -351,47 +375,43 @@ export default class MonthlyPlan extends React.Component {
             const selectedAmountCard = selectedAmount
               ? selectedAmount.id === suggestedAmount.id
               : false;
-            return (
-              <div
-                key={suggestedAmount.id}
-                className={classnames('amountCard', { selectedAmountCard })}
-                onClick={() => this.handleOnAmountSelect(suggestedAmount)}
-              >
-                <p className="employeeRange">{suggestedAmount.employeeRange}</p>
-                <p className="employeeText">Employee</p>
-                <div className="amountFigWrapper">
-                  <span className="amountFig">
-                    {this.renderFormattedAmount(
-                      suggestedAmount.totalAmount,
-                      suggestedAmount.currencySymbol,
-                    )}
-                  </span>{' '}
-                  <span className="currencyAndFreq">
-                    {suggestedAmount.currency}/{suggestedAmount.frequency}
-                  </span>
+            if (suggestedAmount.id === 'more') {
+              return (
+                <div className="amountCard moreCard" key={suggestedAmount.id}>
+                  <p className="customAmountText">More?</p>
+                  <a href="mailto:hello@opencollective.com" className="button">
+                    Contact Us
+                  </a>
                 </div>
-              </div>
-            );
+              );
+            } else if (suggestedAmount.id === 'custom') {
+              return this.renderCustomAmountCard(suggestedAmount);
+            } else {
+              return (
+                <div
+                  key={suggestedAmount.id}
+                  className={classnames('amountCard', { selectedAmountCard })}
+                  onClick={() => this.handleOnAmountSelect(suggestedAmount)}
+                >
+                  <p className="employeeRange">
+                    {suggestedAmount.employeeRange}
+                  </p>
+                  <p className="employeeText">Employees</p>
+                  <div className="amountFigWrapper">
+                    <span className="amountFig">
+                      {this.renderFormattedAmount(
+                        suggestedAmount.totalAmount,
+                        suggestedAmount.currencySymbol,
+                      )}
+                    </span>{' '}
+                    <span className="currencyAndFreq">
+                      {suggestedAmount.currency}/{suggestedAmount.frequency}
+                    </span>
+                  </div>
+                </div>
+              );
+            }
           })}
-          <div
-            className={classnames('amountCard', 'customAmountCard', {
-              selectedAmountCard: selectedAmount.id === 'custom',
-            })}
-            onClick={() => this.handleOnAmountSelect({ id: 'custom' })}
-          >
-            <p className="customAmountText">Custom Amount</p>
-            <div className="customAmountInput">
-              <div className="prepend">$</div>
-              <input
-                type="number"
-                className="amountInput"
-                name="totalAmount"
-                placeholder="0.00 USD / mo"
-                value={customAmount}
-                onChange={this.handleAmountChange}
-              />
-            </div>
-          </div>
           <div
             className="amountCard mobileSuggestedAmountToggle"
             onClick={this.hanldeAmountSuggestionToggle}
