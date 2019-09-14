@@ -28,7 +28,7 @@ export default class Header extends React.Component {
               display: flex;
               justify-content: space-between;
               width: 100%;
-              height: 80px;
+              height: 79px;
               border-bottom: 1px solid #d5dae0;
               align-items: center;
             }
@@ -36,7 +36,7 @@ export default class Header extends React.Component {
               margin-left: 50px;
             }
             .brand img.default {
-              margin-top: 20px;
+              margin-top: 19px;
             }
             .brand img.small {
               display: none;
