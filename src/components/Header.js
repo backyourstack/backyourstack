@@ -79,7 +79,7 @@ export default class Header extends React.Component {
             }
             @media screen and (max-width: 768px) {
               .brand {
-                margin-left: 0;
+                margin-left: 20px;
               }
               .login,
               .loggedInUser {
