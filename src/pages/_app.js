@@ -1,6 +1,6 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
-import React from 'react';
+import React, { Fragment } from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { get } from 'lodash';
@@ -49,7 +49,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <Fragment>
         <Head>
           <title>
             BackYourStack: Discover the Open Source projects you are using and
@@ -57,7 +57,7 @@ class MyApp extends App {
           </title>
         </Head>
         <Component {...pageProps} />
-      </Container>
+      </Fragment>
     );
   }
 }
