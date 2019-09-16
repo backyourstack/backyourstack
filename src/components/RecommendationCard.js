@@ -270,7 +270,7 @@ export default class RecommendationCard extends React.Component {
               white-space: nowrap;
             }
             .andOthers:before {
-              content: '\00a0 ';
+              content: '\u00A0 ';
             }
 
             .contributeButton.existingPledge,
