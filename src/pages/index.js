@@ -11,6 +11,8 @@ import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
+import GithubLogo from '../static/img/icon-github.svg';
+import UploadIcon from '../static/img/upload-icon.svg';
 
 const getUserOrgs = accessToken =>
   process.env.IS_CLIENT
@@ -53,25 +55,22 @@ export default class Index extends Component {
     const supportedFilesAsComponent = supportedFiles
       .map(file => <em key={file}>{file}</em>)
       .reduce((acc, curr, idx, src) => {
-        if (idx === 1) {
+        if (idx === 0) {
           return [curr];
         } else if (src.length - 1 === idx) {
           return [...acc, ' and ', curr];
         } else {
           return [...acc, ', ', curr];
         }
-      });
+      }, []);
 
     return (
       <div className="Page IndexPage">
         <style jsx global>
           {`
             @media screen and (max-width: 500px) {
-              .IndexPage {
+              .homepage {
                 padding: 20px;
-              }
-              .IndexPage header {
-                display: none !important;
               }
             }
           `}
@@ -85,152 +84,203 @@ export default class Index extends Component {
               padding: 0;
             }
 
-            .search,
-            .description,
-            .uploadDescription,
-            .uploadContainer {
-              margin: auto;
-            }
-
             p {
               text-align: center;
               color: #9399a3;
             }
-
+            .background {
+              background: url(/static/img/background-colors.svg);
+              background-repeat: no-repeat;
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              opacity: 0.65;
+              z-index: -1;
+              right: 0;
+            }
+            .homepage {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              align-items: center;
+              box-sizing: border-box;
+            }
             .description {
-              color: #2e3033;
-              font-size: 14px;
-              font-weight: 500;
-              line-height: 22px;
-              margin-top: 25px;
+              color: #141414;
+              font-weight: 800;
+              font-size: 32px;
+              line-height: 40px;
+              text-align: center;
+              width: 55%;
+              letter-spacing: -0.4px;
+              margin: 60px 20px 20px;
+            }
+            .asterisk {
+              color: #180c66;
             }
             .secondaryDescription {
               font-size: 12px;
+              color: #4e5052;
               line-height: 18px;
-              font-weight: 300;
+              font-weight: 200;
+              width: 45%;
             }
-            .uploadDescription {
-              font-size: 12px;
-              line-height: 18px;
+            .seeHowLink {
+              text-decoration: none;
+              color: #7042ff;
             }
-
-            .search {
+            .optionsDescription {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #4e5052;
+              width: 50%;
+            }
+            .boxWrapper {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 20px;
+              box-sizing: border-box;
+            }
+            .box {
               width: 450px;
-              margin-top: 50px;
+              display: flex;
+              flex-direction: column;
+              min-height: 340px;
+              background: #fff;
+              border: 1px solid rgba(24, 26, 31, 0.1);
+              border-radius: 8px;
+              margin: 20px;
+              padding: 10px 20px;
+              box-sizing: border-box;
             }
-            .description {
-              width: 340px;
+            .boxHeader {
+              display: flex;
+              align-items: baseline;
+              color: #4e5052;
+              font-size: 16px;
+              line-height: 24px;
             }
-            .uploadDescription {
-              width: 450px;
+            .icon {
+              margin-right: 20px;
+              width: 16px;
+              height: 16px;
+            }
+            .boxDescription {
+              text-align: left;
+              font-size: 14px;
+              line-height: 22px;
+              color: #76777a;
+              letter-spacing: -0.2px;
             }
             .uploadContainer {
-              margin-top: 50px;
-              width: 400px;
-              margin-bottom: 50px;
+              width: 280px;
+              align-self: center;
             }
-
-            .uploadDescription.desktop {
-              display: block;
+            @media screen and (min-width: 1450px) {
+              .description {
+                width: 784px;
+              }
+              .secondaryDescription,
+              .optionsDescription {
+                width: 700px;
+              }
             }
-            .uploadDescription.mobile {
-              display: none;
-            }
-
             @media screen and (max-width: 500px) {
               h1 {
                 margin-bottom: 25px;
               }
-              .search {
-                width: auto;
+              .background {
+                background: url(/static/img/mobile-background-colors.svg);
+                opacity: 1;
               }
               .description {
-                width: 250px;
+                width: 100%;
               }
-              .uploadDescription {
-                width: auto;
-              }
-              .uploadDescription.desktop {
-                display: none;
-              }
-              .uploadDescription.mobile {
-                display: block;
-              }
+              .description,
+              .secondaryDescription,
+              .optionsDescription,
               .uploadContainer {
-                display: none;
+                width: 80%;
+              }
+              .boxWrapper {
+                flex-direction: column;
+                align-items: center;
+              }
+              .box {
+                width: 100%;
               }
             }
           `}
         </style>
 
-        <Header pathname={pathname} loggedInUser={loggedInUser} brand={false} />
-
+        <Header pathname={pathname} loggedInUser={loggedInUser} />
+        <div className="background"></div>
         <div className="homepage">
-          <h1>
-            <Link route="index">
-              <a>
-                <img
-                  width="220"
-                  height="128"
-                  src="/static/img/logo-bys-homepage.png"
-                  alt="BackYourStack"
-                />
-              </a>
-            </Link>
-          </h1>
-
-          <p className="description">
+          <h1 className="description">
             Discover the Open Source projects
-            <small>
+            <small className="asterisk">
               <sup>*</sup>
             </small>{' '}
             your organization is using that need financial support.
-          </p>
-
-          <p className="description secondaryDescription">
-            * We currently detect dependencies from JavaScript (NPM), PHP
-            (Composer), .NET (Nuget), Go (dep) and Ruby (RubyGems). Want to see
-            something else?
-            <br />
+          </h1>
+          <p className="secondaryDescription">
+            <span className="asterisk">*</span> We currently detect dependencies
+            from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep) and
+            Ruby (Gem). Want to see more languages? Please{' '}
             <Link route="contributing">
-              <a>See how to contribute</a>
+              <a className="seeHowLink">see how to contribute</a>
             </Link>
             .
           </p>
-
-          <div className="search">
-            <SearchForm orgs={loggedInUserOrgs} />
-          </div>
-
-          <p className="uploadDescription desktop">
-            If you want to analyze non-public repositories,{' '}
-            <Link route="login" params={{ next: pathname || '/' }}>
-              <a>sign in with your GitHub account</a>
-            </Link>{' '}
-            or simply upload dependency files. At the moment, we do support{' '}
-            {supportedFilesAsComponent}. The uploaded files will not be shared
-            with anyone and will be deleted when your session expire.
+          <p className="optionsDescription">
+            Use one of the two options below to scan your organization&apos;s
+            code and find out which of your dependencies are seeking funding.
+            You can now support them!
           </p>
-
-          <p className="uploadDescription mobile">
-            If you want to analyze non-public repositories,{' '}
-            <Link route="login" params={{ next: pathname || '/' }}>
-              <a>sign in with your GitHub account</a>
-            </Link>{' '}
-            You can also simply upload dependency files, use a desktop browser
-            for that.
-          </p>
-
-          <div className="uploadContainer">
-            <Upload
-              onUpload={this.onUpload}
-              feedbackPosition="float"
-              style={{ height: '125px' }}
-            />
+          <div className="boxWrapper">
+            <div className="box">
+              <div className="boxHeader">
+                <div className="icon">
+                  <GithubLogo />
+                </div>
+                <h3>Use a GitHub profile</h3>
+              </div>
+              <p className="boxDescription">
+                Enter your GitHub profile id and we&apos;ll scan all public
+                repositories under it. You may Sign In with GitHub if you want
+                to give us access to private repositories too.
+              </p>
+              <SearchForm orgs={loggedInUserOrgs} />
+            </div>
+            <div className="box">
+              <div className="boxHeader">
+                <div className="icon">
+                  <UploadIcon />
+                </div>
+                <h3>Upload dependency files</h3>
+              </div>
+              <p className="boxDescription">
+                If you want to analyze private or local repositories simply
+                upload dependency files. At the moment, we do support{' '}
+                {supportedFilesAsComponent}.
+              </p>
+              <div className="uploadContainer">
+                <Upload
+                  onUpload={this.onUpload}
+                  feedbackPosition="float"
+                  style={{ height: '75px' }}
+                />
+              </div>
+              <p className="boxDescription">
+                The uploaded files will not be shared and we will store them
+                only with your explicit consent.
+              </p>
+            </div>
           </div>
+          <Footer />
         </div>
-
-        <Footer />
       </div>
     );
   }

@@ -27,20 +27,16 @@ export default class Header extends React.Component {
             header {
               display: flex;
               justify-content: space-between;
-              align-items: center;
               width: 100%;
-              margin-top: 20px;
-              margin-bottom: 20px;
+              height: 79px;
+              border-bottom: 1px solid #d5dae0;
+              align-items: center;
             }
-
             .brand {
-              margin-left: 60px;
+              margin-left: 50px;
             }
-
             .brand img.default {
-              display: block;
-              width: 200px;
-              height: 45px;
+              margin-top: 19px;
             }
             .brand img.small {
               display: none;
@@ -81,7 +77,16 @@ export default class Header extends React.Component {
               margin-right: 20px;
               border: 0;
             }
-
+            @media screen and (max-width: 768px) {
+              .brand {
+                margin-left: 20px;
+              }
+              .login,
+              .loggedInUser {
+                margin-left: auto;
+                margin-right: 20px;
+              }
+            }
             @media screen and (max-width: 500px) {
               .brand {
                 margin-left: 20px;
@@ -115,7 +120,7 @@ export default class Header extends React.Component {
               <a>
                 <img
                   className="default"
-                  src="/static/img/logo-bys-horizontal.png"
+                  src="/static/img/backyourstack-logo.svg"
                   alt="BackYourStack"
                 />
                 <img

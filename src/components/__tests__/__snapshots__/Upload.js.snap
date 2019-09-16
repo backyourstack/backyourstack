@@ -2,38 +2,60 @@
 
 exports[`Upload should render 1`] = `
 <div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="jsx-1203312298 uploadWrapper"
 >
   <div
-    className="jsx-47610240 text"
+    aria-disabled={false}
+    className="dropZoneComponent"
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
   >
-    <p
-      className="jsx-47610240"
+    <div
+      className="jsx-1203312298 text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-47610240"
-      />
-      or click to select files to upload.
-    </p>
+      <p
+        className="jsx-1203312298"
+      >
+        Simply drag and drop files
+        <br
+          className="jsx-1203312298"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <input
+      autoComplete="off"
+      disabled={false}
+      multiple={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0.00001,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="file"
+    />
   </div>
   <div
-    className="jsx-47610240 uploadFeedback float"
+    className="jsx-1203312298 uploadFeedback float"
   >
     <p
-      className="jsx-47610240"
+      className="jsx-1203312298"
     >
       There was an error while uploading your files. At the moment, we do support 
       <em>
@@ -58,61 +80,65 @@ exports[`Upload should render 1`] = `
       . Please try again. If the problem persists, please contact us.
     </p>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
 </div>
 `;
 
 exports[`Upload should render with feedbackPosition 1`] = `
 <div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="jsx-1203312298 uploadWrapper"
 >
   <div
-    className="jsx-47610240 text"
+    aria-disabled={false}
+    className="dropZoneComponent"
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
   >
-    <p
-      className="jsx-47610240"
+    <div
+      className="jsx-1203312298 text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-47610240"
-      />
-      or click to select files to upload.
-    </p>
+      <p
+        className="jsx-1203312298"
+      >
+        Simply drag and drop files
+        <br
+          className="jsx-1203312298"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <input
+      autoComplete="off"
+      disabled={false}
+      multiple={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0.00001,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="file"
+    />
   </div>
   <div
-    className="jsx-47610240 uploadFeedback inside"
+    className="jsx-1203312298 uploadFeedback inside"
   >
     <p
-      className="jsx-47610240"
+      className="jsx-1203312298"
     >
       There was an error while uploading your files. At the moment, we do support 
       <em>
@@ -137,62 +163,66 @@ exports[`Upload should render with feedbackPosition 1`] = `
       . Please try again. If the problem persists, please contact us.
     </p>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
 </div>
 `;
 
 exports[`Upload should render with style 1`] = `
 <div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "border": "1px solid red",
-      "position": "relative",
-    }
-  }
+  className="jsx-1203312298 uploadWrapper"
 >
   <div
-    className="jsx-47610240 text"
+    aria-disabled={false}
+    className="dropZoneComponent"
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    style={
+      Object {
+        "border": "1px solid red",
+        "position": "relative",
+      }
+    }
   >
-    <p
-      className="jsx-47610240"
+    <div
+      className="jsx-1203312298 text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-47610240"
-      />
-      or click to select files to upload.
-    </p>
+      <p
+        className="jsx-1203312298"
+      >
+        Simply drag and drop files
+        <br
+          className="jsx-1203312298"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <input
+      autoComplete="off"
+      disabled={false}
+      multiple={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0.00001,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="file"
+    />
   </div>
   <div
-    className="jsx-47610240 uploadFeedback float"
+    className="jsx-1203312298 uploadFeedback float"
   >
     <p
-      className="jsx-47610240"
+      className="jsx-1203312298"
     >
       There was an error while uploading your files. At the moment, we do support 
       <em>
@@ -217,23 +247,5 @@ exports[`Upload should render with style 1`] = `
       . Please try again. If the problem persists, please contact us.
     </p>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
 </div>
 `;

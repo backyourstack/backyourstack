@@ -3,3 +3,4 @@ coverage
 dist
 src/.next
 node_modules
+.DS_Store
