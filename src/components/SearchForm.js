@@ -154,12 +154,10 @@ export default class SearchForm extends React.Component {
               outline: none;
               color: #2e3033;
             }
-
             .searchButton {
               margin: 50px auto;
-              width: 200px;
+              width: 100%;
             }
-
             .searchExamples {
               font-size: 12px;
               text-align: center;
@@ -172,7 +170,6 @@ export default class SearchForm extends React.Component {
             .searchExamples a:hover {
               text-decoration: none;
             }
-
             .searchFeedback {
               font-size: 12px;
               right: 0;
