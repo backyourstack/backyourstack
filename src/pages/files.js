@@ -107,20 +107,9 @@ export default class Files extends React.Component {
     }
   };
 
-  render() {
-    const { section, pathname, loggedInUser } = this.props;
-    const { files, dependencies, recommendations } = this.state;
-    const count = Object.keys(files).length;
+  renderFilesInfo(files) {
     return (
-      <div className="Page FilesPage">
-        <style jsx global>
-          {`
-            .FilesPage {
-              position: relative;
-            }
-          `}
-        </style>
-
+      <Fragment>
         <style jsx>
           {`
             .File {
@@ -140,17 +129,177 @@ export default class Files extends React.Component {
             .File .actionButton {
               margin-top: 10px;
             }
+            .actionButton {
+              font-size: 14px;
+              line-height: 18px;
+              letter-spacing: -0.2px;
+              color: #7448ff;
+            }
+            @media screen and (max-width: 500px) {
+              .File {
+                margin-top: 30px;
+                margin-bottom: 20px;
+              }
+              .File .name {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: -0.16px;
+              }
+              .File .dependencies {
+                color: #6e747a;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: -0.1625px;
+              }
+            }
+          `}
+        </style>
+        {Object.entries(files).map(([id, file]) => (
+          <div key={id} className="File">
+            <div className="name">
+              <strong>{file.projectName || 'Unnamed project'}</strong>
+            </div>
+            <div className="dependencies">
+              {dependenciesStats(file).length} dependencies
+            </div>
+            <button
+              className="actionButton"
+              onClick={e => this.handleRemoveFile(id, e)}
+            >
+              X Remove file
+            </button>
+          </div>
+        ))}
+      </Fragment>
+    );
+  }
+
+  render() {
+    const { section, pathname, loggedInUser } = this.props;
+    const { files, dependencies, recommendations } = this.state;
+    const count = Object.keys(files).length;
+    return (
+      <div className="Page FilesPage">
+        <style jsx global>
+          {`
+            .FilesPage {
+              position: relative;
+            }
           `}
         </style>
 
-        <Header loggedInUser={loggedInUser} pathname={pathname} />
+        <style jsx>
+          {`
+            .mobile-view,
+            .mobile-file-info {
+              display: none;
+            }
+            .contentWrapper {
+              display: flex;
+              margin: 20px 20px;
+              padding: 10px 20px;
+            }
+            .sidebar {
+              width: 20%;
+              margin-right: 20px;
+            }
+            .main {
+              width: 75%;
+              margin-left: 20px;
+            }
+            .navigation-items {
+              left: 350px;
+            }
+            @media screen and (max-width: 1024px) {
+              .sidebar {
+                width: 25%;
+              }
+              .main {
+                width: 70%;
+              }
+              .navigation-items {
+                left: 320px;
+              }
+            }
+            @media screen and (max-width: 768px) {
+              .contentWrapper {
+                margin: 15px;
+                padding: 10px 20px;
+              }
+              .sidebar {
+                width: 30%;
+                margin-right: 20px;
+              }
+              .main {
+                width: 65%;
+                margin-left: 20px;
+              }
+              .navigation-items {
+                left: 285px;
+              }
+              .desktop-header {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.342857px;
+              }
+            }
+            @media screen and (max-width: 500px) {
+              .navigation {
+                padding: 10px 20px;
+                border-bottom: 1px solid #d5dae0;
+              }
+              .navigation h1 {
+                text-align: left;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: -0.4px;
+                padding: 0;
+              }
+              .navigation p {
+                color: #9399a3;
+                margin: 10px 0;
+                font-size: 12px;
+                line-height: 11px;
+                letter-spacing: 0.8px;
+              }
+              .mobile-view {
+                display: block;
+              }
+              .desktop-view {
+                display: none;
+              }
+              .File .name {
+                color: #2e3033;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: -0.16px;
+              }
+              .contentWrapper {
+                margin: 20px 10px;
+                padding: 0;
+              }
+              .main {
+                width: 950%;
+                margin: 5px;
+              }
+            }
+          `}
+        </style>
+
+        <Header
+          loggedInUser={loggedInUser}
+          showHeaderActions={true}
+          pathname={pathname}
+        />
 
         <nav className="navigation">
-          <h1>
+          <h1 className="desktop-header">
             {count === 0 && 'No uploaded file'}
             {count === 1 && '1 file analyzed'}
             {count > 1 && `${count} files analyzed`}
           </h1>
+          <p className="mobile-view">UPLOAD REPORT</p>
+          <div className="mobile-view">{this.renderFilesInfo(files)}</div>
           <div className="navigation-items">
             <Link route="files">
               <a className={classNames({ active: !section })}>
@@ -164,55 +313,41 @@ export default class Files extends React.Component {
             </Link>
           </div>
         </nav>
-        <aside>
-          {Object.entries(files).map(([id, file]) => (
-            <div key={id} className="File">
-              <div className="name">
-                <strong>{file.projectName || 'Unnamed project'}</strong>
+        <div className="contentWrapper">
+          <div className="sidebar desktop-view">
+            {this.renderFilesInfo(files)}
+            <Upload
+              onUpload={this.refresh}
+              onUpdate={this.refresh}
+              feedbackPosition="inside"
+            />
+          </div>
+
+          <div className="main">
+            {count === 0 && (
+              <div className="error">
+                <p>
+                  Please upload at least one file to detect dependencies and
+                  projects.
+                </p>
               </div>
-              <div className="dependencies">
-                {dependenciesStats(file).length} dependencies
-              </div>
-              <button
-                className="actionButton"
-                onClick={e => this.handleRemoveFile(id, e)}
-              >
-                ✘ Remove file
-              </button>
-            </div>
-          ))}
+            )}
+            {count > 0 && (
+              <Fragment>
+                {this.showBackMyStack && (
+                  <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+                )}
+                {!section && (
+                  <RecommendationList recommendations={recommendations} />
+                )}
 
-          <Upload
-            onUpload={this.refresh}
-            onUpdate={this.refresh}
-            feedbackPosition="inside"
-          />
-        </aside>
-
-        <main>
-          {count === 0 && (
-            <div className="error">
-              <p>
-                Please upload at least one file to detect dependencies and
-                projects.
-              </p>
-            </div>
-          )}
-          {count > 0 && (
-            <Fragment>
-              {this.showBackMyStack && (
-                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
-              )}
-              {!section && (
-                <RecommendationList recommendations={recommendations} />
-              )}
-
-              {section === 'dependencies' && (
-                <DependencyTable dependencies={dependencies} />
-              )}
-            </Fragment>
-          )}
-        </main>
+                {section === 'dependencies' && (
+                  <DependencyTable dependencies={dependencies} />
+                )}
+              </Fragment>
+            )}
+          </div>
+        </div>
       </div>
     );
   }

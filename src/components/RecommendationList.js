@@ -23,6 +23,7 @@ export default class RecommendationList extends React.Component {
             .Recommendations {
               display: flex;
               flex-wrap: wrap;
+              justify-content: space-between;
             }
           `}
         </style>

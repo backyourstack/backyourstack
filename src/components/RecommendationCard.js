@@ -168,12 +168,12 @@ export default class RecommendationCard extends React.Component {
               background-color: #ffffff;
               border: 1px solid #c1c6cc;
               padding: 20px;
-              margin-right: 30px;
               margin-bottom: 30px;
               position: relative;
               color: #2e3033;
               padding-bottom: 100px;
             }
+
             .Recommendation.backing {
               background: url('/static/img/sponsor-badge.png') no-repeat right
                 top;
@@ -295,8 +295,8 @@ export default class RecommendationCard extends React.Component {
               background: #00b856;
               border-radius: 2px;
             }
-
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 768px),
+              @media screen and (max-width: 500px) {
               .Recommendation {
                 width: 100%;
                 margin: 0;

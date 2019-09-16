@@ -43,22 +43,18 @@ export default class Header extends React.Component {
               width: 45px;
               height: 45px;
             }
-
             .login,
             .loggedInUser {
               margin-left: auto;
               margin-right: 60px;
             }
-
             a:not(.button) {
               color: inherit;
               text-decoration: none;
             }
-
             a:not(.button):hover {
               text-decoration: underline;
             }
-
             .profile {
               display: inline-block;
               vertical-align: -2px;
@@ -66,7 +62,6 @@ export default class Header extends React.Component {
               line-height: 36px;
               color: #494d52;
             }
-
             .avatar {
               display: inline-block;
               vertical-align: middle;
@@ -78,13 +73,11 @@ export default class Header extends React.Component {
               border: 0;
             }
             @media screen and (max-width: 768px) {
+              .searchFormWrapper {
+                display: none;
+              }
               .brand {
                 margin-left: 20px;
-              }
-              .login,
-              .loggedInUser {
-                margin-left: auto;
-                margin-right: 20px;
               }
             }
             @media screen and (max-width: 500px) {
@@ -104,10 +97,12 @@ export default class Header extends React.Component {
               .profile {
                 display: none;
               }
+              .searchFormWrapper {
+                display: none;
+              }
             }
           `}
         </style>
-
         <header>
           <div
             className="brand"
