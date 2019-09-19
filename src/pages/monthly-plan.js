@@ -114,12 +114,14 @@ export default class MonthlyPlan extends React.Component {
   getContributionUrl = () => {
     // Get the key url of the file
     const { baseUrl, uuid } = this.props;
-    const amount = this.getTotalAmount();
     if (uuid) {
       const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
-      const data = JSON.stringify({ jsonUrl });
-      const redirect = `${baseUrl}/monthly-plan/confirmation`;
-      const searchParams = new URLSearchParams({ data, redirect, amount });
+      const searchParams = new URLSearchParams({
+        data: JSON.stringify({ jsonUrl }),
+        redirect: `${baseUrl}/monthly-plan/confirmation`,
+        amount: this.getTotalAmount(),
+        skipStepDetails: 'true',
+      });
       const opencollectiveRedirectUrl = `${process.env.OPENCOLLECTIVE_BASE_URL}${process.env.OPENCOLLECTIVE_REDIRECT_PATH}`;
       return `${opencollectiveRedirectUrl}?${searchParams}`;
     }
