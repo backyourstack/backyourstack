@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const BackMyStack = ({ onClickBackMyStack }) => {
   return (
@@ -124,6 +125,10 @@ const BackMyStack = ({ onClickBackMyStack }) => {
       </div>
     </Fragment>
   );
+};
+
+BackMyStack.propTypes = {
+  onClickBackMyStack: PropTypes.func,
 };
 
 export default BackMyStack;
