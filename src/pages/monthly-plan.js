@@ -96,7 +96,6 @@ export default class MonthlyPlan extends React.Component {
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
-      disableContributionLink: true,
     };
   }
 
@@ -130,7 +129,7 @@ export default class MonthlyPlan extends React.Component {
   handleAmountChange = event => {
     const customAmount = event.target.value;
     this.setState({
-      customAmount,
+      customAmount: parseInt(customAmount),
     });
   };
 
@@ -247,10 +246,7 @@ export default class MonthlyPlan extends React.Component {
               .moreCard a:hover {
                 color: #fff;
               }
-              .selectedAmountCard,
-              .amountCard:hover:not(.mobileSuggestedAmountToggle) {
-                border: 1px solid #6F5AFA;
-                background: #6F5AFA;
+              .selectedAmountCard p {
                 color: #fff;
               }
               .customAmountText,
@@ -273,6 +269,15 @@ export default class MonthlyPlan extends React.Component {
                 color: #9D9FA3;
                 margin-bottom: 10px;
               }
+              .selectedAmountCard,
+              .amountCard:hover:not(.mobileSuggestedAmountToggle) {
+                border: 1px solid #6F5AFA;
+                background: #6F5AFA;
+                color: #fff;
+              }
+              .amountCard:hover .employeeText {
+                color: #fff;                
+              }
               .amountFigWrapper {
                 display: flex;
                 align-items: baseline;
@@ -283,11 +288,10 @@ export default class MonthlyPlan extends React.Component {
                 line-height: 24px;
                 margin-right: 5px;
               }
-              .currrencyAndFreq {
+              .currencyAndFreq {
                 font-weight: 400;
                 font-size: 11px;
-                line-height: 18px;
-                color: #76777A;
+                white-space: nowrap;
               }
               .customAmountCard {
                 padding: 10px;
@@ -417,7 +421,7 @@ export default class MonthlyPlan extends React.Component {
                       )}
                     </span>{' '}
                     <span className="currencyAndFreq">
-                      {suggestedAmount.currency}/{suggestedAmount.frequency}
+                      {suggestedAmount.currency} / {suggestedAmount.frequency}
                     </span>
                   </div>
                 </div>
@@ -445,8 +449,8 @@ export default class MonthlyPlan extends React.Component {
 
   render() {
     const { loggedInUser, recommendations } = this.props;
-    const { disableContributionLink } = this.state;
     const totalAmount = this.getTotalAmount();
+    const disableContributionLink = totalAmount === 0;
     const opencollectiveRecommendations = recommendations
       .filter(r => r.opencollective)
       .filter(r => r.opencollective.pledge !== true);
@@ -498,6 +502,7 @@ export default class MonthlyPlan extends React.Component {
               .content h5 {
                 font-size: 16px;
                 line-height: 24px;
+                margin-bottom: 10px;
               }
               .amountTableWrapper {
                 background: #fff;
@@ -512,14 +517,19 @@ export default class MonthlyPlan extends React.Component {
               }
               table {
                 width: 100%;
+                table-layout: fixed;
                 border-collapse: collapse;
               }
               table th,
-              table td {
+              table tr {
                 border-bottom: 1px solid #dcdee0;
-                padding: 0.5em;
                 white-space: nowrap;
                 font-size: 14px;
+              }
+              table th,
+              table td {
+                padding-top: 5px;
+                padding-bottom: 5px;
               }
               .checkbox {
                 border: 1px solid #c4c7cc;
@@ -539,9 +549,28 @@ export default class MonthlyPlan extends React.Component {
                 font-weight: bold;
                 font-size: 10px;
               }
+              .collectiveColumn {
+                display: flex;
+                flex-direction: column;
+                width: 120%;
+              }
+              .collectiveColumn a {
+                line-height: 1.9;
+              }
+              .collectiveDescription {
+                white-space: normal;
+                font-size: 11px;
+                font-style: italic;
+                margin-bottom: 10px;
+              }
               .continueButton {
                 width: 200px;
                 margin: 50px auto 20px;
+                background: #3a2fac;
+              }
+              .continueButton:hover {
+                background: #3a2fac;
+                opacity: 0.8;
               }
               .notice-p {
                 font-size: 12px;
@@ -615,14 +644,17 @@ export default class MonthlyPlan extends React.Component {
                     .filter(r => r.opencollective.pledge !== true)
                     .map(recommendation => (
                       <tr key={recommendation.name}>
-                        <td>
+                        <td className="collectiveColumn">
                           <a
                             href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
                           >
                             {recommendation.opencollective.name}
-                          </a>
+                          </a>{' '}
+                          <span className="collectiveDescription">
+                            {recommendation.opencollective.description}
+                          </span>
                         </td>
-                        <td>
+                        <td className="sharableAmount">
                           ${singleValue} <sup>*</sup>
                         </td>
                       </tr>
