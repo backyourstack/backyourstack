@@ -30,7 +30,8 @@ import {
   getFilesData,
   emailSubscribe,
 } from '../lib/data';
-import { uploadFiles, getFiles } from '../lib/s3';
+import { fetchDependenciesFileContent } from '../lib/dependencies/data';
+import { uploadFiles, getFiles, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -204,6 +205,28 @@ nextApp.prepare().then(() => {
     }
   });
 
+  server.post('/profile/save', async (req, res) => {
+    const id = get(req, 'body.id');
+    const accessToken = get(req, 'session.passport.user.accessToken');
+    const { repos, profile } = await getProfileData(id, accessToken);
+    for (const repo of repos) {
+      let files = await fetchDependenciesFileContent(repo, accessToken);
+      if (files.length) {
+        files = files.map(({ matchedPattern, text }) => {
+          const file = { name: matchedPattern, text };
+          file.projectName = detectProjectName(file);
+          file.id = file.projectName;
+          return file;
+        });
+        repo.files = files;
+      } else {
+        continue;
+      }
+    }
+    const savedData = await saveProfile(profile.login, repos);
+    return res.status(200).send(savedData);
+  });
+
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const profileData = await getProfileData(req.params.id, accessToken);
@@ -234,14 +257,14 @@ nextApp.prepare().then(() => {
     res.send(backing);
   });
 
-  server.get('/:uuid/file/backing.json', async (req, res) => {
-    if (!req.params.uuid) {
+  server.get('/:id/file/backing.json', async (req, res) => {
+    if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
     }
     let data;
 
     try {
-      data = await getFiles(req.params.uuid);
+      data = await getFiles(req.params.id);
     } catch (err) {
       console.error(err);
       return res.status(400).send('Unable to fetch file');
