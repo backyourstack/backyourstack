@@ -11,8 +11,6 @@ import Footer from '../components/Footer';
 import UpArrow from '../static/img/up-arrow.svg';
 import DownArrow from '../static/img/down-arrow.svg';
 
-const EXAMPLE_FEES = 0.15;
-
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
@@ -23,7 +21,7 @@ const suggestedAmounts = [
     id: 1,
     employeeRange: '1-10',
     totalAmount: 100,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -31,7 +29,7 @@ const suggestedAmounts = [
     id: 2,
     employeeRange: '10-100',
     totalAmount: 1000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -39,7 +37,7 @@ const suggestedAmounts = [
     id: 3,
     employeeRange: '100-1000',
     totalAmount: 5000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -47,7 +45,7 @@ const suggestedAmounts = [
     id: 4,
     employeeRange: '1000-5000',
     totalAmount: 10000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -187,7 +185,7 @@ export default class MonthlyPlan extends React.Component {
             type="number"
             className="amountInput"
             name="totalAmount"
-            placeholder="0.00 USD / mo"
+            placeholder="1000 / month"
             value={customAmount}
             onChange={this.handleAmountChange}
           />
@@ -421,7 +419,7 @@ export default class MonthlyPlan extends React.Component {
                       )}
                     </span>{' '}
                     <span className="currencyAndFreq">
-                      {suggestedAmount.currency} / {suggestedAmount.frequency}
+                      / {suggestedAmount.frequency}
                     </span>
                   </div>
                 </div>
@@ -455,7 +453,7 @@ export default class MonthlyPlan extends React.Component {
       .filter(r => r.opencollective)
       .filter(r => r.opencollective.pledge !== true);
 
-    const dispatchedValue = totalAmount * (1 - EXAMPLE_FEES);
+    const dispatchedValue = totalAmount;
     const singleValue = (
       dispatchedValue / opencollectiveRecommendations.length
     ).toFixed(2);
@@ -661,7 +659,7 @@ export default class MonthlyPlan extends React.Component {
                     ))}
                 </table>
                 <p className="notice-p">
-                  *Final amount distributed may vary slightly depending on
+                  * Final amount distributed may vary slightly depending on
                   payment processor fees.
                 </p>
                 <a
