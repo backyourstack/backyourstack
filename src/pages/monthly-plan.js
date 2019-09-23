@@ -61,7 +61,7 @@ const suggestedAmounts = [
 
 export default class MonthlyPlan extends React.Component {
   static async getInitialProps({ req, query }) {
-    const id = query.Id;
+    const id = query.id;
 
     let protocol = 'https:';
     const host = req ? req.headers.host : window.location.host;
