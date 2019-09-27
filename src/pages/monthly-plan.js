@@ -16,6 +16,11 @@ const getFilesData = sessionFiles =>
     ? fetchJson('/data/getFilesData')
     : import('../lib/data').then(m => m.getFilesData(sessionFiles));
 
+const getProfileData = (id, accessToken) =>
+  process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfileData?id=${id}`)
+    : import('../lib/data').then(m => m.getProfileData(id, accessToken));
+
 const suggestedAmounts = [
   {
     id: 1,
@@ -60,6 +65,7 @@ const suggestedAmounts = [
 export default class MonthlyPlan extends React.Component {
   static async getInitialProps({ req, query }) {
     const id = query.id;
+    const type = query.type;
 
     let protocol = 'https:';
     const host = req ? req.headers.host : window.location.host;
@@ -68,9 +74,18 @@ export default class MonthlyPlan extends React.Component {
     }
     const baseUrl = `${protocol}//${host}`;
 
-    // sessionFiles is optional and can be null (always on the client)
-    const sessionFiles = get(req, 'session.files');
-    const { recommendations } = await getFilesData(sessionFiles);
+    let recommendations = [];
+    if (type === 'file') {
+      // sessionFiles is optional and can be null (always on the client)
+      const sessionFiles = get(req, 'session.files');
+      const data = await getFilesData(sessionFiles);
+      recommendations = data.recommendations;
+    } else if (type === 'profile') {
+      // The accessToken is only required server side (it's ok if it's undefined on client side)
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      const data = await getProfileData(query.id, accessToken);
+      recommendations = data.recommendations;
+    }
 
     return {
       id,
@@ -452,7 +467,6 @@ export default class MonthlyPlan extends React.Component {
     const opencollectiveRecommendations = recommendations
       .filter(r => r.opencollective)
       .filter(r => r.opencollective.pledge !== true);
-
     const dispatchedValue = totalAmount;
     const singleValue = (
       dispatchedValue / opencollectiveRecommendations.length
