@@ -101,6 +101,7 @@ export default class Files extends React.Component {
       const uuid = savedFileUrl.Key.split('/')[0];
       await Router.pushRoute('monthly-plan', {
         id: uuid,
+        type: 'file',
       });
     } catch (err) {
       console.error(err);
