@@ -51,7 +51,7 @@ export const saveProfile = async (profileId, repos) => {
 export const saveProfileFiles = async (profileId, files) => {
   const savedFileUrls = [];
   for (const file of files) {
-    const key = `${profileId}/${uuidv1()}.json`;
+    const key = `${profileId}/${file.id}.json`;
     const body = { [file.id]: file };
     const data = await saveFileToS3(key, body);
     savedFileUrls.push(data.Location);
