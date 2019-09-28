@@ -97,16 +97,11 @@ export default class Profile extends React.Component {
   }
 
   handleBackMyStack = async () => {
-    try {
-      const savedProfileUrl = await this.saveProfileToS3();
-      const profileId = savedProfileUrl.Key.split('/')[0];
-      await Router.pushRoute('monthly-plan', {
-        id: profileId,
-        type: 'profile',
-      });
-    } catch (err) {
-      console.error(err);
-    }
+    const { id } = this.props;
+    await Router.pushRoute('monthly-plan', {
+      id,
+      type: 'profile',
+    });
   };
 
   render() {
