@@ -132,7 +132,7 @@ export default class MonthlyPlan extends React.Component {
       const jsonUrl =
         type === 'file'
           ? `${baseUrl}/${id}/file/backing.json`
-          : `${baseUrl}/${id}/backing.json`;
+          : `${baseUrl}/${id}/profile/backing.json`;
       const searchParams = new URLSearchParams({
         data: JSON.stringify({ jsonUrl }),
         redirect: `${baseUrl}/monthly-plan/confirmation`,
