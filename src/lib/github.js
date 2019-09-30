@@ -122,7 +122,7 @@ async function fetchProfile(login, accessToken) {
   return null;
 }
 
-async function fetchReposForProfile(profile, accessToken) {
+async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
   logger.verbose('Fetch repos for profile', {
     login: profile.login,
     withAccessToken: !!accessToken,
@@ -140,7 +140,11 @@ async function fetchReposForProfile(profile, accessToken) {
   }
 
   let getReposPath, getReposParameters;
-  if (profile.type == 'Organization') {
+  if (accessToken && profile.login === loggedInUsername) {
+    // https://octokit.github.io/rest.js/#octokit-routes-repos-list
+    getReposPath = 'repos.list';
+    getReposParameters = { username: profile.login, affiliation: 'owner' };
+  } else if (profile.type == 'Organization') {
     // https://octokit.github.io/rest.js/#api-Repos-listForOrg
     getReposPath = 'repos.listForOrg';
     getReposParameters = { org: profile.login };
