@@ -45,13 +45,14 @@ export const saveProfile = async (profileId, repos) => {
     }
   }
   const key = `${profileId}/dependencies.json`;
-  return saveFileToS3(key, metaData);
+  const savedFile = await saveFileToS3(key, metaData);
+  return savedFile.Key.split('/')[0];
 };
 
 export const saveProfileFiles = async (profileId, files) => {
   const savedFileUrls = [];
   for (const file of files) {
-    const key = `${profileId}/${uuidv1()}.json`;
+    const key = `${profileId}/${file.id}.json`;
     const body = { [file.id]: file };
     const data = await saveFileToS3(key, body);
     savedFileUrls.push(data.Location);

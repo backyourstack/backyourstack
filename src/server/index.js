@@ -10,7 +10,7 @@ import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
-import { get, has, pick } from 'lodash';
+import { get, has, pick, uniqBy } from 'lodash';
 
 import routes from '../routes';
 import logger from '../logger';
@@ -31,6 +31,7 @@ import {
   emailSubscribe,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
+import { getDependenciesAvaliableForBacking } from '../lib/utils';
 import { uploadFiles, getFiles, saveProfile } from '../lib/s3';
 
 const {
@@ -139,10 +140,13 @@ nextApp.prepare().then(() => {
 
   server.get('/data/getProfileData', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
+    const loggedInUsername = get(req, 'session.passport.user.username');
     if (!accessToken) {
       res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
     }
-    getProfileData(req.query.id, accessToken).then(data => res.json(data));
+    getProfileData(req.query.id, accessToken, loggedInUsername).then(data =>
+      res.json(data),
+    );
   });
 
   server.get('/data/getFilesData', (req, res) => {
@@ -208,29 +212,40 @@ nextApp.prepare().then(() => {
   server.post('/profile/save', async (req, res) => {
     const id = get(req, 'body.id');
     const accessToken = get(req, 'session.passport.user.accessToken');
-    const { repos, profile } = await getProfileData(id, accessToken);
-    for (const repo of repos) {
-      let files = await fetchDependenciesFileContent(repo, accessToken);
-      if (files.length) {
-        files = files.map(({ matchedPattern, text }) => {
-          const file = { name: matchedPattern, text };
-          file.projectName = detectProjectName(file);
-          file.id = file.projectName;
-          return file;
-        });
-        repo.files = files;
-      } else {
-        continue;
+    const loggedInUsername = get(req, 'session.passport.user.username');
+
+    const { repos, profile } = await getProfileData(
+      id,
+      accessToken,
+      loggedInUsername,
+    );
+    const privateRepos = repos.filter(repo => repo.private);
+    // we're only saving private repository
+    if (privateRepos.length >= 1) {
+      for (const repo of privateRepos) {
+        let files = await fetchDependenciesFileContent(repo, accessToken);
+        if (files.length) {
+          files = files.map(({ matchedPattern, text }) => {
+            const file = { name: matchedPattern, text };
+            file.projectName = detectProjectName(file);
+            file.id = file.projectName;
+            return file;
+          });
+          repo.files = files;
+        } else {
+          continue;
+        }
       }
+      const savedId = await saveProfile(profile.login, privateRepos);
+      return res.status(200).send({ id: savedId });
+    } else {
+      return res.status(200).send({ id });
     }
-    const savedData = await saveProfile(profile.login, repos);
-    return res.status(200).send(savedData);
   });
 
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const profileData = await getProfileData(req.params.id, accessToken);
-
     const { recommendations, opencollectiveAccount } = profileData;
 
     const backing = recommendations
@@ -265,28 +280,49 @@ nextApp.prepare().then(() => {
 
     try {
       data = await getFiles(req.params.id);
+
+      if (!data) {
+        return res.status(404).send('No file found');
+      }
+
+      const { recommendations } = await getFilesData(data);
+      const backing = getDependenciesAvaliableForBacking(recommendations);
+      return res.status(200).send(backing);
     } catch (err) {
       console.error(err);
       return res.status(400).send('Unable to fetch file');
     }
+  });
 
-    if (!data) {
-      return res.status(404).send('No file found');
+  server.get('/:id/profile/backing.json', async (req, res) => {
+    if (!req.params.id) {
+      return res.status(400).send('Please provide the file key');
     }
+    const id = req.params.id;
 
-    const { recommendations } = await getFilesData(data);
-    const backing = recommendations
-      .filter(r => r.opencollective)
-      .filter(r => r.opencollective.pledge !== true)
-      .map(recommendation => {
-        const { opencollective, github } = recommendation;
-        return {
-          weight: 100,
-          opencollective: pick(opencollective, ['id', 'name', 'slug', 'order']),
-          github: github,
-        };
-      });
-    return res.status(200).send(backing);
+    let data;
+    try {
+      // Get private file from s3 and public files from Github
+      const result = await Promise.all([getFiles(id), getProfileData(id)]);
+      data = result[0];
+      const { recommendations } = result[1];
+
+      if (!data) {
+        const backing = getDependenciesAvaliableForBacking(recommendations);
+        return res.status(200).send(backing);
+      } else {
+        const privateFileData = await getFilesData(data);
+        let backing = getDependenciesAvaliableForBacking([
+          ...recommendations,
+          ...privateFileData.recommendations,
+        ]);
+        backing = uniqBy(backing, 'opencollective.id');
+        return res.status(200).send(backing);
+      }
+    } catch (err) {
+      console.error(err);
+      return res.status(400).send('Unable to fetch file');
+    }
   });
 
   server.post('/order/dispatch', async (req, res) => {
