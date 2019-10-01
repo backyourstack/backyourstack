@@ -31,8 +31,13 @@ import {
   emailSubscribe,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
-import { getDependenciesAvaliableForBacking } from '../lib/utils';
-import { uploadFiles, getFiles, saveProfile } from '../lib/s3';
+import { getDependenciesAvailableForBacking } from '../lib/utils';
+import {
+  uploadFiles,
+  getFiles,
+  getProfilePrivateData,
+  saveProfile,
+} from '../lib/s3';
 
 const {
   PORT,
@@ -286,7 +291,7 @@ nextApp.prepare().then(() => {
       }
 
       const { recommendations } = await getFilesData(data);
-      const backing = getDependenciesAvaliableForBacking(recommendations);
+      const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
     } catch (err) {
       console.error(err);
@@ -300,25 +305,25 @@ nextApp.prepare().then(() => {
     }
     const id = req.params.id;
 
-    let data;
     try {
-      // Get private file from s3 and public files from Github
-      const result = await Promise.all([getFiles(id), getProfileData(id)]);
-      data = result[0];
-      const { recommendations } = result[1];
-
-      if (!data) {
-        const backing = getDependenciesAvaliableForBacking(recommendations);
-        return res.status(200).send(backing);
-      } else {
-        const privateFileData = await getFilesData(data);
-        let backing = getDependenciesAvaliableForBacking([
-          ...recommendations,
-          ...privateFileData.recommendations,
+      let backing;
+      // Get private data from s3 and public data from Github
+      const [privateData, publicData] = await Promise.all([
+        getProfilePrivateData(id),
+        getProfileData(id),
+      ]);
+      if (privateData) {
+        backing = getDependenciesAvailableForBacking([
+          ...privateData.recommendations,
+          ...publicData.recommendations,
         ]);
-        backing = uniqBy(backing, 'opencollective.id');
-        return res.status(200).send(backing);
+        backing = uniqBy(backing, 'opencollective.id'); // remove duplicate recommendations
+      } else {
+        backing = getDependenciesAvailableForBacking(
+          ...publicData.recommendations,
+        );
       }
+      return res.status(200).send(backing);
     } catch (err) {
       console.error(err);
       return res.status(400).send('Unable to fetch file');

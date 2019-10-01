@@ -1,6 +1,8 @@
 import { S3 } from 'aws-sdk';
 import uuidv1 from 'uuid/v1';
 
+import { getFilesData } from '../lib/data';
+
 const s3 = new S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_KEY,
@@ -87,4 +89,12 @@ export const getFiles = async id => {
     Object.assign(data, file);
   }
   return data;
+};
+
+export const getProfilePrivateData = async id => {
+  const data = await getFiles(id);
+  if (!data) {
+    return null;
+  }
+  return getFilesData(data);
 };
