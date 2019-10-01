@@ -208,10 +208,7 @@ export default class MonthlyPlanConfirmation extends React.Component {
           <div className="content">
             {status === 'failure' && (
               <div className="error contentCard">
-                <h3>
-                  Your order was created but unable to dispatch funds at this
-                  time.
-                </h3>
+                <h3>Failed to dispatch fund.</h3>
                 {errMesg && <p className="errorDescription">{errMesg}</p>}
                 <a
                   href="mailto:support@opencollective.com"
