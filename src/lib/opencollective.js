@@ -120,10 +120,15 @@ function graphqlRequest(url, query, variables) {
       variables,
     }),
   })
-    .then(result => result.json())
+    .then(result => {
+      if (!result.ok) {
+        throw new Error('An unknown error occur, Please contact support.');
+      }
+      return result.json();
+    })
     .then(response => {
       if (response.errors) {
-        console.log(response.errors);
+        console.error(response.errors);
         throw new Error(response.errors[0].message);
       }
       return response.data;
