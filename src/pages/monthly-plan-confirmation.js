@@ -165,9 +165,37 @@ export default class MonthlyPlanConfirmation extends React.Component {
             .error {
               color: red;
               text-align: center;
+              align-items: center;
+              flex-direction: column;
+              display: flex;
+            }
+            .error h3 {
+              font-size: 18px;
+              margin-bottom: 5px;
             }
             .dispatchingWrapper {
               text-align: center;
+            }
+            .contact-link {
+              text-decoration: none;
+              color: #71757a;
+              margin-top: 25px;
+            }
+            .contact-link:hover {
+              color: #71757a;
+            }
+            .contactBtn {
+              padding: 10px;
+              border: 1px solid #c4c7cc;
+              width: 120px;
+              text-align: center;
+              border-radius: 100px;
+              font-size: 14px;
+              white-space: nowrap;
+            }
+            .errorDescription {
+              font-size: 14px;
+              margin-top: 5px;
             }
           `}
         </style>
@@ -182,9 +210,15 @@ export default class MonthlyPlanConfirmation extends React.Component {
               <div className="error contentCard">
                 <h3>
                   Your order was created but unable to dispatch funds at this
-                  time
+                  time.
                 </h3>
-                {errMesg && <p>{errMesg}</p>}
+                {errMesg && <p className="errorDescription">{errMesg}</p>}
+                <a
+                  href="mailto:support@opencollective.com"
+                  className="contact-link"
+                >
+                  <div className="contactBtn">Contact Support</div>
+                </a>
               </div>
             )}
             {status === 'processing' && (
