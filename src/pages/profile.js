@@ -102,6 +102,7 @@ export default class Profile extends React.Component {
       const profileId = savedProfileUrl.Key.split('/')[0];
       await Router.pushRoute('monthly-plan', {
         id: profileId,
+        type: 'profile',
       });
     } catch (err) {
       console.error(err);
