@@ -101,7 +101,7 @@ function getRecommendedProjectFromDependencies(deps) {
     .then(recommendations => recommendations.filter(r => r.project));
 }
 
-function getDependenciesAvaliableForBacking(recommendations) {
+function getDependenciesAvailableForBacking(recommendations) {
   const backing = recommendations
     .filter(r => r.opencollective)
     .filter(r => r.opencollective.pledge !== true)
@@ -120,5 +120,5 @@ export {
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
-  getDependenciesAvaliableForBacking,
+  getDependenciesAvailableForBacking,
 };
