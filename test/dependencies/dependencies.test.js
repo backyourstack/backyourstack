@@ -62,24 +62,7 @@ const expectedDependencies = {
     { core: 1, name: 'uwsgi', type: 'requirements' },
     { core: 1, name: 'celery', type: 'requirements' },
     { core: 1, name: 'urllib3', type: 'requirements' },
-    { core: 1, name: 'Django', type: 'requirements' },
-    {
-      core: 1,
-      name: '-i https://pypi.python.org/simple',
-      type: 'requirements',
-    },
-    {
-      core: 1,
-      name:
-        '-e git+https://github.com/toastdriven/django-haystack.git#egg=django-haystack',
-      type: 'requirements',
-    },
-    {
-      core: 1,
-      name:
-        'git+https://github.com/gone/dj-static.git@5da00529c033afa8e65aef13555b9eaec6dfc388#egg=dj-static',
-      type: 'requirements',
-    },
+    { core: 1, name: 'django', type: 'requirements' },
   ],
 };
 
