@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import NextLink from 'next/link';
 import { get } from 'lodash';
 
-import { Link } from '../routes';
+import { Link, Router } from '../routes';
 
-import { fetchJson } from '../lib/fetch';
+import { fetchJson, postJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,6 +15,7 @@ import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
 import SubscribeForm from '../components/SubscribeForm';
+import BackMyStack from '../components/BackMyStack';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -28,7 +29,12 @@ const getProfileData = (id, accessToken) =>
 
 export default class Profile extends React.Component {
   static async getInitialProps({ req, query }) {
-    const initialProps = { section: query.section };
+    const initialProps = {
+      section: query.section,
+      id: query.id,
+      showBackMyStack: query.showBackMyStack,
+    };
+
     try {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
@@ -50,7 +56,16 @@ export default class Profile extends React.Component {
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
     error: PropTypes.object,
+    showBackMyStack: PropTypes.bool,
+    id: PropTypes.string,
   };
+
+  constructor(props) {
+    super(props);
+    this.showBackMyStack =
+      props.showBackMyStack === 'true' ||
+      process.env.SHOW_BACK_MY_STACK === 'true';
+  }
 
   twitterText = () => 'BackYourStack! https://backyourstack.com/';
 
@@ -75,6 +90,25 @@ export default class Profile extends React.Component {
     return githubProfileName;
   };
 
+  saveProfileToS3() {
+    const { id } = this.props;
+
+    return postJson('/profile/save', { id });
+  }
+
+  handleBackMyStack = async () => {
+    try {
+      const savedProfileUrl = await this.saveProfileToS3();
+      const profileId = savedProfileUrl.Key.split('/')[0];
+      await Router.pushRoute('monthly-plan', {
+        id: profileId,
+        type: 'profile',
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   render() {
     const {
       section,
@@ -87,6 +121,7 @@ export default class Profile extends React.Component {
       pathname,
       loggedInUser,
     } = this.props;
+
     return (
       <div className="Page ProfilePage">
         <style jsx global>
@@ -267,6 +302,9 @@ export default class Profile extends React.Component {
             </aside>
 
             <main>
+              {this.showBackMyStack && (
+                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+              )}
               {(!section || section === 'recommendations') && (
                 <RecommendationList
                   recommendations={recommendations}

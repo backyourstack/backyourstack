@@ -11,19 +11,22 @@ import Footer from '../components/Footer';
 import UpArrow from '../static/img/up-arrow.svg';
 import DownArrow from '../static/img/down-arrow.svg';
 
-const EXAMPLE_FEES = 0.15;
-
 const getFilesData = sessionFiles =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
     : import('../lib/data').then(m => m.getFilesData(sessionFiles));
+
+const getProfileData = (id, accessToken) =>
+  process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfileData?id=${id}`)
+    : import('../lib/data').then(m => m.getProfileData(id, accessToken));
 
 const suggestedAmounts = [
   {
     id: 1,
     employeeRange: '1-10',
     totalAmount: 100,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -31,7 +34,7 @@ const suggestedAmounts = [
     id: 2,
     employeeRange: '10-100',
     totalAmount: 1000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -39,7 +42,7 @@ const suggestedAmounts = [
     id: 3,
     employeeRange: '100-1000',
     totalAmount: 5000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -47,7 +50,7 @@ const suggestedAmounts = [
     id: 4,
     employeeRange: '1000-5000',
     totalAmount: 10000,
-    frequency: 'mo',
+    frequency: 'month',
     currency: 'USD',
     currencySymbol: '$',
   },
@@ -61,7 +64,8 @@ const suggestedAmounts = [
 
 export default class MonthlyPlan extends React.Component {
   static async getInitialProps({ req, query }) {
-    const uuid = query.uuid; // handle case where the uuid is not supplied
+    const id = query.id;
+    const type = query.type;
 
     let protocol = 'https:';
     const host = req ? req.headers.host : window.location.host;
@@ -70,12 +74,21 @@ export default class MonthlyPlan extends React.Component {
     }
     const baseUrl = `${protocol}//${host}`;
 
-    // sessionFiles is optional and can be null (always on the client)
-    const sessionFiles = get(req, 'session.files');
-    const { recommendations } = await getFilesData(sessionFiles);
+    let recommendations = [];
+    if (type === 'file') {
+      // sessionFiles is optional and can be null (always on the client)
+      const sessionFiles = get(req, 'session.files');
+      const data = await getFilesData(sessionFiles);
+      recommendations = data.recommendations;
+    } else if (type === 'profile') {
+      // The accessToken is only required server side (it's ok if it's undefined on client side)
+      const accessToken = get(req, 'session.passport.user.accessToken');
+      const data = await getProfileData(query.id, accessToken);
+      recommendations = data.recommendations;
+    }
 
     return {
-      uuid,
+      id,
       baseUrl,
       recommendations,
       next: query.next || '/',
@@ -83,7 +96,7 @@ export default class MonthlyPlan extends React.Component {
   }
 
   static propTypes = {
-    uuid: PropTypes.string,
+    id: PropTypes.string,
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
@@ -112,9 +125,9 @@ export default class MonthlyPlan extends React.Component {
 
   getContributionUrl = () => {
     // Get the key url of the file
-    const { baseUrl, uuid } = this.props;
-    if (uuid) {
-      const jsonUrl = `${baseUrl}/${uuid}/file/backing.json`;
+    const { baseUrl, id } = this.props;
+    if (id) {
+      const jsonUrl = `${baseUrl}/${id}/file/backing.json`;
       const searchParams = new URLSearchParams({
         data: JSON.stringify({ jsonUrl }),
         redirect: `${baseUrl}/monthly-plan/confirmation`,
@@ -187,7 +200,7 @@ export default class MonthlyPlan extends React.Component {
             type="number"
             className="amountInput"
             name="totalAmount"
-            placeholder="0.00 USD / mo"
+            placeholder="1000 / month"
             value={customAmount}
             onChange={this.handleAmountChange}
           />
@@ -421,7 +434,7 @@ export default class MonthlyPlan extends React.Component {
                       )}
                     </span>{' '}
                     <span className="currencyAndFreq">
-                      {suggestedAmount.currency} / {suggestedAmount.frequency}
+                      / {suggestedAmount.frequency}
                     </span>
                   </div>
                 </div>
@@ -454,8 +467,7 @@ export default class MonthlyPlan extends React.Component {
     const opencollectiveRecommendations = recommendations
       .filter(r => r.opencollective)
       .filter(r => r.opencollective.pledge !== true);
-
-    const dispatchedValue = totalAmount * (1 - EXAMPLE_FEES);
+    const dispatchedValue = totalAmount;
     const singleValue = (
       dispatchedValue / opencollectiveRecommendations.length
     ).toFixed(2);
@@ -661,7 +673,7 @@ export default class MonthlyPlan extends React.Component {
                     ))}
                 </table>
                 <p className="notice-p">
-                  *Final amount distributed may vary slightly depending on
+                  * Final amount distributed may vary slightly depending on
                   payment processor fees.
                 </p>
                 <a
