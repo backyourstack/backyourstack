@@ -13,6 +13,7 @@ import {
   depFile,
   nugetCsprojFile,
   npmFile,
+  pythonRequirementsFile,
 } from '../files';
 
 const expectedDependencies = {
@@ -54,6 +55,32 @@ const expectedDependencies = {
     { peer: 1, name: 'docile', type: 'bundler' },
     { peer: 1, name: 'simplecov-html', type: 'bundler' },
   ],
+  requirements: [
+    { core: 1, name: 'markdown', type: 'requirements' },
+    { core: 1, name: 'babel', type: 'requirements' },
+    { core: 1, name: 'six', type: 'requirements' },
+    { core: 1, name: 'uwsgi', type: 'requirements' },
+    { core: 1, name: 'celery', type: 'requirements' },
+    { core: 1, name: 'urllib3', type: 'requirements' },
+    { core: 1, name: 'Django', type: 'requirements' },
+    {
+      core: 1,
+      name: '-i https://pypi.python.org/simple',
+      type: 'requirements',
+    },
+    {
+      core: 1,
+      name:
+        '-e git+https://github.com/toastdriven/django-haystack.git#egg=django-haystack',
+      type: 'requirements',
+    },
+    {
+      core: 1,
+      name:
+        'git+https://github.com/gone/dj-static.git@5da00529c033afa8e65aef13555b9eaec6dfc388#egg=dj-static',
+      type: 'requirements',
+    },
+  ],
 };
 
 describe('dependencies', () => {
@@ -69,6 +96,13 @@ describe('dependencies', () => {
     ['dep', depFile, 'Go', 'Gopkg.lock', null],
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
+    [
+      'requirements',
+      pythonRequirementsFile,
+      'Python',
+      'requirements.txt',
+      null,
+    ],
   ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
       expect(detectDependencyFileType(file)).toBe(file);

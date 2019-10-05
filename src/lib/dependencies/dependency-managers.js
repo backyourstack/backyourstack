@@ -3,6 +3,7 @@ import * as npm from './npm';
 import * as nuget from './nuget';
 import * as dep from './dep';
 import * as bundler from './bundler';
+import * as requirements from './requirements';
 
 const dependencyManagers = {
   npm,
@@ -10,6 +11,7 @@ const dependencyManagers = {
   nuget,
   dep,
   bundler,
+  requirements,
 };
 
 export default dependencyManagers;

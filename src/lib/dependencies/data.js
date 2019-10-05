@@ -13,6 +13,7 @@ const languageToFileType = {
   'C#': 'nuget',
   Go: 'dep',
   Ruby: 'bundler',
+  Python: 'requirements',
 };
 
 export function getDependenciesFromGithubRepo(githubRepo, githubAccessToken) {

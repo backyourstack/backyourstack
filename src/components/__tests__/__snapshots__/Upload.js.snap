@@ -73,9 +73,13 @@ exports[`Upload should render 1`] = `
       <em>
         Gopkg.lock
       </em>
-       and 
+      , 
       <em>
         Gemfile.lock
+      </em>
+       and 
+      <em>
+        requirements.txt
       </em>
       . Please try again. If the problem persists, please contact us.
     </p>
@@ -156,9 +160,13 @@ exports[`Upload should render with feedbackPosition 1`] = `
       <em>
         Gopkg.lock
       </em>
-       and 
+      , 
       <em>
         Gemfile.lock
+      </em>
+       and 
+      <em>
+        requirements.txt
       </em>
       . Please try again. If the problem persists, please contact us.
     </p>
@@ -240,9 +248,13 @@ exports[`Upload should render with style 1`] = `
       <em>
         Gopkg.lock
       </em>
-       and 
+      , 
       <em>
         Gemfile.lock
+      </em>
+       and 
+      <em>
+        requirements.txt
       </em>
       . Please try again. If the problem persists, please contact us.
     </p>

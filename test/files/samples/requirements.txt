@@ -1,0 +1,28 @@
+#
+# this is a sample requirements.txt file for python requirements
+# some requirements files may have comments in the header
+#
+# Some can be commented out
+#Admin
+#Static hosting
+#manifesto==0.5
+# Some don't specify version information
+markdown
+# Some do specify version information
+babel==2.5.3
+# Some may have comments after the requirement
+six==1.11.0               # via bleach, cryptography, django-templated-email, elasticsearch-dsl, faker, freezegun, graphene, graphene-django, graphql-core, graphql-relay, html5lib, promise, purl, pytest, python-dateutil, singledispatch, social-auth-app-django, social-auth-core, vcrpy
+# Some have semicolons after, that indicate a conditional
+uwsgi==2.0.18 ; platform_system != 'Windows'
+# Some may have square bracket qualifiers
+celery[redis]==4.3.0
+# Some specify greater than a minimum version
+urllib3>=1.24.2
+# Some specify floor and ceiling version information
+Django>=1.3,<1.4
+# Some have a -i in the front of a URL
+-i https://pypi.python.org/simple
+# Some have a -e in front of a git URL
+-e git+https://github.com/toastdriven/django-haystack.git#egg=django-haystack
+# Some just have a git URL
+git+https://github.com/gone/dj-static.git@5da00529c033afa8e65aef13555b9eaec6dfc388#egg=dj-static

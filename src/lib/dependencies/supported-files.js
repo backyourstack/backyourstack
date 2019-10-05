@@ -5,6 +5,7 @@ const supportedFiles = [
   'packages.config',
   'Gopkg.lock',
   'Gemfile.lock',
+  'requirements.txt',
 ];
 
 export default supportedFiles;
