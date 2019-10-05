@@ -49,6 +49,8 @@ We use [dotenv](https://github.com/motdotla/dotenv) to store environment variabl
 
 `npm run dev`
 
+This will start your local copy of Back Your Stack. You can access it at `http://localhost:3000/`
+
 ## Production
 
 ### Prerequisite
