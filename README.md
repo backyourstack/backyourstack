@@ -89,4 +89,4 @@ If everything is ok, finalize with:
 
 ## License
 
-Back Your Stack is made available under the [MIT License](License)
+Back Your Stack is made available under the [MIT License](LICENSE)
