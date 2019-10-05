@@ -21,7 +21,17 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
-Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm install`.
+### Prerequisites
+
+#### Node.js
+
+Make sure you have Node.js version >= 10. We recommend using [nvm](https://github.com/creationix/nvm): `nvm install`
+
+#### GitHub API Keys
+
+To allow authentication with GitHub, you'll need a set of keys for the GitHub API. You can get these keys by [registering a new OAuth application with GitHub](https://github.com/settings/applications/new). By default, the callback URL should be `http://localhost:3000/auth/github/callback`.
+
+You will need the Client ID and Client Secret provided by GitHub after you register your application.
 
 ### Install
 
@@ -31,19 +41,13 @@ cd backyourstack
 npm install
 ```
 
+### Store Your GitHub API Keys
+
+We use [dotenv](https://github.com/motdotla/dotenv) to store environment variables. In the root directory of the repository, rename `.env.template` to `.env` and add the Client ID and Client Secret generated when you registerd your GitHub application.
+
 ### Start
 
 `npm run dev`
-
-### Environment Keys
-
-In development environment, we use [dotenv](https://github.com/motdotla/dotenv) to set environment keys. To use it, create an `.env` file at the root of the repository and add environment keys in there.
-
-#### GitHub API Keys
-
-To allow authentication with GitHub, you'll need to set GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.
-
-You can get these keys by [registering a new oAuth application at GitHub](https://github.com/settings/applications/new). By default, the callback URL should be `http://localhost:3000/auth/github/callback`.
 
 ## Production
 
@@ -82,3 +86,7 @@ First:
 If everything is ok, finalize with:
 
 `now alias`
+
+## License
+
+Back Your Stack is made available under the [MIT License](License)
