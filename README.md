@@ -29,6 +29,10 @@ Make sure you have Node.js version >= 10. We recommend using [nvm](https://githu
 
 #### GitHub API Keys
 
+If you are not working on bugs or features that make use of the GitHub API, you do not need to configure a set of GitHub API keys.
+
+If you are going to work on features that make use of the GitHub API, configuring a set of GitHub API keys will help you avoid issues related to rate limiting. GitHub limits unauthenticated use of their API to 60 requests an hour. Registering a new application and using the API keys provided will enable you to make up to 5000 requests from the GitHub API per hour. You can read more information about how GitHub handles rate limiting in their [API Documentation.](https://developer.github.com/v3/#rate-limiting)
+
 To allow authentication with GitHub, you'll need a set of keys for the GitHub API. You can get these keys by [registering a new OAuth application with GitHub](https://github.com/settings/applications/new). By default, the callback URL should be `http://localhost:3000/auth/github/callback`.
 
 You will need the Client ID and Client Secret provided by GitHub after you register your application.
@@ -43,7 +47,7 @@ npm install
 
 ### Store Your GitHub API Keys
 
-We use [dotenv](https://github.com/motdotla/dotenv) to store environment variables. In the root directory of the repository, rename `.env.template` to `.env` and add the Client ID and Client Secret generated when you registerd your GitHub application.
+We use [dotenv](https://github.com/motdotla/dotenv) to store environment variables. If you configured a set of GitHub API keys, you will need to save them in a .env file. In the root directory of the repository, rename `.env.template` to `.env` and add the Client ID and Client Secret generated when you registered your GitHub application.
 
 ### Start
 
