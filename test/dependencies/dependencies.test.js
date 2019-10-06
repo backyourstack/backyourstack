@@ -55,14 +55,14 @@ const expectedDependencies = {
     { peer: 1, name: 'docile', type: 'bundler' },
     { peer: 1, name: 'simplecov-html', type: 'bundler' },
   ],
-  requirements: [
-    { core: 1, name: 'markdown', type: 'requirements' },
-    { core: 1, name: 'babel', type: 'requirements' },
-    { core: 1, name: 'six', type: 'requirements' },
-    { core: 1, name: 'uwsgi', type: 'requirements' },
-    { core: 1, name: 'celery', type: 'requirements' },
-    { core: 1, name: 'urllib3', type: 'requirements' },
-    { core: 1, name: 'django', type: 'requirements' },
+  pypi: [
+    { core: 1, name: 'markdown', type: 'pypi' },
+    { core: 1, name: 'babel', type: 'pypi' },
+    { core: 1, name: 'six', type: 'pypi' },
+    { core: 1, name: 'uwsgi', type: 'pypi' },
+    { core: 1, name: 'celery', type: 'pypi' },
+    { core: 1, name: 'urllib3', type: 'pypi' },
+    { core: 1, name: 'django', type: 'pypi' },
   ],
 };
 
@@ -79,13 +79,7 @@ describe('dependencies', () => {
     ['dep', depFile, 'Go', 'Gopkg.lock', null],
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
-    [
-      'requirements',
-      pythonRequirementsFile,
-      'Python',
-      'requirements.txt',
-      null,
-    ],
+    ['pypi', pythonRequirementsFile, 'Python', 'requirements.txt', null],
   ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
       expect(detectDependencyFileType(file)).toBe(file);
