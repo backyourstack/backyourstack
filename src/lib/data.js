@@ -28,13 +28,17 @@ export function searchUsers(q, accessToken) {
   return fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-export async function getProfileData(id, accessToken) {
+export async function getProfileData(id, accessToken, loggedInUsername) {
   const profile = await fetchProfile(id, accessToken);
 
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
   const opencollectiveAccount = await fetchAccountWithOrders(slug);
 
-  const repos = await fetchReposForProfile(profile, accessToken).then(repos =>
+  const repos = await fetchReposForProfile(
+    profile,
+    accessToken,
+    loggedInUsername,
+  ).then(repos =>
     Promise.all(
       repos.map(async repo => {
         const dependencies = await getDependenciesFromGithubRepo(

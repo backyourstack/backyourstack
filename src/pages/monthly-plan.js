@@ -91,12 +91,14 @@ export default class MonthlyPlan extends React.Component {
       id,
       baseUrl,
       recommendations,
+      type,
       next: query.next || '/',
     };
   }
 
   static propTypes = {
     id: PropTypes.string,
+    type: PropTypes.string,
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
@@ -125,9 +127,12 @@ export default class MonthlyPlan extends React.Component {
 
   getContributionUrl = () => {
     // Get the key url of the file
-    const { baseUrl, id } = this.props;
+    const { baseUrl, id, type } = this.props;
     if (id) {
-      const jsonUrl = `${baseUrl}/${id}/file/backing.json`;
+      const jsonUrl =
+        type === 'file'
+          ? `${baseUrl}/${id}/file/backing.json`
+          : `${baseUrl}/${id}/profile/backing.json`;
       const searchParams = new URLSearchParams({
         data: JSON.stringify({ jsonUrl }),
         redirect: `${baseUrl}/monthly-plan/confirmation`,
