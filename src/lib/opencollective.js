@@ -122,7 +122,9 @@ function graphqlRequest(url, query, variables) {
   })
     .then(result => {
       if (!result.ok) {
-        throw new Error('An unknown error occur, Please contact support.');
+        throw new Error(
+          'Unable to connect with open collective, Please contact support.',
+        );
       }
       return result.json();
     })
