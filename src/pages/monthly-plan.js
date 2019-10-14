@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
-import { get } from 'lodash';
+import { get, map } from 'lodash';
 
 import { fetchJson } from '../lib/fetch';
 
@@ -121,6 +121,8 @@ export default class MonthlyPlan extends React.Component {
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
+      recommendations:
+        this.getActiveCollectiveRecommendations(props.recommendations) || [],
     };
   }
 
@@ -149,6 +151,17 @@ export default class MonthlyPlan extends React.Component {
     return { jsonUrl };
   }
 
+  getActiveCollectiveRecommendations(recommendations) {
+    const opencollectiveRecommendations = recommendations
+      .filter(r => r.opencollective)
+      .filter(r => r.opencollective.pledge !== true)
+      .map(r => {
+        r.checked = true;
+        return r;
+      });
+    return opencollectiveRecommendations;
+  }
+
   getContributionUrl = () => {
     // Get the key url of the file
     const { baseUrl, id } = this.props;
@@ -164,6 +177,32 @@ export default class MonthlyPlan extends React.Component {
     }
   };
 
+  getContributionUrlData() {
+    const { type, baseUrl, id } = this.props;
+    const jsonUrl =
+      type === 'file'
+        ? `${baseUrl}/${id}/file/backing.json`
+        : `${baseUrl}/${id}/profile/backing.json`;
+    const selectedCollectives = this.getSelectedCollectivesId();
+    if (selectedCollectives) {
+      return { jsonUrl, selectedCollectives };
+    } else {
+      return { jsonUrl };
+    }
+  }
+
+  getSelectedCollectivesId() {
+    const { recommendations } = this.state;
+    const selectedCollectives = recommendations.filter(r => r.checked);
+    // The recommended collectives are all selected by default
+    // we're checking if the user made any changes so we can keep track
+    // of the selected collectives.
+    if (selectedCollectives.length !== recommendations.length) {
+      return map(selectedCollectives, 'opencollective.id');
+    }
+    return null;
+  }
+
   handleAmountChange = event => {
     const customAmount = event.target.value;
     this.setState({
@@ -175,6 +214,22 @@ export default class MonthlyPlan extends React.Component {
     this.setState({
       selectedAmount,
       disableContributionLink: false,
+    });
+  };
+
+  handleDependencySelection = ({ target }) => {
+    let { recommendations } = this.state;
+    const name = target.name;
+    const checked = target.checked;
+    recommendations = recommendations.map(r => {
+      if (r.name === name) {
+        r.checked = checked;
+      }
+      return r;
+    });
+
+    this.setState({
+      recommendations,
     });
   };
 
@@ -486,16 +541,15 @@ export default class MonthlyPlan extends React.Component {
   }
 
   render() {
-    const { loggedInUser, recommendations } = this.props;
+    const { loggedInUser } = this.props;
+    const { recommendations } = this.state;
     const totalAmount = this.getTotalAmount();
     const disableContributionLink = totalAmount === 0;
-    const opencollectiveRecommendations = recommendations
-      .filter(r => r.opencollective)
-      .filter(r => r.opencollective.pledge !== true);
     const dispatchedValue = totalAmount;
-    const singleValue = (
-      dispatchedValue / opencollectiveRecommendations.length
-    ).toFixed(2);
+    const selectedCollectives = recommendations.filter(r => r.checked === true);
+    const singleValue = (dispatchedValue / selectedCollectives.length).toFixed(
+      2,
+    );
 
     return (
       <Fragment>
@@ -553,8 +607,6 @@ export default class MonthlyPlan extends React.Component {
                 font-weight: 400;
               }
               table {
-                width: 100%;
-                table-layout: fixed;
                 border-collapse: collapse;
               }
               table th,
@@ -573,13 +625,18 @@ export default class MonthlyPlan extends React.Component {
                 box-shadow: inset 0px 2px 2px rgba(20, 20, 20, 0.08);
                 border-radius: 3px;
               }
-              table tr th:nth-child(2),
-              table tr td:nth-child(2) {
-                text-align: right;
-              }
               table tr th:nth-child(1),
               table tr td:nth-child(1) {
+                width: 10%;
+              }
+              table tr th:nth-child(3),
+              table tr td:nth-child(3) {
+                text-align: right;
+              }
+              table tr th:nth-child(2),
+              table tr td:nth-child(2) {
                 text-align: left;
+                width: 95%;
               }
               table th {
                 text-transform: uppercase;
@@ -673,29 +730,37 @@ export default class MonthlyPlan extends React.Component {
                 </p>
                 <table>
                   <tr>
+                    <th></th>
                     <th>Collective</th>
                     <th>Amount</th>
                   </tr>
-                  {recommendations
-                    .filter(r => r.opencollective)
-                    .filter(r => r.opencollective.pledge !== true)
-                    .map(recommendation => (
-                      <tr key={recommendation.name}>
-                        <td className="collectiveColumn">
-                          <a
-                            href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
-                          >
-                            {recommendation.opencollective.name}
-                          </a>{' '}
-                          <span className="collectiveDescription">
-                            {recommendation.opencollective.description}
-                          </span>
-                        </td>
-                        <td className="sharableAmount">
-                          ${singleValue} <sup>*</sup>
-                        </td>
-                      </tr>
-                    ))}
+                  {recommendations.map(recommendation => (
+                    <tr key={recommendation.name}>
+                      <td>
+                        <input
+                          type="checkbox"
+                          onChange={event =>
+                            this.handleDependencySelection(event)
+                          }
+                          name={recommendation.name}
+                          checked={recommendation.checked}
+                        />
+                      </td>
+                      <td className="collectiveColumn">
+                        <a
+                          href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
+                        >
+                          {recommendation.opencollective.name}
+                        </a>{' '}
+                        <span className="collectiveDescription">
+                          {recommendation.opencollective.description}
+                        </span>
+                      </td>
+                      <td className="sharableAmount">
+                        ${singleValue} <sup>*</sup>
+                      </td>
+                    </tr>
+                  ))}
                 </table>
                 <p className="notice-p">
                   * Final amount distributed may vary slightly depending on
