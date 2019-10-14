@@ -33,3 +33,11 @@ export const depFile = getFile(depFilename);
 const bundlerFilename = path.join(__dirname, 'samples', 'Gemfile.lock');
 
 export const bundlerFile = getFile(bundlerFilename);
+
+const pythonRequirementsFilename = path.join(
+  __dirname,
+  'samples',
+  'requirements.txt',
+);
+
+export const pythonRequirementsFile = getFile(pythonRequirementsFilename);

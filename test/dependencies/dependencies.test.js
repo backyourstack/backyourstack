@@ -13,6 +13,7 @@ import {
   depFile,
   nugetCsprojFile,
   npmFile,
+  pythonRequirementsFile,
 } from '../files';
 
 const expectedDependencies = {
@@ -54,6 +55,15 @@ const expectedDependencies = {
     { peer: 1, name: 'docile', type: 'bundler' },
     { peer: 1, name: 'simplecov-html', type: 'bundler' },
   ],
+  pypi: [
+    { core: 1, name: 'markdown', type: 'pypi' },
+    { core: 1, name: 'babel', type: 'pypi' },
+    { core: 1, name: 'six', type: 'pypi' },
+    { core: 1, name: 'uwsgi', type: 'pypi' },
+    { core: 1, name: 'celery', type: 'pypi' },
+    { core: 1, name: 'urllib3', type: 'pypi' },
+    { core: 1, name: 'django', type: 'pypi' },
+  ],
 };
 
 describe('dependencies', () => {
@@ -69,6 +79,7 @@ describe('dependencies', () => {
     ['dep', depFile, 'Go', 'Gopkg.lock', null],
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
+    ['pypi', pythonRequirementsFile, 'Python', 'requirements.txt', null],
   ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
       expect(detectDependencyFileType(file)).toBe(file);
