@@ -32,12 +32,7 @@ import {
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import {
-  uploadFiles,
-  getFiles,
-  getProfileSavedData,
-  saveProfile,
-} from '../lib/s3';
+import { uploadFiles, getSavedFilesData, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -146,10 +141,17 @@ nextApp.prepare().then(() => {
   server.get('/data/getProfileData', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
+    const profileOptions = { loggedInUsername };
+
     if (!accessToken) {
       res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
     }
-    getProfileData(req.query.id, accessToken, loggedInUsername).then(data =>
+
+    if (req.query.excludedRepos) {
+      profileOptions.excludedRepos = JSON.parse(req.query.excludedRepos);
+    }
+
+    getProfileData(req.query.id, accessToken, profileOptions).then(data =>
       res.json(data),
     );
   });
@@ -216,17 +218,20 @@ nextApp.prepare().then(() => {
 
   server.post('/profile/save', async (req, res) => {
     const id = get(req, 'body.id');
+    const excludedRepos = get(req, 'body.excludedRepos', []);
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
 
-    const { repos, profile } = await getProfileData(
-      id,
-      accessToken,
+    const data = await getProfileData(id, accessToken, {
       loggedInUsername,
-    );
+      excludedRepos,
+    });
 
-    for (const repo of repos) {
-      let files = await fetchDependenciesFileContent(repo, accessToken);
+    const repositories = data.repos.filter(
+      repo => excludedRepos.indexOf(repo.name) === -1,
+    );
+    for (const repository of repositories) {
+      let files = await fetchDependenciesFileContent(repository, accessToken);
       if (files.length) {
         files = files.map(({ matchedPattern, text }) => {
           const file = { name: matchedPattern, text };
@@ -234,17 +239,22 @@ nextApp.prepare().then(() => {
           file.id = file.projectName;
           return file;
         });
-        repo.files = files;
+        repository.files = files;
       } else {
         continue;
       }
     }
-    const savedId = await saveProfile(profile.login, repos);
+    const savedId = await saveProfile(
+      data.profile.login,
+      repositories,
+      excludedRepos,
+    );
     return res.status(200).send({ id: savedId });
   });
 
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
+
     const profileData = await getProfileData(req.params.id, accessToken);
     const { recommendations, opencollectiveAccount } = profileData;
 
@@ -272,36 +282,14 @@ nextApp.prepare().then(() => {
     res.send(backing);
   });
 
-  server.get('/:id/file/backing.json', async (req, res) => {
-    if (!req.params.id) {
-      return res.status(400).send('Please provide the file key');
-    }
-    let data;
-
-    try {
-      data = await getFiles(req.params.id);
-
-      if (!data) {
-        return res.status(404).send('No file found');
-      }
-
-      const { recommendations } = await getFilesData(data);
-      const backing = getDependenciesAvailableForBacking(recommendations);
-      return res.status(200).send(backing);
-    } catch (err) {
-      console.error(err);
-      return res.status(400).send('Unable to fetch file');
-    }
-  });
-
-  server.get('/:id/profile/backing.json', async (req, res) => {
+  server.get('/:id/files/backing.json', async (req, res) => {
     if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
     }
     const id = req.params.id;
 
     try {
-      const { recommendations } = await getProfileSavedData(id);
+      const { recommendations } = await getSavedFilesData(id);
       const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
     } catch (err) {

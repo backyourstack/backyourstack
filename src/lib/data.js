@@ -28,7 +28,7 @@ export function searchUsers(q, accessToken) {
   return fetchWithOctokit('search.users', { q }, accessToken);
 }
 
-export async function getProfileData(id, accessToken, loggedInUsername) {
+export async function getProfileData(id, accessToken, options = {}) {
   const profile = await fetchProfile(id, accessToken);
 
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
@@ -37,20 +37,28 @@ export async function getProfileData(id, accessToken, loggedInUsername) {
   const repos = await fetchReposForProfile(
     profile,
     accessToken,
-    loggedInUsername,
-  ).then(repos =>
-    Promise.all(
+    options.loggedInUsername,
+  ).then(repos => {
+    return Promise.all(
       repos.map(async repo => {
-        const dependencies = await getDependenciesFromGithubRepo(
-          repo,
-          accessToken,
-        );
-        // eslint-disable-next-line require-atomic-updates
-        repo.dependencies = dependencies;
+        if (
+          !options.excludedRepos ||
+          (options.excludedRepos &&
+            options.excludedRepos.indexOf(repo.name) === -1)
+        ) {
+          repo.dependencies = await getDependenciesFromGithubRepo(
+            repo,
+            accessToken,
+          );
+          repo.checked = true;
+        } else {
+          repo.checked = false;
+          repo.dependencies = [];
+        }
         return repo;
       }),
-    ),
-  );
+    );
+  });
 
   const dependencies = await addProjectToDependencies(
     getAllDependenciesFromRepos(repos),

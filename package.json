@@ -104,7 +104,8 @@
   "nodemonConfig": {
     "watch": [
       "src/server",
-      "src/routes.js"
+      "src/routes.js",
+      "src/lib"
     ]
   },
   "greenkeeper": {
