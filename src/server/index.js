@@ -146,10 +146,17 @@ nextApp.prepare().then(() => {
   server.get('/data/getProfileData', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
+    const profileOpts = { loggedInUsername };
+
     if (!accessToken) {
       res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
     }
-    getProfileData(req.query.id, accessToken, loggedInUsername).then(data =>
+
+    if (req.query.excludedRepos) {
+      profileOpts.excludedRepos = JSON.parse(req.query.excludedRepos);
+    }
+
+    getProfileData(req.query.id, accessToken, profileOpts).then(data =>
       res.json(data),
     );
   });
@@ -216,14 +223,13 @@ nextApp.prepare().then(() => {
 
   server.post('/profile/save', async (req, res) => {
     const id = get(req, 'body.id');
+    const excludedRepos = get(req, 'body.excludedRepos');
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
 
-    const { repos, profile } = await getProfileData(
-      id,
-      accessToken,
+    const { repos, profile } = await getProfileData(id, accessToken, {
       loggedInUsername,
-    );
+    });
 
     for (const repo of repos) {
       let files = await fetchDependenciesFileContent(repo, accessToken);
