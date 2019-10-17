@@ -22,10 +22,18 @@ import FacebookLogo from '../static/img/facebook.svg';
 
 const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
 
-const getProfileData = (id, accessToken) =>
-  process.env.IS_CLIENT
-    ? fetchJson(`/data/getProfileData?id=${id}`)
-    : import('../lib/data').then(m => m.getProfileData(id, accessToken));
+const getProfileData = (id, accessToken, excludedRepos) => {
+  const params = { id };
+  if (excludedRepos) {
+    params.excludedRepos = excludedRepos;
+  }
+  const searchParams = new URLSearchParams(params);
+  return process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfileData?${searchParams}`)
+    : import('../lib/data').then(m =>
+        m.getProfileData(id, accessToken, { excludedRepos }),
+      );
+};
 
 export default class Profile extends React.Component {
   static async getInitialProps({ req, query }) {
@@ -35,11 +43,15 @@ export default class Profile extends React.Component {
       showBackMyStack: query.showBackMyStack,
     };
 
+    if (query.excludedRepos) {
+      initialProps.excludedRepos = JSON.parse(query.excludedRepos);
+    }
+
     try {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
-      const data = await getProfileData(query.id, accessToken);
-
+      const excludedRepos = query.excludedRepos || null;
+      const data = await getProfileData(query.id, accessToken, excludedRepos);
       return { ...initialProps, ...data };
     } catch (error) {
       return { ...initialProps, error };
@@ -57,6 +69,7 @@ export default class Profile extends React.Component {
     recommendations: PropTypes.array,
     error: PropTypes.object,
     showBackMyStack: PropTypes.bool,
+    excludedRepos: PropTypes.array,
     id: PropTypes.string,
   };
 
@@ -64,10 +77,21 @@ export default class Profile extends React.Component {
     super(props);
     this.state = {
       saving: false,
+      repos: props.repos,
     };
+
     this.showBackMyStack =
       props.showBackMyStack === 'true' ||
       process.env.SHOW_BACK_MY_STACK === 'true';
+  }
+
+  getUnCheckedRespos(repos) {
+    return repos.filter(r => !r.checked).map(r => r.name);
+  }
+
+  getNumberOfAnalyzedRepos() {
+    const { repos } = this.props;
+    return repos.filter(r => r.checked).length;
   }
 
   twitterText = () => 'BackYourStack! https://backyourstack.com/';
@@ -94,8 +118,8 @@ export default class Profile extends React.Component {
   };
 
   saveProfileToS3() {
-    const { id } = this.props;
-    return postJson('/profile/save', { id });
+    const { id, excludedRepos } = this.props;
+    return postJson('/profile/save', { id, excludedRepos });
   }
 
   handleBackMyStack = async () => {
@@ -114,19 +138,49 @@ export default class Profile extends React.Component {
     }
   };
 
+  hanldeOnSelectRepos = ({ target }) => {
+    let { repos } = this.state;
+    const name = target.name;
+    const checked = target.checked;
+    repos = repos.map(r => {
+      if (r.name === name) {
+        r.checked = checked;
+        return r;
+      }
+      return r;
+    });
+    this.setState({ repos });
+  };
+
+  getLinkParams(id, section) {
+    const { repos } = this.state;
+    const params = { id };
+    const unCheckedRepos = this.getUnCheckedRespos(repos);
+
+    if (section) {
+      params.section = section;
+    }
+
+    if (unCheckedRepos.length !== 0) {
+      params.excludedRepos = JSON.stringify(unCheckedRepos);
+    }
+
+    return params;
+  }
+
   render() {
     const {
       section,
       error,
       profile,
       opencollectiveAccount,
-      repos,
-      dependencies,
       recommendations,
+      dependencies,
       pathname,
       loggedInUser,
     } = this.props;
 
+    const { repos } = this.state;
     return (
       <div className="Page ProfilePage">
         <style jsx global>
@@ -201,14 +255,17 @@ export default class Profile extends React.Component {
             <div className="navigation">
               <h1>{this.profileName()}</h1>
               <div className="navigation-items">
-                <Link route="profile" params={{ id: profile.login }}>
+                <Link
+                  route="profile"
+                  params={this.getLinkParams(profile.login)}
+                >
                   <a className={classNames({ active: !section })}>
                     Projects requiring funding
                   </a>
                 </Link>
                 <Link
                   route="profile"
-                  params={{ id: profile.login, section: 'dependencies' }}
+                  params={this.getLinkParams(profile.login, 'dependencies')}
                 >
                   <a
                     className={classNames({
@@ -220,7 +277,7 @@ export default class Profile extends React.Component {
                 </Link>
                 <Link
                   route="profile"
-                  params={{ id: profile.login, section: 'repositories' }}
+                  params={this.getLinkParams(profile.login, 'repositories')}
                 >
                   <a
                     className={classNames({
@@ -235,8 +292,8 @@ export default class Profile extends React.Component {
 
             <aside>
               <div className="shortStats">
-                <strong>{repos.length}</strong> repositories depending on{' '}
-                <strong>{dependencies.length}</strong>
+                <strong>{this.getNumberOfAnalyzedRepos()}</strong> repositories
+                depending on <strong>{dependencies.length}</strong>
                 &nbsp;Open Source projects.
               </div>
 
@@ -325,7 +382,10 @@ export default class Profile extends React.Component {
               )}
 
               {section === 'repositories' && (
-                <RepositoryTable repositories={repos} />
+                <RepositoryTable
+                  onSelectRepos={this.hanldeOnSelectRepos}
+                  repositories={repos}
+                />
               )}
             </main>
           </Fragment>
