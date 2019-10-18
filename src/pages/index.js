@@ -227,8 +227,8 @@ export default class Index extends Component {
           </h1>
           <p className="secondaryDescription">
             <span className="asterisk">*</span> We currently detect dependencies
-            from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep) and
-            Ruby (Gem). Want to see more languages? Please{' '}
+            from JavaScript (NPM), PHP (Composer), .NET (Nuget), Go (dep), Ruby
+            (Gem) and Python (Requirement). Want to see more languages? Please{' '}
             <Link route="contributing">
               <a className="seeHowLink">see how to contribute</a>
             </Link>

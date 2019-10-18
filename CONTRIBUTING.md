@@ -14,7 +14,7 @@ BackYourStack is currenly detecting and supporting `npm` (JavaScript), `nuget` (
 
 We need your help and input! There are already issues existing for:
 
-- [Python](https://github.com/opencollective/backyourstack/issues/34)
+- <del>[Python](https://github.com/opencollective/backyourstack/issues/34)</del> Implemented!
 - <del>[NuGet / C#](https://github.com/opencollective/backyourstack/issues/56)</del> Implemented!
 - <del>[Ruby](https://github.com/opencollective/backyourstack/issues/60)</del> Implemented!
 - [Erlang / Elixir](https://github.com/opencollective/backyourstack/issues/68)
