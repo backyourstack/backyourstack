@@ -251,7 +251,14 @@ nextApp.prepare().then(() => {
 
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    const profileData = await getProfileData(req.params.id, accessToken);
+    let excludedRepos;
+    if (req.query.excludedRepos) {
+      excludedRepos = JSON.parse(req.query.excludedRepos);
+    }
+
+    const profileData = await getProfileData(req.params.id, accessToken, {
+      excludedRepos,
+    });
     const { recommendations, opencollectiveAccount } = profileData;
 
     const backing = recommendations
@@ -305,6 +312,10 @@ nextApp.prepare().then(() => {
       return res.status(400).send('Please provide the file key');
     }
     const id = req.params.id;
+    let excludedRepos;
+    if (req.query.excludedRepos) {
+      excludedRepos = JSON.parse(req.query.excludedRepos);
+    }
 
     try {
       const { recommendations } = await getProfileSavedData(id);
