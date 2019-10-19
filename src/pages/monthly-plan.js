@@ -4,22 +4,12 @@ import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
 import { get } from 'lodash';
 
-import { fetchJson } from '../lib/fetch';
+import { getData } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UpArrow from '../static/img/up-arrow.svg';
 import DownArrow from '../static/img/down-arrow.svg';
-
-const getFilesData = sessionFiles =>
-  process.env.IS_CLIENT
-    ? fetchJson('/data/getFilesData')
-    : import('../lib/data').then(m => m.getFilesData(sessionFiles));
-
-const getProfileData = (id, accessToken) =>
-  process.env.IS_CLIENT
-    ? fetchJson(`/data/getProfileData?id=${id}`)
-    : import('../lib/data').then(m => m.getProfileData(id, accessToken));
 
 const suggestedAmounts = [
   {
@@ -73,17 +63,23 @@ export default class MonthlyPlan extends React.Component {
       protocol = 'http:';
     }
     const baseUrl = `${protocol}//${host}`;
+    const excludedRepos = query.excludedRepos || [];
 
     let recommendations = [];
     if (type === 'file') {
       // sessionFiles is optional and can be null (always on the client)
       const sessionFiles = get(req, 'session.files');
-      const data = await getFilesData(sessionFiles);
+      const data = await getData({ type: 'file', sessionFiles });
       recommendations = data.recommendations;
     } else if (type === 'profile') {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
-      const data = await getProfileData(query.id, accessToken);
+      const data = await getData({
+        id: query.id,
+        accessToken,
+        type: 'profile',
+        excludedRepos,
+      });
       recommendations = data.recommendations;
     }
 
@@ -92,6 +88,7 @@ export default class MonthlyPlan extends React.Component {
       baseUrl,
       recommendations,
       type,
+      excludedRepos,
       next: query.next || '/',
     };
   }
@@ -102,6 +99,7 @@ export default class MonthlyPlan extends React.Component {
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
+    excludedRepos: PropTypes.array,
   };
 
   constructor(props) {
@@ -125,16 +123,26 @@ export default class MonthlyPlan extends React.Component {
     }
   }
 
+  getContributionUrlData() {
+    const { type, baseUrl, id, excludedRepos } = this.props;
+    let jsonUrl =
+      type === 'file'
+        ? `${baseUrl}/${id}/file/backing.json`
+        : `${baseUrl}/${id}/profile/backing.json`;
+
+    if (type === 'profile' && excludedRepos.length !== 0) {
+      jsonUrl = `${jsonUrl}?excludedRepos=${JSON.stringify(excludedRepos)}`;
+    }
+
+    return { jsonUrl };
+  }
+
   getContributionUrl = () => {
     // Get the key url of the file
-    const { baseUrl, id, type } = this.props;
+    const { baseUrl, id } = this.props;
     if (id) {
-      const jsonUrl =
-        type === 'file'
-          ? `${baseUrl}/${id}/file/backing.json`
-          : `${baseUrl}/${id}/profile/backing.json`;
       const searchParams = new URLSearchParams({
-        data: JSON.stringify({ jsonUrl }),
+        data: JSON.stringify(this.getContributionUrlData()),
         redirect: `${baseUrl}/monthly-plan/confirmation`,
         amount: this.getTotalAmount(),
         skipStepDetails: 'true',
