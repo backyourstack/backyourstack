@@ -130,7 +130,7 @@ export default class Profile extends React.Component {
     }
   };
 
-  hanldeOnSelectRepos = ({ target }) => {
+  hanldeOnSelectRepo = ({ target }) => {
     let { repos } = this.state;
     const name = target.name;
     const checked = target.checked;
@@ -375,7 +375,7 @@ export default class Profile extends React.Component {
 
               {section === 'repositories' && (
                 <RepositoryTable
-                  onSelectRepos={this.hanldeOnSelectRepos}
+                  onSelectRepo={this.hanldeOnSelectRepo}
                   repositories={repos}
                 />
               )}
