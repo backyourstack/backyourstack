@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
 
-import { fetchJson, postJson } from '../lib/fetch';
+import { postJson, getData } from '../lib/fetch';
 import { dependenciesStats } from '../lib/dependencies/utils';
 
 import Header from '../components/Header';
@@ -14,11 +14,6 @@ import Upload from '../components/Upload';
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
 import BackMyStack from '../components/BackMyStack';
-
-const getFilesData = sessionFiles =>
-  process.env.IS_CLIENT
-    ? fetchJson('/data/getFilesData')
-    : import('../lib/data').then(m => m.getFilesData(sessionFiles));
 
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
@@ -29,9 +24,10 @@ export default class Files extends React.Component {
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
-    const { files, dependencies, recommendations } = await getFilesData(
+    const { files, dependencies, recommendations } = await getData({
       sessionFiles,
-    );
+      type: 'file',
+    });
 
     return { ...initialProps, files, dependencies, recommendations };
   }
@@ -70,7 +66,9 @@ export default class Files extends React.Component {
   }
 
   refresh = async () => {
-    const { files, dependencies, recommendations } = await getFilesData();
+    const { files, dependencies, recommendations } = await getData({
+      type: 'file',
+    });
 
     if (Object.keys(files).length === 0) {
       Router.pushRoute('index');
