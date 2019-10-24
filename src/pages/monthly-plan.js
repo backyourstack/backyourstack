@@ -84,7 +84,9 @@ export default class MonthlyPlan extends React.Component {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
       const data = await getProfileData(query.id, accessToken);
-      recommendations = data.recommendations;
+      recommendations = data.recommendations
+        .filter(r => r.opencollective)
+        .filter(r => r.opencollective.pledge !== true);
     }
 
     return {
@@ -125,16 +127,28 @@ export default class MonthlyPlan extends React.Component {
     }
   }
 
+  getContributionUrlData() {
+    const { type, id, baseUrl, recommendations } = this.props;
+    const data = {};
+    data.firstDispatchRecommendations = recommendations.map(r => ({
+      slug: r.opencollective.slug,
+      weight: 100,
+      id: r.opencollective.id,
+    }));
+
+    data.jsonUrl =
+      type === 'file'
+        ? `${baseUrl}/${id}/file/backing.json`
+        : `${baseUrl}/${id}/profile/backing.json`;
+    return data;
+  }
+
   getContributionUrl = () => {
     // Get the key url of the file
-    const { baseUrl, id, type } = this.props;
+    const { baseUrl, id } = this.props;
     if (id) {
-      const jsonUrl =
-        type === 'file'
-          ? `${baseUrl}/${id}/file/backing.json`
-          : `${baseUrl}/${id}/profile/backing.json`;
       const searchParams = new URLSearchParams({
-        data: JSON.stringify({ jsonUrl }),
+        data: JSON.stringify(this.getContributionUrlData()),
         redirect: `${baseUrl}/monthly-plan/confirmation`,
         amount: this.getTotalAmount(),
         skipStepDetails: 'true',
@@ -469,13 +483,8 @@ export default class MonthlyPlan extends React.Component {
     const { loggedInUser, recommendations } = this.props;
     const totalAmount = this.getTotalAmount();
     const disableContributionLink = totalAmount === 0;
-    const opencollectiveRecommendations = recommendations
-      .filter(r => r.opencollective)
-      .filter(r => r.opencollective.pledge !== true);
     const dispatchedValue = totalAmount;
-    const singleValue = (
-      dispatchedValue / opencollectiveRecommendations.length
-    ).toFixed(2);
+    const singleValue = (dispatchedValue / recommendations.length).toFixed(2);
 
     return (
       <Fragment>
@@ -656,26 +665,23 @@ export default class MonthlyPlan extends React.Component {
                     <th>Collective</th>
                     <th>Amount</th>
                   </tr>
-                  {recommendations
-                    .filter(r => r.opencollective)
-                    .filter(r => r.opencollective.pledge !== true)
-                    .map(recommendation => (
-                      <tr key={recommendation.name}>
-                        <td className="collectiveColumn">
-                          <a
-                            href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
-                          >
-                            {recommendation.opencollective.name}
-                          </a>{' '}
-                          <span className="collectiveDescription">
-                            {recommendation.opencollective.description}
-                          </span>
-                        </td>
-                        <td className="sharableAmount">
-                          ${singleValue} <sup>*</sup>
-                        </td>
-                      </tr>
-                    ))}
+                  {recommendations.map(recommendation => (
+                    <tr key={recommendation.name}>
+                      <td className="collectiveColumn">
+                        <a
+                          href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
+                        >
+                          {recommendation.opencollective.name}
+                        </a>{' '}
+                        <span className="collectiveDescription">
+                          {recommendation.opencollective.description}
+                        </span>
+                      </td>
+                      <td className="sharableAmount">
+                        ${singleValue} <sup>*</sup>
+                      </td>
+                    </tr>
+                  ))}
                 </table>
                 <p className="notice-p">
                   * Final amount distributed may vary slightly depending on
