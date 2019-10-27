@@ -17,6 +17,13 @@
     "OPENCOLLECTIVE_BASE_URL": "@opencollective_base_url",
     "SHOW_BACK_MY_STACK": "@show_back_my_stack"
   },
+  "build": {
+    "env": {
+      "OPENCOLLECTIVE_REDIRECT_PATH": "@opencollective_redirect_path",
+      "OPENCOLLECTIVE_BASE_URL": "@opencollective_base_url",
+      "SHOW_BACK_MY_STACK": "@show_back_my_stack"
+    }
+  },
   "scale": {
     "sfo1": {
       "min": 1,
