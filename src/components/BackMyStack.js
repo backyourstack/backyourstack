@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const BackMyStack = ({ onClickBackMyStack }) => {
+const BackMyStack = ({ onClickBackMyStack, saving }) => {
   return (
     <Fragment>
       <style jsx>
@@ -105,6 +105,10 @@ const BackMyStack = ({ onClickBackMyStack }) => {
           .backMyStackBtn:hover {
             opacity: 0.8;
           }
+          .backMyStackBtn:disabled {
+            opacity: 0.8;
+            cursor: default;
+          }
           @media screen and (max-width: 768px),
             @media screen and (max-width: 500px) {
             .backMyStackWrapper {
@@ -146,6 +150,7 @@ const BackMyStack = ({ onClickBackMyStack }) => {
           <button
             className="bigButton backMyStackBtn"
             onClick={onClickBackMyStack}
+            disabled={saving}
           >
             Back My Stack
           </button>
@@ -157,6 +162,7 @@ const BackMyStack = ({ onClickBackMyStack }) => {
 
 BackMyStack.propTypes = {
   onClickBackMyStack: PropTypes.func,
+  saving: PropTypes.bool,
 };
 
 export default BackMyStack;

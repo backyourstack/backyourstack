@@ -10,7 +10,7 @@ import favicon from 'serve-favicon';
 import multer from 'multer';
 import next from 'next';
 import md5 from 'md5';
-import { get, has, pick, uniqBy } from 'lodash';
+import { get, has, pick } from 'lodash';
 
 import routes from '../routes';
 import logger from '../logger';
@@ -35,7 +35,7 @@ import { getDependenciesAvailableForBacking } from '../lib/utils';
 import {
   uploadFiles,
   getFiles,
-  getProfilePrivateData,
+  getProfileSavedData,
   saveProfile,
 } from '../lib/s3';
 
@@ -224,28 +224,23 @@ nextApp.prepare().then(() => {
       accessToken,
       loggedInUsername,
     );
-    const privateRepos = repos.filter(repo => repo.private);
-    // we're only saving private repository
-    if (privateRepos.length >= 1) {
-      for (const repo of privateRepos) {
-        let files = await fetchDependenciesFileContent(repo, accessToken);
-        if (files.length) {
-          files = files.map(({ matchedPattern, text }) => {
-            const file = { name: matchedPattern, text };
-            file.projectName = detectProjectName(file);
-            file.id = file.projectName;
-            return file;
-          });
-          repo.files = files;
-        } else {
-          continue;
-        }
+
+    for (const repo of repos) {
+      let files = await fetchDependenciesFileContent(repo, accessToken);
+      if (files.length) {
+        files = files.map(({ matchedPattern, text }) => {
+          const file = { name: matchedPattern, text };
+          file.projectName = detectProjectName(file);
+          file.id = file.projectName;
+          return file;
+        });
+        repo.files = files;
+      } else {
+        continue;
       }
-      const savedId = await saveProfile(profile.login, privateRepos);
-      return res.status(200).send({ id: savedId });
-    } else {
-      return res.status(200).send({ id });
     }
+    const savedId = await saveProfile(profile.login, repos);
+    return res.status(200).send({ id: savedId });
   });
 
   server.get('/:id/backing.json', async (req, res) => {
@@ -306,23 +301,8 @@ nextApp.prepare().then(() => {
     const id = req.params.id;
 
     try {
-      let backing;
-      // Get private data from s3 and public data from Github
-      const [privateData, publicData] = await Promise.all([
-        getProfilePrivateData(id),
-        getProfileData(id),
-      ]);
-      if (privateData) {
-        backing = getDependenciesAvailableForBacking([
-          ...privateData.recommendations,
-          ...publicData.recommendations,
-        ]);
-        backing = uniqBy(backing, 'opencollective.id'); // remove duplicate recommendations
-      } else {
-        backing = getDependenciesAvailableForBacking(
-          ...publicData.recommendations,
-        );
-      }
+      const { recommendations } = await getProfileSavedData(id);
+      const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
     } catch (err) {
       console.error(err);

@@ -91,7 +91,7 @@ export const getFiles = async id => {
   return data;
 };
 
-export const getProfilePrivateData = async id => {
+export const getProfileSavedData = async id => {
   const data = await getFiles(id);
   if (!data) {
     return null;
