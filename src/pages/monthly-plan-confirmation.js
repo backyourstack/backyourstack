@@ -154,7 +154,7 @@ export default class MonthlyPlanConfirmation extends React.Component {
               </div>
             )}
             {status === 'dispatching' && (
-              <div className="confirmationWrapper">
+              <div className="contentCard">
                 <h3>Dispatch in process</h3>
                 <p>
                   Your first payment is currently being dispatched, you&apos;ll
