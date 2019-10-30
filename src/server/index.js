@@ -223,16 +223,20 @@ nextApp.prepare().then(() => {
 
   server.post('/profile/save', async (req, res) => {
     const id = get(req, 'body.id');
-    const excludedRepos = get(req, 'body.excludedRepos');
+    const excludedRepos = get(req, 'body.excludedRepos', []);
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
 
-    const { repos, profile } = await getProfileData(id, accessToken, {
+    const data = await getProfileData(id, accessToken, {
       loggedInUsername,
+      excludedRepos,
     });
 
-    for (const repo of repos) {
-      let files = await fetchDependenciesFileContent(repo, accessToken);
+    const repositories = data.repos.filter(
+      repo => excludedRepos.indexOf(repo.name) === -1,
+    );
+    for (const repository of repositories) {
+      let files = await fetchDependenciesFileContent(repository, accessToken);
       if (files.length) {
         files = files.map(({ matchedPattern, text }) => {
           const file = { name: matchedPattern, text };
@@ -240,12 +244,16 @@ nextApp.prepare().then(() => {
           file.id = file.projectName;
           return file;
         });
-        repo.files = files;
+        repository.files = files;
       } else {
         continue;
       }
     }
-    const savedId = await saveProfile(profile.login, repos);
+    const savedId = await saveProfile(
+      data.profile.login,
+      repositories,
+      excludedRepos,
+    );
     return res.status(200).send({ id: savedId });
   });
 
@@ -312,10 +320,6 @@ nextApp.prepare().then(() => {
       return res.status(400).send('Please provide the file key');
     }
     const id = req.params.id;
-    let excludedRepos;
-    if (req.query.excludedRepos) {
-      excludedRepos = JSON.parse(req.query.excludedRepos);
-    }
 
     try {
       const { recommendations } = await getProfileSavedData(id);

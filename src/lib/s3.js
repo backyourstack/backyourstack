@@ -12,16 +12,17 @@ const s3 = new S3({
 const Bucket = process.env.AWS_S3_BUCKET;
 
 export const uploadFiles = async files => {
-  const metaData = {};
+  const metadata = { objectKeys: [], files: {} };
   const identifier = uuidv1();
   for (const id in files) {
     const key = `${identifier}/${id}.json`;
     const body = { [id]: files[id] };
     const data = await saveFileToS3(key, body);
-    metaData[id] = { url: data.Location };
+    metadata.files[id] = { url: data.Location };
+    metadata.objectKeys = [...metadata.objectKeys, data.Key];
   }
   const folderKey = `${identifier}/dependencies.json`;
-  return saveFileToS3(folderKey, { files: metaData });
+  return saveFileToS3(folderKey, metadata);
 };
 
 export const saveFileToS3 = (Key, Body) => {
@@ -36,30 +37,30 @@ export const saveFileToS3 = (Key, Body) => {
 };
 
 export const saveProfile = async (profileId, repos) => {
-  const metaData = { profile: true, files: {} };
+  const metadata = { profile: true, files: {}, objectKeys: [] };
   for (const repo of repos) {
     if (repo.files) {
-      const savedFileUrls = await saveProfileFiles(profileId, repo.files);
-      metaData.files[repo.name] = {
-        urls: [savedFileUrls],
+      const objectKeys = await saveProfileFiles(profileId, repo.files);
+      metadata.files[repo.name] = {
         private: repo.private,
       };
+      metadata.objectKeys = [...metadata.objectKeys, ...objectKeys];
     }
   }
   const key = `${profileId}/dependencies.json`;
-  const savedFile = await saveFileToS3(key, metaData);
+  const savedFile = await saveFileToS3(key, metadata);
   return savedFile.Key.split('/')[0];
 };
 
 export const saveProfileFiles = async (profileId, files) => {
-  const savedFileUrls = [];
+  const savedObjectKeys = [];
   for (const file of files) {
     const key = `${profileId}/${file.id}.json`;
     const body = { [file.id]: file };
     const data = await saveFileToS3(key, body);
-    savedFileUrls.push(data.Location);
+    savedObjectKeys.push(data.Key);
   }
-  return savedFileUrls;
+  return savedObjectKeys;
 };
 
 export const getObjectList = id => {
@@ -71,24 +72,27 @@ export const getObjectList = id => {
 };
 
 export const getFiles = async id => {
-  const { Contents } = await getObjectList(id);
+  const { objectKeys } = await getObjectsMetadata(id);
   const data = {};
 
-  if (Contents.length === 0) {
+  if (objectKeys.length === 0) {
     return {};
   }
 
-  for (const content of Contents) {
-    // checks if it is the index file and skips over it
-    if (content.Key.indexOf('dependencies') !== -1) {
-      continue;
-    }
-    const params = { Bucket, Key: content.Key };
+  for (const key of objectKeys) {
+    const params = { Bucket, Key: key };
     const { Body } = await s3.getObject(params).promise();
     const file = JSON.parse(Body.toString('utf-8'));
+
     Object.assign(data, file);
   }
   return data;
+};
+
+export const getObjectsMetadata = async id => {
+  const params = { Bucket, Key: `${id}/dependencies.json` };
+  const { Body } = await s3.getObject(params).promise();
+  return JSON.parse(Body.toString('utf-8'));
 };
 
 export const getProfileSavedData = async id => {
