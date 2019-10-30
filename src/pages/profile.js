@@ -6,7 +6,7 @@ import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
 
-import { postJson, getData } from '../lib/fetch';
+import { postJson, fetchJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -21,6 +21,19 @@ import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
 
 const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
+
+const getProfileData = (id, accessToken, excludedRepos) => {
+  const params = { id };
+  if (excludedRepos) {
+    params.excludedRepos = excludedRepos;
+  }
+  const searchParams = new URLSearchParams(params);
+  return process.env.IS_CLIENT
+    ? fetchJson(`/data/getProfileData?${searchParams}`)
+    : import('../lib/data').then(m =>
+        m.getProfileData(id, accessToken, { excludedRepos }),
+      );
+};
 
 export default class Profile extends React.Component {
   static async getInitialProps({ req, query }) {
@@ -38,12 +51,7 @@ export default class Profile extends React.Component {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
       const excludedRepos = query.excludedRepos || null;
-      const data = await getData({
-        type: 'profile',
-        id: query.id,
-        accessToken,
-        excludedRepos,
-      });
+      const data = await getProfileData(query.id, accessToken, excludedRepos);
       return { ...initialProps, ...data };
     } catch (error) {
       return { ...initialProps, error };
@@ -77,11 +85,11 @@ export default class Profile extends React.Component {
       process.env.SHOW_BACK_MY_STACK === 'true';
   }
 
-  getUnCheckedRespos(repos) {
+  getUnCheckedRepositories(repos) {
     return repos.filter(r => !r.checked).map(r => r.name);
   }
 
-  getNumberOfAnalyzedRepos() {
+  getNumberOfAnalyzedRepositories() {
     const { repos } = this.props;
     return repos.filter(r => r.checked).length;
   }
@@ -111,26 +119,37 @@ export default class Profile extends React.Component {
 
   saveProfileToS3() {
     const { id, excludedRepos } = this.props;
-    return postJson('/profile/save', { id, excludedRepos });
+    return postJson('/profile/save', {
+      id,
+      excludedRepos:
+        excludedRepos || this.getUnCheckedRepositories(this.state.repos),
+    });
   }
 
   handleBackMyStack = async () => {
+    const excludedRepos =
+      this.props.excludedRepos ||
+      this.getUnCheckedRepositories(this.state.repos);
     this.setState({ saving: true });
 
     try {
       const { id } = await this.saveProfileToS3();
+      const params = { id, type: 'profile' };
+
+      if (excludedRepos.length !== 0) {
+        params.excludedRepos = excludedRepos;
+      }
+      const searchParams = new URLSearchParams(params);
+
       this.setState({ saving: false });
-      await Router.pushRoute('monthly-plan', {
-        id: id,
-        type: 'profile',
-      });
+      await Router.pushRoute(`/monthly-plan?${searchParams}`);
     } catch (err) {
       this.setState({ saving: false });
       console.error(err);
     }
   };
 
-  hanldeOnSelectRepo = ({ target }) => {
+  hanldeOnSelectRepository = ({ target }) => {
     let { repos } = this.state;
     const name = target.name;
     const checked = target.checked;
@@ -147,14 +166,14 @@ export default class Profile extends React.Component {
   getLinkParams(id, section) {
     const { repos } = this.state;
     const params = { id };
-    const unCheckedRepos = this.getUnCheckedRespos(repos);
+    const unCheckedRepositories = this.getUnCheckedRepositories(repos);
 
     if (section) {
       params.section = section;
     }
 
-    if (unCheckedRepos.length !== 0) {
-      params.excludedRepos = JSON.stringify(unCheckedRepos);
+    if (unCheckedRepositories.length !== 0) {
+      params.excludedRepos = JSON.stringify(unCheckedRepositories);
     }
 
     return params;
@@ -284,8 +303,8 @@ export default class Profile extends React.Component {
 
             <aside>
               <div className="shortStats">
-                <strong>{this.getNumberOfAnalyzedRepos()}</strong> repositories
-                depending on <strong>{dependencies.length}</strong>
+                <strong>{this.getNumberOfAnalyzedRepositories()}</strong>{' '}
+                repositories depending on <strong>{dependencies.length}</strong>
                 &nbsp;Open Source projects.
               </div>
 
@@ -375,7 +394,7 @@ export default class Profile extends React.Component {
 
               {section === 'repositories' && (
                 <RepositoryTable
-                  onSelectRepo={this.hanldeOnSelectRepo}
+                  onSelectRepository={this.hanldeOnSelectRepository}
                   repositories={repos}
                 />
               )}

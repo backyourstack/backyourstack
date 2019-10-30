@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class RepositoryTable extends React.Component {
   static propTypes = {
     repositories: PropTypes.array.isRequired,
-    onSelectRepo: PropTypes.func,
+    onSelectRepository: PropTypes.func,
   };
 
   render() {
@@ -74,7 +74,7 @@ export default class RepositoryTable extends React.Component {
                     type="checkbox"
                     name={repo.name}
                     checked={repo.checked}
-                    onChange={this.props.onSelectRepo}
+                    onChange={this.props.onSelectRepository}
                   />
                 </td>
                 <td>
