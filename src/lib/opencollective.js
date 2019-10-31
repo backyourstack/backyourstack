@@ -101,12 +101,7 @@ const getAllCollectivesQuery = `query allCollectives(
 const backyourstackDispatchOrderMutation = `
   mutation backyourstackDispatchOrder($id: Int!) {
     backyourstackDispatchOrder(id: $id) {
-      id
-      totalAmount
-      collective {
-        name
-        slug
-      }
+      dispatching
     }
   }
 `;

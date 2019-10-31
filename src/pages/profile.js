@@ -62,6 +62,9 @@ export default class Profile extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      saving: false,
+    };
     this.showBackMyStack =
       props.showBackMyStack === 'true' ||
       process.env.SHOW_BACK_MY_STACK === 'true';
@@ -96,13 +99,17 @@ export default class Profile extends React.Component {
   }
 
   handleBackMyStack = async () => {
+    this.setState({ saving: true });
+
     try {
       const { id } = await this.saveProfileToS3();
+      this.setState({ saving: false });
       await Router.pushRoute('monthly-plan', {
         id: id,
         type: 'profile',
       });
     } catch (err) {
+      this.setState({ saving: false });
       console.error(err);
     }
   };
@@ -301,7 +308,10 @@ export default class Profile extends React.Component {
 
             <main>
               {this.showBackMyStack && (
-                <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+                <BackMyStack
+                  saving={this.state.saving}
+                  onClickBackMyStack={this.handleBackMyStack}
+                />
               )}
               {(!section || section === 'recommendations') && (
                 <RecommendationList
