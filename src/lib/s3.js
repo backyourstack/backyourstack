@@ -72,21 +72,25 @@ export const getObjectList = id => {
 };
 
 export const getFiles = async id => {
-  const { objectKeys } = await getObjectsMetadata(id);
-  const data = {};
+  const { objectKeys, selectedDependencies } = await getObjectsMetadata(id);
+  const packageFilesContent = {};
 
   if (objectKeys.length === 0) {
     return {};
   }
 
-  for (const key of objectKeys) {
-    const params = { Bucket, Key: key };
-    const { Body } = await s3.getObject(params).promise();
-    const file = JSON.parse(Body.toString('utf-8'));
+  if (selectedDependencies) {
+    return { selectedDependencies };
+  } else {
+    for (const key of objectKeys) {
+      const params = { Bucket, Key: key };
+      const { Body } = await s3.getObject(params).promise();
+      const file = JSON.parse(Body.toString('utf-8'));
 
-    Object.assign(data, file);
+      Object.assign(packageFilesContent, file);
+    }
+    return { packageFilesContent };
   }
-  return data;
 };
 
 export const getObjectsMetadata = async id => {
@@ -100,5 +104,17 @@ export const getProfileSavedData = async id => {
   if (!data) {
     return null;
   }
-  return getFilesData(data);
+
+  if (data.selectedDependencies) {
+    return { selectedDependencies: data.selectedDependencies };
+  }
+
+  const packageFilesContent = getFilesData(data.packageFilesContent);
+  return { packageFilesContent };
+};
+
+export const saveSelectedDependencies = async (id, selectedDependencies) => {
+  const metadata = await getObjectsMetadata(id);
+  metadata.selectedDependencies = selectedDependencies;
+  return saveFileToS3(`${id}/dependencies.json`, metadata);
 };

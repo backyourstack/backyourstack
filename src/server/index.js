@@ -35,8 +35,8 @@ import { getDependenciesAvailableForBacking } from '../lib/utils';
 import {
   uploadFiles,
   getFiles,
-  getProfileSavedData,
   saveProfile,
+  saveSelectedDependencies,
 } from '../lib/s3';
 
 const {
@@ -257,6 +257,13 @@ nextApp.prepare().then(() => {
     return res.status(200).send({ id: savedId });
   });
 
+  server.post('/selectedDependencies/save', async (req, res) => {
+    const id = get(req, 'body.id');
+    const selectedDependencies = get(req, 'body.selectedDependencies');
+    const savedObjectInfo = saveSelectedDependencies(id, selectedDependencies);
+    return res.status(200).send(savedObjectInfo);
+  });
+
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     let excludedRepos;
@@ -295,19 +302,26 @@ nextApp.prepare().then(() => {
 
   server.get('/:id/file/backing.json', async (req, res) => {
     if (!req.params.id) {
-      return res.status(400).send('Please provide the file key');
+      return res.status(400).send('Please provide the file id');
     }
-    let data;
 
     try {
-      data = await getFiles(req.params.id);
+      let backing;
+      const data = await getFiles(req.params.id);
 
       if (!data) {
         return res.status(404).send('No file found');
       }
 
-      const { recommendations } = await getFilesData(data);
-      const backing = getDependenciesAvailableForBacking(recommendations);
+      if (data.selectedDependencies) {
+        backing = data.selectedDependencies;
+      } else {
+        const { recommendations } = await getFilesData(
+          data.packageFilesContent,
+        );
+        backing = getDependenciesAvailableForBacking(recommendations);
+      }
+
       return res.status(200).send(backing);
     } catch (err) {
       console.error(err);
@@ -317,13 +331,26 @@ nextApp.prepare().then(() => {
 
   server.get('/:id/profile/backing.json', async (req, res) => {
     if (!req.params.id) {
-      return res.status(400).send('Please provide the file key');
+      return res.status(400).send('Please provide the profile id');
     }
-    const id = req.params.id;
 
     try {
-      const { recommendations } = await getProfileSavedData(id);
-      const backing = getDependenciesAvailableForBacking(recommendations);
+      let backing;
+      const data = await getFiles(req.params.id);
+
+      if (!data) {
+        return res.status(404).send('No file found');
+      }
+
+      if (data.selectedDependencies) {
+        backing = data.selectedDependencies;
+      } else {
+        const { recommendations } = await getFilesData(
+          data.packageFilesContent,
+        );
+        backing = getDependenciesAvailableForBacking(recommendations);
+      }
+
       return res.status(200).send(backing);
     } catch (err) {
       console.error(err);

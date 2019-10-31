@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
-import { get, map } from 'lodash';
+import { get, map, pick } from 'lodash';
 
-import { fetchJson } from '../lib/fetch';
+import { fetchJson, postJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -177,30 +177,38 @@ export default class MonthlyPlan extends React.Component {
     }
   };
 
-  getContributionUrlData() {
-    const { type, baseUrl, id } = this.props;
-    const jsonUrl =
-      type === 'file'
-        ? `${baseUrl}/${id}/file/backing.json`
-        : `${baseUrl}/${id}/profile/backing.json`;
-    const selectedCollectives = this.getSelectedCollectivesId();
-    if (selectedCollectives) {
-      return { jsonUrl, selectedCollectives };
-    } else {
-      return { jsonUrl };
-    }
-  }
-
-  getSelectedCollectivesId() {
+  getSelectedDependencies() {
     const { recommendations } = this.state;
-    const selectedCollectives = recommendations.filter(r => r.checked);
+    const selectedDependencies = recommendations.filter(r => r.checked);
     // The recommended collectives are all selected by default
     // we're checking if the user made any changes so we can keep track
     // of the selected collectives.
-    if (selectedCollectives.length !== recommendations.length) {
-      return map(selectedCollectives, 'opencollective.id');
+    if (selectedDependencies.length !== recommendations.length) {
+      return map(selectedDependencies, dependency => {
+        const { opencollective, github } = dependency;
+        return {
+          weight: 100,
+          opencollective: pick(opencollective, ['id', 'name', 'slug']),
+          github: github,
+        };
+      });
     }
     return null;
+  }
+
+  async saveSelectedDependencies() {
+    const selectedDependencies = this.getSelectedDependencies();
+    const { id } = this.props;
+    if (selectedDependencies) {
+      try {
+        await postJson('/selectedDependencies/save', {
+          id,
+          selectedDependencies,
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
   }
 
   handleAmountChange = event => {
@@ -770,6 +778,7 @@ export default class MonthlyPlan extends React.Component {
                   className={classnames('button bigButton continueButton', {
                     disableContributionLink,
                   })}
+                  onClick={() => this.saveSelectedDependencies()}
                   href={`${this.getContributionUrl()}`}
                 >
                   Continue on Open Collective
