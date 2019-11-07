@@ -98,7 +98,6 @@ export default class MonthlyPlanConfirmation extends React.Component {
               }
             }
             .error {
-              color: red;
               text-align: center;
               align-items: center;
               flex-direction: column;
@@ -155,11 +154,21 @@ export default class MonthlyPlanConfirmation extends React.Component {
             )}
             {status === 'dispatching' && (
               <div className="contentCard">
-                <h3>Dispatch in process</h3>
+                <h1>Woot woot! 🎉</h1>
+                <h3>Your first payment is being dispatched.</h3>
                 <p>
-                  Your first payment is currently being dispatched, you&apos;ll
-                  be notified via email as soon as the process completes.
+                  You will be notified via email as soon as the process
+                  completes.
                 </p>
+                <p className="tableDescription">
+                  That&apos;s it! You will be charged for the first time today,
+                  then on the 1st of each month from now on. The funds will be
+                  automatically distributed to your dependencies. You can cancel
+                  the subscription anytime from Open Collective.
+                </p>
+                <h3 className="thankYouText">
+                  Thank you for Backing Your Stack!
+                </h3>
               </div>
             )}
           </div>
