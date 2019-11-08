@@ -1,1 +1,18 @@
+# Collective
+# ----------
+
 collective: backyourstack
+
+# Invitation
+# ----------
+
+# Post a comment on issues created by non contributors.
+
+invitation: false
+
+# Tiers
+# -----
+
+# In this section you can define specific behavior for all supported tiers, ie: "backer" "and sponsor".
+
+tiers: []
