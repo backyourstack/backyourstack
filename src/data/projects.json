@@ -25,6 +25,10 @@
       {
         "type": "npm",
         "name": "@11ty/eleventy-plugin-syntaxhighlight"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/dependency-tree"
       }
     ],
     "github": {
@@ -252,6 +256,24 @@
     }
   },
   {
+    "name": "airform",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "airform"
+      }
+    ],
+    "github": {
+      "repo": "airform/airform"
+    },
+    "opencollective": {
+      "id": 62592,
+      "name": "Airform",
+      "slug": "airform",
+      "description": "Functional HTML forms for Front-End Developers."
+    }
+  },
+  {
     "name": "ajv",
     "packages": [
       {
@@ -297,6 +319,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "alidayu",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "flc/alidayu"
+      }
+    ],
+    "github": {
+      "repo": "flc1125/alidayu"
+    },
+    "opencollective": {
+      "id": 60522,
+      "name": "alidayu",
+      "slug": "alidayu",
+      "description": "阿里大于(鱼)API接口-SDK"
     }
   },
   {
@@ -927,6 +967,42 @@
     }
   },
   {
+    "name": "anti-xss",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "voku/anti-xss"
+      }
+    ],
+    "github": {
+      "repo": "voku/anti-xss"
+    },
+    "opencollective": {
+      "id": 64849,
+      "name": "AntiXSS",
+      "slug": "anti-xss",
+      "description": ":secret: AntiXSS | Protection against Cross-site scripting (XSS) via PHP"
+    }
+  },
+  {
+    "name": "ants",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/panjf2000/ants"
+      }
+    ],
+    "github": {
+      "repo": "panjf2000/ants"
+    },
+    "opencollective": {
+      "id": 65242,
+      "name": "ants",
+      "slug": "ants",
+      "description": "🐜🐜🐜 A high-performance goroutine pool in Go, inspired by fasthttp.⚡️⚡️⚡️"
+    }
+  },
+  {
     "name": "apex",
     "packages": [
       {
@@ -1236,6 +1312,10 @@
       {
         "type": "nuget",
         "name": "ApprovalTests.EntityFramework"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.asp"
       }
     ],
     "github": {
@@ -1252,6 +1332,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "arrayy",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "voku/arrayy"
+      }
+    ],
+    "github": {
+      "repo": "voku/Arrayy"
+    },
+    "opencollective": {
+      "id": 64850,
+      "name": "Arrayy",
+      "slug": "arrayy",
+      "description": "🗃 Array manipulation library for PHP, called Arrayy!"
     }
   },
   {
@@ -3008,6 +3106,14 @@
       {
         "type": "npm",
         "name": "gulp-babel-minify"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/helper-create-regexp-features-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/plugin-syntax-top-level-await"
       }
     ],
     "opencollective": {
@@ -3612,6 +3718,18 @@
       {
         "type": "npm",
         "name": "valid-directory"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-config-bevry"
+      },
+      {
+        "type": "npm",
+        "name": "@bevry/hooks"
+      },
+      {
+        "type": "npm",
+        "name": "@bevry/memo"
       }
     ],
     "github": {
@@ -4813,6 +4931,24 @@
     }
   },
   {
+    "name": "cashify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "cashify"
+      }
+    ],
+    "github": {
+      "repo": "xxczaki/cashify"
+    },
+    "opencollective": {
+      "id": 56874,
+      "name": "Cashify",
+      "slug": "cashify",
+      "description": "💸 Lightweight currency conversion library, successor of money.js"
+    }
+  },
+  {
     "name": "catel",
     "opencollective": {
       "id": 16163,
@@ -5394,6 +5530,32 @@
     }
   },
   {
+    "name": "chakra-ui",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@chakra-ui/core"
+      },
+      {
+        "type": "npm",
+        "name": "@chakra-ui/theme"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-chakra-ui"
+      }
+    ],
+    "github": {
+      "repo": "chakra-ui/chakra-ui"
+    },
+    "opencollective": {
+      "id": 58637,
+      "name": "Chakra UI",
+      "slug": "chakra-ui",
+      "description": "⚡️Simple, Modular & Accessible UI Components for your React Applications"
+    }
+  },
+  {
     "name": "chalk",
     "github": {
       "org": "chalk"
@@ -5404,6 +5566,73 @@
         "name": "chalk"
       }
     ]
+  },
+  {
+    "name": "chalk",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ansi-regex"
+      },
+      {
+        "type": "npm",
+        "name": "ansi-styles"
+      },
+      {
+        "type": "npm",
+        "name": "chalk"
+      },
+      {
+        "type": "npm",
+        "name": "chalk-cli"
+      },
+      {
+        "type": "npm",
+        "name": "has-ansi"
+      },
+      {
+        "type": "npm",
+        "name": "has-ansi-cli"
+      },
+      {
+        "type": "npm",
+        "name": "slice-ansi"
+      },
+      {
+        "type": "npm",
+        "name": "strip-ansi"
+      },
+      {
+        "type": "npm",
+        "name": "strip-ansi-cli"
+      },
+      {
+        "type": "npm",
+        "name": "strip-ansi-stream"
+      },
+      {
+        "type": "npm",
+        "name": "supports-color"
+      },
+      {
+        "type": "npm",
+        "name": "supports-color-cli"
+      },
+      {
+        "type": "npm",
+        "name": "wrap-ansi"
+      }
+    ],
+    "github": {
+      "org": "chalk"
+    },
+    "opencollective": {
+      "id": 61262,
+      "name": "chalk",
+      "slug": "chalk",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "chart.js",
@@ -6646,6 +6875,28 @@
     }
   },
   {
+    "name": "cra-universal",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "babel-preset-cra-universal"
+      },
+      {
+        "type": "npm",
+        "name": "cra-universal"
+      }
+    ],
+    "github": {
+      "repo": "antonybudianto/cra-universal"
+    },
+    "opencollective": {
+      "id": 60470,
+      "name": "CRA Universal",
+      "slug": "cra-universal",
+      "description": "🌏 Create React App companion for universal app. No eject, zero config, full HMR, and more"
+    }
+  },
+  {
     "name": "create-react-app",
     "packages": [
       {
@@ -6683,6 +6934,14 @@
       {
         "type": "npm",
         "name": "react-scripts"
+      },
+      {
+        "type": "npm",
+        "name": "cra-template-typescript"
+      },
+      {
+        "type": "npm",
+        "name": "cra-template"
       }
     ],
     "github": {
@@ -7516,6 +7775,24 @@
     }
   },
   {
+    "name": "dante2",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "Dante2"
+      }
+    ],
+    "github": {
+      "repo": "michelson/dante2"
+    },
+    "opencollective": {
+      "id": 62583,
+      "name": "dante2",
+      "slug": "dante2",
+      "description": "A complete rewrite of dante editor in draft-js"
+    }
+  },
+  {
     "name": "darkreader",
     "packages": [
       {
@@ -8060,6 +8337,24 @@
     }
   },
   {
+    "name": "diet",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "diet"
+      }
+    ],
+    "github": {
+      "repo": "adamhalasz/diet"
+    },
+    "opencollective": {
+      "id": 70166,
+      "name": "diet",
+      "slug": "diet",
+      "description": "A tiny, fast and modular node.js web framework. Good for making fast & scalable apps and apis."
+    }
+  },
+  {
     "name": "dim",
     "packages": [
       {
@@ -8591,6 +8886,10 @@
       {
         "type": "npm",
         "name": "@docusaurus/plugin-ideal-image"
+      },
+      {
+        "type": "npm",
+        "name": "@docusaurus/types"
       }
     ],
     "github": {
@@ -9096,6 +9395,24 @@
     }
   },
   {
+    "name": "easy-peasy",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "easy-peasy"
+      }
+    ],
+    "github": {
+      "repo": "ctrlplusb/easy-peasy"
+    },
+    "opencollective": {
+      "id": 68168,
+      "name": "Easy Peasy",
+      "slug": "easy-peasy",
+      "description": "Vegetarian friendly state for React"
+    }
+  },
+  {
     "name": "easy-php",
     "packages": [
       {
@@ -9263,6 +9580,24 @@
           "totalDonations": 800
         }
       ]
+    }
+  },
+  {
+    "name": "editorskit",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "editorskit"
+      }
+    ],
+    "github": {
+      "repo": "phpbits/block-options"
+    },
+    "opencollective": {
+      "id": 59082,
+      "name": "EditorsKit",
+      "slug": "editorskit",
+      "description": "Page building toolkit for the WordPress Gutenberg block editor."
     }
   },
   {
@@ -9543,6 +9878,10 @@
       {
         "type": "npm",
         "name": "emma-cli"
+      },
+      {
+        "type": "npm",
+        "name": "create-emma"
       }
     ],
     "github": {
@@ -9846,6 +10185,10 @@
       {
         "type": "npm",
         "name": "typescript-eslint-parser"
+      },
+      {
+        "type": "npm",
+        "name": "@eslint/github-action"
       }
     ],
     "github": {
@@ -10531,6 +10874,24 @@
     }
   },
   {
+    "name": "fast-check",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "fast-check"
+      }
+    ],
+    "github": {
+      "repo": "dubzzz/fast-check"
+    },
+    "opencollective": {
+      "id": 57593,
+      "name": "fast-check",
+      "slug": "fast-check",
+      "description": "Property based testing framework for JavaScript (like QuickCheck) written in TypeScript"
+    }
+  },
+  {
     "name": "fast-xml-parser",
     "packages": [
       {
@@ -11180,6 +11541,24 @@
     }
   },
   {
+    "name": "firestorm",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "firebase-firestorm"
+      }
+    ],
+    "github": {
+      "repo": "lmcq/firebase-firestorm"
+    },
+    "opencollective": {
+      "id": 57239,
+      "name": "Firestorm",
+      "slug": "firestorm",
+      "description": "Firebase Firestorm is an ORM for Firestore which can be used with Typescript."
+    }
+  },
+  {
     "name": "flarum",
     "packages": [
       {
@@ -11440,6 +11819,22 @@
       {
         "type": "nuget",
         "name": "Anotar.NServiceBus.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "AssertMessage.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "EmptyConstructor.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "ExtraConstraints.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Virtuosity.Fody"
       }
     ],
     "github": {
@@ -11728,6 +12123,66 @@
       {
         "type": "npm",
         "name": "@friendsofflarum/create-flarum-extension"
+      },
+      {
+        "type": "composer",
+        "name": "reflar/doorman"
+      },
+      {
+        "type": "composer",
+        "name": "fof/geoip"
+      },
+      {
+        "type": "composer",
+        "name": "fof/github-autolink"
+      },
+      {
+        "type": "composer",
+        "name": "sijad/flarum-ext-github-autolink"
+      },
+      {
+        "type": "composer",
+        "name": "fof/linguist"
+      },
+      {
+        "type": "composer",
+        "name": "fof/nightmode"
+      },
+      {
+        "type": "composer",
+        "name": "reflar/nightmode"
+      },
+      {
+        "type": "composer",
+        "name": "fof/pretty-mail"
+      },
+      {
+        "type": "composer",
+        "name": "reflar/pretty-mail"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/sitemap"
+      },
+      {
+        "type": "composer",
+        "name": "fof/stopforumspam"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/telegram"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/terms"
+      },
+      {
+        "type": "composer",
+        "name": "fof/terms"
+      },
+      {
+        "type": "composer",
+        "name": "flagrow/user-directory"
       }
     ],
     "github": {
@@ -11866,6 +12321,30 @@
       {
         "type": "npm",
         "name": "react-intl"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/cli"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-formatjs"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-listformat"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-pluralrules"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/macro"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/ts-transformer"
       }
     ],
     "github": {
@@ -11883,6 +12362,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "formik",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "formik"
+      }
+    ],
+    "github": {
+      "repo": "jaredpalmer/formik"
+    },
+    "opencollective": {
+      "id": 61191,
+      "name": "Formik",
+      "slug": "formik",
+      "description": "Build forms in React, without the tears 😭 "
     }
   },
   {
@@ -12072,6 +12569,24 @@
         "yearlyBudget": 127432
       },
       "goals": []
+    }
+  },
+  {
+    "name": "gacp",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "gacp"
+      }
+    ],
+    "github": {
+      "repo": "vivaxy/gacp"
+    },
+    "opencollective": {
+      "id": 66819,
+      "name": "gacp",
+      "slug": "gacp",
+      "description": "💬Git add, commit, push with conventional-changelog and gitmoji."
     }
   },
   {
@@ -12524,6 +13039,18 @@
       {
         "type": "npm",
         "name": "gatsby-plugin-schema-snapshot"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-theme-blog-core"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-theme-blog"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-theme-notes"
       }
     ],
     "opencollective": {
@@ -13078,6 +13605,42 @@
     ]
   },
   {
+    "name": "gnet",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/panjf2000/gnet"
+      }
+    ],
+    "github": {
+      "repo": "panjf2000/gnet"
+    },
+    "opencollective": {
+      "id": 65243,
+      "name": "gnet",
+      "slug": "gnet",
+      "description": "🌐🐳 A high-performance, lightweight, non-blocking, event-driven networking framework written in pure Go."
+    }
+  },
+  {
+    "name": "go-admin",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/GoAdminGroup/go-admin"
+      }
+    ],
+    "github": {
+      "repo": "chenhg5/go-admin"
+    },
+    "opencollective": {
+      "id": 64654,
+      "name": "go-admin",
+      "slug": "go-admin",
+      "description": "a dataviz tool for golang developer which supports most framework"
+    }
+  },
+  {
     "name": "go-api-boilerplate",
     "packages": [
       {
@@ -13147,6 +13710,42 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "gojieba",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/yanyiwu/gojieba"
+      }
+    ],
+    "github": {
+      "repo": "yanyiwu/gojieba"
+    },
+    "opencollective": {
+      "id": 67269,
+      "name": "gojieba",
+      "slug": "gojieba",
+      "description": "\"结巴\"中文分词的Golang版本"
+    }
+  },
+  {
+    "name": "goodwork",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "iluminar/goodwork"
+      }
+    ],
+    "github": {
+      "repo": "iluminar/goodwork"
+    },
+    "opencollective": {
+      "id": 60423,
+      "name": "goodwork",
+      "slug": "goodwork",
+      "description": "Self hosted project management and collaboration tool powered by Laravel & VueJS"
     }
   },
   {
@@ -13272,6 +13871,40 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "gqless",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@gqless/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@gqless/logger"
+      },
+      {
+        "type": "npm",
+        "name": "@gqless/react"
+      },
+      {
+        "type": "npm",
+        "name": "@gqless/schema"
+      },
+      {
+        "type": "npm",
+        "name": "@gqless/utils"
+      }
+    ],
+    "github": {
+      "repo": "samdenty/gqless"
+    },
+    "opencollective": {
+      "id": 69233,
+      "name": "gqless",
+      "slug": "gqless",
+      "description": "A GraphQL client without queries ✨"
     }
   },
   {
@@ -13775,6 +14408,14 @@
       {
         "type": "npm",
         "name": "@gridsome/transformer-yaml"
+      },
+      {
+        "type": "npm",
+        "name": "@gridsome/source-strapi"
+      },
+      {
+        "type": "npm",
+        "name": "@gridsome/vue-remark"
       }
     ],
     "github": {
@@ -14850,6 +15491,24 @@
     ]
   },
   {
+    "name": "hls-vod",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hls-vod"
+      }
+    ],
+    "github": {
+      "repo": "mifi/hls-vod"
+    },
+    "opencollective": {
+      "id": 66241,
+      "name": "HLS VOD",
+      "slug": "hls-vod",
+      "description": "HTTP Live Streaming with on-the-fly encoding of any video file for Web/Apple TV/iPhone/iPad/iPod"
+    }
+  },
+  {
     "name": "hoaproject",
     "packages": [
       {
@@ -15340,6 +15999,10 @@
       {
         "type": "npm",
         "name": "hospitalrun-server-routes"
+      },
+      {
+        "type": "npm",
+        "name": "@hospitalrun/components"
       }
     ],
     "github": {
@@ -15881,6 +16544,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "immer",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "immer"
+      }
+    ],
+    "github": {
+      "repo": "immerjs/immer"
+    },
+    "opencollective": {
+      "id": 60035,
+      "name": "immer",
+      "slug": "immer",
+      "description": "Create the next immutable state by mutating the current one"
     }
   },
   {
@@ -16616,6 +17297,24 @@
     }
   },
   {
+    "name": "jekyll-admin",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll-admin"
+      }
+    ],
+    "github": {
+      "repo": "jekyll/jekyll-admin"
+    },
+    "opencollective": {
+      "id": 62190,
+      "name": "Jekyll Admin",
+      "slug": "jekyll-admin",
+      "description": "A Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites. "
+    }
+  },
+  {
     "name": "jekyll-assets",
     "packages": [
       {
@@ -17130,6 +17829,30 @@
       {
         "type": "npm",
         "name": "@jitesoft/yolog"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/group-by"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/sprintf"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog-email-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog-file-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog-sentry-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog-slack-plugin"
       }
     ],
     "github": {
@@ -19514,6 +20237,24 @@
     }
   },
   {
+    "name": "magnify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "jquery.magnify"
+      }
+    ],
+    "github": {
+      "repo": "nzbin/magnify"
+    },
+    "opencollective": {
+      "id": 64763,
+      "name": "magnify",
+      "slug": "magnify",
+      "description": "🖼 A jQuery plugin to view images just like in Windows. Browser support IE7+!"
+    }
+  },
+  {
     "name": "mahappsmetro",
     "opencollective": {
       "id": 15992,
@@ -19662,6 +20403,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "maplat",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@maplat/ui"
+      }
+    ],
+    "github": {
+      "repo": "code4nara/Maplat"
+    },
+    "opencollective": {
+      "id": 52384,
+      "name": "Maplat",
+      "slug": "maplat",
+      "description": "Maplat is the cool Historical Map/Illustrated Map Viewer.  "
     }
   },
   {
@@ -19840,6 +20599,24 @@
     }
   },
   {
+    "name": "material-table",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "material-table"
+      }
+    ],
+    "github": {
+      "repo": "mbrn/material-table"
+    },
+    "opencollective": {
+      "id": 68009,
+      "name": "material-table",
+      "slug": "material-table",
+      "description": "Datatable for React based on material-ui's table with additional features"
+    }
+  },
+  {
     "name": "material-ui",
     "edited": true,
     "packages": [
@@ -20000,6 +20777,42 @@
     }
   },
   {
+    "name": "mattn-anko",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/mattn/anko/vm"
+      }
+    ],
+    "github": {
+      "repo": "mattn/anko"
+    },
+    "opencollective": {
+      "id": 63867,
+      "name": "anko",
+      "slug": "mattn-anko",
+      "description": "Scriptable interpreter written in golang"
+    }
+  },
+  {
+    "name": "mattn-go-sqlite3",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/mattn/go-sqlite3"
+      }
+    ],
+    "github": {
+      "repo": "mattn/go-sqlite3"
+    },
+    "opencollective": {
+      "id": 63866,
+      "name": "go-sqlite3",
+      "slug": "mattn-go-sqlite3",
+      "description": "sqlite3 driver for go using database/sql"
+    }
+  },
+  {
     "name": "measurement-lab",
     "packages": [
       {
@@ -20057,6 +20870,14 @@
       {
         "type": "dep",
         "name": "github.com/m-lab/reboot-service"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/packet-headers"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/traceroute-caller"
       }
     ],
     "github": {
@@ -20531,6 +21352,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "microormdapperrepositories",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MicroOrm.Dapper.Repositories"
+      }
+    ],
+    "github": {
+      "repo": "phnx47/MicroOrm.Dapper.Repositories"
+    },
+    "opencollective": {
+      "id": 65066,
+      "name": "MicroOrm.Dapper.Repositories",
+      "slug": "microormdapperrepositories",
+      "description": "CRUD for Dapper"
     }
   },
   {
@@ -21781,6 +22620,64 @@
     }
   },
   {
+    "name": "nexrender",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@nexrender/core"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/action-copy"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/action-encode"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/action-upload"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/api"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/provider-ftp"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/provider-s3"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/server"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/types"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/worker"
+      }
+    ],
+    "github": {
+      "repo": "inlife/nexrender"
+    },
+    "opencollective": {
+      "id": 69191,
+      "name": "nexrender",
+      "slug": "nexrender",
+      "description": "📹  Data-driven render automation for After Effects"
+    }
+  },
+  {
     "name": "nextein",
     "packages": [
       {
@@ -22035,6 +22932,24 @@
     }
   },
   {
+    "name": "ngx-clipboard",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ngx-clipboard"
+      }
+    ],
+    "github": {
+      "repo": "maxisam/ngx-clipboard"
+    },
+    "opencollective": {
+      "id": 57195,
+      "name": "ngx-clipboard",
+      "slug": "ngx-clipboard",
+      "description": "A pure angular clipboard directive"
+    }
+  },
+  {
     "name": "ngx-infinite-scroll",
     "packages": [
       {
@@ -22083,6 +22998,24 @@
     }
   },
   {
+    "name": "ngx-md",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ngx-md"
+      }
+    ],
+    "github": {
+      "repo": "dimpu/ngx-md"
+    },
+    "opencollective": {
+      "id": 62887,
+      "name": "ngx-md",
+      "slug": "ngx-md",
+      "description": "Angular(ngx) directive for parsing markdown content in your web application."
+    }
+  },
+  {
     "name": "ngx-progressbar",
     "packages": [
       {
@@ -22108,6 +23041,42 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ngx-scrollbar",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ngx-scrollbar"
+      }
+    ],
+    "github": {
+      "repo": "MurhafSousli/ngx-scrollbar"
+    },
+    "opencollective": {
+      "id": 56749,
+      "name": "Angular Custom Scrollbar",
+      "slug": "ngx-scrollbar",
+      "description": "Custom overlay-scrollbars with native scrolling mechanism"
+    }
+  },
+  {
+    "name": "ngx-sharebuttons",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@ngx-share/core"
+      }
+    ],
+    "github": {
+      "repo": "MurhafSousli/ngx-sharebuttons"
+    },
+    "opencollective": {
+      "id": 58393,
+      "name": "Angular Share Buttons",
+      "slug": "ngx-sharebuttons",
+      "description": "Angular Share Buttons ☂"
     }
   },
   {
@@ -22720,6 +23689,24 @@
     ]
   },
   {
+    "name": "node-vault",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "node-vault"
+      }
+    ],
+    "github": {
+      "repo": "kr1sp1n/node-vault"
+    },
+    "opencollective": {
+      "id": 57040,
+      "name": "node-vault",
+      "slug": "node-vault",
+      "description": "Client for HashiCorp's Vault"
+    }
+  },
+  {
     "name": "nodebook",
     "packages": [
       {
@@ -22762,6 +23749,24 @@
         "balance": 1747,
         "yearlyBudget": 1747
       }
+    }
+  },
+  {
+    "name": "nodejieba",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "nodejieba"
+      }
+    ],
+    "github": {
+      "repo": "yanyiwu/nodejieba"
+    },
+    "opencollective": {
+      "id": 61406,
+      "name": "nodejieba",
+      "slug": "nodejieba",
+      "description": "\"结巴\"中文分词的Node.js版本"
     }
   },
   {
@@ -22941,6 +23946,24 @@
     }
   },
   {
+    "name": "npkill",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "npkill"
+      }
+    ],
+    "github": {
+      "repo": "voidcosmos/npkill"
+    },
+    "opencollective": {
+      "id": 56989,
+      "name": "npkill",
+      "slug": "npkill",
+      "description": "List and delete old and heavy node_modules with style. free up space!"
+    }
+  },
+  {
     "name": "npm-run-all",
     "packages": [
       {
@@ -23019,6 +24042,38 @@
       {
         "type": "nuget",
         "name": "NServiceBus.MsgPack"
+      },
+      {
+        "type": "nuget",
+        "name": "Newtonsoft.Json.Encryption"
+      },
+      {
+        "type": "nuget",
+        "name": "Rebus.Newtonsoft.Encryption"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Bond"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Hyperion"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Json"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.ProtoBufNet"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Utf8Json"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Wire"
       }
     ],
     "github": {
@@ -24015,6 +25070,10 @@
       {
         "type": "npm",
         "name": "hydra-login-consent-logout"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/ory/hive"
       }
     ],
     "github": {
@@ -25094,6 +26153,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "piano",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "omi-piano"
+      }
+    ],
+    "github": {
+      "repo": "Wscats/piano"
+    },
+    "opencollective": {
+      "id": 54567,
+      "name": "Piano",
+      "slug": "piano",
+      "description": "🎹用键盘8个键演奏一首蒲公英的约定送给996的自己或月亮代表我的心给七夕的她，非常简单~"
     }
   },
   {
@@ -26336,6 +27413,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "pterodactyl",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "pterodactyl/panel"
+      }
+    ],
+    "github": {
+      "repo": "Pterodactyl/Panel"
+    },
+    "opencollective": {
+      "id": 10006,
+      "name": "Pterodactyl Software",
+      "slug": "pterodactyl",
+      "description": "We are on a mission to rid the world of expensive, bloated, and inflexible software."
     }
   },
   {
@@ -28370,6 +29465,25 @@
     }
   },
   {
+    "name": "react-select",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-select"
+      }
+    ],
+    "github": {
+      "repo": "JedWatson/react-select"
+    },
+    "opencollective": {
+      "id": 68155,
+      "name": "react-select",
+      "slug": "react-select",
+      "description": null,
+      "pledge": true
+    }
+  },
+  {
     "name": "react-slick",
     "packages": [
       {
@@ -29458,6 +30572,14 @@
       {
         "type": "npm",
         "name": "rnv"
+      },
+      {
+        "type": "npm",
+        "name": "renative-template-kitchen-sink"
+      },
+      {
+        "type": "npm",
+        "name": "@rnv/deploy-docker"
       }
     ],
     "github": {
@@ -30381,6 +31503,10 @@
       {
         "type": "npm",
         "name": "saber-plugin-search"
+      },
+      {
+        "type": "npm",
+        "name": "saber-plugin-code-copy"
       }
     ],
     "github": {
@@ -30878,6 +32004,149 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "signalk",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@signalk/aisreporter"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/calibration"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/charts-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/freeboard-sk"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/github-create-release"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/instrumentpanel"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/maptracker"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/n2k-signalk"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/nmea0183-utilities"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/node-red-embedded"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/playground"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/sailgauge"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/set-system-time"
+      },
+      {
+        "type": "npm",
+        "name": "signalk-derived-data"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/client"
+      },
+      {
+        "type": "npm",
+        "name": "signalk-multiplexer"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/signalk-node-red"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/nmea0183-signalk"
+      },
+      {
+        "type": "npm",
+        "name": "signalk-server"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/server-admin"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/signalk-to-nmea0183"
+      },
+      {
+        "type": "npm",
+        "name": "signalk-to-nmea2000"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/zones"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/simple-gpx"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/simplegauges"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/simulatorplugin"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/sk-simple-token-security"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/sk-simple-token-security-config"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/signalk-schema"
+      },
+      {
+        "type": "npm",
+        "name": "signalk-testclient"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/vedirect-serial-usb"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/signalk-ws-provider"
+      }
+    ],
+    "github": {
+      "org": "signalk"
+    },
+    "opencollective": {
+      "id": 67364,
+      "name": "signalk",
+      "slug": "signalk",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -35647,6 +36916,10 @@
       {
         "type": "npm",
         "name": "@storybook/rax"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/web-components"
       }
     ],
     "opencollective": {
@@ -37088,6 +38361,10 @@
       {
         "type": "npm",
         "name": "@tarojs/taro-quickapp"
+      },
+      {
+        "type": "npm",
+        "name": "@tarojs/taro-jd"
       }
     ],
     "github": {
@@ -37268,6 +38545,18 @@
       {
         "type": "composer",
         "name": "hyn/multi-tenant"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-configs"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/affects-filesystems"
+      },
+      {
+        "type": "composer",
+        "name": "tenancy/hooks-migration"
       }
     ],
     "github": {
@@ -37351,6 +38640,24 @@
         "yearlyBudget": 53752
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "theme-next",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hexo-theme-next"
+      }
+    ],
+    "github": {
+      "repo": "theme-next/hexo-theme-next"
+    },
+    "opencollective": {
+      "id": 54165,
+      "name": "NexT – theme for Hexo",
+      "slug": "theme-next",
+      "description": "Elegant and powerful theme for Hexo."
     }
   },
   {
@@ -39792,6 +41099,10 @@
       {
         "type": "npm",
         "name": "remark-lint-no-unneeded-full-reference-link"
+      },
+      {
+        "type": "npm",
+        "name": "babel-plugin-html-attributes-to-jsx"
       }
     ],
     "github": {
@@ -40766,6 +42077,22 @@
       {
         "type": "npm",
         "name": "@vuetify/vuex-cognito-module"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-cli"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-essentials"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-storybook"
+      },
+      {
+        "type": "npm",
+        "name": "eslint-plugin-vuetify"
       }
     ],
     "github": {
