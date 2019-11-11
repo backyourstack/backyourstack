@@ -152,7 +152,7 @@ const BackMyStack = ({ onClickBackMyStack, saving }) => {
             onClick={onClickBackMyStack}
             disabled={saving}
           >
-            Back My Stack
+            {saving ? 'Saving...' : 'Back My Stack'}
           </button>
         </div>
       </div>
