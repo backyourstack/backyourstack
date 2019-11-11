@@ -254,14 +254,8 @@ nextApp.prepare().then(() => {
 
   server.get('/:id/backing.json', async (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    let excludedRepos;
-    if (req.query.excludedRepos) {
-      excludedRepos = JSON.parse(req.query.excludedRepos);
-    }
 
-    const profileData = await getProfileData(req.params.id, accessToken, {
-      excludedRepos,
-    });
+    const profileData = await getProfileData(req.params.id, accessToken);
     const { recommendations, opencollectiveAccount } = profileData;
 
     const backing = recommendations
