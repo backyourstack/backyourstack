@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import NProgress from 'nprogress';
 import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
@@ -59,6 +60,7 @@ export default class Files extends React.Component {
       files: props.files,
       dependencies: props.dependencies,
       recommendations: props.recommendations,
+      saving: false,
     };
     this.showBackMyStack =
       props.showBackMyStack === 'true' ||
@@ -96,6 +98,8 @@ export default class Files extends React.Component {
   };
 
   handleBackMyStack = async () => {
+    NProgress.start();
+    this.setState({ saving: true });
     try {
       const savedFileUrl = await this.saveFileToS3();
       const uuid = savedFileUrl.Key.split('/')[0];
@@ -103,7 +107,11 @@ export default class Files extends React.Component {
         id: uuid,
         type: 'file',
       });
+      this.setState({ saving: false });
+      NProgress.done();
     } catch (err) {
+      this.setState({ saving: false });
+      NProgress.done();
       console.error(err);
     }
   };
@@ -336,7 +344,10 @@ export default class Files extends React.Component {
             {count > 0 && (
               <Fragment>
                 {this.showBackMyStack && (
-                  <BackMyStack onClickBackMyStack={this.handleBackMyStack} />
+                  <BackMyStack
+                    saving={this.state.saving}
+                    onClickBackMyStack={this.handleBackMyStack}
+                  />
                 )}
                 {!section && (
                   <RecommendationList recommendations={recommendations} />

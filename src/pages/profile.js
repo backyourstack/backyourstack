@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import NProgress from 'nprogress';
 import NextLink from 'next/link';
 import { get } from 'lodash';
 
@@ -99,6 +100,7 @@ export default class Profile extends React.Component {
   }
 
   handleBackMyStack = async () => {
+    NProgress.start();
     this.setState({ saving: true });
 
     try {
@@ -108,8 +110,11 @@ export default class Profile extends React.Component {
         id: id,
         type: 'profile',
       });
+      this.setState({ saving: false });
+      NProgress.done();
     } catch (err) {
       this.setState({ saving: false });
+      NProgress.done();
       console.error(err);
     }
   };
