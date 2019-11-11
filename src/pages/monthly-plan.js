@@ -80,8 +80,8 @@ export default class MonthlyPlan extends React.Component {
     if (host.indexOf('localhost') > -1) {
       protocol = 'http:';
     }
+    const excludedRepos = query.excludedRepos || null;
     const baseUrl = `${protocol}//${host}`;
-    const excludedRepos = query.excludedRepos || [];
     let recommendations = [];
     if (type === 'file') {
       // sessionFiles is optional and can be null (always on the client)
@@ -100,7 +100,6 @@ export default class MonthlyPlan extends React.Component {
       baseUrl,
       recommendations,
       type,
-      excludedRepos,
       next: query.next || '/',
     };
   }
@@ -111,7 +110,6 @@ export default class MonthlyPlan extends React.Component {
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
-    excludedRepos: PropTypes.array,
   };
 
   constructor(props) {
@@ -136,15 +134,11 @@ export default class MonthlyPlan extends React.Component {
   }
 
   getContributionUrlData() {
-    const { type, baseUrl, id, excludedRepos } = this.props;
-    let jsonUrl =
+    const { type, baseUrl, id } = this.props;
+    const jsonUrl =
       type === 'file'
         ? `${baseUrl}/${id}/file/backing.json`
         : `${baseUrl}/${id}/profile/backing.json`;
-
-    if (type === 'profile' && excludedRepos.length !== 0) {
-      jsonUrl = `${jsonUrl}?excludedRepos=${JSON.stringify(excludedRepos)}`;
-    }
 
     return { jsonUrl };
   }

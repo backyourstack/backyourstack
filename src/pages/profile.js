@@ -140,7 +140,7 @@ export default class Profile extends React.Component {
       const params = { id, type: 'profile' };
 
       if (excludedRepos.length !== 0) {
-        params.excludedRepos = excludedRepos;
+        params.excludedRepos = JSON.stringify(excludedRepos);
       }
       const searchParams = new URLSearchParams(params);
 
