@@ -32,12 +32,7 @@ import {
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import {
-  uploadFiles,
-  getFiles,
-  getProfileSavedData,
-  saveProfile,
-} from '../lib/s3';
+import { uploadFiles, getData, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -293,36 +288,14 @@ nextApp.prepare().then(() => {
     res.send(backing);
   });
 
-  server.get('/:id/file/backing.json', async (req, res) => {
-    if (!req.params.id) {
-      return res.status(400).send('Please provide the file key');
-    }
-    let data;
-
-    try {
-      data = await getFiles(req.params.id);
-
-      if (!data) {
-        return res.status(404).send('No file found');
-      }
-
-      const { recommendations } = await getFilesData(data);
-      const backing = getDependenciesAvailableForBacking(recommendations);
-      return res.status(200).send(backing);
-    } catch (err) {
-      console.error(err);
-      return res.status(400).send('Unable to fetch file');
-    }
-  });
-
-  server.get('/:id/profile/backing.json', async (req, res) => {
+  server.get('/:id/:type/backing.json', async (req, res) => {
     if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
     }
     const id = req.params.id;
 
     try {
-      const { recommendations } = await getProfileSavedData(id);
+      const { recommendations } = await getData(id);
       const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
     } catch (err) {

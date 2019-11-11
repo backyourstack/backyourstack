@@ -95,7 +95,7 @@ export const getObjectsMetadata = async id => {
   return JSON.parse(Body.toString('utf-8'));
 };
 
-export const getProfileSavedData = async id => {
+export const getData = async id => {
   const data = await getFiles(id);
   if (!data) {
     return null;
