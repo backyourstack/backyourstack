@@ -12,13 +12,12 @@ const s3 = new S3({
 const Bucket = process.env.AWS_S3_BUCKET;
 
 export const uploadFiles = async files => {
-  const metadata = { objectKeys: [], files: {} };
+  const metadata = { objectKeys: [] };
   const identifier = uuidv1();
   for (const id in files) {
     const key = `${identifier}/${files[id].name}`;
     const body = { [id]: files[id] };
     const data = await saveFileToS3(key, body);
-    metadata.files[id] = { url: data.Location };
     metadata.objectKeys = [...metadata.objectKeys, data.Key];
   }
   const folderKey = `${identifier}/dependencies.json`;
@@ -37,13 +36,10 @@ export const saveFileToS3 = (Key, Body) => {
 };
 
 export const saveProfile = async (profileId, repos) => {
-  const metadata = { profile: true, files: {}, objectKeys: [] };
+  const metadata = { objectKeys: [] };
   for (const repo of repos) {
     if (repo.files) {
       const objectKeys = await saveProfileFiles(profileId, repo);
-      metadata.files[repo.name] = {
-        private: repo.private,
-      };
       metadata.objectKeys = [...metadata.objectKeys, ...objectKeys];
     }
   }
