@@ -1,5 +1,7 @@
 import fetch from 'cross-fetch';
 
+import { getFile } from './s3';
+
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
 import { fetchAccountWithOrders } from './opencollective';
@@ -133,3 +135,14 @@ export function emailSubscribe(email, profile) {
     }),
   });
 }
+
+export const getProfileOrder = async id => {
+  try {
+    const file = await getFile(`${id}/order.json`);
+    if (file) {
+      return JSON.parse(file);
+    }
+  } catch (err) {
+    return;
+  }
+};
