@@ -122,6 +122,24 @@ async function fetchProfile(login, accessToken) {
   return null;
 }
 
+async function fetchOrgMemebership(orgName, login, accessToken) {
+  logger.verbose('Fetch organization membership', {
+    login: login,
+    withAccessToken: !!accessToken,
+  });
+
+  const membership = await fetchWithOctokit(
+    'orgs.getMembership',
+    { username: login, org: orgName },
+    accessToken,
+  ).catch(silentError);
+  if (membership) {
+    return membership;
+  }
+
+  return null;
+}
+
 async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
   logger.verbose('Fetch repos for profile', {
     login: profile.login,
@@ -144,7 +162,7 @@ async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
     // https://octokit.github.io/rest.js/#octokit-routes-repos-list
     getReposPath = 'repos.list';
     getReposParameters = { username: profile.login, affiliation: 'owner' };
-  } else if (profile.type == 'Organization') {
+  } else if (profile.type === 'Organization') {
     // https://octokit.github.io/rest.js/#api-Repos-listForOrg
     getReposPath = 'repos.listForOrg';
     getReposParameters = { org: profile.login };
@@ -259,4 +277,5 @@ export {
   donateToken,
   searchFilesFromRepo,
   silentError,
+  fetchOrgMemebership,
 };
