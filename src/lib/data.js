@@ -1,4 +1,3 @@
-/* eslint-disable require-atomic-updates */
 import fetch from 'cross-fetch';
 
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';

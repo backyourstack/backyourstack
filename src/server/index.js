@@ -32,7 +32,7 @@ import {
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import { uploadFiles, getData, saveProfile } from '../lib/s3';
+import { uploadFiles, getSavedFilesData, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -141,17 +141,17 @@ nextApp.prepare().then(() => {
   server.get('/data/getProfileData', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
-    const profileOpts = { loggedInUsername };
+    const profileOptions = { loggedInUsername };
 
     if (!accessToken) {
       res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
     }
 
     if (req.query.excludedRepos) {
-      profileOpts.excludedRepos = JSON.parse(req.query.excludedRepos);
+      profileOptions.excludedRepos = JSON.parse(req.query.excludedRepos);
     }
 
-    getProfileData(req.query.id, accessToken, profileOpts).then(data =>
+    getProfileData(req.query.id, accessToken, profileOptions).then(data =>
       res.json(data),
     );
   });
@@ -282,14 +282,14 @@ nextApp.prepare().then(() => {
     res.send(backing);
   });
 
-  server.get('/:id/:type/backing.json', async (req, res) => {
+  server.get('/:id/files/backing.json', async (req, res) => {
     if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
     }
     const id = req.params.id;
 
     try {
-      const { recommendations } = await getData(id);
+      const { recommendations } = await getSavedFilesData(id);
       const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
     } catch (err) {
