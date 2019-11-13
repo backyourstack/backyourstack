@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
 import { get } from 'lodash';
 
-import { fetchJson } from '../lib/fetch';
+import { getFilesData, getProfileData } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -52,24 +52,6 @@ const suggestedAmounts = [
   },
 ];
 
-const getProfileData = (id, accessToken, excludedRepos) => {
-  const params = { id };
-  if (excludedRepos) {
-    params.excludedRepos = excludedRepos;
-  }
-  const searchParams = new URLSearchParams(params);
-  return process.env.IS_CLIENT
-    ? fetchJson(`/data/getProfileData?${searchParams}`)
-    : import('../lib/data').then(m =>
-        m.getProfileData(id, accessToken, { excludedRepos }),
-      );
-};
-
-const getFilesData = sessionFiles =>
-  process.env.IS_CLIENT
-    ? fetchJson('/data/getFilesData')
-    : import('../lib/data').then(m => m.getFilesData(sessionFiles));
-
 export default class MonthlyPlan extends React.Component {
   static async getInitialProps({ req, query }) {
     const id = query.id;
@@ -91,7 +73,9 @@ export default class MonthlyPlan extends React.Component {
     } else if (type === 'profile') {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
-      const data = await getProfileData(query.id, accessToken, excludedRepos);
+      const data = await getProfileData(query.id, accessToken, {
+        excludedRepos,
+      });
       recommendations = data.recommendations;
     }
 

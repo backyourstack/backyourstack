@@ -42,23 +42,19 @@ export async function getProfileData(id, accessToken, options = {}) {
   ).then(repos => {
     return Promise.all(
       repos.map(async repo => {
-        if (options.excludedRepos) {
-          if (options.excludedRepos.indexOf(repo.name) === -1) {
-            repo.dependencies = await getDependenciesFromGithubRepo(
-              repo,
-              accessToken,
-            );
-            repo.checked = true;
-          } else {
-            repo.checked = false;
-            repo.dependencies = [];
-          }
-        } else {
+        if (
+          !options.excludedRepos ||
+          (options.excludedRepos &&
+            options.excludedRepos.indexOf(repo.name) === -1)
+        ) {
           repo.dependencies = await getDependenciesFromGithubRepo(
             repo,
             accessToken,
           );
           repo.checked = true;
+        } else {
+          repo.checked = false;
+          repo.dependencies = [];
         }
         return repo;
       }),
