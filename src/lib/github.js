@@ -122,7 +122,7 @@ async function fetchProfile(login, accessToken) {
   return null;
 }
 
-async function fetchOrgMemebership(orgName, login, accessToken) {
+async function fetchOrgMembership(orgName, login, accessToken) {
   logger.verbose('Fetch organization membership', {
     login: login,
     withAccessToken: !!accessToken,
@@ -277,5 +277,5 @@ export {
   donateToken,
   searchFilesFromRepo,
   silentError,
-  fetchOrgMemebership,
+  fetchOrgMembership,
 };

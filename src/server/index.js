@@ -32,6 +32,7 @@ import {
   getSavedSelectedDependencies,
   getSavedFilesData,
   emailSubscribe,
+  getProfileOrder,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
@@ -40,7 +41,9 @@ import {
   saveProfile,
   saveProfileOrder,
   saveSelectedDependencies,
+  getObjectsMetadata,
 } from '../lib/s3';
+import { fetchOrgMembership } from '../lib/github';
 
 const {
   PORT,
@@ -93,10 +96,7 @@ nextApp.prepare().then(() => {
 
   server.get('/logout', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(
-      GITHUB_CLIENT_ID,
-      GITHUB_CLIENT_SECRET,
-    )(
+    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {
@@ -233,14 +233,52 @@ nextApp.prepare().then(() => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
 
+    if (!loggedInUsername || !accessToken) {
+      return res.status(401).send('You have to sign in to do this');
+    }
+
     const data = await getProfileData(id, accessToken, {
       loggedInUsername,
       excludedRepos,
     });
+    const profile = data.profile;
+    const metadata = await getObjectsMetadata(id);
+    const profileOrder = await getProfileOrder(id);
+    // Check if the profile has been saved before
+    if (
+      metadata &&
+      (profileOrder && profileOrder.triggeredBy !== loggedInUsername)
+    ) {
+      if (profile.type === 'User' && loggedInUsername !== profile.login) {
+        return res
+          .status(401)
+          .send('You can only edit profile connected to your GitHub account.');
+      }
+
+      if (profile.type === 'Organization') {
+        const membership = await fetchOrgMembership(
+          profile.login,
+          loggedInUsername,
+          accessToken,
+        );
+        if (
+          !membership ||
+          membership.state !== 'active' ||
+          membership.role !== 'admin'
+        ) {
+          return res
+            .status(401)
+            .send(
+              'You have to be an active admin of the organization update organization profile.',
+            );
+        }
+      }
+    }
 
     const repositories = data.repos.filter(
       repo => excludedRepos.indexOf(repo.name) === -1,
     );
+
     for (const repository of repositories) {
       let files = await fetchDependenciesFileContent(repository, accessToken);
       if (files.length) {
@@ -255,11 +293,7 @@ nextApp.prepare().then(() => {
         continue;
       }
     }
-    const savedId = await saveProfile(
-      data.profile.login,
-      repositories,
-      excludedRepos,
-    );
+    const savedId = await saveProfile(data.profile.login, repositories);
     return res.status(200).send({ id: savedId });
   });
 

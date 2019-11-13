@@ -21,7 +21,12 @@ export function getProfileData(id, accessToken, { excludedRepos }) {
 export function fetchJson(url, params = {}) {
   params.credentials = 'same-origin';
   return fetch(url, params)
-    .then(res => res.json())
+    .then(async res => {
+      if (res.ok) {
+        return res.json();
+      }
+      throw new Error(await res.text());
+    })
     .then(fetchDebug);
 }
 
