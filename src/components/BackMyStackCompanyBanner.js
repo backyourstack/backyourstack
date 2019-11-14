@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const BackMyStackCompanyBanner = ({ saving, onClickBackMyStack }) => {
+const BackMyStackCompanyBanner = ({ name }) => {
   return (
     <Fragment>
       <style jsx>
@@ -35,6 +35,9 @@ const BackMyStackCompanyBanner = ({ saving, onClickBackMyStack }) => {
             letter-spacing: -0.012em;
             margin: 0;
           }
+          .buttonWrapper {
+            width: 169px;
+          }
           .backMyStackBtn {
             background: #5c48e0;
             font-size: 14px;
@@ -59,29 +62,30 @@ const BackMyStackCompanyBanner = ({ saving, onClickBackMyStack }) => {
             }
             .companyBannerTextWrapper h2 {
               font-size: 28px;
-              line-height: 36px;
+              line-height: 30px;
+              margin-bottom: 10px;
             }
             .backMyStackBtn {
-              margin-top: 20px;
+              margin-top: 8px;
             }
           }
         `}
       </style>
       <div className="companyBannerWrapper">
         <div className="companyBannerTextWrapper">
-          <h2>Referee Pro® is backing their stack!</h2>
+          <h2>
+            {name}
+            <br />
+            is backing their stack!
+          </h2>
           <p>
             Backing 234 dependencies with a $1000 monthly budget. $5000 donated
             so far.
           </p>
           <div className="buttonWrapper">
-            <button
-              className="bigButton backMyStackBtn"
-              onClick={onClickBackMyStack}
-              disabled={saving}
-            >
-              {saving ? 'Saving...' : 'Back Your Stack too'}
-            </button>
+            <a className="bigButton backMyStackBtn" href="/">
+              Back Your Stack too
+            </a>
           </div>
         </div>
       </div>
@@ -90,8 +94,7 @@ const BackMyStackCompanyBanner = ({ saving, onClickBackMyStack }) => {
 };
 
 BackMyStackCompanyBanner.propTypes = {
-  onClickBackMyStack: PropTypes.func,
-  saving: PropTypes.bool,
+  name: PropTypes.string.isRequired,
 };
 
 export default BackMyStackCompanyBanner;

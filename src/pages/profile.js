@@ -382,10 +382,7 @@ export default class Profile extends React.Component {
                 />
               )}
               {this.state.showCompanyBanner && (
-                <BackMyStackCompanyBanner
-                  saving={this.state.saving}
-                  onClickBackMyStack={this.handleBackMyStack}
-                />
+                <BackMyStackCompanyBanner name={profile.name} />
               )}
               {(!section || section === 'recommendations') && (
                 <RecommendationList
