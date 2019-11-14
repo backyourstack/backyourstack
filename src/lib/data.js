@@ -118,7 +118,12 @@ export const getSavedFilesData = async id => {
   if (!files) {
     return null;
   }
-  return getFilesData(files);
+  const data = await getFilesData(files);
+  let order = await getProfileOrder(id);
+  if (order) {
+    order = await fetchOrder(order.id);
+  }
+  return { ...data, order };
 };
 
 export function emailSubscribe(email, profile) {
