@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
-import { get } from 'lodash';
+import { get, pick, map } from 'lodash';
 
-import { getFilesData, getProfileData } from '../lib/fetch';
+import { getFilesData, getProfileData, postJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -103,6 +103,8 @@ export default class MonthlyPlan extends React.Component {
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
+      recommendations:
+        this.getActiveCollectiveRecommendations(props.recommendations) || [],
     };
   }
 
@@ -115,6 +117,17 @@ export default class MonthlyPlan extends React.Component {
         mobileToggleExpanded: false,
       });
     }
+  }
+
+  getActiveCollectiveRecommendations(recommendations) {
+    const opencollectiveRecommendations = recommendations
+      .filter(r => r.opencollective)
+      .filter(r => r.opencollective.pledge !== true)
+      .map(r => {
+        r.checked = true;
+        return r;
+      });
+    return opencollectiveRecommendations;
   }
 
   getContributionUrl = () => {
@@ -148,10 +161,26 @@ export default class MonthlyPlan extends React.Component {
     });
   };
 
-  hanldeAmountSuggestionToggle = () => {
+  handleAmountSuggestionToggle = () => {
     const { mobileToggleExpanded } = this.state;
     this.setState({
       mobileToggleExpanded: !mobileToggleExpanded,
+    });
+  };
+
+  handleDependencySelection = ({ target }) => {
+    let { recommendations } = this.state;
+    const name = target.name;
+    const checked = target.checked;
+    recommendations = recommendations.map(r => {
+      if (r.name === name) {
+        r.checked = checked;
+      }
+      return r;
+    });
+
+    this.setState({
+      recommendations,
     });
   };
 
@@ -163,6 +192,40 @@ export default class MonthlyPlan extends React.Component {
       return selectedAmount.totalAmount;
     } else {
       return 0;
+    }
+  }
+
+  getSelectedDependencies() {
+    const { recommendations } = this.state;
+    const selectedDependencies = recommendations.filter(r => r.checked);
+    // The recommended collectives are all selected by default
+    // we're checking if the user made any changes so we can keep track
+    // of the selected collectives.
+    if (selectedDependencies.length !== recommendations.length) {
+      return map(selectedDependencies, dependency => {
+        const { opencollective, github } = dependency;
+        return {
+          weight: 100,
+          opencollective: pick(opencollective, ['id', 'name', 'slug']),
+          github: github,
+        };
+      });
+    }
+    return null;
+  }
+
+  async saveSelectedDependencies() {
+    const selectedDependencies = this.getSelectedDependencies();
+    const { id } = this.props;
+    if (selectedDependencies) {
+      try {
+        await postJson('/selectedDependencies/save', {
+          id,
+          selectedDependencies,
+        });
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
 
@@ -438,7 +501,7 @@ export default class MonthlyPlan extends React.Component {
           })}
           <div
             className="amountCard mobileSuggestedAmountToggle"
-            onClick={this.hanldeAmountSuggestionToggle}
+            onClick={this.handleAmountSuggestionToggle}
           >
             {mobileToggleExpanded ? (
               <div className="arrowIconWrapper">
@@ -456,16 +519,17 @@ export default class MonthlyPlan extends React.Component {
   }
 
   render() {
-    const { loggedInUser, recommendations } = this.props;
+    const { loggedInUser } = this.props;
+    const { recommendations } = this.state;
     const totalAmount = this.getTotalAmount();
     const disableContributionLink = totalAmount === 0;
-    const opencollectiveRecommendations = recommendations
-      .filter(r => r.opencollective)
-      .filter(r => r.opencollective.pledge !== true);
     const dispatchedValue = totalAmount;
-    const singleValue = (
-      dispatchedValue / opencollectiveRecommendations.length
-    ).toFixed(2);
+    const selectedDependencies = recommendations.filter(
+      r => r.checked === true,
+    );
+    const singleValue = (dispatchedValue / selectedDependencies.length).toFixed(
+      2,
+    );
 
     return (
       <Fragment>
@@ -523,8 +587,6 @@ export default class MonthlyPlan extends React.Component {
                 font-weight: 400;
               }
               table {
-                width: 100%;
-                table-layout: fixed;
                 border-collapse: collapse;
               }
               table th,
@@ -543,13 +605,18 @@ export default class MonthlyPlan extends React.Component {
                 box-shadow: inset 0px 2px 2px rgba(20, 20, 20, 0.08);
                 border-radius: 3px;
               }
-              table tr th:nth-child(2),
-              table tr td:nth-child(2) {
-                text-align: right;
-              }
               table tr th:nth-child(1),
               table tr td:nth-child(1) {
+                width: 10%;
+              }
+              table tr th:nth-child(3),
+              table tr td:nth-child(3) {
+                text-align: right;
+              }
+              table tr th:nth-child(2),
+              table tr td:nth-child(2) {
                 text-align: left;
+                width: 95%;
               }
               table th {
                 text-transform: uppercase;
@@ -643,29 +710,37 @@ export default class MonthlyPlan extends React.Component {
                 </p>
                 <table>
                   <tr>
+                    <th></th>
                     <th>Collective</th>
                     <th>Amount</th>
                   </tr>
-                  {recommendations
-                    .filter(r => r.opencollective)
-                    .filter(r => r.opencollective.pledge !== true)
-                    .map(recommendation => (
-                      <tr key={recommendation.name}>
-                        <td className="collectiveColumn">
-                          <a
-                            href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
-                          >
-                            {recommendation.opencollective.name}
-                          </a>{' '}
-                          <span className="collectiveDescription">
-                            {recommendation.opencollective.description}
-                          </span>
-                        </td>
-                        <td className="sharableAmount">
-                          ${singleValue} <sup>*</sup>
-                        </td>
-                      </tr>
-                    ))}
+                  {recommendations.map(recommendation => (
+                    <tr key={recommendation.name}>
+                      <td>
+                        <input
+                          type="checkbox"
+                          onChange={event =>
+                            this.handleDependencySelection(event)
+                          }
+                          name={recommendation.name}
+                          checked={recommendation.checked}
+                        />
+                      </td>
+                      <td className="collectiveColumn">
+                        <a
+                          href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
+                        >
+                          {recommendation.opencollective.name}
+                        </a>{' '}
+                        <span className="collectiveDescription">
+                          {recommendation.opencollective.description}
+                        </span>
+                      </td>
+                      <td className="sharableAmount">
+                        ${singleValue} <sup>*</sup>
+                      </td>
+                    </tr>
+                  ))}
                 </table>
                 <p className="notice-p">
                   * Final amount distributed may vary slightly depending on
@@ -675,6 +750,7 @@ export default class MonthlyPlan extends React.Component {
                   className={classnames('button bigButton continueButton', {
                     disableContributionLink,
                   })}
+                  onClick={() => this.saveSelectedDependencies()}
                   href={`${this.getContributionUrl()}`}
                 >
                   Continue on Open Collective

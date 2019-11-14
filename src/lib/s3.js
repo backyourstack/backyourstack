@@ -98,6 +98,12 @@ export const getObjectsMetadata = async id => {
   return JSON.parse(Body.toString('utf-8'));
 };
 
+export const saveSelectedDependencies = async (id, selectedDependencies) => {
+  const metadata = await getObjectsMetadata(id);
+  metadata.selectedDependencies = selectedDependencies;
+  return saveFileToS3(`${id}/dependencies.json`, metadata);
+};
+
 export const saveProfileOrder = (id, order) => {
   return saveFileToS3(`${id}/order.json`, order);
-};
+}

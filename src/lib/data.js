@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 
-import { getFile, getFiles } from './s3';
+import { getFile, getFiles, getObjectsMetadata } from './s3';
 
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
@@ -124,6 +124,14 @@ export const getSavedFilesData = async id => {
     order = await fetchOrder(order.id);
   }
   return { ...data, order };
+};
+
+export const getSavedSelectedDependencies = async id => {
+  const { selectedDependencies } = await getObjectsMetadata(id);
+  if (selectedDependencies) {
+    return selectedDependencies;
+  }
+  return null;
 };
 
 export function emailSubscribe(email, profile) {
