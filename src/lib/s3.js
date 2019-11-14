@@ -3,7 +3,6 @@ import { S3 } from 'aws-sdk';
 import uuidv1 from 'uuid/v1';
 
 import logger from '../logger';
-import { getFilesData } from './data';
 
 const s3 = new S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -99,12 +98,4 @@ export const getObjectsMetadata = async id => {
   const params = { Bucket, Key: `${id}/dependencies.json` };
   const { Body } = await s3.getObject(params).promise();
   return JSON.parse(Body.toString('utf-8'));
-};
-
-export const getSavedFilesData = async id => {
-  const data = await getFiles(id);
-  if (!data) {
-    return null;
-  }
-  return getFilesData(data);
 };

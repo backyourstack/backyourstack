@@ -69,7 +69,6 @@ export default class Profile extends React.Component {
     this.state = {
       saving: false,
       repos: props.repos,
-      showCompanyBanner: true,
     };
 
     this.showBackMyStack =
@@ -187,6 +186,7 @@ export default class Profile extends React.Component {
       opencollectiveAccount,
       recommendations,
       dependencies,
+      order,
       pathname,
       loggedInUser,
     } = this.props;
@@ -375,14 +375,19 @@ export default class Profile extends React.Component {
             </aside>
 
             <main>
-              {this.showBackMyStack && !this.state.showCompanyBanner && (
+              {this.showBackMyStack && !(order && opencollectiveAccount) && (
                 <BackMyStack
                   saving={this.state.saving}
                   onClickBackMyStack={this.handleBackMyStack}
                 />
               )}
-              {this.state.showCompanyBanner && (
-                <BackMyStackCompanyBanner name={profile.name} />
+              {this.showBackMyStack && (order && opencollectiveAccount) && (
+                <BackMyStackCompanyBanner
+                  profile={profile}
+                  order={order}
+                  recommendations={recommendations}
+                  opencollectiveAccount={opencollectiveAccount}
+                />
               )}
               {(!section || section === 'recommendations') && (
                 <RecommendationList

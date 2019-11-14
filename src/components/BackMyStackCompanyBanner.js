@@ -1,7 +1,33 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { get, uniq, intersection } from 'lodash';
 
-const BackMyStackCompanyBanner = ({ name }) => {
+const getTotalDonations = opencollectiveAccount => {
+  const orders = get(opencollectiveAccount, 'orders.nodes', []);
+  const backyourstackOrder = orders.find(
+    node => node.toAccount.slug === 'backyourstack',
+  );
+  return backyourstackOrder.totalDonations.value;
+};
+
+const getTotalBacking = (opencollectiveAccount, recommendations) => {
+  const orders = get(opencollectiveAccount, 'orders.nodes', []);
+  const recommendationsSlugs = recommendations
+    .filter(r => r.opencollective)
+    .map(r => r.opencollective.slug);
+  const orderSlugs = uniq(orders.map(order => order.toAccount.slug));
+  const backing = intersection(recommendationsSlugs, orderSlugs);
+  return backing.length;
+};
+
+const BackMyStackCompanyBanner = ({
+  profile,
+  order,
+  recommendations,
+  opencollectiveAccount,
+}) => {
+  const totalDonations = getTotalDonations(opencollectiveAccount);
+  const totalBacking = getTotalBacking(opencollectiveAccount, recommendations);
   return (
     <Fragment>
       <style jsx>
@@ -74,13 +100,19 @@ const BackMyStackCompanyBanner = ({ name }) => {
       <div className="companyBannerWrapper">
         <div className="companyBannerTextWrapper">
           <h2>
-            {name}
+            {profile.name}
             <br />
-            is backing their stack!
+            are backing their stack!
           </h2>
           <p>
-            Backing 234 dependencies with a $1000 monthly budget. $5000 donated
-            so far.
+            Backing {totalBacking} dependencies with a $
+            {Math.round(order.totalAmount / 100, 2)} monthly budget.
+            <br />
+            {totalDonations && (
+              <span>
+                ${Math.round(order.totalAmount / 100, 2)} donated so far.
+              </span>
+            )}
           </p>
           <div className="buttonWrapper">
             <a className="bigButton backMyStackBtn" href="/">
@@ -94,7 +126,10 @@ const BackMyStackCompanyBanner = ({ name }) => {
 };
 
 BackMyStackCompanyBanner.propTypes = {
-  name: PropTypes.string.isRequired,
+  profile: PropTypes.object.isRequired,
+  order: PropTypes.object.isRequired,
+  recommendations: PropTypes.object.isRequired,
+  opencollectiveAccount: PropTypes.object,
 };
 
 export default BackMyStackCompanyBanner;

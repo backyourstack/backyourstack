@@ -1,10 +1,10 @@
 import fetch from 'cross-fetch';
 
-import { getFile } from './s3';
+import { getFile, getFiles } from './s3';
 
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
-import { fetchAccountWithOrders } from './opencollective';
+import { fetchAccountWithOrders, fetchOrder } from './opencollective';
 
 import {
   addProjectToDependencies,
@@ -70,12 +70,18 @@ export async function getProfileData(id, accessToken, options = {}) {
     dependencies,
   );
 
+  let order = await getProfileOrder(id);
+  if (order) {
+    order = await fetchOrder(order.id);
+  }
+
   return {
     profile,
     opencollectiveAccount,
     repos,
     dependencies,
     recommendations,
+    order,
   };
 }
 
@@ -106,6 +112,14 @@ export async function getFilesData(sessionFiles) {
 
   return { files, repos, dependencies, recommendations };
 }
+
+export const getSavedFilesData = async id => {
+  const files = await getFiles(id);
+  if (!files) {
+    return null;
+  }
+  return getFilesData(files);
+};
 
 export function emailSubscribe(email, profile) {
   const username = 'anystring';
