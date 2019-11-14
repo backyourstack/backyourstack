@@ -6,6 +6,7 @@
   "rules": {
     "no-console": "warn",
     "require-await": "warn",
-    "no-constant-condition": ["warn", { "checkLoops": false }]
+    "no-constant-condition": ["warn", { "checkLoops": false }],
+    "require-atomic-updates": "warn"
   }
 }

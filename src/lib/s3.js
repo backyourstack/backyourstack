@@ -79,6 +79,7 @@ export const getFiles = async id => {
     const params = { Bucket, Key: key };
     const { Body } = await s3.getObject(params).promise();
     const file = JSON.parse(Body.toString('utf-8'));
+
     Object.assign(data, file);
   }
   return data;
@@ -90,7 +91,7 @@ export const getObjectsMetadata = async id => {
   return JSON.parse(Body.toString('utf-8'));
 };
 
-export const getProfileSavedData = async id => {
+export const getSavedFilesData = async id => {
   const data = await getFiles(id);
   if (!data) {
     return null;
