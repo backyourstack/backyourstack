@@ -17,6 +17,7 @@ import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
 import SubscribeForm from '../components/SubscribeForm';
 import BackMyStack from '../components/BackMyStack';
+import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -185,6 +186,7 @@ export default class Profile extends React.Component {
       opencollectiveAccount,
       recommendations,
       dependencies,
+      order,
       pathname,
       loggedInUser,
     } = this.props;
@@ -373,10 +375,18 @@ export default class Profile extends React.Component {
             </aside>
 
             <main>
-              {this.showBackMyStack && (
+              {this.showBackMyStack && !(order && opencollectiveAccount) && (
                 <BackMyStack
                   saving={this.state.saving}
                   onClickBackMyStack={this.handleBackMyStack}
+                />
+              )}
+              {this.showBackMyStack && (order && opencollectiveAccount) && (
+                <BackMyStackCompanyBanner
+                  profile={profile}
+                  order={order}
+                  recommendations={recommendations}
+                  opencollectiveAccount={opencollectiveAccount}
                 />
               )}
               {(!section || section === 'recommendations') && (

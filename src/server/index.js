@@ -18,7 +18,7 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
-import { dispatchOrder, fetchOrder } from '../lib/opencollective';
+import { dispatchOrder } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -29,12 +29,12 @@ import {
   searchUsers,
   getProfileData,
   getFilesData,
-  getProfileOrder,
+  getSavedFilesData,
   emailSubscribe,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import { uploadFiles, getSavedFilesData, saveProfile } from '../lib/s3';
+import { uploadFiles, saveProfile } from '../lib/s3';
 
 const {
   PORT,
@@ -301,16 +301,13 @@ nextApp.prepare().then(() => {
   });
 
   server.get('/:id/badge', async (req, res) => {
-    const profile = await getSavedFilesData(req.params.id);
-    if (!profile) {
+    const data = await getSavedFilesData(req.params.id);
+    if (!data) {
       return res.status(400).send('Unable to fetch profile.');
     }
-    const backing = getDependenciesAvailableForBacking(profile.recommendations);
+    const { recommendations, order } = data;
+    const backing = getDependenciesAvailableForBacking(recommendations);
 
-    let order = await getProfileOrder(req.params.id);
-    if (order) {
-      order = await fetchOrder(order.id);
-    }
     if (!order || order.status !== 'ACTIVE') {
       return res
         .status(400)

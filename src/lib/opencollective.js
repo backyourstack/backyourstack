@@ -10,7 +10,7 @@ const getAccountOrdersQuery = `query account($slug: String!) {
   account(slug: $slug) {
     name
     slug
-    orders(status: ACTIVE) {
+    orders(status: [ACTIVE, PAID]) {
       nodes {
         amount {
           value
@@ -23,6 +23,7 @@ const getAccountOrdersQuery = `query account($slug: String!) {
         }
         frequency
         createdAt
+        status
       }
     }
   }
