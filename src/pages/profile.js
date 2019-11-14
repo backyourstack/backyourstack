@@ -17,6 +17,7 @@ import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
 import SubscribeForm from '../components/SubscribeForm';
 import BackMyStack from '../components/BackMyStack';
+import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -68,6 +69,7 @@ export default class Profile extends React.Component {
     this.state = {
       saving: false,
       repos: props.repos,
+      showCompanyBanner: true,
     };
 
     this.showBackMyStack =
@@ -373,8 +375,14 @@ export default class Profile extends React.Component {
             </aside>
 
             <main>
-              {this.showBackMyStack && (
+              {this.showBackMyStack && !this.state.showCompanyBanner && (
                 <BackMyStack
+                  saving={this.state.saving}
+                  onClickBackMyStack={this.handleBackMyStack}
+                />
+              )}
+              {this.state.showCompanyBanner && (
+                <BackMyStackCompanyBanner
                   saving={this.state.saving}
                   onClickBackMyStack={this.handleBackMyStack}
                 />
