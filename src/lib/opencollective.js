@@ -1,3 +1,5 @@
+import logger from '../logger';
+
 import cache from './cache';
 
 const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
@@ -23,6 +25,14 @@ const getAccountOrdersQuery = `query account($slug: String!) {
         createdAt
       }
     }
+  }
+}`;
+
+const getOrderQuery = `query Order($orderId: Int!) {
+  Order(id: $orderId) {
+    id
+    totalAmount
+    status
   }
 }`;
 
@@ -150,6 +160,17 @@ function fetchAccountWithOrders(slug) {
     });
 }
 
+function fetchOrder(orderId) {
+  logger.debug(`Fetching order from Open Collective: ${orderId}`);
+  return graphqlRequest(baseUrl, getOrderQuery, { orderId })
+    .then(data => {
+      return data.Order;
+    })
+    .catch(() => {
+      return null;
+    });
+}
+
 function fetchCollectiveWithMembers(slug) {
   const cacheKey = `collective_with_members_${slug}`;
 
@@ -183,6 +204,7 @@ function dispatchOrder(id) {
 
 export {
   fetchAccountWithOrders,
+  fetchOrder,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
   dispatchOrder,

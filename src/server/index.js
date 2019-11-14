@@ -3,6 +3,7 @@ import '../env';
 import path from 'path';
 import crypto from 'crypto';
 
+import fs from 'fs-extra';
 import express from 'express';
 import expressSession from 'express-session';
 import cookieParser from 'cookie-parser';
@@ -17,7 +18,7 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
-import { dispatchOrder } from '../lib/opencollective';
+import { dispatchOrder, fetchOrder } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -28,6 +29,7 @@ import {
   searchUsers,
   getProfileData,
   getFilesData,
+  getProfileOrder,
   emailSubscribe,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
@@ -296,6 +298,36 @@ nextApp.prepare().then(() => {
       console.error(err);
       return res.status(400).send('Unable to fetch file');
     }
+  });
+
+  server.get('/:id/badge', async (req, res) => {
+    const profile = await getSavedFilesData(req.params.id);
+    if (!profile) {
+      return res.status(400).send('Unable to fetch profile.');
+    }
+    const backing = getDependenciesAvailableForBacking(profile.recommendations);
+
+    let order = await getProfileOrder(req.params.id);
+    if (order) {
+      order = await fetchOrder(order.id);
+    }
+    if (!order || order.status !== 'ACTIVE') {
+      return res
+        .status(400)
+        .send(
+          'Unable to fetch BackYourStack suscription on Open Collective, not found or not active.',
+        );
+    }
+
+    const badge = await fs.readFile(
+      path.join(__dirname, '..', 'badges', 'badge.svg'),
+      'utf8',
+    );
+    res.setHeader('Content-Type', 'image/svg+xml;charset=utf-8');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
+    return res
+      .status(200)
+      .send(badge.replace('{COUNT}', (backing && backing.length) || 0));
   });
 
   server.post('/order/dispatch', async (req, res) => {

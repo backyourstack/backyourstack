@@ -1,7 +1,9 @@
+import Promise from 'bluebird';
 import { S3 } from 'aws-sdk';
 import uuidv1 from 'uuid/v1';
 
-import { getFilesData } from '../lib/data';
+import logger from '../logger';
+import { getFilesData } from './data';
 
 const s3 = new S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -67,22 +69,30 @@ export const getObjectList = id => {
   return s3.listObjects(params).promise();
 };
 
+export const getFile = async key => {
+  logger.debug(`Fetching file from S3: ${key}`);
+  const params = { Bucket, Key: key };
+  const { Body } = await s3.getObject(params).promise();
+  return Body.toString('utf-8');
+};
+
 export const getFiles = async id => {
   const { objectKeys } = await getObjectsMetadata(id);
-  const data = {};
 
   if (objectKeys.length === 0) {
     return {};
   }
 
-  for (const key of objectKeys) {
-    const params = { Bucket, Key: key };
-    const { Body } = await s3.getObject(params).promise();
-    const file = JSON.parse(Body.toString('utf-8'));
+  const files = await Promise.map(
+    objectKeys,
+    key =>
+      getFile(key)
+        .then(rawFile => JSON.parse(rawFile))
+        .catch(),
+    { concurrency: 10 },
+  );
 
-    Object.assign(data, file);
-  }
-  return data;
+  return files.reduce((acc, file) => (file ? { ...acc, ...file } : acc), {});
 };
 
 export const getObjectsMetadata = async id => {

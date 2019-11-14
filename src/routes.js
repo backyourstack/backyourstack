@@ -12,7 +12,8 @@ routes
   .add('files', '/files/:section(dependencies|repositories)?')
   .add('monthly-plan', '/monthly-plan')
   .add('monthly-plan-confirmation', '/monthly-plan/confirmation')
-  .add('profile', '/:id/:section(dependencies|repositories)?');
+  .add('profile', '/:id/:section(dependencies|repositories)?')
+  .add('badge', '/:id/badge/:type(default|compact)?');
 
 export default routes;
 
