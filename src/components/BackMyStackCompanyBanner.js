@@ -95,6 +95,27 @@ const BackMyStackCompanyBanner = ({
               margin-top: 8px;
             }
           }
+          @media screen and (max-width: 768px),
+            @media screen and (max-width: 500px) {
+            .companyBannerWrapper {
+              background: url('/static/img/mobile-company-banner.png');
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              width: 100%;
+              height: 312px;
+            }
+            .companyBannerTextWrapper {
+              width: 80%;
+            }
+            .companyBannerTextWrapper h2 {
+              font-size: 24px;
+              line-height: 32px;
+              margin-bottom: 15px;
+            }
+            .backMyStackBtn {
+              margin-top: 72px;
+            }
+          }
         `}
       </style>
       <div className="companyBannerWrapper">
