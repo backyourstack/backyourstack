@@ -130,5 +130,9 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/backyourstack"
   }
 }
