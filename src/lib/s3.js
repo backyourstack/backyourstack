@@ -37,27 +37,25 @@ export const saveFileToS3 = (Key, Body) => {
 };
 
 export const saveProfile = async (profileId, repos) => {
-  const metadata = { objectKeys: [] };
-  for (const repo of repos) {
-    if (repo.files) {
-      const objectKeys = await saveProfileFiles(profileId, repo);
-      metadata.objectKeys = [...metadata.objectKeys, ...objectKeys];
-    }
-  }
-  const key = `${profileId}/dependencies.json`;
-  const savedFile = await saveFileToS3(key, metadata);
-  return savedFile.Key.split('/')[0];
+  repos = repos.filter(repo => repo.files);
+
+  const objectKeys = await Promise.map(repos, repo => saveProfileFiles(repo), {
+    concurrency: 10,
+  }).reduce((acc, keys) => [...acc, ...keys], []);
+
+  const dependencyFile = await saveFileToS3(`${profileId}/dependencies.json`, {
+    objectKeys,
+  });
+  return dependencyFile.Key.split('/')[0];
 };
 
-export const saveProfileFiles = async (profileId, repo) => {
-  const savedObjectKeys = [];
-  for (const file of repo.files) {
-    const key = `${repo.full_name}/${file.name}`;
-    const body = { [file.id]: file };
-    const data = await saveFileToS3(key, body);
-    savedObjectKeys.push(data.Key);
-  }
-  return savedObjectKeys;
+export const saveProfileFiles = repo => {
+  return Promise.map(repo.files, async file => {
+    const data = await saveFileToS3(`${repo.full_name}/${file.name}`, {
+      [file.id]: file,
+    });
+    return data.Key;
+  });
 };
 
 export const getObjectList = id => {
