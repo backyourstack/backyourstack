@@ -381,7 +381,7 @@ export default class Profile extends React.Component {
                   onClickBackMyStack={this.handleBackMyStack}
                 />
               )}
-              {this.showBackMyStack && (order && opencollectiveAccount) && (
+              {this.showBackMyStack && order && opencollectiveAccount && (
                 <BackMyStackCompanyBanner
                   profile={profile}
                   order={order}

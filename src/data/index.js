@@ -9,7 +9,11 @@ export function getCollectives() {
 export function saveCollectives(collectives) {
   return fs.writeFile(
     path.join(__dirname, 'collectives.json'),
-    JSON.stringify(collectives.sort((a, b) => a.id - b.id), null, 2),
+    JSON.stringify(
+      collectives.sort((a, b) => a.id - b.id),
+      null,
+      2,
+    ),
   );
 }
 
