@@ -37,11 +37,11 @@ export const saveFileToS3 = (Key, Body) => {
 };
 
 export const saveProfile = async (profileId, repos) => {
-  const objectKeys = await Promise.filter(repos, repo => repo.files, {
+  repos = repos.filter(repo => repo.files);
+
+  const objectKeys = await Promise.map(repos, repo => saveProfileFiles(repo), {
     concurrency: 10,
-  })
-    .map(repo => saveProfileFiles(repo), { concurrency: 10 })
-    .reduce((acc, keys) => [...acc, ...keys], []);
+  }).reduce((acc, keys) => [...acc, ...keys], []);
 
   const dependencyFile = await saveFileToS3(`${profileId}/dependencies.json`, {
     objectKeys,
@@ -50,16 +50,12 @@ export const saveProfile = async (profileId, repos) => {
 };
 
 export const saveProfileFiles = repo => {
-  return Promise.map(
-    repo.files,
-    async file => {
-      const data = await saveFileToS3(`${repo.full_name}/${file.name}`, {
-        [file.id]: file,
-      });
-      return data.Key;
-    },
-    { concurrency: 5 },
-  );
+  return Promise.map(repo.files, async file => {
+    const data = await saveFileToS3(`${repo.full_name}/${file.name}`, {
+      [file.id]: file,
+    });
+    return data.Key;
+  });
 };
 
 export const getObjectList = id => {
