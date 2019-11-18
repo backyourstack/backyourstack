@@ -8,6 +8,7 @@ import { get } from 'lodash';
 import { Link, Router } from '../routes';
 
 import { postJson, getProfileData } from '../lib/fetch';
+import { getDependenciesAvailableForBacking } from '../lib/utils';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -69,6 +70,7 @@ export default class Profile extends React.Component {
     this.state = {
       saving: false,
       repos: props.repos,
+      error: null,
     };
 
     this.showBackMyStack =
@@ -83,6 +85,10 @@ export default class Profile extends React.Component {
   getNumberOfAnalyzedRepositories() {
     const { repos } = this.props;
     return repos.filter(r => r.checked).length;
+  }
+
+  getAvailableDependencies(recommendations) {
+    return getDependenciesAvailableForBacking(recommendations);
   }
 
   twitterText = () => 'BackYourStack! https://backyourstack.com/';
@@ -187,6 +193,9 @@ export default class Profile extends React.Component {
     } = this.props;
 
     const { repos } = this.state;
+    const disableBackMyStackButton =
+      this.getAvailableDependencies(recommendations).length === 0;
+
     return (
       <div className="Page ProfilePage">
         <style jsx global>
@@ -374,6 +383,7 @@ export default class Profile extends React.Component {
                 <BackMyStack
                   saving={this.state.saving}
                   onClickBackMyStack={this.handleBackMyStack}
+                  disabled={disableBackMyStackButton}
                 />
               )}
               {this.showBackMyStack && order && opencollectiveAccount && (

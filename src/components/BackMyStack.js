@@ -1,7 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const BackMyStack = ({ onClickBackMyStack, saving }) => {
+const BackMyStack = ({ onClickBackMyStack, saving, disabled }) => {
+  let tooltips;
+  if (disabled) {
+    tooltips =
+      'Button is disabled because no dependency is available for backing within selected repositories.';
+  }
+
   return (
     <Fragment>
       <style jsx>
@@ -150,7 +156,8 @@ const BackMyStack = ({ onClickBackMyStack, saving }) => {
           <button
             className="bigButton backMyStackBtn"
             onClick={onClickBackMyStack}
-            disabled={saving}
+            disabled={disabled || saving}
+            title={tooltips}
           >
             {saving ? 'Saving...' : 'Back My Stack'}
           </button>
@@ -163,6 +170,7 @@ const BackMyStack = ({ onClickBackMyStack, saving }) => {
 BackMyStack.propTypes = {
   onClickBackMyStack: PropTypes.func,
   saving: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 export default BackMyStack;
