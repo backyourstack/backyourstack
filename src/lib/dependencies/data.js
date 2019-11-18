@@ -38,6 +38,10 @@ export function getDependenciesFromGithubRepo(githubRepo, githubAccessToken) {
 export function fetchDependenciesFileContent(githubRepo, githubAccessToken) {
   const fileType = languageToFileType[githubRepo.language];
   const manager = dependencyManagers[fileType];
+  if (!manager) {
+    return [];
+  }
+
   return getFirstMatchingFiles(manager, githubRepo, githubAccessToken).catch(
     err => {
       logger.error(
@@ -88,6 +92,9 @@ export function loadDependenciesFromGithubRepo(
   githubAccessToken,
 ) {
   const manager = dependencyManagers[fileType];
+  if (!manager) {
+    return [];
+  }
 
   return getFirstMatchingFiles(manager, githubRepo, githubAccessToken)
     .then(files => files.map(manager.dependencies))
