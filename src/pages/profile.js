@@ -133,11 +133,6 @@ export default class Profile extends React.Component {
         params.excludedRepos = JSON.stringify(excludedRepos);
       }
       const searchParams = new URLSearchParams(params);
-
-      await Router.pushRoute('monthly-plan', {
-        id: id,
-        type: 'profile',
-      });
       this.setState({ saving: false });
       NProgress.done();
       await Router.pushRoute(`/monthly-plan?${searchParams}`);
