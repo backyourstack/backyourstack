@@ -96,7 +96,10 @@ nextApp.prepare().then(() => {
 
   server.get('/logout', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
+    fetchWithBasicAuthentication(
+      GITHUB_CLIENT_ID,
+      GITHUB_CLIENT_SECRET,
+    )(
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {
@@ -247,7 +250,8 @@ nextApp.prepare().then(() => {
     // Check if the profile has been saved before
     if (
       metadata &&
-      (profileOrder && profileOrder.triggeredBy !== loggedInUsername)
+      profileOrder &&
+      profileOrder.triggeredBy !== loggedInUsername
     ) {
       if (profile.type === 'User' && loggedInUsername !== profile.login) {
         return res
