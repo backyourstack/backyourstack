@@ -34,7 +34,7 @@ import {
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import { uploadFiles, saveProfile } from '../lib/s3';
+import { uploadFiles, saveProfile, saveProfileOrder } from '../lib/s3';
 
 const {
   PORT,
@@ -87,10 +87,7 @@ nextApp.prepare().then(() => {
 
   server.get('/logout', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(
-      GITHUB_CLIENT_ID,
-      GITHUB_CLIENT_SECRET,
-    )(
+    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {
@@ -302,8 +299,15 @@ nextApp.prepare().then(() => {
 
   server.post('/order/dispatch', async (req, res) => {
     const orderId = get(req, 'body.orderId');
+    const id = get(req, 'body.id');
+    const loggedInUsername = get(req, 'session.passport.user.username');
+
     try {
       const dispatchedOrders = await dispatchOrder(orderId);
+      await saveProfileOrder(id, {
+        order: { id: orderId },
+        triggeredBy: loggedInUsername,
+      });
       return res.status(200).send(dispatchedOrders);
     } catch (err) {
       console.error(err);

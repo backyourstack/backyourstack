@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 export default class MonthlyPlanConfirmation extends React.Component {
   static getInitialProps({ query }) {
     return {
+      id: query.id,
       next: query.next || '/',
       orderId: query.orderId || null,
     };
@@ -17,6 +18,7 @@ export default class MonthlyPlanConfirmation extends React.Component {
   static propTypes = {
     loggedInUser: PropTypes.object,
     orderId: PropTypes.string,
+    id: PropTypes.string,
   };
 
   constructor(props) {
@@ -38,8 +40,9 @@ export default class MonthlyPlanConfirmation extends React.Component {
 
   dispatchOrder(orderId) {
     this.setState({ status: 'processing' });
+    const { id } = this.props;
 
-    postJson('/order/dispatch', { orderId }).then(data => {
+    postJson('/order/dispatch', { id, orderId }).then(data => {
       if (data.error) {
         this.setState({
           status: 'failure',
