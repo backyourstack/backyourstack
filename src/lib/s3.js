@@ -97,3 +97,7 @@ export const getObjectsMetadata = async id => {
   const { Body } = await s3.getObject(params).promise();
   return JSON.parse(Body.toString('utf-8'));
 };
+
+export const saveProfileOrder = (id, order) => {
+  return saveFileToS3(`${id}/order.json`, order);
+};

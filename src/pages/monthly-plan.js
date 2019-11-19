@@ -125,7 +125,7 @@ export default class MonthlyPlan extends React.Component {
         data: JSON.stringify({
           jsonUrl: `${baseUrl}/${id}/backing.json`,
         }),
-        redirect: `${baseUrl}/monthly-plan/confirmation`,
+        redirect: `${baseUrl}/${id}/monthly-plan/confirmation`,
         amount: this.getTotalAmount(),
         skipStepDetails: 'true',
       });
