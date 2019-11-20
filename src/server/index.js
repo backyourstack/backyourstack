@@ -96,10 +96,7 @@ nextApp.prepare().then(() => {
 
   server.get('/logout', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(
-      GITHUB_CLIENT_ID,
-      GITHUB_CLIENT_SECRET,
-    )(
+    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {
@@ -236,23 +233,23 @@ nextApp.prepare().then(() => {
     const accessToken = get(req, 'session.passport.user.accessToken');
     const loggedInUsername = get(req, 'session.passport.user.username');
 
-    if (!loggedInUsername || !accessToken) {
-      return res.status(401).send('You have to sign in to do this');
-    }
-
     const data = await getProfileData(id, accessToken, {
       loggedInUsername,
       excludedRepos,
     });
     const profile = data.profile;
-    const metadata = await getObjectsMetadata(id);
+    const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
     const profileOrder = await getProfileOrder(id);
     // Check if the profile has been saved before
     if (
-      metadata &&
+      dependenciesFile &&
       profileOrder &&
       profileOrder.triggeredBy !== loggedInUsername
     ) {
+      if (!loggedInUsername || !accessToken) {
+        return res.status(401).send('You have to sign in to edit profile');
+      }
+
       if (profile.type === 'User' && loggedInUsername !== profile.login) {
         return res
           .status(401)
