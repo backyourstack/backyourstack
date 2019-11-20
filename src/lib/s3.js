@@ -106,4 +106,4 @@ export const saveSelectedDependencies = async (id, selectedDependencies) => {
 
 export const saveProfileOrder = (id, order) => {
   return saveFileToS3(`${id}/order.json`, order);
-}
+};

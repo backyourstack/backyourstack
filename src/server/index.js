@@ -35,7 +35,12 @@ import {
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import { uploadFiles, saveProfile, saveProfileOrder, saveSelectedDependencies } from '../lib/s3';
+import {
+  uploadFiles,
+  saveProfile,
+  saveProfileOrder,
+  saveSelectedDependencies,
+} from '../lib/s3';
 
 const {
   PORT,
