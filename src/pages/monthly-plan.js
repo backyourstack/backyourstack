@@ -214,7 +214,8 @@ export default class MonthlyPlan extends React.Component {
     return null;
   }
 
-  async saveSelectedDependencies() {
+  saveSelectedDependencies = async event => {
+    event.preventDefault();
     const selectedDependencies = this.getSelectedDependencies();
     const { id } = this.props;
     if (selectedDependencies) {
@@ -223,11 +224,12 @@ export default class MonthlyPlan extends React.Component {
           id,
           selectedDependencies,
         });
+        window.location.replace(this.getContributionUrl());
       } catch (err) {
         console.error(err);
       }
     }
-  }
+  };
 
   renderFormattedAmount(amount, currencySymbol) {
     return (
@@ -641,6 +643,7 @@ export default class MonthlyPlan extends React.Component {
                 width: 200px;
                 margin: 50px auto 20px;
                 background: #3a2fac;
+                cursor: pointer;
               }
               .continueButton:hover {
                 background: #3a2fac;
@@ -750,7 +753,7 @@ export default class MonthlyPlan extends React.Component {
                   className={classnames('button bigButton continueButton', {
                     disableContributionLink,
                   })}
-                  onClick={() => this.saveSelectedDependencies()}
+                  onClick={this.saveSelectedDependencies}
                   href={`${this.getContributionUrl()}`}
                 >
                   Continue on Open Collective
