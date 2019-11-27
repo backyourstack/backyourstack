@@ -120,13 +120,6 @@ export default class Profile extends React.Component {
   }
 
   handleBackMyStack = async () => {
-    if (!this.props.loggedInUser) {
-      this.setState({
-        error: 'You need to sign in to back your stack',
-      });
-      return;
-    }
-
     NProgress.start();
     this.setState({ saving: true });
 

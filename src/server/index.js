@@ -244,11 +244,7 @@ nextApp.prepare().then(() => {
     const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
     const profileOrder = await getProfileOrder(id);
     // Check if the profile has been saved before
-    if (
-      dependenciesFile &&
-      profileOrder &&
-      profileOrder.triggeredBy !== loggedInUsername
-    ) {
+    if (dependenciesFile && profileOrder) {
       if (!loggedInUsername || !accessToken) {
         return res.status(401).send('You have to sign in to edit profile');
       }
@@ -273,7 +269,7 @@ nextApp.prepare().then(() => {
           return res
             .status(401)
             .send(
-              'You have to be an active admin of the organization update organization profile.',
+              'You need to be an active admin of this organization to update profile.',
             );
         }
       }
