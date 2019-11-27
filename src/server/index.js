@@ -29,12 +29,18 @@ import {
   searchUsers,
   getProfileData,
   getFilesData,
+  getSavedSelectedDependencies,
   getSavedFilesData,
   emailSubscribe,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
-import { uploadFiles, saveProfile, saveProfileOrder } from '../lib/s3';
+import {
+  uploadFiles,
+  saveProfile,
+  saveProfileOrder,
+  saveSelectedDependencies,
+} from '../lib/s3';
 
 const {
   PORT,
@@ -257,6 +263,16 @@ nextApp.prepare().then(() => {
     return res.status(200).send({ id: savedId });
   });
 
+  server.post('/selectedDependencies/save', async (req, res) => {
+    const id = get(req, 'body.id');
+    const selectedDependencies = get(req, 'body.selectedDependencies');
+    const savedObjectInfo = await saveSelectedDependencies(
+      id,
+      selectedDependencies,
+    );
+    return res.status(200).send(savedObjectInfo);
+  });
+
   server.get('/:id/backing.json', async (req, res) => {
     if (!req.params.id) {
       return res.status(400).send('Please provide the file key');
@@ -264,6 +280,12 @@ nextApp.prepare().then(() => {
     const id = req.params.id;
 
     try {
+      const selectedDependencies = await getSavedSelectedDependencies(id);
+      // Return selected dependencies directly if available
+      if (selectedDependencies) {
+        return res.status(200).send(selectedDependencies);
+      }
+
       const { recommendations } = await getSavedFilesData(id);
       const backing = getDependenciesAvailableForBacking(recommendations);
       return res.status(200).send(backing);
