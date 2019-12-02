@@ -244,7 +244,11 @@ nextApp.prepare().then(() => {
     const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
     const profileOrder = await getProfileOrder(id);
     // Check if the profile has been saved before
-    if (dependenciesFile && profileOrder) {
+    if (
+      dependenciesFile &&
+      profileOrder &&
+      profileOrder.triggeredBy !== loggedInUsername
+    ) {
       if (!loggedInUsername || !accessToken) {
         return res.status(401).send('You have to sign in to edit profile');
       }
