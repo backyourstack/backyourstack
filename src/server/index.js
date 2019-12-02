@@ -323,14 +323,18 @@ nextApp.prepare().then(() => {
   });
 
   server.post('/order/dispatch', async (req, res) => {
+    const loggedInUsername = get(req, 'session.passport.user.username');
     const orderId = get(req, 'body.orderId');
     const id = get(req, 'body.id');
+    const order = { id: orderId };
+
+    if (loggedInUsername) {
+      order.triggeredBy = loggedInUsername;
+    }
 
     try {
       const dispatchedOrders = await dispatchOrder(orderId);
-      await saveProfileOrder(id, {
-        id: orderId,
-      });
+      await saveProfileOrder(id, order);
       return res.status(200).send(dispatchedOrders);
     } catch (err) {
       console.error(err);
