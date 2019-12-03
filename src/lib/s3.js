@@ -94,8 +94,12 @@ export const getFiles = async id => {
 
 export const getObjectsMetadata = async id => {
   const params = { Bucket, Key: `${id}/dependencies.json` };
-  const { Body } = await s3.getObject(params).promise();
-  return JSON.parse(Body.toString('utf-8'));
+  try {
+    const { Body } = await s3.getObject(params).promise();
+    return JSON.parse(Body.toString('utf-8'));
+  } catch (err) {
+    return null;
+  }
 };
 
 export const saveSelectedDependencies = async (id, selectedDependencies) => {

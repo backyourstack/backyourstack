@@ -32,6 +32,7 @@ import {
   getSavedSelectedDependencies,
   getSavedFilesData,
   emailSubscribe,
+  getProfileOrder,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
@@ -40,7 +41,9 @@ import {
   saveProfile,
   saveProfileOrder,
   saveSelectedDependencies,
+  getObjectsMetadata,
 } from '../lib/s3';
+import { fetchOrgMembership } from '../lib/github';
 
 const {
   PORT,
@@ -237,10 +240,49 @@ nextApp.prepare().then(() => {
       loggedInUsername,
       excludedRepos,
     });
+    const profile = data.profile;
+    const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
+    const profileOrder = await getProfileOrder(id);
+    // Check if the profile has been saved before
+    if (
+      dependenciesFile &&
+      profileOrder &&
+      profileOrder.triggeredBy !== loggedInUsername
+    ) {
+      if (!loggedInUsername || !accessToken) {
+        return res.status(401).send('You have to sign in to edit profile');
+      }
+
+      if (profile.type === 'User' && loggedInUsername !== profile.login) {
+        return res
+          .status(401)
+          .send('You can only edit profile connected to your GitHub account.');
+      }
+
+      if (profile.type === 'Organization') {
+        const membership = await fetchOrgMembership(
+          profile.login,
+          loggedInUsername,
+          accessToken,
+        );
+        if (
+          !membership ||
+          membership.state !== 'active' ||
+          membership.role !== 'admin'
+        ) {
+          return res
+            .status(401)
+            .send(
+              'You need to be an active admin of this organization to update profile.',
+            );
+        }
+      }
+    }
 
     const repositories = data.repos.filter(
       repo => excludedRepos.indexOf(repo.name) === -1,
     );
+
     for (const repository of repositories) {
       let files = await fetchDependenciesFileContent(repository, accessToken);
       if (files.length) {
@@ -255,11 +297,7 @@ nextApp.prepare().then(() => {
         continue;
       }
     }
-    const savedId = await saveProfile(
-      data.profile.login,
-      repositories,
-      excludedRepos,
-    );
+    const savedId = await saveProfile(data.profile.login, repositories);
     return res.status(200).send({ id: savedId });
   });
 

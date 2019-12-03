@@ -18,6 +18,7 @@ import RecommendationList from '../components/RecommendationList';
 import SubscribeForm from '../components/SubscribeForm';
 import BackMyStack from '../components/BackMyStack';
 import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
+import MessageBox from '../components/MessageBox';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -69,6 +70,7 @@ export default class Profile extends React.Component {
     this.state = {
       saving: false,
       repos: props.repos,
+      error: null,
     };
 
     this.showBackMyStack =
@@ -137,9 +139,8 @@ export default class Profile extends React.Component {
       NProgress.done();
       await Router.pushRoute(`/monthly-plan?${searchParams}`);
     } catch (err) {
-      this.setState({ saving: false });
+      this.setState({ saving: false, error: err.message });
       NProgress.done();
-      console.error(err);
     }
   };
 
@@ -370,6 +371,13 @@ export default class Profile extends React.Component {
             </aside>
 
             <main>
+              {this.state.error && (
+                <MessageBox
+                  type="error"
+                  message={this.state.error}
+                  onClose={() => this.setState({ error: null })}
+                />
+              )}
               {this.showBackMyStack && !(order && opencollectiveAccount) && (
                 <BackMyStack
                   saving={this.state.saving}
