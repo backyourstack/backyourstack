@@ -240,6 +240,16 @@ nextApp.prepare().then(() => {
       loggedInUsername,
       excludedRepos,
     });
+
+    const backing = getDependenciesAvailableForBacking(data.recommendations);
+    if (backing.length === 0) {
+      return res
+        .status(400)
+        .send(
+          'No dependency available for backing within selected repositories',
+        );
+    }
+
     const profile = data.profile;
     const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
     const profileOrder = await getProfileOrder(id);
