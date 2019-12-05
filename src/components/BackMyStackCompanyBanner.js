@@ -130,9 +130,7 @@ const BackMyStackCompanyBanner = ({
             {Math.round(order.totalAmount / 100, 2)} monthly budget.
             <br />
             {totalDonations && (
-              <span>
-                ${Math.round(order.totalAmount / 100, 2)} donated so far.
-              </span>
+              <span>${Math.round(totalDonations, 2)} donated so far.</span>
             )}
           </p>
           <div className="buttonWrapper">
@@ -149,7 +147,7 @@ const BackMyStackCompanyBanner = ({
 BackMyStackCompanyBanner.propTypes = {
   profile: PropTypes.object.isRequired,
   order: PropTypes.object.isRequired,
-  recommendations: PropTypes.object.isRequired,
+  recommendations: PropTypes.array.isRequired,
   opencollectiveAccount: PropTypes.object,
 };
 
