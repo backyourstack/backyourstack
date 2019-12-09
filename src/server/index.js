@@ -321,6 +321,23 @@ nextApp.prepare().then(() => {
     return res.status(200).send(savedObjectInfo);
   });
 
+  server.get('/:id/selectedDependencies', async (req, res) => {
+    if (!req.params.id) {
+      return res.status(400).send('Please provide the file key');
+    }
+    const id = req.params.id;
+    try {
+      const selectedDependencies = await getSavedSelectedDependencies(id);
+      // Return selected dependencies directly if available
+      if (selectedDependencies) {
+        return res.status(200).send({ selectedDependencies });
+      }
+      return res.status(200).send({ selectedDependencies: null });
+    } catch (err) {
+      return res.status(400).send('Unable to fetch file');
+    }
+  });
+
   server.get('/:id/backing.json', async (req, res) => {
     if (!req.params.id) {
       return res.status(400).send('Please provide the file key');

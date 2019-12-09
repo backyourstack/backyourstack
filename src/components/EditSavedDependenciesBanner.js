@@ -14,6 +14,8 @@ const EditSavedDependenciesBanner = ({ onClose, id }) => (
           justify-content: center;
           align-items: baseline;
           padding: 5px;
+          margin-bottom: 20px;
+          border-radius: 15px;
         }
         .bannerContent {
           display: flex;
@@ -30,7 +32,7 @@ const EditSavedDependenciesBanner = ({ onClose, id }) => (
         }
         .closeSign {
           position: relative;
-          left: 20%;
+          left: 18%;
         }
         .closeSign button {
           outline: none;
@@ -45,8 +47,8 @@ const EditSavedDependenciesBanner = ({ onClose, id }) => (
     <div className="bannerWrapper">
       <div className="bannerContent">
         <p>
-          You currently have a saved selected dependencies for your profile,
-          Will you like to edit?
+          You already have some saved dependencies you want to dipatch to, will
+          you like to edit them?
         </p>
         <a
           href={`/monthly-plan?id=${id}&type=profile&editSavedDependencies=true`}

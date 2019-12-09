@@ -23,6 +23,9 @@ const MessageBox = ({ type, message, onClose }) => {
           .error {
             background: red;
           }
+          .success {
+            background: green;
+          }
           p {
             font-size: 16px;
             margin: 0;
@@ -38,7 +41,10 @@ const MessageBox = ({ type, message, onClose }) => {
         `}
       </style>
       <div
-        className={classnames('messageBoxWrapper', { error: type === 'error' })}
+        className={classnames('messageBoxWrapper', {
+          error: type === 'error',
+          success: type === 'success',
+        })}
       >
         <div className="message">
           <p>{message}</p>

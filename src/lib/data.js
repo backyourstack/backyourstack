@@ -2,7 +2,12 @@ import fetch from 'cross-fetch';
 
 import { getFile, getFiles, getObjectsMetadata } from './s3';
 
-import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
+import {
+  fetchWithOctokit,
+  fetchProfile,
+  fetchReposForProfile,
+  fetchOrgMembership,
+} from './github';
 
 import { fetchAccountWithOrders, fetchOrder } from './opencollective';
 
@@ -32,6 +37,29 @@ export function searchUsers(q, accessToken) {
 
 export async function getProfileData(id, accessToken, options = {}) {
   const profile = await fetchProfile(id, accessToken);
+
+  if (
+    profile.type === 'Organization' &&
+    accessToken &&
+    options.loggedInUsername
+  ) {
+    const membership = await fetchOrgMembership(
+      profile.login,
+      options.loggedInUsername,
+      accessToken,
+    );
+
+    // Check if the user is an admin of the organization.
+    profile.isAdmin =
+      membership.state === 'active' && membership.role === 'admin';
+  } else if (
+    accessToken &&
+    options.loggedInUsername &&
+    options.loggedInUsername === profile.login
+  ) {
+    // If the loggedInUser owns the profile
+    profile.isAdmin = true;
+  }
 
   const slug = githubToOpenCollectiveMapping[profile.login] || profile.login;
   const opencollectiveAccount = await fetchAccountWithOrders(slug);
