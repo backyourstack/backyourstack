@@ -41,7 +41,6 @@ const BackMyStackCompanyBanner = ({
             background: url('/static/img/company-banner.png');
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            height: 274px;
           }
           .companyBannerTextWrapper {
             color: #fff;
@@ -83,8 +82,8 @@ const BackMyStackCompanyBanner = ({
           }
           @media screen and (max-width: 1024px),
             @media screen and (max-width: 768px) {
-            .companyBannerWrapper {
-              padding: 1px;
+            .companyBannerTextWrapper {
+              width: 70%;
             }
             .companyBannerTextWrapper h2 {
               font-size: 28px;
@@ -102,7 +101,6 @@ const BackMyStackCompanyBanner = ({
               background-size: 100% 100%;
               background-repeat: no-repeat;
               width: 100%;
-              height: 312px;
             }
             .companyBannerTextWrapper {
               width: 80%;
