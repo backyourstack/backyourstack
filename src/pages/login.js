@@ -90,7 +90,7 @@ export default class Login extends React.Component {
             <li>On Sign Out, we will revoke all permissions.</li>
             <li>
               Trust us, the code is{' '}
-              <a href="https://github.com/opencollective/backyourstack">
+              <a href="https://github.com/backyourstack/backyourstack">
                 Open Source
               </a>{' '}
               and you can audit it.

@@ -62599,7 +62599,7 @@
     "slug": "backyourstack",
     "description": "BackYourStack analyzes repositories to recommend Open Source projects to support.",
     "github": {
-      "repo": "opencollective/backyourstack"
+      "repo": "backyourstack/backyourstack"
     },
     "repos": [
       {

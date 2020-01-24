@@ -2,7 +2,7 @@ Our goal with BackYourStack is to make it easier for companies to identify the o
 
 While we started with just node modules (as defined in `package.json` files) and with [open source projects that are on Open Collective](https://opencollective.com/opensource), we know that the open source community is much larger than that. That's why we would love to support more languages and platforms but for that, we need you!
 
-Take a look at [our public repository](https://github.com/opencollective/backyourstack), [create or pick up issues](https://github.com/opencollective/backyourstack/issues) and help us make open source more sustainable for everyone! 🙌
+Take a look at [our public repository](https://github.com/backyourstack/backyourstack), [create or pick up issues](https://github.com/backyourstack/backyourstack/issues) and help us make open source more sustainable for everyone! 🙌
 
 ## Contributing ideas
 
@@ -14,12 +14,12 @@ BackYourStack is currenly detecting and supporting `npm` (JavaScript), `nuget` (
 
 We need your help and input! There are already issues existing for:
 
-- <del>[Python](https://github.com/opencollective/backyourstack/issues/34)</del> Implemented!
-- <del>[NuGet / C#](https://github.com/opencollective/backyourstack/issues/56)</del> Implemented!
-- <del>[Ruby](https://github.com/opencollective/backyourstack/issues/60)</del> Implemented!
-- [Erlang / Elixir](https://github.com/opencollective/backyourstack/issues/68)
-- <del>[Go](https://github.com/opencollective/backyourstack/issues/75)</del> Implemented!
-- Clojure ([Leiningen](https://github.com/opencollective/backyourstack/issues/96), [deps.edn](https://github.com/opencollective/backyourstack/issues/97))
+- <del>[Python](https://github.com/backyourstack/backyourstack/issues/34)</del> Implemented!
+- <del>[NuGet / C#](https://github.com/backyourstack/backyourstack/issues/56)</del> Implemented!
+- <del>[Ruby](https://github.com/backyourstack/backyourstack/issues/60)</del> Implemented!
+- [Erlang / Elixir](https://github.com/backyourstack/backyourstack/issues/68)
+- <del>[Go](https://github.com/backyourstack/backyourstack/issues/75)</del> Implemented!
+- Clojure ([Leiningen](https://github.com/backyourstack/backyourstack/issues/96), [deps.edn](https://github.com/backyourstack/backyourstack/issues/97))
 
 ### Supporting more funding platforms
 

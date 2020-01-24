@@ -1,6 +1,6 @@
 # FAQ
 
-If you can't find your question below, please [help us improve this FAQ by adding it here](https://github.com/opencollective/backyourstack/blob/master/FAQ.md).
+If you can't find your question below, please [help us improve this FAQ by adding it here](https://github.com/backyourstack/backyourstack/blob/master/FAQ.md).
 
 ## General
 
@@ -8,7 +8,7 @@ If you can't find your question below, please [help us improve this FAQ by addin
 
 We look at all the public repositories of a given organization on Github.com. For each project, we look for a dependency file (today: `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock`). For each dependency, we look for the open collective that is maintaining it and we surface them.
 
-Note: a given collective is often maintaining more than one package. E.g. Babel has 163 different packages [published on npm](https://www.npmjs.com/search?q=%40babel). So [we keep a mapping for each collective of all of their published packages](https://github.com/opencollective/backyourstack/blob/master/src/data/projects.json#L623-L1380) that may be a dependency.
+Note: a given collective is often maintaining more than one package. E.g. Babel has 163 different packages [published on npm](https://www.npmjs.com/search?q=%40babel). So [we keep a mapping for each collective of all of their published packages](https://github.com/backyourstack/backyourstack/blob/master/src/data/projects.json#L623-L1380) that may be a dependency.
 
 ### What are the limitations?
 
@@ -40,11 +40,11 @@ Our goal is to support any dependency managers in any languages. However, we are
 You don't have to. If you don't sign in with your GitHub account, BackYourStack will only scan publicly available repositories. By authorizing BackYourStack to access your GitHub account, we will be able to also scan private repos. Note: we only look for `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock`files and we are not publicly exposing your dependencies.
 
 ### What if I don't want to connect my Github Account?
+
 It's fine, you don't have to. You can also upload one or multiple `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock` files.
 
 ### Why does BackYourStack need so many GitHub permissions?
 
-BackYourStack only wants access to your private repositories and look at the content of dependency files such as `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock`. To do that, the only scope we need is the [`repo`](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes) scope.  The `repo` scope is unfortunately very wide and includes  read and write access to all public and private repository data including: Code, Issues, Pull requests, Wikis, Settings, Webhooks and services, Deploy keys, and Collaboration invites.
+BackYourStack only wants access to your private repositories and look at the content of dependency files such as `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock`. To do that, the only scope we need is the [`repo`](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes) scope. The `repo` scope is unfortunately very wide and includes read and write access to all public and private repository data including: Code, Issues, Pull requests, Wikis, Settings, Webhooks and services, Deploy keys, and Collaboration invites.
 
 TL;DR: we would love to ask for narrower permissions but Github doesn't let us do that. If that's an issue for you, use the upload functionality.
-

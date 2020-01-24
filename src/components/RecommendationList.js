@@ -52,7 +52,7 @@ export default class RecommendationList extends React.Component {
                   <a>See how to contribute</a>
                 </Link>
                 . Something not working as expected?{' '}
-                <a href="https://github.com/opencollective/backyourstack/issues">
+                <a href="https://github.com/backyourstack/backyourstack/issues">
                   Report an issue
                 </a>
                 .

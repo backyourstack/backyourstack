@@ -50,7 +50,7 @@ export default class RepositoryTable extends React.Component {
             </ul>
             <p>
               Something not working as expected?{' '}
-              <a href="https://github.com/opencollective/backyourstack/issues">
+              <a href="https://github.com/backyourstack/backyourstack/issues">
                 Report an issue
               </a>
               .

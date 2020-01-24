@@ -4,7 +4,7 @@
   "description": "BackYourStack analyzes repositories to recommend Open Source projects to support.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/opencollective/backyourstack.git"
+    "url": "https://github.com/backyourstack/backyourstack.git"
   },
   "scripts": {
     "clean": "npm run build:clean && npm run test:clean",
@@ -109,13 +109,6 @@
       "src/lib"
     ]
   },
-  "greenkeeper": {
-    "ignore": [
-      "@babel/cli",
-      "@babel/node",
-      "react-dropzone"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -123,8 +116,7 @@
   },
   "lint-staged": {
     "*.{js,json,css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "jest": {

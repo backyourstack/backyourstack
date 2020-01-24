@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
             BackYourStack is an{' '}
             <a
               style={{ textDecoration: 'none' }}
-              href="https://github.com/opencollective/backyourstack"
+              href="https://github.com/backyourstack/backyourstack"
             >
               Open Source project
             </a>{' '}
@@ -65,7 +65,7 @@ export default class Footer extends React.Component {
                 <TwitterLogo />
               </div>
             </a>
-            <a href="https://github.com/opencollective/backyourstack">
+            <a href="https://github.com/backyourstack/backyourstack">
               <div className="soical-icons">
                 <GithubLogo />
               </div>

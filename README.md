@@ -2,10 +2,8 @@
   <a href="https://backyourstack.com/"><img width="308" height="308" src="src/static/img/logo-og-1.png" alt="BackYourStack"></a>
 </p>
 
-[![Build Status](https://travis-ci.org/opencollective/backyourstack.svg?branch=master)](https://travis-ci.org/opencollective/backyourstack)
-[![Slack Status](https://slack.opencollective.org/badge.svg)](https://slack.opencollective.org)
-[![Dependency Status](https://david-dm.org/opencollective/backyourstack/status.svg)](https://david-dm.org/opencollective/backyourstack)
-[![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/backyourstack.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/backyourstack/backyourstack.svg?branch=master)](https://travis-ci.org/backyourstack/backyourstack)
+[![Dependency Status](https://david-dm.org/backyourstack/backyourstack/status.svg)](https://david-dm.org/backyourstack/backyourstack)
 
 Discover the open source projects your organization is using that need financial support.
 
@@ -13,7 +11,7 @@ Our goal with BackYourStack is to make it easier for companies to identify the o
 
 While we started with just node modules (as defined in package.json files) and with open source projects that are on Open Collective, we know that the open source community is much larger than that. That's why we would love to support more languages and platforms but for that, we need you!
 
-Take a look at our public repository & [Contributing Guidelines](https://github.com/opencollective/backyourstack/blob/master/CONTRIBUTING.md) create or pick up issues and help us make open source more sustainable for everyone! 🙌
+Take a look at our public repository & [Contributing Guidelines](https://github.com/backyourstack/backyourstack/blob/master/CONTRIBUTING.md) create or pick up issues and help us make open source more sustainable for everyone! 🙌
 
 ## Service
 
@@ -40,7 +38,7 @@ You will need the Client ID and Client Secret provided by GitHub after you regis
 ### Install
 
 ```
-git clone https://github.com/opencollective/backyourstack.git
+git clone https://github.com/backyourstack/backyourstack.git
 cd backyourstack
 npm install
 ```
