@@ -1,6 +1,4 @@
-import withCSS from '@zeit/next-css';
-
-module.exports = withCSS({
+module.exports = {
   webpack: (config, { isServer, webpack }) => {
     // For Winston
     // https://github.com/winstonjs/winston/issues/287
@@ -58,6 +56,7 @@ module.exports = withCSS({
         ],
       },
     );
+
     return config;
   },
-});
+};
