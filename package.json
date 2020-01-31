@@ -79,7 +79,7 @@
     "node": "10.x.x"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.0",
+    "@babel/cli": "7.8.4",
     "@babel/node": "7.7.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-lodash": "^3.3.4",
