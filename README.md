@@ -69,6 +69,8 @@ Switch to the Open Collective team account:
 
 `now switch opencollective`
 
+_Note: If you're not currently a team member, take a look at the [Contributing Guide](CONTRIBUTING.md) guide for other ways to contribute._
+
 #### Secrets
 
 Make sure that the following secrets are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
@@ -91,6 +93,10 @@ If everything is ok, finalize with:
 
 `now alias`
 
+## Contributing
+
+BackYourStack is open source, and we welcome new contributions. Take a look at the [Contributing guidelines](Contributing.md) for ways to contribute.
+
 ## License
 
-Back Your Stack is made available under the [MIT License](LICENSE)
+Back Your Stack is made available under the [MIT License](LICENSE).
