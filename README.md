@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/backyourstack/backyourstack.svg?branch=master)](https://travis-ci.org/backyourstack/backyourstack)
 [![Dependency Status](https://david-dm.org/backyourstack/backyourstack/status.svg)](https://david-dm.org/backyourstack/backyourstack)
+[![Slack Status](https://slack.opencollective.com/badge.svg)](https://opencollective.slack.com/archives/CMFGW1CTD)
 
 Discover the open source projects your organization is using that need financial support.
 
