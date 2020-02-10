@@ -263,7 +263,7 @@ export default class Index extends Component {
               </div>
               <p className="boxDescription">
                 If you want to analyze private or local repositories simply
-                upload dependency files. At the moment, we do support{' '}
+                upload dependency files. At the moment, we support{' '}
                 {supportedFilesAsComponent}.
               </p>
               <div className="uploadContainer">
