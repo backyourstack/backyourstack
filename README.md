@@ -45,7 +45,7 @@ npm install
 
 ### Store Your GitHub API Keys
 
-We use [dotenv](https://github.com/motdotla/dotenv) to store environment variables. If you configured a set of GitHub API keys, you will need to save them in a .env file. In the root directory of the repository, rename `.env.template` to `.env` and add the Client ID and Client Secret generated when you registered your GitHub application.
+We use [dotenv](https://github.com/motdotla/dotenv) to store environment variables. If you configured a set of GitHub API keys, you will need to save them in a .env file. In the root directory of the repository, copy `.env.template` to `.env` and add the Client ID and Client Secret generated when you registered your GitHub application.
 
 ### Start
 
