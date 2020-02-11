@@ -1,3 +1,5 @@
+# Contributing
+
 Our goal with BackYourStack is to make it easier for companies to identify the open source projects that they depend on that also need funding.
 
 While we started with just node modules (as defined in `package.json` files) and with [open source projects that are on Open Collective](https://opencollective.com/opensource), we know that the open source community is much larger than that. That's why we would love to support more languages and platforms but for that, we need you!
@@ -10,7 +12,7 @@ If you want to help and are not sure where to start, we have some ideas!
 
 ### Supporting more dependency managers
 
-BackYourStack is currenly detecting and supporting `npm` (JavaScript), `nuget` (C#), `composer` (PHP), `dep` (Go) and Gem (Ruby) packages. For sure, we are aware Javascript, PHPm C#, Go and Ruby are not the only progamming languages in the world and we would love to support more platforms like Java, Erlang and Python.
+BackYourStack is currently detecting and supporting `npm` (JavaScript), `nuget` (C#), `composer` (PHP), `dep` (Go) and Gem (Ruby) packages. For sure, we are aware Javascript, PHPm C#, Go and Ruby are not the only programming languages in the world and we would love to support more platforms like Java, Erlang and Python.
 
 We need your help and input! There are already issues existing for:
 
