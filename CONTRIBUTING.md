@@ -6,6 +6,8 @@ While we started with just node modules (as defined in `package.json` files) and
 
 Take a look at [our public repository](https://github.com/backyourstack/backyourstack), [create or pick up issues](https://github.com/backyourstack/backyourstack/issues) and help us make open source more sustainable for everyone! 🙌
 
+We also have [a Slack community channel](https://opencollective.slack.com/archives/CMFGW1CTD), part of the Open Collective slack. Come join us!
+
 ## Contributing ideas
 
 If you want to help and are not sure where to start, we have some ideas!
