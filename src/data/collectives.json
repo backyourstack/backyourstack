@@ -17499,38 +17499,6 @@
     ]
   },
   {
-    "id": 562,
-    "name": "voca",
-    "slug": "voca",
-    "description": null,
-    "github": {
-      "repo": "panzerdp/voca"
-    },
-    "repos": [
-      {
-        "name": "voca",
-        "owner": {
-          "login": "panzerdp"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "CSS", "HTML"],
-        "files": [
-          ".babelrc",
-          ".eslintrc",
-          ".gitignore",
-          ".jsdoc.json",
-          ".npmrc",
-          ".travis.yml",
-          "CODE_OF_CONDUCT.md",
-          "LICENSE.md",
-          "README.md",
-          "package-lock.json",
-          "package.json"
-        ]
-      }
-    ]
-  },
-  {
     "id": 564,
     "name": "linter",
     "slug": "linter",
@@ -26377,36 +26345,6 @@
           "package.json",
           "sao.js",
           "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 899,
-    "name": "tld.js",
-    "slug": "tldjs",
-    "description": "A JavaScript library to work easily with complex domain names, subdomains and well-known TLDs.",
-    "github": {
-      "repo": "oncletom/tld.js"
-    },
-    "repos": [
-      {
-        "name": "tld.js",
-        "owner": {
-          "login": "oncletom"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript"],
-        "files": [
-          ".eslintrc.yml",
-          ".gitignore",
-          ".npmignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "LICENSE",
-          "README.md",
-          "index.js",
-          "package.json"
         ]
       }
     ]
@@ -60586,40 +60524,6 @@
     ]
   },
   {
-    "id": 17959,
-    "name": "javascript-problems-and-solutions",
-    "slug": "javascript-problems-and-solutions",
-    "description": null,
-    "github": {
-      "repo": "jeantimex/javascript-problems-and-solutions"
-    },
-    "repos": [
-      {
-        "name": "javascript-problems-and-solutions",
-        "owner": {
-          "login": "jeantimex"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript"],
-        "files": [
-          ".babelrc",
-          ".editorconfig",
-          ".eslintrc",
-          ".gitignore",
-          ".nycrc",
-          ".prettierrc",
-          ".release-it.json",
-          ".travis.yml",
-          "LICENSE",
-          "README.md",
-          "jsconfig.json",
-          "package-lock.json",
-          "package.json"
-        ]
-      }
-    ]
-  },
-  {
     "id": 17972,
     "name": "reviewdog",
     "slug": "reviewdog",
@@ -61585,39 +61489,6 @@
           "setup.cfg",
           "setup.py",
           "tox.ini"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 18818,
-    "name": "vectorious",
-    "slug": "vectorious",
-    "description": null,
-    "github": {
-      "repo": "mateogianolio/vectorious"
-    },
-    "repos": [
-      {
-        "name": "vectorious",
-        "owner": {
-          "login": "mateogianolio"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "TypeScript"],
-        "files": [
-          ".codeclimate.yml",
-          ".gitignore",
-          ".mailmap",
-          ".travis.yml",
-          "LICENSE.md",
-          "README.md",
-          "gulpfile.js",
-          "logo.gif",
-          "package-lock.json",
-          "package.json",
-          "tsconfig.json",
-          "tslint.json"
         ]
       }
     ]
@@ -112303,40 +112174,6 @@
     ]
   },
   {
-    "id": 35517,
-    "name": "Raven Reader ",
-    "slug": "ravenreader",
-    "description": "📖Desktop RSS Reader application without any distraction and offline ready.",
-    "github": {
-      "repo": "mrgodhani/raven-reader"
-    },
-    "repos": [
-      {
-        "name": "raven-reader",
-        "owner": {
-          "login": "hello-efficiency-inc"
-        },
-        "defaultBranch": "master",
-        "languages": ["HTML", "JavaScript", "Vue"],
-        "files": [
-          ".babelrc",
-          ".eslintignore",
-          ".eslintrc.js",
-          ".gitignore",
-          ".travis.yml",
-          "LICENSE",
-          "README.md",
-          "appveyor.yml",
-          "darkscreenshot.png",
-          "newscreenshot.png",
-          "package.json",
-          "raven-logo.png",
-          "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
     "id": 35936,
     "name": "postbird",
     "slug": "postbird",
@@ -121450,67 +121287,6 @@
     ]
   },
   {
-    "id": 45468,
-    "name": "django-admin-interface",
-    "slug": "django-admin-interface",
-    "description": "django-admin-interface is a customizable responsive admin interface, based on a modern flat theme, it lets you customize the admin title, logo and colors by the admin itself. Popup windows replaced by modals.",
-    "github": {
-      "repo": "fabiocaccamo/django-admin-interface"
-    },
-    "repos": [
-      {
-        "name": "django-admin-interface",
-        "owner": {
-          "login": "fabiocaccamo"
-        },
-        "defaultBranch": "master",
-        "languages": ["Python", "HTML", "JavaScript", "CSS"],
-        "files": [
-          ".gitattributes",
-          ".gitignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "LICENSE.txt",
-          "MANIFEST.in",
-          "README.md",
-          "runtests.py",
-          "setup.cfg",
-          "setup.py",
-          "tox.ini"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 45517,
-    "name": "django-maintenance-mode",
-    "slug": "django-maintenance-mode",
-    "description": "django-maintenance-mode shows a 503 error page when maintenance mode is on.",
-    "github": {
-      "repo": "fabiocaccamo/django-maintenance-mode"
-    },
-    "repos": [
-      {
-        "name": "django-maintenance-mode",
-        "owner": {
-          "login": "fabiocaccamo"
-        },
-        "defaultBranch": "master",
-        "languages": ["Python", "HTML"],
-        "files": [
-          ".gitignore",
-          ".travis.yml",
-          "LICENSE.txt",
-          "README.md",
-          "runtests.py",
-          "setup.cfg",
-          "setup.py",
-          "tox.ini"
-        ]
-      }
-    ]
-  },
-  {
     "id": 45561,
     "name": "QMK Configurator",
     "slug": "qmk-config",
@@ -130092,36 +129868,6 @@
           "phpstan.neon",
           "phpunit.xml.dist",
           "psalm.xml"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 65066,
-    "name": "MicroOrm.Dapper.Repositories",
-    "slug": "microormdapperrepositories",
-    "description": "CRUD for Dapper",
-    "github": {
-      "repo": "phnx47/MicroOrm.Dapper.Repositories"
-    },
-    "repos": [
-      {
-        "name": "MicroOrm.Dapper.Repositories",
-        "owner": {
-          "login": "phnx47"
-        },
-        "defaultBranch": "master",
-        "languages": ["C#", "PowerShell"],
-        "files": [
-          ".editorconfig",
-          ".gitattributes",
-          ".gitignore",
-          "LICENSE",
-          "MicroOrm.Dapper.Repositories.sln",
-          "README.md",
-          "appveyor.yml",
-          "pack.ps1",
-          "renovate.json"
         ]
       }
     ]
