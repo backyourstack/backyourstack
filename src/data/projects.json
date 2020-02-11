@@ -29,6 +29,10 @@
       {
         "type": "npm",
         "name": "@11ty/dependency-tree"
+      },
+      {
+        "type": "npm",
+        "name": "@11ty/eleventy-navigation"
       }
     ],
     "github": {
@@ -189,6 +193,10 @@
       {
         "type": "gem",
         "name": "activeadmin"
+      },
+      {
+        "type": "npm",
+        "name": "@activeadmin/activeadmin"
       }
     ],
     "github": {
@@ -1633,6 +1641,10 @@
       {
         "type": "npm",
         "name": "atomic-layout"
+      },
+      {
+        "type": "npm",
+        "name": "@atomic-layout/core"
       }
     ],
     "github": {
@@ -3224,6 +3236,18 @@
       {
         "type": "npm",
         "name": "@babel/plugin-syntax-top-level-await"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/compat-data"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/helper-compilation-targets"
+      },
+      {
+        "type": "npm",
+        "name": "@babel/preset-modules"
       }
     ],
     "opencollective": {
@@ -4566,6 +4590,24 @@
     }
   },
   {
+    "name": "boxicons",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "boxicons"
+      }
+    ],
+    "github": {
+      "repo": "atisawd/boxicons"
+    },
+    "opencollective": {
+      "id": 89447,
+      "name": "Boxicons",
+      "slug": "boxicons",
+      "description": "High Quality web friendly icons"
+    }
+  },
+  {
     "name": "bpkg",
     "packages": [
       {
@@ -4692,6 +4734,24 @@
     }
   },
   {
+    "name": "brook",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/txthinking/brook"
+      }
+    ],
+    "github": {
+      "repo": "txthinking/brook"
+    },
+    "opencollective": {
+      "id": 79728,
+      "name": "Brook",
+      "slug": "brook",
+      "description": "Brook is a cross-platform(Linux/MacOS/Windows/Android/iOS) proxy/vpn software"
+    }
+  },
+  {
     "name": "browser-sync",
     "packages": [
       {
@@ -4708,6 +4768,24 @@
         "name": "browserify"
       }
     ]
+  },
+  {
+    "name": "browserslist",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "browserslist"
+      }
+    ],
+    "github": {
+      "repo": "browserslist/browserslist"
+    },
+    "opencollective": {
+      "id": 58968,
+      "name": "Browserslist",
+      "slug": "browserslist",
+      "description": "Keeping browsers diversity in front-end tools"
+    }
   },
   {
     "name": "bundlephobia",
@@ -4810,6 +4888,24 @@
     }
   },
   {
+    "name": "buttercake",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "buttercake"
+      }
+    ],
+    "github": {
+      "repo": "HimasRafeek/butterCake"
+    },
+    "opencollective": {
+      "id": 73506,
+      "name": "Butter Cake",
+      "slug": "buttercake",
+      "description": "Material Design Components, Responsive and Modern CSS Framework Built with Flexbox 🍰"
+    }
+  },
+  {
     "name": "cachet",
     "packages": [
       {
@@ -4831,6 +4927,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "camelot",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "camelot-py"
+      }
+    ],
+    "github": {
+      "repo": "camelot-dev/camelot"
+    },
+    "opencollective": {
+      "id": 65166,
+      "name": "Camelot",
+      "slug": "camelot",
+      "description": "Camelot is a free and open source Python library to extract tabular data from PDFs"
     }
   },
   {
@@ -5119,6 +5233,44 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "casljs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@casl/ability"
+      },
+      {
+        "type": "npm",
+        "name": "@casl/angular"
+      },
+      {
+        "type": "npm",
+        "name": "@casl/aurelia"
+      },
+      {
+        "type": "npm",
+        "name": "@casl/mongoose"
+      },
+      {
+        "type": "npm",
+        "name": "@casl/react"
+      },
+      {
+        "type": "npm",
+        "name": "@casl/vue"
+      }
+    ],
+    "github": {
+      "repo": "stalniy/casl"
+    },
+    "opencollective": {
+      "id": 88133,
+      "name": "CASL",
+      "slug": "casljs",
+      "description": "CASL is an isomorphic authorization JavaScript library which restricts what resources a given user is allowed to access"
     }
   },
   {
@@ -6761,6 +6913,24 @@
     },
     "github": {
       "org": "commitizen"
+    }
+  },
+  {
+    "name": "commonmarker",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "commonmarker"
+      }
+    ],
+    "github": {
+      "repo": "gjtorikian/commonmarker"
+    },
+    "opencollective": {
+      "id": 85530,
+      "name": "commonmarker",
+      "slug": "commonmarker",
+      "description": "Ruby wrapper for libcmark (CommonMark parser)"
     }
   },
   {
@@ -8929,6 +9099,24 @@
     }
   },
   {
+    "name": "django-river",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-river"
+      }
+    ],
+    "github": {
+      "repo": "javrasya/django-river"
+    },
+    "opencollective": {
+      "id": 73565,
+      "name": "django-river",
+      "slug": "django-river",
+      "description": "Django workflow library supports on the fly changes."
+    }
+  },
+  {
     "name": "djongo",
     "packages": [
       {
@@ -10207,6 +10395,24 @@
     }
   },
   {
+    "name": "emberjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ember-source"
+      }
+    ],
+    "github": {
+      "repo": "emberjs/ember.js"
+    },
+    "opencollective": {
+      "id": 82966,
+      "name": "Ember.js",
+      "slug": "emberjs",
+      "description": "Ember.js, A JavaScript framework for creating ambitious web applications"
+    }
+  },
+  {
     "name": "eme",
     "packages": [
       {
@@ -10464,6 +10670,42 @@
         "name": "enzyme-adapter-react-16"
       }
     ]
+  },
+  {
+    "name": "eplayer",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "eplayer"
+      }
+    ],
+    "github": {
+      "repo": "yisar/eplayer"
+    },
+    "opencollective": {
+      "id": 82402,
+      "name": "eplayer",
+      "slug": "eplayer",
+      "description": ":crystal_ball: A web-component html5 video player facing future"
+    }
+  },
+  {
+    "name": "eruda",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "eruda"
+      }
+    ],
+    "github": {
+      "repo": "liriliri/eruda"
+    },
+    "opencollective": {
+      "id": 80951,
+      "name": "eruda",
+      "slug": "eruda",
+      "description": "Console for mobile browsers"
+    }
   },
   {
     "name": "esdiscuss",
@@ -11338,6 +11580,28 @@
     }
   },
   {
+    "name": "fc-angular",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@fc-angular/core"
+      },
+      {
+        "type": "npm",
+        "name": "@fc-angular/components"
+      }
+    ],
+    "github": {
+      "repo": "FE-free/fc-angular"
+    },
+    "opencollective": {
+      "id": 68273,
+      "name": "fc-angular",
+      "slug": "fc-angular",
+      "description": "Fast development platform based on angular8, ng.ant.design built multi-tab page background management system (continuous upgrade) ^_^"
+    }
+  },
+  {
     "name": "feathers",
     "packages": [
       {
@@ -11913,6 +12177,24 @@
     }
   },
   {
+    "name": "fireo",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "fireo"
+      }
+    ],
+    "github": {
+      "repo": "octabytes/FireO"
+    },
+    "opencollective": {
+      "id": 72297,
+      "name": "FireO",
+      "slug": "fireo",
+      "description": "Google Cloud Firestore modern and simplest convenient ORM package in Python. FireO is specifically designed for the Google's Firestore"
+    }
+  },
+  {
     "name": "firestorm",
     "packages": [
       {
@@ -12068,6 +12350,24 @@
         "name": "flow-bin"
       }
     ]
+  },
+  {
+    "name": "flubucore",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "FlubuCore"
+      }
+    ],
+    "github": {
+      "repo": "dotnetcore/FlubuCore"
+    },
+    "opencollective": {
+      "id": 71888,
+      "name": "FlubuCore",
+      "slug": "flubucore",
+      "description": "A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code."
+    }
   },
   {
     "name": "flyimg",
@@ -12227,6 +12527,10 @@
       {
         "type": "nuget",
         "name": "Virtuosity.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Caseless.Fody"
       }
     ],
     "github": {
@@ -12575,6 +12879,42 @@
       {
         "type": "composer",
         "name": "flagrow/user-directory"
+      },
+      {
+        "type": "composer",
+        "name": "fof/best-answer"
+      },
+      {
+        "type": "composer",
+        "name": "fof/components"
+      },
+      {
+        "type": "composer",
+        "name": "fof/discussion-thumbnail"
+      },
+      {
+        "type": "composer",
+        "name": "fof/forum-statistics-widget"
+      },
+      {
+        "type": "composer",
+        "name": "fof/github-sponsors"
+      },
+      {
+        "type": "composer",
+        "name": "fof/html-errors"
+      },
+      {
+        "type": "composer",
+        "name": "fof/pwned-passwords"
+      },
+      {
+        "type": "composer",
+        "name": "reflar/stopforumspam"
+      },
+      {
+        "type": "composer",
+        "name": "fof/upload"
       }
     ],
     "github": {
@@ -12641,6 +12981,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "form-render",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "form-render"
+      }
+    ],
+    "github": {
+      "repo": "alibaba/form-render"
+    },
+    "opencollective": {
+      "id": 72517,
+      "name": "FormRender",
+      "slug": "form-render",
+      "description": "🏄  通过 JSON Schema 生成标准 Form，常用于自定义搭建配置界面生成"
     }
   },
   {
@@ -12737,6 +13095,10 @@
       {
         "type": "npm",
         "name": "@formatjs/ts-transformer"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-displaynames"
       }
     ],
     "github": {
@@ -12762,6 +13124,10 @@
       {
         "type": "npm",
         "name": "formik"
+      },
+      {
+        "type": "npm",
+        "name": "formik-native"
       }
     ],
     "github": {
@@ -12858,6 +13224,24 @@
         "yearlyBudget": 9972
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "fre",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "fre"
+      }
+    ],
+    "github": {
+      "repo": "yisar/fre"
+    },
+    "opencollective": {
+      "id": 82401,
+      "name": "fre",
+      "slug": "fre",
+      "description": "Tiny React16 like framework with Concurrent. "
     }
   },
   {
@@ -13435,6 +13819,14 @@
       {
         "type": "npm",
         "name": "gatsby-theme-notes"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-plugin-benchmark-reporting"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-theme"
       }
     ],
     "opencollective": {
@@ -14124,6 +14516,28 @@
     }
   },
   {
+    "name": "goframe",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/gogf/gf"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/gogf/gf/g"
+      }
+    ],
+    "github": {
+      "repo": "gogf/gf"
+    },
+    "opencollective": {
+      "id": 85424,
+      "name": "GoFrame",
+      "slug": "goframe",
+      "description": "GoFrame is a modular, full-featured and production-ready application development framework of golang. Providing a series of core components and dozens of practical modules."
+    }
+  },
+  {
     "name": "gojieba",
     "packages": [
       {
@@ -14145,6 +14559,42 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "goober",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "goober"
+      }
+    ],
+    "github": {
+      "repo": "cristianbote/goober"
+    },
+    "opencollective": {
+      "id": 90471,
+      "name": "goober",
+      "slug": "goober",
+      "description": "🥜 goober, a less than 1KB 🎉css-in-js alternative with a familiar API"
+    }
+  },
+  {
+    "name": "goodsharejs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "goodshare.js"
+      }
+    ],
+    "github": {
+      "repo": "koddr/goodshare.js"
+    },
+    "opencollective": {
+      "id": 88653,
+      "name": "goodshare.js",
+      "slug": "goodsharejs",
+      "description": "🚀 А useful modern JavaScript solution for share a link from your website to social networks or mobile messengers. Easy to install and configuring on any of your website!"
     }
   },
   {
@@ -14463,6 +14913,24 @@
         "yearlyBudget": 442181
       },
       "goals": []
+    }
+  },
+  {
+    "name": "graphiql-storm",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "graphiql-storm"
+      }
+    ],
+    "github": {
+      "repo": "Gherciu/graphiql-storm"
+    },
+    "opencollective": {
+      "id": 87351,
+      "name": "Graphiql-Storm",
+      "slug": "graphiql-storm",
+      "description": "🌪 A GraphQl Web IDE "
     }
   },
   {
@@ -15701,6 +16169,24 @@
         "name": "handlebars"
       }
     ]
+  },
+  {
+    "name": "handycontrol",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "HandyControl"
+      }
+    ],
+    "github": {
+      "repo": "HandyOrg/HandyControl"
+    },
+    "opencollective": {
+      "id": 72091,
+      "name": "HandyControl",
+      "slug": "handycontrol",
+      "description": "Contains some simple and commonly used WPF controls"
+    }
   },
   {
     "name": "hedron",
@@ -18286,6 +18772,24 @@
     }
   },
   {
+    "name": "jira",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "jira"
+      }
+    ],
+    "github": {
+      "repo": "pycontribs/jira"
+    },
+    "opencollective": {
+      "id": 58509,
+      "name": "jira",
+      "slug": "jira",
+      "description": "Python JIRA Library is the easiest way to automate JIRA."
+    }
+  },
+  {
     "name": "jitesoft-open-source",
     "packages": [
       {
@@ -18375,6 +18879,10 @@
       {
         "type": "npm",
         "name": "@jitesoft/yolog-slack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/babel-preset-react"
       }
     ],
     "github": {
@@ -19118,6 +19626,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "kashgari",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "kashgari"
+      }
+    ],
+    "github": {
+      "repo": "BrikerMan/Kashgari"
+    },
+    "opencollective": {
+      "id": 76094,
+      "name": "Kashgari",
+      "slug": "kashgari",
+      "description": "Kashgari is a Production-ready NLP Transfer learning framework for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding."
     }
   },
   {
@@ -20385,6 +20911,24 @@
     }
   },
   {
+    "name": "licia",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "licia"
+      }
+    ],
+    "github": {
+      "repo": "liriliri/licia"
+    },
+    "opencollective": {
+      "id": 80956,
+      "name": "licia",
+      "slug": "licia",
+      "description": "Useful utility collection with zero dependencies"
+    }
+  },
+  {
     "name": "limarka",
     "packages": [
       {
@@ -21486,6 +22030,30 @@
       {
         "type": "dep",
         "name": "github.com/m-lab/traceroute-caller"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/alertmanager-github-receiver"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/etl-embargo"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/gcs-downloader"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/github-maintenance-exporter"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/prometheus-bigquery-exporter"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/uuid-annotator"
       }
     ],
     "github": {
@@ -22296,6 +22864,24 @@
     ]
   },
   {
+    "name": "mllaunchpad",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "mllaunchpad"
+      }
+    ],
+    "github": {
+      "repo": "schuderer/mllaunchpad"
+    },
+    "opencollective": {
+      "id": 76457,
+      "name": "ML Launchpad",
+      "slug": "mllaunchpad",
+      "description": "Deploy Machine Learning Solutions with Ease"
+    }
+  },
+  {
     "name": "mobx",
     "packages": [
       {
@@ -22785,6 +23371,24 @@
     }
   },
   {
+    "name": "morphism",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "morphism"
+      }
+    ],
+    "github": {
+      "repo": "nobrainr/morphism"
+    },
+    "opencollective": {
+      "id": 85582,
+      "name": "Morphism",
+      "slug": "morphism",
+      "description": "⚡ Do not repeat anymore your objects transformations."
+    }
+  },
+  {
     "name": "motus",
     "packages": [
       {
@@ -23186,6 +23790,158 @@
     }
   },
   {
+    "name": "nest-cloud",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@nestcloud/core"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/common"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/boot"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/brakes"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/config"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/consul"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/etcd"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/grpc"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/http"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/kubernetes"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/loadbalance"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/logger"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/proxy"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/schedule"
+      },
+      {
+        "type": "npm",
+        "name": "@nestcloud/service"
+      }
+    ],
+    "github": {
+      "repo": "nest-cloud/nestcloud"
+    },
+    "opencollective": {
+      "id": 79740,
+      "name": "NestCloud",
+      "slug": "nest-cloud",
+      "description": "A NodeJS micro-service solution, writing by Typescript language and NestJS framework."
+    }
+  },
+  {
+    "name": "nestifystack",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "nestify"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/arena"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/bullring"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/config"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/console"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/core"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/crypt"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/event-bus"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/logger"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/mailer"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/mongo-seeder"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/notification"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/rule-engine"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/task-queue"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/verification"
+      },
+      {
+        "type": "npm",
+        "name": "@nestify/workflow"
+      }
+    ],
+    "github": {
+      "repo": "ZhiXiao-Lin/nestify"
+    },
+    "opencollective": {
+      "id": 52759,
+      "name": "Nestify",
+      "slug": "nestifystack",
+      "description": "🚀 Nest.js open source ecosystem"
+    }
+  },
+  {
     "name": "net-ssh",
     "packages": [
       {
@@ -23303,6 +24059,10 @@
       {
         "type": "npm",
         "name": "@nexrender/worker"
+      },
+      {
+        "type": "npm",
+        "name": "@nexrender/provider-gs"
       }
     ],
     "github": {
@@ -23367,6 +24127,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ng-matero",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ng-matero"
+      }
+    ],
+    "github": {
+      "repo": "ng-matero/ng-matero"
+    },
+    "opencollective": {
+      "id": 89398,
+      "name": "ng-matero",
+      "slug": "ng-matero",
+      "description": "Angular Material admin dashboard template."
     }
   },
   {
@@ -24349,6 +25127,24 @@
     ]
   },
   {
+    "name": "node-redis",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "redis"
+      }
+    ],
+    "github": {
+      "repo": "NodeRedis/node_redis"
+    },
+    "opencollective": {
+      "id": 90547,
+      "name": "Node Redis",
+      "slug": "node-redis",
+      "description": "Official collective of the Node.js Redis NPM packages; redis, redis-parser & more."
+    }
+  },
+  {
     "name": "node-sass",
     "packages": [
       {
@@ -24803,6 +25599,26 @@
       {
         "type": "nuget",
         "name": "NServiceBus.Wire"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Attachments.Sql.Raw"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.Attachments.FileShare.Raw"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.SqlServer.Deduplication"
+      },
+      {
+        "type": "nuget",
+        "name": "NServiceBus.DataAnnotations"
+      },
+      {
+        "type": "nuget",
+        "name": "Verify.NServiceBus"
       }
     ],
     "github": {
@@ -24874,6 +25690,24 @@
           "totalDonations": 7500
         }
       ]
+    }
+  },
+  {
+    "name": "nuke",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "nuke.common"
+      }
+    ],
+    "github": {
+      "repo": "nuke-build/nuke"
+    },
+    "opencollective": {
+      "id": 26941,
+      "name": "nuke",
+      "slug": "nuke",
+      "description": "Build Automation System for C#/.NET"
     }
   },
   {
@@ -25787,6 +26621,10 @@
       {
         "type": "dep",
         "name": "github.com/ory/hive"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/ory/kratos"
       }
     ],
     "github": {
@@ -27478,6 +28316,10 @@
       {
         "type": "npm",
         "name": "tooltip.js"
+      },
+      {
+        "type": "npm",
+        "name": "@popperjs/core"
       }
     ],
     "github": {
@@ -27779,6 +28621,42 @@
       {
         "type": "npm",
         "name": "posthtml"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-noopener"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-noscript"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-hash"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-insert-at"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-plugin-remove-duplicates"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-plugin-link-preload"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-style-expansion"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-inline-svg"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-inline-favicon"
       }
     ],
     "github": {
@@ -28902,6 +29780,24 @@
           "totalDonations": 130000
         }
       ]
+    }
+  },
+  {
+    "name": "ravenreader",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "raven-reader"
+      }
+    ],
+    "github": {
+      "repo": "mrgodhani/raven-reader"
+    },
+    "opencollective": {
+      "id": 35517,
+      "name": "Raven Reader ",
+      "slug": "ravenreader",
+      "description": "📖Desktop RSS Reader application without any distraction and offline ready."
     }
   },
   {
@@ -30918,6 +31814,10 @@
       {
         "type": "npm",
         "name": "reakit-utils"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-test-utils"
       }
     ],
     "github": {
@@ -37811,6 +38711,14 @@
       {
         "type": "npm",
         "name": "@storybook/web-components"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/marionette"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/server"
       }
     ],
     "opencollective": {
@@ -38102,6 +39010,18 @@
       {
         "type": "npm",
         "name": "create-strapi-app"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-connector-bookshelf"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-connector-mongoose"
+      },
+      {
+        "type": "npm",
+        "name": "strapi-database"
       }
     ],
     "opencollective": {
@@ -38830,6 +39750,10 @@
       {
         "type": "composer",
         "name": "tabler/tabler"
+      },
+      {
+        "type": "npm",
+        "name": "tabler"
       }
     ],
     "github": {
@@ -39065,6 +39989,18 @@
       {
         "type": "npm",
         "name": "vscode-tandem-extension"
+      },
+      {
+        "type": "npm",
+        "name": "paperclip-loader"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-visual-editor"
+      },
+      {
+        "type": "npm",
+        "name": "tandem-vscode-extension"
       }
     ],
     "github": {
@@ -40299,6 +41235,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "txthinking-mr2",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/txthinking/mr2"
+      }
+    ],
+    "github": {
+      "repo": "txthinking/mr2"
+    },
+    "opencollective": {
+      "id": 79722,
+      "name": "mr2",
+      "slug": "txthinking-mr2",
+      "description": "Mr.2 can help you expose local server to external network. Support both TCP/UDP, of course support HTTP."
     }
   },
   {
@@ -42568,6 +43522,24 @@
     }
   },
   {
+    "name": "vectorious",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "vectorious"
+      }
+    ],
+    "github": {
+      "repo": "mateogianolio/vectorious"
+    },
+    "opencollective": {
+      "id": 18818,
+      "name": "vectorious",
+      "slug": "vectorious",
+      "description": null
+    }
+  },
+  {
     "name": "verdaccio",
     "packages": [
       {
@@ -43071,6 +44043,38 @@
       {
         "type": "npm",
         "name": "eslint-plugin-vuetify"
+      },
+      {
+        "type": "npm",
+        "name": "@vuetify/cli-plugin-utils"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-basil"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-crane"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-fortnightly"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-owl"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-rally"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-reply"
+      },
+      {
+        "type": "npm",
+        "name": "vue-cli-plugin-vuetify-preset-shrine"
       }
     ],
     "github": {
