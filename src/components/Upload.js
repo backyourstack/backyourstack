@@ -154,7 +154,7 @@ export default class Upload extends React.Component {
           >
             <p>
               There was an error while uploading your files. At the moment, we
-              do support {supportedFilesAsComponent}. Please try again. If the
+              support {supportedFilesAsComponent}. Please try again. If the
               problem persists, please contact us.
             </p>
           </div>

@@ -57,7 +57,7 @@ exports[`Upload should render 1`] = `
     <p
       className="jsx-1203312298"
     >
-      There was an error while uploading your files. At the moment, we do support 
+      There was an error while uploading your files. At the moment, we support 
       <em>
         composer.json
       </em>
@@ -144,7 +144,7 @@ exports[`Upload should render with feedbackPosition 1`] = `
     <p
       className="jsx-1203312298"
     >
-      There was an error while uploading your files. At the moment, we do support 
+      There was an error while uploading your files. At the moment, we support 
       <em>
         composer.json
       </em>
@@ -232,7 +232,7 @@ exports[`Upload should render with style 1`] = `
     <p
       className="jsx-1203312298"
     >
-      There was an error while uploading your files. At the moment, we do support 
+      There was an error while uploading your files. At the moment, we support 
       <em>
         composer.json
       </em>
