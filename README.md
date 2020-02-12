@@ -52,7 +52,7 @@ We use [dotenv](https://github.com/motdotla/dotenv) to store environment variabl
 
 `npm run dev`
 
-This will start your local copy of Back Your Stack. You can access it at `http://localhost:3000/`
+This will start your local copy of BackYourStack. You can access it at `http://localhost:3000/`
 
 ## Production
 
@@ -100,4 +100,4 @@ BackYourStack is open source, and we welcome new contributions. Take a look at t
 
 ## License
 
-Back Your Stack is made available under the [MIT License](LICENSE).
+BackYourStack is made available under the [MIT License](LICENSE).
