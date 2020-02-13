@@ -59,6 +59,7 @@
     "multer": "^1.4.2",
     "next": "9.2.1",
     "next-routes": "^1.4.2",
+    "node-fetch": "^2.6.0",
     "nprogress": "^0.2.0",
     "passport": "^0.4.1",
     "passport-github": "^1.1.0",
