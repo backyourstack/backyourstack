@@ -248,9 +248,9 @@ export default class Index extends Component {
                 <h3>Use a GitHub profile</h3>
               </div>
               <p className="boxDescription">
-                Enter your GitHub profile id and we&apos;ll scan all public
-                repositories under it. You may Sign In with GitHub if you want
-                to give us access to private repositories too.
+                Enter any GitHub organization or identifier, and we'll find its
+                dependencies! You must be signed in with GitHub (see the NavBar)
+                for this to work, or for us to access your private repositories.
               </p>
               <SearchForm orgs={loggedInUserOrgs} />
             </div>
