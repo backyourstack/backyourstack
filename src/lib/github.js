@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import octokitRest from '@octokit/rest';
+import { Octokit } from '@octokit/rest';
 import minimatch from 'minimatch';
 import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
@@ -31,7 +31,7 @@ function getOctokit(accessToken) {
     octokitParams.auth = `token ${accessToken}`;
   }
 
-  return octokitRest(octokitParams);
+  return new Octokit(octokitParams);
 }
 
 function getData(res) {
