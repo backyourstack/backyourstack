@@ -1,6 +1,6 @@
 import Promise from 'bluebird';
 import { S3 } from 'aws-sdk';
-import uuidv1 from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 
 import logger from '../logger';
 
@@ -14,7 +14,7 @@ const Bucket = process.env.AWS_S3_BUCKET;
 
 export const uploadFiles = async files => {
   const metadata = { objectKeys: [] };
-  const identifier = uuidv1();
+  const identifier = uuid();
   for (const id in files) {
     const key = `${identifier}/${files[id].name}`;
     const body = { [id]: files[id] };
