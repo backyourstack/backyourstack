@@ -2,12 +2,18 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
-import { get, pick, map } from 'lodash';
+import { get, pick, map, find, findIndex } from 'lodash';
 
-import { getFilesData, getProfileData, postJson } from '../lib/fetch';
+import {
+  getFilesData,
+  getProfileData,
+  postJson,
+  fetchJson,
+} from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import MessageBox from '../components/MessageBox';
 import UpArrow from '../static/img/up-arrow.svg';
 import DownArrow from '../static/img/down-arrow.svg';
 
@@ -64,27 +70,26 @@ export default class MonthlyPlan extends React.Component {
     }
     const excludedRepos = query.excludedRepos || null;
     const baseUrl = `${protocol}//${host}`;
-    let recommendations = [];
+    let data;
     if (type === 'file') {
       // sessionFiles is optional and can be null (always on the client)
       const sessionFiles = get(req, 'session.files');
-      const data = await getFilesData(sessionFiles);
-      recommendations = data.recommendations;
+      data = await getFilesData(sessionFiles);
     } else if (type === 'profile') {
       // The accessToken is only required server side (it's ok if it's undefined on client side)
       const accessToken = get(req, 'session.passport.user.accessToken');
-      const data = await getProfileData(query.id, accessToken, {
+      data = await getProfileData(query.id, accessToken, {
         excludedRepos,
       });
-      recommendations = data.recommendations;
     }
 
     return {
       id,
       baseUrl,
-      recommendations,
       type,
+      editSavedDependencies: query.editSavedDependencies === 'true' || false,
       next: query.next || '/',
+      ...data,
     };
   }
 
@@ -94,6 +99,8 @@ export default class MonthlyPlan extends React.Component {
     baseUrl: PropTypes.string,
     loggedInUser: PropTypes.object,
     recommendations: PropTypes.array,
+    editSavedDependencies: PropTypes.bool,
+    order: PropTypes.object,
   };
 
   constructor(props) {
@@ -103,12 +110,13 @@ export default class MonthlyPlan extends React.Component {
       customAmount: '',
       mobileToggleExpanded: true,
       showCustomAmount: true,
+      messageBox: { message: null, type: null },
       recommendations:
         this.getActiveCollectiveRecommendations(props.recommendations) || [],
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const isMobile = window.innerWidth <= 640;
 
     // amountList should not be expanded by default in mobile view
@@ -117,6 +125,50 @@ export default class MonthlyPlan extends React.Component {
         mobileToggleExpanded: false,
       });
     }
+
+    if (this.props.editSavedDependencies) {
+      await this.getSavedSelectedDependencies();
+    }
+
+    // Set default amount from order
+    if (this.props.order) {
+      const totalAmount = this.props.order.totalAmount / 100;
+      const suggestedAmountIndex = findIndex(suggestedAmounts, [
+        'totalAmount',
+        totalAmount,
+      ]);
+      if (suggestedAmountIndex !== -1) {
+        this.setState({
+          selectedAmount: suggestedAmounts[suggestedAmountIndex],
+        });
+      } else {
+        this.setState({
+          customAmount: totalAmount,
+          selectedAmount: suggestedAmounts[5],
+        });
+      }
+    }
+  }
+
+  async getSavedSelectedDependencies() {
+    const id = this.props.id;
+    const { selectedDependencies } = await fetchJson(
+      `/${id}/selectedDependencies`,
+    );
+    let recommendations = this.state.recommendations;
+    recommendations = recommendations.map(r => {
+      if (
+        find(selectedDependencies, ['opencollective.id', r.opencollective.id])
+      ) {
+        r.checked = true;
+      } else {
+        r.checked = false;
+      }
+      return r;
+    });
+    this.setState({
+      recommendations,
+    });
   }
 
   getActiveCollectiveRecommendations(recommendations) {
@@ -155,6 +207,10 @@ export default class MonthlyPlan extends React.Component {
   };
 
   handleOnAmountSelect = selectedAmount => {
+    if (this.props.editSavedDependencies) {
+      return;
+    }
+
     this.setState({
       selectedAmount,
       disableContributionLink: false,
@@ -216,18 +272,37 @@ export default class MonthlyPlan extends React.Component {
 
   saveSelectedDependencies = async event => {
     event.preventDefault();
+    const { id, editSavedDependencies } = this.props;
     const selectedDependencies = this.getSelectedDependencies();
-    const { id } = this.props;
-    if (selectedDependencies) {
-      try {
-        await postJson('/selectedDependencies/save', {
-          id,
-          selectedDependencies,
+    if (!selectedDependencies) {
+      window.location.replace(this.getContributionUrl());
+      return;
+    }
+
+    try {
+      await postJson('/selectedDependencies/save', {
+        id,
+        selectedDependencies,
+      });
+
+      if (editSavedDependencies) {
+        this.setState({
+          messageBox: {
+            type: 'success',
+            message: 'Selected dependencies successfully',
+          },
         });
+      } else {
         window.location.replace(this.getContributionUrl());
-      } catch (err) {
-        console.error(err);
       }
+    } catch (err) {
+      this.setState({
+        messageBox: {
+          type: 'error',
+          message: 'An error occur saving selected dependencies.',
+        },
+      });
+      console.error(err);
     }
   };
 
@@ -263,6 +338,7 @@ export default class MonthlyPlan extends React.Component {
             placeholder="1000 / month"
             value={customAmount}
             onChange={this.handleAmountChange}
+            disabled={this.props.editSavedDependencies}
           />
         </div>
       </div>
@@ -271,8 +347,9 @@ export default class MonthlyPlan extends React.Component {
 
   renderSuggestedAmount() {
     const { selectedAmount, mobileToggleExpanded } = this.state;
-    let suggestedAmountsToShow;
+    const disableSelection = this.props.editSavedDependencies;
 
+    let suggestedAmountsToShow;
     // For mobile view
     if (mobileToggleExpanded) {
       suggestedAmountsToShow = suggestedAmounts;
@@ -343,12 +420,15 @@ export default class MonthlyPlan extends React.Component {
                 margin-bottom: 10px;
               }
               .selectedAmountCard,
-              .amountCard:hover:not(.mobileSuggestedAmountToggle) {
+              .amountCardHover:hover:not(.mobileSuggestedAmountToggle) {
                 border: 1px solid #6F5AFA;
                 background: #6F5AFA;
                 color: #fff;
               }
-              .amountCard:hover .employeeText {
+              .disableSelection {
+                cursor: not-allowed;
+              }
+              .amountCardHover:hover .employeeText {
                 color: #fff;                
               }
               .amountFigWrapper {
@@ -479,7 +559,11 @@ export default class MonthlyPlan extends React.Component {
               return (
                 <div
                   key={suggestedAmount.id}
-                  className={classnames('amountCard', { selectedAmountCard })}
+                  className={classnames('amountCard', {
+                    amountCardHover: !disableSelection,
+                    selectedAmountCard,
+                    disableSelection,
+                  })}
                   onClick={() => this.handleOnAmountSelect(suggestedAmount)}
                 >
                   <p className="employeeRange">
@@ -549,6 +633,9 @@ export default class MonthlyPlan extends React.Component {
                 align-items: center;
                 wdith: 100%;
                 box-sizing: border-box;
+              }
+              .messageBoxWrapper {
+                width: 565px;
               }
               .content {
                 width: 540px;
@@ -703,6 +790,18 @@ export default class MonthlyPlan extends React.Component {
                 </p>
               </div>
               {this.renderSuggestedAmount()}
+              {this.state.messageBox.message && (
+                <div className="messageBoxWrapper">
+                  <MessageBox
+                    {...this.state.messageBox}
+                    onClose={() => {
+                      this.setState({
+                        messageBox: { message: null, type: null },
+                      });
+                    }}
+                  />
+                </div>
+              )}
               <div className="content amountTableWrapper">
                 <p className="tableDescription">
                   You decided to give{' '}

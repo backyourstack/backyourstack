@@ -7,7 +7,7 @@ import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
 
-import { postJson, getProfileData } from '../lib/fetch';
+import { postJson, fetchJson, getProfileData } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,6 +19,7 @@ import SubscribeForm from '../components/SubscribeForm';
 import BackMyStack from '../components/BackMyStack';
 import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
 import MessageBox from '../components/MessageBox';
+import EditSavedDependenciesBanner from '../components/EditSavedDependenciesBanner';
 
 import TwitterLogo from '../static/img/twitter.svg';
 import FacebookLogo from '../static/img/facebook.svg';
@@ -62,6 +63,7 @@ export default class Profile extends React.Component {
     error: PropTypes.object,
     showBackMyStack: PropTypes.bool,
     excludedRepos: PropTypes.array,
+    order: PropTypes.object,
     id: PropTypes.string,
   };
 
@@ -71,11 +73,32 @@ export default class Profile extends React.Component {
       saving: false,
       repos: props.repos,
       error: null,
+      showEditSavedDependenciesBanner: false,
     };
 
     this.showBackMyStack =
       props.showBackMyStack === 'true' ||
       process.env.SHOW_BACK_MY_STACK === 'true';
+  }
+
+  async componentDidMount() {
+    await this.getSavedSelectedDependencies();
+  }
+
+  async getSavedSelectedDependencies() {
+    let selectedDependencies;
+    try {
+      const result = await fetchJson(`/${this.props.id}/selectedDependencies`);
+      selectedDependencies = result.selectedDependencies;
+    } catch (err) {
+      console.error(err);
+    }
+
+    if (selectedDependencies) {
+      this.setState({
+        showEditSavedDependenciesBanner: true,
+      });
+    }
   }
 
   getUnCheckedRepositories(repos) {
@@ -85,6 +108,14 @@ export default class Profile extends React.Component {
   getNumberOfAnalyzedRepositories() {
     const { repos } = this.props;
     return repos.filter(r => r.checked).length;
+  }
+
+  canEditProfile() {
+    const { loggedInUser, order, profile } = this.props;
+    return (
+      profile.isAdmin ||
+      (loggedInUser && loggedInUser.username === order.triggeredBy)
+    );
   }
 
   twitterText = () => 'BackYourStack! https://backyourstack.com/';
@@ -184,10 +215,13 @@ export default class Profile extends React.Component {
       dependencies,
       order,
       pathname,
+      id,
       loggedInUser,
     } = this.props;
+    const { repos, showEditSavedDependenciesBanner } = this.state;
+    const canShowEditBanner =
+      this.canEditProfile() && showEditSavedDependenciesBanner;
 
-    const { repos } = this.state;
     return (
       <div className="Page ProfilePage">
         <style jsx global>
@@ -245,7 +279,6 @@ export default class Profile extends React.Component {
             }
           `}
         </style>
-
         <Header loggedInUser={loggedInUser} pathname={pathname} />
 
         {error && (
@@ -378,18 +411,31 @@ export default class Profile extends React.Component {
                   onClose={() => this.setState({ error: null })}
                 />
               )}
-              {this.showBackMyStack && !(order && opencollectiveAccount) && (
-                <BackMyStack
-                  saving={this.state.saving}
-                  onClickBackMyStack={this.handleBackMyStack}
-                />
-              )}
-              {this.showBackMyStack && order && opencollectiveAccount && (
-                <BackMyStackCompanyBanner
-                  profile={profile}
-                  order={order}
-                  recommendations={recommendations}
-                  opencollectiveAccount={opencollectiveAccount}
+              {this.showBackMyStack &&
+                !(order && opencollectiveAccount) &&
+                !canShowEditBanner && (
+                  <BackMyStack
+                    saving={this.state.saving}
+                    onClickBackMyStack={this.handleBackMyStack}
+                  />
+                )}
+              {this.showBackMyStack &&
+                order &&
+                opencollectiveAccount &&
+                !this.canEditProfile() && (
+                  <BackMyStackCompanyBanner
+                    profile={profile}
+                    order={order}
+                    recommendations={recommendations}
+                    opencollectiveAccount={opencollectiveAccount}
+                  />
+                )}
+              {canShowEditBanner && (
+                <EditSavedDependenciesBanner
+                  id={id}
+                  onClose={() => {
+                    this.setState({ showEditSavedDependenciesBanner: false });
+                  }}
                 />
               )}
               {(!section || section === 'recommendations') && (
