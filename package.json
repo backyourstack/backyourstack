@@ -40,7 +40,7 @@
     "@mdx-js/loader": "^1.5.7",
     "@mdx-js/mdx": "^1.5.7",
     "@octokit/rest": "^17.0.0",
-    "aws-sdk": "^2.636.0",
+    "aws-sdk": "^2.647.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.4",
