@@ -43,6 +43,14 @@ h3 {
   margin: 10px 0;
 }
 
+.HomePage {
+  font-family: 'Fira Code', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .Page {
   margin: 0 auto;
   min-height: 100%;
