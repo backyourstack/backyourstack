@@ -114,6 +114,7 @@ export default class SearchForm extends React.Component {
               background-color: #fff;
               display: flex;
               align-items: baseline;
+              height: 40px;
             }
             .searchInput.focused {
               background: white;
@@ -127,14 +128,13 @@ export default class SearchForm extends React.Component {
             }
             .searchInput div {
               color: #c0c5cc;
-              background: #f5f7fa;
+              background: #f7f8fa;
               font-size: 14px;
               line-height: 22px;
               text-align: center;
               border: none;
-              border-top-left-radius: 8px;
-              border-bottom-left-radius: 8px;
-              padding: 10px;
+              border-radius: 8px 0px 0px 8px;
+              padding: 8px;
             }
             .searchInput input {
               font-size: 16px;
@@ -155,13 +155,25 @@ export default class SearchForm extends React.Component {
               color: #2e3033;
             }
             .searchButton {
-              margin: 50px auto;
-              width: 100%;
+              margin: 10px auto;
+              background: #3c5869;
+              mix-blend-mode: normal;
+              border-radius: 32px;
+              outline: none;
+              font-weight: bold;
+              font-size: 12px;
+              line-height: 16px;
+              text-align: center;
+              padding: 17px 4px;
+              color: #fff;
+              border: none;
+              width: 229px;
             }
             .searchExamples {
               font-size: 12px;
-              text-align: center;
-              color: #9399a3;
+              line-height: 16px;
+              letter-spacing: -0.016em;
+              color: rgba(39, 39, 48, 0.5);
             }
             .searchExamples a {
               color: inherit;
@@ -183,9 +195,6 @@ export default class SearchForm extends React.Component {
               color: #f53152;
             }
             @media screen and (max-width: 500px) {
-              .searchButton {
-                margin-top: 25px;
-              }
               .searchFeedback {
                 width: auto;
                 margin: 0;
@@ -193,7 +202,17 @@ export default class SearchForm extends React.Component {
               }
               .searchInput div,
               .searchInput input {
-                padding: 5px;
+                padding: 8px;
+              }
+            }
+            @media screen and (min-width: 1194px) {
+              .searchButton {
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: -0.02em;
+                width: 260px;
+                padding: 15px 4px;
               }
             }
           `}
@@ -248,8 +267,8 @@ export default class SearchForm extends React.Component {
 
           <input
             type="submit"
-            value="Analyze your stack"
-            className="bigButton searchButton"
+            value="Try analyzing your stack now"
+            className="searchButton"
             disabled={this.canSubmit() ? false : true}
           />
         </form>

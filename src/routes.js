@@ -8,6 +8,7 @@ routes
   .add('faq')
   .add('contributing')
   .add('index', '/')
+  .add('homepage', '/v2')
   .add('search', '/search')
   .add('files', '/files/:section(dependencies|repositories)?')
   .add('monthly-plan', '/monthly-plan')
