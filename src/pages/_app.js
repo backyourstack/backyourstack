@@ -6,6 +6,7 @@ import NProgress from 'nprogress';
 import { get } from 'lodash';
 
 import '../static/fonts/inter-ui/inter-ui.css';
+import '../static/fonts/fira-code/fira-code.css';
 import '../static/css/main.css';
 import '../static/css/nprogress.css';
 
@@ -55,6 +56,10 @@ class MyApp extends App {
             BackYourStack: Discover the Open Source projects you are using and
             need financial support.
           </title>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <Component {...pageProps} />
       </Fragment>
