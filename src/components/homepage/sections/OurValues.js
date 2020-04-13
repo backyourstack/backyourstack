@@ -31,6 +31,37 @@ const OurValues = () => (
           letter-spacing: -0.02em;
           color: #ffffff;
         }
+        .becomeAPartner:hover {
+          color: #3c5869;
+        }
+        .contribute:hover {
+          color: #fff;
+        }
+        .primary:hover {
+          background-image: url('/static/img/homepage/primary-btn-bg.svg');
+          background-size: 48px 48px;
+          background-position: right bottom;
+          background-repeat: no-repeat;
+        }
+        .primary:enabled {
+          background-color: #7a9fb8;
+        }
+        .primary:disabled {
+          background-color: #9399a3;
+        }
+        .secondary:hover {
+          background-image: url('/static/img/homepage/secondary-btn-bg.svg');
+          background-size: 48px 48px;
+          background-position: right bottom;
+          background-repeat: no-repeat;
+          background-color: #d4796e;
+        }
+        .secondary:enabled {
+          background-color: #e69d9b;
+        }
+        .secondary:disabled {
+          background-color: #9399a3;
+        }
       `}
     </style>
     <style jsx>

@@ -168,6 +168,8 @@ export default class SearchForm extends React.Component {
               color: #fff;
               border: none;
               width: 229px;
+              font-family: 'Fira Code';
+              cursor: pointer;
             }
             .searchExamples {
               font-size: 12px;
@@ -268,7 +270,7 @@ export default class SearchForm extends React.Component {
           <input
             type="submit"
             value="Try analyzing your stack now"
-            className="searchButton"
+            className="searchButton primary"
             disabled={this.canSubmit() ? false : true}
           />
         </form>

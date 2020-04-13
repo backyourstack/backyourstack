@@ -1,39 +1,17 @@
 import React, { Fragment } from 'react';
-
-const features = [
-  {
-    title: 'Report',
-    description:
-      'Output a report with a hierarchy of the open source projects in your development stack.',
-  },
-  {
-    title: 'Analize',
-    description:
-      'Scan your project for JavaScript, PHP, .NE, Go, Ruby and Python dependencies.',
-  },
-  {
-    title: 'Choose',
-    description:
-      'Decide which open source projects are most important to your business needs.',
-  },
-  {
-    title: 'Contribute',
-    description:
-      'Sign-up for a single contribution or monthly subscription across your portfolio of open source.',
-  },
-  {
-    title: 'Connect',
-    description:
-      'Directly connect with the communities behind your open source projects.  See the difference your investment makes.',
-  },
-];
+import FeatureCarousel from '../FeatureCarousel';
 
 const WhatIsBackyourstack = () => (
   <Fragment>
     <style jsx>
       {`
+        .mainWrapper {
+          display: flex;
+          flex-direction: column;
+        }
         .container {
-          margin-left: 19px;
+          margin-left: 15px;
+          margin-right: 15px;
           margin-bottom: 32px;
           display: flex;
           flex-direction: column;
@@ -91,38 +69,7 @@ const WhatIsBackyourstack = () => (
         .carouselWrapper {
           margin-top: 24px;
           margin-bottom: 24px;
-        }
-        .featureWrapper {
-          display: flex;
-          align-items: center;
-        }
-        .feature {
-          box-shadow: 0px 4px 8px rgba(20, 20, 20, 0.16);
-          padding: 5px;
-        }
-        .feature h2 {
-          font-size: 32px;
-          line-height: 40px;
-          color: #3c5869;
-          margin-bottom: 16px;
-        }
-        .feature p {
-          font-size: 16px;
-          line-height: 24px;
-          color: #3c5869;
-          margin-top: 32px;
-        }
-        .report {
-          position: relative;
-          width: 147px;
-          height: 180px;
-          left: 100px;
-          top: 80px;
-        }
-        .leftNavigator,
-        .rightNavigator {
-          position: relative;
-          top: 100px;
+          width: 100%;
         }
         @media screen and (min-width: 375px) {
           .container {
@@ -144,14 +91,29 @@ const WhatIsBackyourstack = () => (
           }
           .becomeATester {
             margin-left: 38px;
+            padding: 15px;
+          }
+          .carouselWrapper {
+            width: 70%;
+            align-self: center;
+          }
+        }
+        @media screen and (min-width: 1024px) {
+          .carouselWrapper {
+            width: 50%;
           }
         }
         @media screen and (min-width: 1194px) {
+          .mainWrapper {
+            flex-direction: row;
+          }
           .container {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
           }
           .titleWrapper {
             width: 520px;
@@ -161,8 +123,20 @@ const WhatIsBackyourstack = () => (
             line-height: 64px;
             letter-spacing: -0.02em;
           }
+          .carouselWrapper {
+            width: 544px;
+            margin-right: 57px;
+          }
         }
         @media screen and (min-width: 1440px) {
+          .container {
+            margin-left: 76px;
+            margin-right: 76px;
+          }
+          .carouselWrapper {
+            margin-right: 50px;
+            margin-left: 50px;
+          }
           .titleWrapper,
           .descriptionWrapper {
             width: 636px;
@@ -173,58 +147,33 @@ const WhatIsBackyourstack = () => (
         }
       `}
     </style>
-    <div className="container">
-      <div className="wrapper">
-        <div className="titleWrapper">
-          <h2 className="title">
-            What is <br className="xl" /> Back Your Stack?
-          </h2>
-        </div>
-        <div className="descriptionWrapper">
-          <p className="description">
-            Back Your Stack works by analyzing your project manifests and
-            finding all of your dependencies. We then empower you to curate a
-            subscription plan and see the impact of your contribution.
-          </p>
-        </div>
-        <div className="actionWrapper">
-          <a className="tryItNow" href="#">
-            Try it now
-          </a>
-          <a className="becomeATester" href="#">
-            Become a beta tester
-          </a>
+    <div className="mainWrapper">
+      <div className="container">
+        <div className="wrapper">
+          <div className="titleWrapper">
+            <h2 className="title">
+              What is <br className="xl" /> Back Your Stack?
+            </h2>
+          </div>
+          <div className="descriptionWrapper">
+            <p className="description">
+              Back Your Stack works by analyzing your project manifests and
+              finding all of your dependencies. We then empower you to curate a
+              subscription plan and see the impact of your contribution.
+            </p>
+          </div>
+          <div className="actionWrapper">
+            <a className="tryItNow secondary" href="#">
+              Try it now
+            </a>
+            <a className="becomeATester primary" href="#">
+              Become a beta tester
+            </a>
+          </div>
         </div>
       </div>
       <div className="carouselWrapper">
-        <div className="featureWrapper">
-          <div className="leftNavigator">
-            <img
-              src="/static/img/homepage/left-navigator.svg"
-              alt="Left Navigator"
-            />
-          </div>
-          <div>
-            <img
-              src="/static/img/homepage/Report-bg.svg"
-              alt="Report"
-              className="report"
-            />
-            <div className="feature">
-              <h2>Reports</h2>
-              <p>
-                Output a report with a hierarchy of the open source projects in
-                your development stack.
-              </p>
-            </div>
-          </div>
-          <div className="rightNavigator">
-            <img
-              src="/static/img/homepage/right-navigator.svg"
-              alt="Left Navigator"
-            />
-          </div>
-        </div>
+        <FeatureCarousel />
       </div>
     </div>
   </Fragment>

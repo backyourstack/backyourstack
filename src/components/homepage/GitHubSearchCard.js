@@ -50,14 +50,14 @@ const GitHubSearchCard = ({ loggedInUserOrgs }) => (
         }
         @media screen and (min-width: 768px) {
           .box {
-            height: 321px;
+            min-height: 321px;
             width: 352px;
             padding: 20px 17px;
           }
         }
         @media screen and (min-width: 1194px) {
           .box {
-            height: 368px;
+            min-height: 368px;
             width: 416px;
             padding: 20px 40px;
             justify-content: space-between;

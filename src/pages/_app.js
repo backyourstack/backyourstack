@@ -9,6 +9,7 @@ import '../static/fonts/inter-ui/inter-ui.css';
 import '../static/fonts/fira-code/fira-code.css';
 import '../static/css/main.css';
 import '../static/css/nprogress.css';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 Router.onRouteChangeStart = () => NProgress.start();
 
