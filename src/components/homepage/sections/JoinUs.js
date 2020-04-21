@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import MouseTracker from '../MouseTracker';
+import HomepageLink from '../HomepageLink';
 
 const JoinUs = () => (
   <Fragment>
@@ -40,13 +42,9 @@ const JoinUs = () => (
           color: #3c5869;
         }
         .actionWrapper {
-          width: 252px;
-        }
-        .becomeAPartner,
-        .contribute {
-          display: block;
-          margin-top: 8px;
-          margin-bottom: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
         .soical-icons {
           margin-top: 20px;
@@ -203,12 +201,37 @@ const JoinUs = () => (
         <div className="joinUsWrapper">
           <h2>Join Us!</h2>
           <div className="actionWrapper">
-            <a href="#" className="becomeAPartner">
-              Become a partner
-            </a>
-            <a href="#" className="contribute">
-              Contribute
-            </a>
+            <MouseTracker
+              style={{
+                display: 'flex',
+                width: '252px',
+              }}
+              render={mousePosition => (
+                <HomepageLink
+                  href="#"
+                  className="becomeAPartner joinUsbecomeAPartner primary"
+                  mousePosition={mousePosition}
+                >
+                  Become a partner
+                </HomepageLink>
+              )}
+            />
+            <MouseTracker
+              style={{
+                marginBottom: '80px',
+                display: 'flex',
+                width: '252px',
+              }}
+              render={mousePosition => (
+                <HomepageLink
+                  href="#"
+                  className="contribute joinUscontribute primary"
+                  mousePosition={mousePosition}
+                >
+                  Contribute
+                </HomepageLink>
+              )}
+            />
           </div>
           <div className="soical-icons">
             <a href="#">

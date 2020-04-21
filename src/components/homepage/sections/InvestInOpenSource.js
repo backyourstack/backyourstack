@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import MouseTracker from '../MouseTracker';
+import HomepageLink from '../HomepageLink';
 
 const features = [
   {
@@ -136,7 +138,7 @@ const InvestInOpenSource = () => (
             padding: 10px;
           }
           .actionWrapper {
-            display: block;
+            display: flex;
             margin-top: 45px;
           }
           .becomeAPartner {
@@ -225,12 +227,28 @@ const InvestInOpenSource = () => (
           ))}
         </div>
         <div className="actionWrapper">
-          <a href="#" className="becomeAPartner">
-            Become a partner
-          </a>
-          <a href="#" className="contribute">
-            Contribute
-          </a>
+          <MouseTracker
+            render={mousePosition => (
+              <HomepageLink
+                href="#"
+                className="becomeAPartner investSectionBecomePartner"
+                mousePosition={mousePosition}
+              >
+                Become a partner
+              </HomepageLink>
+            )}
+          />
+          <MouseTracker
+            render={mousePosition => (
+              <HomepageLink
+                href="#"
+                className="contribute investSectionContribute"
+                mousePosition={mousePosition}
+              >
+                Contribute
+              </HomepageLink>
+            )}
+          />
         </div>
       </div>
     </div>

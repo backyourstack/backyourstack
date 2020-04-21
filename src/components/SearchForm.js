@@ -8,6 +8,8 @@ import { Link, Router } from '../routes';
 import List from '../components/List';
 
 import { fetchJson } from '../lib/fetch';
+import MouseTracker from './homepage/MouseTracker';
+import HomepageLink from './homepage/HomepageLink';
 
 const getProfile = slug =>
   process.env.IS_CLIENT
@@ -213,7 +215,7 @@ export default class SearchForm extends React.Component {
                 line-height: 16px;
                 text-align: center;
                 letter-spacing: -0.02em;
-                width: 260px;
+                min-width: 260px;
                 padding: 15px 4px;
               }
             }
@@ -267,11 +269,21 @@ export default class SearchForm extends React.Component {
             </p>
           )}
 
-          <input
-            type="submit"
-            value="Try analyzing your stack now"
-            className="searchButton primary"
-            disabled={this.canSubmit() ? false : true}
+          <MouseTracker
+            style={{
+              alignSelf: 'center',
+            }}
+            render={mousePosition => (
+              <HomepageLink
+                type="submit"
+                value="Try analyzing your stack now"
+                className="searchButton primary"
+                disabled={this.canSubmit() ? false : true}
+                mousePosition={mousePosition}
+              >
+                Try analyzing your stack now
+              </HomepageLink>
+            )}
           />
         </form>
       </Fragment>

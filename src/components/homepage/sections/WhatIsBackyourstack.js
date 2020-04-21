@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
+
 import FeatureCarousel from '../FeatureCarousel';
+import MouseTracker from '../MouseTracker';
+import HomepageLink from '../HomepageLink';
 
 const WhatIsBackyourstack = () => (
   <Fragment>
@@ -41,7 +44,7 @@ const WhatIsBackyourstack = () => (
           width: 100%;
         }
         .tryItNow {
-          width: 130px;
+          min-width: 130px;
           padding: 16px 24px;
           border: 2px solid #e69d9b;
           box-sizing: border-box;
@@ -129,6 +132,9 @@ const WhatIsBackyourstack = () => (
           }
         }
         @media screen and (min-width: 1440px) {
+          .mainWrapper {
+            justify-content: center;
+          }
           .container {
             margin-left: 76px;
             margin-right: 76px;
@@ -163,12 +169,28 @@ const WhatIsBackyourstack = () => (
             </p>
           </div>
           <div className="actionWrapper">
-            <a className="tryItNow secondary" href="#">
-              Try it now
-            </a>
-            <a className="becomeATester primary" href="#">
-              Become a beta tester
-            </a>
+            <MouseTracker
+              render={mousePosition => (
+                <HomepageLink
+                  className="tryItNow secondary"
+                  href="#"
+                  mousePosition={mousePosition}
+                >
+                  Try it now
+                </HomepageLink>
+              )}
+            />
+            <MouseTracker
+              render={mousePosition => (
+                <HomepageLink
+                  className="becomeATester primary"
+                  href="#"
+                  mousePosition={mousePosition}
+                >
+                  Become a beta tester
+                </HomepageLink>
+              )}
+            />
           </div>
         </div>
       </div>

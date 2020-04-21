@@ -1,69 +1,9 @@
 import React, { Fragment } from 'react';
+import MouseTracker from '../MouseTracker';
+import HomepageLink from '../HomepageLink';
 
 const OurValues = () => (
   <Fragment>
-    <style jsx global>
-      {`
-        .becomeAPartner {
-          padding: 12px 24px;
-          border: 2px solid #3c5869;
-          box-sizing: border-box;
-          border-radius: 24px;
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 16px;
-          text-align: center;
-          letter-spacing: -0.02em;
-          color: #3c5869;
-          white-space: nowrap;
-        }
-        .contribute {
-          padding: 16px;
-          background: #3c5869;
-          mix-blend-mode: normal;
-          border-radius: 32px;
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 16px;
-          text-align: center;
-          letter-spacing: -0.02em;
-          color: #ffffff;
-        }
-        .becomeAPartner:hover {
-          color: #3c5869;
-        }
-        .contribute:hover {
-          color: #fff;
-        }
-        .primary:hover {
-          background-image: url('/static/img/homepage/primary-btn-bg.svg');
-          background-size: 48px 48px;
-          background-position: right bottom;
-          background-repeat: no-repeat;
-        }
-        .primary:enabled {
-          background-color: #7a9fb8;
-        }
-        .primary:disabled {
-          background-color: #9399a3;
-        }
-        .secondary:hover {
-          background-image: url('/static/img/homepage/secondary-btn-bg.svg');
-          background-size: 48px 48px;
-          background-position: right bottom;
-          background-repeat: no-repeat;
-          background-color: #d4796e;
-        }
-        .secondary:enabled {
-          background-color: #e69d9b;
-        }
-        .secondary:disabled {
-          background-color: #9399a3;
-        }
-      `}
-    </style>
     <style jsx>
       {`
         .container {
@@ -121,6 +61,7 @@ const OurValues = () => (
           border-bottom: 1px solid #799fb8;
         }
         .actionWrapper {
+          display: flex;
           margin-top: 28px;
           margin-bottom: 42px;
         }
@@ -134,10 +75,6 @@ const OurValues = () => (
         }
         .partner {
           margin: 5px 10px;
-        }
-        .becomeAPartner {
-          margin-right: 5px;
-          white-space: nowrap;
         }
         .title h2 {
           font-size: 20px;
@@ -286,6 +223,17 @@ const OurValues = () => (
             margin-right: 100px;
           }
         }
+        @media screen and (min-width: 1920px) {
+          .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .values {
+            width: 1402px;
+          }
+        }
       `}
     </style>
     <div className="container">
@@ -351,12 +299,31 @@ const OurValues = () => (
             </p>
           </div>
           <div className="actionWrapper">
-            <a href="#" className="becomeAPartner">
-              Become a partner
-            </a>
-            <a href="#" className="contribute">
-              Contribute
-            </a>
+            <MouseTracker
+              style={{
+                marginRight: '10px',
+              }}
+              render={mousePosition => (
+                <HomepageLink
+                  className="becomeAPartner OurValuesBecomeAPartner primary"
+                  href="#"
+                  mousePosition={mousePosition}
+                >
+                  Become a partner
+                </HomepageLink>
+              )}
+            />
+            <MouseTracker
+              render={mousePosition => (
+                <HomepageLink
+                  className="contribute OurValuesContribute contribute"
+                  href="#"
+                  mousePosition={mousePosition}
+                >
+                  Contribute
+                </HomepageLink>
+              )}
+            />
           </div>
         </div>
         <div className="partners">

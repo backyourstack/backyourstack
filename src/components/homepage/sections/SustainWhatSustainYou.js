@@ -246,6 +246,14 @@ const SustainWhatSustainYou = () => (
             margin-right: 30px;
           }
         }
+        @media screen and (min-width: 1920px) {
+          .wrapper {
+            background-image: url('/static/img/homepage/sustainwhatstainyou-xxl-bg.svg');
+            background-repeat: no-repeat;
+            background-position: 700px bottom;
+            height: 716px;
+          }
+        }
         @media screen and (min-width: 2560px) {
           .wrapper {
             display: flex;
@@ -254,6 +262,7 @@ const SustainWhatSustainYou = () => (
             justify-content: center;
             position: relative;
             left: -430px;
+            background-position: right bottom;
           }
         }
       `}
