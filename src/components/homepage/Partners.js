@@ -46,7 +46,7 @@ const Partners = () => {
       </style>
       <div className="partners">
         <a
-          href="#"
+          href="https://www.oscollective.org"
           onMouseEnter={() => handleOnMouseEnter('OSC')}
           onMouseLeave={() => handleOnMouseLeave('OSC')}
         >
@@ -56,7 +56,7 @@ const Partners = () => {
           />
         </a>
         <a
-          href="#"
+          href="https://maintainer.io"
           onMouseEnter={() => handleOnMouseEnter('MM')}
           onMouseLeave={() => handleOnMouseLeave('MM')}
         >
@@ -66,7 +66,7 @@ const Partners = () => {
           />
         </a>
         <a
-          href="#"
+          href="https://codefund.io"
           onMouseEnter={() => handleOnMouseEnter('CF')}
           onMouseLeave={() => handleOnMouseLeave('CF')}
         >
@@ -76,7 +76,7 @@ const Partners = () => {
           />
         </a>
         <a
-          href="#"
+          href="https://opensource.org"
           onMouseEnter={() => handleOnMouseEnter('OSI')}
           onMouseLeave={() => handleOnMouseLeave('OSI')}
         >
@@ -86,7 +86,7 @@ const Partners = () => {
           />
         </a>
         <a
-          href="#"
+          href="https://opencollective.com/"
           onMouseEnter={() => handleOnMouseEnter('OC')}
           onMouseLeave={() => handleOnMouseLeave('OC')}
         >
