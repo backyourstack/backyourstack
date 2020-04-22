@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Partners from '../Partners';
 
 const SustainWhatSustainYou = () => (
   <Fragment>
@@ -91,8 +92,7 @@ const SustainWhatSustainYou = () => (
           border: none;
         }
         .partnersWrapper {
-          margin-left: 27px;
-          margin-right: 27px;
+          width: 100%;
         }
         .partnersWrapper h3 {
           font-weight: normal;
@@ -101,13 +101,6 @@ const SustainWhatSustainYou = () => (
           text-align: center;
           color: #acbdc7;
           margin-bottom: 30px;
-        }
-        .partners {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          margin-top: 30px;
         }
         .backgroundGraphics {
           display: none;
@@ -241,10 +234,6 @@ const SustainWhatSustainYou = () => (
           .partners {
             justify-content: center;
           }
-          .partners a {
-            margin-left: 30px;
-            margin-right: 30px;
-          }
         }
         @media screen and (min-width: 1920px) {
           .wrapper {
@@ -293,20 +282,7 @@ const SustainWhatSustainYou = () => (
       </div>
       <div className="partnersWrapper">
         <h3>We’re open source together</h3>
-        <div className="partners">
-          <a href="#">
-            <img
-              src="/static/img/homepage/OSC.svg"
-              alt="Open source collective"
-            />
-          </a>
-          <a href="#">
-            <img src="/static/img/homepage/OC.svg" alt="Open collective" />
-          </a>
-          <a href="#">
-            <img src="/static/img/homepage/Codefund.svg" alt="Code Fund" />
-          </a>
-        </div>
+        <Partners />
       </div>
     </div>
   </Fragment>
