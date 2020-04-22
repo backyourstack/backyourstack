@@ -19,9 +19,10 @@ class MouseTracker extends React.Component {
   }
 
   handleMouseMove = debounce(event => {
+    const rect = this.elem.current.getBoundingClientRect();
     this.setState({
-      positionX: event.nativeEvent.offsetX,
-      positionY: event.nativeEvent.offsetY,
+      positionX: event.clientX - rect.left - 20,
+      positionY: event.clientY - rect.top,
     });
   }, 1);
 

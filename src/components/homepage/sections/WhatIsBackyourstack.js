@@ -92,10 +92,6 @@ const WhatIsBackyourstack = () => (
           .descriptionWrapper {
             width: 415px;
           }
-          .becomeATester {
-            margin-left: 38px;
-            padding: 15px;
-          }
           .carouselWrapper {
             width: 70%;
             align-self: center;
@@ -181,6 +177,7 @@ const WhatIsBackyourstack = () => (
               )}
             />
             <MouseTracker
+              style={{}}
               render={mousePosition => (
                 <HomepageLink
                   className="becomeATester primary"

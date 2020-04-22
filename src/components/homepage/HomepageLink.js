@@ -114,6 +114,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-image: url('/static/img/homepage/primary-btn-bg.svg');
             background-position: ${positionX}px ${positionY}px;
             background-repeat: no-repeat;
+            background-size: 48px 48px;
           }
           .primary:enabled {
             background-color: #7a9fb8;
@@ -121,6 +122,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
           .primary:disabled {
             background-color: #9399a3;
           }
+          .investSectionBecomePartner:hover,
           .investSectionContribute:hover {
             background-image: url('/static/img/homepage/contribute-btn-bg.svg');
             background-size: 48px 48px;
@@ -128,16 +130,16 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-repeat: no-repeat;
           }
           @media screen and (min-width: 768px) {
-            .becomeATester {
-              margin-left: 38px;
-              padding: 20px;
-            }
+            .tryItNow,
             .investSectionBecomePartner {
               margin-right: 30px;
             }
+            .becomeATester {
+              padding: 20px;
+            }
           }
           @media screen and (min-width: 1194px) {
-            x .searchButton {
+            .searchButton {
               font-size: 14px;
               line-height: 16px;
               text-align: center;
