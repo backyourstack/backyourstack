@@ -39,7 +39,7 @@
     "@babel/core": "7.7.2",
     "@mdx-js/loader": "^1.5.8",
     "@mdx-js/mdx": "^1.5.8",
-    "@octokit/rest": "^17.2.1",
+    "@octokit/rest": "^17.6.0",
     "aws-sdk": "^2.656.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
