@@ -188,6 +188,7 @@ const SustainWhatSustainYou = () => (
             background-image: url('/static/img/homepage/sustainwhatsustainyou-lg-bg.svg');
             background-repeat: no-repeat;
             background-position: right bottom;
+            background-size: contain;
             height: 600px;
           }
 
@@ -237,9 +238,7 @@ const SustainWhatSustainYou = () => (
         }
         @media screen and (min-width: 1920px) {
           .wrapper {
-            background-image: url('/static/img/homepage/sustainwhatstainyou-xxl-bg.svg');
-            background-repeat: no-repeat;
-            background-position: 700px bottom;
+            background-size: 1043px 716px;
             height: 716px;
           }
         }

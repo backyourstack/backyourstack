@@ -209,7 +209,7 @@ const JoinUs = () => (
               render={mousePosition => (
                 <HomepageLink
                   href="#"
-                  className="becomeAPartner joinUsbecomeAPartner primary"
+                  className="becomeAPartner joinUsbecomeAPartner"
                   mousePosition={mousePosition}
                 >
                   Become a partner
@@ -225,7 +225,7 @@ const JoinUs = () => (
               render={mousePosition => (
                 <HomepageLink
                   href="#"
-                  className="contribute joinUscontribute primary"
+                  className="contribute joinUscontribute"
                   mousePosition={mousePosition}
                 >
                   Contribute

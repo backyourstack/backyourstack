@@ -9,10 +9,9 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
         {`
           .tryItNow {
             min-width: 130px;
-            padding: 16px 24px;
+            padding: 12px 24px;
             border: 2px solid #e69d9b;
             box-sizing: border-box;
-            border-radius: 24px;
             border-radius: 24px;
             outline: none;
             font-weight: bold;
@@ -22,7 +21,6 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             letter-spacing: -0.02em;
             color: #3c5869;
             text-decoration: none;
-            margin-right: 10px;
             white-space: nowrap;
           }
           .becomeATester {
@@ -101,6 +99,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-position: ${positionX}px ${positionY}px;
             background-repeat: no-repeat;
             background-color: #d4796e;
+            border: 2px solid #d4796e;
           }
           .secondary:enabled {
             background-color: #e69d9b;
@@ -129,13 +128,25 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-position: ${positionX}px ${positionY}px;
             background-repeat: no-repeat;
           }
+
+          .joinUscontribute:hover,
+          .joinUsbecomeAPartner:hover {
+            background-image: url('/static/img/homepage/primary-btn-bg.svg');
+            background-size: 48px 48px;
+            background-position: ${positionX}px ${positionY - 20}px;
+            background-repeat: no-repeat;
+          }
+          .becomeATester:hover {
+            border: 1px solid #3c5869;
+            border-radius: 24px;
+          }
           @media screen and (min-width: 768px) {
             .tryItNow,
             .investSectionBecomePartner {
               margin-right: 30px;
             }
             .becomeATester {
-              padding: 20px;
+              padding: 16px 53px;
             }
           }
           @media screen and (min-width: 1194px) {

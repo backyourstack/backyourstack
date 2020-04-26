@@ -115,7 +115,7 @@ export default class SearchForm extends React.Component {
               border-radius: 8px;
               background-color: #fff;
               display: flex;
-              align-items: baseline;
+              align-items: center;
               height: 40px;
             }
             .searchInput.focused {
@@ -136,7 +136,7 @@ export default class SearchForm extends React.Component {
               text-align: center;
               border: none;
               border-radius: 8px 0px 0px 8px;
-              padding: 8px;
+              padding: 9px;
             }
             .searchInput input {
               font-size: 16px;
