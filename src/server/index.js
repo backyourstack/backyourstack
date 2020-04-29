@@ -34,6 +34,7 @@ import {
   emailSubscribe,
   getProfileOrder,
   contactBYS,
+  joinBeta,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
@@ -180,6 +181,12 @@ nextApp.prepare().then(() => {
     const email = get(req, 'body.email');
     const profile = get(req, 'body.profile');
     emailSubscribe(email, profile).then(data => res.json(data));
+  });
+
+  server.post('/data/joinBeta', (req, res) => {
+    const email = get(req, 'body.email');
+
+    joinBeta(email).then(data => res.json(data));
   });
 
   server.post('/data/contact', (req, res) => {

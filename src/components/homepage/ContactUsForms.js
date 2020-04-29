@@ -78,7 +78,8 @@ const styles = css`
     min-width: 100%;
     cursor: pointer;
   }
-  .sendButton:active {
+  .closeModal:focus,
+  .sendButton:focus {
     outline: none;
   }
   .sendButton:disabled {

@@ -163,6 +163,12 @@ export function emailSubscribe(email, profile) {
   });
 }
 
+export const joinBeta = email => {
+  return new Promise(resolve => {
+    resolve(email);
+  });
+};
+
 export const contactBYS = data => {
   return new Promise(resolve => {
     resolve(data);
