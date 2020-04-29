@@ -1,271 +1,297 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import Modal from 'react-modal';
+
 import MouseTracker from '../MouseTracker';
 import HomepageLink from '../HomepageLink';
+import {
+  InquiriesForm,
+  BecomeBetaTesterForm,
+  PartnershipForm,
+  modalCustomStyle,
+} from '../ContactUsForms';
 
-const JoinUs = () => (
-  <Fragment>
-    <style jsx>
-      {`
-        .backgroundWrapper {
-          background-color: #7a9fb8;
-          background-image: url('/static/img/homepage/joinus-bg.svg');
-          background-repeat: no-repeat;
-          background-position: right top;
-          padding-bottom: 30px;
-          padding-top: 100px;
-        }
-        .container {
-          margin-right: 18px;
-          margin-left: 18px;
-          padding-top: 90px;
-          padding-bottom: 30px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .joinUsWrapper {
-          box-sizing: border-box;
-          width: 283px;
-          height: 335px;
-          padding: 42px 15px 35px;
-          background-color: #ffffff;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: 29px;
-        }
-        .joinUsWrapper h2 {
-          font-weight: bold;
-          font-size: 32px;
-          line-height: 40px;
-          text-align: center;
-          color: #3c5869;
-        }
-        .actionWrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .soical-icons {
-          margin-top: 20px;
-          margin-bottom: 20px;
-        }
-        .soical-icons a {
-          margin-right: 10px;
-          margin-left: 10px;
-        }
-        .contactUsWrapper {
-          background-color: #3c5869;
-          padding: 46px 37px;
-          display: flex;
-          justify-content: center;
-          box-sizing: border-box;
-        }
-        .contactUsForm {
-          display: flex;
-          flex-direction: column;
-          box-sizing: border-box;
-        }
-        .contactUsForm h3 {
-          font-weight: bold;
-          font-size: 32px;
-          line-height: 40px;
-          color: #fffef9;
-        }
-        form {
-          width: 229px;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-        }
-        form input {
-          background: #fffef9;
-          border-radius: 8px;
-          padding: 17px 24px;
-          margin-bottom: 24px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 21px;
-          color: #3c5869;
-          outline: none;
-          border: none;
-        }
-        textarea {
-          outline: none;
-          border: none;
-          background: #fffef9;
-          border-radius: 8px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 21px;
-          color: #3c5869;
-          padding: 24px;
-          height: 168px;
-          margin-bottom: 24px;
-        }
-        .sendButton {
-          border: 2px solid #ffffff;
-          box-sizing: border-box;
-          border-radius: 24px;
-          padding: 12px 24px;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 16px;
-          text-align: center;
-          letter-spacing: -0.02em;
-          color: #fffef9;
-          background: transparent;
-          width: 82px;
-        }
-        input::-webkit-input-placeholder,
-        textarea::-webkit-input-placeholder {
-          /* Chrome/Opera/Safari */
-          font-family: 'Fira Code', monospace;
-          font-weight: 400;
-        }
-        input::-moz-placeholder,
-        textarea::-moz-placeholder {
-          /* Firefox 18- */
-          font-family: 'Fira Code', monospace;
-          font-weight: 400;
-        }
-        @media screen and (min-width: 768px) {
-          .joinUsWrapper {
-            width: 441px;
-            height: 488px;
-          }
-          .joinUsWrapper h2 {
-            font-size: 56px;
-            line-height: 64px;
-            text-align: center;
-            letter-spacing: -0.02em;
-            margin-bottom: 54px;
-          }
-          .contribute {
-            margin-bottom: 93px;
-          }
-          .contactUsWrapper {
-            width: 600px;
-          }
-          .contactUsForm h3 {
-            margin-bottom: 20px;
-          }
-          form,
-          .contactUsForm {
-            width: 458px;
-          }
-          form input {
-            width: 336px;
-          }
-          textarea {
-            width: 405px;
-          }
-          .sendButton {
-            align-self: flex-end;
-          }
-        }
-        @media screen and (min-width: 1194px) {
+const JoinUs = () => {
+  const [activeTab, setActiveTab] = useState('inquiries');
+  const [modalIsOpen, setIsOpen] = useState(false);
+  Modal.setAppElement('#__next');
+
+  return (
+    <Fragment>
+      <style jsx>
+        {`
           .backgroundWrapper {
-            padding-top: 140px;
+            background-color: #7a9fb8;
+            background-image: url('/static/img/homepage/joinus-bg.svg');
+            background-repeat: no-repeat;
+            background-position: right top;
+            padding-bottom: 30px;
+            padding-top: 100px;
           }
           .container {
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
+            margin-right: 18px;
+            margin-left: 18px;
+            padding-top: 90px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
           .joinUsWrapper {
-            height: 525px;
-            width: 390px;
+            box-sizing: border-box;
+            width: 283px;
+            min-height: 335px;
+            padding: 42px 15px 35px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 29px;
+          }
+          .joinUsWrapper h2 {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            color: #3c5869;
+          }
+          .actionWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .soical-icons {
+            margin-bottom: 20px;
+          }
+          .soical-icons a {
             margin-right: 10px;
+            margin-left: 10px;
           }
           .contactUsWrapper {
-            margin-left: 30px;
+            background-color: #3c5869;
+            padding: 46px 37px;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 288px;
           }
-        }
-        @media screen and (min-width: 1440px) {
-          .contactUsWrapper {
-            width: 865px;
+          .tabs {
+            display: flex;
           }
-          form,
-          .contactUsForm {
-            width: 705px;
+          .tab {
+            width: 95px;
+            height: 48px;
+            outline: none;
+            border: none;
+            padding: 13px 6px 19px;
+            color: #3c5869;
+            font-weight: bold;
+            font-size: 8px;
+            line-height: 16px;
+            background: #ffffff;
+            border-radius: 8px 8px 0px 0px;
+            font-family: Fira Code;
+            margin-right: 2px;
+            cursor: pointer;
           }
-          textarea {
-            width: 650px;
+          .tab:hover {
+            font-weight: bold;
           }
-        }
-      `}
-    </style>
-    <div className="backgroundWrapper">
-      <div className="container">
-        <div className="joinUsWrapper">
-          <h2>Join Us!</h2>
-          <div className="actionWrapper">
-            <MouseTracker
-              style={{
-                display: 'flex',
-                width: '252px',
-              }}
-              render={mousePosition => (
-                <HomepageLink
-                  href="#"
-                  className="becomeAPartner joinUsbecomeAPartner"
-                  mousePosition={mousePosition}
-                >
-                  Become a partner
-                </HomepageLink>
-              )}
-            />
-            <MouseTracker
-              style={{
-                marginBottom: '80px',
-                display: 'flex',
-                width: '252px',
-              }}
-              render={mousePosition => (
-                <HomepageLink
-                  href="#"
-                  className="contribute joinUscontribute"
-                  mousePosition={mousePosition}
-                >
-                  Contribute
-                </HomepageLink>
-              )}
-            />
-          </div>
-          <div className="soical-icons">
-            <a href="#">
-              <img src="/static/img/homepage/slack-icon.svg" alt="Slack" />
-            </a>
-            <a href="#">
-              <img src="/static/img/homepage/twitter-icon.svg" alt="Twitter" />
-            </a>
-            <a href="#">
-              <img
-                src="/static/img/homepage/github-joinus-icon.svg"
-                alt="GitHub"
+          .active {
+            background-color: #3c5869;
+            color: #fff;
+            font-weight: bold;
+          }
+
+          @media screen and (min-width: 375px) {
+            .tab {
+              font-size: 12px;
+            }
+            .contactUsWrapper {
+              width: 344px;
+            }
+          }
+
+          @media screen and (min-width: 768px) {
+            .joinUsWrapper {
+              width: 441px;
+              height: 488px;
+            }
+            .joinUsWrapper h2 {
+              font-size: 56px;
+              line-height: 64px;
+              text-align: center;
+              letter-spacing: -0.02em;
+              margin-bottom: 54px;
+            }
+            .contribute {
+              margin-bottom: 93px;
+            }
+            .contactUsWrapper {
+              width: 600px;
+            }
+            .contactUsForm h3 {
+              margin-bottom: 20px;
+            }
+            form,
+            .contactUsForm {
+              width: 458px;
+            }
+            form input {
+              width: 336px;
+            }
+            textarea {
+              width: 405px;
+            }
+            .sendButton {
+              align-self: flex-end;
+            }
+            .tab {
+              width: auto;
+              height: auto;
+              padding: 16px;
+            }
+          }
+          @media screen and (min-width: 1194px) {
+            .backgroundWrapper {
+              padding-top: 140px;
+            }
+            .container {
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-end;
+            }
+            .joinUsWrapper {
+              height: 525px;
+              width: 390px;
+              margin-right: 10px;
+              position: relative;
+              top: 25px;
+            }
+            .tabs,
+            .contactUsWrapper {
+              margin-left: 30px;
+            }
+            .tab {
+              font-weight: normal;
+            }
+            .active {
+              background-color: #3c5869;
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+          @media screen and (min-width: 1440px) {
+            .contactUsWrapper {
+              width: 865px;
+            }
+            form,
+            .contactUsForm {
+              width: 705px;
+            }
+            textarea {
+              width: 650px;
+            }
+          }
+        `}
+      </style>
+      <div className="backgroundWrapper">
+        <div className="container">
+          <div className="joinUsWrapper">
+            <h2>Join Us!</h2>
+            <div className="actionWrapper">
+              <MouseTracker
+                style={{
+                  display: 'flex',
+                  width: '252px',
+                }}
+                render={mousePosition => (
+                  <HomepageLink
+                    className="becomeAPartner joinUsbecomeAPartner"
+                    mousePosition={mousePosition}
+                    onClick={e => {
+                      e.preventDefault();
+                      setIsOpen(true);
+                    }}
+                  >
+                    Become a partner
+                  </HomepageLink>
+                )}
               />
-            </a>
+              <MouseTracker
+                style={{
+                  marginBottom: '80px',
+                  display: 'flex',
+                  width: '252px',
+                }}
+                render={mousePosition => (
+                  <HomepageLink
+                    href="https://github.com/backyourstack/backyourstack"
+                    className="contribute joinUscontribute"
+                    mousePosition={mousePosition}
+                  >
+                    Contribute
+                  </HomepageLink>
+                )}
+              />
+            </div>
+            <div className="soical-icons">
+              <a href="#">
+                <img src="/static/img/homepage/slack-icon.svg" alt="Slack" />
+              </a>
+              <a href="#">
+                <img
+                  src="/static/img/homepage/twitter-icon.svg"
+                  alt="Twitter"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/static/img/homepage/github-joinus-icon.svg"
+                  alt="GitHub"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="contactUsWrapper">
-          <div className="contactUsForm">
-            <h3>Contact us</h3>
-            <form>
-              <input type="email" name="email" placeholder="Enter your email" />
-              <textarea
-                className="textarea"
-                placeholder="Write us a message"
-              ></textarea>
-              <button type="submit" className="sendButton">
-                Send
+          <div>
+            <div className="tabs">
+              <button
+                className={activeTab === 'inquiries' ? 'tab active' : 'tab'}
+                onClick={() => setActiveTab('inquiries')}
+              >
+                General inquiries
               </button>
-            </form>
+              <button
+                className={activeTab === 'betaTester' ? 'tab active' : 'tab'}
+                onClick={() => setActiveTab('betaTester')}
+              >
+                Beta tester
+              </button>
+              <button
+                className={activeTab === 'partnership' ? 'tab active' : 'tab'}
+                onClick={() => setActiveTab('partnership')}
+              >
+                Partnership
+              </button>
+            </div>
+            <div className="contactUsWrapper">
+              {activeTab === 'inquiries' && <InquiriesForm />}
+              {activeTab === 'betaTester' && <BecomeBetaTesterForm />}
+              {activeTab === 'partnership' && <PartnershipForm />}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </Fragment>
-);
+      <Modal
+        isOpen={modalIsOpen}
+        style={modalCustomStyle}
+        overlayClassName="modalOverlay"
+      >
+        <div>
+          <PartnershipForm usedIn="modal" closeModal={() => setIsOpen(false)} />
+        </div>
+      </Modal>
+    </Fragment>
+  );
+};
 
 export default JoinUs;

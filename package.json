@@ -69,6 +69,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dropzone": "^7.0.1",
+    "react-modal": "^3.11.2",
     "react-number-format": "^4.4.1",
     "serve-favicon": "^2.5.0",
     "styled-jsx": "^3.2.5",

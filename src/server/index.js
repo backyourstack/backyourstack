@@ -33,6 +33,7 @@ import {
   getSavedFilesData,
   emailSubscribe,
   getProfileOrder,
+  contactBYS,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
@@ -179,6 +180,21 @@ nextApp.prepare().then(() => {
     const email = get(req, 'body.email');
     const profile = get(req, 'body.profile');
     emailSubscribe(email, profile).then(data => res.json(data));
+  });
+
+  server.post('/data/contact', (req, res) => {
+    const data = {
+      name: get(req, 'body.name'),
+      email: get(req, 'body.email'),
+      message: get(req, 'body.message'),
+      type: get(req, 'body.type'),
+    };
+
+    if (data.type === 'partnership') {
+      data.organization = get(req, 'body.organization');
+    }
+
+    contactBYS(data).then(data => res.json(data));
   });
 
   server.post('/files/upload', upload.array('files'), (req, res) => {

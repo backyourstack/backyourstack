@@ -251,3 +251,16 @@ main {
     padding: 20px;
   }
 }
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

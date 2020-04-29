@@ -30,6 +30,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             color: #3c5869;
             text-decoration: none;
             width: 144px;
+            cursor: pointer;
           }
           .searchButton {
             margin: 10px auto;
@@ -61,6 +62,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             letter-spacing: -0.02em;
             color: #3c5869;
             white-space: nowrap;
+            cursor: pointer;
           }
           .contribute {
             padding: 16px;

@@ -163,6 +163,12 @@ export function emailSubscribe(email, profile) {
   });
 }
 
+export const contactBYS = data => {
+  return new Promise(resolve => {
+    resolve(data);
+  });
+};
+
 export const getProfileOrder = async id => {
   try {
     const file = await getFile(`${id}/order.json`);
