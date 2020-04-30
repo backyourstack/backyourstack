@@ -15,7 +15,7 @@ const features = [
       'Output a report with a hierarchy of the open source projects in your development stack.',
   },
   {
-    title: 'Analize',
+    title: 'Analyze',
     description:
       'Scan your project for JavaScript, PHP, .NE, Go, Ruby and Python dependencies.',
   },

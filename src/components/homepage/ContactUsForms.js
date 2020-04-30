@@ -231,8 +231,6 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
     email: '',
     message: '',
   });
-  const isEnabled =
-    state.email.length > 0 && state.name.length > 0 && state.message.length > 0;
 
   return (
     <div className="contactUsForm">
@@ -241,7 +239,7 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
         <h3 className="title">Contact us</h3>
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
-            x
+            X
           </button>
         )}
       </div>
@@ -279,7 +277,6 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
           className={
             state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
           }
-          disabled={!isEnabled}
         >
           {state.formState === 'success' && 'Message submitted!'}
           {!state.formState && 'Send'}
@@ -298,8 +295,6 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
     email: '',
     message: '',
   });
-  const isEnabled =
-    state.email.length > 0 && state.name.length > 0 && state.message.length > 0;
 
   return (
     <div
@@ -310,7 +305,7 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
         <h3 className="title">Become a beta tester</h3>
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
-            x
+            X
           </button>
         )}
       </div>
@@ -348,7 +343,6 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
           className={
             state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
           }
-          disabled={!isEnabled}
         >
           {state.formState === 'success' && 'Message submitted!'}
           {!state.formState && 'Send'}
@@ -368,11 +362,6 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
     email: '',
     message: '',
   });
-  const isEnabled =
-    state.email.length > 0 &&
-    state.name.length > 0 &&
-    state.message.length > 0 &&
-    state.organization.length > 0;
 
   return (
     <div
@@ -383,7 +372,7 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
         <h3 className="title">Become a Partner</h3>
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
-            x
+            X
           </button>
         )}
       </div>
@@ -430,7 +419,6 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
           className={
             state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
           }
-          disabled={!isEnabled}
         >
           {state.formState === 'success' && 'Message submitted!'}
           {!state.formState && 'Send'}

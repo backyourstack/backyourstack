@@ -81,6 +81,7 @@ export default class Upload extends React.Component {
               display: flex;
               justify-content: center;
               align-items: center;
+              min-height: 72px;
             }
             .dropZoneComponent .text {
               text-align: center;
@@ -94,13 +95,28 @@ export default class Upload extends React.Component {
               background-color: #fff2f4;
             }
             .dropZoneComponent:hover {
-              color: #7448ff;
-              border-color: #7448ff;
+              color: #272730;
             }
             .dropZoneComponent:active,
             .dropZoneComponent:focus {
               color: #2e2e99;
               border-color: #2e2e99;
+            }
+            @media screen and (min-width: 1194px) {
+              .uploadContainer,
+              .uploadWrapper,
+              .dropZoneComponent {
+                min-width: 280px;
+              }
+
+              .uploadContainer:hover,
+              .uploadWrapper:hover,
+              .dropZoneComponent:hover {
+                width: 287px;
+              }
+              .dropZoneComponent:hover {
+                height: 74px;
+              }
             }
           `}
         </style>
@@ -135,7 +151,6 @@ export default class Upload extends React.Component {
             })}
             activeClassName="active"
             maxSize={102400}
-            style={this.props.style}
           >
             <div className="text">
               <p>

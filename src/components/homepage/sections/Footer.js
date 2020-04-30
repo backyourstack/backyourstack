@@ -30,7 +30,6 @@ const Footer = () => (
         }
         .logoWrapper {
           display: flex;
-          width: 100%;
           justify-content: center;
           box-sizing: border-box;
         }

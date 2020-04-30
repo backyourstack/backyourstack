@@ -123,7 +123,7 @@ export default class SearchForm extends React.Component {
             }
             .searchInput.focused,
             .searchInput:hover {
-              border-color: #3a2fac;
+              border-color: #7a9fb8;
             }
             .searchInput.focused.error {
               border-color: #f53152;

@@ -92,11 +92,7 @@ const UploadCard = ({ supportedFilesAsComponent }) => (
         dependency files. At the moment, we support {supportedFilesAsComponent}.
       </p>
       <div className="uploadContainer">
-        <Upload
-          onUpload={onUpload}
-          feedbackPosition="float"
-          style={{ height: '75px' }}
-        />
+        <Upload onUpload={onUpload} feedbackPosition="float" />
       </div>
       <p className="boxDescription">
         The uploaded files will not be shared with anyone and will be deleted

@@ -284,6 +284,7 @@ const JoinUs = () => {
       <Modal
         isOpen={modalIsOpen}
         style={modalCustomStyle}
+        onRequestClose={() => setIsOpen(false)}
         overlayClassName="modalOverlay"
       >
         <div>

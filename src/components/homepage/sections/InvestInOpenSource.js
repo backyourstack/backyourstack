@@ -266,6 +266,7 @@ const InvestInOpenSource = () => {
         isOpen={modalIsOpen}
         style={modalCustomStyle}
         overlayClassName="modalOverlay"
+        onRequestClose={() => setIsOpen(false)}
       >
         <div>
           <PartnershipForm usedIn="modal" closeModal={() => setIsOpen(false)} />

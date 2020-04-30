@@ -31,6 +31,8 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             text-decoration: none;
             width: 144px;
             cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 24px;
           }
           .searchButton {
             margin: 10px auto;
@@ -95,6 +97,22 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             margin-right: 5px;
             white-space: nowrap;
           }
+          .joinBetaBtn {
+            width: 123px;
+            outline: none;
+            background: #e69d9b;
+            border-radius: 0px 24px 24px 0px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            white-space: nowrap;
+            padding: 12px 8px;
+            border: none;
+            cursor: pointer;
+          }
           .secondary:hover {
             background-image: url('/static/img/homepage/secondary-btn-bg.svg');
             background-size: 48px 48px;
@@ -138,10 +156,6 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-position: ${positionX}px ${positionY - 20}px;
             background-repeat: no-repeat;
           }
-          .becomeATester:hover {
-            border: 1px solid #3c5869;
-            border-radius: 24px;
-          }
           @media screen and (min-width: 768px) {
             .tryItNow,
             .investSectionBecomePartner {
@@ -149,6 +163,12 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             }
             .becomeATester {
               padding: 16px 53px;
+            }
+            .becomeATester:hover {
+              border-color: #3c5869;
+            }
+            .joinBetaBtn {
+              width: 154px;
             }
           }
           @media screen and (min-width: 1194px) {
