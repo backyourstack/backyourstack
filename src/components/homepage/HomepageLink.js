@@ -112,6 +112,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             padding: 12px 8px;
             border: none;
             cursor: pointer;
+            font-family: 'Fira Code';
           }
           .secondary:hover {
             background-image: url('/static/img/homepage/secondary-btn-bg.svg');
@@ -120,6 +121,12 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-repeat: no-repeat;
             background-color: #d4796e;
             border: 2px solid #d4796e;
+          }
+          .joinBetaBtn:hover {
+            background-image: url('/static/img/homepage/joinBeta-bg.svg');
+            background-size: 48px 48px;
+            background-position: ${positionX}px ${positionY - 15}px;
+            background-repeat: no-repeat;
           }
           .secondary:enabled {
             background-color: #e69d9b;

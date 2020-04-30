@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import Partners from '../Partners';
 import { fetchJson } from '../../../lib/fetch';
+import HomepageLink from '../HomepageLink';
+import MouseTracker from '../MouseTracker';
 
 const SustainWhatSustainYou = () => {
   const [email, setEmail] = useState('');
@@ -298,7 +300,18 @@ const SustainWhatSustainYou = () => {
                     setEmail(target.value);
                   }}
                 />
-                <button type="submit">Join the Beta</button>
+                <MouseTracker
+                  render={mousePosition => (
+                    <HomepageLink
+                      type="submit"
+                      value="Join the Beta"
+                      className="joinBetaBtn"
+                      mousePosition={mousePosition}
+                    >
+                      Join the Beta
+                    </HomepageLink>
+                  )}
+                />
               </form>
             </div>
           </div>
