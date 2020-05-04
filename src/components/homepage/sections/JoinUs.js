@@ -231,7 +231,7 @@ const JoinUs = () => {
                 }}
                 render={mousePosition => (
                   <HomepageLink
-                    href="https://github.com/backyourstack/backyourstack"
+                    href="https://opencollective.com/backyourstack"
                     className="contribute joinUscontribute"
                     mousePosition={mousePosition}
                   >

@@ -327,7 +327,7 @@ const OurValues = () => {
                 render={mousePosition => (
                   <HomepageLink
                     className="contribute OurValuesContribute contribute"
-                    href="https://github.com/backyourstack/backyourstack"
+                    href="https://opencollective.com/backyourstack"
                     mousePosition={mousePosition}
                   >
                     Contribute

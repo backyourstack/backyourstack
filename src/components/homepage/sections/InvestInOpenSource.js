@@ -251,7 +251,7 @@ const InvestInOpenSource = () => {
             <MouseTracker
               render={mousePosition => (
                 <HomepageLink
-                  href="https://github.com/backyourstack/backyourstack"
+                  href="https://opencollective.com/backyourstack"
                   className="contribute investSectionContribute"
                   mousePosition={mousePosition}
                 >
