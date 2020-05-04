@@ -1,12 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-  Dot,
-} from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 
 const features = [
   {
@@ -55,15 +48,16 @@ class FeatureCarousel extends Component {
               display: flex;
               align-items: center;
               box-sizing: border-box;
-              padding-bottom: 10px;
-              padding-top: 20px;
               height: 350px;
               background-size: 147px 180px;
+              margin-right: 24px;
+              margin-left: 24px;
             }
             .featureCard {
               box-shadow: 0px 4px 8px rgba(20, 20, 20, 0.16);
               padding: 5px;
               box-sizing: border-box;
+              align-self: center;
             }
             .featureCard h2 {
               font-size: 32px;
@@ -77,10 +71,6 @@ class FeatureCarousel extends Component {
               color: #3c5869;
               margin-top: 32px;
             }
-            .navigator {
-              width: 24px;
-              height: 24px;
-            }
             .indicator {
               height: 16px;
               width: 16px;
@@ -90,6 +80,7 @@ class FeatureCarousel extends Component {
               justify-content: center;
               align-items: center;
               text-align: center;
+              position: relative;
             }
             @media screen and (min-width: 768px) {
               .featureCard {
@@ -101,6 +92,9 @@ class FeatureCarousel extends Component {
                 background-size: 196px 240px;
                 justify-content: space-between;
                 background-position: right -30px !important;
+              }
+              .indicatorGroup {
+                left: -20px;
               }
             }
             @media screen and (min-width: 1194px) {
@@ -130,12 +124,6 @@ class FeatureCarousel extends Component {
             .buttonIndicator:disabled {
               background: #c77970;
             }
-            .navButton {
-              outline: none;
-              background: none;
-              border: none;
-              padding: 0;
-            }
           `}
         </style>
         <CarouselProvider
@@ -159,29 +147,11 @@ class FeatureCarousel extends Component {
                         : 'right top',
                   }}
                 >
-                  <div className="leftNavigator">
-                    <ButtonBack className="navButton">
-                      <img
-                        src="/static/img/homepage/left-navigator.svg"
-                        alt="Left Navigator"
-                        className="navigator"
-                      />
-                    </ButtonBack>
-                  </div>
                   <div className="feature">
                     <div className="featureCard">
                       <h2>{feature.title}</h2>
                       <p>{feature.description}</p>
                     </div>
-                  </div>
-                  <div className="rightNavigator">
-                    <ButtonNext className="navButton">
-                      <img
-                        src="/static/img/homepage/right-navigator.svg"
-                        alt="Left Navigator"
-                        className="navigator"
-                      />
-                    </ButtonNext>
                   </div>
                 </div>
               </Slide>

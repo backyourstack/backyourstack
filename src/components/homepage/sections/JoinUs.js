@@ -247,7 +247,7 @@ const JoinUs = () => {
               <a href="#" className="soical">
                 <FaTwitter size="32" />
               </a>
-              <a href="#" className="soical">
+              <a href="http://github.com/backyourstack" className="soical">
                 <FaGithub size="32" />
               </a>
             </div>
