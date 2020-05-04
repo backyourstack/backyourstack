@@ -114,6 +114,32 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             cursor: pointer;
             font-family: 'Fira Code';
           }
+          .sendButton {
+            border: 2px solid #ffffff;
+            box-sizing: border-box;
+            border-radius: 24px;
+            padding: 12px 24px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #fffef9;
+            background: transparent;
+            min-width: 100%;
+            cursor: pointer;
+          }
+          .sendButton:focus {
+            outline: none;
+          }
+          .sendButton:disabled {
+            background: #7a9fb8;
+            border: 2px solid #ffffff;
+            box-sizing: border-box;
+          }
+          .failed:disabled {
+            background: #f55882;
+          }
           .secondary:hover {
             background-image: url('/static/img/homepage/secondary-btn-bg.svg');
             background-size: 48px 48px;
@@ -142,8 +168,11 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-repeat: no-repeat;
             background-size: 48px 48px;
           }
-          .primary:enabled {
-            background-color: #7a9fb8;
+          .searchButton:hover {
+            background-image: url('/static/img/homepage/primary-btn-bg.svg');
+            background-position: ${positionX}px ${positionY - 20}px;
+            background-repeat: no-repeat;
+            background-size: 48px 48px;
           }
           .primary:disabled {
             background-color: #9399a3;
@@ -155,7 +184,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             background-position: ${positionX}px ${positionY}px;
             background-repeat: no-repeat;
           }
-
+          .sendButton:hover,
           .joinUscontribute:hover,
           .joinUsbecomeAPartner:hover {
             background-image: url('/static/img/homepage/primary-btn-bg.svg');
@@ -176,6 +205,10 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             }
             .joinBetaBtn {
               width: 154px;
+            }
+            .sendButton {
+              align-self: flex-end;
+              min-width: 82px;
             }
           }
           @media screen and (min-width: 1194px) {

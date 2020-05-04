@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Modal from 'react-modal';
+import { FaSlack, FaTwitter, FaGithub } from 'react-icons/fa';
 
 import MouseTracker from '../MouseTracker';
 import HomepageLink from '../HomepageLink';
@@ -101,7 +102,12 @@ const JoinUs = () => {
             color: #fff;
             font-weight: bold;
           }
-
+          .soical {
+            color: #3c5869;
+          }
+          .soical:hover {
+            color: #7a9fb8;
+          }
           @media screen and (min-width: 375px) {
             .tab {
               font-size: 12px;
@@ -235,20 +241,14 @@ const JoinUs = () => {
               />
             </div>
             <div className="soical-icons">
-              <a href="#">
-                <img src="/static/img/homepage/slack-icon.svg" alt="Slack" />
+              <a href="#" className="soical">
+                <FaSlack size="32" />
               </a>
-              <a href="#">
-                <img
-                  src="/static/img/homepage/twitter-icon.svg"
-                  alt="Twitter"
-                />
+              <a href="#" className="soical">
+                <FaTwitter size="32" />
               </a>
-              <a href="#">
-                <img
-                  src="/static/img/homepage/github-joinus-icon.svg"
-                  alt="GitHub"
-                />
+              <a href="#" className="soical">
+                <FaGithub size="32" />
               </a>
             </div>
           </div>

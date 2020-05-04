@@ -64,7 +64,7 @@ export default class SearchForm extends React.Component {
   };
 
   handleSubmit = event => {
-    if (this.state.q && this.state.q.length > 0) {
+    if (this.state.q && this.state.q.length > 0 && !this.state.error) {
       Router.pushRoute('search', { q: this.state.q });
     }
     event.preventDefault();
@@ -78,8 +78,6 @@ export default class SearchForm extends React.Component {
   };
 
   focus = () => this.searchInput.current.focus();
-
-  canSubmit = () => this.state.q && !this.state.error;
 
   isFocused = () =>
     document && document.activeElement === this.searchInput.current;
@@ -277,8 +275,7 @@ export default class SearchForm extends React.Component {
               <HomepageLink
                 type="submit"
                 value="Try analyzing your stack now"
-                className="searchButton primary"
-                disabled={this.canSubmit() ? false : true}
+                className="searchButton"
                 mousePosition={mousePosition}
               >
                 Try analyzing your stack now

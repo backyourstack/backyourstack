@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import css from 'styled-jsx/css';
 
 import { fetchJson } from '../../lib/fetch';
+import MouseTracker from './MouseTracker';
+import HomepageLink from './HomepageLink';
 
 export const modalCustomStyle = {
   content: {
@@ -63,33 +65,11 @@ const styles = css`
     height: 168px;
     margin-bottom: 24px;
   }
-  .sendButton {
-    border: 2px solid #ffffff;
-    box-sizing: border-box;
-    border-radius: 24px;
-    padding: 12px 24px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #fffef9;
-    background: transparent;
-    min-width: 100%;
-    cursor: pointer;
-  }
   .closeModal:focus,
   .sendButton:focus {
     outline: none;
   }
-  .sendButton:disabled {
-    background: #7a9fb8;
-    border: 2px solid #ffffff;
-    box-sizing: border-box;
-  }
-  .failed:disabled {
-    background: #f55882;
-  }
+
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -138,10 +118,6 @@ const styles = css`
     }
     textarea {
       width: 405px;
-    }
-    .sendButton {
-      align-self: flex-end;
-      min-width: 82px;
     }
   }
 
@@ -272,16 +248,26 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
           value={state.message}
           onChange={onChange}
         ></textarea>
-        <button
-          type="submit"
-          className={
-            state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
-          }
-        >
-          {state.formState === 'success' && 'Message submitted!'}
-          {!state.formState && 'Send'}
-          {state.formState === 'failed' && 'Oops! There was a problem'}
-        </button>
+        <MouseTracker
+          style={{
+            alignSelf: 'flex-end',
+          }}
+          render={mousePosition => (
+            <HomepageLink
+              type="submit"
+              mousePosition={mousePosition}
+              className={
+                state.formState === 'failed'
+                  ? 'sendButton failed'
+                  : 'sendButton'
+              }
+            >
+              {state.formState === 'success' && 'Message submitted!'}
+              {!state.formState && 'Send'}
+              {state.formState === 'failed' && 'Oops! There was a problem'}
+            </HomepageLink>
+          )}
+        />
       </form>
     </div>
   );
@@ -338,16 +324,26 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
           onChange={onChange}
           required
         ></textarea>
-        <button
-          type="submit"
-          className={
-            state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
-          }
-        >
-          {state.formState === 'success' && 'Message submitted!'}
-          {!state.formState && 'Send'}
-          {state.formState === 'failed' && 'Oops! There was a problem'}
-        </button>
+        <MouseTracker
+          style={{
+            alignSelf: 'flex-end',
+          }}
+          render={mousePosition => (
+            <HomepageLink
+              type="submit"
+              mousePosition={mousePosition}
+              className={
+                state.formState === 'failed'
+                  ? 'sendButton failed'
+                  : 'sendButton'
+              }
+            >
+              {state.formState === 'success' && 'Message submitted!'}
+              {!state.formState && 'Send'}
+              {state.formState === 'failed' && 'Oops! There was a problem'}
+            </HomepageLink>
+          )}
+        />
       </form>
     </div>
   );
@@ -414,16 +410,26 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
           onChange={onChange}
           required
         ></textarea>
-        <button
-          type="submit"
-          className={
-            state.formState === 'failed' ? 'sendButton failed' : 'sendButton'
-          }
-        >
-          {state.formState === 'success' && 'Message submitted!'}
-          {!state.formState && 'Send'}
-          {state.formState === 'failed' && 'Oops! There was a problem'}
-        </button>
+        <MouseTracker
+          style={{
+            alignSelf: 'flex-end',
+          }}
+          render={mousePosition => (
+            <HomepageLink
+              type="submit"
+              mousePosition={mousePosition}
+              className={
+                state.formState === 'failed'
+                  ? 'sendButton failed'
+                  : 'sendButton'
+              }
+            >
+              {state.formState === 'success' && 'Message submitted!'}
+              {!state.formState && 'Send'}
+              {state.formState === 'failed' && 'Oops! There was a problem'}
+            </HomepageLink>
+          )}
+        />
       </form>
     </div>
   );
