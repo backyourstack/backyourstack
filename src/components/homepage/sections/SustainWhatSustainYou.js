@@ -5,17 +5,19 @@ import HomepageLink from '../HomepageLink';
 import MouseTracker from '../MouseTracker';
 
 const SustainWhatSustainYou = () => {
-  const [email, setEmail] = useState('');
+  const [state, setState] = useState({ email: '', formState: null });
 
   const handleOnSubmit = async event => {
     event.preventDefault();
-    fetchJson('/data/joinBeta', {
+    await fetchJson('/data/joinBeta', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
-      body: JSON.stringify({ email }),
-    }).then(() => {});
+      body: JSON.stringify({ email: state.email }),
+    }).then(() => {
+      setState({ email: '', formState: 'success' });
+    });
   };
 
   return (
@@ -294,10 +296,14 @@ const SustainWhatSustainYou = () => {
                 <input
                   type="email"
                   name="email"
+                  value={state.email}
                   placeholder="Enter your email"
                   required
                   onChange={({ target }) => {
-                    setEmail(target.value);
+                    setState({
+                      ...state,
+                      email: target.value,
+                    });
                   }}
                 />
                 <MouseTracker
@@ -308,7 +314,10 @@ const SustainWhatSustainYou = () => {
                       className="joinBetaBtn"
                       mousePosition={mousePosition}
                     >
-                      Join the Beta
+                      {state.formState === 'success' && 'Message submitted!'}
+                      {!state.formState && 'Join the Beta'}
+                      {state.formState === 'failed' &&
+                        'Oops! There was a problem'}
                     </HomepageLink>
                   )}
                 />

@@ -98,7 +98,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
             white-space: nowrap;
           }
           .joinBetaBtn {
-            width: 123px;
+            min-width: 123px;
             outline: none;
             background: #e69d9b;
             border-radius: 0px 24px 24px 0px;
@@ -204,7 +204,7 @@ const HomepageLink = ({ type, style, mousePosition, ...props }) => {
               border-color: #3c5869;
             }
             .joinBetaBtn {
-              width: 154px;
+              min-width: 154px;
             }
             .sendButton {
               align-self: flex-end;

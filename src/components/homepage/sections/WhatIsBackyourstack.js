@@ -175,7 +175,7 @@ const WhatIsBackyourstack = () => {
                 render={mousePosition => (
                   <HomepageLink
                     className="tryItNow secondary"
-                    href="#"
+                    href="#tryItNow"
                     mousePosition={mousePosition}
                   >
                     Try it now
@@ -183,7 +183,6 @@ const WhatIsBackyourstack = () => {
                 )}
               />
               <MouseTracker
-                style={{}}
                 render={mousePosition => (
                   <HomepageLink
                     onClick={e => {

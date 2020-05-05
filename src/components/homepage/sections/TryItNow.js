@@ -73,7 +73,7 @@ const TryItNow = () => (
         }
       `}
     </style>
-    <div className="container">
+    <div id="tryItNow" className="container">
       <h2 className="title">Try it now!</h2>
       <div className="cardsWrapper">
         <div className="cardWrapper githubCard">
