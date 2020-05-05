@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import css from 'styled-jsx/css';
 
 import { fetchJson } from '../../lib/fetch';
@@ -15,6 +15,7 @@ export const modalCustomStyle = {
     transform: 'translate(-50%, -50%)',
     background: '#3C5869',
     border: 'none',
+    fontFamily: 'Fira Code',
   },
 };
 
@@ -99,7 +100,7 @@ const styles = css`
     cursor: pointer;
   }
   .modal .closeModal {
-    align-self: flex-end;
+    align-self: flex-end !important;
   }
   .closeModal:hover {
     background-color: #7a9fb8;
@@ -138,9 +139,7 @@ const styles = css`
       justify-content: space-between;
       margin-bottom: 20px;
     }
-    .modal .closeModal {
-      align-self: center;
-    }
+
     .inputWrapper {
       flex-direction: row;
     }
@@ -158,6 +157,48 @@ const styles = css`
     }
   }
 `;
+
+export const SubmissionFeedback = ({ type }) => (
+  <Fragment>
+    <style jsx>
+      {`
+        .messageWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        h1 {
+          font-size: 56px;
+          line-height: 64px;
+          letter-spacing: -0.02em;
+          color: #fffef9;
+        }
+        p {
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          color: #ffffff;
+        }
+      `}
+    </style>
+    <div className="messageWrapper">
+      {type === 'failed' ? (
+        <div>
+          <h1>Sorry!</h1>
+          <p>
+            Something went wrong, please try to refresh the page and submit your
+            message again.
+          </p>
+        </div>
+      ) : (
+        <div>
+          <h1>Thank you!</h1>
+          <p>We received your message and we&apos;ll be in touch soon.</p>
+        </div>
+      )}
+    </div>
+  </Fragment>
+);
 
 const useForm = (inital = {}) => {
   const [state, setstate] = useState(inital);
@@ -212,63 +253,67 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
     <div className="contactUsForm">
       <style jsx>{styles}</style>
       <div className="titleWrapper">
-        <h3 className="title">Contact us</h3>
+        {!state.formState && <h3 className="title">Contact us</h3>}
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
             X
           </button>
         )}
       </div>
-      <form onSubmit={onSubmit}>
-        <div className="inputWrapper">
-          <input
-            type="text"
-            className="input nameInput"
-            name="name"
-            onChange={onChange}
-            value={state.name}
+      {state.formState ? (
+        <SubmissionFeedback type={state.formState} />
+      ) : (
+        <form onSubmit={onSubmit}>
+          <div className="inputWrapper">
+            <input
+              type="text"
+              className="input nameInput"
+              name="name"
+              onChange={onChange}
+              value={state.name}
+              required
+              placeholder="What's your name?"
+            />
+            <input
+              type="email"
+              className="input"
+              name="email"
+              onChange={onChange}
+              value={state.email}
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <textarea
+            className="textarea"
+            placeholder="Write us a message"
+            name="message"
             required
-            placeholder="What's your name?"
-          />
-          <input
-            type="email"
-            className="input"
-            name="email"
+            value={state.message}
             onChange={onChange}
-            value={state.email}
-            required
-            placeholder="Enter your email"
+          ></textarea>
+          <MouseTracker
+            style={{
+              alignSelf: 'flex-end',
+            }}
+            render={mousePosition => (
+              <HomepageLink
+                type="submit"
+                mousePosition={mousePosition}
+                className={
+                  state.formState === 'failed'
+                    ? 'sendButton failed'
+                    : 'sendButton'
+                }
+              >
+                {state.formState === 'success' && 'Message submitted!'}
+                {!state.formState && 'Send'}
+                {state.formState === 'failed' && 'Oops! There was a problem'}
+              </HomepageLink>
+            )}
           />
-        </div>
-        <textarea
-          className="textarea"
-          placeholder="Write us a message"
-          name="message"
-          required
-          value={state.message}
-          onChange={onChange}
-        ></textarea>
-        <MouseTracker
-          style={{
-            alignSelf: 'flex-end',
-          }}
-          render={mousePosition => (
-            <HomepageLink
-              type="submit"
-              mousePosition={mousePosition}
-              className={
-                state.formState === 'failed'
-                  ? 'sendButton failed'
-                  : 'sendButton'
-              }
-            >
-              {state.formState === 'success' && 'Message submitted!'}
-              {!state.formState && 'Send'}
-              {state.formState === 'failed' && 'Oops! There was a problem'}
-            </HomepageLink>
-          )}
-        />
-      </form>
+        </form>
+      )}
     </div>
   );
 };
@@ -288,63 +333,67 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
     >
       <style jsx>{styles}</style>
       <div className="titleWrapper">
-        <h3 className="title">Become a beta tester</h3>
+        {!state.formState && <h3 className="title">Become a beta tester</h3>}
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
             X
           </button>
         )}
       </div>
-      <form onSubmit={onSubmit}>
-        <div className="inputWrapper">
-          <input
-            type="text"
-            className="input nameInput"
-            name="name"
-            placeholder="What's your name?"
+      {state.formState ? (
+        <SubmissionFeedback type={state.formState} />
+      ) : (
+        <form onSubmit={onSubmit}>
+          <div className="inputWrapper">
+            <input
+              type="text"
+              className="input nameInput"
+              name="name"
+              placeholder="What's your name?"
+              onChange={onChange}
+              value={state.name}
+              required
+            />
+            <input
+              type="email"
+              className="input"
+              name="email"
+              placeholder="Enter your email"
+              onChange={onChange}
+              value={state.email}
+              required
+            />
+          </div>
+          <textarea
+            className="textarea"
+            placeholder="Write us a message"
+            name="message"
+            value={state.message}
             onChange={onChange}
-            value={state.name}
             required
+          ></textarea>
+          <MouseTracker
+            style={{
+              alignSelf: 'flex-end',
+            }}
+            render={mousePosition => (
+              <HomepageLink
+                type="submit"
+                mousePosition={mousePosition}
+                className={
+                  state.formState === 'failed'
+                    ? 'sendButton failed'
+                    : 'sendButton'
+                }
+              >
+                {state.formState === 'success' && 'Message submitted!'}
+                {!state.formState && 'Send'}
+                {state.formState === 'failed' && 'Oops! There was a problem'}
+              </HomepageLink>
+            )}
           />
-          <input
-            type="email"
-            className="input"
-            name="email"
-            placeholder="Enter your email"
-            onChange={onChange}
-            value={state.email}
-            required
-          />
-        </div>
-        <textarea
-          className="textarea"
-          placeholder="Write us a message"
-          name="message"
-          value={state.message}
-          onChange={onChange}
-          required
-        ></textarea>
-        <MouseTracker
-          style={{
-            alignSelf: 'flex-end',
-          }}
-          render={mousePosition => (
-            <HomepageLink
-              type="submit"
-              mousePosition={mousePosition}
-              className={
-                state.formState === 'failed'
-                  ? 'sendButton failed'
-                  : 'sendButton'
-              }
-            >
-              {state.formState === 'success' && 'Message submitted!'}
-              {!state.formState && 'Send'}
-              {state.formState === 'failed' && 'Oops! There was a problem'}
-            </HomepageLink>
-          )}
-        />
-      </form>
+        </form>
+      )}
     </div>
   );
 };
@@ -365,72 +414,76 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
     >
       <style jsx>{styles}</style>
       <div className="titleWrapper">
-        <h3 className="title">Become a Partner</h3>
+        {!state.formState && <h3 className="title">Become a Partner</h3>}
         {usedIn === 'modal' && (
           <button className="closeModal" onClick={() => closeModal()}>
             X
           </button>
         )}
       </div>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          className="input organizationInput"
-          name="organization"
-          placeholder="Name of your organization"
-          onChange={onChange}
-          value={state.organization}
-          required
-        />
-        <div className="inputWrapper">
+      {state.formState ? (
+        <SubmissionFeedback type={state.formState} />
+      ) : (
+        <form onSubmit={onSubmit}>
           <input
             type="text"
-            className="input nameInput"
-            name="name"
-            placeholder="What's your name?"
+            className="input organizationInput"
+            name="organization"
+            placeholder="Name of your organization"
             onChange={onChange}
-            value={state.name}
+            value={state.organization}
             required
           />
-          <input
-            type="email"
-            className="input"
-            name="email"
-            placeholder="Enter your email"
+          <div className="inputWrapper">
+            <input
+              type="text"
+              className="input nameInput"
+              name="name"
+              placeholder="What's your name?"
+              onChange={onChange}
+              value={state.name}
+              required
+            />
+            <input
+              type="email"
+              className="input"
+              name="email"
+              placeholder="Enter your email"
+              onChange={onChange}
+              value={state.email}
+              required
+            />
+          </div>
+          <textarea
+            className="textarea"
+            placeholder="Write us a message"
+            name="message"
+            value={state.message}
             onChange={onChange}
-            value={state.email}
             required
+          ></textarea>
+          <MouseTracker
+            style={{
+              alignSelf: 'flex-end',
+            }}
+            render={mousePosition => (
+              <HomepageLink
+                type="submit"
+                mousePosition={mousePosition}
+                className={
+                  state.formState === 'failed'
+                    ? 'sendButton failed'
+                    : 'sendButton'
+                }
+              >
+                {state.formState === 'success' && 'Message submitted!'}
+                {!state.formState && 'Send'}
+                {state.formState === 'failed' && 'Oops! There was a problem'}
+              </HomepageLink>
+            )}
           />
-        </div>
-        <textarea
-          className="textarea"
-          placeholder="Write us a message"
-          name="message"
-          value={state.message}
-          onChange={onChange}
-          required
-        ></textarea>
-        <MouseTracker
-          style={{
-            alignSelf: 'flex-end',
-          }}
-          render={mousePosition => (
-            <HomepageLink
-              type="submit"
-              mousePosition={mousePosition}
-              className={
-                state.formState === 'failed'
-                  ? 'sendButton failed'
-                  : 'sendButton'
-              }
-            >
-              {state.formState === 'success' && 'Message submitted!'}
-              {!state.formState && 'Send'}
-              {state.formState === 'failed' && 'Oops! There was a problem'}
-            </HomepageLink>
-          )}
-        />
-      </form>
+        </form>
+      )}
     </div>
   );
 };

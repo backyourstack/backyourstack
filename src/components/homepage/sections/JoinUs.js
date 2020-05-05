@@ -74,6 +74,7 @@ const JoinUs = () => {
             justify-content: center;
             box-sizing: border-box;
             width: 288px;
+            min-height: 390px;
           }
           .tabs {
             display: flex;
@@ -241,10 +242,10 @@ const JoinUs = () => {
               />
             </div>
             <div className="soical-icons">
-              <a href="#" className="soical">
+              <a href="https://slack.opencollective.com" className="soical">
                 <FaSlack size="32" />
               </a>
-              <a href="#" className="soical">
+              <a href="https://twitter.com/opencollect" className="soical">
                 <FaTwitter size="32" />
               </a>
               <a href="http://github.com/backyourstack" className="soical">
