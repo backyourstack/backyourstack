@@ -7,7 +7,7 @@ routes
   .add('logout')
   .add('faq')
   .add('contributing')
-  .add('index', '/(v1|vintage|classic)')
+  .add('index', '/v1')
   .add('homepage', '/(v2)?')
   .add('search', '/search')
   .add('files', '/files/:section(dependencies|repositories)?')
