@@ -42,7 +42,7 @@ export default class MonthlyPlanConfirmation extends React.Component {
     this.setState({ status: 'processing' });
     const { id } = this.props;
 
-    postJson('/order/dispatch', { id, orderId }).then(data => {
+    postJson('/order/dispatch', { id, orderId }).then((data) => {
       if (data.error) {
         this.setState({
           status: 'failure',

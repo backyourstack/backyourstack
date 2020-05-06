@@ -58,14 +58,14 @@ const regexps = [
       }
     }
 
-    packageIds = uniq(packageIds).filter(packageId => !!packageId);
+    packageIds = uniq(packageIds).filter((packageId) => !!packageId);
 
     if (packageIds.length) {
       logger.info(`Collective: ${collective.slug} ${collective.name}`, {
         packageIds,
       });
       let project = projects.find(
-        p => get(p, 'opencollective.id') === collective.id,
+        (p) => get(p, 'opencollective.id') === collective.id,
       );
       if (!project) {
         project = {
@@ -88,13 +88,13 @@ const regexps = [
           name: packageId,
         };
         const pkgRegistered = project.packages.find(
-          p => p.type === pkg.type && p.name === pkg.name,
+          (p) => p.type === pkg.type && p.name === pkg.name,
         );
         if (!pkgRegistered) {
           const packagistExists = await fetch(
             `https://repo.packagist.org/p/${packageId}.json`,
           )
-            .then(res => (res.status === 200 ? true : false))
+            .then((res) => (res.status === 200 ? true : false))
             .catch(() => false);
           if (!packagistExists) {
             logger.info(

@@ -177,7 +177,7 @@ async function getCollectiveRepos(github) {
       }
 
       let storedCollective = storedCollectives.find(
-        c => c.id === collective.id,
+        (c) => c.id === collective.id,
       );
       if (!storedCollective) {
         storedCollective = pick(collective, [
@@ -218,7 +218,7 @@ async function getCollectiveRepos(github) {
         let githubRepo;
         try {
           githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
-            data => data.repository,
+            (data) => data.repository,
           );
           if (githubRepo.isFork) {
             continue;
@@ -228,7 +228,7 @@ async function getCollectiveRepos(github) {
           continue;
         }
         let storedRepo = storedCollective.repos.find(
-          r =>
+          (r) =>
             r.name === githubRepo.name &&
             r.owner.login === githubRepo.owner.login,
         );
@@ -242,11 +242,11 @@ async function getCollectiveRepos(github) {
           'master',
         );
         storedRepo.languages = get(githubRepo, 'languages.nodes', []).map(
-          node => node.name,
+          (node) => node.name,
         );
         storedRepo.files = get(githubRepo, 'files.entries', [])
-          .filter(e => e.type === 'blob')
-          .map(e => e.name);
+          .filter((e) => e.type === 'blob')
+          .map((e) => e.name);
       }
 
       storedCollective.repos.sort(

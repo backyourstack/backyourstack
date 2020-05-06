@@ -21,7 +21,7 @@ export default class List extends React.Component {
       <Fragment>
         {array
           .slice(0, cut)
-          .map(el => map(el))
+          .map((el) => map(el))
           .reduce((prev, curr) => [prev, ', ', curr])}{' '}
         {others && array.length > cut && (
           <span className="andOthers">

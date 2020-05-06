@@ -204,7 +204,7 @@ const useForm = (inital = {}) => {
   const [state, setstate] = useState(inital);
 
   return {
-    onChange: event => {
+    onChange: (event) => {
       const name = event.target.name;
       const value = event.target.value;
       setstate({
@@ -213,7 +213,7 @@ const useForm = (inital = {}) => {
         [name]: value,
       });
     },
-    onSubmit: async event => {
+    onSubmit: async (event) => {
       event.preventDefault();
       fetchJson('/data/contact', {
         method: 'POST',
@@ -296,7 +296,7 @@ export const InquiriesForm = ({ usedIn, closeModal }) => {
             style={{
               alignSelf: 'flex-end',
             }}
-            render={mousePosition => (
+            render={(mousePosition) => (
               <HomepageLink
                 type="submit"
                 mousePosition={mousePosition}
@@ -376,7 +376,7 @@ export const BecomeBetaTesterForm = ({ usedIn, closeModal }) => {
             style={{
               alignSelf: 'flex-end',
             }}
-            render={mousePosition => (
+            render={(mousePosition) => (
               <HomepageLink
                 type="submit"
                 mousePosition={mousePosition}
@@ -466,7 +466,7 @@ export const PartnershipForm = ({ usedIn, closeModal }) => {
             style={{
               alignSelf: 'flex-end',
             }}
-            render={mousePosition => (
+            render={(mousePosition) => (
               <HomepageLink
                 type="submit"
                 mousePosition={mousePosition}

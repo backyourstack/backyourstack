@@ -13,12 +13,12 @@ import { fetchJson } from '../lib/fetch';
 const getProfile = (slug, accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/getProfile?slug=${slug}`)
-    : import('../lib/data').then(m => m.getProfile(slug, accessToken));
+    : import('../lib/data').then((m) => m.getProfile(slug, accessToken));
 
 const searchUsers = (q, accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/searchUsers?q=${q}`)
-    : import('../lib/data').then(m => m.searchUsers(q, accessToken));
+    : import('../lib/data').then((m) => m.searchUsers(q, accessToken));
 
 export default class Search extends React.Component {
   static async getInitialProps({ req, res, query }) {
@@ -72,7 +72,7 @@ export default class Search extends React.Component {
                 </li>
               </Fragment>
             )}
-            {searchResults.items.map(item => (
+            {searchResults.items.map((item) => (
               <li key={item.id}>
                 <Link route="profile" params={{ id: item.login }}>
                   <a>{item.login}</a>

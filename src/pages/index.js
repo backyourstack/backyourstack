@@ -14,10 +14,10 @@ import Footer from '../components/Footer';
 import GithubLogo from '../static/img/icon-github.svg';
 import UploadIcon from '../static/img/upload-icon.svg';
 
-const getUserOrgs = accessToken =>
+const getUserOrgs = (accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getUserOrgs')
-    : import('../lib/data').then(m => m.getUserOrgs(accessToken));
+    : import('../lib/data').then((m) => m.getUserOrgs(accessToken));
 
 export default class Index extends Component {
   static async getInitialProps({ req }) {
@@ -53,7 +53,7 @@ export default class Index extends Component {
     const { pathname, loggedInUser, loggedInUserOrgs } = this.props;
 
     const supportedFilesAsComponent = supportedFiles
-      .map(file => <em key={file}>{file}</em>)
+      .map((file) => <em key={file}>{file}</em>)
       .reduce((acc, curr, idx, src) => {
         if (idx === 0) {
           return [curr];

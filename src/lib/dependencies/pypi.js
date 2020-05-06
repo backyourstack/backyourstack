@@ -12,7 +12,7 @@ function dependencies(file) {
    * cf. https://www.python.org/dev/peps/pep-0508/
    */
   const returnObject = { core: [] };
-  file.text.split('\n').forEach(line => {
+  file.text.split('\n').forEach((line) => {
     /**
      * trim off leading and trailing whitespace
      * and lowercase the requirement to avoid duplication

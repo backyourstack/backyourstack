@@ -40,21 +40,21 @@ const regexp = /https:\/\/godoc\.org\/([a-z0-9-./]*)/gi;
         // 2. Test if godoc page exists and is a package
         const godoc = await fetch(
           `https://godoc.org/github.com/${repo.owner.login}/${repo.name}`,
-        ).then(res => (res.status === 200 ? res.text() : null));
+        ).then((res) => (res.status === 200 ? res.text() : null));
         if (godoc && godoc.indexOf('<h2 id="pkg-overview">') !== -1) {
           packageIds.push(`github.com/${repo.owner.login}/${repo.name}`);
         }
       }
     }
 
-    packageIds = uniq(packageIds).filter(packageId => !!packageId);
+    packageIds = uniq(packageIds).filter((packageId) => !!packageId);
 
     if (packageIds.length) {
       logger.info(`Collective: ${collective.slug} ${collective.name}`, {
         packageIds,
       });
       let project = projects.find(
-        p => get(p, 'opencollective.id') === collective.id,
+        (p) => get(p, 'opencollective.id') === collective.id,
       );
       if (!project) {
         project = {
@@ -77,7 +77,7 @@ const regexp = /https:\/\/godoc\.org\/([a-z0-9-./]*)/gi;
           name: packageId,
         };
         const pkgRegistered = project.packages.find(
-          p => p.type === pkg.type && p.name === pkg.name,
+          (p) => p.type === pkg.type && p.name === pkg.name,
         );
         if (!pkgRegistered) {
           project.packages.push(pkg);

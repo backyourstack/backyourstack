@@ -7,7 +7,7 @@ import MouseTracker from '../MouseTracker';
 const SustainWhatSustainYou = () => {
   const [state, setState] = useState({ email: '', formState: null });
 
-  const handleOnSubmit = async event => {
+  const handleOnSubmit = async (event) => {
     event.preventDefault();
     await fetchJson('/data/joinBeta', {
       method: 'POST',
@@ -307,7 +307,7 @@ const SustainWhatSustainYou = () => {
                   }}
                 />
                 <MouseTracker
-                  render={mousePosition => (
+                  render={(mousePosition) => (
                     <HomepageLink
                       type="submit"
                       value="Join the Beta"

@@ -67,7 +67,7 @@ export default class RepositoryTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {repositories.map(repo => (
+            {repositories.map((repo) => (
               <tr key={repo.id}>
                 <td>
                   <input

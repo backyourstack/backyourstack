@@ -32,7 +32,7 @@ export default class DependencyTable extends React.Component {
     }
   };
 
-  githubRepoItem = repo => (
+  githubRepoItem = (repo) => (
     <span key={repo.id}>
       {repo.full_name && (
         <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
@@ -115,7 +115,7 @@ export default class DependencyTable extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {dependencies.sort(this.sortDependencies).map(dep => (
+              {dependencies.sort(this.sortDependencies).map((dep) => (
                 <tr key={dep.name}>
                   <td>{dep.type}</td>
                   <td>{dep.name}</td>

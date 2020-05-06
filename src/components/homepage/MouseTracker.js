@@ -18,7 +18,7 @@ class MouseTracker extends React.Component {
     this.elem = createRef();
   }
 
-  handleMouseMove = debounce(event => {
+  handleMouseMove = debounce((event) => {
     const rect = this.elem.current.getBoundingClientRect();
     this.setState({
       positionX: event.clientX - rect.left - 20,
@@ -34,7 +34,7 @@ class MouseTracker extends React.Component {
         <div
           ref={this.elem}
           style={style}
-          onMouseMove={event => {
+          onMouseMove={(event) => {
             event.persist();
             this.handleMouseMove(event);
           }}

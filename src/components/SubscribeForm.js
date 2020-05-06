@@ -13,12 +13,12 @@ export default class SubscribeForm extends React.Component {
     this.state = { email: '', subscribed: false };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const email = event.target.value;
     this.setState({ email });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     this.emailSubscribe(this.state.email, this.props.profile).then(() => {

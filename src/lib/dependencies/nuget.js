@@ -13,17 +13,17 @@ const handlers = {
 function csprojDependencies(csproj) {
   const packageReferences = csproj
     .childrenNamed('ItemGroup')
-    .map(itemGroup => itemGroup.childrenNamed('PackageReference'));
+    .map((itemGroup) => itemGroup.childrenNamed('PackageReference'));
   return flatten(packageReferences).map(
-    packageReference => packageReference.attr.Include,
+    (packageReference) => packageReference.attr.Include,
   );
 }
 
 function packagesConfigDependencies(packagesConfig) {
   return packagesConfig
     .childrenNamed('package')
-    .map(element => element.attr.id)
-    .filter(name => !!name);
+    .map((element) => element.attr.id)
+    .filter((name) => !!name);
 }
 
 function dependencies(file) {

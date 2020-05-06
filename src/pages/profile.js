@@ -79,12 +79,12 @@ export default class Profile extends React.Component {
   }
 
   getUnCheckedRepositories(repos) {
-    return repos.filter(r => !r.checked).map(r => r.name);
+    return repos.filter((r) => !r.checked).map((r) => r.name);
   }
 
   getNumberOfAnalyzedRepositories() {
     const { repos } = this.props;
-    return repos.filter(r => r.checked).length;
+    return repos.filter((r) => r.checked).length;
   }
 
   twitterText = () => 'BackYourStack! https://backyourstack.com/';
@@ -148,7 +148,7 @@ export default class Profile extends React.Component {
     let { repos } = this.state;
     const name = target.name;
     const checked = target.checked;
-    repos = repos.map(r => {
+    repos = repos.map((r) => {
       if (r.name === name) {
         r.checked = checked;
         return r;

@@ -5,33 +5,30 @@ import { organizations } from 'thanks';
 
 import { getProjects, getCollectives } from '../data';
 
-const sortObject = o =>
+const sortObject = (o) =>
   Object.keys(o)
     .sort()
     .reduce((r, k) => ((r[k] = o[k]), r), {});
 
-const getCollectiveProject = slug =>
-  getProjects().then(projects =>
-    find(projects, p => get(p, 'opencollective.slug') === slug),
+const getCollectiveProject = (slug) =>
+  getProjects().then((projects) =>
+    find(projects, (p) => get(p, 'opencollective.slug') === slug),
   );
 
-const getNpmPackagesWithOrganization = slug =>
+const getNpmPackagesWithOrganization = (slug) =>
   getCollectiveProject(slug)
-    .then(project => get(project, 'packages', []))
-    .then(packages => filter(packages, pkg => pkg.type === 'npm'))
-    .then(packages => filter(packages, pkg => pkg.name.indexOf('/') !== -1));
+    .then((project) => get(project, 'packages', []))
+    .then((packages) => filter(packages, (pkg) => pkg.type === 'npm'))
+    .then((packages) =>
+      filter(packages, (pkg) => pkg.name.indexOf('/') !== -1),
+    );
 
-const getNpmOrganizationsFromPackages = packages =>
+const getNpmOrganizationsFromPackages = (packages) =>
   uniq(
     packages
-      .filter(pkg => pkg.name.indexOf('/') !== -1)
-      .map(pkg =>
-        pkg.name
-          .split('/')
-          .shift()
-          .replace('@', ''),
-      )
-      .filter(organization => !!organization),
+      .filter((pkg) => pkg.name.indexOf('/') !== -1)
+      .map((pkg) => pkg.name.split('/').shift().replace('@', ''))
+      .filter((organization) => !!organization),
   );
 
 const updateOrganizations = async () => {

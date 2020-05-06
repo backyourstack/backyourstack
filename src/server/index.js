@@ -104,7 +104,7 @@ nextApp.prepare().then(() => {
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {
-      req.session.destroy(err => {
+      req.session.destroy((err) => {
         if (err) {
           throw err;
         }
@@ -140,17 +140,17 @@ nextApp.prepare().then(() => {
     if (!accessToken) {
       res.setHeader('Cache-Control', 's-maxage=3600, max-age=0');
     }
-    getProfile(req.query.slug, accessToken).then(data => res.json(data));
+    getProfile(req.query.slug, accessToken).then((data) => res.json(data));
   });
 
   server.get('/data/getUserOrgs', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    getUserOrgs(accessToken).then(data => res.json(data));
+    getUserOrgs(accessToken).then((data) => res.json(data));
   });
 
   server.get('/data/searchUsers', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    searchUsers(req.query.q, accessToken).then(data => res.json(data));
+    searchUsers(req.query.q, accessToken).then((data) => res.json(data));
   });
 
   server.get('/data/getProfileData', (req, res) => {
@@ -166,26 +166,26 @@ nextApp.prepare().then(() => {
       profileOptions.excludedRepos = JSON.parse(req.query.excludedRepos);
     }
 
-    getProfileData(req.query.id, accessToken, profileOptions).then(data =>
+    getProfileData(req.query.id, accessToken, profileOptions).then((data) =>
       res.json(data),
     );
   });
 
   server.get('/data/getFilesData', (req, res) => {
     const files = get(req, 'session.files');
-    getFilesData(files).then(data => res.json(data));
+    getFilesData(files).then((data) => res.json(data));
   });
 
   server.post('/data/emailSubscribe', (req, res) => {
     const email = get(req, 'body.email');
     const profile = get(req, 'body.profile');
-    emailSubscribe(email, profile).then(data => res.json(data));
+    emailSubscribe(email, profile).then((data) => res.json(data));
   });
 
   server.post('/files/upload', upload.array('files'), (req, res) => {
     let uploadAccepted = false;
     req.session.files = req.session.files || {};
-    req.files.forEach(raw => {
+    req.files.forEach((raw) => {
       const file = {
         mime: raw.mimetype,
         name: raw.originalname,
@@ -219,7 +219,7 @@ nextApp.prepare().then(() => {
     const ids = get(req, 'body.ids');
     const sessionFiles = get(req, 'session.files');
     const files = {};
-    ids.forEach(id => {
+    ids.forEach((id) => {
       files[id] = sessionFiles[id];
     });
     try {
@@ -291,7 +291,7 @@ nextApp.prepare().then(() => {
     }
 
     const repositories = data.repos.filter(
-      repo => excludedRepos.indexOf(repo.name) === -1,
+      (repo) => excludedRepos.indexOf(repo.name) === -1,
     );
 
     for (const repository of repositories) {
@@ -444,7 +444,7 @@ ${req.body.message}`,
 
   server.get('*', handler);
 
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) {
       throw err;
     }

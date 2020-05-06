@@ -8,11 +8,11 @@ const handlers = {
 };
 
 function gopkgLockDependencies(data) {
-  return data.projects.map(proj => proj.name);
+  return data.projects.map((proj) => proj.name);
 }
 
 function gopkgTomlDependencies(data) {
-  return data.constraint.map(proj => proj.name);
+  return data.constraint.map((proj) => proj.name);
 }
 
 function dependencies(file) {

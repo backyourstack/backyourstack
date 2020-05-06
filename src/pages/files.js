@@ -168,7 +168,7 @@ export default class Files extends React.Component {
             </div>
             <button
               className="actionButton"
-              onClick={e => this.handleRemoveFile(id, e)}
+              onClick={(e) => this.handleRemoveFile(id, e)}
             >
               X Remove file
             </button>

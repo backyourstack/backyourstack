@@ -11,10 +11,10 @@ import { fetchJson } from '../lib/fetch';
 import MouseTracker from './homepage/MouseTracker';
 import HomepageLink from './homepage/HomepageLink';
 
-const getProfile = slug =>
+const getProfile = (slug) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/getProfile?slug=${slug}`)
-    : import('../lib/data').then(m => m.getProfile(slug));
+    : import('../lib/data').then((m) => m.getProfile(slug));
 
 export default class SearchForm extends React.Component {
   static propTypes = {
@@ -52,7 +52,7 @@ export default class SearchForm extends React.Component {
     }
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const q = event.target.value;
     this.setState({ q });
     if (q) {
@@ -63,7 +63,7 @@ export default class SearchForm extends React.Component {
     }
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     if (this.state.q && this.state.q.length > 0 && !this.state.error) {
       Router.pushRoute('search', { q: this.state.q });
     }
@@ -84,10 +84,10 @@ export default class SearchForm extends React.Component {
 
   handleFocus = () => this.setState({ focused: this.isFocused() });
 
-  searchLink = profile => (
+  searchLink = (profile) => (
     <Link key={profile.login} route="profile" params={{ id: profile.login }}>
       <a
-        onClick={event => this.search(event, profile.login)}
+        onClick={(event) => this.search(event, profile.login)}
         href={`/${profile.login}`}
       >
         {profile.login}
@@ -271,7 +271,7 @@ export default class SearchForm extends React.Component {
             style={{
               alignSelf: 'center',
             }}
-            render={mousePosition => (
+            render={(mousePosition) => (
               <HomepageLink
                 type="submit"
                 value="Try analyzing your stack now"

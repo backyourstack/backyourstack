@@ -9,11 +9,11 @@ const Partners = () => {
     OC: 'gray',
   });
 
-  const handleOnMouseEnter = logo => {
+  const handleOnMouseEnter = (logo) => {
     setLogoType({ ...logoType, [logo]: 'color' });
   };
 
-  const handleOnMouseLeave = logo => {
+  const handleOnMouseLeave = (logo) => {
     setLogoType({ ...logoType, [logo]: 'gray' });
   };
 

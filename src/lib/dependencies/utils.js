@@ -6,10 +6,10 @@ import dependencyManagers from './dependency-managers';
 // Returns [{type: 'npm', name: 'dependency', core: 1}, ...]
 export function transformToStats(manager, ...dependencyObjects) {
   const index = {};
-  dependencyObjects.forEach(dependencies => {
+  dependencyObjects.forEach((dependencies) => {
     Object.entries(dependencies).forEach(
       ([dependencyType, dependencyNames]) => {
-        dependencyNames.forEach(name => {
+        dependencyNames.forEach((name) => {
           index[name] = index[name] || { type: manager, name };
           index[name][dependencyType] = 1;
         });

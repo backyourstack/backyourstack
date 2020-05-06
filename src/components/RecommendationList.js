@@ -14,7 +14,9 @@ export default class RecommendationList extends React.Component {
   render() {
     const { recommendations, opencollectiveAccount } = this.props;
 
-    const projects = recommendations.filter(r => r.opencollective || r.github);
+    const projects = recommendations.filter(
+      (r) => r.opencollective || r.github,
+    );
 
     return (
       <Fragment>
@@ -60,7 +62,7 @@ export default class RecommendationList extends React.Component {
             </div>
           )}
           {projects.length > 0 &&
-            projects.map(recommendation => (
+            projects.map((recommendation) => (
               <RecommendationCard
                 key={recommendation.name}
                 opencollectiveAccount={opencollectiveAccount}

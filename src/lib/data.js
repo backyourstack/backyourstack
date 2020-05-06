@@ -40,9 +40,9 @@ export async function getProfileData(id, accessToken, options = {}) {
     profile,
     accessToken,
     options.loggedInUsername,
-  ).then(repos => {
+  ).then((repos) => {
     return Promise.all(
-      repos.map(async repo => {
+      repos.map(async (repo) => {
         if (
           !options.excludedRepos ||
           (options.excludedRepos &&
@@ -92,7 +92,7 @@ export async function getFilesData(sessionFiles) {
 
   const files = sessionFiles;
 
-  const repos = Object.keys(sessionFiles).map(id => {
+  const repos = Object.keys(sessionFiles).map((id) => {
     const file = sessionFiles[id];
     return {
       id,
@@ -113,7 +113,7 @@ export async function getFilesData(sessionFiles) {
   return { files, repos, dependencies, recommendations };
 }
 
-export const getSavedFilesData = async id => {
+export const getSavedFilesData = async (id) => {
   const files = await getFiles(id);
   if (!files) {
     return null;
@@ -126,7 +126,7 @@ export const getSavedFilesData = async id => {
   return { ...data, order };
 };
 
-export const getSavedSelectedDependencies = async id => {
+export const getSavedSelectedDependencies = async (id) => {
   const { selectedDependencies } = await getObjectsMetadata(id);
   if (selectedDependencies) {
     return selectedDependencies;
@@ -163,7 +163,7 @@ export function emailSubscribe(email, profile) {
   });
 }
 
-export const getProfileOrder = async id => {
+export const getProfileOrder = async (id) => {
   try {
     const file = await getFile(`${id}/order.json`);
     if (file) {

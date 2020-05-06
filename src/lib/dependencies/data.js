@@ -29,7 +29,7 @@ export function getDependenciesFromGithubRepo(githubRepo, githubAccessToken) {
     fileType,
     githubRepo,
     githubAccessToken,
-  ).then(result => {
+  ).then((result) => {
     cache.set(cacheKey, result);
     return result;
   });
@@ -43,7 +43,7 @@ export function fetchDependenciesFileContent(githubRepo, githubAccessToken) {
   }
 
   return getFirstMatchingFiles(manager, githubRepo, githubAccessToken).catch(
-    err => {
+    (err) => {
       logger.error(
         `${fileType}.getDependenciesFromGithubRepo error: ${err.message}`,
       );
@@ -71,12 +71,12 @@ export async function getFirstMatchingFiles(
         pattern,
         githubAccessToken,
       )
-        .then(content => [content])
+        .then((content) => [content])
         .catch(() => []);
     }
 
     if (fileContents.length) {
-      return fileContents.map(text => ({
+      return fileContents.map((text) => ({
         matchedPattern: pattern,
         text,
       }));
@@ -97,9 +97,11 @@ export function loadDependenciesFromGithubRepo(
   }
 
   return getFirstMatchingFiles(manager, githubRepo, githubAccessToken)
-    .then(files => files.map(manager.dependencies))
-    .then(dependencyObjects => transformToStats(fileType, ...dependencyObjects))
-    .catch(err => {
+    .then((files) => files.map(manager.dependencies))
+    .then((dependencyObjects) =>
+      transformToStats(fileType, ...dependencyObjects),
+    )
+    .catch((err) => {
       logger.error(
         `${fileType}.getDependenciesFromGithubRepo error: ${err.message}`,
       );

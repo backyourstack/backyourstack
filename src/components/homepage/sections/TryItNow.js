@@ -4,7 +4,7 @@ import UploadCard from '../UploadCard';
 import supportedFiles from '../../../lib/dependencies/supported-files';
 
 const supportedFilesAsComponent = supportedFiles
-  .map(file => <span key={file}>{file}</span>)
+  .map((file) => <span key={file}>{file}</span>)
   .reduce((acc, curr, idx, src) => {
     if (idx === 0) {
       return [curr];
