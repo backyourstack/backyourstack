@@ -44,6 +44,7 @@ import {
   getObjectsMetadata,
 } from '../lib/s3';
 import { fetchOrgMembership } from '../lib/github';
+import email from '../lib/email';
 
 const {
   PORT,
@@ -388,6 +389,35 @@ nextApp.prepare().then(() => {
       console.error(err);
       return res.status(400).send({ error: err.message });
     }
+  });
+
+  server.post('/data/joinBeta', async (req, res) => {
+    await email.sendMessage({
+      to: 'hello@backyourstack.com',
+      cc: 'francois@opencollective.com',
+      from: 'Open Collective <info@opencollective.com>',
+      subject: 'BackYourStack: Join Beta',
+      text: req.body.email,
+    });
+
+    res.status(200).send({ result: 'Success' });
+  });
+
+  server.post('/data/contact', async (req, res) => {
+    await email.sendMessage({
+      to: 'hello@backyourstack.com',
+      cc: 'francois@opencollective.com',
+      from: 'Open Collective <info@opencollective.com>',
+      subject: `BackYourStack: Contact (${req.body.type})`,
+      text: `
+Name: ${req.body.name}
+Organization: ${req.body.organization || 'none'}
+Email: ${req.body.email}
+
+${req.body.message}`,
+    });
+
+    res.status(200).send({ result: 'Success' });
   });
 
   server.use('/static', (req, res, next) => {

@@ -2,7 +2,7 @@
 
 exports[`Upload should render 1`] = `
 <div
-  className="jsx-1203312298 uploadWrapper"
+  className="jsx-201268674 uploadWrapper"
 >
   <div
     aria-disabled={false}
@@ -20,14 +20,14 @@ exports[`Upload should render 1`] = `
     }
   >
     <div
-      className="jsx-1203312298 text"
+      className="jsx-201268674 text"
     >
       <p
-        className="jsx-1203312298"
+        className="jsx-201268674"
       >
         Simply drag and drop files
         <br
-          className="jsx-1203312298"
+          className="jsx-201268674"
         />
         or click to select files to upload.
       </p>
@@ -52,10 +52,10 @@ exports[`Upload should render 1`] = `
     />
   </div>
   <div
-    className="jsx-1203312298 uploadFeedback float"
+    className="jsx-201268674 uploadFeedback float"
   >
     <p
-      className="jsx-1203312298"
+      className="jsx-201268674"
     >
       There was an error while uploading your files. At the moment, we support 
       <em>
@@ -89,7 +89,7 @@ exports[`Upload should render 1`] = `
 
 exports[`Upload should render with feedbackPosition 1`] = `
 <div
-  className="jsx-1203312298 uploadWrapper"
+  className="jsx-201268674 uploadWrapper"
 >
   <div
     aria-disabled={false}
@@ -107,14 +107,14 @@ exports[`Upload should render with feedbackPosition 1`] = `
     }
   >
     <div
-      className="jsx-1203312298 text"
+      className="jsx-201268674 text"
     >
       <p
-        className="jsx-1203312298"
+        className="jsx-201268674"
       >
         Simply drag and drop files
         <br
-          className="jsx-1203312298"
+          className="jsx-201268674"
         />
         or click to select files to upload.
       </p>
@@ -139,10 +139,10 @@ exports[`Upload should render with feedbackPosition 1`] = `
     />
   </div>
   <div
-    className="jsx-1203312298 uploadFeedback inside"
+    className="jsx-201268674 uploadFeedback inside"
   >
     <p
-      className="jsx-1203312298"
+      className="jsx-201268674"
     >
       There was an error while uploading your files. At the moment, we support 
       <em>
@@ -176,7 +176,7 @@ exports[`Upload should render with feedbackPosition 1`] = `
 
 exports[`Upload should render with style 1`] = `
 <div
-  className="jsx-1203312298 uploadWrapper"
+  className="jsx-201268674 uploadWrapper"
 >
   <div
     aria-disabled={false}
@@ -189,20 +189,19 @@ exports[`Upload should render with style 1`] = `
     onDrop={[Function]}
     style={
       Object {
-        "border": "1px solid red",
         "position": "relative",
       }
     }
   >
     <div
-      className="jsx-1203312298 text"
+      className="jsx-201268674 text"
     >
       <p
-        className="jsx-1203312298"
+        className="jsx-201268674"
       >
         Simply drag and drop files
         <br
-          className="jsx-1203312298"
+          className="jsx-201268674"
         />
         or click to select files to upload.
       </p>
@@ -227,10 +226,10 @@ exports[`Upload should render with style 1`] = `
     />
   </div>
   <div
-    className="jsx-1203312298 uploadFeedback float"
+    className="jsx-201268674 uploadFeedback float"
   >
     <p
-      className="jsx-1203312298"
+      className="jsx-201268674"
     >
       There was an error while uploading your files. At the moment, we support 
       <em>

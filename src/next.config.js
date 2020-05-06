@@ -43,7 +43,7 @@ module.exports = {
         use: ['babel-loader', '@mdx-js/loader'],
       },
       {
-        test: /\.(woff|woff2)$/,
+        test: /\.(woff|woff2|ttf)$/,
         use: [
           {
             loader: 'file-loader',
