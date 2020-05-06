@@ -172,7 +172,7 @@ const WhatIsBackyourstack = () => {
             </div>
             <div className="actionWrapper">
               <MouseTracker
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
                     className="tryItNow secondary"
                     href="#tryItNow"
@@ -183,9 +183,9 @@ const WhatIsBackyourstack = () => {
                 )}
               />
               <MouseTracker
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       setIsOpen(true);
                     }}

@@ -5,9 +5,10 @@ import allProjects from '../data/projects.json';
 const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
 
 function getProjectFromDependency(name, type) {
-  return allProjects.find(project =>
+  return allProjects.find((project) =>
     project.packages.find(
-      pkg => pkg.name.toLowerCase() === name.toLowerCase() && pkg.type === type,
+      (pkg) =>
+        pkg.name.toLowerCase() === name.toLowerCase() && pkg.type === type,
     ),
   );
 }
@@ -38,14 +39,14 @@ function getAllDependenciesFromRepos(repos) {
   }
 
   // Convert objects with ids as key to arrays
-  return Object.values(dependencies).map(dependency => {
+  return Object.values(dependencies).map((dependency) => {
     dependency.repos = Object.values(dependency.repos);
     return dependency;
   });
 }
 
 function addProjectToDependencies(deps) {
-  return Promise.all(deps.map(dep => addProjectToDependency(dep)));
+  return Promise.all(deps.map((dep) => addProjectToDependency(dep)));
 }
 
 function addProjectToDependency(dep) {
@@ -58,7 +59,7 @@ function addProjectToDependency(dep) {
 
 function getRecommendedProjectFromDependencies(deps) {
   return addProjectToDependencies(deps)
-    .then(deps => {
+    .then((deps) => {
       const projects = {};
 
       for (const dep of deps) {
@@ -77,16 +78,16 @@ function getRecommendedProjectFromDependencies(deps) {
           }
           projects[id]['repos'] = [];
         }
-        dep.repos.forEach(repo => (projects[id]['repos'][repo.id] = repo));
+        dep.repos.forEach((repo) => (projects[id]['repos'][repo.id] = repo));
       }
 
       // Convert objects with ids as key to arrays
-      return Object.values(projects).map(project => {
+      return Object.values(projects).map((project) => {
         project.repos = Object.values(project.repos);
         return project;
       });
     })
-    .then(projects => {
+    .then((projects) => {
       return projects.sort((a, b) => {
         if (!!a.opencollective != !!b.opencollective) {
           return a.opencollective ? -1 : 1;
@@ -98,14 +99,14 @@ function getRecommendedProjectFromDependencies(deps) {
       });
     })
 
-    .then(recommendations => recommendations.filter(r => r.project));
+    .then((recommendations) => recommendations.filter((r) => r.project));
 }
 
 function getDependenciesAvailableForBacking(recommendations) {
   const backing = recommendations
-    .filter(r => r.opencollective)
-    .filter(r => r.opencollective.pledge !== true)
-    .map(recommendation => {
+    .filter((r) => r.opencollective)
+    .filter((r) => r.opencollective.pledge !== true)
+    .map((recommendation) => {
       const { opencollective, github } = recommendation;
       return {
         weight: 100,

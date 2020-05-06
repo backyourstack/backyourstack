@@ -13,7 +13,7 @@ const {
 
 const githubTokenDonators = (GITHUB_TOKEN_DONATORS || '')
   .split(',')
-  .map(str => str.trim());
+  .map((str) => str.trim());
 
 if (GITHUB_CLIENT_ID && GITHUB_CLIENT_SECRET) {
   const passportGithubStrategy = new passportGithub.Strategy(

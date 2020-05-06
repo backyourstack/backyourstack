@@ -189,7 +189,7 @@ async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
   }
 
   // Filter forks
-  repos = repos.filter(repo => repo.fork === false);
+  repos = repos.filter((repo) => repo.fork === false);
 
   // Filter the keys we're interested in
   repos = repos.map(compactRepo);
@@ -197,7 +197,7 @@ async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
   // Save in Private Cache
   cache.set(privateCacheKey, repos);
 
-  const publicRepos = repos.filter(repo => repo.private === false);
+  const publicRepos = repos.filter((repo) => repo.private === false);
 
   // Save in Public Cache
   cache.set(publicCacheKey, publicRepos);
@@ -217,15 +217,15 @@ function searchFilesFromRepo(repo, searchPattern, accessToken) {
     q: `filename:${searchPattern}+repo:${repo.full_name}`,
   };
   return fetchWithOctokit('search.code', params, accessToken)
-    .then(result => result.items)
+    .then((result) => result.items)
     .then(
       // Github returns partial matches (e.g. 'package.json.old'),
       // so double check hits are actual matches
-      items => items.filter(file => minimatch(file.name, searchPattern)),
+      (items) => items.filter((file) => minimatch(file.name, searchPattern)),
     )
-    .then(items =>
+    .then((items) =>
       Promise.all(
-        items.map(item => fetchFileFromRepo(repo, item.path, accessToken)),
+        items.map((item) => fetchFileFromRepo(repo, item.path, accessToken)),
       ),
     );
 }
@@ -251,7 +251,7 @@ function fetchFileFromRepo(repo, path, accessToken) {
 
   const relativeUrl = `/${repo.owner.login}/${repo.name}/${branch}/${path}`;
   logger.verbose(`Fetching file from public repo ${relativeUrl}`);
-  return fetch(`${baseRawUrl}${relativeUrl}`).then(response => {
+  return fetch(`${baseRawUrl}${relativeUrl}`).then((response) => {
     if (response.status === 200) {
       return response.text();
     }

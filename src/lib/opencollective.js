@@ -128,7 +128,7 @@ function graphqlRequest(url, query, variables) {
       variables,
     }),
   })
-    .then(result => {
+    .then((result) => {
       if (!result.ok) {
         throw new Error(
           'Unable to connect with open collective, Please contact support.',
@@ -136,7 +136,7 @@ function graphqlRequest(url, query, variables) {
       }
       return result.json();
     })
-    .then(response => {
+    .then((response) => {
       if (response.errors) {
         console.error(response.errors);
         throw new Error(response.errors[0].message);
@@ -153,7 +153,7 @@ function fetchAccountWithOrders(slug) {
   }
 
   return graphqlRequest(baseUrlV2, getAccountOrdersQuery, { slug })
-    .then(data => {
+    .then((data) => {
       cache.set(cacheKey, data.account);
       return data.account;
     })
@@ -166,7 +166,7 @@ function fetchAccountWithOrders(slug) {
 function fetchOrder(orderId) {
   logger.debug(`Fetching order from Open Collective: ${orderId}`);
   return graphqlRequest(baseUrl, getOrderQuery, { orderId })
-    .then(data => {
+    .then((data) => {
       return data.Order;
     })
     .catch(() => {
@@ -182,11 +182,11 @@ function fetchCollectiveWithMembers(slug) {
   }
 
   return graphqlRequest(baseUrl, getCollectiveWithMembersQuery, { slug })
-    .then(data => {
+    .then((data) => {
       cache.set(cacheKey, data.Collective);
       return data.Collective;
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       cache.set(cacheKey, null);
       return null;
@@ -195,14 +195,14 @@ function fetchCollectiveWithMembers(slug) {
 
 function fetchAllCollectives(parameters) {
   return graphqlRequest(baseUrl, getAllCollectivesQuery, parameters).then(
-    data => data.allCollectives.collectives,
+    (data) => data.allCollectives.collectives,
   );
 }
 
 function dispatchOrder(id) {
   return graphqlRequest(baseUrl, backyourstackDispatchOrderMutation, {
     id,
-  }).then(data => data.backyourstackDispatchOrder);
+  }).then((data) => data.backyourstackDispatchOrder);
 }
 
 export {

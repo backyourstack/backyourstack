@@ -10,7 +10,7 @@ import { fetchCollectiveWithMembers } from '../lib/opencollective';
 const filename = path.join(__dirname, '..', 'data', 'projects.json');
 
 fs.readJson(filename)
-  .then(async projects => {
+  .then(async (projects) => {
     for (const project of projects) {
       if (project.opencollective) {
         const data = await fetchCollectiveWithMembers(
@@ -40,10 +40,12 @@ fs.readJson(filename)
         }
         // Sponsors
         let members = data.members
-          .filter(m => m.role === 'BACKER' && m.member.type === 'ORGANIZATION')
+          .filter(
+            (m) => m.role === 'BACKER' && m.member.type === 'ORGANIZATION',
+          )
           .sort((a, b) => b.stats.totalDonations - a.stats.totalDonations);
-        members = uniqBy(members, member => member.member.id);
-        project.opencollective.sponsors = members.slice(0, 10).map(m => ({
+        members = uniqBy(members, (member) => member.member.id);
+        project.opencollective.sponsors = members.slice(0, 10).map((m) => ({
           id: m.member.id,
           type: m.member.type,
           slug: m.member.slug,
@@ -54,6 +56,6 @@ fs.readJson(filename)
     }
     return projects;
   })
-  .then(projects => {
+  .then((projects) => {
     fs.writeFile(filename, `${JSON.stringify(projects, null, 2)}\n`);
   });

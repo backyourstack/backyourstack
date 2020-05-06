@@ -121,9 +121,9 @@ export default class MonthlyPlan extends React.Component {
 
   getActiveCollectiveRecommendations(recommendations) {
     const opencollectiveRecommendations = recommendations
-      .filter(r => r.opencollective)
-      .filter(r => r.opencollective.pledge !== true)
-      .map(r => {
+      .filter((r) => r.opencollective)
+      .filter((r) => r.opencollective.pledge !== true)
+      .map((r) => {
         r.checked = true;
         return r;
       });
@@ -147,14 +147,14 @@ export default class MonthlyPlan extends React.Component {
     }
   };
 
-  handleAmountChange = event => {
+  handleAmountChange = (event) => {
     const customAmount = event.target.value;
     this.setState({
       customAmount: parseInt(customAmount),
     });
   };
 
-  handleOnAmountSelect = selectedAmount => {
+  handleOnAmountSelect = (selectedAmount) => {
     this.setState({
       selectedAmount,
       disableContributionLink: false,
@@ -172,7 +172,7 @@ export default class MonthlyPlan extends React.Component {
     let { recommendations } = this.state;
     const name = target.name;
     const checked = target.checked;
-    recommendations = recommendations.map(r => {
+    recommendations = recommendations.map((r) => {
       if (r.name === name) {
         r.checked = checked;
       }
@@ -197,12 +197,12 @@ export default class MonthlyPlan extends React.Component {
 
   getSelectedDependencies() {
     const { recommendations } = this.state;
-    const selectedDependencies = recommendations.filter(r => r.checked);
+    const selectedDependencies = recommendations.filter((r) => r.checked);
     // The recommended collectives are all selected by default
     // we're checking if the user made any changes so we can keep track
     // of the selected collectives.
     if (selectedDependencies.length !== recommendations.length) {
-      return map(selectedDependencies, dependency => {
+      return map(selectedDependencies, (dependency) => {
         const { opencollective, github } = dependency;
         return {
           weight: 100,
@@ -214,7 +214,7 @@ export default class MonthlyPlan extends React.Component {
     return null;
   }
 
-  saveSelectedDependencies = async event => {
+  saveSelectedDependencies = async (event) => {
     event.preventDefault();
     const selectedDependencies = this.getSelectedDependencies();
     const { id } = this.props;
@@ -460,7 +460,7 @@ export default class MonthlyPlan extends React.Component {
           `}
         </style>
         <div className="amountList">
-          {suggestedAmountsToShow.map(suggestedAmount => {
+          {suggestedAmountsToShow.map((suggestedAmount) => {
             const selectedAmountCard = selectedAmount
               ? selectedAmount.id === suggestedAmount.id
               : false;
@@ -527,7 +527,7 @@ export default class MonthlyPlan extends React.Component {
     const disableContributionLink = totalAmount === 0;
     const dispatchedValue = totalAmount;
     const selectedDependencies = recommendations.filter(
-      r => r.checked === true,
+      (r) => r.checked === true,
     );
     const singleValue = (dispatchedValue / selectedDependencies.length).toFixed(
       2,
@@ -717,12 +717,12 @@ export default class MonthlyPlan extends React.Component {
                     <th>Collective</th>
                     <th>Amount</th>
                   </tr>
-                  {recommendations.map(recommendation => (
+                  {recommendations.map((recommendation) => (
                     <tr key={recommendation.name}>
                       <td>
                         <input
                           type="checkbox"
-                          onChange={event =>
+                          onChange={(event) =>
                             this.handleDependencySelection(event)
                           }
                           name={recommendation.name}

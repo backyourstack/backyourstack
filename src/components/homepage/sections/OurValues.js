@@ -310,11 +310,11 @@ const OurValues = () => {
                 style={{
                   marginRight: '10px',
                 }}
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
                     className="becomeAPartner OurValuesBecomeAPartner primary"
                     mousePosition={mousePosition}
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       setIsOpen(true);
                     }}
@@ -324,7 +324,7 @@ const OurValues = () => {
                 )}
               />
               <MouseTracker
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
                     className="contribute OurValuesContribute contribute"
                     href="https://opencollective.com/backyourstack"

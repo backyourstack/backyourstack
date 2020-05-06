@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get, uniq, intersection } from 'lodash';
 
-const getTotalDonations = opencollectiveAccount => {
+const getTotalDonations = (opencollectiveAccount) => {
   const orders = get(opencollectiveAccount, 'orders.nodes', []);
   const backyourstackOrder = orders.find(
-    node => node.toAccount.slug === 'backyourstack',
+    (node) => node.toAccount.slug === 'backyourstack',
   );
   return backyourstackOrder.totalDonations.value;
 };
@@ -13,9 +13,9 @@ const getTotalDonations = opencollectiveAccount => {
 const getTotalBacking = (opencollectiveAccount, recommendations) => {
   const orders = get(opencollectiveAccount, 'orders.nodes', []);
   const recommendationsSlugs = recommendations
-    .filter(r => r.opencollective)
-    .map(r => r.opencollective.slug);
-  const orderSlugs = uniq(orders.map(order => order.toAccount.slug));
+    .filter((r) => r.opencollective)
+    .map((r) => r.opencollective.slug);
+  const orderSlugs = uniq(orders.map((order) => order.toAccount.slug));
   const backing = intersection(recommendationsSlugs, orderSlugs);
   return backing.length;
 };

@@ -13,7 +13,7 @@ export function getProfileData(id, accessToken, { excludedRepos }) {
   const searchParams = new URLSearchParams(params);
   return process.env.IS_CLIENT
     ? fetchJson(`/data/getProfileData?${searchParams}`)
-    : import('../lib/data').then(m =>
+    : import('../lib/data').then((m) =>
         m.getProfileData(id, accessToken, { excludedRepos }),
       );
 }
@@ -21,7 +21,7 @@ export function getProfileData(id, accessToken, { excludedRepos }) {
 export function fetchJson(url, params = {}) {
   params.credentials = 'same-origin';
   return fetch(url, params)
-    .then(async res => {
+    .then(async (res) => {
       if (res.ok) {
         return res.json();
       }
@@ -43,5 +43,5 @@ export function postJson(url, body, params = {}) {
 export function getFilesData(sessionFiles) {
   return process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
-    : import('../lib/data').then(m => m.getFilesData(sessionFiles));
+    : import('../lib/data').then((m) => m.getFilesData(sessionFiles));
 }

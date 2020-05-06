@@ -12,7 +12,7 @@ const s3 = new S3({
 
 const Bucket = process.env.AWS_S3_BUCKET;
 
-export const uploadFiles = async files => {
+export const uploadFiles = async (files) => {
   const metadata = { objectKeys: [] };
   const identifier = uuid();
   for (const id in files) {
@@ -37,11 +37,15 @@ export const saveFileToS3 = (Key, Body) => {
 };
 
 export const saveProfile = async (profileId, repos) => {
-  repos = repos.filter(repo => repo.files);
+  repos = repos.filter((repo) => repo.files);
 
-  const objectKeys = await Promise.map(repos, repo => saveProfileFiles(repo), {
-    concurrency: 10,
-  }).reduce((acc, keys) => [...acc, ...keys], []);
+  const objectKeys = await Promise.map(
+    repos,
+    (repo) => saveProfileFiles(repo),
+    {
+      concurrency: 10,
+    },
+  ).reduce((acc, keys) => [...acc, ...keys], []);
 
   const dependencyFile = await saveFileToS3(`${profileId}/dependencies.json`, {
     objectKeys,
@@ -49,8 +53,8 @@ export const saveProfile = async (profileId, repos) => {
   return dependencyFile.Key.split('/')[0];
 };
 
-export const saveProfileFiles = repo => {
-  return Promise.map(repo.files, async file => {
+export const saveProfileFiles = (repo) => {
+  return Promise.map(repo.files, async (file) => {
     const data = await saveFileToS3(`${repo.full_name}/${file.name}`, {
       [file.id]: file,
     });
@@ -58,7 +62,7 @@ export const saveProfileFiles = repo => {
   });
 };
 
-export const getObjectList = id => {
+export const getObjectList = (id) => {
   const params = {
     Bucket,
     Prefix: `${id}/`,
@@ -66,14 +70,14 @@ export const getObjectList = id => {
   return s3.listObjects(params).promise();
 };
 
-export const getFile = async key => {
+export const getFile = async (key) => {
   logger.debug(`Fetching file from S3: ${key}`);
   const params = { Bucket, Key: key };
   const { Body } = await s3.getObject(params).promise();
   return Body.toString('utf-8');
 };
 
-export const getFiles = async id => {
+export const getFiles = async (id) => {
   const { objectKeys } = await getObjectsMetadata(id);
 
   if (objectKeys.length === 0) {
@@ -82,9 +86,9 @@ export const getFiles = async id => {
 
   const files = await Promise.map(
     objectKeys,
-    key =>
+    (key) =>
       getFile(key)
-        .then(rawFile => JSON.parse(rawFile))
+        .then((rawFile) => JSON.parse(rawFile))
         .catch(),
     { concurrency: 10 },
   );
@@ -92,7 +96,7 @@ export const getFiles = async id => {
   return files.reduce((acc, file) => (file ? { ...acc, ...file } : acc), {});
 };
 
-export const getObjectsMetadata = async id => {
+export const getObjectsMetadata = async (id) => {
   const params = { Bucket, Key: `${id}/dependencies.json` };
   try {
     const { Body } = await s3.getObject(params).promise();

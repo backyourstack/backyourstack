@@ -217,7 +217,7 @@ const InvestInOpenSource = () => {
             </p>
           </div>
           <div className="featureWrapper">
-            {features.map(feature => (
+            {features.map((feature) => (
               <div key={feature.id} className="feature">
                 <div className="iconWrapper">
                   <img
@@ -235,11 +235,11 @@ const InvestInOpenSource = () => {
           </div>
           <div className="actionWrapper">
             <MouseTracker
-              render={mousePosition => (
+              render={(mousePosition) => (
                 <HomepageLink
                   className="becomeAPartner investSectionBecomePartner"
                   mousePosition={mousePosition}
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     setIsOpen(true);
                   }}
@@ -249,7 +249,7 @@ const InvestInOpenSource = () => {
               )}
             />
             <MouseTracker
-              render={mousePosition => (
+              render={(mousePosition) => (
                 <HomepageLink
                   href="https://opencollective.com/backyourstack"
                   className="contribute investSectionContribute"

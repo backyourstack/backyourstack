@@ -24,10 +24,10 @@ export default class RecommendationCard extends React.Component {
     minimumFractionDigits: 0,
   });
 
-  formatBudget = amount =>
+  formatBudget = (amount) =>
     `${this.budgetFormatter.format(Math.round(amount))} USD`;
 
-  formatDonation = amount => {
+  formatDonation = (amount) => {
     if (amount > 1000) {
       return `$${Math.round(amount / 1000)}K`;
     } else {
@@ -35,38 +35,38 @@ export default class RecommendationCard extends React.Component {
     }
   };
 
-  formatBackingAmount = amount =>
+  formatBackingAmount = (amount) =>
     `${this.budgetFormatter.format(Math.round(amount))}`;
 
-  formatBackingDate = date => moment(new Date(date)).format('MMM YYYY');
+  formatBackingDate = (date) => moment(new Date(date)).format('MMM YYYY');
 
-  nextGoal = recommendation => {
+  nextGoal = (recommendation) => {
     const goals = get(recommendation, 'opencollective.goals', []);
     const balance = get(recommendation, 'opencollective.stats.balance', 0);
 
     const sortedAndFilteredGoals = goals
-      .filter(goal => goal.type && goal.amount)
-      .filter(goal => goal.type === 'yearlyBudget')
-      .filter(goal => goal.amount > balance)
+      .filter((goal) => goal.type && goal.amount)
+      .filter((goal) => goal.type === 'yearlyBudget')
+      .filter((goal) => goal.amount > balance)
       .sort((a, b) => a.amount - b.amount);
 
     return sortedAndFilteredGoals[0];
   };
 
-  nextGoalPercentage = recommendation => {
+  nextGoalPercentage = (recommendation) => {
     const balance = get(recommendation, 'opencollective.stats.balance', 0);
     const goal = this.nextGoal(recommendation);
 
     return goal ? Math.round((balance / goal.amount) * 100) : null;
   };
 
-  nextGoaltitle = recommendation => {
+  nextGoaltitle = (recommendation) => {
     const goal = this.nextGoal(recommendation);
 
     return get(goal, 'title', null);
   };
 
-  backerItem = backer => (
+  backerItem = (backer) => (
     <span key={backer.id}>
       <a href={`${ocWebsiteUrl}/${backer.slug}`}>{backer.name}</a>
       &nbsp;
@@ -74,7 +74,7 @@ export default class RecommendationCard extends React.Component {
     </span>
   );
 
-  githubRepoItem = repo => (
+  githubRepoItem = (repo) => (
     <span key={repo.id}>
       {repo.full_name && (
         <a href={`https://github.com/${repo.full_name}`}>{repo.name}</a>
@@ -86,7 +86,7 @@ export default class RecommendationCard extends React.Component {
   getMatchingOrder = (recommendation, opencollectiveAccount) =>
     opencollectiveAccount &&
     get(opencollectiveAccount, 'orders.nodes', []).find(
-      order =>
+      (order) =>
         recommendation.opencollective &&
         recommendation.opencollective.slug === order.toAccount.slug,
     );
@@ -142,7 +142,7 @@ export default class RecommendationCard extends React.Component {
     const order = this.getMatchingOrder(recommendation, opencollectiveAccount);
 
     const backers = get(recommendation, 'opencollective.sponsors', []).filter(
-      backer =>
+      (backer) =>
         !opencollectiveAccount || opencollectiveAccount.slug !== backer.slug,
     );
 

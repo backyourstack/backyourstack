@@ -11,13 +11,13 @@ import { getProjects, saveProjects } from '../data';
       if (pkg.type === 'npm') {
         logger.info(`Checking npm ${pkg.name}`);
         const npmExists = await fetch(`https://registry.npmjs.org/${pkg.name}`)
-          .then(res => (res.status === 200 ? true : false))
+          .then((res) => (res.status === 200 ? true : false))
           .catch(() => false);
         if (!npmExists) {
           logger.info(`- ${pkg.name} is not registered on npm. Deleting.`);
           remove(
             project.packages,
-            p => p.type === pkg.type && p.name === pkg.name,
+            (p) => p.type === pkg.type && p.name === pkg.name,
           );
         }
       }
@@ -26,7 +26,7 @@ import { getProjects, saveProjects } from '../data';
         const packagistExists = await fetch(
           `https://repo.packagist.org/p/${pkg.name}.json`,
         )
-          .then(res => (res.status === 200 ? true : false))
+          .then((res) => (res.status === 200 ? true : false))
           .catch(() => false);
         if (!packagistExists) {
           logger.info(
@@ -34,7 +34,7 @@ import { getProjects, saveProjects } from '../data';
           );
           remove(
             project.packages,
-            p => p.type === pkg.type && p.name === pkg.name,
+            (p) => p.type === pkg.type && p.name === pkg.name,
           );
         }
       }
@@ -43,26 +43,26 @@ import { getProjects, saveProjects } from '../data';
         const gemExists = await fetch(
           `https://rubygems.org/api/v1/gems/${pkg.name}.json`,
         )
-          .then(res => (res.status === 200 ? true : false))
+          .then((res) => (res.status === 200 ? true : false))
           .catch(() => false);
         if (!gemExists) {
           logger.info(`- ${pkg.name} is not registered on rubygems. Deleting.`);
           remove(
             project.packages,
-            p => p.type === pkg.type && p.name === pkg.name,
+            (p) => p.type === pkg.type && p.name === pkg.name,
           );
         }
       }
       if (pkg.type === 'pypi') {
         logger.info(`Checking pypi ${pkg.name}`);
         const pypiExists = await fetch(`https://pypi.org/pypi/${pkg.name}/json`)
-          .then(res => (res.status === 200 ? true : false))
+          .then((res) => (res.status === 200 ? true : false))
           .catch(() => false);
         if (!pypiExists) {
           logger.info(`- ${pkg.name} is not registered on pypi. Deleting.`);
           remove(
             project.packages,
-            p => p.type === pkg.type && p.name === pkg.name,
+            (p) => p.type === pkg.type && p.name === pkg.name,
           );
         }
       }

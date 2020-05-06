@@ -95,7 +95,7 @@ describe('dependencies', () => {
       const result = dependenciesStats(file);
       const expected = expectedDependencies[type];
       expect(result).toHaveLength(expected.length);
-      expected.forEach(expectedDependency =>
+      expected.forEach((expectedDependency) =>
         expect(result).toContainEqual(expectedDependency),
       );
     });
@@ -118,8 +118,8 @@ describe('dependencies', () => {
       test('should get the stats from a Github repo', () => {
         const repo = { language };
         const expected = expectedDependencies[type];
-        return getDependenciesFromGithubRepo(repo, 'token').then(result => {
-          expected.forEach(expectedDependency =>
+        return getDependenciesFromGithubRepo(repo, 'token').then((result) => {
+          expected.forEach((expectedDependency) =>
             expect(result).toContainEqual(expectedDependency),
           );
           expect(result).toHaveLength(expected.length);

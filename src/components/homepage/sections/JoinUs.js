@@ -211,11 +211,11 @@ const JoinUs = () => {
                   display: 'flex',
                   width: '252px',
                 }}
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
                     className="becomeAPartner joinUsbecomeAPartner"
                     mousePosition={mousePosition}
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       setIsOpen(true);
                     }}
@@ -230,7 +230,7 @@ const JoinUs = () => {
                   display: 'flex',
                   width: '252px',
                 }}
-                render={mousePosition => (
+                render={(mousePosition) => (
                   <HomepageLink
                     href="https://opencollective.com/backyourstack"
                     className="contribute joinUscontribute"
