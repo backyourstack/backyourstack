@@ -33,8 +33,6 @@ import {
   getSavedFilesData,
   emailSubscribe,
   getProfileOrder,
-  contactBYS,
-  joinBeta,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
 import { getDependenciesAvailableForBacking } from '../lib/utils';
@@ -46,6 +44,7 @@ import {
   getObjectsMetadata,
 } from '../lib/s3';
 import { fetchOrgMembership } from '../lib/github';
+import email from '../lib/email';
 
 const {
   PORT,
@@ -181,27 +180,6 @@ nextApp.prepare().then(() => {
     const email = get(req, 'body.email');
     const profile = get(req, 'body.profile');
     emailSubscribe(email, profile).then(data => res.json(data));
-  });
-
-  server.post('/data/joinBeta', (req, res) => {
-    const email = get(req, 'body.email');
-
-    joinBeta(email).then(data => res.json(data));
-  });
-
-  server.post('/data/contact', (req, res) => {
-    const data = {
-      name: get(req, 'body.name'),
-      email: get(req, 'body.email'),
-      message: get(req, 'body.message'),
-      type: get(req, 'body.type'),
-    };
-
-    if (data.type === 'partnership') {
-      data.organization = get(req, 'body.organization');
-    }
-
-    contactBYS(data).then(data => res.json(data));
   });
 
   server.post('/files/upload', upload.array('files'), (req, res) => {
@@ -411,6 +389,35 @@ nextApp.prepare().then(() => {
       console.error(err);
       return res.status(400).send({ error: err.message });
     }
+  });
+
+  server.post('/data/joinBeta', async (req, res) => {
+    await email.sendMessage({
+      to: 'hello@backyourstack.com',
+      cc: 'francois@opencollective.com',
+      from: 'Open Collective <info@opencollective.com>',
+      subject: 'BackYourStack: Join Beta',
+      text: req.body.email,
+    });
+
+    res.status(200).send({ result: 'Success' });
+  });
+
+  server.post('/data/contact', async (req, res) => {
+    await email.sendMessage({
+      to: 'hello@backyourstack.com',
+      cc: 'francois@opencollective.com',
+      from: 'Open Collective <info@opencollective.com>',
+      subject: `BackYourStack: Contact (${req.body.type})`,
+      text: `
+Name: ${req.body.name}
+Organization: ${req.body.organization || 'none'}
+Email: ${req.body.email}
+
+${req.body.message}`,
+    });
+
+    res.status(200).send({ result: 'Success' });
   });
 
   server.use('/static', (req, res, next) => {
