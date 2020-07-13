@@ -40687,6 +40687,620 @@
     }
   },
   {
+    "name": "symfony",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "symfony/acl-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/amazon-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/amazon-sqs-messenger"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/amqp-messenger"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/amqp-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/apache-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/asset"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/browser-kit"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/cache"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/cache-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/class-loader"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/config"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/console"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/css-selector"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/debug"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/debug-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/debug-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dependency-injection"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/deprecation-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/doctrine-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/doctrine-messenger"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dom-crawler"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/dotenv"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/error-handler"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/event-dispatcher"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/event-dispatcher-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/expression-language"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/filesystem"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/finder"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/firebase-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/flex"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/form"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/framework-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/framework-standard-edition"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/free-mobile-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/google-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-client"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-client-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-foundation"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/http-kernel"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/inflector"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/intl"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/ldap"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/lock"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mailchimp-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mailgun-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/maker-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mattermost-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mercure"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mercure-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/messenger"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/mime"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/monolog-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/monolog-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/nexmo-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/options-resolver"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/orm-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/ovh-cloud-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/panther"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/phpunit-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-apcu"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-ctype"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-iconv"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-grapheme"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-icu"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-idn"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-messageformatter"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-intl-normalizer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-mbstring"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php54"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php55"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php56"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php70"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php71"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php72"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php73"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php74"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-php80"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-util"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-uuid"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/postmark-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/process"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/profiler-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/property-access"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/property-info"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/proxy-manager-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/psr-http-message-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/redis-messenger"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/requirements-checker"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/rocket-chat-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/routing"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-acl"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-core"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-csrf"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-guard"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/security-http"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/sendgrid-mailer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/serializer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/serializer-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/service-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/sinch-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/skeleton"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/slack-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/stopwatch"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/string"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/swiftmailer-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/symfony"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/symfony-demo"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/symfony1"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/telegram-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/templating"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/test-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/thanks"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/translation"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/translation-contracts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/twig-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/twig-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/twig-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/twilio-notifier"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/uid"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/validator"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/var-dumper"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/var-exporter"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/web-link"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/web-profiler-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/web-server-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/webpack-encore-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/website-skeleton"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/workflow"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/yaml"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/annotations-pack"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/assetic-bundle"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/force-lowest"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/icu"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/image-fixtures"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/locale"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/lts"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/panthere"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/polyfill-xml"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/propel1-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/standard-profile"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/swiftmailer-bridge"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/symfony-installer"
+      },
+      {
+        "type": "composer",
+        "name": "symfony/webpack-encore-pack"
+      }
+    ],
+    "github": {
+      "org": "symfony"
+    },
+    "opencollective": {
+      "id": 27396,
+      "name": "Symfony Diversity collective",
+      "slug": "symfony-diversity",
+      "description": "The Symfony PHP framework Diversity Initiative"
+    }
+  },
+  {
     "name": "systemjs",
     "packages": [
       {
