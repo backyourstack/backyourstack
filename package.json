@@ -51,7 +51,7 @@
     "fs-extra": "^9.0.0",
     "gemfile": "^1.1.0",
     "graphql-request": "^1.8.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lru-cache": "^5.1.1",
     "md5": "^2.2.1",
     "minimatch": "^3.0.4",
