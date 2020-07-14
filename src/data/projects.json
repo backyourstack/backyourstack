@@ -324,6 +324,24 @@
     }
   },
   {
+    "name": "aedes",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ascoltatori"
+      }
+    ],
+    "github": {
+      "org": "moscajs"
+    },
+    "opencollective": {
+      "id": 90038,
+      "name": "Aedes",
+      "slug": "aedes",
+      "description": "Barebone MQTT broker that can run on any stream server, the node way"
+    }
+  },
+  {
     "name": "agent",
     "packages": [
       {
@@ -11686,6 +11704,76 @@
     }
   },
   {
+    "name": "fab",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "fab"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/actions"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/core"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/deployer-aws-lambda"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/deployer-aws-s3"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/deployer-cf-workers"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/input-nextjs"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/input-static"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/plugin-precompile"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/plugin-render-html"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/plugin-rewire-assets"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/sandbox-node-vm"
+      },
+      {
+        "type": "npm",
+        "name": "@fab/server"
+      }
+    ],
+    "github": {
+      "repo": "fab-spec/fab"
+    },
+    "opencollective": {
+      "id": 106205,
+      "name": "Frontend Application Bundles",
+      "slug": "fab",
+      "description": "Supports the development of the FAB spec & integrations"
+    }
+  },
+  {
     "name": "fabricplugin",
     "packages": [
       {
@@ -11873,6 +11961,36 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "fannypack",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "fannypack-addon-highlighted-code"
+      },
+      {
+        "type": "npm",
+        "name": "fannypack-addon-markdown"
+      },
+      {
+        "type": "npm",
+        "name": "fannypack-theme-medipass"
+      },
+      {
+        "type": "npm",
+        "name": "fannypack"
+      }
+    ],
+    "github": {
+      "repo": "jxom/fannypack"
+    },
+    "opencollective": {
+      "id": 136899,
+      "name": "Fannypack",
+      "slug": "fannypack",
+      "description": "Rapidly build accessible & themeable React applications with ease"
     }
   },
   {
@@ -12408,6 +12526,18 @@
       {
         "type": "npm",
         "name": "fela-plugin-expand-shorthand"
+      },
+      {
+        "type": "npm",
+        "name": "fela-plugin-responsive-value"
+      },
+      {
+        "type": "npm",
+        "name": "fela-sort-media-query-mobile-first"
+      },
+      {
+        "type": "npm",
+        "name": "reason-fela"
       }
     ],
     "opencollective": {
@@ -12424,6 +12554,24 @@
     },
     "github": {
       "repo": "rofrischmann/fela"
+    }
+  },
+  {
+    "name": "fiber",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/gofiber/fiber"
+      }
+    ],
+    "github": {
+      "repo": "gofiber/fiber"
+    },
+    "opencollective": {
+      "id": 103329,
+      "name": "Fiber",
+      "slug": "fiber",
+      "description": "🚀 Fiber is an Express inspired web framework written in Go with 💖"
     }
   },
   {
@@ -12472,6 +12620,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "filestash",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "filestash"
+      }
+    ],
+    "github": {
+      "repo": "mickael-kerjean/filestash"
+    },
+    "opencollective": {
+      "id": 44605,
+      "name": "Filestash",
+      "slug": "filestash",
+      "description": "A web client for FTP, SFTP, WebDAV, Git, S3, Minio, LDAP, Caldav, Carddav, Mysql, Backblaze"
     }
   },
   {
@@ -12732,6 +12898,28 @@
     }
   },
   {
+    "name": "flatgeobuf",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "flatgeobuf"
+      },
+      {
+        "type": "nuget",
+        "name": "FlatGeobuf"
+      }
+    ],
+    "github": {
+      "repo": "bjornharrtell/flatgeobuf"
+    },
+    "opencollective": {
+      "id": 130434,
+      "name": "FlatGeobuf",
+      "slug": "flatgeobuf",
+      "description": "Brings a modern and fast GIS serialization format"
+    }
+  },
+  {
     "name": "flextype-95",
     "packages": [
       {
@@ -12950,6 +13138,14 @@
       {
         "type": "nuget",
         "name": "Caseless.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "Anotar.Catel.Fody"
+      },
+      {
+        "type": "nuget",
+        "name": "ConfigureAwait.Fody"
       }
     ],
     "github": {
@@ -13341,6 +13537,50 @@
       {
         "type": "composer",
         "name": "fof/upload"
+      },
+      {
+        "type": "composer",
+        "name": "fof/analytics"
+      },
+      {
+        "type": "composer",
+        "name": "fof/clockwork"
+      },
+      {
+        "type": "composer",
+        "name": "fof/discussion-language"
+      },
+      {
+        "type": "composer",
+        "name": "fof/filter"
+      },
+      {
+        "type": "composer",
+        "name": "fof/impersonate"
+      },
+      {
+        "type": "composer",
+        "name": "fof/moderator-notes"
+      },
+      {
+        "type": "composer",
+        "name": "fof/passport"
+      },
+      {
+        "type": "composer",
+        "name": "reflar/pwned-passwords"
+      },
+      {
+        "type": "composer",
+        "name": "fof/realtimedate"
+      },
+      {
+        "type": "composer",
+        "name": "fof/realtimelogin"
+      },
+      {
+        "type": "composer",
+        "name": "fof/sitemap"
       }
     ],
     "github": {
@@ -13531,6 +13771,22 @@
       {
         "type": "npm",
         "name": "@formatjs/intl-displaynames"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-datetimeformat"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-getcanonicallocales"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-locale"
+      },
+      {
+        "type": "npm",
+        "name": "@formatjs/intl-numberformat"
       }
     ],
     "github": {
@@ -13601,6 +13857,80 @@
     }
   },
   {
+    "name": "formily",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@formily/core"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/react"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/antd-components"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/antd"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/devtools"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/meet-components"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/meet"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/next-components"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/next"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/printer"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/react-schema-editor"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/react-schema-renderer"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/react-shared-components"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/shared"
+      },
+      {
+        "type": "npm",
+        "name": "@formily/validator"
+      }
+    ],
+    "github": {
+      "repo": "alibaba/uform"
+    },
+    "opencollective": {
+      "id": 42732,
+      "name": "formily",
+      "slug": "formily",
+      "description": "Alibaba unified form solution."
+    }
+  },
+  {
     "name": "foxify",
     "packages": [
       {
@@ -13625,11 +13955,81 @@
     }
   },
   {
+    "name": "foxify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "foxify-benchmarks"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/events"
+      },
+      {
+        "type": "npm",
+        "name": "foxify"
+      },
+      {
+        "type": "npm",
+        "name": "foxify-restify-odin"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/i18n"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/inject"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/odin"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/rest-client"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/schema"
+      },
+      {
+        "type": "npm",
+        "name": "@foxify/stream"
+      }
+    ],
+    "github": {
+      "org": "foxifyjs"
+    },
+    "opencollective": {
+      "id": 141129,
+      "name": "Foxify",
+      "slug": "foxify",
+      "description": "Our mission is to make Node.js back-end infrastructures more performant."
+    }
+  },
+  {
     "name": "fractal",
     "packages": [
       {
         "type": "npm",
         "name": "@frctl/fractal"
+      },
+      {
+        "type": "npm",
+        "name": "@frctl/handlebars"
+      },
+      {
+        "type": "npm",
+        "name": "@frctl/mandelbrot"
+      },
+      {
+        "type": "npm",
+        "name": "@frctl/nunjucks"
+      },
+      {
+        "type": "npm",
+        "name": "@frctl/twig"
       }
     ],
     "github": {
@@ -13654,6 +14054,10 @@
       {
         "type": "npm",
         "name": "framework7"
+      },
+      {
+        "type": "npm",
+        "name": "framework7-source"
       }
     ],
     "github": {
@@ -13783,6 +14187,32 @@
         "yearlyBudget": 119278
       },
       "goals": []
+    }
+  },
+  {
+    "name": "fuse-open",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "@fuse-open/fuselibs"
+      },
+      {
+        "type": "npm",
+        "name": "@fuse-open/transpiler"
+      },
+      {
+        "type": "npm",
+        "name": "@fuse-open/uno"
+      }
+    ],
+    "github": {
+      "org": "fuse-open"
+    },
+    "opencollective": {
+      "id": 47148,
+      "name": "Fuse Open Collective",
+      "slug": "fuse-open",
+      "description": "Build high performance iOS and Android apps with a single codebase"
     }
   },
   {
@@ -14279,6 +14709,18 @@
       {
         "type": "npm",
         "name": "gatsby-theme"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-admin"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-legacy-polyfills"
+      },
+      {
+        "type": "npm",
+        "name": "gatsby-recipes"
       }
     ],
     "opencollective": {
@@ -14927,6 +15369,42 @@
     }
   },
   {
+    "name": "go-coap",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/go-ocf/go-coap"
+      }
+    ],
+    "github": {
+      "repo": "go-ocf/go-coap"
+    },
+    "opencollective": {
+      "id": 121467,
+      "name": "Go-Coap",
+      "slug": "go-coap",
+      "description": "The go-coap provides servers and clients for DTLS, TCP-TLS, UDP, TCP in golang language."
+    }
+  },
+  {
+    "name": "go-harbor",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/TimeBye/go-harbor"
+      }
+    ],
+    "github": {
+      "repo": "TimeBye/go-harbor"
+    },
+    "opencollective": {
+      "id": 108741,
+      "name": "Go Harbor",
+      "slug": "go-harbor",
+      "description": "Go Harbor"
+    }
+  },
+  {
     "name": "go-prompt",
     "opencollective": {
       "id": 17998,
@@ -15000,6 +15478,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "gogearbox",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/gogearbox/gearbox"
+      }
+    ],
+    "github": {
+      "org": "gogearbox"
+    },
+    "opencollective": {
+      "id": 131043,
+      "name": "Gearbox",
+      "slug": "gogearbox",
+      "description": "Build a web framework written in Go with a focus on high performance and memory optimization"
     }
   },
   {
@@ -15196,6 +15692,42 @@
     ],
     "github": {
       "repo": "jinzhu/gorm"
+    }
+  },
+  {
+    "name": "gorush",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/appleboy/gorush"
+      }
+    ],
+    "github": {
+      "repo": "appleboy/gorush"
+    },
+    "opencollective": {
+      "id": 111620,
+      "name": "Gorush",
+      "slug": "gorush",
+      "description": "Making the world to a better place."
+    }
+  },
+  {
+    "name": "gotql",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "gotql"
+      }
+    ],
+    "github": {
+      "repo": "khaosdoctor/gotql"
+    },
+    "opencollective": {
+      "id": 112881,
+      "name": "Gotql",
+      "slug": "gotql",
+      "description": "Better fluent graphql client"
     }
   },
   {
@@ -15958,6 +16490,24 @@
     ]
   },
   {
+    "name": "guiscrcpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "guiscrcpy"
+      }
+    ],
+    "github": {
+      "repo": "srevinsaju/guiscrcpy"
+    },
+    "opencollective": {
+      "id": 112335,
+      "name": "guiscrcpy",
+      "slug": "guiscrcpy",
+      "description": "Android Screen Mirroring for free."
+    }
+  },
+  {
     "name": "gulp",
     "packages": [
       {
@@ -16641,6 +17191,28 @@
     }
   },
   {
+    "name": "hackthissite",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "hackthissite/ostiaryclient"
+      },
+      {
+        "type": "composer",
+        "name": "hackthissite/php-bull-scheduler"
+      }
+    ],
+    "github": {
+      "org": "HackThisSite"
+    },
+    "opencollective": {
+      "id": 129046,
+      "name": "HackThisSite",
+      "slug": "hackthissite",
+      "description": "A free, safe, and legal training ground for hackers and security professionals alike!"
+    }
+  },
+  {
     "name": "hamstersjs",
     "packages": [
       {
@@ -16933,6 +17505,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "hexo-theme-lx",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "theme-lx"
+      }
+    ],
+    "github": {
+      "repo": "blleng/hexo-theme-lx"
+    },
+    "opencollective": {
+      "id": 138925,
+      "name": "Hexo-Theme-Lx",
+      "slug": "hexo-theme-lx",
+      "description": "A simple & elegant blog theme for Hexo"
     }
   },
   {
@@ -17499,6 +18089,10 @@
       {
         "type": "npm",
         "name": "@hospitalrun/components"
+      },
+      {
+        "type": "npm",
+        "name": "@hospitalrun/cli"
       }
     ],
     "github": {
@@ -17531,6 +18125,24 @@
           "description": ""
         }
       ]
+    }
+  },
+  {
+    "name": "hpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "hpy.devel"
+      }
+    ],
+    "github": {
+      "org": "pyhandle"
+    },
+    "opencollective": {
+      "id": 97218,
+      "name": "HPy",
+      "slug": "hpy",
+      "description": "HPy: a better API for Python"
     }
   },
   {
@@ -17777,6 +18389,10 @@
       {
         "type": "composer",
         "name": "hyperf/hyperf"
+      },
+      {
+        "type": "composer",
+        "name": "hyperf/framework"
       }
     ],
     "github": {
@@ -17801,6 +18417,24 @@
           "totalDonations": 10000
         }
       ]
+    }
+  },
+  {
+    "name": "hyperglass",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "hyperglass"
+      }
+    ],
+    "github": {
+      "repo": "checktheroads/hyperglass"
+    },
+    "opencollective": {
+      "id": 86393,
+      "name": "hyperglass",
+      "slug": "hyperglass",
+      "description": "hyperglass is a modern, customizable network looking glass written in Python 3."
     }
   },
   {
@@ -17881,6 +18515,44 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "hyron",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "hyron"
+      },
+      {
+        "type": "npm",
+        "name": "@hyron/cli"
+      },
+      {
+        "type": "npm",
+        "name": "@hyron/static-dir"
+      },
+      {
+        "type": "npm",
+        "name": "@hyron/stringer"
+      },
+      {
+        "type": "npm",
+        "name": "@hyron/validator"
+      },
+      {
+        "type": "npm",
+        "name": "@hyron/viewer"
+      }
+    ],
+    "github": {
+      "org": "hyron-group"
+    },
+    "opencollective": {
+      "id": 39375,
+      "name": "Hyron",
+      "slug": "hyron",
+      "description": "Code less, do more with the hyron framework"
     }
   },
   {
@@ -17972,6 +18644,42 @@
     },
     "github": {
       "repo": "idyll-lang/idyll"
+    }
+  },
+  {
+    "name": "ie11customproperties",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "ie11-custom-properties"
+      }
+    ],
+    "github": {
+      "repo": "nuxodin/ie11CustomProperties"
+    },
+    "opencollective": {
+      "id": 138099,
+      "name": "Ie11CustomProperties",
+      "slug": "ie11customproperties",
+      "description": "Maintain and extend the CSS variable Polyfills for IE11"
+    }
+  },
+  {
+    "name": "image-zoom",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "react-medium-image-zoom"
+      }
+    ],
+    "github": {
+      "repo": "rpearce/image-zoom"
+    },
+    "opencollective": {
+      "id": 140690,
+      "name": "Image Zoom",
+      "slug": "image-zoom",
+      "description": "Accessible, progressive image zooming for the web"
     }
   },
   {
@@ -18080,6 +18788,14 @@
       {
         "type": "npm",
         "name": "vue-imask"
+      },
+      {
+        "type": "npm",
+        "name": "react-native-imask"
+      },
+      {
+        "type": "npm",
+        "name": "@imask/svelte"
       }
     ],
     "github": {
@@ -18162,6 +18878,80 @@
         "name": "immutable"
       }
     ]
+  },
+  {
+    "name": "indieweb",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "indieweb/date-formatter"
+      },
+      {
+        "type": "composer",
+        "name": "indieauth/client"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/link-rel-parser"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/mention-client"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/comments"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/original-post-discovery"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/rel-me"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/representative-h-card"
+      },
+      {
+        "type": "composer",
+        "name": "indiewordpress/wordpress-indieweb"
+      },
+      {
+        "type": "composer",
+        "name": "pfefferle/wordpress-indieweb-press-this"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/wordpress-mf2-feed"
+      },
+      {
+        "type": "gem",
+        "name": "indieweb-endpoints"
+      },
+      {
+        "type": "gem",
+        "name": "link_rel_parser"
+      },
+      {
+        "type": "gem",
+        "name": "microformats"
+      },
+      {
+        "type": "gem",
+        "name": "webmention"
+      }
+    ],
+    "github": {
+      "org": "indieweb"
+    },
+    "opencollective": {
+      "id": 550,
+      "name": "IndieWeb",
+      "slug": "indieweb",
+      "description": null
+    }
   },
   {
     "name": "inferno",
@@ -18271,6 +19061,60 @@
     },
     "github": {
       "repo": "infernojs/inferno"
+    }
+  },
+  {
+    "name": "infyomlabs",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "infyomlabs/adminlte-templates"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/core-templates"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/coreui-templates"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/flatlab-templates"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/generator-builder"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/infy-tracker"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/laravel-generator"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/routes-explorer"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/laravel-upcitemdb"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/metronic-templates"
+      }
+    ],
+    "github": {
+      "org": "InfyOmLabs"
+    },
+    "opencollective": {
+      "id": 71993,
+      "name": "InfyOm Laravel Generator",
+      "slug": "infyomlabs",
+      "description": "Generate Laravel API, Scaffold, Tests, Seeders with CRUD Laravel Generator"
     }
   },
   {
@@ -18797,6 +19641,184 @@
     }
   },
   {
+    "name": "jazzband",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "contextlib2"
+      },
+      {
+        "type": "pypi",
+        "name": "django-admin2"
+      },
+      {
+        "type": "pypi",
+        "name": "django-analytical"
+      },
+      {
+        "type": "pypi",
+        "name": "django-authority"
+      },
+      {
+        "type": "pypi",
+        "name": "django-axes"
+      },
+      {
+        "type": "pypi",
+        "name": "django-celery-monitor"
+      },
+      {
+        "type": "pypi",
+        "name": "django-configurations"
+      },
+      {
+        "type": "pypi",
+        "name": "django-constance"
+      },
+      {
+        "type": "pypi",
+        "name": "django-dbtemplates"
+      },
+      {
+        "type": "pypi",
+        "name": "django-ddp"
+      },
+      {
+        "type": "pypi",
+        "name": "django-defender"
+      },
+      {
+        "type": "pypi",
+        "name": "django-discover-jenkins"
+      },
+      {
+        "type": "pypi",
+        "name": "django-embed-video"
+      },
+      {
+        "type": "pypi",
+        "name": "django-flatblocks"
+      },
+      {
+        "type": "pypi",
+        "name": "django-floppyforms"
+      },
+      {
+        "type": "pypi",
+        "name": "django-formtools"
+      },
+      {
+        "type": "pypi",
+        "name": "django-hosts"
+      },
+      {
+        "type": "pypi",
+        "name": "django-ical"
+      },
+      {
+        "type": "pypi",
+        "name": "django-model-utils"
+      },
+      {
+        "type": "pypi",
+        "name": "django-mongonaut"
+      },
+      {
+        "type": "pypi",
+        "name": "django-nose"
+      },
+      {
+        "type": "pypi",
+        "name": "django-pipeline"
+      },
+      {
+        "type": "pypi",
+        "name": "django-queued-storage"
+      },
+      {
+        "type": "pypi",
+        "name": "django-redis"
+      },
+      {
+        "type": "pypi",
+        "name": "django-redshift-backend"
+      },
+      {
+        "type": "pypi",
+        "name": "django-robots"
+      },
+      {
+        "type": "pypi",
+        "name": "django-silk"
+      },
+      {
+        "type": "pypi",
+        "name": "django-simple-history"
+      },
+      {
+        "type": "pypi",
+        "name": "django-simple-menu"
+      },
+      {
+        "type": "pypi",
+        "name": "django-smart-selects"
+      },
+      {
+        "type": "pypi",
+        "name": "django-sortedm2m"
+      },
+      {
+        "type": "pypi",
+        "name": "django-sorter"
+      },
+      {
+        "type": "pypi",
+        "name": "django-user-sessions"
+      },
+      {
+        "type": "pypi",
+        "name": "django-widget-tweaks"
+      },
+      {
+        "type": "pypi",
+        "name": "geojson"
+      },
+      {
+        "type": "pypi",
+        "name": "inflect"
+      },
+      {
+        "type": "pypi",
+        "name": "jsonmodels"
+      },
+      {
+        "type": "pypi",
+        "name": "pip-tools"
+      },
+      {
+        "type": "pypi",
+        "name": "prettytable"
+      },
+      {
+        "type": "pypi",
+        "name": "sorl-thumbnail"
+      },
+      {
+        "type": "pypi",
+        "name": "tablib"
+      }
+    ],
+    "github": {
+      "org": "jazzband"
+    },
+    "opencollective": {
+      "id": 59764,
+      "name": "Jazzband",
+      "slug": "jazzband",
+      "description": "We are all part of this. Jazzband is a collaborative community to share the responsibility of maintaining Python-based projects."
+    }
+  },
+  {
     "name": "jekyll",
     "packages": [
       {
@@ -19219,6 +20241,10 @@
       {
         "type": "npm",
         "name": "@jest/test-sequencer"
+      },
+      {
+        "type": "npm",
+        "name": "@jest/globals"
       }
     ],
     "opencollective": {
@@ -19399,10 +20425,6 @@
     "packages": [
       {
         "type": "composer",
-        "name": "hrafn/router"
-      },
-      {
-        "type": "composer",
         "name": "jitesoft/container"
       },
       {
@@ -19455,10 +20477,6 @@
       },
       {
         "type": "npm",
-        "name": "cookie-sanction"
-      },
-      {
-        "type": "npm",
         "name": "@jitesoft/yolog"
       },
       {
@@ -19488,6 +20506,18 @@
       {
         "type": "npm",
         "name": "@jitesoft/babel-preset-react"
+      },
+      {
+        "type": "composer",
+        "name": "jitesoft/contracts"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/random-string"
+      },
+      {
+        "type": "npm",
+        "name": "@jitesoft/yolog-json-plugin"
       }
     ],
     "github": {
@@ -19526,6 +20556,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "joshjs",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "joshjs"
+      }
+    ],
+    "github": {
+      "repo": "mamunhpath/josh.js"
+    },
+    "opencollective": {
+      "id": 136907,
+      "name": "Josh.js",
+      "slug": "joshjs",
+      "description": "A JavaScript library to animate content on page scroll"
     }
   },
   {
@@ -19632,6 +20680,26 @@
       {
         "type": "npm",
         "name": "jscpd"
+      },
+      {
+        "type": "npm",
+        "name": "@jscpd/core"
+      },
+      {
+        "type": "npm",
+        "name": "@jscpd/finder"
+      },
+      {
+        "type": "npm",
+        "name": "@jscpd/tokenizer"
+      },
+      {
+        "type": "npm",
+        "name": "@jscpd/leveldb-store"
+      },
+      {
+        "type": "npm",
+        "name": "@jscpd/redis-store"
       }
     ],
     "github": {
@@ -19713,6 +20781,28 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "json-schema",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "json-schema-test-suite"
+      },
+      {
+        "type": "npm",
+        "name": "@json-schema-org/tests"
+      }
+    ],
+    "github": {
+      "org": "json-schema-org"
+    },
+    "opencollective": {
+      "id": 54839,
+      "name": "JSON Schema",
+      "slug": "json-schema",
+      "description": "JSON Schema is a vocabulary that allows you to annotate and validate JSON documents."
     }
   },
   {
@@ -19831,6 +20921,140 @@
         "name": "jsonwebtoken"
       }
     ]
+  },
+  {
+    "name": "jspm",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "babel-visit-cjs-deps"
+      },
+      {
+        "type": "npm",
+        "name": "@jspm/github"
+      },
+      {
+        "type": "npm",
+        "name": "jspm"
+      },
+      {
+        "type": "npm",
+        "name": "@jspm/core"
+      },
+      {
+        "type": "npm",
+        "name": "@jspm/resolve"
+      },
+      {
+        "type": "npm",
+        "name": "node-browser-builtins"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-assert"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-buffer"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-child_process"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-cluster"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-console"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-constants"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-dgram"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-dns"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-events"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-fs"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-https"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-net"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-path"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-process"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-querystring"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-readline"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-repl"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-tls"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-tty"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-util"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-nodelibs-vm"
+      },
+      {
+        "type": "npm",
+        "name": "@jspm/npm"
+      },
+      {
+        "type": "npm",
+        "name": "jspm-registry"
+      },
+      {
+        "type": "npm",
+        "name": "rollup-plugin-jspm"
+      }
+    ],
+    "github": {
+      "org": "jspm"
+    },
+    "opencollective": {
+      "id": 135295,
+      "name": "jspm",
+      "slug": "jspm",
+      "description": "ES Modules CDN and Package Manager - https://jspm.org"
+    }
   },
   {
     "name": "jss",
@@ -20038,6 +21262,24 @@
     }
   },
   {
+    "name": "jsts",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "jsts"
+      }
+    ],
+    "github": {
+      "repo": "bjornharrtell/jsts"
+    },
+    "opencollective": {
+      "id": 130429,
+      "name": "JSTS",
+      "slug": "jsts",
+      "description": "Brings geospatial operations to JavaScript"
+    }
+  },
+  {
     "name": "jsui",
     "packages": [
       {
@@ -20091,6 +21333,28 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "kalm",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "bsplit"
+      },
+      {
+        "type": "npm",
+        "name": "kalm"
+      }
+    ],
+    "github": {
+      "org": "kalm"
+    },
+    "opencollective": {
+      "id": 78678,
+      "name": "kalm",
+      "slug": "kalm",
+      "description": "We make sockets enjoyable!"
     }
   },
   {
@@ -20304,6 +21568,24 @@
     }
   },
   {
+    "name": "keeweb",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "kdbxweb"
+      }
+    ],
+    "github": {
+      "org": "keeweb"
+    },
+    "opencollective": {
+      "id": 58719,
+      "name": "KeeWeb",
+      "slug": "keeweb",
+      "description": "Free cross-platform password manager compatible with KeePass"
+    }
+  },
+  {
     "name": "kivy",
     "packages": [
       {
@@ -20376,6 +21658,24 @@
           "totalDonations": 3500
         }
       ]
+    }
+  },
+  {
+    "name": "kivymd",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "kivymd"
+      }
+    ],
+    "github": {
+      "repo": "HeaTTheatR/KivyMD"
+    },
+    "opencollective": {
+      "id": 114126,
+      "name": "KivyMD",
+      "slug": "kivymd",
+      "description": "KivyMD is a set of widgets compatible with the Google Material Design specification created by us for use in the Kivy cross-platform framework."
     }
   },
   {
@@ -20946,6 +22246,50 @@
     }
   },
   {
+    "name": "konva",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "konva"
+      }
+    ],
+    "github": {
+      "repo": "konvajs/konva"
+    },
+    "opencollective": {
+      "id": 118902,
+      "name": "Konva",
+      "slug": "konva",
+      "description": "Making better 2d canvas framework"
+    }
+  },
+  {
+    "name": "kumbiaphp",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kumbia/activerecord"
+      },
+      {
+        "type": "composer",
+        "name": "kumbiaphp/pimplecore"
+      },
+      {
+        "type": "composer",
+        "name": "kumbia/framework"
+      }
+    ],
+    "github": {
+      "org": "KumbiaPHP"
+    },
+    "opencollective": {
+      "id": 85066,
+      "name": "KumbiaPHP",
+      "slug": "kumbiaphp",
+      "description": "KumbiaPHP framework"
+    }
+  },
+  {
     "name": "lad",
     "packages": [
       {
@@ -21123,6 +22467,24 @@
     }
   },
   {
+    "name": "laravel-s",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "hhxsv5/laravel-s"
+      }
+    ],
+    "github": {
+      "repo": "hhxsv5/laravel-s"
+    },
+    "opencollective": {
+      "id": 115304,
+      "name": "LaravelS",
+      "slug": "laravel-s",
+      "description": "LaravelS is an out-of-the-box adapter between Swoole and Laravel/Lumen."
+    }
+  },
+  {
     "name": "laravel-scout-tntsearch-driver",
     "packages": [
       {
@@ -21144,6 +22506,42 @@
         "yearlyBudget": 1920
       },
       "goals": []
+    }
+  },
+  {
+    "name": "laravel-shopify",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "osiset/laravel-shopify"
+      }
+    ],
+    "github": {
+      "repo": "osiset/laravel-shopify"
+    },
+    "opencollective": {
+      "id": 132169,
+      "name": "Laravel Shopify",
+      "slug": "laravel-shopify",
+      "description": "A full-featured Laravel package for aiding in Shopify App development"
+    }
+  },
+  {
+    "name": "laravel-starter",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "nasirkhan/laravel-starter"
+      }
+    ],
+    "github": {
+      "repo": "nasirkhan/laravel-starter"
+    },
+    "opencollective": {
+      "id": 144883,
+      "name": "Laravel Starter",
+      "slug": "laravel-starter",
+      "description": "A CMS like modular starter project built with Laravel framework. "
     }
   },
   {
@@ -21284,6 +22682,42 @@
     }
   },
   {
+    "name": "leaf",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "leafs/leaf"
+      }
+    ],
+    "github": {
+      "repo": "leafsphp/leaf"
+    },
+    "opencollective": {
+      "id": 120212,
+      "name": "Leaf PHP",
+      "slug": "leaf",
+      "description": "Create clean, simple but powerful web applications and APIs quickly."
+    }
+  },
+  {
+    "name": "leafletglify",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "leaflet.glify"
+      }
+    ],
+    "github": {
+      "repo": "robertleeplummerjr/Leaflet.glify"
+    },
+    "opencollective": {
+      "id": 96368,
+      "name": "Leaflet.glify",
+      "slug": "leafletglify",
+      "description": "fully functional, ridiculously fast web gl renderer plugin for leaflet"
+    }
+  },
+  {
     "name": "lem",
     "packages": [
       {
@@ -21335,6 +22769,60 @@
         "name": "less"
       }
     ]
+  },
+  {
+    "name": "less",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "more"
+      },
+      {
+        "type": "npm",
+        "name": "less-docs"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-advanced-color-functions"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-autoprefix"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-clean-css"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-inline-urls"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-npm-import"
+      },
+      {
+        "type": "npm",
+        "name": "less-plugin-rtl"
+      },
+      {
+        "type": "npm",
+        "name": "less"
+      },
+      {
+        "type": "npm",
+        "name": "@less/test-data"
+      }
+    ],
+    "github": {
+      "org": "less"
+    },
+    "opencollective": {
+      "id": 66471,
+      "name": "Less",
+      "slug": "less",
+      "description": "Support the CSS-like styling language that powers the world's websites."
+    }
   },
   {
     "name": "less-watch-compiler",
@@ -21679,6 +23167,42 @@
     }
   },
   {
+    "name": "litepicker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "litepicker"
+      }
+    ],
+    "github": {
+      "repo": "wakirin/Litepicker"
+    },
+    "opencollective": {
+      "id": 120292,
+      "name": "Litepicker",
+      "slug": "litepicker",
+      "description": "Feel free to donate to support further developments."
+    }
+  },
+  {
+    "name": "little-state-machine",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "little-state-machine"
+      }
+    ],
+    "github": {
+      "repo": "bluebill1049/little-state-machine"
+    },
+    "opencollective": {
+      "id": 120671,
+      "name": "Little State Machine",
+      "slug": "little-state-machine",
+      "description": "📠 React custom hook for persist state management"
+    }
+  },
+  {
     "name": "live2d-widgetjs",
     "packages": [
       {
@@ -21724,6 +23248,10 @@
       {
         "type": "npm",
         "name": "@loadable/webpack-plugin"
+      },
+      {
+        "type": "npm",
+        "name": "loadable-codemod"
       }
     ],
     "github": {
@@ -21754,6 +23282,24 @@
           "totalDonations": 70000
         }
       ]
+    }
+  },
+  {
+    "name": "loading-attribute-polyfill",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "loading-attribute-polyfill"
+      }
+    ],
+    "github": {
+      "repo": "mfranzke/loading-attribute-polyfill"
+    },
+    "opencollective": {
+      "id": 97463,
+      "name": "loading-attribute-polyfill",
+      "slug": "loading-attribute-polyfill",
+      "description": "Fast and lightweight dependency-free vanilla JavaScript polyfill for native lazy loading / the awesome loading='lazy'-attribute."
     }
   },
   {
@@ -23310,6 +24856,14 @@
       {
         "type": "npm",
         "name": "tslint-midway-contrib"
+      },
+      {
+        "type": "npm",
+        "name": "@midwayjs/faas"
+      },
+      {
+        "type": "npm",
+        "name": "@midwayjs/runtime-engine"
       }
     ],
     "github": {
@@ -24163,6 +25717,24 @@
     ],
     "github": {
       "repo": "chkr1011/MQTTnet"
+    }
+  },
+  {
+    "name": "multrin",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "multrin"
+      }
+    ],
+    "github": {
+      "repo": "sentialx/multrin"
+    },
+    "opencollective": {
+      "id": 38892,
+      "name": "multrin",
+      "slug": "multrin",
+      "description": "Organize multiple apps in tabs!"
     }
   },
   {
@@ -26557,6 +28129,10 @@
       {
         "type": "npm",
         "name": "@nuxt/utils"
+      },
+      {
+        "type": "npm",
+        "name": "@nuxt/types"
       }
     ],
     "github": {
@@ -27643,6 +29219,10 @@
       {
         "type": "npm",
         "name": "parcel-bundler"
+      },
+      {
+        "type": "npm",
+        "name": "parcel"
       }
     ],
     "github": {
@@ -29501,6 +31081,50 @@
       {
         "type": "npm",
         "name": "posthtml-inline-favicon"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-toc"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-richtypo"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-prism"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-url-parameters"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-safe-class-names"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-fetch"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-mso"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-postcss-merge-longhand"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-markdownit"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-extra-attributes"
+      },
+      {
+        "type": "npm",
+        "name": "posthtml-postcss-treeshaker"
       }
     ],
     "github": {
@@ -30238,6 +31862,14 @@
       {
         "type": "npm",
         "name": "@pwa/webpack-assets"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-imagemin"
+      },
+      {
+        "type": "npm",
+        "name": "@pwa/plugin-typescript"
       }
     ],
     "github": {
@@ -32731,6 +34363,10 @@
       {
         "type": "npm",
         "name": "reakit-test-utils"
+      },
+      {
+        "type": "npm",
+        "name": "reakit-warning"
       }
     ],
     "github": {
@@ -33245,6 +34881,10 @@
       {
         "type": "npm",
         "name": "@rnv/deploy-docker"
+      },
+      {
+        "type": "npm",
+        "name": "@rnv/deploy-aws"
       }
     ],
     "github": {
@@ -34851,6 +36491,14 @@
       {
         "type": "npm",
         "name": "@signalk/signalk-ws-provider"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/sailsconfiguration"
+      },
+      {
+        "type": "npm",
+        "name": "@signalk/signalk-autopilot"
       }
     ],
     "github": {
@@ -39171,6 +40819,24 @@
     }
   },
   {
+    "name": "speedtracker",
+    "packages": [
+      {
+        "type": "npm",
+        "name": "speedtracker"
+      }
+    ],
+    "github": {
+      "repo": "speedtracker/speedtracker"
+    },
+    "opencollective": {
+      "id": 740,
+      "name": "speedtracker",
+      "slug": "speedtracker",
+      "description": null
+    }
+  },
+  {
     "name": "spina",
     "packages": [
       {
@@ -39703,6 +41369,10 @@
       {
         "type": "npm",
         "name": "@storybook/server"
+      },
+      {
+        "type": "npm",
+        "name": "@storybook/aurelia"
       }
     ],
     "opencollective": {
@@ -41932,6 +43602,10 @@
       {
         "type": "composer",
         "name": "tastyigniter/tastyigniter"
+      },
+      {
+        "type": "composer",
+        "name": "tastyigniter/flame"
       }
     ],
     "github": {
@@ -42769,6 +44443,22 @@
       {
         "type": "npm",
         "name": "@turf/nearest-neighbor-analysis"
+      },
+      {
+        "type": "npm",
+        "name": "@turf/boolean-touches"
+      },
+      {
+        "type": "npm",
+        "name": "@turf/boolean-valid"
+      },
+      {
+        "type": "npm",
+        "name": "@turf/quadrat-analysis"
+      },
+      {
+        "type": "npm",
+        "name": "@turf/rectangle-grid"
       }
     ],
     "opencollective": {
@@ -44648,6 +46338,10 @@
       {
         "type": "npm",
         "name": "babel-plugin-html-attributes-to-jsx"
+      },
+      {
+        "type": "npm",
+        "name": "@mdx-js/preact"
       }
     ],
     "github": {
