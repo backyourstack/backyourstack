@@ -8136,41 +8136,6 @@
     ]
   },
   {
-    "id": 184,
-    "name": "hackathon-starter",
-    "slug": "hackathon-starter",
-    "description": null,
-    "github": {
-      "repo": "sahat/hackathon-starter"
-    },
-    "repos": [
-      {
-        "name": "hackathon-starter",
-        "owner": {
-          "login": "sahat"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "CSS", "HTML", "Dockerfile"],
-        "files": [
-          ".dockerignore",
-          ".env.example",
-          ".eslintrc",
-          ".gitignore",
-          ".travis.yml",
-          "CHANGELOG.md",
-          "Dockerfile",
-          "LICENSE",
-          "README.md",
-          "app.js",
-          "docker-compose.yml",
-          "package-lock.json",
-          "package.json",
-          "prod-checklist.md"
-        ]
-      }
-    ]
-  },
-  {
     "id": 185,
     "name": "HospitalRun",
     "slug": "hospitalrun",
@@ -15871,40 +15836,6 @@
     ]
   },
   {
-    "id": 740,
-    "name": "speedtracker",
-    "slug": "speedtracker",
-    "description": null,
-    "github": {
-      "repo": "speedtracker/speedtracker"
-    },
-    "repos": [
-      {
-        "name": "speedtracker",
-        "owner": {
-          "login": "speedtracker"
-        },
-        "defaultBranch": "master",
-        "languages": ["HTML", "CSS", "JavaScript", "Ruby"],
-        "files": [
-          ".editorconfig",
-          ".gitignore",
-          "CONTRIBUTING.md",
-          "Gemfile",
-          "Gemfile.lock",
-          "README.md",
-          "_config.yml",
-          "bundle.js",
-          "index.html",
-          "package.json",
-          "profiles.json",
-          "speedtracker.yml",
-          "webpack.config.js"
-        ]
-      }
-    ]
-  },
-  {
     "id": 743,
     "name": "Sass Open Source Foundation",
     "slug": "sass",
@@ -18669,39 +18600,6 @@
           "package.json",
           "profiles.json",
           "tsconfig.json",
-          "yarn.lock"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 870,
-    "name": "hyperline",
-    "slug": "hyperline",
-    "description": null,
-    "github": {
-      "repo": "Hyperline/hyperline"
-    },
-    "repos": [
-      {
-        "name": "hyperline",
-        "owner": {
-          "login": "Hyperline"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript"],
-        "files": [
-          ".babelrc",
-          ".editorconfig",
-          ".gitignore",
-          ".npmignore",
-          "README.md",
-          "jest.config.json",
-          "license.md",
-          "package-lock.json",
-          "package.json",
-          "screenshot.png",
-          "webpack.config.js",
           "yarn.lock"
         ]
       }
@@ -39294,37 +39192,6 @@
     ]
   },
   {
-    "id": 15488,
-    "name": "p3x-onenote",
-    "slug": "p3x-onenote",
-    "description": "A Linux compatible version of OneNote",
-    "github": {
-      "repo": "patrikx3/onenote"
-    },
-    "repos": [
-      {
-        "name": "onenote",
-        "owner": {
-          "login": "patrikx3"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "CSS", "HTML", "Batchfile", "Shell"],
-        "files": [
-          ".editorconfig",
-          ".gitignore",
-          ".npmignore",
-          ".travis.yml",
-          "Gruntfile.js",
-          "LICENSE",
-          "README.md",
-          "changelog.md",
-          "onenote.iml",
-          "package.json"
-        ]
-      }
-    ]
-  },
-  {
     "id": 15501,
     "name": "nock",
     "slug": "nock",
@@ -48889,39 +48756,6 @@
     ]
   },
   {
-    "id": 22885,
-    "name": "hardkoded",
-    "slug": "hardkoded-projects",
-    "description": "Support hardkoded projects such as Puppeteer-Sharp and Playwright-Sharp",
-    "github": {
-      "repo": "kblok/puppeteer-sharp"
-    },
-    "repos": [
-      {
-        "name": "puppeteer-sharp",
-        "owner": {
-          "login": "hardkoded"
-        },
-        "defaultBranch": "master",
-        "languages": ["C#", "JavaScript", "HTML", "CSS", "PowerShell"],
-        "files": [
-          ".editorconfig",
-          ".gitignore",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "ISSUE_TEMPLATE.md",
-          "LICENSE",
-          "README.md",
-          "appveyor-demo.yml",
-          "appveyor-edge.yml",
-          "appveyor-fullframework.yml",
-          "appveyor-linux.yml",
-          "appveyor.yml"
-        ]
-      }
-    ]
-  },
-  {
     "id": 22968,
     "name": "webcomic",
     "slug": "webcomic",
@@ -55140,38 +54974,6 @@
           "translucent-borders.md",
           "typing.md",
           "zebra-stripes.md"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 25404,
-    "name": "Jovo Framework",
-    "slug": "jovo-framework",
-    "description": "The Open Source Voice Layer: Build Voice Experiences for Alexa, Google Assistant, Samsung Bixby, Web Apps, and much more",
-    "github": {
-      "repo": "jovotech/jovo-framework-nodejs"
-    },
-    "repos": [
-      {
-        "name": "jovo-framework",
-        "owner": {
-          "login": "jovotech"
-        },
-        "defaultBranch": "master",
-        "languages": ["JavaScript", "TypeScript"],
-        "files": [
-          ".gitattributes",
-          ".gitignore",
-          ".npmignore",
-          ".travis.yml",
-          "BACKERS.md",
-          "CHANGELOG.md",
-          "LICENSE",
-          "README.md",
-          "lerna.json",
-          "package-lock.json",
-          "package.json"
         ]
       }
     ]
@@ -98424,49 +98226,6 @@
       "repo": "koalazak/dorita980"
     },
     "repos": []
-  },
-  {
-    "id": 44553,
-    "name": "p3x-redis-ui",
-    "slug": "p3x-redis-ui",
-    "description": "📡 P3X Redis UI can work with huge key sets, is functional and works on the web and desktop (Electron)",
-    "github": {
-      "repo": "patrikx3/redis-ui"
-    },
-    "repos": [
-      {
-        "name": "redis-ui",
-        "owner": {
-          "login": "patrikx3"
-        },
-        "defaultBranch": "master",
-        "languages": [
-          "JavaScript",
-          "Batchfile",
-          "Shell",
-          "CSS",
-          "HTML",
-          "Dockerfile"
-        ],
-        "files": [
-          ".editorconfig",
-          ".gitignore",
-          ".npmignore",
-          ".travis.yml",
-          "Dockerfile",
-          "Gruntfile.js",
-          "LICENSE",
-          "README.md",
-          "changelog.md",
-          "contributors.md",
-          "docker-compose.yml",
-          "p3xrs.json",
-          "package.json",
-          "redis-ui.iml",
-          "todo.md"
-        ]
-      }
-    ]
   },
   {
     "id": 44571,
