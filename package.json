@@ -69,7 +69,7 @@
     "query-string": "^6.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-dropzone": "^7.0.1",
+    "react-dropzone": "^11.0.2",
     "react-icons": "^3.10.0",
     "react-modal": "^3.11.2",
     "react-number-format": "^4.4.1",
