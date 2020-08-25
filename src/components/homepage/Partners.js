@@ -9,11 +9,11 @@ const Partners = () => {
     OC: 'gray',
   });
 
-  const handleOnMouseEnter = (logo) => {
+  const handleOnMouseEnter = logo => {
     setLogoType({ ...logoType, [logo]: 'color' });
   };
 
-  const handleOnMouseLeave = (logo) => {
+  const handleOnMouseLeave = logo => {
     setLogoType({ ...logoType, [logo]: 'gray' });
   };
 
@@ -63,16 +63,6 @@ const Partners = () => {
           <img
             src={`/static/img/homepage/MM-${logoType.MM}.svg`}
             alt="Maintainer Mountaineer"
-          />
-        </a>
-        <a
-          href="https://codefund.io"
-          onMouseEnter={() => handleOnMouseEnter('CF')}
-          onMouseLeave={() => handleOnMouseLeave('CF')}
-        >
-          <img
-            src={`/static/img/homepage/CF-${logoType.CF}.svg`}
-            alt="Code Fund"
           />
         </a>
         <a
