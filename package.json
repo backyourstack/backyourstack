@@ -39,7 +39,7 @@
     "@babel/core": "7.7.2",
     "@mdx-js/mdx": "^1.6.6",
     "@octokit/rest": "^18.0.0",
-    "aws-sdk": "^2.713.0",
+    "aws-sdk": "^2.949.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "cookie-parser": "^1.4.5",
