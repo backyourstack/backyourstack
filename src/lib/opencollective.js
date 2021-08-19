@@ -31,14 +31,6 @@ const getAccountOrdersQuery = `query account($slug: String!) {
   }
 }`;
 
-const getOrderQuery = `query Order($orderId: Int!) {
-  Order(id: $orderId) {
-    id
-    totalAmount
-    status
-  }
-}`;
-
 const getCollectiveWithMembersQuery = `query Collective($slug: String!) {
   Collective(slug: $slug) {
     id
@@ -163,17 +155,6 @@ function fetchAccountWithOrders(slug) {
     });
 }
 
-function fetchOrder(orderId) {
-  logger.debug(`Fetching order from Open Collective: ${orderId}`);
-  return graphqlRequest(baseUrl, getOrderQuery, { orderId })
-    .then((data) => {
-      return data.Order;
-    })
-    .catch(() => {
-      return null;
-    });
-}
-
 function fetchCollectiveWithMembers(slug) {
   const cacheKey = `collective_with_members_${slug}`;
 
@@ -207,7 +188,6 @@ function dispatchOrder(id) {
 
 export {
   fetchAccountWithOrders,
-  fetchOrder,
   fetchCollectiveWithMembers,
   fetchAllCollectives,
   dispatchOrder,

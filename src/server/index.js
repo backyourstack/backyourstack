@@ -3,7 +3,6 @@ import '../env';
 import path from 'path';
 import crypto from 'crypto';
 
-import fs from 'fs-extra';
 import express from 'express';
 import expressSession from 'express-session';
 import cookieParser from 'cookie-parser';
@@ -18,7 +17,6 @@ import logger from '../logger';
 
 import passport from './passport';
 import { fetchWithBasicAuthentication } from './utils';
-import { dispatchOrder } from '../lib/opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
@@ -29,21 +27,8 @@ import {
   searchUsers,
   getProfileData,
   getFilesData,
-  getSavedSelectedDependencies,
-  getSavedFilesData,
   emailSubscribe,
-  getProfileOrder,
 } from '../lib/data';
-import { fetchDependenciesFileContent } from '../lib/dependencies/data';
-import { getDependenciesAvailableForBacking } from '../lib/utils';
-import {
-  uploadFiles,
-  saveProfile,
-  saveProfileOrder,
-  saveSelectedDependencies,
-  getObjectsMetadata,
-} from '../lib/s3';
-import { fetchOrgMembership } from '../lib/github';
 import email from '../lib/email';
 
 const {
@@ -213,182 +198,6 @@ nextApp.prepare().then(() => {
       delete sessionFiles[id];
     }
     res.send('Ok');
-  });
-
-  server.post('/files/save', async (req, res) => {
-    const ids = get(req, 'body.ids');
-    const sessionFiles = get(req, 'session.files');
-    const files = {};
-    ids.forEach((id) => {
-      files[id] = sessionFiles[id];
-    });
-    try {
-      const savedData = await uploadFiles(files);
-      return res.status(200).send(savedData);
-    } catch (err) {
-      console.error(err);
-      return res.status(400).send('Unable to save file');
-    }
-  });
-
-  server.post('/profile/save', async (req, res) => {
-    const id = get(req, 'body.id');
-    const excludedRepos = get(req, 'body.excludedRepos', []);
-    const accessToken = get(req, 'session.passport.user.accessToken');
-    const loggedInUsername = get(req, 'session.passport.user.username');
-
-    const data = await getProfileData(id, accessToken, {
-      loggedInUsername,
-      excludedRepos,
-    });
-
-    const backing = getDependenciesAvailableForBacking(data.recommendations);
-    if (backing.length === 0) {
-      return res
-        .status(400)
-        .send(
-          'No dependency available for backing within selected repositories',
-        );
-    }
-
-    const profile = data.profile;
-    const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
-    const profileOrder = await getProfileOrder(id);
-    // Check if the profile has been saved before
-    if (
-      dependenciesFile &&
-      profileOrder &&
-      profileOrder.triggeredBy !== loggedInUsername
-    ) {
-      if (!loggedInUsername || !accessToken) {
-        return res.status(401).send('You have to sign in to edit profile');
-      }
-
-      if (profile.type === 'User' && loggedInUsername !== profile.login) {
-        return res
-          .status(401)
-          .send('You can only edit profile connected to your GitHub account.');
-      }
-
-      if (profile.type === 'Organization') {
-        const membership = await fetchOrgMembership(
-          profile.login,
-          loggedInUsername,
-          accessToken,
-        );
-        if (
-          !membership ||
-          membership.state !== 'active' ||
-          membership.role !== 'admin'
-        ) {
-          return res
-            .status(401)
-            .send(
-              'You need to be an active admin of this organization to update profile.',
-            );
-        }
-      }
-    }
-
-    const repositories = data.repos.filter(
-      (repo) => excludedRepos.indexOf(repo.name) === -1,
-    );
-
-    for (const repository of repositories) {
-      let files = await fetchDependenciesFileContent(repository, accessToken);
-      if (files.length) {
-        files = files.map(({ matchedPattern, text }) => {
-          const file = { name: matchedPattern, text };
-          file.projectName = detectProjectName(file);
-          file.id = file.projectName;
-          return file;
-        });
-        repository.files = files;
-      } else {
-        continue;
-      }
-    }
-    const savedId = await saveProfile(data.profile.login, repositories);
-    return res.status(200).send({ id: savedId });
-  });
-
-  server.post('/selectedDependencies/save', async (req, res) => {
-    const id = get(req, 'body.id');
-    const selectedDependencies = get(req, 'body.selectedDependencies');
-    const savedObjectInfo = await saveSelectedDependencies(
-      id,
-      selectedDependencies,
-    );
-    return res.status(200).send(savedObjectInfo);
-  });
-
-  server.get('/:id/backing.json', async (req, res) => {
-    if (!req.params.id) {
-      return res.status(400).send('Please provide the file key');
-    }
-    const id = req.params.id;
-
-    try {
-      const selectedDependencies = await getSavedSelectedDependencies(id);
-      // Return selected dependencies directly if available
-      if (selectedDependencies) {
-        return res.status(200).send(selectedDependencies);
-      }
-
-      const { recommendations } = await getSavedFilesData(id);
-      const backing = getDependenciesAvailableForBacking(recommendations);
-      return res.status(200).send(backing);
-    } catch (err) {
-      console.error(err);
-      return res.status(400).send('Unable to fetch file');
-    }
-  });
-
-  server.get('/:id/badge', async (req, res) => {
-    const data = await getSavedFilesData(req.params.id);
-    if (!data) {
-      return res.status(400).send('Unable to fetch profile.');
-    }
-    const { recommendations, order } = data;
-    const backing = getDependenciesAvailableForBacking(recommendations);
-
-    if (!order || order.status !== 'ACTIVE') {
-      return res
-        .status(400)
-        .send(
-          'Unable to fetch BackYourStack suscription on Open Collective, not found or not active.',
-        );
-    }
-
-    const badge = await fs.readFile(
-      path.join(__dirname, '..', 'badges', 'badge.svg'),
-      'utf8',
-    );
-    res.setHeader('Content-Type', 'image/svg+xml;charset=utf-8');
-    res.setHeader('Cache-Control', 'public, max-age=86400');
-    return res
-      .status(200)
-      .send(badge.replace('{COUNT}', (backing && backing.length) || 0));
-  });
-
-  server.post('/order/dispatch', async (req, res) => {
-    const loggedInUsername = get(req, 'session.passport.user.username');
-    const orderId = get(req, 'body.orderId');
-    const id = get(req, 'body.id');
-    const order = { id: orderId };
-
-    if (loggedInUsername) {
-      order.triggeredBy = loggedInUsername;
-    }
-
-    try {
-      const dispatchedOrders = await dispatchOrder(orderId);
-      await saveProfileOrder(id, order);
-      return res.status(200).send(dispatchedOrders);
-    } catch (err) {
-      console.error(err);
-      return res.status(400).send({ error: err.message });
-    }
   });
 
   server.post('/data/joinBeta', async (req, res) => {

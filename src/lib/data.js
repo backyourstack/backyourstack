@@ -1,10 +1,8 @@
 import fetch from 'cross-fetch';
 
-import { getFile, getFiles, getObjectsMetadata } from './s3';
-
 import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
 
-import { fetchAccountWithOrders, fetchOrder } from './opencollective';
+import { fetchAccountWithOrders } from './opencollective';
 
 import {
   addProjectToDependencies,
@@ -70,18 +68,12 @@ export async function getProfileData(id, accessToken, options = {}) {
     dependencies,
   );
 
-  let order = await getProfileOrder(id);
-  if (order) {
-    order = await fetchOrder(order.id);
-  }
-
   return {
     profile,
     opencollectiveAccount,
     repos,
     dependencies,
     recommendations,
-    order,
   };
 }
 
@@ -113,27 +105,6 @@ export async function getFilesData(sessionFiles) {
   return { files, repos, dependencies, recommendations };
 }
 
-export const getSavedFilesData = async (id) => {
-  const files = await getFiles(id);
-  if (!files) {
-    return null;
-  }
-  const data = await getFilesData(files);
-  let order = await getProfileOrder(id);
-  if (order) {
-    order = await fetchOrder(order.id);
-  }
-  return { ...data, order };
-};
-
-export const getSavedSelectedDependencies = async (id) => {
-  const { selectedDependencies } = await getObjectsMetadata(id);
-  if (selectedDependencies) {
-    return selectedDependencies;
-  }
-  return null;
-};
-
 export function emailSubscribe(email, profile) {
   const username = 'anystring';
   const password = process.env.MAILCHIMP_API_KEY;
@@ -162,14 +133,3 @@ export function emailSubscribe(email, profile) {
     }),
   });
 }
-
-export const getProfileOrder = async (id) => {
-  try {
-    const file = await getFile(`${id}/order.json`);
-    if (file) {
-      return JSON.parse(file);
-    }
-  } catch (err) {
-    return;
-  }
-};

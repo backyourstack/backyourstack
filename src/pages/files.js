@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NProgress from 'nprogress';
 import { get } from 'lodash';
 
 import { Link, Router } from '../routes';
@@ -14,13 +13,11 @@ import Upload from '../components/Upload';
 
 import DependencyTable from '../components/DependencyTable';
 import RecommendationList from '../components/RecommendationList';
-import BackMyStack from '../components/BackMyStack';
 
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
     const initialProps = {
       section: query.section,
-      showBackMyStack: query.showBackMyStack,
     };
 
     // sessionFiles is optional and can be null (always on the client)
@@ -39,7 +36,6 @@ export default class Files extends React.Component {
     files: PropTypes.object,
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
-    showBackMyStack: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -57,9 +53,6 @@ export default class Files extends React.Component {
       recommendations: props.recommendations,
       saving: false,
     };
-    this.showBackMyStack =
-      props.showBackMyStack === 'true' ||
-      process.env.SHOW_BACK_MY_STACK === 'true';
   }
 
   componentDidMount() {
@@ -76,39 +69,12 @@ export default class Files extends React.Component {
     }
   };
 
-  saveFileToS3() {
-    const { files } = this.state;
-
-    const ids = Object.keys(files);
-
-    return postJson('/files/save', { ids });
-  }
-
   handleRemoveFile = (id, event) => {
     event.stopPropagation();
 
     postJson('/files/delete', { id }).then(() => {
       this.refresh();
     });
-  };
-
-  handleBackMyStack = async () => {
-    NProgress.start();
-    this.setState({ saving: true });
-    try {
-      const savedFileUrl = await this.saveFileToS3();
-      const uuid = savedFileUrl.Key.split('/')[0];
-      await Router.pushRoute('monthly-plan', {
-        id: uuid,
-        type: 'file',
-      });
-      this.setState({ saving: false });
-      NProgress.done();
-    } catch (err) {
-      this.setState({ saving: false });
-      NProgress.done();
-      console.error(err);
-    }
   };
 
   renderFilesInfo(files) {
@@ -338,12 +304,6 @@ export default class Files extends React.Component {
             )}
             {count > 0 && (
               <Fragment>
-                {this.showBackMyStack && (
-                  <BackMyStack
-                    saving={this.state.saving}
-                    onClickBackMyStack={this.handleBackMyStack}
-                  />
-                )}
                 {!section && (
                   <RecommendationList recommendations={recommendations} />
                 )}

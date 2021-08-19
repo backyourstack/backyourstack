@@ -102,24 +102,8 @@ function getRecommendedProjectFromDependencies(deps) {
     .then((recommendations) => recommendations.filter((r) => r.project));
 }
 
-function getDependenciesAvailableForBacking(recommendations) {
-  const backing = recommendations
-    .filter((r) => r.opencollective)
-    .filter((r) => r.opencollective.pledge !== true)
-    .map((recommendation) => {
-      const { opencollective, github } = recommendation;
-      return {
-        weight: 100,
-        opencollective: pick(opencollective, ['id', 'name', 'slug']),
-        github: github,
-      };
-    });
-  return backing;
-}
-
 export {
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
-  getDependenciesAvailableForBacking,
 };

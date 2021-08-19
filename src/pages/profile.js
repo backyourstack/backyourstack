@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NProgress from 'nprogress';
 import NextLink from 'next/link';
 import { get } from 'lodash';
 
-import { Link, Router } from '../routes';
+import { Link } from '../routes';
 
-import { postJson, getProfileData } from '../lib/fetch';
+import { getProfileData } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,9 +14,6 @@ import Footer from '../components/Footer';
 import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';
-import SubscribeForm from '../components/SubscribeForm';
-import BackMyStack from '../components/BackMyStack';
-import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
 import MessageBox from '../components/MessageBox';
 
 import TwitterLogo from '../static/img/twitter.svg';
@@ -30,7 +26,6 @@ export default class Profile extends React.Component {
     const initialProps = {
       section: query.section,
       id: query.id,
-      showBackMyStack: query.showBackMyStack,
     };
 
     if (query.excludedRepos) {
@@ -60,7 +55,6 @@ export default class Profile extends React.Component {
     dependencies: PropTypes.array,
     recommendations: PropTypes.array,
     error: PropTypes.object,
-    showBackMyStack: PropTypes.bool,
     excludedRepos: PropTypes.array,
     id: PropTypes.string,
   };
@@ -72,10 +66,6 @@ export default class Profile extends React.Component {
       repos: props.repos,
       error: null,
     };
-
-    this.showBackMyStack =
-      props.showBackMyStack === 'true' ||
-      process.env.SHOW_BACK_MY_STACK === 'true';
   }
 
   getUnCheckedRepositories(repos) {
@@ -108,40 +98,6 @@ export default class Profile extends React.Component {
       }
     }
     return githubProfileName;
-  };
-
-  saveProfileToS3() {
-    const { id, excludedRepos } = this.props;
-    return postJson('/profile/save', {
-      id,
-      excludedRepos:
-        excludedRepos || this.getUnCheckedRepositories(this.state.repos),
-    });
-  }
-
-  handleBackMyStack = async () => {
-    NProgress.start();
-    this.setState({ saving: true });
-
-    const excludedRepos =
-      this.props.excludedRepos ||
-      this.getUnCheckedRepositories(this.state.repos);
-
-    try {
-      const { id } = await this.saveProfileToS3();
-      const params = { id, type: 'profile' };
-
-      if (excludedRepos.length !== 0) {
-        params.excludedRepos = JSON.stringify(excludedRepos);
-      }
-      const searchParams = new URLSearchParams(params);
-      this.setState({ saving: false });
-      NProgress.done();
-      await Router.pushRoute(`/monthly-plan?${searchParams}`);
-    } catch (err) {
-      this.setState({ saving: false, error: err.message });
-      NProgress.done();
-    }
   };
 
   handleOnSelectRepository = ({ target }) => {
@@ -182,7 +138,6 @@ export default class Profile extends React.Component {
       opencollectiveAccount,
       recommendations,
       dependencies,
-      order,
       pathname,
       loggedInUser,
     } = this.props;
@@ -346,16 +301,6 @@ export default class Profile extends React.Component {
                 </NextLink>
               </div>
 
-              <div className="subscribe">
-                <h3>Stay up to date!</h3>
-                <p>
-                  Receive a notification when one of your dependencies is ready
-                  to receive funding and a monthly report on your stack’s
-                  progress, goals and updates.
-                </p>
-                <SubscribeForm profile={profile.login} />
-              </div>
-
               <div className="bulk">
                 <h3>Bulk Support</h3>
                 <p>
@@ -378,20 +323,7 @@ export default class Profile extends React.Component {
                   onClose={() => this.setState({ error: null })}
                 />
               )}
-              {this.showBackMyStack && !(order && opencollectiveAccount) && (
-                <BackMyStack
-                  saving={this.state.saving}
-                  onClickBackMyStack={this.handleBackMyStack}
-                />
-              )}
-              {this.showBackMyStack && order && opencollectiveAccount && (
-                <BackMyStackCompanyBanner
-                  profile={profile}
-                  order={order}
-                  recommendations={recommendations}
-                  opencollectiveAccount={opencollectiveAccount}
-                />
-              )}
+
               {(!section || section === 'recommendations') && (
                 <RecommendationList
                   recommendations={recommendations}
