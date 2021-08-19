@@ -8,8 +8,6 @@ import { Link, Router } from '../routes';
 import List from '../components/List';
 
 import { fetchJson } from '../lib/fetch';
-import MouseTracker from './homepage/MouseTracker';
-import HomepageLink from './homepage/HomepageLink';
 
 const getProfile = (slug) =>
   process.env.IS_CLIENT
@@ -64,7 +62,7 @@ export default class SearchForm extends React.Component {
   };
 
   handleSubmit = (event) => {
-    if (this.state.q && this.state.q.length > 0 && !this.state.error) {
+    if (this.state.q && this.state.q.length > 0) {
       Router.pushRoute('search', { q: this.state.q });
     }
     event.preventDefault();
@@ -78,6 +76,8 @@ export default class SearchForm extends React.Component {
   };
 
   focus = () => this.searchInput.current.focus();
+
+  canSubmit = () => this.state.q && !this.state.error;
 
   isFocused = () =>
     document && document.activeElement === this.searchInput.current;
@@ -113,28 +113,28 @@ export default class SearchForm extends React.Component {
               border-radius: 8px;
               background-color: #fff;
               display: flex;
-              align-items: center;
-              height: 40px;
+              align-items: baseline;
             }
             .searchInput.focused {
               background: white;
             }
             .searchInput.focused,
             .searchInput:hover {
-              border-color: #7a9fb8;
+              border-color: #3a2fac;
             }
             .searchInput.focused.error {
               border-color: #f53152;
             }
             .searchInput div {
               color: #c0c5cc;
-              background: #f7f8fa;
+              background: #f5f7fa;
               font-size: 14px;
               line-height: 22px;
               text-align: center;
               border: none;
-              border-radius: 8px 0px 0px 8px;
-              padding: 9px;
+              border-top-left-radius: 8px;
+              border-bottom-left-radius: 8px;
+              padding: 10px;
             }
             .searchInput input {
               font-size: 16px;
@@ -155,27 +155,13 @@ export default class SearchForm extends React.Component {
               color: #2e3033;
             }
             .searchButton {
-              margin: 10px auto;
-              background: #3c5869;
-              mix-blend-mode: normal;
-              border-radius: 32px;
-              outline: none;
-              font-weight: bold;
-              font-size: 12px;
-              line-height: 16px;
-              text-align: center;
-              padding: 17px 4px;
-              color: #fff;
-              border: none;
-              width: 229px;
-              font-family: 'Fira Code';
-              cursor: pointer;
+              margin: 50px auto;
+              width: 100%;
             }
             .searchExamples {
               font-size: 12px;
-              line-height: 16px;
-              letter-spacing: -0.016em;
-              color: rgba(39, 39, 48, 0.5);
+              text-align: center;
+              color: #9399a3;
             }
             .searchExamples a {
               color: inherit;
@@ -197,6 +183,9 @@ export default class SearchForm extends React.Component {
               color: #f53152;
             }
             @media screen and (max-width: 500px) {
+              .searchButton {
+                margin-top: 25px;
+              }
               .searchFeedback {
                 width: auto;
                 margin: 0;
@@ -204,17 +193,7 @@ export default class SearchForm extends React.Component {
               }
               .searchInput div,
               .searchInput input {
-                padding: 8px;
-              }
-            }
-            @media screen and (min-width: 1194px) {
-              .searchButton {
-                font-size: 14px;
-                line-height: 16px;
-                text-align: center;
-                letter-spacing: -0.02em;
-                min-width: 260px;
-                padding: 15px 4px;
+                padding: 5px;
               }
             }
           `}
@@ -267,20 +246,11 @@ export default class SearchForm extends React.Component {
             </p>
           )}
 
-          <MouseTracker
-            style={{
-              alignSelf: 'center',
-            }}
-            render={(mousePosition) => (
-              <HomepageLink
-                type="submit"
-                value="Try analyzing your stack now"
-                className="searchButton"
-                mousePosition={mousePosition}
-              >
-                Try analyzing your stack now
-              </HomepageLink>
-            )}
+          <input
+            type="submit"
+            value="Analyze your stack"
+            className="bigButton searchButton"
+            disabled={this.canSubmit() ? false : true}
           />
         </form>
       </Fragment>
