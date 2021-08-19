@@ -105,7 +105,7 @@
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "svg-react-loader": "^0.4.6",
-    "thanks": "^2.2.1",
+    "thanks": "^2.3.0",
     "webpack-bundle-analyzer": "^3.8.0"
   },
   "nodemonConfig": {
