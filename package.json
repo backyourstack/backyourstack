@@ -75,7 +75,7 @@
     "serve-favicon": "^2.5.0",
     "styled-jsx": "3.2.5",
     "toml": "^3.0.0",
-    "uuid": "^8.2.0",
+    "uuid": "^8.3.2",
     "winston": "^3.3.3",
     "xmldoc": "^1.1.2"
   },
