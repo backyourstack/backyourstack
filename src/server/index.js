@@ -46,12 +46,8 @@ import {
 import { fetchOrgMembership } from '../lib/github';
 import email from '../lib/email';
 
-const {
-  PORT,
-  SESSION_SECRET,
-  GITHUB_CLIENT_ID,
-  GITHUB_CLIENT_SECRET,
-} = process.env;
+const { PORT, SESSION_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } =
+  process.env;
 
 const sessionSecret = SESSION_SECRET || crypto.randomBytes(64).toString('hex');
 
@@ -97,10 +93,7 @@ nextApp.prepare().then(() => {
 
   server.get('/logout', (req, res) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(
-      GITHUB_CLIENT_ID,
-      GITHUB_CLIENT_SECRET,
-    )(
+    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
       `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
       { method: 'DELETE' },
     ).then(() => {

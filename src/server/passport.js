@@ -5,11 +5,8 @@ import logger from '../logger';
 
 import { donateToken } from '../lib/github';
 
-const {
-  GITHUB_CLIENT_ID,
-  GITHUB_CLIENT_SECRET,
-  GITHUB_TOKEN_DONATORS,
-} = process.env;
+const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_TOKEN_DONATORS } =
+  process.env;
 
 const githubTokenDonators = (GITHUB_TOKEN_DONATORS || '')
   .split(',')
