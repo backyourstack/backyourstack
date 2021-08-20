@@ -41,7 +41,7 @@ export default class SearchForm extends React.Component {
     if (!profile) {
       this.setState({
         error:
-          '✗ There is no GitHub organization or user with this identifier.',
+          '✗ Either you are not signed in, or this is not a valid GitHub identifier.',
         ok: null,
       });
     } else {
