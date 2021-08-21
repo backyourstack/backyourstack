@@ -2,9 +2,8 @@
   <a href="https://backyourstack.com/"><img width="308" height="308" src="src/static/img/logo-og-1.png" alt="BackYourStack"></a>
 </p>
 
-[![Build Status](https://travis-ci.org/backyourstack/backyourstack.svg?branch=master)](https://travis-ci.org/backyourstack/backyourstack)
+[![CI Status](https://github.com/backyourstack/backyourstack/workflows/CI/badge.svg)](https://github.com/opencollective/opencollective-api/actions/workflows/ci.yml)
 [![Dependency Status](https://david-dm.org/backyourstack/backyourstack/status.svg)](https://david-dm.org/backyourstack/backyourstack)
-[![Slack Status](https://slack.opencollective.com/badge.svg)](https://opencollective.slack.com/archives/CMFGW1CTD)
 
 Discover the open source projects your organization is using that need financial support.
 
