@@ -20,8 +20,8 @@ import BackMyStack from '../components/BackMyStack';
 import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
 import MessageBox from '../components/MessageBox';
 
-import TwitterLogo from '../static/img/twitter.svg';
-import FacebookLogo from '../static/img/facebook.svg';
+import TwitterLogo from '../public/static/img/twitter.svg';
+import FacebookLogo from '../public/static/img/facebook.svg';
 
 const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
 

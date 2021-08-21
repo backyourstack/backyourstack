@@ -11,8 +11,8 @@ import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
 import Footer from '../components/Footer';
-import GithubLogo from '../static/img/icon-github.svg';
-import UploadIcon from '../static/img/upload-icon.svg';
+import GithubLogo from '../public/static/img/icon-github.svg';
+import UploadIcon from '../public/static/img/upload-icon.svg';
 
 const getUserOrgs = (accessToken) =>
   process.env.IS_CLIENT
