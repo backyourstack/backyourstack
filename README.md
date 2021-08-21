@@ -54,45 +54,35 @@ We use [dotenv](https://github.com/motdotla/dotenv) to store environment variabl
 
 This will start your local copy of BackYourStack. You can access it at `http://localhost:3000/`
 
-## Production
+## Deployment
 
-### Prerequisite
+### Production (heroku)
 
-#### Now
+To deploy to production, you need to be a core member of the Open Collective team.
 
-BackYourStack is currently deployed with [Now](https://zeit.co/now). You will need to install [Now Desktop](https://github.com/zeit/now-desktop) or [Now CLI](https://github.com/zeit/now-cli).
+#### Install the Heroku CLI
 
-Authenticate with:
+`npm install -g heroku`
 
-`now login`
+#### Login on the Heroku CLI
 
-Switch to the Open Collective team account:
+`heroku login`
 
-`now switch opencollective`
+#### Configure remote
 
-_Note: If you're not currently a team member, take a look at the [Contributing Guide](CONTRIBUTING.md) guide for other ways to contribute._
+Before first deployment, configure production remote:
 
-#### Secrets
+```
+git remote add production https://git.heroku.com/backyourstack.git
+```
 
-Make sure that the following secrets are set (uses [now secret](https://zeit.co/docs/getting-started/secrets)):
+#### Trigger deployment
 
-| name                   | description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| `github_client_id`     | Client id for the GitHub oAuth app                           |
-| `github_client_secret` | Client secret for the GitHub oAuth app                       |
-| `github_guest_token`   | GitHub access token used to process unauthenticated requests |
+```
+npm run deploy:production
+```
 
-Eg: `now secret add github_client_id {value}`
-
-### Deployment
-
-First:
-
-`now`
-
-If everything is ok, finalize with:
-
-`now alias`
+- URL: https://backyourstack.com/
 
 ## Contributing
 
