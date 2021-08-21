@@ -8,8 +8,8 @@ import { getFilesData, getProfileData, postJson } from '../lib/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import UpArrow from '../static/img/up-arrow.svg';
-import DownArrow from '../static/img/down-arrow.svg';
+import UpArrow from '../public/static/img/up-arrow.svg';
+import DownArrow from '../public/static/img/down-arrow.svg';
 
 const suggestedAmounts = [
   {

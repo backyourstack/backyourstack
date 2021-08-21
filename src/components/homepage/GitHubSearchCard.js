@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import GithubLogo from '../../static/img/homepage/github-icon.svg';
+import GithubLogo from '../../public/static/img/homepage/github-icon.svg';
 import SearchForm from '../../components/SearchForm';
 
 const GitHubSearchCard = ({ loggedInUserOrgs }) => (

@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import GithubLogo from '../static/img/github.svg';
+import GithubLogo from '../public/static/img/github.svg';
 
 export default class Login extends React.Component {
   static getInitialProps(ctx) {

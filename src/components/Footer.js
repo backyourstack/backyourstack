@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GithubLogo from '../static/img/gray-github.svg';
-import TwitterLogo from '../static/img/gray-twitter.svg';
+import GithubLogo from '../public/static/img/gray-github.svg';
+import TwitterLogo from '../public/static/img/gray-twitter.svg';
 import { Link } from '../routes';
 
 export default class Footer extends React.Component {

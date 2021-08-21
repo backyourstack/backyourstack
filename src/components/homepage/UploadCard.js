@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Router } from '../../routes';
 import Upload from '../../components/Upload';
-import UploadIcon from '../../static/img/homepage/upload-icon.svg';
+import UploadIcon from '../../public/static/img/homepage/upload-icon.svg';
 
 const onUpload = () => {
   Router.pushRoute('files');
