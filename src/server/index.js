@@ -71,7 +71,9 @@ nextApp.prepare().then(() => {
   const upload = multer();
 
   server.use(
-    favicon(path.join(path.dirname(__dirname), 'static', 'favicon.ico')),
+    favicon(
+      path.join(path.dirname(__dirname), 'public', 'static', 'favicon.ico'),
+    ),
   );
 
   server.use(cookieParser());

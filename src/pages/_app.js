@@ -61,6 +61,11 @@ class MyApp extends App {
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           ></link>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            property="og:image"
+            content="https://backyourstack.com/static/img/logo-og-1.png"
+          />
         </Head>
         <Component {...pageProps} />
       </Fragment>
