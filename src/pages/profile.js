@@ -8,6 +8,7 @@ import { get } from 'lodash';
 import { Link, Router } from '../routes';
 
 import { postJson, getProfileData } from '../lib/fetch';
+import { parseToBoolean } from '../lib/utils';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -74,8 +75,8 @@ export default class Profile extends React.Component {
     };
 
     this.showBackMyStack =
-      props.showBackMyStack === 'true' ||
-      process.env.SHOW_BACK_MY_STACK === 'true';
+      parseToBoolean(props.showBackMyStack) ||
+      parseToBoolean(process.env.SHOW_BACK_MY_STACK);
   }
 
   getUnCheckedRepositories(repos) {

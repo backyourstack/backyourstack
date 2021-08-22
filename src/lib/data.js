@@ -10,6 +10,7 @@ import {
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
+  parseToBoolean,
 } from './utils';
 
 import { getDependenciesFromGithubRepo } from './dependencies/data';
@@ -70,7 +71,10 @@ export async function getProfileData(id, accessToken, options = {}) {
     dependencies,
   );
 
-  let order = await getProfileOrder(id);
+  let order;
+  if (parseToBoolean(process.env.SHOW_BACK_MY_STACK)) {
+    order = await getProfileOrder(id);
+  }
   if (order) {
     order = await fetchOrder(order.id);
   }
@@ -119,7 +123,10 @@ export const getSavedFilesData = async (id) => {
     return null;
   }
   const data = await getFilesData(files);
-  let order = await getProfileOrder(id);
+  let order;
+  if (parseToBoolean(process.env.SHOW_BACK_MY_STACK)) {
+    order = await getProfileOrder(id);
+  }
   if (order) {
     order = await fetchOrder(order.id);
   }

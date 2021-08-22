@@ -117,9 +117,25 @@ function getDependenciesAvailableForBacking(recommendations) {
   return backing;
 }
 
+function parseToBoolean(value) {
+  let lowerValue = value;
+  // check whether it's string
+  if (
+    lowerValue &&
+    (typeof lowerValue === 'string' || lowerValue instanceof String)
+  ) {
+    lowerValue = lowerValue.trim().toLowerCase();
+  }
+  if (['on', 'enabled', '1', 'true', 'yes', 1].includes(lowerValue)) {
+    return true;
+  }
+  return false;
+}
+
 export {
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
   getDependenciesAvailableForBacking,
+  parseToBoolean,
 };
