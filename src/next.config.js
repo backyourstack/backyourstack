@@ -1,4 +1,6 @@
 module.exports = {
+  webpack5: false,
+  eslint: { ignoreDuringBuilds: true },
   webpack: (config, { isServer, webpack }) => {
     // For Winston
     // https://github.com/winstonjs/winston/issues/287
