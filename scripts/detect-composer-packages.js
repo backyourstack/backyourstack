@@ -1,5 +1,5 @@
 import '../env';
-import logger from '../logger';
+import logger from '../src/logger';
 
 import { uniq, pick, get } from 'lodash';
 
@@ -8,7 +8,7 @@ import {
   fetchFileFromRepo,
   getContent,
   silentError,
-} from '../lib/github';
+} from '../src/github';
 
 import { getCollectives, getProjects, saveProjects } from '../data';
 

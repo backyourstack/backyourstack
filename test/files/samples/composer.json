@@ -1,8 +1,8 @@
 {
-    "name": "test/sample-composer-project",
-    "require": {
-        "php" : ">=5.3.9",
-        "monolog/monolog": "~1.23.0",
-        "symfony/http-foundation": "~2.7.35"
-    }
+  "name": "test/sample-composer-project",
+  "require": {
+    "php": ">=5.3.9",
+    "monolog/monolog": "~1.23.0",
+    "symfony/http-foundation": "~2.7.35"
+  }
 }

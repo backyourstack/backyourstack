@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from '../../../routes';
+import { Link } from '../../../src/routes';
 
 const Footer = () => (
   <Fragment>

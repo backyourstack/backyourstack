@@ -2,23 +2,22 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { Link, Router } from '../routes';
+import { fetchJson } from '../src/fetch';
+import { Link, Router } from '../src/routes';
 
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 
-import { fetchJson } from '../lib/fetch';
-
 const getProfile = (slug, accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/getProfile?slug=${slug}`)
-    : import('../lib/data').then((m) => m.getProfile(slug, accessToken));
+    : import('../src/data').then((m) => m.getProfile(slug, accessToken));
 
 const searchUsers = (q, accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/searchUsers?q=${q}`)
-    : import('../lib/data').then((m) => m.searchUsers(q, accessToken));
+    : import('../src/data').then((m) => m.searchUsers(q, accessToken));
 
 export default class Search extends React.Component {
   static async getInitialProps({ req, res, query }) {

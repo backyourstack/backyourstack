@@ -13,16 +13,20 @@ import next from 'next';
 import md5 from 'md5';
 import { get, has } from 'lodash';
 
-import routes from '../routes';
-import logger from '../logger';
+import routes from './routes';
+import logger from './logger';
 
 import passport from './passport';
-import { fetchWithBasicAuthentication } from './utils';
-import { dispatchOrder } from '../lib/opencollective';
+import {
+  fetchWithBasicAuthentication,
+  getDependenciesAvailableForBacking,
+  parseToBoolean,
+} from './utils';
+import { dispatchOrder } from './opencollective';
 import {
   detectDependencyFileType,
   detectProjectName,
-} from '../lib/dependencies/utils';
+} from './dependencies/utils';
 import {
   getProfile,
   getUserOrgs,
@@ -33,21 +37,17 @@ import {
   getSavedFilesData,
   emailSubscribe,
   getProfileOrder,
-} from '../lib/data';
-import { fetchDependenciesFileContent } from '../lib/dependencies/data';
-import {
-  getDependenciesAvailableForBacking,
-  parseToBoolean,
-} from '../lib/utils';
+} from './data';
+import { fetchDependenciesFileContent } from './dependencies/data';
 import {
   uploadFiles,
   saveProfile,
   saveProfileOrder,
   saveSelectedDependencies,
   getObjectsMetadata,
-} from '../lib/s3';
-import { fetchOrgMembership } from '../lib/github';
-import email from '../lib/email';
+} from './s3';
+import { fetchOrgMembership } from './github';
+import email from './email';
 
 const { PORT, SESSION_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } =
   process.env;

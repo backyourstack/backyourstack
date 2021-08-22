@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
 
-import { Link, Router } from '../routes';
+import { Link, Router } from '../src/routes';
 
 import List from '../components/List';
 
-import { fetchJson } from '../lib/fetch';
+import { fetchJson } from '../src/fetch';
 import MouseTracker from './homepage/MouseTracker';
 import HomepageLink from './homepage/HomepageLink';
 
 const getProfile = (slug) =>
   process.env.IS_CLIENT
     ? fetchJson(`/data/getProfile?slug=${slug}`)
-    : import('../lib/data').then((m) => m.getProfile(slug));
+    : import('../src/data').then((m) => m.getProfile(slug));
 
 export default class SearchForm extends React.Component {
   static propTypes = {

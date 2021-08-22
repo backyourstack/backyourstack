@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import GitHubSearchCard from '../GitHubSearchCard';
 import UploadCard from '../UploadCard';
-import supportedFiles from '../../../lib/dependencies/supported-files';
+import supportedFiles from '../../../src/dependencies/supported-files';
 
 const supportedFilesAsComponent = supportedFiles
   .map((file) => <span key={file}>{file}</span>)

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Partners from '../Partners';
-import { fetchJson } from '../../../lib/fetch';
+import { fetchJson } from '../../../src/fetch';
 import HomepageLink from '../HomepageLink';
 import MouseTracker from '../MouseTracker';
 

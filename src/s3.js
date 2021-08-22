@@ -2,7 +2,7 @@ import Promise from 'bluebird';
 import { S3 } from 'aws-sdk';
 import { v1 as uuid } from 'uuid';
 
-import logger from '../logger';
+import logger from './logger';
 
 let s3;
 

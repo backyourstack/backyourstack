@@ -1,11 +1,11 @@
 import '../env';
-import logger from '../logger';
 
 import fs from 'fs-extra';
 import path from 'path';
 import { get, uniqBy } from 'lodash';
 
-import { fetchCollectiveWithMembers } from '../lib/opencollective';
+import logger from '../src/logger';
+import { fetchCollectiveWithMembers } from '../src/opencollective';
 
 const filename = path.join(__dirname, '..', 'data', 'projects.json');
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { Router } from '../../routes';
+import { Router } from '../../src/routes';
 import Upload from '../../components/Upload';
 import UploadIcon from '../../public/static/img/homepage/upload-icon.svg';
 

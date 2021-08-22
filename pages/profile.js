@@ -5,14 +5,12 @@ import NProgress from 'nprogress';
 import NextLink from 'next/link';
 import { get } from 'lodash';
 
-import { Link, Router } from '../routes';
-
-import { postJson, getProfileData } from '../lib/fetch';
-import { parseToBoolean } from '../lib/utils';
+import { Link, Router } from '../src/routes';
+import { postJson, getProfileData } from '../src/fetch';
+import { parseToBoolean } from '../src/utils';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
 import DependencyTable from '../components/DependencyTable';
 import RepositoryTable from '../components/RepositoryTable';
 import RecommendationList from '../components/RecommendationList';

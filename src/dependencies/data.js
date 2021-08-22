@@ -1,4 +1,4 @@
-import logger from '../../logger';
+import logger from '../logger';
 
 import cache from '../cache';
 import { fetchFileFromRepo, searchFilesFromRepo } from '../github';

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { fetchJson } from '../lib/fetch';
+import { fetchJson } from '../src/fetch';
 
 export default class SubscribeForm extends React.Component {
   static propTypes = {

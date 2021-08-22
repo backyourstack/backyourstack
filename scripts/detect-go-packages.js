@@ -1,10 +1,10 @@
 import '../env';
-import logger from '../logger';
 
 import fetch from 'cross-fetch';
 import { uniq, pick, get } from 'lodash';
 
-import { fetchWithOctokit, getContent, silentError } from '../lib/github';
+import { fetchWithOctokit, getContent, silentError } from '../src/github';
+import logger from '../src/logger';
 
 import { getCollectives, getProjects, saveProjects } from '../data';
 

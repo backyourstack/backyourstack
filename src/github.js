@@ -4,7 +4,7 @@ import minimatch from 'minimatch';
 import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
 
-import logger from '../logger';
+import logger from './logger';
 
 import cache from './cache';
 

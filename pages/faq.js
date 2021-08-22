@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import FAQ from '../../FAQ.md';
+import FAQ from '../FAQ.md';
 
 export default class Login extends React.Component {
   static getInitialProps(ctx) {

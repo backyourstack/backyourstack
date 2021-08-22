@@ -4,11 +4,10 @@ import classNames from 'classnames';
 import NProgress from 'nprogress';
 import { get } from 'lodash';
 
-import { Link, Router } from '../routes';
-
-import { postJson, getFilesData } from '../lib/fetch';
-import { parseToBoolean } from '../lib/utils';
-import { dependenciesStats } from '../lib/dependencies/utils';
+import { Link, Router } from '../src/routes';
+import { postJson, getFilesData } from '../src/fetch';
+import { parseToBoolean } from '../src/utils';
+import { dependenciesStats } from '../src/dependencies/utils';
 
 import Header from '../components/Header';
 import Upload from '../components/Upload';

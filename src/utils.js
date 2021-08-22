@@ -2,6 +2,18 @@ import { pick } from 'lodash';
 
 import allProjects from '../data/projects.json';
 
+import fetch from 'cross-fetch';
+
+export const fetchWithBasicAuthentication =
+  (username, password) => (url, params) => {
+    const basicAuthenticationString = Buffer.from(
+      [username, password].join(':'),
+    ).toString('base64');
+    params.headers = params.headers || {};
+    params.headers.Authorization = `Basic ${basicAuthenticationString}`;
+    return fetch(url, params);
+  };
+
 const dependencyTypes = ['core', 'peer', 'dev', 'engines'];
 
 function getProjectFromDependency(name, type) {
@@ -13,7 +25,7 @@ function getProjectFromDependency(name, type) {
   );
 }
 
-function getAllDependenciesFromRepos(repos) {
+export function getAllDependenciesFromRepos(repos) {
   const dependencies = [];
 
   for (const repo of repos) {
@@ -45,7 +57,7 @@ function getAllDependenciesFromRepos(repos) {
   });
 }
 
-function addProjectToDependencies(deps) {
+export function addProjectToDependencies(deps) {
   return Promise.all(deps.map((dep) => addProjectToDependency(dep)));
 }
 
@@ -57,7 +69,7 @@ function addProjectToDependency(dep) {
   return dep;
 }
 
-function getRecommendedProjectFromDependencies(deps) {
+export function getRecommendedProjectFromDependencies(deps) {
   return addProjectToDependencies(deps)
     .then((deps) => {
       const projects = {};
@@ -102,7 +114,7 @@ function getRecommendedProjectFromDependencies(deps) {
     .then((recommendations) => recommendations.filter((r) => r.project));
 }
 
-function getDependenciesAvailableForBacking(recommendations) {
+export function getDependenciesAvailableForBacking(recommendations) {
   const backing = recommendations
     .filter((r) => r.opencollective)
     .filter((r) => r.opencollective.pledge !== true)
@@ -117,7 +129,7 @@ function getDependenciesAvailableForBacking(recommendations) {
   return backing;
 }
 
-function parseToBoolean(value) {
+export function parseToBoolean(value) {
   let lowerValue = value;
   // check whether it's string
   if (
@@ -131,11 +143,3 @@ function parseToBoolean(value) {
   }
   return false;
 }
-
-export {
-  addProjectToDependencies,
-  getAllDependenciesFromRepos,
-  getRecommendedProjectFromDependencies,
-  getDependenciesAvailableForBacking,
-  parseToBoolean,
-};

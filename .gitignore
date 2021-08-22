@@ -1,4 +1,5 @@
 .env
+.next
 coverage
 dist
 src/.next

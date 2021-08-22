@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { fetchJson } from '../lib/fetch';
-import supportedFiles from '../lib/dependencies/supported-files';
-
-import { Link, Router } from '../routes';
+import { fetchJson } from '../src/fetch';
+import supportedFiles from '../src/dependencies/supported-files';
+import { Link, Router } from '../src/routes';
 
 import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
@@ -17,7 +16,7 @@ import UploadIcon from '../public/static/img/upload-icon.svg';
 const getUserOrgs = (accessToken) =>
   process.env.IS_CLIENT
     ? fetchJson('/data/getUserOrgs')
-    : import('../lib/data').then((m) => m.getUserOrgs(accessToken));
+    : import('../src/data').then((m) => m.getUserOrgs(accessToken));
 
 export default class Index extends Component {
   static async getInitialProps({ req }) {

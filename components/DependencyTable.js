@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import { get } from 'lodash';
 
-import { Link } from '../routes';
+import { Link } from '../src/routes';
 
 import List from '../components/List';
 

@@ -4,7 +4,7 @@ import Dropzone from 'react-dropzone';
 import fetch from 'cross-fetch';
 import classNames from 'classnames';
 
-import supportedFiles from '../lib/dependencies/supported-files';
+import supportedFiles from '../src/dependencies/supported-files';
 
 export default class Upload extends React.Component {
   static propTypes = {

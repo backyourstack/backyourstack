@@ -4,10 +4,11 @@ import classnames from 'classnames';
 import NumberFormat from 'react-number-format';
 import { get, pick, map } from 'lodash';
 
-import { getFilesData, getProfileData, postJson } from '../lib/fetch';
+import { getFilesData, getProfileData, postJson } from '../src/fetch';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 import UpArrow from '../public/static/img/up-arrow.svg';
 import DownArrow from '../public/static/img/down-arrow.svg';
 

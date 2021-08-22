@@ -1,10 +1,10 @@
 import '../env';
-import logger from '../logger';
 
 import { get, has, pick, merge } from 'lodash';
 
-import { fetchAllCollectives } from '../lib/opencollective';
-import { fetchWithOctokit, fetchWithGraphql } from '../lib/github';
+import { fetchWithOctokit, fetchWithGraphql } from '../src/github';
+import logger from '../src/logger';
+import { fetchAllCollectives } from '../src/opencollective';
 
 import { getCollectives, saveCollectives } from '../data';
 

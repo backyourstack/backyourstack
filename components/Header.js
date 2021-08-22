@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { Link } from '../routes';
+import { Link } from '../src/routes';
 
 export default class Header extends React.Component {
   static propTypes = {

@@ -1,7 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import css from 'styled-jsx/css';
 
-import { fetchJson } from '../../lib/fetch';
+import { fetchJson } from '../../src/fetch';
+
 import MouseTracker from './MouseTracker';
 import HomepageLink from './HomepageLink';
 

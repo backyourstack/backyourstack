@@ -1,4 +1,4 @@
-import logger from '../logger';
+import logger from './logger';
 
 function fetchDebug(result) {
   logger.debug(result);
@@ -13,7 +13,7 @@ export function getProfileData(id, accessToken, { excludedRepos }) {
   const searchParams = new URLSearchParams(params);
   return process.env.IS_CLIENT
     ? fetchJson(`/data/getProfileData?${searchParams}`)
-    : import('../lib/data').then((m) =>
+    : import('./data').then((m) =>
         m.getProfileData(id, accessToken, { excludedRepos }),
       );
 }
@@ -43,5 +43,5 @@ export function postJson(url, body, params = {}) {
 export function getFilesData(sessionFiles) {
   return process.env.IS_CLIENT
     ? fetchJson('/data/getFilesData')
-    : import('../lib/data').then((m) => m.getFilesData(sessionFiles));
+    : import('./data').then((m) => m.getFilesData(sessionFiles));
 }
