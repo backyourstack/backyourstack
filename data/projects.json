@@ -404,6 +404,78 @@
     }
   },
   {
+    "name": "aero",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/aero"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/certificate"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/codetree"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/graphql"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/http"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/nano"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/pack"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/packet"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/pixy"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/aerogo/scarlet"
+      }
+    ],
+    "github": {
+      "org": "aerogo"
+    },
+    "opencollective": {
+      "id": 57508,
+      "name": "Aero",
+      "slug": "aero",
+      "description": "A collection of web packages for Go."
+    }
+  },
+  {
+    "name": "aes-everywhere",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "mervick/aes-everywhere"
+      }
+    ],
+    "github": {
+      "repo": "mervick/aes-everywhere"
+    },
+    "opencollective": {
+      "id": 185326,
+      "name": "Aes Everywhere",
+      "slug": "aes-everywhere",
+      "description": "Aes Everywhere Library"
+    }
+  },
+  {
     "name": "agent",
     "packages": [
       {
@@ -531,6 +603,24 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "akaunting",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "akaunting/akaunting"
+      }
+    ],
+    "github": {
+      "repo": "akaunting/akaunting"
+    },
+    "opencollective": {
+      "id": 13001,
+      "name": "Akaunting",
+      "slug": "akaunting",
+      "description": "We are in a mission to introduce the power of Open Source to accounting world."
     }
   },
   {
@@ -1210,6 +1300,24 @@
     }
   },
   {
+    "name": "ant-design-blazor",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "AntDesign"
+      }
+    ],
+    "github": {
+      "repo": "ElderJames/ant-design-blazor"
+    },
+    "opencollective": {
+      "id": 98780,
+      "name": "Ant Design Blazor",
+      "slug": "ant-design-blazor",
+      "description": "An enterprise-class UI components based on Ant Design and Blazor."
+    }
+  },
+  {
     "name": "ant-design-mobile-rn",
     "packages": [
       {
@@ -1437,6 +1545,10 @@
       {
         "type": "dep",
         "name": "github.com/apex/actions"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/apex/rpc"
       }
     ],
     "github": {
@@ -1658,6 +1770,24 @@
     }
   },
   {
+    "name": "apiflask",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "APIFlask"
+      }
+    ],
+    "github": {
+      "repo": "greyli/apiflask"
+    },
+    "opencollective": {
+      "id": 257346,
+      "name": "APIFlask",
+      "slug": "apiflask",
+      "description": "APIFlask is a lightweight Python web API framework based on Flask and marshmallow-code projects. It's easy to use, highly customizable, ORM/ODM-agnostic, and 100% compatible with the Flask ecosystem."
+    }
+  },
+  {
     "name": "aplayer",
     "packages": [
       {
@@ -1759,6 +1889,10 @@
       {
         "type": "nuget",
         "name": "ApprovalTests.asp"
+      },
+      {
+        "type": "nuget",
+        "name": "ApprovalTests.Net.Json"
       }
     ],
     "github": {
@@ -1775,6 +1909,42 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "arbor-chat",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/arborchat/arbor-go"
+      }
+    ],
+    "github": {
+      "org": "arborchat"
+    },
+    "opencollective": {
+      "id": 265002,
+      "name": "Arbor Chat",
+      "slug": "arbor-chat",
+      "description": "Building a sustainable, high-context, user-respecting chat platform."
+    }
+  },
+  {
+    "name": "archiveteam",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "wpull"
+      }
+    ],
+    "github": {
+      "org": "ArchiveTeam"
+    },
+    "opencollective": {
+      "id": 10312,
+      "name": "Archive Team",
+      "slug": "archiveteam",
+      "description": "We are going to rescue your shit"
     }
   },
   {
@@ -1799,6 +1969,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "arrow",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "arrow"
+      }
+    ],
+    "github": {
+      "repo": "crsmithdev/arrow"
+    },
+    "opencollective": {
+      "id": 93087,
+      "name": "Arrow",
+      "slug": "arrow",
+      "description": "Better dates & times for Python"
     }
   },
   {
@@ -1863,6 +2051,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "arviz",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "arviz"
+      }
+    ],
+    "github": {
+      "repo": "arviz-devs/arviz"
+    },
+    "opencollective": {
+      "id": 262681,
+      "name": "ArviZ",
+      "slug": "arviz",
+      "description": "ArviZ the library that Bayesian Modelers use for most of the steps that are not actual modeling. "
     }
   },
   {
@@ -2049,6 +2255,58 @@
     }
   },
   {
+    "name": "async-algo-trading",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "aat"
+      },
+      {
+        "type": "pypi",
+        "name": "algocoin"
+      }
+    ],
+    "github": {
+      "org": "AsyncAlgoTrading"
+    },
+    "opencollective": {
+      "id": 244165,
+      "name": "Async Algo Trading",
+      "slug": "async-algo-trading",
+      "description": "Algorithmic Trading Tools"
+    }
+  },
+  {
+    "name": "atata",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Atata"
+      },
+      {
+        "type": "nuget",
+        "name": "Atata.Configuration.Json"
+      },
+      {
+        "type": "nuget",
+        "name": "Atata.WebDriverExtras"
+      },
+      {
+        "type": "nuget",
+        "name": "Atata.WebDriverSetup"
+      }
+    ],
+    "github": {
+      "org": "atata-framework"
+    },
+    "opencollective": {
+      "id": 266045,
+      "name": "Atata",
+      "slug": "atata",
+      "description": "C#/.NET test automation framework"
+    }
+  },
+  {
     "name": "atomic-layout",
     "packages": [
       {
@@ -2105,6 +2363,24 @@
     ],
     "github": {
       "repo": "thepirat000/Audit.NET"
+    }
+  },
+  {
+    "name": "auraui",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Aura.UI"
+      }
+    ],
+    "github": {
+      "repo": "PieroCastillo/Aura.UI"
+    },
+    "opencollective": {
+      "id": 251507,
+      "name": "Aura.UI",
+      "slug": "auraui",
+      "description": "Develop Aura.UI"
     }
   },
   {
@@ -2215,6 +2491,28 @@
         "balance": 4769507,
         "yearlyBudget": 7282510
       }
+    }
+  },
+  {
+    "name": "autoai-org",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cvtron"
+      },
+      {
+        "type": "pypi",
+        "name": "tinyml"
+      }
+    ],
+    "github": {
+      "org": "autoai-org"
+    },
+    "opencollective": {
+      "id": 111524,
+      "name": "AutoAI",
+      "slug": "autoai-org",
+      "description": "Boost the development for Open Source MLOps System"
     }
   },
   {
@@ -3925,6 +4223,42 @@
     }
   },
   {
+    "name": "beetlex",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "BeetleX"
+      }
+    ],
+    "github": {
+      "repo": "IKende/BeetleX"
+    },
+    "opencollective": {
+      "id": 131185,
+      "name": "BeetleX",
+      "slug": "beetlex",
+      "description": "Open source communication project development"
+    }
+  },
+  {
+    "name": "berrynet",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "berrynet"
+      }
+    ],
+    "github": {
+      "repo": "DT42/BerryNet"
+    },
+    "opencollective": {
+      "id": 68640,
+      "name": "BerryNet",
+      "slug": "berrynet",
+      "description": "Deep learning gateway on Raspberry Pi and other edge devices"
+    }
+  },
+  {
     "name": "better-xlsx",
     "packages": [
       {
@@ -4363,6 +4697,24 @@
     }
   },
   {
+    "name": "blind_watermark",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "blind_watermark"
+      }
+    ],
+    "github": {
+      "repo": "guofei9987/blind_watermark"
+    },
+    "opencollective": {
+      "id": 245314,
+      "name": "Blind Watermark",
+      "slug": "blind_watermark",
+      "description": "Blind Watermark （图片盲水印，提取水印无须原图！）"
+    }
+  },
+  {
     "name": "bluebird",
     "packages": [
       {
@@ -4784,6 +5136,24 @@
     }
   },
   {
+    "name": "boring_generators",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "boring_generators"
+      }
+    ],
+    "github": {
+      "repo": "abhaynikam/boring_generators"
+    },
+    "opencollective": {
+      "id": 202449,
+      "name": "Boring Generators",
+      "slug": "boring_generators",
+      "description": "Boring generators aims to make your development faster by delegating boring setups to us."
+    }
+  },
+  {
     "name": "botkit",
     "packages": [
       {
@@ -5173,6 +5543,24 @@
     }
   },
   {
+    "name": "breathe",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "breathe"
+      }
+    ],
+    "github": {
+      "repo": "michaeljones/breathe"
+    },
+    "opencollective": {
+      "id": 419725,
+      "name": "Breathe",
+      "slug": "breathe",
+      "description": "Your technical docs, beautifully integrated"
+    }
+  },
+  {
     "name": "breeze",
     "packages": [
       {
@@ -5469,6 +5857,50 @@
           "totalDonations": 6000
         }
       ]
+    }
+  },
+  {
+    "name": "cadcad1",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cadCAD"
+      }
+    ],
+    "github": {
+      "repo": "BlockScience/cadCAD"
+    },
+    "opencollective": {
+      "id": 74503,
+      "name": "cadCAD",
+      "slug": "cadcad1",
+      "description": "An open-source Python package that assists in the processes of designing, testing and validating complex systems through simulation."
+    }
+  },
+  {
+    "name": "cake",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Cake.Bakery"
+      },
+      {
+        "type": "nuget",
+        "name": "Cake"
+      },
+      {
+        "type": "nuget",
+        "name": "Cake.Tool"
+      }
+    ],
+    "github": {
+      "org": "cake-build"
+    },
+    "opencollective": {
+      "id": 167139,
+      "name": "Cake",
+      "slug": "cake",
+      "description": "We're building an open source build orchestration system."
     }
   },
   {
@@ -5843,6 +6275,42 @@
     }
   },
   {
+    "name": "cast-sh",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cast"
+      }
+    ],
+    "github": {
+      "repo": "hericlesme/cast-sh"
+    },
+    "opencollective": {
+      "id": 66907,
+      "name": "cast-sh",
+      "slug": "cast-sh",
+      "description": ":pager: An instance of your terminal in your browser"
+    }
+  },
+  {
+    "name": "catalyst",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "catalyst"
+      }
+    ],
+    "github": {
+      "repo": "catalyst-team/catalyst"
+    },
+    "opencollective": {
+      "id": 184473,
+      "name": "Catalyst",
+      "slug": "catalyst",
+      "description": "Accelerated deep learning R&D"
+    }
+  },
+  {
     "name": "catel",
     "opencollective": {
       "id": 16163,
@@ -6119,6 +6587,24 @@
     }
   },
   {
+    "name": "cecil",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "cecil/cecil"
+      }
+    ],
+    "github": {
+      "org": "Cecilapp"
+    },
+    "opencollective": {
+      "id": 284312,
+      "name": "Cecil",
+      "slug": "cecil",
+      "description": "Build an open source static site generator"
+    }
+  },
+  {
     "name": "celery",
     "packages": [
       {
@@ -6222,6 +6708,32 @@
           "totalDonations": 12500
         }
       ]
+    }
+  },
+  {
+    "name": "centrifugal",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "centrifugal/phpcent"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/centrifugal/centrifuge-mobile"
+      },
+      {
+        "type": "pypi",
+        "name": "cent"
+      }
+    ],
+    "github": {
+      "org": "centrifugal"
+    },
+    "opencollective": {
+      "id": 142389,
+      "name": "Centrifugal",
+      "slug": "centrifugal",
+      "description": "Real-time messaging server and its friends"
     }
   },
   {
@@ -6655,6 +7167,54 @@
     }
   },
   {
+    "name": "chaos-mesh",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/chaos-mesh/chaos-mesh"
+      }
+    ],
+    "github": {
+      "repo": "chaos-mesh/chaos-mesh"
+    },
+    "opencollective": {
+      "id": 222854,
+      "name": "Chaos Mesh",
+      "slug": "chaos-mesh",
+      "description": "work"
+    }
+  },
+  {
+    "name": "chaoss",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "grimoirelab"
+      },
+      {
+        "type": "pypi",
+        "name": "grimoire-elk"
+      },
+      {
+        "type": "pypi",
+        "name": "perceval"
+      },
+      {
+        "type": "pypi",
+        "name": "sortinghat"
+      }
+    ],
+    "github": {
+      "org": "chaoss"
+    },
+    "opencollective": {
+      "id": 250666,
+      "name": "CHAOSS Project",
+      "slug": "chaoss",
+      "description": "CHAOSS is focused on creating analytics and metrics to help define community health"
+    }
+  },
+  {
     "name": "chart.js",
     "packages": [
       {
@@ -6820,6 +7380,36 @@
           "totalDonations": 40000
         }
       ]
+    }
+  },
+  {
+    "name": "chillicream",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "GreenDonut"
+      },
+      {
+        "type": "nuget",
+        "name": "greendonut"
+      },
+      {
+        "type": "nuget",
+        "name": "HotChocolate"
+      },
+      {
+        "type": "nuget",
+        "name": "hotchocolate"
+      }
+    ],
+    "github": {
+      "org": "ChilliCream"
+    },
+    "opencollective": {
+      "id": 100936,
+      "name": "ChilliCream",
+      "slug": "chillicream",
+      "description": "We create a new GraphQL platform called Hot Chocolate"
     }
   },
   {
@@ -7022,6 +7612,54 @@
     }
   },
   {
+    "name": "cloudreve",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "hfo4/cloudreve"
+      }
+    ],
+    "github": {
+      "org": "cloudreve"
+    },
+    "opencollective": {
+      "id": 122937,
+      "name": "Cloudreve",
+      "slug": "cloudreve",
+      "description": "Coding"
+    }
+  },
+  {
+    "name": "cmb2",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "cmb2/cmb2"
+      },
+      {
+        "type": "composer",
+        "name": "jtsternberg/cmb2-related-links"
+      },
+      {
+        "type": "composer",
+        "name": "jtsternberg/cmb2-term-select"
+      },
+      {
+        "type": "composer",
+        "name": "webdevstudios/cmb2-user-select"
+      }
+    ],
+    "github": {
+      "org": "CMB2"
+    },
+    "opencollective": {
+      "id": 241154,
+      "name": "CMB2",
+      "slug": "cmb2",
+      "description": "Democratizing Custom Fields"
+    }
+  },
+  {
     "name": "cms",
     "packages": [
       {
@@ -7051,6 +7689,28 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "cocart",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "co-cart/co-cart"
+      },
+      {
+        "type": "composer",
+        "name": "co-cart/cocart-get-cart-enhanced"
+      }
+    ],
+    "github": {
+      "org": "co-cart"
+    },
+    "opencollective": {
+      "id": 59101,
+      "name": "CoCart",
+      "slug": "cocart",
+      "description": "Build a headless WooCommerce store today!"
     }
   },
   {
@@ -7125,6 +7785,49 @@
         "name": "codecov"
       }
     ]
+  },
+  {
+    "name": "codecov",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "codecov/codecov-php"
+      },
+      {
+        "type": "gem",
+        "name": "codecov"
+      },
+      {
+        "type": "gem",
+        "name": "awesome"
+      },
+      {
+        "type": "nuget",
+        "name": "Codecov"
+      },
+      {
+        "type": "nuget",
+        "name": "opencover"
+      },
+      {
+        "type": "pypi",
+        "name": "pathmap"
+      },
+      {
+        "type": "pypi",
+        "name": "timestring"
+      }
+    ],
+    "github": {
+      "org": "codecov"
+    },
+    "opencollective": {
+      "id": 69659,
+      "name": "codecov",
+      "slug": "codecov",
+      "description": null,
+      "pledge": true
+    }
   },
   {
     "name": "codecrumbs",
@@ -8750,6 +9453,24 @@
     }
   },
   {
+    "name": "cyberbrain",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cyberbrain"
+      }
+    ],
+    "github": {
+      "repo": "laike9m/Cyberbrain"
+    },
+    "opencollective": {
+      "id": 176953,
+      "name": "Cyberbrain",
+      "slug": "cyberbrain",
+      "description": "Next generation Python debugger"
+    }
+  },
+  {
     "name": "cyclejs",
     "packages": [
       {
@@ -8942,6 +9663,24 @@
           "totalDonations": 8292
         }
       ]
+    }
+  },
+  {
+    "name": "dadosabertosdefeira",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "tomba"
+      }
+    ],
+    "github": {
+      "org": "DadosAbertosDeFeira"
+    },
+    "opencollective": {
+      "id": 424147,
+      "name": "Dados Abertos de Feira",
+      "slug": "dadosabertosdefeira",
+      "description": "Queremos tornar Feira de Santana mais transparente"
     }
   },
   {
@@ -9181,6 +9920,28 @@
     }
   },
   {
+    "name": "data-liberation-front",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "csvlint"
+      },
+      {
+        "type": "gem",
+        "name": "data_kitten"
+      }
+    ],
+    "github": {
+      "org": "Data-Liberation-Front"
+    },
+    "opencollective": {
+      "id": 146145,
+      "name": "The Data Liberation Front",
+      "slug": "data-liberation-front",
+      "description": "Maintaining open source code and tools for working with CSV and other data"
+    }
+  },
+  {
     "name": "date",
     "packages": [
       {
@@ -9357,6 +10118,42 @@
         "balance": 23730,
         "yearlyBudget": 23274
       }
+    }
+  },
+  {
+    "name": "dcat-admin",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "dcat/laravel-admin"
+      }
+    ],
+    "github": {
+      "repo": "jqhph/dcat-admin"
+    },
+    "opencollective": {
+      "id": 120188,
+      "name": "Dcat Admin",
+      "slug": "dcat-admin",
+      "description": "使用很少的代码快速构建一个功能完善的高颜值后台系统"
+    }
+  },
+  {
+    "name": "dearpygui",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "dearpygui"
+      }
+    ],
+    "github": {
+      "repo": "hoffstadt/DearPyGui"
+    },
+    "opencollective": {
+      "id": 217927,
+      "name": "DearPyGui",
+      "slug": "dearpygui",
+      "description": "We are here to provide a better Python GUI toolkit"
     }
   },
   {
@@ -9613,6 +10410,60 @@
     }
   },
   {
+    "name": "devlopr-jekyll",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "devlopr"
+      }
+    ],
+    "github": {
+      "repo": "sujaykundu777/devlopr-jekyll"
+    },
+    "opencollective": {
+      "id": 121827,
+      "name": "Devlopr Jekyll",
+      "slug": "devlopr-jekyll",
+      "description": "A Jekyll theme built for Developers"
+    }
+  },
+  {
+    "name": "devshop",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "devshop/devshop"
+      }
+    ],
+    "github": {
+      "repo": "opendevshop/devshop"
+    },
+    "opencollective": {
+      "id": 31747,
+      "name": "OpenDevShop",
+      "slug": "devshop",
+      "description": "Open Source Cloud Hosting Platform"
+    }
+  },
+  {
+    "name": "diagrams",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "diagrams"
+      }
+    ],
+    "github": {
+      "repo": "mingrammer/diagrams"
+    },
+    "opencollective": {
+      "id": 226685,
+      "name": "Diagrams",
+      "slug": "diagrams",
+      "description": "Diagram as Code"
+    }
+  },
+  {
     "name": "diet",
     "packages": [
       {
@@ -9732,6 +10583,24 @@
     }
   },
   {
+    "name": "distributedio-titan",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/tipsio/tips"
+      }
+    ],
+    "github": {
+      "org": "distributedio"
+    },
+    "opencollective": {
+      "id": 126581,
+      "name": "Titan",
+      "slug": "distributedio-titan",
+      "description": "Supporting to develop titan"
+    }
+  },
+  {
     "name": "django-activity-stream",
     "packages": [
       {
@@ -9777,6 +10646,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "django-defectdojo",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "defectdojo_api"
+      }
+    ],
+    "github": {
+      "org": "DefectDojo"
+    },
+    "opencollective": {
+      "id": 155420,
+      "name": "DefectDojo",
+      "slug": "django-defectdojo",
+      "description": "Open source vulnerability management and security orchestration."
     }
   },
   {
@@ -9868,6 +10755,24 @@
     }
   },
   {
+    "name": "django-restql",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-restql"
+      }
+    ],
+    "github": {
+      "repo": "yezyilomo/django-restql"
+    },
+    "opencollective": {
+      "id": 266655,
+      "name": "Django RESTQL",
+      "slug": "django-restql",
+      "description": "Turn your API made with Django REST Framework(DRF) into a GraphQL like API."
+    }
+  },
+  {
     "name": "django-river",
     "packages": [
       {
@@ -9892,6 +10797,24 @@
     }
   },
   {
+    "name": "djangoextensions",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-extensions"
+      }
+    ],
+    "github": {
+      "repo": "django-extensions/django-extensions"
+    },
+    "opencollective": {
+      "id": 97586,
+      "name": "djangoextensions",
+      "slug": "djangoextensions",
+      "description": "This is a repository for collecting global custom management extensions for the Django Framework. "
+    }
+  },
+  {
     "name": "djongo",
     "packages": [
       {
@@ -9913,6 +10836,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "dnnc",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "deepC"
+      }
+    ],
+    "github": {
+      "repo": "ai-techsystems/dnnCompiler"
+    },
+    "opencollective": {
+      "id": 63713,
+      "name": "DNN Compiler",
+      "slug": "dnnc",
+      "description": "Open Source for Deep Neural Network Compiler for All Platforms"
     }
   },
   {
@@ -10571,6 +11512,88 @@
     }
   },
   {
+    "name": "dotnet-boxed",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Boxed.AspNetCore.TagHelpers"
+      },
+      {
+        "type": "nuget",
+        "name": "Boxed.Mapping"
+      },
+      {
+        "type": "nuget",
+        "name": "Boxed.DotnetNewTest"
+      },
+      {
+        "type": "nuget",
+        "name": "Boxed.AspNetCore"
+      },
+      {
+        "type": "nuget",
+        "name": "Boxed.AspNetCore.Swagger"
+      },
+      {
+        "type": "nuget",
+        "name": "Boxed.Templates"
+      }
+    ],
+    "github": {
+      "org": "Dotnet-Boxed"
+    },
+    "opencollective": {
+      "id": 65841,
+      "name": "Dotnet Boxed",
+      "slug": "dotnet-boxed",
+      "description": ".NET project templates with batteries included, providing the minimum amount of code required to get you going faster."
+    }
+  },
+  {
+    "name": "dotnet-retire",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "dotnet-retire"
+      },
+      {
+        "type": "nuget",
+        "name": "RetireNet.Runtimes.Middleware"
+      },
+      {
+        "type": "nuget",
+        "name": "RetireNet.Runtimes.BackgroundServices"
+      }
+    ],
+    "github": {
+      "org": "RetireNet"
+    },
+    "opencollective": {
+      "id": 141136,
+      "name": "dotnet-retire",
+      "slug": "dotnet-retire",
+      "description": "Help programmers detect vulnerabilities"
+    }
+  },
+  {
+    "name": "dotnetglob",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "DotNet.Glob"
+      }
+    ],
+    "github": {
+      "repo": "dazinator/DotNet.Glob"
+    },
+    "opencollective": {
+      "id": 241709,
+      "name": "DotNet.Glob",
+      "slug": "dotnetglob",
+      "description": "Provide fast free globbing for all!"
+    }
+  },
+  {
     "name": "dplayer",
     "packages": [
       {
@@ -10680,6 +11703,24 @@
     }
   },
   {
+    "name": "dragonfire-581",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "dragonfire"
+      }
+    ],
+    "github": {
+      "repo": "DragonComputer/Dragonfire"
+    },
+    "opencollective": {
+      "id": 17054,
+      "name": "Dragonfire",
+      "slug": "dragonfire-581",
+      "description": "We are on a mission to deliver an open-source virtual assistant for everyone."
+    }
+  },
+  {
     "name": "drf-extensions",
     "packages": [
       {
@@ -10757,6 +11798,50 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "dynaconf",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "dynaconf"
+      }
+    ],
+    "github": {
+      "repo": "rochacbruno/dynaconf"
+    },
+    "opencollective": {
+      "id": 154658,
+      "name": "Dynaconf",
+      "slug": "dynaconf",
+      "description": "Making a better way to manage settings in Python"
+    }
+  },
+  {
+    "name": "earth-observations",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "luftdatenpumpe"
+      },
+      {
+        "type": "pypi",
+        "name": "phenodata"
+      },
+      {
+        "type": "pypi",
+        "name": "wetterdienst"
+      }
+    ],
+    "github": {
+      "org": "earthobservations"
+    },
+    "opencollective": {
+      "id": 274244,
+      "name": "Earth Observations",
+      "slug": "earth-observations",
+      "description": "Projects related to environmental data"
     }
   },
   {
@@ -10853,6 +11938,28 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "econ-ark",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "econ-ark"
+      },
+      {
+        "type": "pypi",
+        "name": "nbreproduce"
+      }
+    ],
+    "github": {
+      "org": "econ-ark"
+    },
+    "opencollective": {
+      "id": 279028,
+      "name": "Econ-ARK",
+      "slug": "econ-ark",
+      "description": "Structural modeling of economic choices of heterogeneous agents."
     }
   },
   {
@@ -11011,6 +12118,24 @@
           "totalDonations": 1000
         }
       ]
+    }
+  },
+  {
+    "name": "einsteinpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "alabaster"
+      }
+    ],
+    "github": {
+      "org": "einsteinpy"
+    },
+    "opencollective": {
+      "id": 48035,
+      "name": "The EinsteinPy Project",
+      "slug": "einsteinpy",
+      "description": "Creating a Software Suite for Gravitational Physics"
     }
   },
   {
@@ -12026,6 +13151,56 @@
     }
   },
   {
+    "name": "etlnet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Etl.Net"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.EntityFrameworkCore"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.TextFile"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.XmlFile"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.Ftp"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.Sftp"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.ExcelFile"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.SqlServer"
+      },
+      {
+        "type": "nuget",
+        "name": "Etl.Net.ExecutionPlan"
+      }
+    ],
+    "github": {
+      "repo": "paillave/Etl.Net"
+    },
+    "opencollective": {
+      "id": 187722,
+      "name": "Etl.Net",
+      "slug": "etlnet",
+      "description": "Because everything is a stream... Implementation of a fully featured ETL in .net. "
+    }
+  },
+  {
     "name": "excalibur",
     "packages": [
       {
@@ -12289,6 +13464,32 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "f-droid",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll-fdroid"
+      },
+      {
+        "type": "pypi",
+        "name": "fdroidserver"
+      },
+      {
+        "type": "pypi",
+        "name": "repomaker"
+      }
+    ],
+    "github": {
+      "org": "f-droid"
+    },
+    "opencollective": {
+      "id": 88888,
+      "name": "F-Droid",
+      "slug": "f-droid",
+      "description": "F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform."
     }
   },
   {
@@ -13574,6 +14775,24 @@
     }
   },
   {
+    "name": "flexible-grid",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "flexible-grid"
+      }
+    ],
+    "github": {
+      "repo": "kenangundogan/flexible-grid"
+    },
+    "opencollective": {
+      "id": 250482,
+      "name": "Flexible Grid",
+      "slug": "flexible-grid",
+      "description": "For users who can embrace the newest of technology, Flexiblegrid comes with an flex based grid."
+    }
+  },
+  {
     "name": "flextype-95",
     "packages": [
       {
@@ -13607,6 +14826,24 @@
     ]
   },
   {
+    "name": "flow-forecast",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "flood_forecast"
+      }
+    ],
+    "github": {
+      "repo": "AIStream-Peelout/flow-forecast"
+    },
+    "opencollective": {
+      "id": 220080,
+      "name": "Flow Forecast",
+      "slug": "flow-forecast",
+      "description": "A deep learning for time series forecasting framework built in PyTorch"
+    }
+  },
+  {
     "name": "flubucore",
     "packages": [
       {
@@ -13631,6 +14868,54 @@
     }
   },
   {
+    "name": "fluentassertions",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "FluentAssertions"
+      }
+    ],
+    "github": {
+      "repo": "fluentassertions/fluentassertions"
+    },
+    "opencollective": {
+      "id": 180383,
+      "name": "Fluentassertions",
+      "slug": "fluentassertions",
+      "description": "Make your unit tests look awesome"
+    }
+  },
+  {
+    "name": "fluentvalidation",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "FluentValidation"
+      },
+      {
+        "type": "nuget",
+        "name": "FluentValidation.AspNetCore"
+      },
+      {
+        "type": "nuget",
+        "name": "FluentValidation.Mvc5"
+      },
+      {
+        "type": "nuget",
+        "name": "FluentValidation.WebApi"
+      }
+    ],
+    "github": {
+      "org": "FluentValidation"
+    },
+    "opencollective": {
+      "id": 167588,
+      "name": "FluentValidation",
+      "slug": "fluentvalidation",
+      "description": "FluentValidation is a .net library for building validation rules. "
+    }
+  },
+  {
     "name": "flyimg",
     "packages": [
       {
@@ -13652,6 +14937,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "flysystem-qcloud-cos-v5",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "freyo/flysystem-qcloud-cos-v5"
+      }
+    ],
+    "github": {
+      "repo": "freyo/flysystem-qcloud-cos-v5"
+    },
+    "opencollective": {
+      "id": 160273,
+      "name": "Flysystem Qcloud Cos V5",
+      "slug": "flysystem-qcloud-cos-v5",
+      "description": "LOVE & PEACE"
     }
   },
   {
@@ -14235,6 +15538,18 @@
       {
         "type": "composer",
         "name": "fof/sitemap"
+      },
+      {
+        "type": "composer",
+        "name": "fof/doorman"
+      },
+      {
+        "type": "composer",
+        "name": "fof/mason"
+      },
+      {
+        "type": "composer",
+        "name": "fof/oauth"
       }
     ],
     "github": {
@@ -16159,11 +17474,33 @@
     }
   },
   {
+    "name": "go-callvis",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "golang.org/x/tools/go/pointer"
+      }
+    ],
+    "github": {
+      "repo": "ofabry/go-callvis"
+    },
+    "opencollective": {
+      "id": 201380,
+      "name": "go-callvis",
+      "slug": "go-callvis",
+      "description": "An interactive tool for visualizing a call graph of a Go program"
+    }
+  },
+  {
     "name": "go-coap",
     "packages": [
       {
         "type": "dep",
         "name": "github.com/go-ocf/go-coap"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/plgd-dev/go-coap"
       }
     ],
     "github": {
@@ -16204,6 +17541,28 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "go-on-rails",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "go-on-rails"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/railstack/gor"
+      }
+    ],
+    "github": {
+      "repo": "railstack/go-on-rails"
+    },
+    "opencollective": {
+      "id": 181593,
+      "name": "Go On Rails",
+      "slug": "go-on-rails",
+      "description": "Go On Rails"
     }
   },
   {
@@ -16288,6 +17647,10 @@
       {
         "type": "dep",
         "name": "github.com/gogearbox/gearbox"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/gogearbox/netadaptor"
       }
     ],
     "github": {
@@ -16312,6 +17675,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "goimagehash",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/corona10/goimagehash"
+      }
+    ],
+    "github": {
+      "repo": "corona10/goimagehash"
+    },
+    "opencollective": {
+      "id": 199655,
+      "name": "goimagehash",
+      "slug": "goimagehash",
+      "description": "The image hashing library written in Go"
     }
   },
   {
@@ -16588,6 +17969,24 @@
     ],
     "github": {
       "repo": "asaskevich/govalidator"
+    }
+  },
+  {
+    "name": "govips",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/davidbyttow/govips"
+      }
+    ],
+    "github": {
+      "repo": "davidbyttow/govips"
+    },
+    "opencollective": {
+      "id": 178582,
+      "name": "govips",
+      "slug": "govips",
+      "description": "Govips project contributors"
     }
   },
   {
@@ -18123,6 +19522,42 @@
     }
   },
   {
+    "name": "hardkoded-projects",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "PuppeteerSharp"
+      }
+    ],
+    "github": {
+      "repo": "kblok/puppeteer-sharp"
+    },
+    "opencollective": {
+      "id": 22885,
+      "name": "hardkoded",
+      "slug": "hardkoded-projects",
+      "description": "Support hardkoded projects such as Puppeteer-Sharp and Playwright-Sharp"
+    }
+  },
+  {
+    "name": "harfbuzz",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "uharfbuzz"
+      }
+    ],
+    "github": {
+      "org": "harfbuzz"
+    },
+    "opencollective": {
+      "id": 424173,
+      "name": "HarfBuzz",
+      "slug": "harfbuzz",
+      "description": "Making reading universal"
+    }
+  },
+  {
     "name": "hedron",
     "packages": [
       {
@@ -18999,6 +20434,10 @@
       {
         "type": "pypi",
         "name": "hpy.devel"
+      },
+      {
+        "type": "pypi",
+        "name": "hpy"
       }
     ],
     "github": {
@@ -19324,6 +20763,24 @@
     }
   },
   {
+    "name": "hypergan-foundation",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "hyperchamber"
+      }
+    ],
+    "github": {
+      "org": "HyperGAN"
+    },
+    "opencollective": {
+      "id": 150153,
+      "name": "HyperGAN Foundation",
+      "slug": "hypergan-foundation",
+      "description": "Promotes the development of HyperGAN AI for developers, researchers and end-users."
+    }
+  },
+  {
     "name": "hyperglass",
     "packages": [
       {
@@ -19456,6 +20913,36 @@
     }
   },
   {
+    "name": "ice",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "iceframework/base"
+      },
+      {
+        "type": "composer",
+        "name": "iceframework/framework"
+      },
+      {
+        "type": "composer",
+        "name": "iceframework/hello"
+      },
+      {
+        "type": "composer",
+        "name": "iceframework/website"
+      }
+    ],
+    "github": {
+      "org": "ice"
+    },
+    "opencollective": {
+      "id": 163729,
+      "name": "ice",
+      "slug": "ice",
+      "description": "Simple and fast PHP framework frozen in C extension."
+    }
+  },
+  {
     "name": "iconv-lite",
     "packages": [
       {
@@ -19571,6 +21058,24 @@
     }
   },
   {
+    "name": "image-match",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "image_match"
+      }
+    ],
+    "github": {
+      "repo": "EdjoLabs/image-match"
+    },
+    "opencollective": {
+      "id": 158938,
+      "name": "Image Match",
+      "slug": "image-match",
+      "description": "We are building tools to provide authenticity of content online."
+    }
+  },
+  {
     "name": "image-zoom",
     "packages": [
       {
@@ -19616,6 +21121,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "imagelistview",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "ImageListView"
+      }
+    ],
+    "github": {
+      "repo": "oozcitak/imagelistview"
+    },
+    "opencollective": {
+      "id": 153951,
+      "name": "Imagelistview",
+      "slug": "imagelistview",
+      "description": "A winforms control for image files with asynchronously loaded thumbnails"
     }
   },
   {
@@ -19760,6 +21283,10 @@
       {
         "type": "composer",
         "name": "yurunsoft/imi"
+      },
+      {
+        "type": "composer",
+        "name": "imiphp/imi"
       }
     ],
     "github": {
@@ -19776,6 +21303,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "immalf",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "pocketmine/pocketmine-mp"
+      }
+    ],
+    "github": {
+      "repo": "pmmp/PocketMine-MP"
+    },
+    "opencollective": {
+      "id": 18050,
+      "name": "Immalf",
+      "slug": "immalf",
+      "description": "Develop server software for Minecraft: Bedrock Edition"
     }
   },
   {
@@ -19888,6 +21433,18 @@
       {
         "type": "gem",
         "name": "webmention"
+      },
+      {
+        "type": "composer",
+        "name": "mf2/shim"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/wordpress-indieauth"
+      },
+      {
+        "type": "composer",
+        "name": "indieweb/wordpress-micropub"
       }
     ],
     "github": {
@@ -19933,6 +21490,44 @@
           "totalDonations": 10000
         }
       ]
+    }
+  },
+  {
+    "name": "infection",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "infection/abstract-testframework-adapter"
+      },
+      {
+        "type": "composer",
+        "name": "infection/codeception-adapter"
+      },
+      {
+        "type": "composer",
+        "name": "infection/extension-installer"
+      },
+      {
+        "type": "composer",
+        "name": "infection/include-interceptor"
+      },
+      {
+        "type": "composer",
+        "name": "infection/infection"
+      },
+      {
+        "type": "composer",
+        "name": "infection/phpspec-adapter"
+      }
+    ],
+    "github": {
+      "org": "infection"
+    },
+    "opencollective": {
+      "id": 174875,
+      "name": "Infection PHP",
+      "slug": "infection",
+      "description": "Mutation Testing for PHP. Helps writing better code and tests."
     }
   },
   {
@@ -20129,6 +21724,18 @@
       {
         "type": "composer",
         "name": "infyomlabs/metronic-templates"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/laravel-calendar-events"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/laravel-ui-adminlte"
+      },
+      {
+        "type": "composer",
+        "name": "infyomlabs/laravel-ui-coreui"
       }
     ],
     "github": {
@@ -20415,6 +22022,68 @@
     }
   },
   {
+    "name": "iotsharp",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "IoTSharp.Sdk.Http"
+      },
+      {
+        "type": "nuget",
+        "name": "IoTSharp.Sdk.MQTT"
+      },
+      {
+        "type": "nuget",
+        "name": "MaiKeBing.CAP.ZeroMQ"
+      },
+      {
+        "type": "nuget",
+        "name": "MaiKeBing.CAP.LiteDB"
+      },
+      {
+        "type": "nuget",
+        "name": "MaiKeBing.HostedService.ZeroMQ"
+      },
+      {
+        "type": "nuget",
+        "name": "IoTSharp.X509Extensions"
+      },
+      {
+        "type": "nuget",
+        "name": "MQTTnet.AspNetCoreEx"
+      },
+      {
+        "type": "nuget",
+        "name": "Silkier"
+      },
+      {
+        "type": "nuget",
+        "name": "Silkier.EFCore"
+      },
+      {
+        "type": "nuget",
+        "name": "Silkier.AspNetCore"
+      },
+      {
+        "type": "nuget",
+        "name": "SilkierQuartz"
+      },
+      {
+        "type": "nuget",
+        "name": "Maikebing.EntityFrameworkCore.Taos"
+      }
+    ],
+    "github": {
+      "repo": "IoTSharp/IoTSharp"
+    },
+    "opencollective": {
+      "id": 255964,
+      "name": "IoTSharp",
+      "slug": "iotsharp",
+      "description": "IoTSharp is an open-source IoT platform for data collection, processing, visualization, and device management."
+    }
+  },
+  {
     "name": "ipfs-search",
     "packages": [
       {
@@ -20439,6 +22108,36 @@
     }
   },
   {
+    "name": "ipython",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "ipynb"
+      },
+      {
+        "type": "pypi",
+        "name": "ptpython"
+      },
+      {
+        "type": "pypi",
+        "name": "IPython"
+      },
+      {
+        "type": "pypi",
+        "name": "traitlets"
+      }
+    ],
+    "github": {
+      "org": "ipython"
+    },
+    "opencollective": {
+      "id": 303078,
+      "name": "IPython",
+      "slug": "ipython",
+      "description": "IPython is an enhanced interactive Python environment aimed at maximizing productivity in workflows that combine data, computation and exploratory programming."
+    }
+  },
+  {
     "name": "iris",
     "opencollective": {
       "id": 9608,
@@ -20460,6 +22159,24 @@
     ],
     "github": {
       "repo": "kataras/iris"
+    }
+  },
+  {
+    "name": "iseed",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "orangehill/iseed"
+      }
+    ],
+    "github": {
+      "repo": "orangehill/iseed"
+    },
+    "opencollective": {
+      "id": 250518,
+      "name": "Iseed",
+      "slug": "iseed",
+      "description": "Makes it easy to create Laravel seed files directly from the database."
     }
   },
   {
@@ -20527,6 +22244,24 @@
         "name": "nyc"
       }
     ]
+  },
+  {
+    "name": "itk",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "itk"
+      }
+    ],
+    "github": {
+      "repo": "InsightSoftwareConsortium/ITK"
+    },
+    "opencollective": {
+      "id": 301913,
+      "name": "ITK",
+      "slug": "itk",
+      "description": "The Insight Toolkit (ITK), is an open-source software toolkit for scientific image analysis, including registration and segmentation"
+    }
   },
   {
     "name": "iview",
@@ -20886,6 +22621,18 @@
       {
         "type": "pypi",
         "name": "tablib"
+      },
+      {
+        "type": "pypi",
+        "name": "django-debug-toolbar"
+      },
+      {
+        "type": "pypi",
+        "name": "django-oauth-toolkit"
+      },
+      {
+        "type": "pypi",
+        "name": "django-taggit"
       }
     ],
     "github": {
@@ -21097,6 +22844,42 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "jekyll-rtd-theme",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll-rtd-theme"
+      }
+    ],
+    "github": {
+      "org": "rundocs"
+    },
+    "opencollective": {
+      "id": 265403,
+      "name": "Jekyll Rtd Theme",
+      "slug": "jekyll-rtd-theme",
+      "description": "Making the world a better place"
+    }
+  },
+  {
+    "name": "jekyll-spaceship",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "jekyll-spaceship"
+      }
+    ],
+    "github": {
+      "repo": "jeffreytse/jekyll-spaceship"
+    },
+    "opencollective": {
+      "id": 192248,
+      "name": "jekyll-spaceship",
+      "slug": "jekyll-spaceship",
+      "description": "🚀 A Jekyll plugin to provide powerful supports for table, mathjax, plantuml, mermaid, emoji, video, audio, youtube, vimeo, dailymotion, soundcloud, spotify, etc."
     }
   },
   {
@@ -21505,6 +23288,28 @@
     }
   },
   {
+    "name": "jikan",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jikan-me/jikan"
+      },
+      {
+        "type": "composer",
+        "name": "jikan-me/jikan-auth"
+      }
+    ],
+    "github": {
+      "org": "jikan-me"
+    },
+    "opencollective": {
+      "id": 160398,
+      "name": "Jikan",
+      "slug": "jikan",
+      "description": "Jikan (時間) is an open-source PHP & REST API for the “most active online anime + manga community and database” — MyAnimeList.net."
+    }
+  },
+  {
     "name": "jira",
     "packages": [
       {
@@ -21626,6 +23431,10 @@
       {
         "type": "npm",
         "name": "@jitesoft/yolog-json-plugin"
+      },
+      {
+        "type": "composer",
+        "name": "hrafn/router"
       }
     ],
     "github": {
@@ -23533,6 +25342,46 @@
     }
   },
   {
+    "name": "kornia",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "kornia"
+      }
+    ],
+    "github": {
+      "org": "kornia"
+    },
+    "opencollective": {
+      "id": 269815,
+      "name": "kornia",
+      "slug": "kornia",
+      "description": "We are on the mission to democratise the Computer Vision 2.0 paradigm"
+    }
+  },
+  {
+    "name": "krakend",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/devopsfaith/api2html"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/devopsfaith/krakend-ratelimit"
+      }
+    ],
+    "github": {
+      "org": "devopsfaith"
+    },
+    "opencollective": {
+      "id": 244151,
+      "name": "KrakenD",
+      "slug": "krakend",
+      "description": "The fastest open-source API Gateway"
+    }
+  },
+  {
     "name": "kumbiaphp",
     "packages": [
       {
@@ -23862,6 +25711,212 @@
     }
   },
   {
+    "name": "laravel-wallet",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "bavix/benchmark"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/builder"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/cases"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/config"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/content"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/corundum"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/cupkit"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/dash"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/diff"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/exceptions"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/flow"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/flow-native"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/foundation"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/gearman"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/geo"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/helpers"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/http"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/ip"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/iterator"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/kernel"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-admin-leaflet"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-cupkit"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-entry"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-helpers"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-middleware-https"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-middleware-ifindex"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-middleware-language"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-prof"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-settings"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-wallet"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-wallet-swap"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-wallet-vacuum"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-worker-command"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/laravel-xhprof"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/lexer"
+      },
+      {
+        "type": "composer",
+        "name": "laravel/lumen"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/lump"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/lumper"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/phalcon-project"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/processors"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/project"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/router"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/sdk"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/security"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/slice"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/tests"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/validator"
+      },
+      {
+        "type": "composer",
+        "name": "bavix/xml"
+      }
+    ],
+    "github": {
+      "org": "bavix"
+    },
+    "opencollective": {
+      "id": 112612,
+      "name": "Laravel Wallet",
+      "slug": "laravel-wallet",
+      "description": "Help and support for the laravel community"
+    }
+  },
+  {
     "name": "laravel-zero",
     "packages": [
       {
@@ -23887,6 +25942,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "laraveldash",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "yal/laraveldash"
+      }
+    ],
+    "github": {
+      "repo": "getspooky/laravelDash"
+    },
+    "opencollective": {
+      "id": 155095,
+      "name": "LaravelDash",
+      "slug": "laraveldash",
+      "description": "It's never been easier to build and customize admin panels. Yah! laravelDash is a beautifully designed administration panel for Laravel."
     }
   },
   {
@@ -24913,6 +26986,32 @@
     }
   },
   {
+    "name": "magicodes",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Magicodes.IE.Core"
+      },
+      {
+        "type": "nuget",
+        "name": "Magicodes.IE.Excel"
+      },
+      {
+        "type": "nuget",
+        "name": "Magicodes.IE.Excel.AspNetCore"
+      }
+    ],
+    "github": {
+      "repo": "dotnetcore/Magicodes.IE"
+    },
+    "opencollective": {
+      "id": 97763,
+      "name": "magicodes",
+      "slug": "magicodes",
+      "description": "Import and export general library, support Dto import and export, template export, fancy export and dynamic export, support Excel, Csv, Word, Pdf and Html."
+    }
+  },
+  {
     "name": "magnify",
     "packages": [
       {
@@ -25222,6 +27321,24 @@
     }
   },
   {
+    "name": "marten",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Marten"
+      }
+    ],
+    "github": {
+      "repo": "JasperFx/marten"
+    },
+    "opencollective": {
+      "id": 138427,
+      "name": "Marten",
+      "slug": "marten",
+      "description": "Marten is a .NET transactional Document DB and Event Store on PostgreSQL "
+    }
+  },
+  {
     "name": "matchzoo",
     "packages": [
       {
@@ -25516,6 +27633,32 @@
     }
   },
   {
+    "name": "matomo-analytics",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "matomo/device-detector"
+      },
+      {
+        "type": "composer",
+        "name": "matomo/matomo"
+      },
+      {
+        "type": "composer",
+        "name": "matomo/matomo-php-tracker"
+      }
+    ],
+    "github": {
+      "org": "matomo-org"
+    },
+    "opencollective": {
+      "id": 156091,
+      "name": "Matomo Analytics",
+      "slug": "matomo-analytics",
+      "description": "We create the open alternative to Google Analytics that gives you full control over your data. Privacy is built-in."
+    }
+  },
+  {
     "name": "mattn-anko",
     "packages": [
       {
@@ -25561,6 +27704,50 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "mautic",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "mautic/api-library"
+      },
+      {
+        "type": "composer",
+        "name": "mautic/mautic-typo3"
+      },
+      {
+        "type": "composer",
+        "name": "mautic/grapes-js-builder-bundle"
+      }
+    ],
+    "github": {
+      "org": "mautic"
+    },
+    "opencollective": {
+      "id": 142623,
+      "name": "Mautic",
+      "slug": "mautic",
+      "description": "Supporting the World's Largest Open-Source Marketing Automation Project"
+    }
+  },
+  {
+    "name": "mc-stan",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pystan"
+      }
+    ],
+    "github": {
+      "org": "stan-dev"
+    },
+    "opencollective": {
+      "id": 303065,
+      "name": "Stan",
+      "slug": "mc-stan",
+      "description": "Stan is a state-of-the-art platform for statistical modeling and high-performance statistical computation."
     }
   },
   {
@@ -25653,6 +27840,10 @@
       {
         "type": "dep",
         "name": "github.com/m-lab/uuid-annotator"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/m-lab/downloader"
       }
     ],
     "github": {
@@ -26147,6 +28338,86 @@
     }
   },
   {
+    "name": "mezon-router",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "mezon/router"
+      }
+    ],
+    "github": {
+      "repo": "alexdodonov/mezon-router"
+    },
+    "opencollective": {
+      "id": 335531,
+      "name": "Mezon Router",
+      "slug": "mezon-router",
+      "description": "Our aim is to create fast and convinient frameworks for PHP developers"
+    }
+  },
+  {
+    "name": "micro-elements",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MicroElements"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Abstractions"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.DependencyInjection"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.AutoFixture.NodaTime"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Data"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.DevOps"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.FileStorage"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.FluentProxy"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Functional"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Swashbuckle.FluentValidation"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Swashbuckle.FluentValidation.WebApi"
+      },
+      {
+        "type": "nuget",
+        "name": "MicroElements.Swashbuckle.NodaTime"
+      }
+    ],
+    "github": {
+      "org": "micro-elements"
+    },
+    "opencollective": {
+      "id": 203419,
+      "name": "micro-elements",
+      "slug": "micro-elements",
+      "description": "OpenSource .Net components"
+    }
+  },
+  {
     "name": "micromustache",
     "packages": [
       {
@@ -26517,6 +28788,24 @@
         "name": "mkdirp"
       }
     ]
+  },
+  {
+    "name": "ml4a",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "ml4a"
+      }
+    ],
+    "github": {
+      "org": "ml4a"
+    },
+    "opencollective": {
+      "id": 158080,
+      "name": "ml4a",
+      "slug": "ml4a",
+      "description": "ml4a (machine learning for artists) creates free educational resources for applications of machine learning to art, design, and creativity"
+    }
   },
   {
     "name": "mllaunchpad",
@@ -27026,6 +29315,24 @@
     }
   },
   {
+    "name": "monotorrent",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MonoTorrent"
+      }
+    ],
+    "github": {
+      "repo": "alanmcgovern/monotorrent"
+    },
+    "opencollective": {
+      "id": 86091,
+      "name": "MonoTorrent",
+      "slug": "monotorrent",
+      "description": "The official repository for MonoTorrent, a bittorrent library for .NET"
+    }
+  },
+  {
     "name": "moro",
     "packages": [
       {
@@ -27190,6 +29497,24 @@
     }
   },
   {
+    "name": "mudblazor",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "MudBlazor"
+      }
+    ],
+    "github": {
+      "repo": "Garderoben/MudBlazor"
+    },
+    "opencollective": {
+      "id": 182297,
+      "name": "MudBlazor",
+      "slug": "mudblazor",
+      "description": "MudBlazor is an ambitious Material Design component framework for Blazor with an emphasis on ease of use and documentation."
+    }
+  },
+  {
     "name": "multrin",
     "packages": [
       {
@@ -27335,6 +29660,82 @@
     }
   },
   {
+    "name": "nager",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Nager.AmazonSesNotification"
+      },
+      {
+        "type": "nuget",
+        "name": "Nager.ArticleNumber"
+      },
+      {
+        "type": "nuget",
+        "name": "Nager.Country"
+      },
+      {
+        "type": "nuget",
+        "name": "nager.country"
+      },
+      {
+        "type": "nuget",
+        "name": "Nager.PublicSuffix"
+      },
+      {
+        "type": "nuget",
+        "name": "Nager.VideoStream"
+      }
+    ],
+    "github": {
+      "org": "nager"
+    },
+    "opencollective": {
+      "id": 203409,
+      "name": "nager",
+      "slug": "nager",
+      "description": "open source software engineering"
+    }
+  },
+  {
+    "name": "nanoframework",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "nanoFramework.CoreLibrary"
+      },
+      {
+        "type": "nuget",
+        "name": "nanoFramework.CoreLibrary.NoReflection"
+      },
+      {
+        "type": "nuget",
+        "name": "nanoFramework.Json"
+      },
+      {
+        "type": "nuget",
+        "name": "Json.NetMF"
+      },
+      {
+        "type": "nuget",
+        "name": "nanoff"
+      },
+      {
+        "type": "nuget",
+        "name": "nanoFramework.Hardware.Esp32"
+      }
+    ],
+    "github": {
+      "org": "nanoframework"
+    },
+    "opencollective": {
+      "id": 44219,
+      "name": "nanoFramework",
+      "slug": "nanoframework",
+      "description": "nanoFramework allows writting C# applications for embedded systems"
+    }
+  },
+  {
     "name": "nativebase",
     "packages": [
       {
@@ -27388,6 +29789,32 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "neovim",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "neovim"
+      },
+      {
+        "type": "pypi",
+        "name": "pynvim"
+      },
+      {
+        "type": "pypi",
+        "name": "neovim_gui"
+      }
+    ],
+    "github": {
+      "org": "neovim"
+    },
+    "opencollective": {
+      "id": 60920,
+      "name": "neovim",
+      "slug": "neovim",
+      "description": "Fork of Vim aiming at extensibility and usability"
     }
   },
   {
@@ -27724,6 +30151,24 @@
     }
   },
   {
+    "name": "netcoreblockly",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "NetCore2Blockly"
+      }
+    ],
+    "github": {
+      "repo": "ignatandrei/NETCoreBlockly"
+    },
+    "opencollective": {
+      "id": 182695,
+      "name": "NETCoreBlockly",
+      "slug": "netcoreblockly",
+      "description": "Easy the test of WebAPI "
+    }
+  },
+  {
     "name": "neteasecloudmusicapi",
     "packages": [
       {
@@ -27745,6 +30190,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "newbeclaptrap",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Newbe.Claptrap"
+      }
+    ],
+    "github": {
+      "repo": "newbe36524/Newbe.Claptrap"
+    },
+    "opencollective": {
+      "id": 272229,
+      "name": "Newbe.Claptrap",
+      "slug": "newbeclaptrap",
+      "description": "Making it easier to build a excellent event sourcing and actor framework"
     }
   },
   {
@@ -27883,6 +30346,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "nfstream",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "nfstream"
+      }
+    ],
+    "github": {
+      "org": "nfstream"
+    },
+    "opencollective": {
+      "id": 169790,
+      "name": "NFStream",
+      "slug": "nfstream",
+      "description": "Making network data science easy and intuitive."
     }
   },
   {
@@ -29332,6 +31813,36 @@
     }
   },
   {
+    "name": "nonebot",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "aiocqhttp"
+      },
+      {
+        "type": "pypi",
+        "name": "nonebot"
+      },
+      {
+        "type": "pypi",
+        "name": "nonetrip"
+      },
+      {
+        "type": "pypi",
+        "name": "nonebot-plugin-apscheduler"
+      }
+    ],
+    "github": {
+      "org": "nonebot"
+    },
+    "opencollective": {
+      "id": 190085,
+      "name": "NoneBot",
+      "slug": "nonebot",
+      "description": "NoneBot 是使用 Python 编写的异步聊天机器人后端框架。"
+    }
+  },
+  {
     "name": "npkill",
     "packages": [
       {
@@ -29582,6 +32093,40 @@
     }
   },
   {
+    "name": "nteract",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "bookstore"
+      },
+      {
+        "type": "pypi",
+        "name": "papermill"
+      },
+      {
+        "type": "pypi",
+        "name": "scrapbook"
+      },
+      {
+        "type": "pypi",
+        "name": "testbook"
+      },
+      {
+        "type": "pypi",
+        "name": "vdom"
+      }
+    ],
+    "github": {
+      "org": "nteract"
+    },
+    "opencollective": {
+      "id": 302351,
+      "name": "nteract",
+      "slug": "nteract",
+      "description": "nteract is a desktop application that allows you to develop rich documents that contain prose, executable code (in almost any language!), and images."
+    }
+  },
+  {
     "name": "nuke",
     "packages": [
       {
@@ -29636,6 +32181,24 @@
           "totalDonations": 2000
         }
       ]
+    }
+  },
+  {
+    "name": "numpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "numpy"
+      }
+    ],
+    "github": {
+      "repo": "numpy/numpy"
+    },
+    "opencollective": {
+      "id": 106374,
+      "name": "NumPy",
+      "slug": "numpy",
+      "description": "The fundamental package for scientific computing with Python. IMPORTANT: we are still setting up this collective, and cannot accept donations yet (as of 30 April 2021)."
     }
   },
   {
@@ -29992,6 +32555,60 @@
     }
   },
   {
+    "name": "offlineimap-organization",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "offlineimap"
+      }
+    ],
+    "github": {
+      "org": "OfflineIMAP"
+    },
+    "opencollective": {
+      "id": 76669,
+      "name": "OfflineIMAP organization",
+      "slug": "offlineimap-organization",
+      "description": "Open source software to sync your email between IMAP servers and/or Maildir."
+    }
+  },
+  {
+    "name": "ohler",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "ox"
+      }
+    ],
+    "github": {
+      "repo": "ohler55/ox"
+    },
+    "opencollective": {
+      "id": 104461,
+      "name": "Ohler Collective",
+      "slug": "ohler",
+      "description": "Developer packages for Ruby, C and Golang"
+    }
+  },
+  {
+    "name": "olivia-ai",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/olivia-ai/olivia"
+      }
+    ],
+    "github": {
+      "org": "olivia-ai"
+    },
+    "opencollective": {
+      "id": 47475,
+      "name": "Olivia",
+      "slug": "olivia-ai",
+      "description": "💁‍♀️Your new best friend built with an artificial neural network"
+    }
+  },
+  {
     "name": "onepager",
     "packages": [
       {
@@ -30017,6 +32634,28 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ooni",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/ooni/probe-cli"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/ooni/probe-engine"
+      }
+    ],
+    "github": {
+      "org": "ooni"
+    },
+    "opencollective": {
+      "id": 177955,
+      "name": "OONI",
+      "slug": "ooni",
+      "description": "We are a global community measuring Internet censorship since 2012."
     }
   },
   {
@@ -30071,6 +32710,68 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "open-sustainable-technology",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "libreselery"
+      }
+    ],
+    "github": {
+      "org": "protontypes"
+    },
+    "opencollective": {
+      "id": 193294,
+      "name": "Open Sustainable Technology",
+      "slug": "open-sustainable-technology",
+      "description": "Our aim is to accelerate open and independent innovation with a sustainable impact."
+    }
+  },
+  {
+    "name": "openacid-slim",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/openacid/slim"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/openacid/slim/index"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/openacid/slim/trie"
+      }
+    ],
+    "github": {
+      "repo": "openacid/slim"
+    },
+    "opencollective": {
+      "id": 183044,
+      "name": "Slim data structure",
+      "slug": "openacid-slim",
+      "description": "Reduce cost in IT infrastructure"
+    }
+  },
+  {
+    "name": "openaddresses",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "esridump"
+      }
+    ],
+    "github": {
+      "org": "openaddresses"
+    },
+    "opencollective": {
+      "id": 82501,
+      "name": "OpenAddresses",
+      "slug": "openaddresses",
+      "description": "The free and open global address collection."
     }
   },
   {
@@ -30224,6 +32925,24 @@
     }
   },
   {
+    "name": "opensanctions",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "opensanctions"
+      }
+    ],
+    "github": {
+      "repo": "pudo/opensanctions"
+    },
+    "opencollective": {
+      "id": 282731,
+      "name": "OpenSanctions",
+      "slug": "opensanctions",
+      "description": "Create an open dataset of international sanctions and other entities of interest."
+    }
+  },
+  {
     "name": "openstates",
     "packages": [
       {
@@ -30361,6 +33080,10 @@
       {
         "type": "pypi",
         "name": "optimuspyspark"
+      },
+      {
+        "type": "pypi",
+        "name": "pyoptimus"
       }
     ],
     "github": {
@@ -30743,6 +33466,24 @@
     }
   },
   {
+    "name": "pandas",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pandas"
+      }
+    ],
+    "github": {
+      "org": "pandas-dev"
+    },
+    "opencollective": {
+      "id": 302426,
+      "name": "pandas",
+      "slug": "pandas",
+      "description": "pandas is a data wrangling platform for Python that provides easy-to-use data ingestion, transformation, and export functions."
+    }
+  },
+  {
     "name": "pangu",
     "packages": [
       {
@@ -31005,6 +33746,24 @@
     }
   },
   {
+    "name": "parsecsv",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "parsecsv/php-parsecsv"
+      }
+    ],
+    "github": {
+      "repo": "parsecsv/parsecsv-for-php"
+    },
+    "opencollective": {
+      "id": 73915,
+      "name": "ParseCsv",
+      "slug": "parsecsv",
+      "description": "CSV data parser for PHP."
+    }
+  },
+  {
     "name": "parsleyjs",
     "packages": [
       {
@@ -31160,6 +33919,24 @@
     }
   },
   {
+    "name": "pdfcpu",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/pdfcpu/pdfcpu"
+      }
+    ],
+    "github": {
+      "org": "pdfcpu"
+    },
+    "opencollective": {
+      "id": 132686,
+      "name": "pdfcpu",
+      "slug": "pdfcpu",
+      "description": "Support development and maintenance of the best free Go based PDF tools on the planet. "
+    }
+  },
+  {
     "name": "pdfmake",
     "packages": [
       {
@@ -31182,6 +33959,36 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "pdm",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "towncrier"
+      },
+      {
+        "type": "pypi",
+        "name": "pdm-pep517"
+      },
+      {
+        "type": "pypi",
+        "name": "pdm-venv"
+      },
+      {
+        "type": "pypi",
+        "name": "tox-pdm"
+      }
+    ],
+    "github": {
+      "org": "pdm-project"
+    },
+    "opencollective": {
+      "id": 414074,
+      "name": "Pdm",
+      "slug": "pdm",
+      "description": "Improve the experience of Python development workflow"
     }
   },
   {
@@ -31329,6 +34136,24 @@
           "totalDonations": 56500
         }
       ]
+    }
+  },
+  {
+    "name": "penet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "PeNet"
+      }
+    ],
+    "github": {
+      "repo": "secana/PeNet"
+    },
+    "opencollective": {
+      "id": 90946,
+      "name": "PeNet",
+      "slug": "penet",
+      "description": "Portable Executable (PE) library written in .Net"
     }
   },
   {
@@ -31597,6 +34422,24 @@
     }
   },
   {
+    "name": "php-aws-ses",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "daniel-zahariev/php-aws-ses"
+      }
+    ],
+    "github": {
+      "repo": "daniel-zahariev/php-aws-ses"
+    },
+    "opencollective": {
+      "id": 108646,
+      "name": "php-aws-ses",
+      "slug": "php-aws-ses",
+      "description": "PHP classes that interfaces Amazon Simple Email Service"
+    }
+  },
+  {
     "name": "php-casbin",
     "packages": [
       {
@@ -31677,6 +34520,24 @@
     }
   },
   {
+    "name": "php-standard-library",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "azjezz/psl"
+      }
+    ],
+    "github": {
+      "repo": "azjezz/psl"
+    },
+    "opencollective": {
+      "id": 278851,
+      "name": "PHP Standard Library",
+      "slug": "php-standard-library",
+      "description": "Creating a  a modern, consistent, centralized, well-typed set of APIs for PHP programmers. "
+    }
+  },
+  {
     "name": "php-time-ago",
     "packages": [
       {
@@ -31698,6 +34559,122 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "phpinsights",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "nunomaduro/phpinsights"
+      }
+    ],
+    "github": {
+      "repo": "nunomaduro/phpinsights"
+    },
+    "opencollective": {
+      "id": 64486,
+      "name": "PHP Insights",
+      "slug": "phpinsights",
+      "description": "🔰 Instant PHP quality checks from your console. PHP Insights was carefully crafted to simplify the analysis of your code directly from your terminal, and is the perfect starting point to analyze the code quality of your PHP projects."
+    }
+  },
+  {
+    "name": "phpseclib",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "phpseclib/bcmath_compat"
+      },
+      {
+        "type": "composer",
+        "name": "phpseclib/mcrypt_compat"
+      },
+      {
+        "type": "composer",
+        "name": "phpseclib/phpseclib"
+      },
+      {
+        "type": "composer",
+        "name": "phpseclib/phpseclib2_compat"
+      }
+    ],
+    "github": {
+      "org": "phpseclib"
+    },
+    "opencollective": {
+      "id": 249896,
+      "name": "phpseclib",
+      "slug": "phpseclib",
+      "description": "Develops and provides support for phpseclib"
+    }
+  },
+  {
+    "name": "phpshopify",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "phpclassic/php-shopify"
+      }
+    ],
+    "github": {
+      "repo": "phpclassic/php-shopify"
+    },
+    "opencollective": {
+      "id": 58039,
+      "name": "PHPShopify",
+      "slug": "phpshopify",
+      "description": "PHP SDK for Shopify API"
+    }
+  },
+  {
+    "name": "phpstanorg",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "phpstan/extension-installer"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpdoc-parser"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-deprecation-rules"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-doctrine"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-phpunit"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-strict-rules"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-symfony"
+      },
+      {
+        "type": "composer",
+        "name": "phpstan/phpstan-webmozart-assert"
+      }
+    ],
+    "github": {
+      "org": "phpstan"
+    },
+    "opencollective": {
+      "id": 272664,
+      "name": "PHPStan",
+      "slug": "phpstanorg",
+      "description": "Finding bugs in your code without writing tests."
     }
   },
   {
@@ -31776,6 +34753,24 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "pikepdf",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pikepdf"
+      }
+    ],
+    "github": {
+      "repo": "pikepdf/pikepdf"
+    },
+    "opencollective": {
+      "id": 385334,
+      "name": "pikepdf",
+      "slug": "pikepdf",
+      "description": "Provides open source software to manipulate PDFs with Python"
     }
   },
   {
@@ -31919,6 +34914,24 @@
         "balance": 0,
         "yearlyBudget": 0
       }
+    }
+  },
+  {
+    "name": "pmd",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "pmdtester"
+      }
+    ],
+    "github": {
+      "org": "pmd"
+    },
+    "opencollective": {
+      "id": 232365,
+      "name": "PMD",
+      "slug": "pmd",
+      "description": "An extensible multilanguage static code analyzer."
     }
   },
   {
@@ -32366,6 +35379,42 @@
     }
   },
   {
+    "name": "portable-ascii",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "voku/portable-ascii"
+      }
+    ],
+    "github": {
+      "repo": "voku/portable-ascii"
+    },
+    "opencollective": {
+      "id": 130426,
+      "name": "Portable ASCII",
+      "slug": "portable-ascii",
+      "description": "Portable ASCII library - performance optimized (ascii) string functions for php."
+    }
+  },
+  {
+    "name": "portable-utf8",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "voku/portable-utf8"
+      }
+    ],
+    "github": {
+      "repo": "voku/portable-utf8"
+    },
+    "opencollective": {
+      "id": 64848,
+      "name": "Portable UTF-8",
+      "slug": "portable-utf8",
+      "description": "🉑 Portable UTF-8 library - performance optimized (unicode) string functions for php."
+    }
+  },
+  {
     "name": "postcss",
     "packages": [
       {
@@ -32754,6 +35803,32 @@
     }
   },
   {
+    "name": "praw-dev",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "asyncpraw"
+      },
+      {
+        "type": "pypi",
+        "name": "praw"
+      },
+      {
+        "type": "pypi",
+        "name": "prawdditions"
+      }
+    ],
+    "github": {
+      "org": "praw-dev"
+    },
+    "opencollective": {
+      "id": 223064,
+      "name": "PRAW",
+      "slug": "praw-dev",
+      "description": "Provides libraries to access Reddit's API which are used by many popular subreddits."
+    }
+  },
+  {
     "name": "pre-commit",
     "packages": [
       {
@@ -32771,6 +35846,10 @@
       {
         "type": "pypi",
         "name": "pre-commit-mirror-maker"
+      },
+      {
+        "type": "pypi",
+        "name": "identify"
       }
     ],
     "github": {
@@ -33076,6 +36155,24 @@
     }
   },
   {
+    "name": "prettier-ruby",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "prettier"
+      }
+    ],
+    "github": {
+      "repo": "prettier/plugin-ruby"
+    },
+    "opencollective": {
+      "id": 60875,
+      "name": "prettier-ruby",
+      "slug": "prettier-ruby",
+      "description": "Prettier for the Ruby programming language."
+    }
+  },
+  {
     "name": "printthis",
     "packages": [
       {
@@ -33097,6 +36194,84 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "prism",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "prism-cli"
+      }
+    ],
+    "github": {
+      "repo": "prism-rb/prism"
+    },
+    "opencollective": {
+      "id": 69232,
+      "name": "Prism",
+      "slug": "prism",
+      "description": "Prism is a framework for building frontend web apps with Ruby and WebAssembly"
+    }
+  },
+  {
+    "name": "probreg",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "probreg"
+      }
+    ],
+    "github": {
+      "repo": "neka-nat/probreg"
+    },
+    "opencollective": {
+      "id": 92812,
+      "name": "probreg",
+      "slug": "probreg",
+      "description": "Point cloud registration using probabilistic model (CPD/GMMReg/SVR/GMMTree/FilterReg)"
+    }
+  },
+  {
+    "name": "project-jupyter",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "jupyter-enterprise-gateway"
+      },
+      {
+        "type": "pypi",
+        "name": "jupyter_enterprise_gateway"
+      },
+      {
+        "type": "pypi",
+        "name": "jupyter_client"
+      },
+      {
+        "type": "pypi",
+        "name": "jupyterdrive"
+      },
+      {
+        "type": "pypi",
+        "name": "jupyter_kernel_gateway"
+      },
+      {
+        "type": "pypi",
+        "name": "nbviewer"
+      },
+      {
+        "type": "pypi",
+        "name": "tmpnb"
+      }
+    ],
+    "github": {
+      "org": "jupyter"
+    },
+    "opencollective": {
+      "id": 301942,
+      "name": "Project Jupyter",
+      "slug": "project-jupyter",
+      "description": "Project Jupyter develops tools for interactive computing, research and education with an emphasis in data science workflows."
     }
   },
   {
@@ -33129,6 +36304,60 @@
           "totalDonations": 3000
         }
       ]
+    }
+  },
+  {
+    "name": "proxypy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "proxy.py"
+      }
+    ],
+    "github": {
+      "repo": "abhinavsingh/proxy.py"
+    },
+    "opencollective": {
+      "id": 62596,
+      "name": "proxy.py",
+      "slug": "proxypy",
+      "description": "Lightweight, Programmable, TLS interceptor Proxy for HTTP(S), HTTP2, WebSockets protocols in a single Python file"
+    }
+  },
+  {
+    "name": "proyecto26",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Proyecto26.RestClient"
+      }
+    ],
+    "github": {
+      "org": "proyecto26"
+    },
+    "opencollective": {
+      "id": 44953,
+      "name": "Proyecto 26",
+      "slug": "proyecto26",
+      "description": "Changing the world with small contributions"
+    }
+  },
+  {
+    "name": "psutil",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "psutil"
+      }
+    ],
+    "github": {
+      "repo": "giampaolo/psutil"
+    },
+    "opencollective": {
+      "id": 132224,
+      "name": "psutil",
+      "slug": "psutil",
+      "description": "Cross-platform lib for process and system monitoring in Python "
     }
   },
   {
@@ -33480,6 +36709,42 @@
     }
   },
   {
+    "name": "pycasbin",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "casbin"
+      }
+    ],
+    "github": {
+      "repo": "casbin/pycasbin"
+    },
+    "opencollective": {
+      "id": 47920,
+      "name": "pycasbin",
+      "slug": "pycasbin",
+      "description": "An authorization library that supports access control models like ACL, RBAC, ABAC in Python"
+    }
+  },
+  {
+    "name": "pygad",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pygad"
+      }
+    ],
+    "github": {
+      "repo": "ahmedfgad/GeneticAlgorithmPython"
+    },
+    "opencollective": {
+      "id": 153645,
+      "name": "PyGAD",
+      "slug": "pygad",
+      "description": "Open-source project for building the genetic algorithm & training machine learning models."
+    }
+  },
+  {
     "name": "pygorithm",
     "packages": [
       {
@@ -33537,6 +36802,24 @@
     }
   },
   {
+    "name": "pytables",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "tables"
+      }
+    ],
+    "github": {
+      "org": "PyTables"
+    },
+    "opencollective": {
+      "id": 302442,
+      "name": "PyTables",
+      "slug": "pytables",
+      "description": "PyTables is an efficient method for storing and querying both numerical and textual data."
+    }
+  },
+  {
     "name": "pytest",
     "packages": [
       {
@@ -33587,6 +36870,24 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "pytest",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pytest"
+      }
+    ],
+    "github": {
+      "repo": "pytest-dev/pytest"
+    },
+    "opencollective": {
+      "id": 48575,
+      "name": "pytest",
+      "slug": "pytest",
+      "description": "The pytest framework makes it easy to write small tests, yet scales to support complex functional testing"
     }
   },
   {
@@ -33643,6 +36944,24 @@
           "totalDonations": 31000
         }
       ]
+    }
+  },
+  {
+    "name": "pywebview",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "pywebview"
+      }
+    ],
+    "github": {
+      "repo": "r0x0r/pywebview"
+    },
+    "opencollective": {
+      "id": 48251,
+      "name": "pywebview",
+      "slug": "pywebview",
+      "description": "Build GUI for your Python program with JavaScript, HTML, and CSS"
     }
   },
   {
@@ -33709,6 +37028,24 @@
     }
   },
   {
+    "name": "quantecon",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "quantecon"
+      }
+    ],
+    "github": {
+      "org": "QuantEcon"
+    },
+    "opencollective": {
+      "id": 302469,
+      "name": "QuantEcon",
+      "slug": "quantecon",
+      "description": "QuantEcon is dedicated to improving economic modeling by providing and enhancing open source computational tools for economists."
+    }
+  },
+  {
     "name": "query-string",
     "packages": [
       {
@@ -33716,6 +37053,24 @@
         "name": "query-string"
       }
     ]
+  },
+  {
+    "name": "querylist",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "jaeger/querylist"
+      }
+    ],
+    "github": {
+      "repo": "jae-jae/QueryList"
+    },
+    "opencollective": {
+      "id": 146062,
+      "name": "QueryList",
+      "slug": "querylist",
+      "description": "Easy data crawling"
+    }
   },
   {
     "name": "quine",
@@ -33903,6 +37258,24 @@
         }
       ],
       "sponsors": []
+    }
+  },
+  {
+    "name": "rdebug",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "rdebug/midi"
+      }
+    ],
+    "github": {
+      "repo": "didi/rdebug"
+    },
+    "opencollective": {
+      "id": 49551,
+      "name": "rdebug",
+      "slug": "rdebug",
+      "description": "Rdebug — Real Debugger"
     }
   },
   {
@@ -35948,6 +39321,14 @@
       {
         "type": "nuget",
         "name": "ReactiveUI.Events.XamEssentials"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.AndroidX"
+      },
+      {
+        "type": "nuget",
+        "name": "ReactiveUI.Blazor"
       }
     ],
     "github": {
@@ -36114,6 +39495,24 @@
     }
   },
   {
+    "name": "receiptmanager",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "receipt-parser-core"
+      }
+    ],
+    "github": {
+      "org": "ReceiptManager"
+    },
+    "opencollective": {
+      "id": 267391,
+      "name": "ReceiptManager",
+      "slug": "receiptmanager",
+      "description": "Building an open platform for scanning and managing receipts "
+    }
+  },
+  {
     "name": "rectorphp",
     "packages": [
       {
@@ -36181,6 +39580,24 @@
           "totalDonations": 500
         }
       ]
+    }
+  },
+  {
+    "name": "redlock-php",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "ronnylt/redlock-php"
+      }
+    ],
+    "github": {
+      "repo": "ronnylt/redlock-php"
+    },
+    "opencollective": {
+      "id": 153675,
+      "name": "Redlock PHP",
+      "slug": "redlock-php",
+      "description": "Open Source"
     }
   },
   {
@@ -36554,6 +39971,24 @@
     }
   },
   {
+    "name": "rembg",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "rembg"
+      }
+    ],
+    "github": {
+      "repo": "danielgatis/rembg"
+    },
+    "opencollective": {
+      "id": 246869,
+      "name": "Rembg",
+      "slug": "rembg",
+      "description": "Rembg is a tool to remove images background."
+    }
+  },
+  {
     "name": "renative",
     "packages": [
       {
@@ -36780,6 +40215,24 @@
     }
   },
   {
+    "name": "rillrate",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "rillrate"
+      }
+    ],
+    "github": {
+      "org": "rillrate"
+    },
+    "opencollective": {
+      "id": 425027,
+      "name": "RillRate",
+      "slug": "rillrate",
+      "description": "Real-time UI for bots, microservices, and IoT"
+    }
+  },
+  {
     "name": "rimraf",
     "packages": [
       {
@@ -36850,6 +40303,24 @@
         "balance": 65709,
         "yearlyBudget": 93816
       }
+    }
+  },
+  {
+    "name": "rize-uri-template",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "rize/uri-template"
+      }
+    ],
+    "github": {
+      "repo": "rize/UriTemplate"
+    },
+    "opencollective": {
+      "id": 57257,
+      "name": "PHP URI Template (RFC 6570)",
+      "slug": "rize-uri-template",
+      "description": "PHP URI Template (RFC 6570) supports both URI expansion & extraction"
     }
   },
   {
@@ -37674,6 +41145,50 @@
     }
   },
   {
+    "name": "sage_math",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cysignals"
+      }
+    ],
+    "github": {
+      "org": "sagemath"
+    },
+    "opencollective": {
+      "id": 158548,
+      "name": "SageMath",
+      "slug": "sage_math",
+      "description": "Creating a viable free open source alternative to Magma, Maple, Mathematica and Matlab"
+    }
+  },
+  {
+    "name": "sanic-org",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "sanic"
+      },
+      {
+        "type": "pypi",
+        "name": "sanic-ext"
+      },
+      {
+        "type": "pypi",
+        "name": "sanic-openapi"
+      }
+    ],
+    "github": {
+      "org": "sanic-org"
+    },
+    "opencollective": {
+      "id": 203127,
+      "name": "Sanic Community Organization",
+      "slug": "sanic-org",
+      "description": "Async Python 3.7+ web server/framework | Build fast. Run fast. "
+    }
+  },
+  {
     "name": "satellizer",
     "packages": [
       {
@@ -37706,6 +41221,86 @@
     }
   },
   {
+    "name": "scanapi",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "scanapi"
+      }
+    ],
+    "github": {
+      "org": "scanapi"
+    },
+    "opencollective": {
+      "id": 267156,
+      "name": "ScanAPI",
+      "slug": "scanapi",
+      "description": "Automated Integration Testing and Live Documentation for your API"
+    }
+  },
+  {
+    "name": "schema-net",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Schema.NET"
+      },
+      {
+        "type": "nuget",
+        "name": "Schema.NET.Pending"
+      }
+    ],
+    "github": {
+      "repo": "RehanSaeed/Schema.NET"
+    },
+    "opencollective": {
+      "id": 65801,
+      "name": "Schema.NET",
+      "slug": "schema-net",
+      "description": "Schema.org objects turned into strongly typed C# POCO classes for use in .NET. All classes can be serialized into JSON/JSON-LD and XML, typically used to represent structured data in the head section of html page."
+    }
+  },
+  {
+    "name": "schemathesis",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "schemathesis"
+      }
+    ],
+    "github": {
+      "repo": "schemathesis/schemathesis"
+    },
+    "opencollective": {
+      "id": 188164,
+      "name": "Schemathesis",
+      "slug": "schemathesis",
+      "description": "A modern API testing tool for web applications built with Open API and GraphQL specifications."
+    }
+  },
+  {
+    "name": "school-api",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "school-api"
+      },
+      {
+        "type": "pypi",
+        "name": "School-Api"
+      }
+    ],
+    "github": {
+      "repo": "dairoot/school-api"
+    },
+    "opencollective": {
+      "id": 118102,
+      "name": "School Api",
+      "slug": "school-api",
+      "description": "school sdk "
+    }
+  },
+  {
     "name": "scikit-learn",
     "packages": [
       {
@@ -37731,6 +41326,42 @@
     }
   },
   {
+    "name": "scikit-opt",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "scikit-opt"
+      }
+    ],
+    "github": {
+      "repo": "guofei9987/scikit-opt"
+    },
+    "opencollective": {
+      "id": 245312,
+      "name": "Scikit Opt",
+      "slug": "scikit-opt",
+      "description": "Genetic Algorithm, Particle Swarm Optimization, Simulated Annealing, Ant Colony Optimization Algorithm,Immune Algorithm, Artificial Fish Swarm Algorithm"
+    }
+  },
+  {
+    "name": "sciml",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "diffeqpy"
+      }
+    ],
+    "github": {
+      "org": "SciML"
+    },
+    "opencollective": {
+      "id": 303049,
+      "name": "SciML",
+      "slug": "sciml",
+      "description": "SciML is an open source software organization created to unify the packages for scientific machine learning."
+    }
+  },
+  {
     "name": "scion",
     "packages": [
       {
@@ -37752,6 +41383,28 @@
         "yearlyBudget": 60000
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "scipy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "oldest-supported-numpy"
+      },
+      {
+        "type": "pypi",
+        "name": "scipy"
+      }
+    ],
+    "github": {
+      "org": "scipy"
+    },
+    "opencollective": {
+      "id": 303056,
+      "name": "SciPy",
+      "slug": "scipy",
+      "description": "SciPy (pronounced “Sigh Pie”) is a Python-based ecosystem of open-source software for mathematics, science, and engineering."
     }
   },
   {
@@ -37835,6 +41488,24 @@
     }
   },
   {
+    "name": "secure-headers",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "bepsvpt/secure-headers"
+      }
+    ],
+    "github": {
+      "repo": "bepsvpt/secure-headers"
+    },
+    "opencollective": {
+      "id": 97407,
+      "name": "bepsvpt/secure-headers",
+      "slug": "secure-headers",
+      "description": "PHP Secure Headers"
+    }
+  },
+  {
     "name": "selection-sharer",
     "packages": [
       {
@@ -37875,6 +41546,40 @@
         "name": "semver"
       }
     ]
+  },
+  {
+    "name": "serilog-exceptions",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Serilog.Exceptions.MsSqlServer"
+      },
+      {
+        "type": "nuget",
+        "name": "Serilog.Exceptions"
+      },
+      {
+        "type": "nuget",
+        "name": "Serilog.Exceptions.SqlServer"
+      },
+      {
+        "type": "nuget",
+        "name": "Microsoft.Data.SqlClient"
+      },
+      {
+        "type": "nuget",
+        "name": "Serilog.Exceptions.EntityFrameworkCore"
+      }
+    ],
+    "github": {
+      "repo": "RehanSaeed/Serilog.Exceptions"
+    },
+    "opencollective": {
+      "id": 65833,
+      "name": "Serilog.Exceptions",
+      "slug": "serilog-exceptions",
+      "description": "Log exception details and custom properties that are not output in Exception.ToString()."
+    }
   },
   {
     "name": "sharejs",
@@ -37932,6 +41637,24 @@
         "name": "shelljs"
       }
     ]
+  },
+  {
+    "name": "shieldon",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "shieldon/shieldon"
+      }
+    ],
+    "github": {
+      "repo": "terrylinooo/shieldon"
+    },
+    "opencollective": {
+      "id": 48661,
+      "name": "Shieldon",
+      "slug": "shieldon",
+      "description": "A PHP library that provides anti-scraping and online session control."
+    }
   },
   {
     "name": "shields",
@@ -38029,6 +41752,64 @@
     }
   },
   {
+    "name": "shogun-toolbox",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "tflogger"
+      }
+    ],
+    "github": {
+      "org": "shogun-toolbox"
+    },
+    "opencollective": {
+      "id": 303061,
+      "name": "Shogun ML Toolbox",
+      "slug": "shogun-toolbox",
+      "description": "The Shogun Machine Learning Toolbox is devoted to making machine learning tools available for free, to everyone."
+    }
+  },
+  {
+    "name": "shouldly",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Shouldly"
+      },
+      {
+        "type": "nuget",
+        "name": "shouldly"
+      }
+    ],
+    "github": {
+      "org": "shouldly"
+    },
+    "opencollective": {
+      "id": 172538,
+      "name": "Shouldly",
+      "slug": "shouldly",
+      "description": "Shouldly is an assertion framework which focuses on giving great error messages when the assertion fails while being simple and terse."
+    }
+  },
+  {
+    "name": "shrine",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "shrine"
+      }
+    ],
+    "github": {
+      "repo": "shrinerb/shrine"
+    },
+    "opencollective": {
+      "id": 146942,
+      "name": "Shrine",
+      "slug": "shrine",
+      "description": "Simplify handling file uploads in your Ruby application"
+    }
+  },
+  {
     "name": "sianet",
     "opencollective": {
       "id": 10385,
@@ -38054,6 +41835,24 @@
     ],
     "github": {
       "repo": "deepakkumar1984/SiaNet"
+    }
+  },
+  {
+    "name": "sickrage",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "sickrage"
+      }
+    ],
+    "github": {
+      "org": "SiCKRAGE"
+    },
+    "opencollective": {
+      "id": 113368,
+      "name": "SiCKRAGE",
+      "slug": "sickrage",
+      "description": "SiCKRAGE is a automated TV show manager"
     }
   },
   {
@@ -38238,6 +42037,24 @@
     }
   },
   {
+    "name": "sim-c",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "simc"
+      }
+    ],
+    "github": {
+      "org": "cimplec"
+    },
+    "opencollective": {
+      "id": 200251,
+      "name": "sim-C",
+      "slug": "sim-c",
+      "description": "Support development of sim-C"
+    }
+  },
+  {
     "name": "simple-injector",
     "packages": [
       {
@@ -38263,6 +42080,60 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "simplestatemachine",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "SimpleStateMachineLibrary"
+      }
+    ],
+    "github": {
+      "org": "SimpleStateMachine"
+    },
+    "opencollective": {
+      "id": 270938,
+      "name": "SimpleStateMachine",
+      "slug": "simplestatemachine",
+      "description": "Easy-to-use tools for working with state machines, parsers and analyzers"
+    }
+  },
+  {
+    "name": "simpleui",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "django-simpleui"
+      }
+    ],
+    "github": {
+      "repo": "newpanjing/simpleui"
+    },
+    "opencollective": {
+      "id": 44229,
+      "name": "simpleui",
+      "slug": "simpleui",
+      "description": "🚀simpleui是一个django admin theme 主题 。基于element-ui+vue开发的主题，重写和优化90%以上的页面。 🍉如果喜欢记得给个🌟star哦"
+    }
+  },
+  {
+    "name": "simplexlsx",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "shuchkin/simplexlsx"
+      }
+    ],
+    "github": {
+      "repo": "shuchkin/simplexlsx"
+    },
+    "opencollective": {
+      "id": 205301,
+      "name": "SimpleXLSX",
+      "slug": "simplexlsx",
+      "description": "Read data easily"
     }
   },
   {
@@ -41948,6 +45819,28 @@
     }
   },
   {
+    "name": "site-prism",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "site_prism"
+      },
+      {
+        "type": "gem",
+        "name": "site_prism-all_there"
+      }
+    ],
+    "github": {
+      "org": "site-prism"
+    },
+    "opencollective": {
+      "id": 225769,
+      "name": "SitePrism",
+      "slug": "site-prism",
+      "description": "Page Object Framework for Ruby Automation"
+    }
+  },
+  {
     "name": "skatejs",
     "packages": [
       {
@@ -42029,6 +45922,42 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "slimphp",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "slim/slim"
+      }
+    ],
+    "github": {
+      "repo": "slimphp/Slim"
+    },
+    "opencollective": {
+      "id": 45391,
+      "name": "Slim Framework",
+      "slug": "slimphp",
+      "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs."
+    }
+  },
+  {
+    "name": "slowloris",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "Slowloris"
+      }
+    ],
+    "github": {
+      "repo": "gkbrk/slowloris"
+    },
+    "opencollective": {
+      "id": 249389,
+      "name": "Slowloris",
+      "slug": "slowloris",
+      "description": "Develop, maintain and improve the Slowloris DoS testing tool"
     }
   },
   {
@@ -42864,6 +46793,42 @@
     }
   },
   {
+    "name": "sqlitebiter",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "sqlitebiter"
+      }
+    ],
+    "github": {
+      "repo": "thombashi/sqlitebiter"
+    },
+    "opencollective": {
+      "id": 113005,
+      "name": "sqlitebiter",
+      "slug": "sqlitebiter",
+      "description": "A CLI tool to convert CSV / Excel / HTML / JSON / Jupyter Notebook / LDJSON / LTSV / Markdown / SQLite / SSV / TSV / Google-Sheets to a SQLite database file."
+    }
+  },
+  {
+    "name": "sqlkata",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "SqlKata"
+      }
+    ],
+    "github": {
+      "org": "sqlkata"
+    },
+    "opencollective": {
+      "id": 145415,
+      "name": "Sqlkata",
+      "slug": "sqlkata",
+      "description": "Build dynamic Sql Queries, for beautiful reports and dashboards"
+    }
+  },
+  {
     "name": "squirrelly",
     "packages": [
       {
@@ -42921,6 +46886,54 @@
     ],
     "github": {
       "repo": "gliderlabs/ssh"
+    }
+  },
+  {
+    "name": "sshnet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "SshNet.Security.Cryptography"
+      },
+      {
+        "type": "nuget",
+        "name": "SSH.NET"
+      }
+    ],
+    "github": {
+      "org": "sshnet"
+    },
+    "opencollective": {
+      "id": 127240,
+      "name": "SSH.NET",
+      "slug": "sshnet",
+      "description": "Proide a Secure Shell (SSH) library for .NET, optimized for parallelism"
+    }
+  },
+  {
+    "name": "sshportal",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "moul.io/sshportal"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/moul/sshportal"
+      },
+      {
+        "type": "dep",
+        "name": "golang.org/x/crypto/ssh"
+      }
+    ],
+    "github": {
+      "repo": "moul/sshportal"
+    },
+    "opencollective": {
+      "id": 50312,
+      "name": "sshportal",
+      "slug": "sshportal",
+      "description": ":tophat: simple, fun and transparent SSH (and telnet) bastion"
     }
   },
   {
@@ -43040,6 +47053,28 @@
           "totalDonations": 1600
         }
       ]
+    }
+  },
+  {
+    "name": "storagedotnet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Storage.Net"
+      },
+      {
+        "type": "nuget",
+        "name": "Storage.Net.Microsoft.Azure.Storage.Blobs"
+      }
+    ],
+    "github": {
+      "repo": "aloneguid/storage"
+    },
+    "opencollective": {
+      "id": 49351,
+      "name": "Storage.Net",
+      "slug": "storagedotnet",
+      "description": "💾 Storage abstractions with implementations for .NET/.NET Standard"
     }
   },
   {
@@ -43481,6 +47516,24 @@
     }
   },
   {
+    "name": "strawberry-graphql",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "strawberry-graphql"
+      }
+    ],
+    "github": {
+      "org": "strawberry-graphql"
+    },
+    "opencollective": {
+      "id": 242064,
+      "name": "Strawberry GraphQL",
+      "slug": "strawberry-graphql",
+      "description": "Strawberry is a Python library for creating GraphQL APIs using type hints"
+    }
+  },
+  {
     "name": "streamlink",
     "packages": [
       {
@@ -43896,6 +47949,64 @@
     }
   },
   {
+    "name": "summernote",
+    "packages": [
+      {
+        "type": "gem",
+        "name": "summernote-rails"
+      }
+    ],
+    "github": {
+      "org": "summernote"
+    },
+    "opencollective": {
+      "id": 122656,
+      "name": "Summernote",
+      "slug": "summernote",
+      "description": "Super simple WYSIWYG editor"
+    }
+  },
+  {
+    "name": "sunpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "ndcube"
+      },
+      {
+        "type": "pypi",
+        "name": "sunkit-image"
+      }
+    ],
+    "github": {
+      "org": "sunpy"
+    },
+    "opencollective": {
+      "id": 303067,
+      "name": "SunPy",
+      "slug": "sunpy",
+      "description": "SunPy is a Python-based software library that provides tools for performing research using direct observations of the Sun and Heliosphere."
+    }
+  },
+  {
+    "name": "supabase-python",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "supabase-py"
+      }
+    ],
+    "github": {
+      "repo": "supabase/supabase-py"
+    },
+    "opencollective": {
+      "id": 282594,
+      "name": "Python Client Libraries",
+      "slug": "supabase-python",
+      "description": "Supabase Python Client Libraries"
+    }
+  },
+  {
     "name": "superagent",
     "packages": [
       {
@@ -44094,6 +48205,24 @@
           "totalDonations": 2000
         }
       ]
+    }
+  },
+  {
+    "name": "sweet-alert",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "realrashid/sweet-alert"
+      }
+    ],
+    "github": {
+      "repo": "realrashid/sweet-alert"
+    },
+    "opencollective": {
+      "id": 38473,
+      "name": "SweetAlert2",
+      "slug": "sweet-alert",
+      "description": "A BEAUTIFUL, RESPONSIVE, CUSTOMIZABLE, ACCESSIBLE (WAI-ARIA) REPLACEMENT FOR JAVASCRIPT'S POPUP BOXES FOR LARAVEL"
     }
   },
   {
@@ -44785,6 +48914,24 @@
     }
   },
   {
+    "name": "sympy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "sympy"
+      }
+    ],
+    "github": {
+      "repo": "sympy/sympy"
+    },
+    "opencollective": {
+      "id": 262700,
+      "name": "SymPy",
+      "slug": "sympy",
+      "description": "SymPy is a library for symbolic mathematics, which means performing mathematical calculations exactly."
+    }
+  },
+  {
     "name": "systemjs",
     "packages": [
       {
@@ -45064,6 +49211,24 @@
         "yearlyBudget": 46960
       },
       "goals": []
+    }
+  },
+  {
+    "name": "tahoe-lafs",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "tahoe-lafs"
+      }
+    ],
+    "github": {
+      "repo": "tahoe-lafs/tahoe-lafs"
+    },
+    "opencollective": {
+      "id": 129584,
+      "name": "Tahoe-LAFS",
+      "slug": "tahoe-lafs",
+      "description": "Tahoe-LAFS is a free and open, secure, decentralized, fault-tolerant, distributed data store and distributed file system."
     }
   },
   {
@@ -45510,6 +49675,24 @@
     }
   },
   {
+    "name": "techx",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "PyQuillSSO"
+      }
+    ],
+    "github": {
+      "org": "techx"
+    },
+    "opencollective": {
+      "id": 65784,
+      "name": "MIT TechX",
+      "slug": "techx",
+      "description": null
+    }
+  },
+  {
     "name": "telegraf",
     "packages": [
       {
@@ -45531,6 +49714,24 @@
         "yearlyBudget": 234
       },
       "goals": []
+    }
+  },
+  {
+    "name": "telegram-bot-sdk",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "irazasyed/telegram-bot-sdk"
+      }
+    ],
+    "github": {
+      "repo": "irazasyed/telegram-bot-sdk"
+    },
+    "opencollective": {
+      "id": 121912,
+      "name": "Telegram Bot SDK",
+      "slug": "telegram-bot-sdk",
+      "description": "Build Telegram Chat Bots Easily! "
     }
   },
   {
@@ -45703,6 +49904,110 @@
     }
   },
   {
+    "name": "testcontainers",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "TestContainers"
+      },
+      {
+        "type": "pypi",
+        "name": "testcontainers"
+      }
+    ],
+    "github": {
+      "org": "testcontainers"
+    },
+    "opencollective": {
+      "id": 139761,
+      "name": "Testcontainers",
+      "slug": "testcontainers",
+      "description": "The tool that makes integrated testing awesome"
+    }
+  },
+  {
+    "name": "textpattern-collective",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "textpattern/com_connect"
+      }
+    ],
+    "github": {
+      "org": "textpattern"
+    },
+    "opencollective": {
+      "id": 179236,
+      "name": "Textpattern",
+      "slug": "textpattern-collective",
+      "description": "We are the people behind Textpattern CMS, a flexible, elegant, fast and easy-to-use content management system written in PHP. We strive to keep the system small, nimble and tracking-free."
+    }
+  },
+  {
+    "name": "the-bug-genie",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "thebuggenie/b2db"
+      },
+      {
+        "type": "composer",
+        "name": "thebuggenie/caspar"
+      },
+      {
+        "type": "composer",
+        "name": "thebuggenie/thebuggenie"
+      }
+    ],
+    "github": {
+      "org": "thebuggenie"
+    },
+    "opencollective": {
+      "id": 130690,
+      "name": "The Bug Genie",
+      "slug": "the-bug-genie",
+      "description": "Building an open source project management tool eco system"
+    }
+  },
+  {
+    "name": "the-katzenpost-software-project",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/authority"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/catshadow"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/client"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/core"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/doubleratchet"
+      },
+      {
+        "type": "dep",
+        "name": "github.com/katzenpost/server"
+      }
+    ],
+    "github": {
+      "org": "katzenpost"
+    },
+    "opencollective": {
+      "id": 29898,
+      "name": "The Katzenpost software project",
+      "slug": "the-katzenpost-software-project",
+      "description": "Katzenpost is a free and open source software project dedicated to researching and developing mix networks so that people can communicate more freely."
+    }
+  },
+  {
     "name": "thelounge",
     "packages": [
       {
@@ -45756,6 +50061,43 @@
       },
       "goals": [{}],
       "sponsors": []
+    }
+  },
+  {
+    "name": "thetorproject",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "ooniprobe"
+      }
+    ],
+    "github": {
+      "org": "TheTorProject"
+    },
+    "opencollective": {
+      "id": 42049,
+      "name": "The Tor Project",
+      "slug": "thetorproject",
+      "description": "We advance human rights and defend your privacy online. Download Tor Browser for protection against tracking, surveillance, and censorship."
+    }
+  },
+  {
+    "name": "tilt",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/tilt-dev/tilt"
+      }
+    ],
+    "github": {
+      "repo": "windmilleng/tilt"
+    },
+    "opencollective": {
+      "id": 80236,
+      "name": "Tilt",
+      "slug": "tilt",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -45819,6 +50161,24 @@
         "yearlyBudget": 25344
       },
       "goals": [{}]
+    }
+  },
+  {
+    "name": "torchgan",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "torchgan"
+      }
+    ],
+    "github": {
+      "org": "torchgan"
+    },
+    "opencollective": {
+      "id": 41152,
+      "name": "torchgan",
+      "slug": "torchgan",
+      "description": "Research Framework for developing Generative Adversarial Networks"
     }
   },
   {
@@ -45904,6 +50264,24 @@
         "name": "tslint"
       }
     ]
+  },
+  {
+    "name": "tsqllint",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "TSQLLint.Common"
+      }
+    ],
+    "github": {
+      "org": "tsqllint"
+    },
+    "opencollective": {
+      "id": 316015,
+      "name": "TSQLLint",
+      "slug": "tsqllint",
+      "description": "Configurable linting for TSQL"
+    }
   },
   {
     "name": "turf",
@@ -46428,6 +50806,24 @@
     }
   },
   {
+    "name": "tus-php",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "ankitpokhrel/tus-php"
+      }
+    ],
+    "github": {
+      "repo": "ankitpokhrel/tus-php"
+    },
+    "opencollective": {
+      "id": 268694,
+      "name": "TusPHP",
+      "slug": "tus-php",
+      "description": "🚀 A pure PHP server and client for the tus resumable upload protocol v1.0.0"
+    }
+  },
+  {
     "name": "twitter-bootstrap-rails",
     "packages": [
       {
@@ -46457,6 +50853,24 @@
           "totalDonations": 5000
         }
       ]
+    }
+  },
+  {
+    "name": "twtxt",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "twtxt"
+      }
+    ],
+    "github": {
+      "repo": "buckket/twtxt"
+    },
+    "opencollective": {
+      "id": 55698,
+      "name": "twtxt",
+      "slug": "twtxt",
+      "description": "Decentralised, minimalist microblogging service for hackers."
     }
   },
   {
@@ -46751,6 +51165,32 @@
     }
   },
   {
+    "name": "uavcan",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "nunavut"
+      },
+      {
+        "type": "pypi",
+        "name": "pyuavcan"
+      },
+      {
+        "type": "pypi",
+        "name": "yakut"
+      }
+    ],
+    "github": {
+      "org": "UAVCAN"
+    },
+    "opencollective": {
+      "id": 90010,
+      "name": "UAVCAN",
+      "slug": "uavcan",
+      "description": "Open technology for real-time intravehicular distributed computing and communication based on modern networking standards (Ethernet, CAN FD, etc.)"
+    }
+  },
+  {
     "name": "uglify-js",
     "packages": [
       {
@@ -46917,6 +51357,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "ultroid",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "py-Ultroid"
+      }
+    ],
+    "github": {
+      "org": "TeamUltroid"
+    },
+    "opencollective": {
+      "id": 382931,
+      "name": "Ultroid",
+      "slug": "ultroid",
+      "description": "Develop a telegram userbot."
     }
   },
   {
@@ -48339,6 +52797,24 @@
     }
   },
   {
+    "name": "unimport",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "unimport"
+      }
+    ],
+    "github": {
+      "repo": "hakancelik96/unimport"
+    },
+    "opencollective": {
+      "id": 257212,
+      "name": "Unimport",
+      "slug": "unimport",
+      "description": "A linter, formatter for finding and removing unused import statements"
+    }
+  },
+  {
     "name": "uniread",
     "packages": [
       {
@@ -48410,6 +52886,66 @@
     ],
     "github": {
       "repo": "neuecc/UniRx"
+    }
+  },
+  {
+    "name": "unity-container",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Unity.Mvc"
+      },
+      {
+        "type": "nuget",
+        "name": "CommonServiceLocator"
+      },
+      {
+        "type": "nuget",
+        "name": "commonservicelocator"
+      },
+      {
+        "type": "nuget",
+        "name": "Unity.Interception"
+      },
+      {
+        "type": "nuget",
+        "name": "Unity.log4net"
+      },
+      {
+        "type": "nuget",
+        "name": "Unity.Microsoft.DependencyInjection"
+      },
+      {
+        "type": "nuget",
+        "name": "Unity.NLog"
+      }
+    ],
+    "github": {
+      "org": "unitycontainer"
+    },
+    "opencollective": {
+      "id": 267204,
+      "name": "Unity Container",
+      "slug": "unity-container",
+      "description": "The Unity Container (Unity IoC) is a full featured, extensible dependency injection container"
+    }
+  },
+  {
+    "name": "universaldatatool",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "universaldatatool"
+      }
+    ],
+    "github": {
+      "org": "UniversalDataTool"
+    },
+    "opencollective": {
+      "id": 161189,
+      "name": "Universal Data Tool",
+      "slug": "universaldatatool",
+      "description": "Artificial Intelligence development for everyone"
     }
   },
   {
@@ -48577,6 +53113,24 @@
     }
   },
   {
+    "name": "urllib3",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "urllib3"
+      }
+    ],
+    "github": {
+      "org": "urllib3"
+    },
+    "opencollective": {
+      "id": 158871,
+      "name": "urllib3",
+      "slug": "urllib3",
+      "description": "Python's most depended-on HTTP client library"
+    }
+  },
+  {
     "name": "userfrosting",
     "packages": [
       {
@@ -48620,6 +53174,42 @@
         "yearlyBudget": 55750
       },
       "goals": []
+    }
+  },
+  {
+    "name": "utensorai",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "utensor_cgen"
+      }
+    ],
+    "github": {
+      "org": "uTensor"
+    },
+    "opencollective": {
+      "id": 135057,
+      "name": "uTensor.ai",
+      "slug": "utensorai",
+      "description": "Help us to accelerate the development, share ideas, and build a community in embedded-ML/TinyML technology."
+    }
+  },
+  {
+    "name": "uvdesk",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "uvdesk/community-skeleton"
+      }
+    ],
+    "github": {
+      "repo": "uvdesk/community-skeleton"
+    },
+    "opencollective": {
+      "id": 66699,
+      "name": "Uvdesk Community Opensource",
+      "slug": "uvdesk",
+      "description": "Opensource UVDesk Community Helpdesk Project Skeleton built for all to make a full Ticket support system."
     }
   },
   {
@@ -48911,6 +53501,65 @@
         "balance": 386693,
         "yearlyBudget": 1198942
       }
+    }
+  },
+  {
+    "name": "video-to-ascii",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "video-to-ascii"
+      },
+      {
+        "type": "pypi",
+        "name": "video_to_ascii"
+      }
+    ],
+    "github": {
+      "repo": "joelibaceta/video-to-ascii"
+    },
+    "opencollective": {
+      "id": 47806,
+      "name": "video-to-ascii",
+      "slug": "video-to-ascii",
+      "description": "A geeky way to play videos in the terminal using ascii art"
+    }
+  },
+  {
+    "name": "virustotalapi",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "vt"
+      }
+    ],
+    "github": {
+      "repo": "doomedraven/VirusTotalApi"
+    },
+    "opencollective": {
+      "id": 109128,
+      "name": "VirusTotalApi",
+      "slug": "virustotalapi",
+      "description": "Python utility to interact with VT"
+    }
+  },
+  {
+    "name": "visidata",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "visidata"
+      }
+    ],
+    "github": {
+      "repo": "saulpw/visidata"
+    },
+    "opencollective": {
+      "id": 74246,
+      "name": "VisiData",
+      "slug": "visidata",
+      "description": null,
+      "pledge": true
     }
   },
   {
@@ -49532,6 +54181,24 @@
     }
   },
   {
+    "name": "wangkanai",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "wangkanai.detection"
+      }
+    ],
+    "github": {
+      "repo": "wangkanai/Detection"
+    },
+    "opencollective": {
+      "id": 54626,
+      "name": "wangkanai",
+      "slug": "wangkanai",
+      "description": "ASP.NET Core Detection service components for identifying details about client device, browser, engine, platform, & crawler."
+    }
+  },
+  {
     "name": "warriorjs",
     "packages": [
       {
@@ -49684,6 +54351,10 @@
       {
         "type": "pypi",
         "name": "Weblate"
+      },
+      {
+        "type": "pypi",
+        "name": "weblate"
       }
     ],
     "github": {
@@ -50238,6 +54909,10 @@
       {
         "type": "composer",
         "name": "overtrue/wechat"
+      },
+      {
+        "type": "composer",
+        "name": "w7corp/easywechat"
       }
     ],
     "github": {
@@ -50254,6 +54929,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "wechatpy",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "wechatpy"
+      }
+    ],
+    "github": {
+      "repo": "jxtech/wechatpy"
+    },
+    "opencollective": {
+      "id": 99412,
+      "name": "wechatpy",
+      "slug": "wechatpy",
+      "description": "WeChat SDK for Python"
     }
   },
   {
@@ -50337,6 +55030,90 @@
     }
   },
   {
+    "name": "weixinmpsdk",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.MP"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.MP.MVC"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.QY"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.Work"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.Open"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.Cache.Redis"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.Cache.Memcached"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.WxOpen"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.WebSocket"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.MP.CoreMVC"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.TenPay"
+      },
+      {
+        "type": "nuget",
+        "name": "Senparc.Weixin.MP.Mvc"
+      }
+    ],
+    "github": {
+      "repo": "JeffreySu/WeiXinMPSDK"
+    },
+    "opencollective": {
+      "id": 118807,
+      "name": "WeiXinMPSDK",
+      "slug": "weixinmpsdk",
+      "description": "Develop WeChat more easier!"
+    }
+  },
+  {
+    "name": "wemake-python-styleguide",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "wemake-python-styleguide"
+      }
+    ],
+    "github": {
+      "repo": "wemake-services/wemake-python-styleguide"
+    },
+    "opencollective": {
+      "id": 49259,
+      "name": "wemake-python-styleguide",
+      "slug": "wemake-python-styleguide",
+      "description": "The strictest and most opinionated python linter ever!"
+    }
+  },
+  {
     "name": "werobot",
     "packages": [
       {
@@ -50358,6 +55135,24 @@
       },
       "goals": [],
       "sponsors": []
+    }
+  },
+  {
+    "name": "wger",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "wger"
+      }
+    ],
+    "github": {
+      "org": "wger-project"
+    },
+    "opencollective": {
+      "id": 199995,
+      "name": "wger",
+      "slug": "wger",
+      "description": "Self hosted FLOSS fitness/workout and weight tracker"
     }
   },
   {
@@ -50526,6 +55321,74 @@
     }
   },
   {
+    "name": "wildgums-oss",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "orc.controls"
+      },
+      {
+        "type": "nuget",
+        "name": "orc.filterbuilder"
+      },
+      {
+        "type": "nuget",
+        "name": "orc.licensemanager.client"
+      },
+      {
+        "type": "nuget",
+        "name": "orc.logviewer"
+      },
+      {
+        "type": "nuget",
+        "name": "orc.wizard"
+      },
+      {
+        "type": "nuget",
+        "name": "Orchestra.Core"
+      },
+      {
+        "type": "nuget",
+        "name": "orchestra.core"
+      },
+      {
+        "type": "nuget",
+        "name": "Orchestra.Shell.Ribbon.Fluent"
+      },
+      {
+        "type": "nuget",
+        "name": "Orchestra.Shell.MahApp"
+      }
+    ],
+    "github": {
+      "org": "WildGums"
+    },
+    "opencollective": {
+      "id": 43945,
+      "name": "WildGums",
+      "slug": "wildgums-oss",
+      "description": "WildGums provides lots of open source WPF libraries based on Catel"
+    }
+  },
+  {
+    "name": "windowsfirewallhelper",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "WindowsFirewallHelper"
+      }
+    ],
+    "github": {
+      "repo": "falahati/WindowsFirewallHelper"
+    },
+    "opencollective": {
+      "id": 116587,
+      "name": "WindowsFirewallHelper",
+      "slug": "windowsfirewallhelper",
+      "description": "A class library to manage the Windows Firewall as well as adding your program to the Windows Firewall Exception list."
+    }
+  },
+  {
     "name": "winston",
     "github": {
       "org": "winstonjs"
@@ -50536,6 +55399,98 @@
         "name": "winston"
       }
     ]
+  },
+  {
+    "name": "wintercms",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "winter/storm"
+      },
+      {
+        "type": "composer",
+        "name": "wintercms/winter"
+      },
+      {
+        "type": "composer",
+        "name": "winter/wn-blog-plugin"
+      },
+      {
+        "type": "composer",
+        "name": "winter/wn-builder-plugin"
+      },
+      {
+        "type": "composer",
+        "name": "winter/wn-test-plugin"
+      },
+      {
+        "type": "composer",
+        "name": "winter/wn-tinypng-plugin"
+      }
+    ],
+    "github": {
+      "org": "wintercms"
+    },
+    "opencollective": {
+      "id": 263299,
+      "name": "Winter CMS",
+      "slug": "wintercms",
+      "description": "Building a simple CMS platform and ecosystem to make development enjoyable."
+    }
+  },
+  {
+    "name": "wiremocknet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "WireMock.Net"
+      }
+    ],
+    "github": {
+      "org": "WireMock-Net"
+    },
+    "opencollective": {
+      "id": 282506,
+      "name": "WireMock.Net",
+      "slug": "wiremocknet",
+      "description": "WireMock.Net is a flexible library for stubbing and mocking web HTTP responses using request matching and response templating."
+    }
+  },
+  {
+    "name": "wolff",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "usbac/wolff"
+      }
+    ],
+    "github": {
+      "repo": "Usbac/wolff"
+    },
+    "opencollective": {
+      "id": 90741,
+      "name": "Wolff",
+      "slug": "wolff",
+      "description": "🐺 Ridiculously small PHP framework for building web apps"
+    }
+  },
+  {
+    "name": "woographql",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "wp-graphql/wp-graphql-woocommerce"
+      }
+    ],
+    "github": {
+      "repo": "wp-graphql/wp-graphql-woocommerce"
+    },
+    "opencollective": {
+      "id": 93328,
+      "name": "WPGraphQL WooCommerce (WooGraphQL)",
+      "slug": "woographql",
+      "description": "Add WooCommerce support and functionality to your WPGraphQL server"
+    }
   },
   {
     "name": "wpgulp",
@@ -50562,6 +55517,24 @@
     }
   },
   {
+    "name": "wponion",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "wponion/wponion"
+      }
+    ],
+    "github": {
+      "repo": "wponion/wponion"
+    },
+    "opencollective": {
+      "id": 123385,
+      "name": "WPOnion",
+      "slug": "wponion",
+      "description": "~ Lightweight, Flexible & Rapid WP Development Framework ~ "
+    }
+  },
+  {
     "name": "ws",
     "packages": [
       {
@@ -50569,6 +55542,42 @@
         "name": "ws"
       }
     ]
+  },
+  {
+    "name": "x-prober",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kmvan/prober"
+      }
+    ],
+    "github": {
+      "repo": "kmvan/x-prober"
+    },
+    "opencollective": {
+      "id": 26604,
+      "name": "x-prober",
+      "slug": "x-prober",
+      "description": "Make a better PHP prober."
+    }
+  },
+  {
+    "name": "xarray",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "xarray"
+      }
+    ],
+    "github": {
+      "repo": "pydata/xarray"
+    },
+    "opencollective": {
+      "id": 303074,
+      "name": "xarray",
+      "slug": "xarray",
+      "description": "Xarray is an open source library with high-level, easy-to-use data structures and analysis tools for multidimensional labeled datasets and arrays in Python."
+    }
   },
   {
     "name": "xgboost",
@@ -50778,6 +55787,24 @@
         "yearlyBudget": 0
       },
       "goals": []
+    }
+  },
+  {
+    "name": "yandex-music",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "yandex-music"
+      }
+    ],
+    "github": {
+      "repo": "MarshalX/yandex-music-api"
+    },
+    "opencollective": {
+      "id": 79146,
+      "name": "API Yandex Music",
+      "slug": "yandex-music",
+      "description": "Неофициальная библиотека для работы с API сервиса Яндекс.Музыка"
     }
   },
   {
@@ -51055,6 +56082,172 @@
     }
   },
   {
+    "name": "yii2-export",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-export"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-export"
+    },
+    "opencollective": {
+      "id": 47459,
+      "name": "yii2-export",
+      "slug": "yii2-export",
+      "description": "A library to export server/db data in various formats (e.g. excel, html, pdf, csv etc.)"
+    }
+  },
+  {
+    "name": "yii2-grid",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-grid"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-grid"
+    },
+    "opencollective": {
+      "id": 47458,
+      "name": "yii2-grid",
+      "slug": "yii2-grid",
+      "description": "Enhanced GridView with various utilities for Yii Framework 2.0"
+    }
+  },
+  {
+    "name": "yii2-mpdf",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-mpdf"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-mpdf"
+    },
+    "opencollective": {
+      "id": 47463,
+      "name": "yii2-mpdf",
+      "slug": "yii2-mpdf",
+      "description": "A Yii2 wrapper component for the mPDF library which generates PDF files from UTF-8 encoded HTML."
+    }
+  },
+  {
+    "name": "yii2-tree-manager",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-tree-manager"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-tree-manager"
+    },
+    "opencollective": {
+      "id": 47461,
+      "name": "yii2-tree-manager",
+      "slug": "yii2-tree-manager",
+      "description": "An advanced tree management module using nested sets for Yii 2."
+    }
+  },
+  {
+    "name": "yii2-widget-fileinput",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-widget-fileinput"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-widget-fileinput"
+    },
+    "opencollective": {
+      "id": 47464,
+      "name": "yii2-widget-fileinput",
+      "slug": "yii2-widget-fileinput",
+      "description": "An enhanced FileInput widget for Bootstrap 3.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)"
+    }
+  },
+  {
+    "name": "yii2-widget-select2",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-widget-select2"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-widget-select2"
+    },
+    "opencollective": {
+      "id": 47462,
+      "name": "yii2-widget-select2",
+      "slug": "yii2-widget-select2",
+      "description": "Enhanced Yii2 wrapper for the Select2 jQuery plugin (sub repo split from yii2-widgets)."
+    }
+  },
+  {
+    "name": "yii2-widgets",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "kartik-v/yii2-widgets"
+      }
+    ],
+    "github": {
+      "repo": "kartik-v/yii2-widgets"
+    },
+    "opencollective": {
+      "id": 47466,
+      "name": "yii2-widgets",
+      "slug": "yii2-widgets",
+      "description": "Collection of useful widgets for Yii Framework 2.0"
+    }
+  },
+  {
+    "name": "yiisoft",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "yiisoft/yii2"
+      },
+      {
+        "type": "composer",
+        "name": "yiisoft/yii2-dev"
+      }
+    ],
+    "github": {
+      "repo": "yiisoft/yii2"
+    },
+    "opencollective": {
+      "id": 30649,
+      "name": "Yii Software",
+      "slug": "yiisoft",
+      "description": "Yii PHP framework"
+    }
+  },
+  {
+    "name": "yorkie",
+    "packages": [
+      {
+        "type": "dep",
+        "name": "github.com/yorkie-team/yorkie"
+      }
+    ],
+    "github": {
+      "org": "yorkie-team"
+    },
+    "opencollective": {
+      "id": 122414,
+      "name": "Yorkie",
+      "slug": "yorkie",
+      "description": "Building an open source document store for building collaborative editing applications."
+    }
+  },
+  {
     "name": "yoshino",
     "packages": [
       {
@@ -51208,6 +56401,98 @@
     }
   },
   {
+    "name": "yt-project",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "cmyt"
+      },
+      {
+        "type": "pypi",
+        "name": "unyt"
+      },
+      {
+        "type": "pypi",
+        "name": "yt"
+      },
+      {
+        "type": "pypi",
+        "name": "yt-astro-analysis"
+      },
+      {
+        "type": "pypi",
+        "name": "yt_astro_analysis"
+      },
+      {
+        "type": "pypi",
+        "name": "yt_idv"
+      }
+    ],
+    "github": {
+      "org": "yt-project"
+    },
+    "opencollective": {
+      "id": 303076,
+      "name": "yt Project",
+      "slug": "yt-project",
+      "description": "yt is an open-source, permissively-licensed python package for analyzing and visualizing volumetric data."
+    }
+  },
+  {
+    "name": "ytmdl",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "ytmdl"
+      }
+    ],
+    "github": {
+      "repo": "deepjyoti30/ytmdl"
+    },
+    "opencollective": {
+      "id": 194514,
+      "name": "Ytmdl",
+      "slug": "ytmdl",
+      "description": "Support the development of the app"
+    }
+  },
+  {
+    "name": "zarr",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "zarr"
+      }
+    ],
+    "github": {
+      "repo": "zarr-developers/zarr-python"
+    },
+    "opencollective": {
+      "id": 303077,
+      "name": "Zarr",
+      "slug": "zarr",
+      "description": "Zarr is a format for the storage of chunked, compressed, N-dimensional arrays. These documents describe the Zarr format and its Python implementation."
+    }
+  },
+  {
+    "name": "zipstream",
+    "packages": [
+      {
+        "type": "composer",
+        "name": "maennchen/zipstream-php"
+      }
+    ],
+    "github": {
+      "repo": "maennchen/ZipStream-PHP"
+    },
+    "opencollective": {
+      "id": 46534,
+      "name": "ZipStream",
+      "slug": "zipstream",
+      "description": ":floppy_disk: PHP ZIP Streaming Library"
+    }
+  },
+  {
     "name": "zulip",
     "packages": [
       {
@@ -51238,6 +56523,42 @@
           "totalDonations": 32500
         }
       ]
+    }
+  },
+  {
+    "name": "zvt",
+    "packages": [
+      {
+        "type": "pypi",
+        "name": "zvt"
+      }
+    ],
+    "github": {
+      "repo": "zvtvz/zvt"
+    },
+    "opencollective": {
+      "id": 175585,
+      "name": "zvt",
+      "slug": "zvt",
+      "description": "a trading framework for all markets"
+    }
+  },
+  {
+    "name": "zxingnet",
+    "packages": [
+      {
+        "type": "nuget",
+        "name": "ZXing.Net"
+      }
+    ],
+    "github": {
+      "repo": "micjahn/ZXing.Net"
+    },
+    "opencollective": {
+      "id": 96723,
+      "name": "ZXing.Net",
+      "slug": "zxingnet",
+      "description": ".Net port of the original java-based barcode reader and generator library zxing"
     }
   }
 ]
