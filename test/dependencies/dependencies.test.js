@@ -1,11 +1,11 @@
-import * as github from '../../src/lib/github';
+import * as github from '../../src/github';
 
-import { getDependenciesFromGithubRepo } from '../../src/lib/dependencies/data';
+import { getDependenciesFromGithubRepo } from '../../src/dependencies/data';
 import {
   detectDependencyFileType,
   detectProjectName,
   dependenciesStats,
-} from '../../src/lib/dependencies/utils';
+} from '../../src/dependencies/utils';
 
 import {
   bundlerFile,
