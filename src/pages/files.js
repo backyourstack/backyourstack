@@ -7,6 +7,7 @@ import { get } from 'lodash';
 import { Link, Router } from '../routes';
 
 import { postJson, getFilesData } from '../lib/fetch';
+import { parseToBoolean } from '../lib/utils';
 import { dependenciesStats } from '../lib/dependencies/utils';
 
 import Header from '../components/Header';
@@ -58,8 +59,8 @@ export default class Files extends React.Component {
       saving: false,
     };
     this.showBackMyStack =
-      props.showBackMyStack === 'true' ||
-      process.env.SHOW_BACK_MY_STACK === 'true';
+      parseToBoolean(props.showBackMyStack) ||
+      parseToBoolean(process.env.SHOW_BACK_MY_STACK);
   }
 
   componentDidMount() {

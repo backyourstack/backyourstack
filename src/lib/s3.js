@@ -4,13 +4,25 @@ import { v1 as uuid } from 'uuid';
 
 import logger from '../logger';
 
-const s3 = new S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_KEY,
-  apiVersion: '2006-03-01',
-});
+let s3;
 
 const Bucket = process.env.AWS_S3_BUCKET;
+
+const getS3 = () => {
+  if (!s3) {
+    if (!process.env.AWS_ACCESS_KEY_ID || process.env.AWS_SECRET_KEY) {
+      throw new Error(
+        'No AWS_ACCESS_KEY_ID and AWS_SECRET_KEY, set these environment keys to allow interaction with S3.',
+      );
+    }
+    s3 = new S3({
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
+      apiVersion: '2006-03-01',
+    });
+  }
+  return s3;
+};
 
 export const uploadFiles = async (files) => {
   const metadata = { objectKeys: [] };
@@ -33,7 +45,7 @@ export const saveFileToS3 = (Key, Body) => {
     ACL: 'public-read',
     ContentType: 'application/json',
   };
-  return s3.upload(uploadParam).promise();
+  return getS3().upload(uploadParam).promise();
 };
 
 export const saveProfile = async (profileId, repos) => {
@@ -67,13 +79,13 @@ export const getObjectList = (id) => {
     Bucket,
     Prefix: `${id}/`,
   };
-  return s3.listObjects(params).promise();
+  return getS3().listObjects(params).promise();
 };
 
 export const getFile = async (key) => {
   logger.debug(`Fetching file from S3: ${key}`);
   const params = { Bucket, Key: key };
-  const { Body } = await s3.getObject(params).promise();
+  const { Body } = await getS3().getObject(params).promise();
   return Body.toString('utf-8');
 };
 
@@ -99,7 +111,7 @@ export const getFiles = async (id) => {
 export const getObjectsMetadata = async (id) => {
   const params = { Bucket, Key: `${id}/dependencies.json` };
   try {
-    const { Body } = await s3.getObject(params).promise();
+    const { Body } = await getS3().getObject(params).promise();
     return JSON.parse(Body.toString('utf-8'));
   } catch (err) {
     return null;

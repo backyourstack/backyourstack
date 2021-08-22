@@ -35,7 +35,10 @@ import {
   getProfileOrder,
 } from '../lib/data';
 import { fetchDependenciesFileContent } from '../lib/dependencies/data';
-import { getDependenciesAvailableForBacking } from '../lib/utils';
+import {
+  getDependenciesAvailableForBacking,
+  parseToBoolean,
+} from '../lib/utils';
 import {
   uploadFiles,
   saveProfile,
@@ -248,7 +251,10 @@ nextApp.prepare().then(() => {
 
     const profile = data.profile;
     const dependenciesFile = await getObjectsMetadata(id); // get the content of dependencies.json on s3
-    const profileOrder = await getProfileOrder(id);
+    let profileOrder;
+    if (parseToBoolean(process.env.SHOW_BACK_MY_STACK)) {
+      profileOrder = await getProfileOrder(id);
+    }
     // Check if the profile has been saved before
     if (
       dependenciesFile &&
