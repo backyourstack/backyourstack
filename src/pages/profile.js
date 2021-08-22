@@ -64,6 +64,7 @@ export default class Profile extends React.Component {
     showBackMyStack: PropTypes.bool,
     excludedRepos: PropTypes.array,
     id: PropTypes.string,
+    order: PropTypes.object,
   };
 
   constructor(props) {

@@ -21,19 +21,27 @@ function dependencies(file) {
     /**
      * skip all lines that are comments
      */
-    if (line === '') return;
+    if (line === '') {
+      return;
+    }
     /**
      * skip all lines that are comments
      */
-    if (line.startsWith('#')) return;
+    if (line.startsWith('#')) {
+      return;
+    }
     /**
      * skip all lines that start with -
      */
-    if (line.startsWith('git+')) return;
+    if (line.startsWith('git+')) {
+      return;
+    }
     /**
      * skip all lines that start with -
      */
-    if (line.startsWith('-')) return;
+    if (line.startsWith('-')) {
+      return;
+    }
     /**
      * If none of the above are true:
      * pass the line to the parse function and push the result
