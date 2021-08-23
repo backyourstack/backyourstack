@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Router } from '../../src/routes';
-import Upload from '../../components/Upload';
+import HomepageUpload from './HomepageUpload';
 import UploadIcon from '../../public/static/img/homepage/upload-icon.svg';
 
 const onUpload = () => {
@@ -92,7 +92,7 @@ const UploadCard = ({ supportedFilesAsComponent }) => (
         dependency files. At the moment, we support {supportedFilesAsComponent}.
       </p>
       <div className="uploadContainer">
-        <Upload onUpload={onUpload} feedbackPosition="float" />
+        <HomepageUpload onUpload={onUpload} feedbackPosition="float" />
       </div>
       <p className="boxDescription">
         The uploaded files will not be shared with anyone and will be deleted

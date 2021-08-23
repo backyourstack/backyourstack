@@ -4,9 +4,9 @@ import Dropzone from 'react-dropzone';
 import fetch from 'cross-fetch';
 import classNames from 'classnames';
 
-import supportedFiles from '../src/dependencies/supported-files';
+import supportedFiles from '../../src/dependencies/supported-files';
 
-export default class Upload extends React.Component {
+export default class HomepageUpload extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onUpload: PropTypes.func,
@@ -74,34 +74,57 @@ export default class Upload extends React.Component {
               border-color: #9399a3;
               border-style: dashed;
               border-radius: 4px;
-              position: relative;
               color: #9399a3;
               font-size: 12px;
               cursor: pointer;
               transition-duration: 1s;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 72px;
             }
             .dropZoneComponent .text {
-              position: absolute;
-              width: 100%;
-              top: 15%;
               text-align: center;
             }
             .dropZoneComponent.active {
-              color: #7448ff;
-              border-color: #7448ff;
+              color: #3c5869;
+              border-color: #3c5869;
+              height: 72px;
             }
             .dropZoneComponent.error {
               border-color: #f53152;
               background-color: #fff2f4;
             }
             .dropZoneComponent:hover {
-              color: #7448ff;
-              border-color: #7448ff;
+              color: #272730;
             }
             .dropZoneComponent:active,
             .dropZoneComponent:focus {
-              color: #2e2e99;
-              border-color: #2e2e99;
+              border-color: #3c5869;
+            }
+            .activeDrag {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-around;
+              color: #3c5869;
+              padding-top: 16px;
+            }
+            @media screen and (min-width: 1194px) {
+              .uploadContainer,
+              .uploadWrapper,
+              .dropZoneComponent {
+                min-width: 280px;
+              }
+
+              .uploadContainer:hover,
+              .uploadWrapper:hover,
+              .dropZoneComponent:hover {
+                width: 287px;
+              }
+              .dropZoneComponent:hover {
+                height: 74px;
+              }
             }
           `}
         </style>
@@ -112,13 +135,8 @@ export default class Upload extends React.Component {
               font-size: 12px;
               transition-duration: 1s;
               opacity: 0;
+              display: none;
               color: #f53152;
-            }
-            .uploadFeedback.float {
-              position: absolute;
-              width: 200px;
-              right: 0;
-              margin-right: -220px;
             }
             .uploadFeedback.inside {
               text-align: center;
@@ -128,26 +146,44 @@ export default class Upload extends React.Component {
             }
             .uploadFeedback.error {
               opacity: 1;
+              display: block;
             }
           `}
         </style>
 
-        <Dropzone
-          onDrop={this.onDrop}
-          className={classNames('dropZoneComponent', {
-            error: this.state.error,
-          })}
-          activeClassName="active"
-          maxSize={102400}
-          style={this.props.style}
-        >
-          <div className="text">
-            <p>
-              Simply drag&#39;n&#39;drop files
-              <br />
-              or click to select files to upload.
-            </p>
-          </div>
+        <div className="uploadWrapper">
+          <Dropzone
+            onDrop={this.onDrop}
+            className={classNames('dropZoneComponent', {
+              error: this.state.error,
+            })}
+            activeClassName="active"
+            maxSize={102400}
+          >
+            {({ isDragActive }) => {
+              if (isDragActive) {
+                return (
+                  <div className="text activeDrag">
+                    <img
+                      src="/static/img/homepage/icon-drop.svg"
+                      alt="Drop Icon"
+                    />
+                    <p>Drop file(s) here.</p>
+                  </div>
+                );
+              }
+
+              return (
+                <div className="text">
+                  <p>
+                    Simply drag and drop files
+                    <br />
+                    or click to select files to upload.
+                  </p>
+                </div>
+              );
+            }}
+          </Dropzone>
           <div
             className={classNames('uploadFeedback', {
               error: this.state.error,
@@ -161,7 +197,7 @@ export default class Upload extends React.Component {
               problem persists, please contact us.
             </p>
           </div>
-        </Dropzone>
+        </div>
       </Fragment>
     );
   }
