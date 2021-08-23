@@ -71,7 +71,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dropzone": "^7.0.1",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.2.0",
     "react-modal": "^3.14.3",
     "react-number-format": "^4.7.3",
     "serve-favicon": "^2.5.0",
