@@ -244,7 +244,7 @@ function fetchFileFromRepo(repo, path, accessToken) {
   if (repo.private === true) {
     const params = { owner: repo.owner.login, repo: repo.name, path: path };
     // https://octokit.github.io/rest.js/#api-Repos-getContent
-    return fetchWithOctokit('repos.getContents', params, accessToken).then(
+    return fetchWithOctokit('repos.getContent', params, accessToken).then(
       getContent,
     );
   }
