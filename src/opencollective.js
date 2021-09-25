@@ -77,15 +77,21 @@ const getAllCollectivesQuery = `query allCollectives(
     $HostCollectiveId: Int,
     $isActive: Boolean,
     $limit: Int,
+    $offset: Int,
     $type: TypeOfCollective,
     $tags: [String]
+    $orderDirection: OrderDirection
+    $orderBy: CollectiveOrderField
   ) {
   allCollectives(
     HostCollectiveId: $HostCollectiveId,
     isActive: $isActive,
     limit: $limit,
-    type: $type
-    tags: $tags
+    offset: $offset,
+    type: $type,
+    tags: $tags,
+    orderDirection: $orderDirection
+    orderBy: $orderBy
   ) {
     total
     limit

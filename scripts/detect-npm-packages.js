@@ -64,7 +64,7 @@ const regexps = [
         if (repo.files.indexOf('lerna.json') !== -1) {
           let lernaPackages, lernaFolderName;
           for (lernaFolderName of ['packages', 'modules', 'app']) {
-            lernaPackages = await fetchWithOctokit('repos.getContents', {
+            lernaPackages = await fetchWithOctokit('repos.getContent', {
               owner: repo.owner.login,
               repo: repo.name,
               path: lernaFolderName,

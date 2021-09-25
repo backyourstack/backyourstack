@@ -32,6 +32,12 @@ const repositoryQuery = `query repository($owner: String!, $name: String!) {
       }
     }
   }
+  rateLimit {
+    limit
+    cost
+    remaining
+    resetAt
+  }
 }`;
 
 async function getCollectiveRepos(github) {
@@ -51,10 +57,10 @@ async function getCollectiveRepos(github) {
         const reposListForOrgParameters = {
           org: githubOrg,
           page: 1,
-          per_page: 100,
+          per_page: 100, // eslint-disable-line camelcase
         };
         while (true) {
-          // https://octokit.github.io/rest.js/#api-Repos-listForOrg
+          // https://octokit.github.io/rest.js/v18#repos-list-for-org
           const reposForOrg = await fetchWithOctokit(
             'repos.listForOrg',
             reposListForOrgParameters,
@@ -65,6 +71,7 @@ async function getCollectiveRepos(github) {
                 allRepos.push({
                   owner: repo.owner.login,
                   name: repo.name,
+                  stars: repo.stargazers_count,
                 });
               }
             }
@@ -84,10 +91,10 @@ async function getCollectiveRepos(github) {
         const reposListForUserParameters = {
           username: githubUser,
           page: 1,
-          per_page: 100,
+          per_page: 100, // eslint-disable-line camelcase
         };
         while (true) {
-          // https://octokit.github.io/rest.js/#api-Repos-listForUser
+          // https://octokit.github.io/rest.js/v18#repos-list-for-user
           const reposForUser = await fetchWithOctokit(
             'repos.listForUser',
             reposListForUserParameters,
@@ -98,6 +105,7 @@ async function getCollectiveRepos(github) {
                 allRepos.push({
                   owner: repo.owner.login,
                   name: repo.name,
+                  stars: repo.stargazers_count,
                 });
               }
             }
@@ -116,6 +124,15 @@ async function getCollectiveRepos(github) {
     allRepos = [{ owner, name }];
   }
 
+  // Order per stars DESC
+  allRepos.sort((a, b) => (a.stars > b.stars ? -1 : 1));
+
+  // Limit number of repos processed (>= 100 stars)
+  allRepos = allRepos.filter((r) => r.stars === undefined || r.stars >= 100);
+
+  // Alternative (Top 10)
+  // allRepos = allRepos.slice(0, 10);
+
   return allRepos;
 }
 
@@ -128,6 +145,26 @@ async function getCollectiveRepos(github) {
       tags: 'open source',
       isActive: true,
       limit: 1000,
+      orderDirection: 'DESC',
+      orderBy: 'financialContributors',
+    },
+    // Active Open Source collectives page 2
+    {
+      tags: 'open source',
+      isActive: true,
+      limit: 1000,
+      offset: 1000,
+      orderDirection: 'DESC',
+      orderBy: 'financialContributors',
+    },
+    // Active Open Source collectives page 3
+    {
+      tags: 'open source',
+      isActive: true,
+      limit: 1000,
+      offset: 2000,
+      orderDirection: 'DESC',
+      orderBy: 'financialContributors',
     },
     // Pledged collectives
     {
@@ -141,6 +178,10 @@ async function getCollectiveRepos(github) {
 
     for (const collective of allCollectives) {
       if (collective.id === 1) {
+        continue;
+      }
+
+      if (collective.slug === 'conda-forge') {
         continue;
       }
 
@@ -206,7 +247,7 @@ async function getCollectiveRepos(github) {
       }
 
       storedCollective.github = github;
-      storedCollective.repos = [];
+      storedCollective.repos = storedCollective.repos || [];
 
       const repos = await getCollectiveRepos(github);
       if (!repos || !repos.length) {
@@ -214,11 +255,22 @@ async function getCollectiveRepos(github) {
       }
 
       for (const repo of repos) {
+        const isRepoStored = storedCollective.repos.find((r) => {
+          return r.name === repo.name;
+        });
+        if (isRepoStored) {
+          logger.verbose('Repo already stored.', repo);
+          continue;
+        }
+
         logger.verbose('Fetch repo with GraphQL', repo);
         let githubRepo;
         try {
           githubRepo = await fetchWithGraphql(repositoryQuery, repo).then(
-            (data) => data.repository,
+            (data) => {
+              // console.log(data.rateLimit);
+              return data.repository;
+            },
           );
           if (githubRepo.isFork) {
             continue;
@@ -228,9 +280,7 @@ async function getCollectiveRepos(github) {
           continue;
         }
         let storedRepo = storedCollective.repos.find(
-          (r) =>
-            r.name === githubRepo.name &&
-            r.owner.login === githubRepo.owner.login,
+          (r) => r.name === githubRepo.name,
         );
         if (!storedRepo) {
           storedRepo = pick(githubRepo, ['name', 'owner']);
