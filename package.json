@@ -76,7 +76,7 @@
     "react-modal": "^3.14.3",
     "react-number-format": "^4.7.3",
     "serve-favicon": "^2.5.0",
-    "styled-jsx": "4.0.0",
+    "styled-jsx": "4.0.1",
     "toml": "^3.0.0",
     "uuid": "^8.3.2",
     "winston": "^3.3.3",
