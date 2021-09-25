@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import GithubLogo from '../../public/static/img/homepage/github-icon.svg';
-import SearchForm from '../../components/SearchForm';
+import HomepageSearchForm from './HomepageSearchForm';
 
 const GitHubSearchCard = ({ loggedInUserOrgs }) => (
   <Fragment>
@@ -81,7 +81,7 @@ const GitHubSearchCard = ({ loggedInUserOrgs }) => (
         Just copy and paste the URL of the repository that you want to scan and
         set a contribution.
       </p>
-      <SearchForm orgs={loggedInUserOrgs} />
+      <HomepageSearchForm orgs={loggedInUserOrgs} />
       <p className="boxDescription">
         Or try analyzing non-public repositories by uploading dependency files
         here.
