@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const HomepageLink = ({ type, style, mousePosition, ...props }) => {
+const HomepageLink = ({ type, mousePosition, ...props }) => {
   const { positionX, positionY } = mousePosition;
 
   return (
