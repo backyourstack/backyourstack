@@ -2,6 +2,7 @@ import '../env';
 
 import path from 'path';
 import crypto from 'crypto';
+import { URL } from 'url';
 
 import fs from 'fs-extra';
 import express from 'express';
@@ -126,10 +127,12 @@ nextApp.prepare().then(() => {
     '/auth/github/callback',
     passport.authenticate('github', { failureRedirect: '/login' }),
     (req, res) => {
-      const next = req.session.next || '/';
+      const base = 'https://backyourstack.com';
+      const url = new URL(req.session.next || '/', base);
+      url.searchParams.set('session', crypto.randomBytes(16).toString('hex'));
       delete req.session.next;
       res.cookie('_now_no_cache', '1', cookieOptions);
-      res.redirect(next);
+      res.redirect(url.toString().replace(base, ''));
     },
   );
 
