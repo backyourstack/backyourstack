@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "npm run build:clean && npm run test:clean",
     "deploy:production": "git push production main",
+    "deploy:staging": "git push -f staging main",
     "dev": "nodemon --exec babel-node -- src/index.js",
     "build": "npm run build:clean && npm run build:server && npm run build:next",
     "build:clean": "rimraf dist .next",

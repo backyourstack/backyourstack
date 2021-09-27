@@ -55,7 +55,7 @@ This will start your local copy of BackYourStack. You can access it at `http://l
 
 ## Deployment
 
-### Production (heroku)
+### Production and staging (heroku)
 
 To deploy to production, you need to be a core member of the Open Collective team.
 
@@ -69,13 +69,25 @@ To deploy to production, you need to be a core member of the Open Collective tea
 
 #### Configure remote
 
-Before first deployment, configure production remote:
+Before first deployment, configure remote:
+
+```
+git remote add staging https://git.heroku.com/backyourstack-staging.git
+```
+
+Or:
 
 ```
 git remote add production https://git.heroku.com/backyourstack.git
 ```
 
 #### Trigger deployment
+
+```
+npm run deploy:staging
+```
+
+Or:
 
 ```
 npm run deploy:production
