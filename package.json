@@ -43,7 +43,7 @@
     "@babel/core": "7.12.10",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@octokit/rest": "^18.11.2",
+    "@octokit/rest": "^18.11.4",
     "aws-sdk": "^2.996.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.3.1",
