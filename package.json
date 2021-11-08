@@ -99,7 +99,7 @@
     "eslint": "^7.32.0",
     "eslint-config-opencollective": "^3.0.1",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.26.1",
     "file-loader": "^6.2.0",
