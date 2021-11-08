@@ -112,7 +112,7 @@
     "rimraf": "^3.0.2",
     "svg-react-loader": "^0.4.6",
     "thanks": "^2.3.0",
-    "webpack-bundle-analyzer": "^4.4.2"
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "nodemonConfig": {
     "watch": [
