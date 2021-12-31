@@ -89,7 +89,7 @@
     "npm": "6.x"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
+    "@babel/cli": "7.16.7",
     "@babel/eslint-parser": "^7.15.7",
     "@babel/node": "7.15.4",
     "@mdx-js/loader": "^1.6.22",
