@@ -44,7 +44,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@octokit/rest": "^18.12.0",
-    "aws-sdk": "^2.1024.0",
+    "aws-sdk": "^2.1057.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.3.1",
     "cookie-parser": "^1.4.5",
