@@ -40,7 +40,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "7.12.10",
+    "@babel/core": "7.17.5",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@octokit/rest": "^18.12.0",
