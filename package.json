@@ -61,7 +61,7 @@
     "minimatch": "^3.0.4",
     "moment": "^2.29.1",
     "multer": "^1.4.3",
-    "next": "11.1.1",
+    "next": "12.2.2",
     "next-routes": "^1.4.2",
     "node-fetch": "^2.6.1",
     "nodemailer": "^6.7.0",
