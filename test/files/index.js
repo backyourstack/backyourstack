@@ -41,3 +41,7 @@ const pythonRequirementsFilename = path.join(
 );
 
 export const pythonRequirementsFile = getFile(pythonRequirementsFilename);
+
+const dartPubFilename = path.join(__dirname, 'samples', 'pubspec.yaml');
+
+export const dartPubFile = getFile(dartPubFilename);

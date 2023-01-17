@@ -4,6 +4,7 @@ import * as nuget from './nuget';
 import * as dep from './dep';
 import * as bundler from './bundler';
 import * as pypi from './pypi';
+import * as pub from './pub';
 
 const dependencyManagers = {
   npm,
@@ -12,6 +13,7 @@ const dependencyManagers = {
   dep,
   bundler,
   pypi,
+  pub,
 };
 
 export default dependencyManagers;

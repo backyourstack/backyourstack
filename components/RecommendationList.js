@@ -40,8 +40,8 @@ export default class RecommendationList extends React.Component {
               <ul>
                 <li>
                   detect dependencies from JavaScript (NPM), PHP (Composer),
-                  .NET (Nuget), Go (dep), Ruby (RubyGems), and Python
-                  (requirements.txt).
+                  .NET (Nuget), Go (dep), Ruby (RubyGems), Python
+                  (requirements.txt) and Dart (pubspeck.yaml).
                 </li>
                 <li>
                   match them with projects registered on{' '}
