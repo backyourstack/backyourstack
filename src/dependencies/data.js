@@ -14,6 +14,7 @@ const languageToFileType = {
   Go: 'dep',
   Ruby: 'bundler',
   Python: 'pypi',
+  Dart: 'pub',
 };
 
 export function getDependenciesFromGithubRepo(githubRepo, githubAccessToken) {

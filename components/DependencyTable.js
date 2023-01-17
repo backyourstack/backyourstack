@@ -77,7 +77,8 @@ export default class DependencyTable extends React.Component {
             <p>Sorry, we could not detect any dependencies. </p>
             <p>
               We currently support JavaScript (NPM), PHP (Composer), .NET
-              (Nuget), Go (dep), Ruby (RubyGems), and Python (requirements.txt).
+              (Nuget), Go (dep), Ruby (RubyGems), Python (requirements.txt) and
+              Dart (pubspeck.yaml).
             </p>
             <p>
               Want so see something else?{' '}

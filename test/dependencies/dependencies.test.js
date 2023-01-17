@@ -14,6 +14,7 @@ import {
   nugetCsprojFile,
   npmFile,
   pythonRequirementsFile,
+  dartPubFile,
 } from '../files';
 
 const expectedDependencies = {
@@ -64,6 +65,17 @@ const expectedDependencies = {
     { core: 1, name: 'urllib3', type: 'pypi' },
     { core: 1, name: 'django', type: 'pypi' },
   ],
+  pub: [
+    { core: 1, name: 'bloc', type: 'pub' },
+    { core: 1, name: 'diacritic', type: 'pub' },
+    { core: 1, name: 'dio', type: 'pub' },
+    { core: 1, name: 'dotted_border', type: 'pub' },
+    { core: 1, name: 'dotted_line', type: 'pub' },
+    { core: 1, name: 'equatable', type: 'pub' },
+    { core: 1, name: 'exif', type: 'pub' },
+    { core: 1, name: 'flutter_launcher_icons', type: 'pub' },
+    { core: 1, name: 'flutter_native_splash', type: 'pub' },
+  ],
 };
 
 describe('dependencies', () => {
@@ -80,6 +92,7 @@ describe('dependencies', () => {
     ['npm', npmFile, 'JavaScript', 'package.json', 'sample-npm-project'],
     ['nuget', nugetCsprojFile, 'C#', '*.csproj', 'sample-nuget-project'],
     ['pypi', pythonRequirementsFile, 'Python', 'requirements.txt', null],
+    ['pub', dartPubFile, 'Dart', 'pubspec.yaml', 'test bys'],
   ])('for %s file', (type, file, language, pattern, projectName) => {
     test('should detect file type', () => {
       expect(detectDependencyFileType(file)).toBe(file);
