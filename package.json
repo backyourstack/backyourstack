@@ -85,7 +85,7 @@
     "xmldoc": "^1.3.0"
   },
   "engines": {
-    "node": "18.x",
+    "node": "16.x",
     "npm": "9.x"
   },
   "devDependencies": {
