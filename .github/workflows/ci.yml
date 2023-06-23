@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci
 
       - name: Check Lint
         run: npm run lint:quiet
@@ -81,7 +81,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci
 
       - name: Check Prettier
         run: npm run prettier:check
@@ -117,7 +117,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci
 
       - name: Build
         run: npm run build
@@ -153,7 +153,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci
 
       - name: Test
         run: npm run test
