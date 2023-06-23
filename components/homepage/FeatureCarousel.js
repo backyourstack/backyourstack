@@ -162,6 +162,7 @@ class FeatureCarousel extends Component {
               <Dot
                 slide={index}
                 className="buttonIndicator"
+                // eslint-disable-next-line
                 key={index.toString()}
               >
                 <div className="indicator"></div>
