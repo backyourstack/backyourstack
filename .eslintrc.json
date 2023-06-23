@@ -8,6 +8,7 @@
     "no-console": "warn",
     "require-await": "warn",
     "no-constant-condition": ["warn", { "checkLoops": false }],
-    "require-atomic-updates": "warn"
+    "require-atomic-updates": "warn",
+    "react/no-unknown-property": ["error", { "ignore": ["jsx", "global"] }]
   }
 }
