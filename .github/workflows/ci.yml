@@ -24,7 +24,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '18.x'
 
       - name: Restore node_modules
         uses: actions/cache@v1
@@ -60,7 +60,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '18.x'
 
       - name: Restore node_modules
         uses: actions/cache@v1
@@ -96,7 +96,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '18.x'
 
       - name: Restore node_modules
         uses: actions/cache@v1
@@ -132,7 +132,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '18.x'
 
       - name: Restore node_modules
         uses: actions/cache@v1
