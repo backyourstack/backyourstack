@@ -41,7 +41,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "7.12.10",
-    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^1.6.22",
     "@octokit/rest": "^18.12.0",
     "aws-sdk": "^2.1403.0",
