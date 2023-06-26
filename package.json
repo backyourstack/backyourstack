@@ -56,7 +56,7 @@
     "gemfile": "^1.1.0",
     "graphql-request": "^2.0.0",
     "lodash": "^4.17.21",
-    "lru-cache": "^6.0.0",
+    "lru-cache": "^10.0.0",
     "md5": "^2.3.0",
     "minimatch": "^3.0.4",
     "moment": "^2.29.4",
