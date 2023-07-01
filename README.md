@@ -1,5 +1,7 @@
 <p align="center">
-  <a href="https://backyourstack.com/"><img width="308" height="308" src="public/static/img/logo-og-1.png" alt="BackYourStack"></a>
+    <a href="https://backyourstack.com/">
+        <img width="308" height="308" src="public/static/img/logo-og-1.png" alt="BackYourStack" />
+    </a>
 </p>
 
 [![CI Status](https://github.com/backyourstack/backyourstack/workflows/CI/badge.svg)](https://github.com/opencollective/opencollective-api/actions/workflows/ci.yml)
