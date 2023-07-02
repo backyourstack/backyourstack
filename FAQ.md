@@ -8,7 +8,7 @@ If you can't find your question below, please [help us improve this FAQ by addin
 
 We look at all the public repositories of a given organization on Github.com. For each project, we look for a dependency file (today: `package.json`, `composer.json`, `packages.config`, `*.csproj`, `Gopkg.lock` and `Gemfile.lock`). For each dependency, we look for the open collective that is maintaining it and we surface them.
 
-Note: a given collective is often maintaining more than one package. E.g. Babel has 163 different packages [published on npm](https://www.npmjs.com/search?q=%40babel). So [we keep a mapping for each collective of all of their published packages](https://github.com/backyourstack/backyourstack/blob/master/src/data/projects.json#L623-L1380) that may be a dependency.
+Note: a given collective is often maintaining more than one package. E.g. Babel has 163 different packages [published on npm](https://www.npmjs.com/search?q=%40babel). So [we keep a mapping for each collective of all of their published packages](https://github.com/backyourstack/backyourstack/blob/main/src/data/projects.json#L623-L1380) that may be a dependency.
 
 ### What are the limitations?
 
