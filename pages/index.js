@@ -177,6 +177,16 @@ export default class Index extends Component {
               width: 280px;
               align-self: center;
             }
+            .banner {
+              background-color: #ffd700;
+              margin: 0;
+            }
+            .banner p {
+              margin: 0;
+              padding: 20px;
+              font-size: 18px;
+              color: #4e5052;
+            }
             @media screen and (min-width: 1450px) {
               .description {
                 width: 784px;
@@ -215,6 +225,12 @@ export default class Index extends Component {
         </style>
 
         <Header pathname={pathname} loggedInUser={loggedInUser} />
+        <div className="banner">
+          <p>
+            BackYourStack has been re-imagined as Ecosystem Funds. Find out more
+            at <a href="https://funds.ecosyste.ms/">funds.ecosyste.ms</a>.
+          </p>
+        </div>
         <div className="background"></div>
         <div className="homepage">
           <h1 className="description">
