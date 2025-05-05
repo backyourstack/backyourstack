@@ -54,7 +54,7 @@
     "express-session": "^1.17.3",
     "fs-extra": "^11.1.1",
     "gemfile": "^1.1.0",
-    "graphql-request": "^2.0.0",
+    "graphql-request": "^6.1.0",
     "lodash": "^4.17.21",
     "lru-cache": "^6.0.0",
     "md5": "^2.3.0",
