@@ -42,7 +42,7 @@
   "dependencies": {
     "@babel/core": "7.12.10",
     "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
+    "@mdx-js/react": "^2.3.0",
     "@octokit/rest": "^18.12.0",
     "aws-sdk": "^2.1403.0",
     "bluebird": "^3.7.2",
