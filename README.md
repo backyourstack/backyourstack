@@ -19,6 +19,8 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 ## Development
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/backyourstack/backyourstack)
+
 ### Prerequisites
 
 #### Node.js
