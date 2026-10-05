@@ -1,9 +1,8 @@
 import passport from 'passport';
 import passportGithub from 'passport-github';
 
-import logger from './logger';
-
 import { donateToken } from './github';
+import logger from './logger';
 
 const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GITHUB_TOKEN_DONATORS } =
   process.env;

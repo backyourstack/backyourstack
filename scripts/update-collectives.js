@@ -1,12 +1,11 @@
 import '../env';
 
-import { get, has, pick, merge } from 'lodash';
-
-import { fetchWithOctokit, fetchWithGraphql } from '../src/github';
-import logger from '../src/logger';
-import { fetchAllCollectives } from '../src/opencollective';
+import { get, has, merge, pick } from 'lodash';
 
 import { getCollectives, saveCollectives } from '../data';
+import { fetchWithGraphql, fetchWithOctokit } from '../src/github';
+import logger from '../src/logger';
+import { fetchAllCollectives } from '../src/opencollective';
 
 const repositoryQuery = `query repository($owner: String!, $name: String!) {
   repository(owner: $owner, name: $name) {
@@ -46,8 +45,8 @@ async function getCollectiveRepos(github) {
   const githubUsers = github.users
     ? github.users
     : github.user
-    ? [github.user]
-    : [];
+      ? [github.user]
+      : [];
 
   let allRepos = [];
 

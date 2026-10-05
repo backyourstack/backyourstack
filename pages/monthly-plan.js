@@ -1,16 +1,14 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import NumberFormat from 'react-number-format';
-import { get, pick, map } from 'lodash';
+import { get, map, pick } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+import { NumericFormat } from 'react-number-format';
 
-import { getFilesData, getProfileData, postJson } from '../src/fetch';
-
-import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-import UpArrow from '../public/static/img/up-arrow.svg';
+import Header from '../components/Header';
 import DownArrow from '../public/static/img/down-arrow.svg';
+import UpArrow from '../public/static/img/up-arrow.svg';
+import { getFilesData, getProfileData, postJson } from '../src/fetch';
 
 const suggestedAmounts = [
   {
@@ -234,7 +232,7 @@ export default class MonthlyPlan extends React.Component {
 
   renderFormattedAmount(amount, currencySymbol) {
     return (
-      <NumberFormat
+      <NumericFormat
         value={amount}
         displayType={'text'}
         thousandSeparator={true}
@@ -713,38 +711,40 @@ export default class MonthlyPlan extends React.Component {
                   within the <strong>monthly plan.</strong>
                 </p>
                 <table>
-                  <tr>
-                    <th></th>
-                    <th>Collective</th>
-                    <th>Amount</th>
-                  </tr>
-                  {recommendations.map((recommendation) => (
-                    <tr key={recommendation.name}>
-                      <td>
-                        <input
-                          type="checkbox"
-                          onChange={(event) =>
-                            this.handleDependencySelection(event)
-                          }
-                          name={recommendation.name}
-                          checked={recommendation.checked}
-                        />
-                      </td>
-                      <td className="collectiveColumn">
-                        <a
-                          href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
-                        >
-                          {recommendation.opencollective.name}
-                        </a>{' '}
-                        <span className="collectiveDescription">
-                          {recommendation.opencollective.description}
-                        </span>
-                      </td>
-                      <td className="sharableAmount">
-                        ${singleValue} <sup>*</sup>
-                      </td>
+                  <tbody>
+                    <tr>
+                      <th></th>
+                      <th>Collective</th>
+                      <th>Amount</th>
                     </tr>
-                  ))}
+                    {recommendations.map((recommendation) => (
+                      <tr key={recommendation.name}>
+                        <td>
+                          <input
+                            type="checkbox"
+                            onChange={(event) =>
+                              this.handleDependencySelection(event)
+                            }
+                            name={recommendation.name}
+                            checked={recommendation.checked}
+                          />
+                        </td>
+                        <td className="collectiveColumn">
+                          <a
+                            href={`${process.env.OPENCOLLECTIVE_BASE_URL}/${recommendation.opencollective.slug}`}
+                          >
+                            {recommendation.opencollective.name}
+                          </a>{' '}
+                          <span className="collectiveDescription">
+                            {recommendation.opencollective.description}
+                          </span>
+                        </td>
+                        <td className="sharableAmount">
+                          ${singleValue} <sup>*</sup>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
                 </table>
                 <p className="notice-p">
                   * Final amount distributed may vary slightly depending on

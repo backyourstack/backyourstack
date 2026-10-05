@@ -1,18 +1,17 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { debounce } from 'lodash';
-
-import { Link, Router } from '../../src/routes';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
 import List from '../../components/List';
-
 import { fetchJson } from '../../src/fetch';
-import MouseTracker from './MouseTracker';
+import { Link, Router } from '../../src/routes';
+
 import HomepageLink from './HomepageLink';
+import MouseTracker from './MouseTracker';
 
 const getProfile = (slug) =>
-  process.env.IS_CLIENT
+  typeof window !== 'undefined'
     ? fetchJson(`/data/getProfile?slug=${slug}`)
     : import('../../src/data').then((m) => m.getProfile(slug));
 

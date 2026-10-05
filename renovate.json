@@ -1,0 +1,18 @@
+{
+  "extends": ["github>opencollective/renovate-config"],
+  "packageRules": [
+    {
+      "description": "npm follows the version bundled with Node, do not propose a newer major",
+      "matchDepTypes": ["engines"],
+      "matchPackageNames": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": "graphql-request 7 supports graphql up to 16",
+      "matchPackageNames": ["graphql"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}

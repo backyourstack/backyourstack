@@ -1,9 +1,13 @@
 name: CI
 
+# Security: Do not replace `pull_request` with `pull_request_target` to expose secrets or
+# GITHUB_TOKEN write access to PR code. pull_request_target runs untrusted fork PR code with
+# base-branch privileges.
+
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types:
       - opened
@@ -11,7 +15,9 @@ on:
       - reopened
 
 env:
-  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  CI: true
+  TZ: UTC
+  NODE_ENV: test
 
 jobs:
   lint:
@@ -19,144 +25,160 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2-beta
+        uses: actions/checkout@v7
 
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v7
         with:
-          node-version: '16.x'
+          node-version-file: 'package.json'
+
+      # Npm cache
+
+      - name: Restore .npm cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-cache-${{ github.sha }}
+          restore-keys: |
+            - ${{ runner.os }}-npm-cache-${{ github.sha }}
+            - ${{ runner.os }}-npm-cache-
 
       - name: Restore node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v6
         id: node-modules
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
-      - name: Restore .npm cache
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
-            ${{ runner.os }}-npm-cache-
-
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
-      - name: Check Lint
-        run: npm run lint:quiet
+      - run: npm run lint:quiet
 
   prettier:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2-beta
+        uses: actions/checkout@v7
 
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v7
         with:
-          node-version: '16.x'
+          node-version-file: 'package.json'
 
-      - name: Restore node_modules
-        uses: actions/cache@v1
-        id: node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
+      # Npm cache
 
       - name: Restore .npm cache
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        uses: actions/cache@v1
+        uses: actions/cache@v6
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
-            ${{ runner.os }}-npm-cache-
-
-      - name: Install dependencies
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
-
-      - name: Check Prettier
-        run: npm run prettier:check
-
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2-beta
-
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-
-      - name: Restore node_modules
-        uses: actions/cache@v1
-        id: node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Restore .npm cache
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            - ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+            - ${{ runner.os }}-npm-cache-${{ github.sha }}
             - ${{ runner.os }}-npm-cache-
 
+      - name: Restore node_modules
+        uses: actions/cache@v6
+        id: node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
-      - name: Build
-        run: npm run build
+      - run: npm run prettier:check
 
   test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2-beta
+        uses: actions/checkout@v7
 
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v7
         with:
-          node-version: '16.x'
+          node-version-file: 'package.json'
+
+      # Npm cache
+
+      - name: Restore .npm cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-cache-${{ github.sha }}
+          restore-keys: |
+            - ${{ runner.os }}-npm-cache-${{ github.sha }}
+            - ${{ runner.os }}-npm-cache-
 
       - name: Restore node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v6
         id: node-modules
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
-      - name: Restore .npm cache
+      - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        uses: actions/cache@v1
+        run: npm ci --prefer-offline --no-audit
+
+      - run: npm test
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: 'package.json'
+
+      # Npm cache
+
+      - name: Restore .npm cache
+        uses: actions/cache@v6
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-npm-cache-${{ github.sha }}
           restore-keys: |
-            - ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+            - ${{ runner.os }}-npm-cache-${{ github.sha }}
             - ${{ runner.os }}-npm-cache-
+
+      - name: Restore node_modules
+        uses: actions/cache@v6
+        id: node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
         if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
-      - name: Test
-        run: npm run test
+      - run: npm run build
 
-      - name: Report Coverage
-        run: npm run coverage
+      # The tests run the source: also check that the production build starts and answers, with
+      # production dependencies only (Heroku prunes devDependencies after the build). In a copy,
+      # to keep the cached node_modules intact.
+      - name: Start the production build
+        run: |
+          rsync -a --exclude /node_modules --exclude /.git ./ ../production/
+          cd ../production
+          npm ci --omit=dev --ignore-scripts --no-audit
+          PORT=3000 npm start > server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:3000/faq > /dev/null; then
+              echo "Production build answers"
+              exit 0
+            fi
+            sleep 1
+          done
+          cat server.log
+          exit 1

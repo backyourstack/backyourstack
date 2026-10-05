@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
 import { get } from 'lodash';
-import Header from '../components/homepage/sections/Header';
-import SustainWhatSustainYou from '../components/homepage/sections/SustainWhatSustainYou';
-import WhatIsBackyourstack from '../components/homepage/sections/WhatIsBackyourstack';
-import TryItNow from '../components/homepage/sections/TryItNow';
-import InvestInOpenSource from '../components/homepage/sections/InvestInOpenSource';
-import OurValues from '../components/homepage/sections/OurValues';
-import JoinUs from '../components/homepage/sections/JoinUs';
+import React, { Component } from 'react';
+
 import Footer from '../components/homepage/sections/Footer';
+import Header from '../components/homepage/sections/Header';
+import InvestInOpenSource from '../components/homepage/sections/InvestInOpenSource';
+import JoinUs from '../components/homepage/sections/JoinUs';
+import OurValues from '../components/homepage/sections/OurValues';
+import SustainWhatSustainYou from '../components/homepage/sections/SustainWhatSustainYou';
+import TryItNow from '../components/homepage/sections/TryItNow';
+import WhatIsBackyourstack from '../components/homepage/sections/WhatIsBackyourstack';
 
 export default class Homepage extends Component {
   static getInitialProps({ req }) {

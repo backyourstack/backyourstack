@@ -1,12 +1,10 @@
 import '../env';
 
-import fetch from 'cross-fetch';
-import { uniq, pick, get } from 'lodash';
-
-import { fetchWithOctokit, getContent, silentError } from '../src/github';
-import logger from '../src/logger';
+import { get, pick, uniq } from 'lodash';
 
 import { getCollectives, getProjects, saveProjects } from '../data';
+import { fetchWithOctokit, getContent, silentError } from '../src/github';
+import logger from '../src/logger';
 
 const regexp = /https:\/\/godoc\.org\/([a-z0-9-./]*)/gi;
 

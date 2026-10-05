@@ -1,16 +1,15 @@
 import '../env';
-import logger from '../src/logger';
 
-import { uniq, pick, get } from 'lodash';
+import { get, pick, uniq } from 'lodash';
 
+import { getCollectives, getProjects, saveProjects } from '../data';
 import {
-  fetchWithOctokit,
   fetchFileFromRepo,
+  fetchWithOctokit,
   getContent,
   silentError,
 } from '../src/github';
-
-import { getCollectives, getProjects, saveProjects } from '../data';
+import logger from '../src/logger';
 
 const regexps = [
   /https:\/\/packagist\.org\/packages\/([a-z0-9-]*\/[a-z0-9-]*)/gi,

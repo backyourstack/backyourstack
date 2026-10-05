@@ -1,9 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import Header from '../components/Header';
 import FAQ from '../FAQ.md';
 
 export default class Login extends React.Component {

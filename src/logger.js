@@ -9,9 +9,10 @@ const winstonBaseFormat = winston.format.combine(
   winston.format.splat(),
 );
 
-const winstonFormat = process.env.IS_CLIENT
-  ? winstonBaseFormat
-  : winston.format.combine(winston.format.colorize(), winstonBaseFormat);
+const winstonFormat =
+  typeof window !== 'undefined'
+    ? winstonBaseFormat
+    : winston.format.combine(winston.format.colorize(), winstonBaseFormat);
 
 const winstonConsole = new winston.transports.Console({
   level: winstonLevel,

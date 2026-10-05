@@ -1,26 +1,23 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NProgress from 'nprogress';
-import NextLink from 'next/link';
 import { get } from 'lodash';
+import NProgress from 'nprogress';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
-import { Link, Router } from '../src/routes';
-import { postJson, getProfileData } from '../src/fetch';
-import { parseToBoolean } from '../src/utils';
-
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import DependencyTable from '../components/DependencyTable';
-import RepositoryTable from '../components/RepositoryTable';
-import RecommendationList from '../components/RecommendationList';
-import SubscribeForm from '../components/SubscribeForm';
 import BackMyStack from '../components/BackMyStack';
 import BackMyStackCompanyBanner from '../components/BackMyStackCompanyBanner';
+import DependencyTable from '../components/DependencyTable';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import MessageBox from '../components/MessageBox';
-
-import TwitterLogo from '../public/static/img/twitter.svg';
+import RecommendationList from '../components/RecommendationList';
+import RepositoryTable from '../components/RepositoryTable';
+import SubscribeForm from '../components/SubscribeForm';
 import FacebookLogo from '../public/static/img/facebook.svg';
+import TwitterLogo from '../public/static/img/twitter.svg';
+import { getProfileData, postJson } from '../src/fetch';
+import { Link, Router } from '../src/routes';
+import { parseToBoolean } from '../src/utils';
 
 const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
 
@@ -322,28 +319,22 @@ export default class Profile extends React.Component {
               </div>
 
               <div className="socialLinks">
-                <NextLink
-                  href={{
-                    pathname: 'https://twitter.com/intent/tweet',
-                    query: { text: this.twitterText() },
-                  }}
+                <a
+                  className="button shareButton"
+                  title="Share on Twitter"
+                  href={`https://twitter.com/intent/tweet?${new URLSearchParams({ text: this.twitterText() })}`}
                 >
-                  <a className="button shareButton" title="Share on Twitter">
-                    <TwitterLogo className="logo" />
-                    &nbsp; Tweet
-                  </a>
-                </NextLink>
-                <NextLink
-                  href={{
-                    pathname: 'https://www.facebook.com/sharer/sharer.php',
-                    query: { u: this.profileLink() },
-                  }}
+                  <TwitterLogo className="logo" />
+                  &nbsp; Tweet
+                </a>
+                <a
+                  className="button shareButton"
+                  title="Share on Facebook"
+                  href={`https://www.facebook.com/sharer/sharer.php?${new URLSearchParams({ u: this.profileLink() })}`}
                 >
-                  <a className="button shareButton" title="Share on Facebook">
-                    <FacebookLogo className="logo" />
-                    &nbsp; Share
-                  </a>
-                </NextLink>
+                  <FacebookLogo className="logo" />
+                  &nbsp; Share
+                </a>
               </div>
 
               <div className="subscribe">

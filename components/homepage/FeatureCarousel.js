@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 
 const features = [
   {
@@ -32,11 +31,7 @@ const features = [
 class FeatureCarousel extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeIndex: 0,
-      direction: '',
-      sliding: false,
-    };
+    this.state = { activeIndex: 0 };
   }
 
   render() {
@@ -75,6 +70,16 @@ class FeatureCarousel extends Component {
               height: 16px;
               width: 16px;
               border-radius: 8px;
+            }
+            .slider {
+              overflow: hidden;
+            }
+            .sliderTray {
+              display: flex;
+              transition: transform 500ms;
+            }
+            .slide {
+              flex: 0 0 100%;
             }
             .indicatorGroup {
               justify-content: center;
@@ -126,18 +131,21 @@ class FeatureCarousel extends Component {
             }
           `}
         </style>
-        <CarouselProvider
-          naturalSlideHeight={1}
-          naturalSlideWidth={1}
-          totalSlides={features.length}
-          isIntrinsicHeight={true}
-        >
-          <Slider>
+        <div className="slider">
+          <div
+            className="sliderTray"
+            style={{
+              transform: `translateX(-${this.state.activeIndex * 100}%)`,
+            }}
+          >
             {features.map((feature, index) => (
-              <Slide key={feature.title} index={index}>
+              <div
+                key={feature.title}
+                className="slide"
+                aria-hidden={index !== this.state.activeIndex}
+              >
                 <div
                   className="featureWrapper"
-                  key={feature.title}
                   style={{
                     backgroundImage: `url(/static/img/homepage/${feature.title}-bg.svg)`,
                     backgroundRepeat: 'no-repeat',
@@ -154,22 +162,24 @@ class FeatureCarousel extends Component {
                     </div>
                   </div>
                 </div>
-              </Slide>
-            ))}
-          </Slider>
-          <div className="indicatorGroup">
-            {Array.from({ length: features.length }).map((_, index) => (
-              <Dot
-                slide={index}
-                className="buttonIndicator"
-                // eslint-disable-next-line
-                key={index.toString()}
-              >
-                <div className="indicator"></div>
-              </Dot>
+              </div>
             ))}
           </div>
-        </CarouselProvider>
+        </div>
+        <div className="indicatorGroup">
+          {features.map((feature, index) => (
+            <button
+              key={feature.title}
+              type="button"
+              className="buttonIndicator"
+              aria-label={`Slide ${index + 1}`}
+              disabled={index === this.state.activeIndex}
+              onClick={() => this.setState({ activeIndex: index })}
+            >
+              <div className="indicator"></div>
+            </button>
+          ))}
+        </div>
       </Fragment>
     );
   }

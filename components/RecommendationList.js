@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-
-import { Link } from '../src/routes';
+import React, { Fragment } from 'react';
 
 import RecommendationCard from '../components/RecommendationCard';
+import { Link } from '../src/routes';
 
 export default class RecommendationList extends React.Component {
   static propTypes = {

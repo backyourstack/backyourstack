@@ -2,8 +2,6 @@ import { pick } from 'lodash';
 
 import allProjects from '../data/projects.json';
 
-import fetch from 'cross-fetch';
-
 export const fetchWithBasicAuthentication =
   (username, password) => (url, params) => {
     const basicAuthenticationString = Buffer.from(

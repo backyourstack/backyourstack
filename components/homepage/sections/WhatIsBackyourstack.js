@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import Modal from 'react-modal';
 
-import FeatureCarousel from '../FeatureCarousel';
-import MouseTracker from '../MouseTracker';
-import HomepageLink from '../HomepageLink';
 import { BecomeBetaTesterForm, modalCustomStyle } from '../ContactUsForms';
+import FeatureCarousel from '../FeatureCarousel';
+import HomepageLink from '../HomepageLink';
+import MouseTracker from '../MouseTracker';
 
 const WhatIsBackyourstack = () => {
   const [modalIsOpen, setIsOpen] = useState(false);

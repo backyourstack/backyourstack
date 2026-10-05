@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Dropzone from 'react-dropzone';
-import fetch from 'cross-fetch';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+import Dropzone from 'react-dropzone';
 
 import supportedFiles from '../src/dependencies/supported-files';
 
@@ -132,35 +131,39 @@ export default class Upload extends React.Component {
           `}
         </style>
 
-        <Dropzone
-          onDrop={this.onDrop}
-          className={classNames('dropZoneComponent', {
-            error: this.state.error,
-          })}
-          activeClassName="active"
-          maxSize={102400}
-          style={this.props.style}
-        >
-          <div className="text">
-            <p>
-              Simply drag&#39;n&#39;drop files
-              <br />
-              or click to select files to upload.
-            </p>
-          </div>
-          <div
-            className={classNames('uploadFeedback', {
-              error: this.state.error,
-              float: this.props.feedbackPosition === 'float',
-              inside: this.props.feedbackPosition === 'inside',
-            })}
-          >
-            <p>
-              There was an error while uploading your files. At the moment, we
-              support {supportedFilesAsComponent}. Please try again. If the
-              problem persists, please contact us.
-            </p>
-          </div>
+        <Dropzone onDrop={this.onDrop} maxSize={102400}>
+          {({ getRootProps, getInputProps, isDragActive }) => (
+            <div
+              {...getRootProps({ style: this.props.style })}
+              // styled-jsx overrides a className set through a spread
+              className={classNames('dropZoneComponent', {
+                active: isDragActive,
+                error: this.state.error,
+              })}
+            >
+              <input {...getInputProps()} />
+              <div className="text">
+                <p>
+                  Simply drag&#39;n&#39;drop files
+                  <br />
+                  or click to select files to upload.
+                </p>
+              </div>
+              <div
+                className={classNames('uploadFeedback', {
+                  error: this.state.error,
+                  float: this.props.feedbackPosition === 'float',
+                  inside: this.props.feedbackPosition === 'inside',
+                })}
+              >
+                <p>
+                  There was an error while uploading your files. At the moment,
+                  we support {supportedFilesAsComponent}. Please try again. If
+                  the problem persists, please contact us.
+                </p>
+              </div>
+            </div>
+          )}
         </Dropzone>
       </Fragment>
     );

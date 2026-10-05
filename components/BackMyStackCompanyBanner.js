@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import { get, intersection, uniq } from 'lodash';
 import PropTypes from 'prop-types';
-import { get, uniq, intersection } from 'lodash';
+import React, { Fragment } from 'react';
 
 const getTotalDonations = (opencollectiveAccount) => {
   const orders = get(opencollectiveAccount, 'orders.nodes', []);

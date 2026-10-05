@@ -1,9 +1,7 @@
-import fetch from 'cross-fetch';
 import { remove } from 'lodash';
 
-import logger from '../src/logger';
-
 import { getProjects, saveProjects } from '../data';
+import logger from '../src/logger';
 
 (async () => {
   const projects = await getProjects();

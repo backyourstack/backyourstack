@@ -1,21 +1,20 @@
-import App from 'next/app';
-import Head from 'next/head';
-import React, { Fragment } from 'react';
-import Router from 'next/router';
-import NProgress from 'nprogress';
-import { get } from 'lodash';
-
 import '../public/static/fonts/inter-ui/inter-ui.css';
 import '../public/static/fonts/fira-code/fira-code.css';
 import '../public/static/css/main.css';
 import '../public/static/css/nprogress.css';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 
-Router.onRouteChangeStart = () => NProgress.start();
+import { get } from 'lodash';
+import App from 'next/app';
+import Head from 'next/head';
+import Router from 'next/router';
+import NProgress from 'nprogress';
+import React, { Fragment } from 'react';
 
-Router.onRouteChangeComplete = () => NProgress.done();
+Router.events.on('routeChangeStart', () => NProgress.start());
 
-Router.onRouteChangeError = () => NProgress.done();
+Router.events.on('routeChangeComplete', () => NProgress.done());
+
+Router.events.on('routeChangeError', () => NProgress.done());
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

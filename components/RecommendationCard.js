@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import moment from 'moment';
-import queryString from 'query-string';
 import { get, has } from 'lodash';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import React, { Fragment } from 'react';
 
 import List from '../components/List';
 
@@ -38,7 +37,11 @@ export default class RecommendationCard extends React.Component {
   formatBackingAmount = (amount) =>
     `${this.budgetFormatter.format(Math.round(amount))}`;
 
-  formatBackingDate = (date) => moment(new Date(date)).format('MMM YYYY');
+  formatBackingDate = (date) =>
+    new Date(date).toLocaleDateString('en-US', {
+      month: 'short',
+      year: 'numeric',
+    });
 
   nextGoal = (recommendation) => {
     const goals = get(recommendation, 'opencollective.goals', []);
@@ -430,8 +433,8 @@ export default class RecommendationCard extends React.Component {
               {firstPledge
                 ? 'Pledge'
                 : existingPledge
-                ? 'Pledge'
-                : 'Contribute'}
+                  ? 'Pledge'
+                  : 'Contribute'}
             </a>
           </div>
         </div>

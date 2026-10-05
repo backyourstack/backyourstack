@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
-import { Router } from '../../src/routes';
-import HomepageUpload from './HomepageUpload';
 import UploadIcon from '../../public/static/img/homepage/upload-icon.svg';
+import { Router } from '../../src/routes';
+
+import HomepageUpload from './HomepageUpload';
 
 const onUpload = () => {
   Router.pushRoute('files');

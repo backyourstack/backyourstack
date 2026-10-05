@@ -1,6 +1,6 @@
-import React, { createRef } from 'react';
-import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { createRef } from 'react';
 
 class MouseTracker extends React.Component {
   static propTypes = {

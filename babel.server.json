@@ -1,0 +1,9 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      { "targets": { "node": "current" }, "modules": "commonjs" }
+    ]
+  ],
+  "ignore": ["./.next", "./node_modules"]
+}

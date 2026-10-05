@@ -1,64 +1,35 @@
-module.exports = {
-  webpack5: false,
-  eslint: { ignoreDuringBuilds: true },
-  webpack: (config, { isServer, webpack }) => {
-    // For Winston
-    // https://github.com/winstonjs/winston/issues/287
-    config.node = { fs: 'empty' };
+const withMDX = require('@next/mdx')({
+  // FAQ.md and CONTRIBUTING.md are imported as React components
+  extension: /\.mdx?$/,
+  // Parse .md as MDX too, to keep their inline HTML (<del>)
+  options: { format: 'mdx' },
+});
 
-    config.plugins.push(
-      // Define constants helping optimize the build
-      new webpack.DefinePlugin({
-        'process.env.IS_SERVER': JSON.stringify(isServer),
-        'process.env.IS_CLIENT': JSON.stringify(!isServer),
-      }),
-      // Ignore all locale files of moment.js
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-      // Make some environment variables accessible from the client
-      new webpack.EnvironmentPlugin({
-        OPENCOLLECTIVE_REFERRAL: null,
-        OPENCOLLECTIVE_REDIRECT_PATH: null,
-        OPENCOLLECTIVE_BASE_URL: null,
-        SHOW_BACK_MY_STACK: null,
-      }),
-    );
+// Make some environment variables accessible from the client
+const clientEnvironmentVariables = [
+  'OPENCOLLECTIVE_REFERRAL',
+  'OPENCOLLECTIVE_REDIRECT_PATH',
+  'OPENCOLLECTIVE_BASE_URL',
+  'SHOW_BACK_MY_STACK',
+];
 
-    if (process.env.WEBPACK_BUNDLE_ANALYZER) {
-      // eslint-disable-next-line node/no-unpublished-require
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'static',
-          generateStatsFile: true,
-          openAnalyzer: false,
-        }),
-      );
-    }
-
-    config.module.rules.push(
-      {
-        test: /\.svg$/,
-        loader: 'svg-react-loader',
+module.exports = withMDX({
+  env: Object.fromEntries(
+    clientEnvironmentVariables
+      .filter((name) => process.env[name] !== undefined)
+      .map((name) => [name, process.env[name]]),
+  ),
+  turbopack: {
+    resolveAlias: {
+      // gemfile requires fs, unused when parsing a Gemfile.lock in the browser
+      fs: { browser: './lib/empty.js' },
+    },
+    rules: {
+      // Import SVG files as React components
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
       },
-      {
-        test: /\.md$/,
-        use: ['babel-loader', '@mdx-js/loader'],
-      },
-      {
-        test: /\.(woff|woff2|ttf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              publicPath: '/_next/static/fonts/',
-              outputPath: 'static/fonts/',
-              name: '[name]-[hash].[ext]',
-            },
-          },
-        ],
-      },
-    );
-
-    return config;
+    },
   },
-};
+});

@@ -1,22 +1,16 @@
-import fetch from 'cross-fetch';
+import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
-import { getFile, getFiles, getObjectsMetadata } from './s3';
-
-import { fetchWithOctokit, fetchProfile, fetchReposForProfile } from './github';
-
+import { getDependenciesFromGithubRepo } from './dependencies/data';
+import { dependenciesStats } from './dependencies/utils';
+import { fetchProfile, fetchReposForProfile, fetchWithOctokit } from './github';
 import { fetchAccountWithOrders, fetchOrder } from './opencollective';
-
+import { getFile, getFiles, getObjectsMetadata } from './s3';
 import {
   addProjectToDependencies,
   getAllDependenciesFromRepos,
   getRecommendedProjectFromDependencies,
   parseToBoolean,
 } from './utils';
-
-import { getDependenciesFromGithubRepo } from './dependencies/data';
-import { dependenciesStats } from './dependencies/utils';
-
-import githubToOpenCollectiveMapping from '../data/githubToOpenCollectiveMapping.json';
 
 export function getProfile(slug, accessToken) {
   return fetchProfile(slug, accessToken);
@@ -67,9 +61,8 @@ export async function getProfileData(id, accessToken, options = {}) {
     getAllDependenciesFromRepos(repos),
   );
 
-  const recommendations = await getRecommendedProjectFromDependencies(
-    dependencies,
-  );
+  const recommendations =
+    await getRecommendedProjectFromDependencies(dependencies);
 
   let order;
   if (parseToBoolean(process.env.SHOW_BACK_MY_STACK)) {
@@ -110,9 +103,8 @@ export async function getFilesData(sessionFiles) {
     getAllDependenciesFromRepos(repos),
   );
 
-  const recommendations = await getRecommendedProjectFromDependencies(
-    dependencies,
-  );
+  const recommendations =
+    await getRecommendedProjectFromDependencies(dependencies);
 
   return { files, repos, dependencies, recommendations };
 }
