@@ -56,10 +56,6 @@ class MyApp extends App {
             BackYourStack: Discover the Open Source projects you are using and
             need financial support.
           </title>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          ></link>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             property="og:image"

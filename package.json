@@ -87,7 +87,8 @@
     "watch": [
       "src",
       "env.js"
-    ]
+    ],
+    "ext": "js,json"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
