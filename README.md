@@ -2,8 +2,7 @@
   <a href="https://backyourstack.com/"><img width="308" height="308" src="public/static/img/logo-og-1.png" alt="BackYourStack"></a>
 </p>
 
-[![CI Status](https://github.com/backyourstack/backyourstack/workflows/CI/badge.svg)](https://github.com/opencollective/opencollective-api/actions/workflows/ci.yml)
-[![Dependency Status](https://david-dm.org/backyourstack/backyourstack/status.svg)](https://david-dm.org/backyourstack/backyourstack)
+[![CI Status](https://github.com/backyourstack/backyourstack/workflows/CI/badge.svg)](https://github.com/backyourstack/backyourstack/actions/workflows/ci.yml)
 
 Discover the open source projects your organization is using that need financial support.
 
@@ -11,7 +10,7 @@ Our goal with BackYourStack is to make it easier for companies to identify the o
 
 While we started with just node modules (as defined in package.json files) and with open source projects that are on Open Collective, we know that the open source community is much larger than that. That's why we would love to support more languages and platforms but for that, we need you!
 
-Take a look at our public repository & [Contributing Guidelines](https://github.com/backyourstack/backyourstack/blob/master/CONTRIBUTING.md) create or pick up issues and help us make open source more sustainable for everyone! 🙌
+Take a look at our public repository & [Contributing Guidelines](https://github.com/backyourstack/backyourstack/blob/main/CONTRIBUTING.md) create or pick up issues and help us make open source more sustainable for everyone! 🙌
 
 ## Service
 
@@ -23,7 +22,7 @@ The official BackYourStack service is available from https://backyourstack.com/
 
 #### Node.js
 
-Make sure you have Node.js version >= 14. We recommend using [nvm](https://github.com/creationix/nvm): `nvm install && nvm use`
+Make sure you have Node.js version 24 and npm 11, the ones used in CI and production. We recommend using [nvm](https://github.com/creationix/nvm): `nvm install && nvm use`
 
 #### GitHub API Keys
 

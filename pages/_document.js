@@ -1,5 +1,5 @@
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,7 +10,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

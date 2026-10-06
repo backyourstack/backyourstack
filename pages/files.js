@@ -1,20 +1,18 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import NProgress from 'nprogress';
 import { get } from 'lodash';
+import NProgress from 'nprogress';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
-import { Link, Router } from '../src/routes';
-import { postJson, getFilesData } from '../src/fetch';
-import { parseToBoolean } from '../src/utils';
-import { dependenciesStats } from '../src/dependencies/utils';
-
-import Header from '../components/Header';
-import Upload from '../components/Upload';
-
-import DependencyTable from '../components/DependencyTable';
-import RecommendationList from '../components/RecommendationList';
 import BackMyStack from '../components/BackMyStack';
+import DependencyTable from '../components/DependencyTable';
+import Header from '../components/Header';
+import RecommendationList from '../components/RecommendationList';
+import Upload from '../components/Upload';
+import { dependenciesStats } from '../src/dependencies/utils';
+import { getFilesData, postJson } from '../src/fetch';
+import { Link, Router } from '../src/routes';
+import { parseToBoolean } from '../src/utils';
 
 export default class Files extends React.Component {
   static async getInitialProps({ req, query }) {
@@ -25,9 +23,8 @@ export default class Files extends React.Component {
 
     // sessionFiles is optional and can be null (always on the client)
     const sessionFiles = get(req, 'session.files');
-    const { files, dependencies, recommendations } = await getFilesData(
-      sessionFiles,
-    );
+    const { files, dependencies, recommendations } =
+      await getFilesData(sessionFiles);
 
     return { ...initialProps, files, dependencies, recommendations };
   }

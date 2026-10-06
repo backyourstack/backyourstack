@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import { get } from 'lodash';
-
-import { Link } from '../src/routes';
+import React, { Fragment } from 'react';
 
 import List from '../components/List';
+import { Link } from '../src/routes';
 
 const ocWebsiteUrl = process.env.WEBSITE_URL || 'https://opencollective.com';
 

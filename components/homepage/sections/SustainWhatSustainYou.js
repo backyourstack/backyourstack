@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react';
-import Partners from '../Partners';
+
 import { fetchJson } from '../../../src/fetch';
 import HomepageLink from '../HomepageLink';
 import MouseTracker from '../MouseTracker';
+import Partners from '../Partners';
 
 const SustainWhatSustainYou = () => {
   const [state, setState] = useState({ email: '', formState: null });

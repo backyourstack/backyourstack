@@ -1,5 +1,10 @@
+import {
+  GetObjectCommand,
+  ListObjectsCommand,
+  PutObjectCommand,
+  S3Client,
+} from '@aws-sdk/client-s3';
 import Promise from 'bluebird';
-import { S3 } from 'aws-sdk';
 import { v1 as uuid } from 'uuid';
 
 import logger from './logger';
@@ -10,15 +15,22 @@ const Bucket = process.env.AWS_S3_BUCKET;
 
 const getS3 = () => {
   if (!s3) {
-    if (!process.env.AWS_ACCESS_KEY_ID || process.env.AWS_SECRET_KEY) {
+    if (!process.env.AWS_ACCESS_KEY_ID) {
       throw new Error(
-        'No AWS_ACCESS_KEY_ID and AWS_SECRET_KEY, set these environment keys to allow interaction with S3.',
+        'No AWS_ACCESS_KEY_ID, set this environment key (and AWS_SECRET_KEY or AWS_SECRET_ACCESS_KEY) to allow interaction with S3.',
       );
     }
-    s3 = new S3({
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_KEY,
-      apiVersion: '2006-03-01',
+    s3 = new S3Client({
+      region: process.env.AWS_REGION || 'us-east-1',
+      followRegionRedirects: true,
+      // Without AWS_SECRET_KEY, the SDK falls back to its default credential chain
+      // (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY)
+      credentials: process.env.AWS_SECRET_KEY
+        ? {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_KEY,
+          }
+        : undefined,
     });
   }
   return s3;
@@ -37,7 +49,7 @@ export const uploadFiles = async (files) => {
   return saveFileToS3(folderKey, metadata);
 };
 
-export const saveFileToS3 = (Key, Body) => {
+export const saveFileToS3 = async (Key, Body) => {
   const uploadParam = {
     Bucket,
     Key,
@@ -45,7 +57,8 @@ export const saveFileToS3 = (Key, Body) => {
     ACL: 'public-read',
     ContentType: 'application/json',
   };
-  return getS3().upload(uploadParam).promise();
+  await getS3().send(new PutObjectCommand(uploadParam));
+  return { Bucket, Key };
 };
 
 export const saveProfile = async (profileId, repos) => {
@@ -79,14 +92,14 @@ export const getObjectList = (id) => {
     Bucket,
     Prefix: `${id}/`,
   };
-  return getS3().listObjects(params).promise();
+  return getS3().send(new ListObjectsCommand(params));
 };
 
 export const getFile = async (key) => {
   logger.debug(`Fetching file from S3: ${key}`);
   const params = { Bucket, Key: key };
-  const { Body } = await getS3().getObject(params).promise();
-  return Body.toString('utf-8');
+  const { Body } = await getS3().send(new GetObjectCommand(params));
+  return Body.transformToString('utf-8');
 };
 
 export const getFiles = async (id) => {
@@ -111,8 +124,8 @@ export const getFiles = async (id) => {
 export const getObjectsMetadata = async (id) => {
   const params = { Bucket, Key: `${id}/dependencies.json` };
   try {
-    const { Body } = await getS3().getObject(params).promise();
-    return JSON.parse(Body.toString('utf-8'));
+    const { Body } = await getS3().send(new GetObjectCommand(params));
+    return JSON.parse(await Body.transformToString('utf-8'));
   } catch (err) {
     return null;
   }

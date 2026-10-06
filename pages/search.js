@@ -1,21 +1,20 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { get } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
+import Content from '../components/Content';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import { fetchJson } from '../src/fetch';
 import { Link, Router } from '../src/routes';
 
-import Header from '../components/Header';
-import Content from '../components/Content';
-import Footer from '../components/Footer';
-
 const getProfile = (slug, accessToken) =>
-  process.env.IS_CLIENT
+  typeof window !== 'undefined'
     ? fetchJson(`/data/getProfile?slug=${slug}`)
     : import('../src/data').then((m) => m.getProfile(slug, accessToken));
 
 const searchUsers = (q, accessToken) =>
-  process.env.IS_CLIENT
+  typeof window !== 'undefined'
     ? fetchJson(`/data/searchUsers?q=${q}`)
     : import('../src/data').then((m) => m.searchUsers(q, accessToken));
 

@@ -1,251 +1,197 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Upload should render 1`] = `
-<div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
->
+<DocumentFragment>
   <div
-    className="jsx-1048453299 text"
+    class="jsx-d4c9c6026fdaac1b dropZoneComponent"
+    role="presentation"
+    tabindex="0"
   >
-    <p
-      className="jsx-1048453299"
+    <input
+      aria-label="file upload"
+      class="jsx-d4c9c6026fdaac1b"
+      multiple=""
+      style="border: 0px; display: block; height: 0px; margin: 0px; opacity: 0; overflow: hidden; padding: 0px; width: 0px;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="jsx-d4c9c6026fdaac1b text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-1048453299"
-      />
-      or click to select files to upload.
-    </p>
-  </div>
-  <div
-    className="jsx-1048453299 uploadFeedback float"
-  >
-    <p
-      className="jsx-1048453299"
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        Simply drag'n'drop files
+        <br
+          class="jsx-d4c9c6026fdaac1b"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <div
+      class="jsx-d4c9c6026fdaac1b uploadFeedback float"
     >
-      There was an error while uploading your files. At the moment, we support 
-      <em>
-        composer.json
-      </em>
-      , 
-      <em>
-        *.csproj
-      </em>
-      , 
-      <em>
-        packages.config
-      </em>
-      , 
-      <em>
-        Gopkg.lock
-      </em>
-      , 
-      <em>
-        Gemfile.lock
-      </em>
-       and 
-      <em>
-        requirements.txt
-      </em>
-      . Please try again. If the problem persists, please contact us.
-    </p>
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        There was an error while uploading your files. At the moment, we support 
+        <em>
+          composer.json
+        </em>
+        , 
+        <em>
+          *.csproj
+        </em>
+        , 
+        <em>
+          packages.config
+        </em>
+        , 
+        <em>
+          Gopkg.lock
+        </em>
+        , 
+        <em>
+          Gemfile.lock
+        </em>
+         and 
+        <em>
+          requirements.txt
+        </em>
+        . Please try again. If the problem persists, please contact us.
+      </p>
+    </div>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
-</div>
+</DocumentFragment>
 `;
 
 exports[`Upload should render with feedbackPosition 1`] = `
-<div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
->
+<DocumentFragment>
   <div
-    className="jsx-1048453299 text"
+    class="jsx-d4c9c6026fdaac1b dropZoneComponent"
+    role="presentation"
+    tabindex="0"
   >
-    <p
-      className="jsx-1048453299"
+    <input
+      aria-label="file upload"
+      class="jsx-d4c9c6026fdaac1b"
+      multiple=""
+      style="border: 0px; display: block; height: 0px; margin: 0px; opacity: 0; overflow: hidden; padding: 0px; width: 0px;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="jsx-d4c9c6026fdaac1b text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-1048453299"
-      />
-      or click to select files to upload.
-    </p>
-  </div>
-  <div
-    className="jsx-1048453299 uploadFeedback inside"
-  >
-    <p
-      className="jsx-1048453299"
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        Simply drag'n'drop files
+        <br
+          class="jsx-d4c9c6026fdaac1b"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <div
+      class="jsx-d4c9c6026fdaac1b uploadFeedback inside"
     >
-      There was an error while uploading your files. At the moment, we support 
-      <em>
-        composer.json
-      </em>
-      , 
-      <em>
-        *.csproj
-      </em>
-      , 
-      <em>
-        packages.config
-      </em>
-      , 
-      <em>
-        Gopkg.lock
-      </em>
-      , 
-      <em>
-        Gemfile.lock
-      </em>
-       and 
-      <em>
-        requirements.txt
-      </em>
-      . Please try again. If the problem persists, please contact us.
-    </p>
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        There was an error while uploading your files. At the moment, we support 
+        <em>
+          composer.json
+        </em>
+        , 
+        <em>
+          *.csproj
+        </em>
+        , 
+        <em>
+          packages.config
+        </em>
+        , 
+        <em>
+          Gopkg.lock
+        </em>
+        , 
+        <em>
+          Gemfile.lock
+        </em>
+         and 
+        <em>
+          requirements.txt
+        </em>
+        . Please try again. If the problem persists, please contact us.
+      </p>
+    </div>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
-</div>
+</DocumentFragment>
 `;
 
 exports[`Upload should render with style 1`] = `
-<div
-  aria-disabled={false}
-  className="dropZoneComponent"
-  onClick={[Function]}
-  onDragEnter={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDragStart={[Function]}
-  onDrop={[Function]}
-  style={
-    Object {
-      "border": "1px solid red",
-      "position": "relative",
-    }
-  }
->
+<DocumentFragment>
   <div
-    className="jsx-1048453299 text"
+    class="jsx-d4c9c6026fdaac1b dropZoneComponent"
+    role="presentation"
+    style="border: 1px solid red;"
+    tabindex="0"
   >
-    <p
-      className="jsx-1048453299"
+    <input
+      aria-label="file upload"
+      class="jsx-d4c9c6026fdaac1b"
+      multiple=""
+      style="border: 0px; display: block; height: 0px; margin: 0px; opacity: 0; overflow: hidden; padding: 0px; width: 0px;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="jsx-d4c9c6026fdaac1b text"
     >
-      Simply drag'n'drop files
-      <br
-        className="jsx-1048453299"
-      />
-      or click to select files to upload.
-    </p>
-  </div>
-  <div
-    className="jsx-1048453299 uploadFeedback float"
-  >
-    <p
-      className="jsx-1048453299"
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        Simply drag'n'drop files
+        <br
+          class="jsx-d4c9c6026fdaac1b"
+        />
+        or click to select files to upload.
+      </p>
+    </div>
+    <div
+      class="jsx-d4c9c6026fdaac1b uploadFeedback float"
     >
-      There was an error while uploading your files. At the moment, we support 
-      <em>
-        composer.json
-      </em>
-      , 
-      <em>
-        *.csproj
-      </em>
-      , 
-      <em>
-        packages.config
-      </em>
-      , 
-      <em>
-        Gopkg.lock
-      </em>
-      , 
-      <em>
-        Gemfile.lock
-      </em>
-       and 
-      <em>
-        requirements.txt
-      </em>
-      . Please try again. If the problem persists, please contact us.
-    </p>
+      <p
+        class="jsx-d4c9c6026fdaac1b"
+      >
+        There was an error while uploading your files. At the moment, we support 
+        <em>
+          composer.json
+        </em>
+        , 
+        <em>
+          *.csproj
+        </em>
+        , 
+        <em>
+          packages.config
+        </em>
+        , 
+        <em>
+          Gopkg.lock
+        </em>
+        , 
+        <em>
+          Gemfile.lock
+        </em>
+         and 
+        <em>
+          requirements.txt
+        </em>
+        . Please try again. If the problem persists, please contact us.
+      </p>
+    </div>
   </div>
-  <input
-    autoComplete="off"
-    disabled={false}
-    multiple={true}
-    onChange={[Function]}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 0.00001,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="file"
-  />
-</div>
+</DocumentFragment>
 `;

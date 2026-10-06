@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { get } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-import { fetchJson } from '../src/fetch';
-import supportedFiles from '../src/dependencies/supported-files';
-import { Link, Router } from '../src/routes';
-
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
 import Upload from '../components/Upload';
-import Footer from '../components/Footer';
 import GithubLogo from '../public/static/img/icon-github.svg';
 import UploadIcon from '../public/static/img/upload-icon.svg';
+import supportedFiles from '../src/dependencies/supported-files';
+import { fetchJson } from '../src/fetch';
+import { Link, Router } from '../src/routes';
 
 const getUserOrgs = (accessToken) =>
-  process.env.IS_CLIENT
+  typeof window !== 'undefined'
     ? fetchJson('/data/getUserOrgs')
     : import('../src/data').then((m) => m.getUserOrgs(accessToken));
 

@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import Modal from 'react-modal';
 
-import MouseTracker from '../MouseTracker';
+import { modalCustomStyle, PartnershipForm } from '../ContactUsForms';
 import HomepageLink from '../HomepageLink';
-import { PartnershipForm, modalCustomStyle } from '../ContactUsForms';
+import MouseTracker from '../MouseTracker';
 
 const OurValues = () => {
   const [modalIsOpen, setIsOpen] = useState(false);

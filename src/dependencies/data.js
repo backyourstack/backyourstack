@@ -1,7 +1,6 @@
-import logger from '../logger';
-
 import cache from '../cache';
 import { fetchFileFromRepo, searchFilesFromRepo } from '../github';
+import logger from '../logger';
 
 import dependencyManagers from './dependency-managers';
 import { transformToStats } from './utils';

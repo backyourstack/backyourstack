@@ -1,8 +1,5 @@
-import fetch from 'node-fetch';
-
-import logger from './logger';
-
 import cache from './cache';
+import logger from './logger';
 
 const opencollectiveBaseUrl = process.env.OPENCOLLECTIVE_BASE_URL;
 const baseUrl = `${opencollectiveBaseUrl}/api/graphql`;

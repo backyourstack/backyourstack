@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Dropzone from 'react-dropzone';
-import fetch from 'cross-fetch';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+import Dropzone from 'react-dropzone';
 
 import supportedFiles from '../../src/dependencies/supported-files';
 
@@ -152,17 +151,18 @@ export default class HomepageUpload extends React.Component {
         </style>
 
         <div className="uploadWrapper">
-          <Dropzone
-            onDrop={this.onDrop}
-            className={classNames('dropZoneComponent', {
-              error: this.state.error,
-            })}
-            activeClassName="active"
-            maxSize={102400}
-          >
-            {({ isDragActive }) => {
-              if (isDragActive) {
-                return (
+          <Dropzone onDrop={this.onDrop} maxSize={102400}>
+            {({ getRootProps, getInputProps, isDragActive }) => (
+              <div
+                {...getRootProps()}
+                // styled-jsx overrides a className set through a spread
+                className={classNames('dropZoneComponent', {
+                  active: isDragActive,
+                  error: this.state.error,
+                })}
+              >
+                <input {...getInputProps()} />
+                {isDragActive ? (
                   <div className="text activeDrag">
                     <img
                       src="/static/img/homepage/icon-drop.svg"
@@ -170,19 +170,17 @@ export default class HomepageUpload extends React.Component {
                     />
                     <p>Drop file(s) here.</p>
                   </div>
-                );
-              }
-
-              return (
-                <div className="text">
-                  <p>
-                    Simply drag and drop files
-                    <br />
-                    or click to select files to upload.
-                  </p>
-                </div>
-              );
-            }}
+                ) : (
+                  <div className="text">
+                    <p>
+                      Simply drag and drop files
+                      <br />
+                      or click to select files to upload.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </Dropzone>
           <div
             className={classNames('uploadFeedback', {

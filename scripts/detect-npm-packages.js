@@ -1,17 +1,15 @@
 import '../env';
 
-import fetch from 'cross-fetch';
-import { uniq, pick, get } from 'lodash';
+import { get, pick, uniq } from 'lodash';
 
+import { getCollectives, getProjects, saveProjects } from '../data';
 import {
-  fetchWithOctokit,
   fetchFileFromRepo,
+  fetchWithOctokit,
   getContent,
   silentError,
 } from '../src/github';
 import logger from '../src/logger';
-
-import { getCollectives, getProjects, saveProjects } from '../data';
 
 const regexps = [
   /https:\/\/npmjs\.org\/package\/([@a-z0-9-/]*)/gi,

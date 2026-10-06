@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
 const MessageBox = ({ type, message, onClose }) => {
   return (

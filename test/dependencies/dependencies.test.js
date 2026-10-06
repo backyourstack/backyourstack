@@ -1,20 +1,29 @@
-import * as github from '../../src/github';
+/**
+ * @jest-environment node
+ */
 
 import { getDependenciesFromGithubRepo } from '../../src/dependencies/data';
 import {
+  dependenciesStats,
   detectDependencyFileType,
   detectProjectName,
-  dependenciesStats,
 } from '../../src/dependencies/utils';
-
+import * as github from '../../src/github';
 import {
   bundlerFile,
   composerFile,
   depFile,
-  nugetCsprojFile,
   npmFile,
+  nugetCsprojFile,
   pythonRequirementsFile,
 } from '../files';
+
+// ES module exports can not be redefined by jest.spyOn: mock the module instead
+jest.mock('../../src/github', () => ({
+  ...jest.requireActual('../../src/github'),
+  fetchFileFromRepo: jest.fn(),
+  searchFilesFromRepo: jest.fn(),
+}));
 
 const expectedDependencies = {
   composer: [
@@ -101,18 +110,17 @@ describe('dependencies', () => {
     });
 
     describe('using github', () => {
-      let spyFetch, spySearch;
       beforeEach(() => {
-        spyFetch = jest
-          .spyOn(github, 'fetchFileFromRepo')
-          .mockImplementation(() => Promise.resolve(file.text));
-        spySearch = jest
-          .spyOn(github, 'searchFilesFromRepo')
-          .mockImplementation(() => Promise.resolve([file.text]));
+        github.fetchFileFromRepo.mockImplementation(() =>
+          Promise.resolve(file.text),
+        );
+        github.searchFilesFromRepo.mockImplementation(() =>
+          Promise.resolve([file.text]),
+        );
       });
       afterEach(() => {
-        spyFetch.mockRestore();
-        spySearch.mockRestore();
+        github.fetchFileFromRepo.mockReset();
+        github.searchFilesFromRepo.mockReset();
       });
 
       test('should get the stats from a Github repo', () => {

@@ -1,15 +1,15 @@
 import React, { Fragment, useState } from 'react';
+import { FaGithub, FaSlack, FaTwitter } from 'react-icons/fa';
 import Modal from 'react-modal';
-import { FaSlack, FaTwitter, FaGithub } from 'react-icons/fa';
 
-import MouseTracker from '../MouseTracker';
-import HomepageLink from '../HomepageLink';
 import {
-  InquiriesForm,
   BecomeBetaTesterForm,
-  PartnershipForm,
+  InquiriesForm,
   modalCustomStyle,
+  PartnershipForm,
 } from '../ContactUsForms';
+import HomepageLink from '../HomepageLink';
+import MouseTracker from '../MouseTracker';
 
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState('inquiries');

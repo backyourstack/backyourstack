@@ -1,10 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import NextLink from 'next/link';
+import React from 'react';
 
-import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import Header from '../components/Header';
 import GithubLogo from '../public/static/img/github.svg';
 
 export default class Login extends React.Component {
@@ -102,17 +100,13 @@ export default class Login extends React.Component {
               Make sure to grant access to these in the GitHub permission page.
             </li>
           </ul>
-          <NextLink
-            href={{
-              pathname: '/auth/github',
-              query: { next: this.props.next },
-            }}
+          <a
+            className="button bigButton signInButton"
+            href={`/auth/github?${new URLSearchParams({ next: this.props.next })}`}
           >
-            <a className="button bigButton signInButton">
-              <GithubLogo className="logo" />
-              Sign In with GitHub now
-            </a>
-          </NextLink>
+            <GithubLogo className="logo" />
+            Sign In with GitHub now
+          </a>
         </div>
 
         <Footer />

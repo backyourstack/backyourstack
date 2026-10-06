@@ -1,6 +1,5 @@
-import xmldoc from 'xmldoc';
-
 import { flatten } from 'lodash';
+import { XmlDocument } from 'xmldoc';
 
 const searchAllRepo = true;
 const patterns = ['*.csproj', 'packages.config'];
@@ -27,7 +26,7 @@ function packagesConfigDependencies(packagesConfig) {
 }
 
 function dependencies(file) {
-  const xml = new xmldoc.XmlDocument(file.text);
+  const xml = new XmlDocument(file.text);
   return { core: handlers[file.matchedPattern](xml) };
 }
 

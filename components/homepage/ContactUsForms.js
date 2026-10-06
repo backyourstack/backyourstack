@@ -1,10 +1,10 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import css from 'styled-jsx/css';
 
 import { fetchJson } from '../../src/fetch';
 
-import MouseTracker from './MouseTracker';
 import HomepageLink from './HomepageLink';
+import MouseTracker from './MouseTracker';
 
 export const modalCustomStyle = {
   content: {

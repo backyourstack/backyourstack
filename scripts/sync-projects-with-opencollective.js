@@ -1,7 +1,8 @@
 import '../env';
 
-import fs from 'fs-extra';
 import path from 'path';
+
+import fs from 'fs-extra';
 import { get, uniqBy } from 'lodash';
 
 import logger from '../src/logger';

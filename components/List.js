@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
 export default class List extends React.Component {
   static propTypes = {

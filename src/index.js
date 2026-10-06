@@ -1,54 +1,53 @@
 import '../env';
 
-import path from 'path';
 import crypto from 'crypto';
+import path from 'path';
 import { URL } from 'url';
 
-import fs from 'fs-extra';
+import cookieParser from 'cookie-parser';
 import express from 'express';
 import expressSession from 'express-session';
-import cookieParser from 'cookie-parser';
-import favicon from 'serve-favicon';
+import fs from 'fs-extra';
+import { get, has } from 'lodash';
+import md5 from 'md5';
 import multer from 'multer';
 import next from 'next';
-import md5 from 'md5';
-import { get, has } from 'lodash';
+import favicon from 'serve-favicon';
 
-import routes from './routes';
-import logger from './logger';
-
-import passport from './passport';
-import {
-  fetchWithBasicAuthentication,
-  getDependenciesAvailableForBacking,
-  parseToBoolean,
-} from './utils';
-import { dispatchOrder } from './opencollective';
+import { fetchDependenciesFileContent } from './dependencies/data';
 import {
   detectDependencyFileType,
   detectProjectName,
 } from './dependencies/utils';
 import {
+  emailSubscribe,
+  getFilesData,
   getProfile,
+  getProfileData,
+  getProfileOrder,
+  getSavedFilesData,
+  getSavedSelectedDependencies,
   getUserOrgs,
   searchUsers,
-  getProfileData,
-  getFilesData,
-  getSavedSelectedDependencies,
-  getSavedFilesData,
-  emailSubscribe,
-  getProfileOrder,
 } from './data';
-import { fetchDependenciesFileContent } from './dependencies/data';
+import email from './email';
+import { fetchOrgMembership } from './github';
+import logger from './logger';
+import { dispatchOrder } from './opencollective';
+import passport from './passport';
+import { getRequestHandler } from './routes';
 import {
-  uploadFiles,
+  getObjectsMetadata,
   saveProfile,
   saveProfileOrder,
   saveSelectedDependencies,
-  getObjectsMetadata,
+  uploadFiles,
 } from './s3';
-import { fetchOrgMembership } from './github';
-import email from './email';
+import {
+  fetchWithBasicAuthentication,
+  getDependenciesAvailableForBacking,
+  parseToBoolean,
+} from './utils';
 
 const { PORT, SESSION_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } =
   process.env;
@@ -68,7 +67,7 @@ const cookieOptions = {
   secure: false,
 };
 
-const handler = routes.getRequestHandler(nextApp);
+const handler = getRequestHandler(nextApp);
 
 nextApp.prepare().then(() => {
   const server = express();
@@ -97,19 +96,25 @@ nextApp.prepare().then(() => {
 
   server.use(express.json());
 
-  server.get('/logout', (req, res) => {
+  server.get('/logout', async (req, res, next) => {
     const accessToken = get(req, 'session.passport.user.accessToken');
-    fetchWithBasicAuthentication(GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)(
-      `https://api.github.com/applications/${GITHUB_CLIENT_ID}/grants/${accessToken}`,
-      { method: 'DELETE' },
-    ).then(() => {
-      req.session.destroy((err) => {
-        if (err) {
-          throw err;
-        }
-        const next = req.query.next || '/';
-        res.clearCookie('sessionId', cookieOptions).redirect(next);
-      });
+    if (accessToken) {
+      // https://docs.github.com/en/rest/apps/oauth-applications#delete-an-app-authorization
+      await fetchWithBasicAuthentication(
+        GITHUB_CLIENT_ID,
+        GITHUB_CLIENT_SECRET,
+      )(`https://api.github.com/applications/${GITHUB_CLIENT_ID}/grant`, {
+        method: 'DELETE',
+        headers: { Accept: 'application/vnd.github+json' },
+        body: JSON.stringify({ access_token: accessToken }),
+      }).catch((err) => logger.warn(`Unable to revoke GitHub grant: ${err}`));
+    }
+    req.session.destroy((err) => {
+      if (err) {
+        return next(err);
+      }
+      const nextUrl = req.query.next || '/';
+      res.clearCookie('sessionId', cookieOptions).redirect(nextUrl);
     });
   });
 
@@ -446,7 +451,7 @@ ${req.body.message}`,
     next();
   });
 
-  server.get('*', handler);
+  server.use(handler);
 
   server.listen(port, (err) => {
     if (err) {

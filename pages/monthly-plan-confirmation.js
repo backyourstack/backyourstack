@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import { postJson } from '../src/fetch';
-
-import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
+import { postJson } from '../src/fetch';
 
 export default class MonthlyPlanConfirmation extends React.Component {
   static getInitialProps({ query }) {

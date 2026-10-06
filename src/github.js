@@ -1,12 +1,10 @@
-import fetch from 'cross-fetch';
 import { Octokit } from '@octokit/rest';
-import minimatch from 'minimatch';
 import { GraphQLClient } from 'graphql-request';
 import { get, pick } from 'lodash';
-
-import logger from './logger';
+import { minimatch } from 'minimatch';
 
 import cache from './cache';
+import logger from './logger';
 
 const baseRawUrl = 'https://raw.githubusercontent.com';
 
@@ -50,7 +48,7 @@ function fetchWithOctokit(path, params, accessToken) {
     withAccessToken: !!accessToken,
   });
   const octokit = getOctokit(accessToken);
-  const func = get(octokit, path);
+  const func = get(octokit.rest, path);
   return func(params).then(getData);
 }
 
@@ -129,7 +127,7 @@ async function fetchOrgMembership(orgName, login, accessToken) {
   });
 
   const membership = await fetchWithOctokit(
-    'orgs.getMembership',
+    'orgs.getMembershipForUser',
     { username: login, org: orgName },
     accessToken,
   ).catch(silentError);
@@ -159,9 +157,9 @@ async function fetchReposForProfile(profile, accessToken, loggedInUsername) {
 
   let getReposPath, getReposParameters;
   if (accessToken && profile.login === loggedInUsername) {
-    // https://octokit.github.io/rest.js/#octokit-routes-repos-list
-    getReposPath = 'repos.list';
-    getReposParameters = { username: profile.login, affiliation: 'owner' };
+    // https://octokit.github.io/rest.js/#api-Repos-listForAuthenticatedUser
+    getReposPath = 'repos.listForAuthenticatedUser';
+    getReposParameters = { affiliation: 'owner' };
   } else if (profile.type === 'Organization') {
     // https://octokit.github.io/rest.js/#api-Repos-listForOrg
     getReposPath = 'repos.listForOrg';
