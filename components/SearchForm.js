@@ -25,7 +25,14 @@ export default class SearchForm extends React.Component {
   }
 
   async stateFeedback(q) {
-    const profile = await getProfile(q);
+    let profile;
+    try {
+      profile = await getProfile(q);
+    } catch {
+      // The check is only a hint: on a failed request (e.g. GitHub rate limit), give no feedback
+      // and let the form be submitted
+      return;
+    }
 
     // Handle non-matching feedback
     // (it's possible that 'q' changed since we fired the request,
